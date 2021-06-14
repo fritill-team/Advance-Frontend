@@ -165,10 +165,10 @@ module.exports = env => {
       //     to: "assets/images/mstile-150x150.png"
       //   }
       // ]),
-      // new MiniCssExtractPlugin({
-      //   filename: "assets/css/[name].[hash:7].bundle.css",
-      //   chunkFilename: "[id].css"
-      // }),
+      new MiniCssExtractPlugin({
+        filename: "assets/css/[name].[hash:7].bundle.css",
+        chunkFilename: "[id].css"
+      }),
 
       /*
         Pages
