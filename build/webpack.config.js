@@ -149,10 +149,26 @@ module.exports = env => {
     },
 
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: "assets/css/[name].[hash:7].bundle.css",
-        chunkFilename: "[id].css"
-      }),
+      // new CopyWebpackPlugin([
+      //   { from: "../manifest.json", to: "manifest.json" },
+      //   { from: "../browserconfig.xml", to: "browserconfig.xml" },
+      //   {
+      //     from: "assets/images/favicons/android-chrome-192x192.png",
+      //     to: "assets/images/android-chrome-192x192.png"
+      //   },
+      //   {
+      //     from: "assets/images/favicons/android-chrome-256x256.png",
+      //     to: "assets/images/android-chrome-256x256.png"
+      //   },
+      //   {
+      //     from: "assets/images/favicons/mstile-150x150.png",
+      //     to: "assets/images/mstile-150x150.png"
+      //   }
+      // ]),
+      // new MiniCssExtractPlugin({
+      //   filename: "assets/css/[name].[hash:7].bundle.css",
+      //   chunkFilename: "[id].css"
+      // }),
 
       /*
         Pages
@@ -164,7 +180,6 @@ module.exports = env => {
         template: "views/index.pug",
         inject: true
       }),
-
 
       ...utils.pages(env),
       ...utils.pages("login"),
