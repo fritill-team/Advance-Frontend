@@ -8,7 +8,7 @@ import "../styles/vendor/semantic/semantic.min.js"
 import "./custom.js"
 import "./night-mode.js"
 
-import "../styles/app.scss";
+// import "../styles/app.scss";
 
 import Vue from 'vue';
 import Test from "../scripts/vue/Test.vue";
