@@ -183,6 +183,8 @@ module.exports = env => {
 
       ...utils.pages(env),
       ...utils.pages("login"),
+      ...utils.pages("signup"),
+      ...utils.pages("forget"),
       ...utils.pages("about"),
       ...utils.pages("contact"),
       ...utils.pages("blog"),
