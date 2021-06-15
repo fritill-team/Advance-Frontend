@@ -2,7 +2,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WebpackNotifierPlugin = require("webpack-notifier");
+// const WebpackNotifierPlugin = require("webpack-notifier");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -34,6 +34,9 @@ module.exports = env => {
         fonts: path.resolve(__dirname, "../src/assets/fonts") // Relative path of fonts
       }
     },
+    // externals: {
+
+    // },
 
     /*
       Loaders with configurations
@@ -191,11 +194,12 @@ module.exports = env => {
         $: "jquery",
         jQuery: "jquery",
         "window.$": "jquery",
-        "window.jQuery": "jquery"
+        "window.jQuery": "jquery",
+        Popper: ['popper.js', 'default']          
       }),
-      new WebpackNotifierPlugin({
-        title: "Your project"
-      }),
+      // new WebpackNotifierPlugin({
+      //   title: "Your project"
+      // }),
 
       new VueLoaderPlugin()
     ]
