@@ -1,0 +1,78 @@
+extends ../layouts/auth.pug
+
+
+block title
+  title signup
+
+block content
+  div(class="sign_in_up_bg")
+    div(class="container ")
+      div(class="row justify-content-lg-center justify-content-md-center")
+        .col-lg-12
+          div(class="main_logo25" , id="logo")
+            a(href='index.html')
+              img(src='../../assets/images/logo.svg' alt='')
+            a(href='index.html')
+              img.logo-inverse(src='../../assets/images/logo.svg' alt='')
+        div(class="col-lg-6 col-md-8")
+          section.sign_form
+            h2 Welcome to Edututs+
+            p Sign Up and Start Learning!
+            form
+              div(class="ui search focus")
+                div(class="icon input lbel25")
+                  label(for="fullname") Full Name *
+                  div(class="ui left icon input swdh19 w-100")
+                    input(
+                      class="prompt srch_explore"
+                      type="text"
+                      name="fullname"
+                      id="fullname" required maxlength="64"
+                      placeholder="Full Name" autofocus)
+                  span(class="requerd d-flex text-danger my-2") Requerd
+              div(class="ui search focus mt-15")
+                div(class="icon left input lbel25")
+                  label(for="id_email") Email Address *
+                  div(class="ui left icon input swdh19 w-100")
+                    input(
+                      class="prompt srch_explore"
+                      type="email"
+                      name="emailaddress"
+                      id="id_email" required maxlength="64"
+                      placeholder="Email Address" )
+              div(class="ui search focus mt-15")
+                div(class="icon input lbel25")
+                  label(for="id_password") Password *
+                  div(class="ui left icon input swdh19 w-100")
+                    input(
+                      class="prompt srch_explore"
+                      type="password"
+                      name="password"
+                      id="id_password" required maxlength="64"
+                      placeholder="Password" )
+                div(class="ui form mt-30 checkbox_sign")
+                  div(class="inline field")
+                    div(class="ui checkbox mncheck")
+                      input(
+                        type="checkbox"
+                        tabindex="0"
+                        class="hidden"
+                        id="remembrr-signup"
+                        )
+                      label(for="remembrr-signup") I’m in for emails with exciting discounts and personalized recommendations
+              button(
+                class="login-btn"
+                type="submit")
+                | Next
+            p(class="sgntrm145")  By signing up, you agree to our
+              a(href="terms_of_use.html")   Terms of Use
+              |   and
+              a(href="terms_of_use.html")  Privacy Policy
+              |  .
+            p(class="mb-0 mt-30")  Already have an account?
+              a(href="sign_in.html")  Log In
+          .sign_footer
+            img(src="../../assets/images/sign_logo.png" alt="")
+            | &copy; 2020
+            strong  Advance
+            |. All Rights Reserved.
