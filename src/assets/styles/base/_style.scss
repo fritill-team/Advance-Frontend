@@ -5810,25 +5810,28 @@ a.rmv-btn i {
     text-align: center;
     margin: auto !important;
 	padding: 50px 0;
+    z-index: 1;
 }
 
 .sign_in_up_bg {
     background: #f7f7f7 !important;
     position: relative;
 	width: 100%;
+    z-index: 0;
+    height: 100%;
 }
 
-.sign_in_up_bg:before {
-    content: "";
-    background: url('../images/sign.svg') no-repeat center;
+.sign_in_up_bg--img {
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     position: absolute;
-    pointer-events: none;
-    background-size: cover;
     opacity: 0.04;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .sign_form {
@@ -5841,6 +5844,7 @@ a.rmv-btn i {
     width: 100%;
     margin-top: 0;
     text-align: center;
+    z-index: 2;
 }
 
 .ui.form.checkbox_sign {

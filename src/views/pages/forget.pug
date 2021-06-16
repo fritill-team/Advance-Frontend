@@ -5,37 +5,39 @@ block title
   title forget
 
 block content
- div(class="sign_in_up_bg")
-   div(class="container ")
-     div(class="row justify-content-lg-center justify-content-md-center")
-      .col-lg-12
-        div(class="main_logo25" , id="logo")
-          a(href='index.html')
-            img(src='../../assets/images/logo.svg' alt='')
-          a(href='index.html')
-            img.logo-inverse(src='../../assets/images/logo.svg' alt='')
-      div(class="col-lg-6 col-md-8")
-        section.sign_form
-          h2 Request a Password Reset
-          form
-            div(class="ui search focus mt-50")
-              div(class=" icon input lbel25")
-                label(for="id_email") Email Address *
-                div(class="ui left icon input swdh95")
-                  input(
-                  class="prompt srch_explore"
-                  type="email"
-                  name="emailaddress"
-                  id="id_email" required maxlength="64"
-                  placeholder="Email Address" autofocus)
-                  i(class="uil uil-envelope icon icon2")
-                span(class="requerd d-flex text-danger my-2") Requerd
-            button(class="login-btn" type="submit")
-              | Reset Password
-          p(class="mb-0 mt-30") Go Back
-            a(href="../pages/login.pug")  Sign In
-        .sign_footer
-          img(src="../../assets/images/sign_logo.png" alt="")
-          | &copy; 2020
-          strong   Advance
-          |. All Rights Reserved.
+  div(class="sign_in_up_bg")
+    img(class="sign_in_up_bg--img" src='../../assets/images/sign.svg' alt='')
+    .sign_in_up_form-wrapper
+      div(class="container ")
+        div(class="row justify-content-lg-center justify-content-md-center")
+          .col-lg-12
+            div(class="main_logo25" , id="logo")
+              a(href='index.html')
+                img(src='../../assets/images/logo.svg' alt='')
+              a(href='index.html')
+                img.logo-inverse(src='../../assets/images/logo.svg' alt='')
+          div(class="col-lg-6 col-md-8")
+            section.sign_form
+              h2 Request a Password Reset
+              form
+                div(class="ui search focus mt-50")
+                  div(class=" icon input lbel25")
+                    label(for="id_email") Email Address *
+                    div(class="ui left icon input swdh95")
+                      input(
+                      class="prompt srch_explore"
+                      type="email"
+                      name="emailaddress"
+                      id="id_email" required maxlength="64"
+                      placeholder="Email Address" autofocus)
+                      i(class="uil uil-envelope icon icon2")
+                    span(class="requerd d-flex text-danger my-2") Requerd
+                button(class="login-btn" type="submit")
+                  | Reset Password
+              p(class="mb-0 mt-30") Go Back
+                a(href="../pages/login.pug")  Sign In
+            .sign_footer
+              img(src="../../assets/images/sign_logo.png" alt="")
+              | &copy; 2020
+              strong   Advance
+              |. All Rights Reserved.
