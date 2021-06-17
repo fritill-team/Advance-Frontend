@@ -6,5 +6,5 @@
 $(function() {
   console.log('Ready!');
 
-  require('scripts/index');
+  require('./assets/scripts/index');
 })
