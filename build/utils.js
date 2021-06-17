@@ -45,11 +45,7 @@ const pug = () => getDirectories(
       FName = path.basename(file).replace('.pug', '.html'),
       filename = dirName.indexOf('views') === -1 && dirName.indexOf('pages') === -1 ? dirName + path.sep + FName : FName
 
-    return new HtmlWebpackPlugin({
-      filename,
-      template: file,
-      inject: false
-    })
+    return new HtmlWebpackPlugin({filename, template: file, inject: true})
   },
   {
     ignore: ['**/mixins/**', '**/components/**']

@@ -24,7 +24,7 @@ module.exports = env => {
       filename: "assets/js/[name].[hash:7].bundle.js"
     },
     devServer: {
-      contentBase: path.resolve(__dirname, "../src")
+      contentBase: path.resolve(__dirname, "../src/views"),
     },
     resolve: {
       extensions: [".js"],
