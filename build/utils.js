@@ -1,9 +1,13 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin'),
+  fs = require('fs'),
+  path = require('path'),
+  glob = require("glob"),
+  getDirectories = (src, callback, options = null) => glob.sync(src, options).map(f => callback(f)),
+  srcPath = path.resolve(__dirname, `../src`)
+
 exports.pages = function (env, folder = '') {
-  const rootPagesFolderName = 'pages'
-  const HtmlWebpackPlugin = require('html-webpack-plugin')
-  const fs = require('fs')
-  const path = require('path')
-  const viewsFolder = path.resolve(__dirname, `../src/views/${rootPagesFolderName}/${folder}`)
+  const rootPagesFolderName = 'pages',
+    viewsFolder = path.resolve(__dirname, `../src/views/${rootPagesFolderName}/${folder}`)
 
   var pages = []
 
@@ -32,3 +36,24 @@ exports.pages = function (env, folder = '') {
 
   return pages;
 }
+
+
+const pug = () => getDirectories(
+  srcPath + '/**/*.pug',
+  (file) => {
+    let dirName = path.dirname(file).split(path.sep).pop(),
+      FName = path.basename(file).replace('.pug', '.html'),
+      filename = dirName.indexOf('views') === -1 && dirName.indexOf('pages') === -1 ? dirName + path.sep + FName : FName
+
+    return new HtmlWebpackPlugin({
+      filename,
+      template: file,
+      inject: false
+    })
+  },
+  {
+    ignore: ['**/mixins/**', '**/components/**']
+  }
+)
+
+exports.pug = pug

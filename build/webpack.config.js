@@ -62,6 +62,7 @@ module.exports = env => {
             {
               loader: "css-loader",
               options: {
+                url: false,
                 importLoaders: 1,
                 sourceMap: true,
                 minimize: true,
@@ -167,7 +168,7 @@ module.exports = env => {
       //     from: "assets/images/favicons/mstile-150x150.png",
       //     to: "assets/images/mstile-150x150.png"
       //   },
-        
+
       // ]),
       new MiniCssExtractPlugin({
         filename: "assets/css/[name].[hash:7].bundle.css",
@@ -177,28 +178,14 @@ module.exports = env => {
       /*
         Pages
       */
-
-      // // Desktop page
-      new HtmlWebpackPlugin({
-        filename: "index.html",
-        template: "views/index.pug",
-        inject: true
-      }),
-
-      ...utils.pages(env),
-      ...utils.pages("login"),
-      ...utils.pages("signup"),
-      ...utils.pages("forget"),
-      ...utils.pages("about"),
-      ...utils.pages("contact"),
-      ...utils.pages("blog"),
+      ...utils.pug(),
 
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
         "window.$": "jquery",
         "window.jQuery": "jquery",
-        Popper: ['popper.js', 'default']          
+        Popper: ['popper.js', 'default']
       }),
       // new WebpackNotifierPlugin({
       //   title: "Your project"
