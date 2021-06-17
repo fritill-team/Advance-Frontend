@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const WebpackNotifierPlugin = require("webpack-notifier");
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
@@ -98,11 +98,11 @@ module.exports = env => {
           ]
         },
         {
-          test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
+          test: /\.(png|jpg|gif|svg|ico)(\?.*)?$/,
           loader: "url-loader",
           options: {
             limit: 3000,
-            name: "/assets/images/[name].[hash:7].[ext]"
+            name: "assets/images/[name].[hash:7].[ext]"
           }
         },
         {
@@ -153,8 +153,8 @@ module.exports = env => {
 
     plugins: [
       // new CopyWebpackPlugin([
-      //   { from: "../manifest.json", to: "manifest.json" },
-      //   { from: "../browserconfig.xml", to: "browserconfig.xml" },
+        // { from: "../manifest.json", to: "manifest.json" },
+        // { from: "../browserconfig.xml", to: "browserconfig.xml" },
       //   {
       //     from: "assets/images/favicons/android-chrome-192x192.png",
       //     to: "assets/images/android-chrome-192x192.png"
@@ -166,7 +166,8 @@ module.exports = env => {
       //   {
       //     from: "assets/images/favicons/mstile-150x150.png",
       //     to: "assets/images/mstile-150x150.png"
-      //   }
+      //   },
+        
       // ]),
       new MiniCssExtractPlugin({
         filename: "assets/css/[name].[hash:7].bundle.css",
