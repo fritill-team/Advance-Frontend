@@ -1591,15 +1591,25 @@ i.icon1 {
 
 .get1452 {
 	background: #fff;
-    width: 100%;
-    float: left;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #efefef;
+  width: 100%;
+  float: left;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
 	position: relative;
 	text-align: left;
 	margin-bottom: 30px;
-    background: url('../images/get-img.jpg');
+  overflow: hidden;
+  z-index: 0;
+    // background: url('../images/get-img.jpg');
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .get1452 h4 {
@@ -1608,6 +1618,7 @@ i.icon1 {
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 13px;
+    z-index: 3;
 }
 
 .get1452 p {
@@ -1616,6 +1627,7 @@ i.icon1 {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 27px;
+    z-index: 3;
 }
 
 .Get_btn {
@@ -1628,6 +1640,7 @@ i.icon1 {
     background: #ed2a26;
     font-size: 14px;
     font-weight: 500;
+    z-index: 3;
 }
 
 .Get_btn:hover {
@@ -6612,11 +6625,11 @@ a.rmv-btn i {
 
 .coming_soon_style {
     background-color: #333 !important;
-    background-image: -moz-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -webkit-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -o-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -ms-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
+    background-image: -moz-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -o-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -ms-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
 }
 
 .cmtk_group {
