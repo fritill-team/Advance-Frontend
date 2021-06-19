@@ -1,4 +1,5 @@
-import "jquery"
+// import "jquery"
+import "./jquery-3.3.1.min.js"
 // require('bootstrap');
 // require('popper.js');
 import "./vertical-responsive-menu.js"

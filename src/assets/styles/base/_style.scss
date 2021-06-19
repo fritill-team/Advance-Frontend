@@ -967,6 +967,7 @@ i.icon1 {
 
 .fcrse_img {
 	width: 100%;
+    height: 185px;
 	float: left;
 	position: relative;
 }
@@ -4182,8 +4183,8 @@ a.rmv-btn i {
 }
 
 .ui.selection.active.dropdown.cntry152 {
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
+    border-bottom-left-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
 	box-shadow: none !important;
 	border: 1px solid #333 !important;
 }
@@ -8015,4 +8016,48 @@ a.rmv-btn i {
     top: 35%;
     right: 13px;
     position: absolute;
+}
+
+// custom styles
+
+.select-menu{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+
+html[dir='rtl']{
+    label{
+        text-align: right;
+    }
+    input{
+        text-align: inherit !important;
+    }
+    .badge_num{
+        right: unset;
+        left: 3px;
+    }
+    .badge_mb{
+        right: unset;
+        left: 3px;
+        top: 2px;
+    }
+    .selection{
+        &.select-menu{
+            .dropdown{
+                & .icon{
+                    right: auto !important;
+                    left: 1em !important;
+                }
+            }
+        }
+    }
+    .custom-file-label{
+        &::after{
+            left: 0;
+            right: unset;
+            border-radius: 10rem 0 0 10rem;
+        }
+    }
+
 }

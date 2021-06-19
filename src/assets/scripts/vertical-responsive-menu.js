@@ -18,7 +18,7 @@ var tid = setInterval( function () {
   var wrapper = document.querySelector('.wrapper');
 
   var menu = document.getElementById("js-menu");
-  var subnavs = menu.querySelectorAll('.menu--item__has_sub_menu');
+  var subnavs = $('#js-menu .menu--item__has_sub_menu');
 
   // Toggle menu click
   querySelector('.toggle_menu').onclick = function () {
