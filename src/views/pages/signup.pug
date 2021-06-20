@@ -21,19 +21,19 @@ block content
             section.sign_form
               h2 Welcome to Edututs+
               //- p Sign Up and Start Learning!
-              form
+              form(class="needs-validation")
                 div(class="ui search focus")
                   div(class="icon input lbel25")
                     label(for="validationServerFullName" class="sr-only d-none") Full Name *
                     div(class="ui left icon input swdh19 w-100")
                       input(
-                        class="prompt srch_explore"
+                        class="prompt srch_explore form-control"
                         type="text"
                         name="fullname"
                         id="validationServerFullName" required maxlength="64"
                         aria-describedby="validationServer01Feedback"
                         placeholder="Full Name" autofocus)
-                    div(class="invalid-feedback my-2" id="validationServer01Feedback") Requerd
+                    div(class="invalid-feedback my-2") Requerd
                 div(class="ui search focus mt-15")
                   div(class="icon left input lbel25")
                     label(for="validationServerEmail" class="sr-only d-none") Email Address *

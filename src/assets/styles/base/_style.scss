@@ -5821,6 +5821,18 @@ a.rmv-btn i {
     z-index: 0;
     height: 100%;
 }
+.sign_in_up_bg:before {
+  content: "";
+  // background: url(../../images/sign.svg) no-repeat center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  opacity: 0.04;
+}
 
 .sign_in_up_bg--img {
     left: 0;
@@ -5941,6 +5953,7 @@ a.rmv-btn i {
 
 .sgntrm145 a {
     color: #ed2a26;
+    text-decoration: none;
 }
 
 .sgntrm145 a:hover {
@@ -5960,6 +5973,17 @@ a.rmv-btn i {
 .ui.swdh95 {
     font-size: 14px !important;
     width: 100%;
+}
+.ui.swdh95 .key-number{
+  position: absolute;
+  height: 100%;
+  border-radius: 20%;
+  background: none;
+  border: 0;
+  outline: none;
+  padding-left: 14px;
+  color: #aaaaaa;
+  appearance: none;
 }
 
 .ui[class*="left icon"].swdh95.input>input {
@@ -6000,7 +6024,8 @@ a.rmv-btn i {
     border-radius: 20px;
     text-align: center;
   	border: 0;
-    height: 32px;
+    height: 40px;
+     width: 40px !important;
     padding: 5px;
     margin: 15px 10px 0px;
 }

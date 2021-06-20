@@ -7,17 +7,15 @@ block title
 
 block content
   div(class="sign_in_up_bg")
-    img(class="sign_in_up_bg--img" src='../../assets/images/sign.svg' alt='')
-    .sign_in_up_form-wrapper
       div(class="container ")
         div(class="row justify-content-lg-center justify-content-md-center")
           .col-lg-12
             div(class="main_logo25" , id="logo")
+              h2(class="fw-bold") Advance
               //- a(href='index.html')
               //-   img(src='../../assets/images/sign_logo.png' alt='')
               //- a(href='index.html')
               //-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
-              h2(class="fw-bold") Advance
           div(class="col-lg-6 col-md-8")
             section.sign_form
               h2 Welcome Back
@@ -35,16 +33,21 @@ block content
                 div(class="ui search focus mt-15")
                   div(class=" icon input lbel25")
                     label(for="validationServerEmail" class="sr-only d-none") Email Address *
-                    div(class="ui left icon input swdh95 w-100")
+                    div(class="ui left icon input swdh95  w-100")
                       input(
                         class="prompt srch_explore"
-                        type="email number"
+                        type="email"
                         name="emailaddress"
                         required maxlength="64"
-                        id="validationServerEmail"
+                        id="validationServerEmail emailtype"
                         aria-describedby="validationServer04Feedback"
-                        placeholder="Email Address  " autofocus)
-                      i(class="uil uil-envelope icon icon2")
+                        placeholder="Email Address Or Password" autofocus)
+                      select(class="key-number")
+                        option(value) +02
+                        option(value="") +966
+                        option(value="") +02
+                        option(value="") +092
+                      //- i(class="uil uil-envelope icon icon2")
                     div(class="invalid-feedback my-2" id="validationServer04Feedback") Requerd
                 div(class="ui search focus mt-15")
                   div(class=" icon input lbel25")
@@ -71,7 +74,7 @@ block content
                         id="remember")
                       label(for="remember") Remember Me
                 button(class="login-btn" type="submit")  Sign In
-              p(class="sgntrm145")  Or
+              p(class="sgntrm145 mt-4")
                 a(href="forgot_password.html")  Forgot Password
               div(class=" middle-or d-flex my-2 ")
                 hr
@@ -85,7 +88,10 @@ block content
                 i(class="uil uil-google")
               p(class="mb-0 mt-30 hvsng145")  Don't have an account?
                 a(href="sign_up.html")  Sign Up
+
           .sign_footer
             | &copy; 2020
             strong  Advance
             |. All Rights Reserved.
+
+
