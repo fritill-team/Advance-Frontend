@@ -1,23 +1,4 @@
-/*===================== TABLE OF CONTENT =======================
-/*
-Table Of Content
-==================
-1.  google fonts
-2.  CROSS BROWSER COMPATABILITY
-3.  DEFAULT BORDER RADIUS
-4.  Sticky Header
-5.  Top Scroll Bar
 
-=============================================================*/
-
-
-/* ==================================================================================
-Fonts
-===================================================================================== */
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap'); */
-/* ==================================================================================
-Reset Css
-===================================================================================== */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1591,15 +1572,24 @@ i.icon1 {
 
 .get1452 {
 	background: #fff;
-    width: 100%;
-    float: left;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #efefef;
+  width: 100%;
+  float: left;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
 	position: relative;
 	text-align: left;
 	margin-bottom: 30px;
-    // background: url('../../images/get_img.jpg');
+  overflow: hidden;
+  z-index: 0;
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .get1452 h4 {
@@ -1608,6 +1598,7 @@ i.icon1 {
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 13px;
+    z-index: 3;
 }
 
 .get1452 p {
@@ -1616,6 +1607,7 @@ i.icon1 {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 27px;
+    z-index: 3;
 }
 
 .Get_btn {
@@ -1628,6 +1620,7 @@ i.icon1 {
     background: #ed2a26;
     font-size: 14px;
     font-weight: 500;
+    z-index: 3;
 }
 
 .Get_btn:hover {
@@ -6662,11 +6655,11 @@ a.rmv-btn i {
 
 .coming_soon_style {
     background-color: #333 !important;
-    background-image: -moz-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -webkit-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -o-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: -ms-radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
-    background-image: radial-gradient(center center, circle cover, #333333, #0d1218 100%) !important;
+    background-image: -moz-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -webkit-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -o-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: -ms-radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
+    background-image: radial-gradient(center center, circle farthest-corner, #333333, #0d1218 100%) !important;
 }
 
 .cmtk_group {
