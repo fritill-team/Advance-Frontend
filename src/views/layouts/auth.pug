@@ -22,18 +22,18 @@ html(lang='en')
     block title
       title Login
   body
-    div(class="sign_in_up_bg")
-      div(class="container ")
-        div(class="row justify-content-lg-center justify-content-md-center")
+    section.sign_in_up_bg
+      div.container
+        div.row.justify-content-lg-center.justify-content-md-center
           .col-lg-12
-            div(class="main_logo25" , id="logo")
-              h2(class="fw-bold") Advance
+            div.main_logo25#logo
+              h2.fw-bold Advance
               //- a(href='index.html')
               //-   img(src='../../assets/images/sign_logo.png' alt='')
               //- a(href='index.html')
               //-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
-          div(class="col-lg-6 col-md-8")
-            section.sign_form
+          div.col-lg-6.col-md-8
+            article.sign_form
                 block content
           .sign_footer
             | &copy; 2020

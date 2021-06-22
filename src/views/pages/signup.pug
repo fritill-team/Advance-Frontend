@@ -8,61 +8,56 @@ block content
   h2 Welcome Back
   //- p Log In to Your Edututs+ Account! 
   form
-    div(class="ui search focus")
-      div(class="icon input lbel25")
-        label(for="validationServerFullName" class="sr-only d-none") Full Name *
-        div(class="ui left icon input swdh19 w-100")
-          input(
-            class="prompt srch_explore form-control"
+    div.ui.search.focus
+      div.icon.input.lbel25
+        label.sr-only.d-none(for="validationServerFullName") Full Name *
+        div.ui.left.icon.input.swdh19.w-100
+          input.prompt.srch_explore.form-control(
             type="text"
             name="fullname"
             id="validationServerFullName" required maxlength="64"
             aria-describedby="validationServer01Feedback"
             placeholder="Full Name" autofocus)
-        div(class="invalid-feedback my-2") Requerd
-    div(class="ui search focus mt-15")
-      div(class="icon left input lbel25")
-        label(for="validationServerEmail" class="sr-only d-none") Email Address *
-        div(class="ui left icon input swdh19 w-100")
-          input(
-            class="prompt srch_explore"
+        div.invalid-feedback.my-2 Requerd
+    div.ui.search.focus.mt-15
+      div.icon.left.input.lbel25
+        label.sr-only.d-none(for="validationServerEmail") Email Address *
+        div.ui.left.icon.input.swdh19.w-100
+          input.prompt.srch_explore(
             type="email"
             name="emailaddress"
             id="validationServerEmail" required maxlength="64"
             aria-describedby="validationServer02Feedback"
             placeholder="Email Address" )
-        div(class="invalid-feedback my-2" id="validationServer02Feedback") Requerd
-      div(class="ui search focus mt-15")
-        div(class="icon input lbel25")
-          label(for="validationServerPassword" class="sr-only d-none") Password *
-          div(class="ui left icon input swdh19 w-100")
-            input(
-              class="prompt srch_explore"
+        div.invalid-feedback.my-2#validationServer02Feedback Requerd
+      div.ui.search.focus.mt-15
+        div.icon.input.lbel25
+          label.sr-only.d-none(for="validationServerPassword")  Password *
+          div.ui.left.icon.input.swdh19.w-100
+            input.prompt.srch_explore( 
               type="password"
               name="password"
               id="validationServerPassword"
               aria-describedby="validationServer03Feedback"
               required maxlength="64"
               placeholder="Password" )
-          div(class="invalid-feedback my-2" id="validationServer03Feedback") Requerd
-        div(class="ui form mt-30 checkbox_sign")
-          div(class="inline field")
-            div(class="ui checkbox mncheck")
-              input(
+          div.invalid-feedback.my-2#validationServer03Feedback Requerd
+        div.ui.form.mt-30.checkbox_sign
+          div.inline.field
+            div.ui.checkbox.mncheck
+              input.hidden(
                 type="checkbox"
                 tabindex="0"
-                class="hidden"
                 id="remembr-signup"
                 )
               label(for="remembr-signup") I’m in for emails with exciting discounts and personalized recommendations
-            button(
-              class="login-btn"
+            button.login-btn( 
               type="submit")
               | Next
-          p(class="sgntrm146")  By signing up, you agree to our
+          p.sgntrm146  By signing up, you agree to our
             a(href="terms_of_use.html")   Terms of Use
             |   and
             a(href="terms_of_use.html")  Privacy Policy
             |  .
-          p(class="mb-0 mt-30")  Already have an account?
+          p.mb-0.mt-30  Already have an account?
             a(href="sign_in.html")  Log In

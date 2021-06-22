@@ -6,23 +6,22 @@ block title
 
 block content
   h2 Request a Password Reset
-  form(class="needs-validation")
-    div(class="ui search focus mt-50")
-      div(class=" icon input lbel25")
-        label(for="validationServerEmail" class="sr-only d-none") Email Address *
-        div(class="ui left icon input swdh95")
-          input(
-          class="prompt srch_explore"
+  form.needs-validation
+    div.ui.search.focus.mt-50
+      div.icon.input.lbel25
+        label.sr-onlyd-none(for="validationServerEmail") Email Address *
+        div.ui.left.icon.input.swdh95
+          input.prompt.srch_explore(
           type="email"
           name="emailaddress"
           id="validationServerEmail" required maxlength="64"
           aria-describedby="validationServer06Feedback"
           placeholder="Email Address" autofocus)
-          i(class="uil uil-envelope icon icon2")
-        div(class="invalid-feedback my-2" id="validationServer06Feedback") Requerd
-    button(class="login-btn" type="submit")
+          i.uil.uil-envelope.icon.icon2
+        div.invalid-feedback.my-2#validationServer06Feedback Requerd
+    button.login-btn(type="submit")
       | Reset Password
-  p(class="mb-0 mt-30") Go Back
+  p.mb-0.mt-30 Go Back
     a(href="../pages/login.pug")  Sign In 
 
 

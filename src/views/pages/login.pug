@@ -9,61 +9,56 @@ block content
   h2 Welcome Back
   //- p Log In to Your Edututs+ Account! 
   form
-    div(class="ui search focus mt-15")
-      div(class=" icon input lbel25")
-        label(for="validationServerEmail" class="sr-only d-none") Email Address *
-        div(class="ui left icon input swdh95  w-100")
-          input(
-            class="prompt srch_explore"
+    div.ui.search.focus.mt-15
+      div.icon.input.lbel25
+        label.sr-only.d-none(for="validationServerEmail") Email Address *
+        div.ui.left.icon.input.swdh95.w-100
+          input.prompt.srch_explore(
             type="email"
             name="emailaddress"
             required
             id="validationServerEmail emailtype"
             aria-describedby="validationServer04Feedback"
             placeholder="Email Address Or Number" autofocus)
-          select(class="key-number d-block")
+          select.key-number.d-block
             option(value) +02
             option(value="") +966
             option(value="") +02
             option(value="") +092
-          i(class="uil uil-envelope icon-massege icon icon2 d-none")
-        div(class="invalid-feedback my-2" id="validationServer04Feedback") Requerd
-      div(class="ui search focus mt-15")
-        div(class=" icon input lbel25")
-          label(for="validationServeriPassword" class="form-label d-none") Password *
-          div(class="ui left icon input swdh95 w-100")
-            input(
-              class="prompt srch_explore"
+          i.uil.uil-envelope.icon-massege.icon.icon2.d-none
+        div.invalid-feedback.my-2#idvalidationServer04Feedback Requerd
+      div.ui.search.focus.mt-15
+        div.icon.input.lbel25
+          label.form-label.d-none(for="validationServeriPassword") Password *
+          div.ui.left.icon.input.swdh95.w-100
+            input.prompt.srch_explore#validationServeriPassword(
               type="password"
               name="password"
               required
-              id="validationServeriPassword"
               aria-describedby="validationServer05Feedback"
               placeholder="Password"
               )
-            i(class="uil uil-key-skeleton-alt icon icon2")
-          div(class="invalid-feedback my-2" id="validationServer05Feedback" ) Requerd
-      div(class="ui form checkbox_sign mt-30")
-        div(class="inline field")
-          div(class="ui checkbox mncheck")
-            input(
-              class="hidden"
+            i.uil.uil-key-skeleton-alt.icon.icon2
+          div.invalid-feedback.my-2#validationServer05Feedback  Requerd
+      div.ui.form.checkbox_sign.mt-30
+        div.inline.field
+          div.ui.checkbox.mncheck
+            input.hidden#remember( 
               type="checkbox"
-              tabindex="0"
-              id="remember")
+              tabindex="0" )
             label(for="remember") Remember Me
-      button(class="login-btn" type="submit")  Sign In
-    p(class="sgntrm145 mt-4")
+      button.login-btn(type="submit")  Sign In
+    p.sgntrm145.mt-4
       a(href="forgot_password.html")  Forgot Password
-    div(class=" middle-or d-flex my-2 ")
+    div.middle-or.d-flex.my-2
       hr
-      p(class="mb-0") Or
+      p.mb-0  Or
       hr
-    button(class="social_lnk_btn color_btn_fb")
-      i(class="uil uil-facebook-f")
-    button(class="social_lnk_btn mt-15 color_btn_tw")
-      i(class="uil uil-twitter")
-    button(class="social_lnk_btn mt-15 color_btn_go")
-      i(class="uil uil-google")
-    p(class="mb-0 mt-30 hvsng145")  Don't have an account?
+    button.social_lnk_btn.color_btn_fb
+      i.uil.uil-facebook-f
+    button.social_lnk_btn.mt-15.color_btn_tw
+      i.uil.uil-twitter
+    button.social_lnk_btn.mt-15.color_btn_go
+      i.uil.uil-google
+    p.mb-0.mt-30.hvsng145  Don't have an account?
       a(href="sign_up.html")  Sign Up
