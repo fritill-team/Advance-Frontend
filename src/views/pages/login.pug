@@ -11,21 +11,21 @@ block content
   form
     div.ui.search.focus.mt-15
       div.icon.input.lbel25
-        label.sr-only.d-none(for="validationServerEmail") Email Address *
+        label.sr-only.d-none(for="emailtype") Email Address *
         div.ui.left.icon.input.swdh95.w-100
           input.prompt.srch_explore(
             type="email"
             name="emailaddress"
             required
-            id="validationServerEmail emailtype"
-            aria-describedby="validationServer04Feedback"
+            id="emailtype"
+            aria-describedby="validationServer04Feedback" equals()
             placeholder="Email Address Or Number" autofocus)
-          select.key-number.d-block
+          select.key-number#keynumber(style="display : none")
             option(value) +02
             option(value="") +966
             option(value="") +02
             option(value="") +092
-          i.uil.uil-envelope.icon-massege.icon.icon2.d-none
+          i.uil.uil-envelope.icon-massege.icon.icon2#iconmassege(style="display : block")
         div.invalid-feedback.my-2#idvalidationServer04Feedback Requerd
       div.ui.search.focus.mt-15
         div.icon.input.lbel25
