@@ -1,63 +1,63 @@
-.sign_in_up_bg {
-  background: #f7f7f7 !important;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  height: 100%;
-  &::before{
-    content: "";
-    background: url('/assets/images/sign.svg') no-repeat center;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    pointer-events: none;
-    background-size: cover;
-    opacity: 0.04;
-    z-index: -1;
-  }
-  .srch_explore {
-    background: #fff !important;
-    border: 1px solid #e5e5e5 !important;
-    color: #333 !important;
-    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
-  }
-}
-.field-wrapper{
-  .text-field__label{
-    margin-bottom: 10px !important;
-    font-size: 14px !important;
-  }
-  .text-field{
-    font-size: 14px !important;
-    width: 100%;
-    border-radius: 20px!important;
-    &.text-field--left{
-      padding: 0 1em !important;
-      height: 40px;
-      font-size: 14px;
-      font-weight: 400;
-      font-family: 'Roboto', sans-serif;
-    }
-    &.text-field--icon{
-      padding: 0 4em !important
-    }
-    &:focus{
-      border: 1px solid #333 !important;
-      box-shadow: none !important;
-    }
-  }
+// .sign_in_up_bg {
+//   background: #f7f7f7 !important;
+//   position: relative;
+//   width: 100%;
+//   z-index: 0;
+//   height: 100%;
+//   &::before{
+//     content: "";
+//     background: url('/assets/images/sign.svg') no-repeat center;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     position: absolute;
+//     pointer-events: none;
+//     background-size: cover;
+//     opacity: 0.04;
+//     z-index: -1;
+//   }
+//   .srch_explore {
+//     background: #fff !important;
+//     border: 1px solid #e5e5e5 !important;
+//     color: #333 !important;
+//     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+//   }
+// }
+// .field-wrapper{
+//   .text-field__label{
+//     margin-bottom: 10px !important;
+//     font-size: 14px !important;
+//   }
+//   .text-field{
+//     font-size: 14px !important;
+//     width: 100%;
+//     border-radius: 20px!important;
+//     &.text-field--left{
+//       padding: 0 1em !important;
+//       height: 40px;
+//       font-size: 14px;
+//       font-weight: 400;
+//       font-family: 'Roboto', sans-serif;
+//     }
+//     &.text-field--icon{
+//       padding: 0 4em !important
+//     }
+//     &:focus{
+//       border: 1px solid #333 !important;
+//       box-shadow: none !important;
+//     }
+//   }
   
-  .text-field__input{
+//   .text-field__input{
 
-  }
-  .text-field__error{
+//   }
+//   .text-field__error{
 
-  }
-  &.is-invalid{
-    border-color: #dc3545 !important; 
-  }
-}
+//   }
+//   &.is-invalid{
+//     border-color: #dc3545 !important; 
+//   }
+// }
 
 
