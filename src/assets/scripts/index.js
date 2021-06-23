@@ -5,7 +5,8 @@ import "./jquery-3.3.1.min.js"
 import "./vertical-responsive-menu.js"
 // import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js"
 import "../styles/vendor/OwlCarousel/owl.carousel.js"
-import "../scripts/login"
+import "../scripts/reset";
+
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
 import "../styles/vendor/semantic/semantic.min.js"
@@ -18,7 +19,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Vue from 'vue';
 import Test from "../scripts/vue/Test.vue";
 
-console.log("hello from webpack");
+import "../scripts/login";
+ console.log("hello from webpack");
 
 new Vue({
   el: '#vue',
