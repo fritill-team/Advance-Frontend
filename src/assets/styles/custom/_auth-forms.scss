@@ -24,8 +24,8 @@
     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
   }
 }
-.text-field-wrapper{
-  label{
+.field-wrapper{
+  .text-field__label{
     margin-bottom: 10px !important;
     font-size: 14px !important;
   }
@@ -47,6 +47,13 @@
       border: 1px solid #333 !important;
       box-shadow: none !important;
     }
+  }
+  
+  .text-field__input{
+
+  }
+  .text-field__error{
+
   }
   &.is-invalid{
     border-color: #dc3545 !important; 
