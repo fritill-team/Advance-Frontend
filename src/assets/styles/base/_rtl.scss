@@ -1,35 +1,35 @@
-// html[dir='rtl']{
-//   label{
-//       text-align: right;
-//   }
-//   input{
-//       text-align: inherit !important;
-//   }
-//   .badge_num{
-//       right: unset;
-//       left: 3px;
-//   }
-//   .badge_mb{
-//       right: unset;
-//       left: 3px;
-//       top: 2px;
-//   }
-//   .selection{
-//       &.select-menu{
-//           .dropdown{
-//               & .icon{
-//                   right: auto !important;
-//                   left: 1em !important;
-//               }
-//           }
-//       }
-//   }
-//   .custom-file-label{
-//       &::after{
-//           left: 0;
-//           right: unset;
-//           border-radius: 10rem 0 0 10rem;
-//       }
-//   }
-// }
+html[dir='rtl']{
+  label{
+      text-align: right;
+  }
+  input{
+      text-align: inherit !important;
+  }
+  .badge_num{
+      right: unset;
+      left: 3px;
+  }
+  .badge_mb{
+      right: unset;
+      left: 3px;
+      top: 2px;
+  }
+  .selection{
+      &.select-menu{
+          .dropdown{
+              & .icon{
+                  right: auto !important;
+                  left: 1em !important;
+              }
+          }
+      }
+  }
+  .custom-file-label{
+      &::after{
+          left: 0;
+          right: unset;
+          border-radius: 10rem 0 0 10rem;
+      }
+  }
+}
  
