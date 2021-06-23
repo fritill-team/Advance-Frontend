@@ -5,6 +5,7 @@ import "./jquery-3.3.1.min.js"
 import "./vertical-responsive-menu.js"
 // import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js"
 import "../styles/vendor/OwlCarousel/owl.carousel.js"
+import "../scripts/login"
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
 import "../styles/vendor/semantic/semantic.min.js"
