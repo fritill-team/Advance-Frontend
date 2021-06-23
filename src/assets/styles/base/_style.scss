@@ -967,6 +967,7 @@ i.icon1 {
 
 .fcrse_img {
 	width: 100%;
+    height: 185px;
 	float: left;
 	position: relative;
 }
@@ -4182,8 +4183,8 @@ a.rmv-btn i {
 }
 
 .ui.selection.active.dropdown.cntry152 {
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
+    border-bottom-left-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
 	box-shadow: none !important;
 	border: 1px solid #333 !important;
 }
@@ -5813,6 +5814,19 @@ a.rmv-btn i {
 	width: 100%;
     z-index: 0;
     height: 100%;
+    &::before{
+        content: "";
+        background: url('/assets/images/sign.svg') no-repeat center;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        pointer-events: none;
+        background-size: cover;
+        opacity: 0.04;
+        z-index: -1;
+    }
 }
 .sign_in_up_bg:before {
   content: "";
@@ -5827,18 +5841,6 @@ a.rmv-btn i {
   opacity: 0.04;
 }
 
-.sign_in_up_bg--img {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    opacity: 0.04;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
 
 .sign_form {
 	background: #fff;
@@ -5849,7 +5851,7 @@ a.rmv-btn i {
     float: left;
     width: 100%;
     margin-top: 0;
-    text-align: center;
+    // text-align: center;
     z-index: 2;
 }
 
@@ -5899,7 +5901,7 @@ a.rmv-btn i {
 
 .sign_form h2 {
 	font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
 	color: #333;
@@ -8041,4 +8043,11 @@ a.rmv-btn i {
     top: 35%;
     right: 13px;
     position: absolute;
+}
+
+// custom styles
+
+.select-menu{
+    display: flex !important;
+    justify-content: space-between !important;
 }

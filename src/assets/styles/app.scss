@@ -41,13 +41,18 @@ ul{
 
 */
 @import './base/style.scss';
+@import './base/rtl.scss';
+@import './custom/auth-forms.scss';
+@import './base/instructor-dashboard.css';
+@import './base/jquery-steps.css';
 @import './base/datepicker.min.css';
 @import './vendor/unicons-2.0.1/css/unicons.css';
 @import './base/vertical-responsive-menu.min.css';
 @import './base/responsive.css';
 @import './base/night-mode.css';
-// @import './vendor/fontawesome-free/css/all.css';
 @import './vendor/OwlCarousel/assets/owl.carousel.css';
 @import './vendor/OwlCarousel/assets/owl.theme.default.min.css';
 @import './vendor/semantic/semantic.css';
+
+
 
