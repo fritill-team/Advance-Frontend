@@ -8,32 +8,32 @@ block content
   h2 Welcome Back
   //- p Log In to Your Edututs+ Account! 
   form
-    div.ui.search.focus
-      div.icon.input.lbel25
+    .ui.search.focus
+      .icon.input.lbel25
         label.sr-only.d-none(for="validationServerFullName") Full Name *
-        div.ui.left.icon.input.swdh19.w-100
+        .ui.left.icon.input.swdh19.w-100
           input.prompt.srch_explore.form-control(
             type="text"
             name="fullname"
             id="validationServerFullName" required maxlength="64"
             aria-describedby="validationServer01Feedback"
             placeholder="Full Name" autofocus)
-        div.invalid-feedback.my-2 Requerd
-    div.ui.search.focus.mt-15
-      div.icon.left.input.lbel25
+        .invalid-feedback.my-2 Requerd
+    .ui.search.focus.mt-15
+      .icon.left.input.lbel25
         label.sr-only.d-none(for="validationServerEmail") Email Address *
-        div.ui.left.icon.input.swdh19.w-100
+        .ui.left.icon.input.swdh19.w-100
           input.prompt.srch_explore(
             type="email"
             name="emailaddress"
             id="validationServerEmail" required maxlength="64"
             aria-describedby="validationServer02Feedback"
             placeholder="Email Address" )
-        div.invalid-feedback.my-2#validationServer02Feedback Requerd
-      div.ui.search.focus.mt-15
-        div.icon.input.lbel25
+        .invalid-feedback.my-2#validationServer02Feedback Requerd
+      .ui.search.focus.mt-15
+        .icon.input.lbel25
           label.sr-only.d-none(for="validationServerPassword")  Password *
-          div.ui.left.icon.input.swdh19.w-100
+          .ui.left.icon.input.swdh19.w-100
             input.prompt.srch_explore( 
               type="password"
               name="password"
@@ -41,10 +41,10 @@ block content
               aria-describedby="validationServer03Feedback"
               required maxlength="64"
               placeholder="Password" )
-          div.invalid-feedback.my-2#validationServer03Feedback Requerd
-        div.ui.form.mt-30.checkbox_sign
-          div.inline.field
-            div.ui.checkbox.mncheck
+          .invalid-feedback.my-2#validationServer03Feedback Requerd
+        .ui.form.mt-30.checkbox_sign
+          .inline.field
+            .ui.checkbox.mncheck
               input.hidden(
                 type="checkbox"
                 tabindex="0"

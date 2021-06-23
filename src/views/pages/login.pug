@@ -9,10 +9,10 @@ block content
   h2 Welcome Back
   //- p Log In to Your Edututs+ Account! 
   form
-    div.ui.search.focus.mt-15
-      div.icon.input.lbel25
+    .ui.search.focus.mt-15
+      .icon.input.lbel25
         label.sr-only.d-none(for="emailtype") Email Address *
-        div.ui.left.icon.input.swdh95.w-100
+        .ui.left.icon.input.swdh95.w-100
           input.prompt.srch_explore(
             type="email"
             name="emailaddress"
@@ -26,11 +26,11 @@ block content
             option(value="") +02
             option(value="") +092
           i.uil.uil-envelope.icon-massege.icon.icon2#iconmassege(style="display : block")
-        div.invalid-feedback.my-2#idvalidationServer04Feedback Requerd
-      div.ui.search.focus.mt-15
-        div.icon.input.lbel25
+        .invalid-feedback.my-2#idvalidationServer04Feedback Requerd
+      .ui.search.focus.mt-15
+        .icon.input.lbel25
           label.form-label.d-none(for="validationServeriPassword") Password *
-          div.ui.left.icon.input.swdh95.w-100
+          .ui.left.icon.input.swdh95.w-100
             input.prompt.srch_explore#validationServeriPassword(
               type="password"
               name="password"
@@ -39,10 +39,10 @@ block content
               placeholder="Password"
               )
             i.uil.uil-key-skeleton-alt.icon.icon2
-          div.invalid-feedback.my-2#validationServer05Feedback  Requerd
-      div.ui.form.checkbox_sign.mt-30
-        div.inline.field
-          div.ui.checkbox.mncheck
+          .invalid-feedback.my-2#validationServer05Feedback  Requerd
+      .ui.form.checkbox_sign.mt-30
+        .inline.field
+          .ui.checkbox.mncheck
             input.hidden#remember( 
               type="checkbox"
               tabindex="0" )
@@ -50,7 +50,7 @@ block content
       button.login-btn(type="submit")  Sign In
     p.sgntrm145.mt-4
       a(href="forgot_password.html")  Forgot Password
-    div.middle-or.d-flex.my-2
+    .middle-or.d-flex.my-2
       hr
       p.mb-0  Or
       hr
