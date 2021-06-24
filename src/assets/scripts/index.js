@@ -1,8 +1,9 @@
 // import "jquery"
+import "./vertical-responsive-menu.js"
 import "./jquery-3.3.1.min.js"
+import "../styles/vendor/bootstrap/js/bootstrap.bundle.min"
 // require('bootstrap');
 // require('popper.js');
-import "./vertical-responsive-menu.js"
 // import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js"
 import "../styles/vendor/OwlCarousel/owl.carousel.js"
 // import "../scripts/login"
