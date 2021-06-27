@@ -1,0 +1,22 @@
+extends ../layouts/auth.pug
+
+
+block title
+
+  title forget
+
+block content
+  h2  Mobile Phone Verification 
+  p  Enter the code we just send on your mobile phone 
+    span  +20155028165
+    form.my-2(name="verify")
+      .verification.d-flex.my-2
+        input.vcode-input#vcode1(type="tel" maxlength="1" pattern="[0-9]")
+        input.vcode-input#vcode2(type="tel" maxlength="1" pattern="[0-9]")
+        input.vcode-input#vcode3(type="tel" maxlength="1" pattern="[0-9]")
+        input.vcode-input#vcode4(type="tel" maxlength="1" pattern="[0-9]")
+        input.vcode-input#vcode5(type="tel" maxlength="1" pattern="[0-9]")
+        input.vcode-input#vcode6(type="tel" maxlength="1" pattern="[0-9]")
+      button.login-btn(type="submit")  Reset
+      p.sgntrm145.mt-4  don't receive the code ?
+        a.sgntrm145.align-center  Reset
