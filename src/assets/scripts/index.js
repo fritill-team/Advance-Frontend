@@ -6,12 +6,12 @@ import "../styles/vendor/bootstrap/js/bootstrap.bundle.min"
 // require('popper.js');
 // import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js"
 import "../styles/vendor/OwlCarousel/owl.carousel.js"
-import "../scripts/login"
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
 import "../styles/vendor/semantic/semantic.min.js"
 import "./custom.js"
 import "./night-mode.js"
+
 import "../scripts/login";
 
 
