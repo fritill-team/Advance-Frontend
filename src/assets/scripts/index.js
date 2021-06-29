@@ -21,7 +21,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Vue from 'vue';
 import Test from "../scripts/vue/Test.vue";
 
-  console.log("hello from webpack");
+console.log("hello from webpack");
 
 new Vue({
   el: '#vue',
