@@ -37,73 +37,6 @@ html[dir='rtl']{
       float: right;
       .course-list__header{
         float: right;
-        .header__header-left{
-          .header-left__title{
-            .title__icone{
-              margin-left: 5px;
-          }
-          .title__title-text{
-            padding-right: 8px;
-            padding-left: 10px;
-            color: #333;
-            font-weight: 500;
-            font-family: Roboto,sans-serif;
-        }
-          }
-        }
-        .header__header-right{
-          .header-right__num-item{
-            margin-left: 20px;
-          }
-          .header-right__length-item{
-            text-align: left !important;
-          }
-        }
-      }
-    .course-list__list-content{
-      float: right;
-      border-right: 1px solid #efefef;
-      border-left: 1px solid #efefef;
-      .left-content__top-title{
-        margin-right: 10px;
-      }
-      .content-item__details{
-        margin-right: auto;
-        .details__content-summary{
-          text-align: left;
-        }
-      }
-    }
-    }
-  }
-  /*start component course*/
-  .course-content{
-    float: right;
-    h3{
-      text-align: right;
-      float: right;
-    }
-    .course-content__details{
-      float: left;
-      .details__list{
-        li{
-          margin-left: 30px;
-          .list--expand-all{
-            text-align: right;
-          }
-          .list--list-content-number{
-            text-align: right;
-          }
-          .list--time-course{
-            text-align: right;
-          }
-        }
-      }
-    }
-    .course-content__course-list{
-      float: right;
-      .course-list__header{
-        float: right;
         .header__header-title{
           .header-title__title{
             .title__icone{
@@ -143,4 +76,74 @@ html[dir='rtl']{
     }
     }
   }
+    /*start component about*/
+    .about-content{
+      .about-content__about-required{
+        .about-required__title{
+          text-align: right;
+        }
+        .about-required__list{
+          .list__list-item{
+            .list-item__details{
+              text-align: right;
+              &::before{
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+        .about-content__description{
+          .description__title{
+            text-align: right;
+          }
+          .description__name{
+            text-align: right;
+          }
+          .description__list{
+            padding-right: 30px!important;
+            .list__item-list{
+              .item-list__item{
+                text-align: right;
+                &::before{
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+      }
+        .about-content__about-course{
+          .about-course__title{
+            text-align: right;
+          }
+          .about-course__list{
+            padding-right: 30px!important;
+            .list__list-item{
+              .list-item__item{
+                text-align: right;
+                &::before{
+                  margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      .about-content__about-learn{
+        .about-learn__title{
+          text-align: right;
+        }
+        .about-learn__content{
+          .content__list{
+            .list__list-item{
+              .list-item__title{
+                .title__name{
+                  text-align: right;
+                  margin-right: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 }
