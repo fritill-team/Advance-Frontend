@@ -143,9 +143,9 @@ expandLink.click(function(){
     var isAllOpen = !$(this).data('isAllOpen');
     console.log({isAllOpen: isAllOpen, contentAreas: contentAreas})
     contentAreas[isAllOpen? 'slideDown': 'slideUp']();
-    
+
     expandLink.text(isAllOpen? 'Collapse All': 'Expand all')
-                .data('isAllOpen', isAllOpen);    
+                .data('isAllOpen', isAllOpen);
 });
 
 

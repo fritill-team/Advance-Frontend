@@ -203,17 +203,18 @@ if (jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://p
 
 // expand/collapse all Start
 
-var headers = $('#accordion .accordion-header');
-var contentAreas = $('#accordion .ui-accordion-content ').hide()
+var headers = $('#accordion .course-list__header');
+var contentAreas = $('#accordion .course-list__list-content ').hide()
 .first().show().end();
-var expandLink = $('.accordion-expand-all');
+var expandLink = $('.list--expand-all');
 
 // add the accordion functionality
 headers.click(function() {
     // close all panels
     contentAreas.slideUp();
-    // open the appropriate panel
+     // open the appropriate panel
     $(this).next().slideDown();
+
     // reset Expand all button
     expandLink.text('Expand all')
         .data('isAllOpen', false);
@@ -226,9 +227,9 @@ expandLink.click(function(){
     var isAllOpen = !$(this).data('isAllOpen');
     console.log({isAllOpen: isAllOpen, contentAreas: contentAreas})
     contentAreas[isAllOpen? 'slideDown': 'slideUp']();
-    
+
     expandLink.text(isAllOpen? 'Collapse All': 'Expand all')
-                .data('isAllOpen', isAllOpen);    
+                .data('isAllOpen', isAllOpen);
 });
 
 
