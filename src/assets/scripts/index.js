@@ -12,7 +12,9 @@ import "../styles/vendor/semantic/semantic.min.js"
 import "./custom.js"
 import "./night-mode.js"
 
-import "../scripts/login"
+import "../scripts/login";
+
+
 import "../styles/app.scss";
 import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/js/popper.min.js';
