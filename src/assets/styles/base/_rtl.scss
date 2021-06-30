@@ -146,4 +146,158 @@ html[dir='rtl']{
         }
       }
     }
+    /* start component review */
+    .reviews{
+      float: right;
+      .reviews__all-reviews{
+        float: right;
+        .all-reviews__title{
+          text-align: right;
+        }
+        .all-reviews__total-rating{
+          .total-rating__number{
+            text-align: right;
+            margin-left: 10px;
+          }
+          .total-rating__rating-box{
+            .rating-box__rating-star{
+              float: right;
+              margin-left: 7px;
+            }
+            .rating-box--full-star{
+              &::before{
+              right: 0;
+              }
+            }
+            .rating-box--half-star{
+              &::before{
+                right: 0;
+            }
+            &::after{
+              right: 1.5rem;
+            }
+          }
+          .rating-box__empty-star{
+            &:before {
+              right: 0;
+            }
+          }
+          }
+          .total-rating__title{
+            text-align: right;
+            margin-right: 10px;
+          }
+        }
+        .all-reviews__details-rate{
+          .details-rate__rating{
+            .rating__progress{
+              margin-left: 20px;
+            }
+            .rating__rating-box{
+              .rating-box__rating-star{
+                float: right;
+                margin-left: 7px;
+              }
+              .rating-box--full-star{
+                &::before{
+                right: 0;
+                }
+              }
+              .rating-box--half-star{
+                &::before{
+                  right: 0;
+              }
+              &::after{
+                right: 1.5rem;
+              }
+            }
+            }
+            .rating--total{
+              text-align: right;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .review__header{
+        float: right;
+        .header__header-content{
+          float: right;
+          .header-content__title{
+            text-align: right;
+            float: right;
+          }
+          .header-content__search{
+            float: left;
+            .search__input{
+              padding-left: 40px;
+            }
+            .search__btn{
+              left: 3px;
+            }
+          }
+        }
+      }
+      .review__all-reviews{
+        float: right;
+        .all-reviews__item{
+          .item__reviews-user{
+            .reviews-user__img{
+              margin-left: 15px;
+            }
+            .reviews-user__title{
+              .title__name{
+                text-align: right;
+              }
+            }
+          }
+          .item__rating-box{
+            .rating-box__rating-star{
+              float: right;
+              margin-left: 7px;
+            }
+            .rating-box--full-star{
+              &::before{
+              right: 0;
+              }
+            }
+            .rating-box--half-star{
+              &::before{
+                right: 0;
+            }
+            &::after{
+              right: 1.5rem;
+            }
+          }
+          .rating-box__empty-star{
+            &:before {
+              right: 0;
+            }
+          }
+          }
+          .item__comment{
+            text-align: right;
+          }
+          .item__helpful{
+            .helpful__ask{
+              margin-left: 10px;
+            }
+            .helpful__radio-group{
+              .radio-group__item{
+                margin-left: 10px;
+                .item__radio-label{
+                  &::before{
+                    margin-left: 10px;
+                  }
+                }
+              }
+
+            }
+            .helpful__text{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
 }
