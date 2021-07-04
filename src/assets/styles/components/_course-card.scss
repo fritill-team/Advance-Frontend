@@ -53,7 +53,7 @@
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
           box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
-          .badge-seller::after {
+          &::after {
             background: inherit;
             content: "";
             height: 12px;
@@ -70,7 +70,7 @@
             border-bottom-right-radius: 3px;
           }
         }
-        .card-overlay--crd-reviews{
+        .card-overlay__crd-reviews{
           color: #fff;
           background: #fdcc0d;
           display: inline-block;
@@ -78,7 +78,7 @@
           border-radius: 20px;
           font-size: 14px;
           font-weight: 500;
-          font-family: Roboto, sans-serif;
+          font-family: Roboto,sans-serif;
           .crd-reviews i {
             margin-right: 2px;
             .uil-star::before {
@@ -104,7 +104,7 @@
             }
           }
         }
-        span.card-overlay--play_btn1{
+        span.card-overlay__play_btn1{
           border: 0;
           width: 50px;
           height: 50px;
@@ -125,7 +125,10 @@
             }
           }
         }
-        .card-overlay--crd-timer{
+        .card-overlay__crd-timer{
+          position: absolute;
+          color: white;
+          background: rgba(51,51,51,.8);
           bottom: 0;
           margin-bottom: 10px;
           right: 0;
