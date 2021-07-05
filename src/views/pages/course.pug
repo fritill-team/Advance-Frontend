@@ -9,75 +9,79 @@ block content
   +menu('home')
     //- Desktop page
   .wrapper._bg4586
-    ._215b01
+    //- course viewe
+
+    .course-video
       .container-fluid
         .row
           .col-lg-12
-            .section3125
+            .course-video__wrapper
               .row.justify-content-center
                 .col-xl-4.col-lg-5.col-md-6
-                  .preview_video
-                    a.fcrse_img(href='#' data-toggle='modal' data-target='#videoModal')
-                      img(src='images/courses/img-2.jpg' alt='')
-                      .course-overlay
-                        .badge_seller Bestseller
-                        span.play_btn1
-                          i.uil.uil-play
-                        span._215b02 Preview this course
-                  ._215b10
-                    a._215b11(href='#')
-                      span
-                        i.uil.uil-heart
+                  .wrapper__preview-video
+                    a.preview-video__modiel-img(href='#' data-toggle='modal' data-target='#videoModal')
+                      img.modiel-img--img(src='images/courses/img-2.jpg' alt='')
+                      .modiel-img__course-overlay
+                        .course-overlay--seller Bestseller
+                        span.course-overlay--play
+                          i.uil.uil-play.play__fa
+                        span._215b02.course-overlay__title Preview this course
+                  .preview-video__action
+                    .action__save-video(href='#')
+                      span.save-video__icons
+                        i.uil.uil-heart.icons__fa
                       | Save
-                    a._215b12(href='#')
-                      span
-                        i.uil.uil-windsock
+                    a.action__rebort-vedios(href='#')
+                      span.rebort-video__icons
+                        i.uil.uil-windsock.icons__fa
                       | Report abuse
                 .col-xl-8.col-lg-7.col-md-6
-                  ._215b03
-                    h2 The Web Developer Bootcamp
-                    span._215b04
+                  .wrapper__header
+                    h2.header__title The Web Developer Bootcamp
+                    span.header__description
                       | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
-                  ._215b05
-                    .crse_reviews.mr-2
-                      i.uil.uil-star
+                  .wrapper__review-video
+                    .review-video__review.mr-2
+                      i.uil.uil-star.review__icone
                       | 4.5
                     | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(81,665 ratings)
-                  ._215b05
+                  .wrapper__enrolled-text
                     | 114,521 students enrolled
-                  ._215b06
-                    ._215b07
-                      span
-                        i.uil.uil-comment
+                  .wrapper__language
+                    .language__lang
+                      span.lang__icons
+                        i.uil.uil-comment.icons__fa
                       | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;English
-                    ._215b08
-                      span
-                        i.uil.uil-closed-captioning
-                      span
+                    .language__more-lang
+                      span.more-lang__icons
+                        i.uil.uil-closed-captioning.icons__fa
+                      span.more-lang__tooltip
                         | English, Dutch
-                        span.caption_tooltip
+                        span.tooltip--caption_tooltip
                           | 12 more
-                          span.caption-content
-                            span French
-                            span Hindi
-                            span German [Auto-generated]
-                            span Indonesian [Auto-generated]
-                            span Italian [Auto-generated]
-                            span Japanese [Auto-generated]
-                            span Korean
-                            span Polish
-                            span Portuguese [Auto-generated]
-                            span Spanish [Auto-generated]
-                            span Traditional Chinese
-                            span Turkish [Auto-generated]
-                  ._215b05
+                          span.tooltip__caption-content
+                            span.caption-content__lang-item French
+                            span.caption-content__lang-item Hindi
+                            span.caption-content__lang-item German [Auto-generated]
+                            span.caption-content__lang-item Indonesian [Auto-generated]
+                            span.caption-content__lang-item Italian [Auto-generated]
+                            span.caption-content__lang-item Japanese [Auto-generated]
+                            span.caption-content__lang-item Korean
+                            span.caption-content__lang-item Polish
+                            span.caption-content__lang-item Portuguese [Auto-generated]
+                            span.caption-content__lang-item Spanish [Auto-generated]
+                            span.caption-content__lang-item Traditional Chinese
+                            span.caption-content__lang-item Turkish [Auto-generated]
+                  .wrapper__last-update
                     | Last updated 1/2020
-                  ul._215b31
-                    li
-                      button.btn_adcart Add to Cart
-                    li
-                      button.btn_buy Buy Now
-                  ._215fgt1
+                  ul.wrapper__btn-list
+                    li.btn-list__list-item
+                      button.list-item--btn-Enrole Enrol
+                    li.btn-list__list-item
+                      button.list-item--btn-Enrole Enrol Chiled
+                    //- li.btn-list__list-item
+                    //-   button.list-item--btn-Enrole-childe Enrol Chiled
+                  .wrapper__title-buy
                     | 30-Day Money-Back Guarantee
     ._215b15._byt1458
       .container-fluid
@@ -123,426 +127,28 @@ block content
             .course_tab_content
               #nav-tabContent.tab-content
                 #nav-about.tab-pane.fade.show.active(role='tabpanel')
-                  ._htg451
-                    ._htg452
-                      h3 Requirements
-                      ul
-                        li
-                          span._5f7g11 Have a computer with Internet
-                        li
-                          span._5f7g11 Be ready to learn an insane amount of awesome stuff
-                        li
-                          span._5f7g11 Prepare to build real web apps!
-                    ._htg452.mt-35
-                      h3 Description
-                      span._abc123 Just updated to include Bootstrap 4.1.3!
-                      p
-                        | Hi! Welcome to the Web Developer Bootcamp, the
-                        strong only course you need to learn web development
-                        | . There are a lot of options for online developer training, but this course is without a doubt the most comprehensive and effective on the market.  Here&apos;s why:
-                      ul._abc124
-                        li
-                          span._5f7g11 This is the only online course taught by a professional bootcamp instructor.
-                        li
-                          span._5f7g11
-                            | 94% of my in-person bootcamp students go on to get full-time developer jobs. Most of them are complete beginners when I start working with them.
-                        li
-                          span._5f7g11
-                            | The previous 2 bootcamp programs that I taught cost $14,000 and $21,000.  This course is just as comprehensive but with brand new content for a fraction of the price.
-                        li
-                          span._5f7g11
-                            | Everything I cover is up-to-date and relevant to today&apos;s developer industry. No PHP or other dated technologies. This course does not cut any corners.
-                        li
-                          span._5f7g11
-                            | This is the only complete beginner full-stack developer course that covers NodeJS.
-                        li
-                          span._5f7g11
-                            | We build 13+ projects, including a gigantic production application called YelpCamp. No other course walks you through the creation of such a substantial application.
-                        li
-                          span._5f7g11
-                            | The course is constantly updated with new content, projects, and modules.  Think of it as a subscription to a never-ending supply of developer training.
-                      p
-                        | When you&apos;re learning to program you often have to sacrifice learning the exciting and current technologies in favor of the &quot;beginner friendly&quot; classes.  With this course, you get the best of both worlds.  This is a course designed for the complete beginner, yet it covers some of the most exciting and relevant topics in the industry.
-                      p Throughout the course we cover tons of tools and technologies including:
-                      ul._abc124
-                        li
-                          span._5f7g11
-                            strong HTML5
-                        li
-                          span._5f7g11
-                            strong CSS3
-                        li
-                          span._5f7g11
-                            strong JavaScript
-                        li
-                          span._5f7g11
-                            strong Bootstrap 4
-                        li
-                          span._5f7g11
-                            strong SemanticUI
-                        li
-                          span._5f7g11
-                            strong DOM Manipulation
-                        li
-                          span._5f7g11
-                            strong jQuery
-                        li
-                          span._5f7g11
-                            strong Unix(Command Line) Commands
-                        li
-                          span._5f7g11
-                            strong NodeJS
-                        li
-                          span._5f7g11
-                            strong NPM
-                        li
-                          span._5f7g11
-                            strong ExpressJS
-                        li
-                          span._5f7g11
-                            strong REST
-                        li
-                          span._5f7g11
-                            strong MongoDB
-                        li
-                          span._5f7g11
-                            strong Database Associations
-                        li
-                          span._5f7g11
-                            strong Authentication
-                        li
-                          span._5f7g11
-                            strong PassportJS
-                        li
-                          span._5f7g11
-                            strong Authorization
-                      p
-                        | This course is also unique in the way that it is structured and presented. Many online courses are just a long series of &quot;watch as I code&quot; videos.  This course is different. I&apos;ve incorporated everything I learned in my years of teaching to make this course not only more effective but more engaging. The course includes:
-                      ul._abc124
-                        li
-                          span._5f7g11 Lectures
-                        li
-                          span._5f7g11 Code-Alongs
-                        li
-                          span._5f7g11 Projects
-                        li
-                          span._5f7g11 Exercises
-                        li
-                          span._5f7g11 Research Assignments
-                        li
-                          span._5f7g11 Slides
-                        li
-                          span._5f7g11 Downloads
-                        li
-                          span._5f7g11 Readings
-                      p
-                        | If you have any questions, please don&apos;t hesitate to contact me.  I got into this industry because I love working with people and helping students learn.  Sign up today and see how fun, exciting, and rewarding web development can be!
-                    ._htg452.mt-35
-                      h3 Who this course is for :
-                      ul._abc124
-                        li
-                          span._5f7g11
-                            | This course is for anyone who wants to learn about web development, regardless of previous experience
-                        li
-                          span._5f7g11 It&apos;s perfect for complete beginners with zero experience
-                        li
-                          span._5f7g11
-                            | It&apos;s also great for anyone who does have some experience in a few of the technologies(like HTML and CSS) but not all
-                        li
-                          span._5f7g11
-                            | If you want to take ONE COURSE to learn everything you need to know about web development, take this course
-                    ._htgdrt.mt-35
-                      h3 What you&apos;ll learn
-                      ._scd123
-                        .row
-                          .col-lg-6
-                            ul._htg452._abcd145
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Donec ultricies elit porttitor, ultrices enim a, commodo dolor.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Nunc dapibus ligula sed justo porta, id volutpat odio iaculis.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Maecenas pharetra mi quis nisl mollis, molestie imperdiet lorem molestie.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Maecenas ultricies felis in pulvinar blandit.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Praesent ac libero consequat, efficitur tortor et, interdum sem.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span
-                                    | Nullam non lacus nibh. Etiam et fringilla neque, ut vulputate sapien. Sed vitae tortor gravida, interdum felis at, pulvinar enim. Integer tempor urna leo.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span
-                                    | Phasellus ultrices tellus sed volutpat vestibulum. Curabitur aliquet dictum leo non congue.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span In hac habitasse platea dictumst. Aenean vel fermentum neque.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Suspendisse semper feugiat urna dictum interdum.
-                          .col-lg-6
-                            ul._htg452._abcd145
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span
-                                    | Nullam non lacus nibh. Etiam et fringilla neque, ut vulputate sapien. Sed vitae tortor gravida, interdum felis at, pulvinar enim. Integer tempor urna leo.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span
-                                    | Phasellus ultrices tellus sed volutpat vestibulum. Curabitur aliquet dictum leo non congue.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span In hac habitasse platea dictumst. Aenean vel fermentum neque.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Suspendisse semper feugiat urna dictum interdum.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Donec ultricies elit porttitor, ultrices enim a, commodo dolor.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Nunc dapibus ligula sed justo porta, id volutpat odio iaculis.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Maecenas pharetra mi quis nisl mollis, molestie imperdiet lorem molestie.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Maecenas ultricies felis in pulvinar blandit.
-                              li
-                                ._5f7g15
-                                  i.fas.fa-check-circle
-                                  span Praesent ac libero consequat, efficitur tortor et, interdum sem.
+                  include ../components/about.pug
                 #nav-courses.tab-pane.fade(role='tabpanel')
                     //- start course list component
                     include ../components/course.pug
                     a.btn1458(href='#') 20 More Sections
                 #nav-reviews.tab-pane.fade(role='tabpanel')
-                  .student_reviews
+                  //- start reviews
+                  .reviews
                     .row
                       .col-lg-5
-                        .reviews_left
-                          h3 Student Feedback
-                          .total_rating
-                            ._rate001 4.6
-                            .rating-box
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.half-star
-                            ._rate002 Course Rating
-                          ._rate003
-                            ._rate004
-                              .progress.progress1
-                                .progress-bar.w-70(role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
-                              .rating-box
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                              ._rate002 70%
-                            ._rate004
-                              .progress.progress1
-                                .progress-bar.w-30(role='progressbar' aria-valuenow='30' aria-valuemin='0' aria-valuemax='100')
-                              .rating-box
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.empty-star
-                              ._rate002 40%
-                            ._rate004
-                              .progress.progress1
-                                .progress-bar.w-5(role='progressbar' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
-                              .rating-box
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                              ._rate002 5%
-                            ._rate004
-                              .progress.progress1
-                                .progress-bar.w-2(role='progressbar' aria-valuenow='2' aria-valuemin='0' aria-valuemax='100')
-                              .rating-box
-                                span.rating-star.full-star
-                                span.rating-star.full-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                              ._rate002 1%
-                            ._rate004
-                              .progress.progress1
-                                .progress-bar.w-1(role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
-                              .rating-box
-                                span.rating-star.full-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                                span.rating-star.empty-star
-                              ._rate002 1%
+                        include ../components/review.pug
                       .col-lg-7
-                        .review_right
-                          .review_right_heading
-                            h3 Reviews
-                            .review_search
-                              input.rv_srch(type='text' placeholder='Search reviews...')
-                              button.rvsrch_btn
+                        .review__header
+                          .header__header-content
+                            h3.header-content__title Reviews
+                            .header-content__search
+                              input.search__input(type='text' placeholder='Search reviews...')
+                              button.search__btn
                                 i.uil.uil-search
-                        .review_all120
-                          .review_item
-                            .review_usr_dt
-                              img(src='images/left-imgs/img-1.jpg' alt='')
-                              .rv1458
-                                h4.tutor_name1 John Doe
-                                span.time_145 2 hour ago
-                            .rating-box.mt-20
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.half-star
-                            p.rvds10
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .rpt100
-                              span Was this review helpful?
-                              .radio--group-inline-container
-                                .radio-item
-                                  input#radio-1(name='radio' type='radio')
-                                  label.radio-label(for='radio-1') Yes
-                                .radio-item
-                                  input#radio-2(name='radio' type='radio')
-                                  label.radio-label(for='radio-2') No
-                              a.report145(href='#') Report
-                          .review_item
-                            .review_usr_dt
-                              img(src='images/left-imgs/img-2.jpg' alt='')
-                              .rv1458
-                                h4.tutor_name1 Jassica William
-                                span.time_145 12 hour ago
-                            .rating-box.mt-20
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.empty-star
-                            p.rvds10
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .rpt100
-                              span Was this review helpful?
-                              .radio--group-inline-container
-                                .radio-item
-                                  input#radio-3(name='radio1' type='radio')
-                                  label.radio-label(for='radio-3') Yes
-                                .radio-item
-                                  input#radio-4(name='radio1' type='radio')
-                                  label.radio-label(for='radio-4') No
-                              a.report145(href='#') Report
-                          .review_item
-                            .review_usr_dt
-                              img(src='images/left-imgs/img-3.jpg' alt='')
-                              .rv1458
-                                h4.tutor_name1 Albert Dua
-                                span.time_145 5 days ago
-                            .rating-box.mt-20
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.half-star
-                              span.rating-star.empty-star
-                            p.rvds10
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .rpt100
-                              span Was this review helpful?
-                              .radio--group-inline-container
-                                .radio-item
-                                  input#radio-5(name='radio2' type='radio')
-                                  label.radio-label(for='radio-5') Yes
-                                .radio-item
-                                  input#radio-6(name='radio2' type='radio')
-                                  label.radio-label(for='radio-6') No
-                              a.report145(href='#') Report
-                          .review_item
-                            .review_usr_dt
-                              img(src='images/left-imgs/img-4.jpg' alt='')
-                              .rv1458
-                                h4.tutor_name1 Zoena Singh
-                                span.time_145 15 days ago
-                            .rating-box.mt-20
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                            p.rvds10
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .rpt100
-                              span Was this review helpful?
-                              .radio--group-inline-container
-                                .radio-item
-                                  input#radio-7(name='radio3' type='radio')
-                                  label.radio-label(for='radio-7') Yes
-                                .radio-item
-                                  input#radio-8(name='radio3' type='radio')
-                                  label.radio-label(for='radio-8') No
-                              a.report145(href='#') Report
-                          .review_item
-                            .review_usr_dt
-                              img(src='images/left-imgs/img-5.jpg' alt='')
-                              .rv1458
-                                h4.tutor_name1 Joy Dua
-                                span.time_145 20 days ago
-                            .rating-box.mt-20
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.full-star
-                              span.rating-star.empty-star
-                              span.rating-star.empty-star
-                            p.rvds10
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .rpt100
-                              span Was this review helpful?
-                              .radio--group-inline-container
-                                .radio-item
-                                  input#radio-9(name='radio4' type='radio')
-                                  label.radio-label(for='radio-9') Yes
-                                .radio-item
-                                  input#radio-10(name='radio4' type='radio')
-                                  label.radio-label(for='radio-10') No
-                              a.report145(href='#') Report
-                          .review_item
-                            a.more_reviews(href='#') See More Reviews
+                        .review__all-reviews
+                          include ../components/review-item.pug
+                          .all-reviews__review-item
+                            a.review-item__more-reviews(href='#') See More Reviews
 
     include ../components/footer.pug
