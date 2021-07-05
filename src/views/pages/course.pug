@@ -9,75 +9,78 @@ block content
   +menu('home')
     //- Desktop page
   .wrapper._bg4586
-    ._215b01
+    //- course viewe
+    .course-video
       .container-fluid
         .row
           .col-lg-12
-            .section3125
+            .course-video__wrapper
               .row.justify-content-center
                 .col-xl-4.col-lg-5.col-md-6
-                  .preview_video
-                    a.fcrse_img(href='#' data-toggle='modal' data-target='#videoModal')
-                      img(src='images/courses/img-2.jpg' alt='')
-                      .course-overlay
-                        .badge_seller Bestseller
-                        span.play_btn1
-                          i.uil.uil-play
-                        span._215b02 Preview this course
-                  ._215b10
-                    a._215b11(href='#')
-                      span
-                        i.uil.uil-heart
+                  .wrapper__preview-video
+                    a.preview-video__modiel-img(href='#' data-toggle='modal' data-target='#videoModal')
+                      img.modiel-img--img(src='images/courses/img-2.jpg' alt='')
+                      .modiel-img__course-overlay
+                        .course-overlay--seller Bestseller
+                        span.course-overlay--play
+                          i.uil.uil-play.play__fa
+                        span._215b02.course-overlay__title Preview this course
+                  .preview-video__action
+                    .action__save-video(href='#')
+                      span.save-video__icons
+                        i.uil.uil-heart.icons__fa
                       | Save
-                    a._215b12(href='#')
-                      span
-                        i.uil.uil-windsock
+                    a.action__rebort-vedios(href='#')
+                      span.rebort-video__icons
+                        i.uil.uil-windsock.icons__fa
                       | Report abuse
                 .col-xl-8.col-lg-7.col-md-6
-                  ._215b03
-                    h2 The Web Developer Bootcamp
-                    span._215b04
+                  .wrapper__header
+                    h2.header__title The Web Developer Bootcamp
+                    span.header__description
                       | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
-                  ._215b05
-                    .crse_reviews.mr-2
-                      i.uil.uil-star
+                  .wrapper__review-video
+                    .review-video__review.mr-2
+                      i.uil.uil-star.review__icone
                       | 4.5
                     | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(81,665 ratings)
-                  ._215b05
+                  .wrapper__enrolled-text
                     | 114,521 students enrolled
-                  ._215b06
-                    ._215b07
-                      span
-                        i.uil.uil-comment
+                  .wrapper__language
+                    .language__lang
+                      span.lang__icons
+                        i.uil.uil-comment.icons__fa
                       | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;English
-                    ._215b08
-                      span
-                        i.uil.uil-closed-captioning
-                      span
+                    .language__more-lang
+                      span.more-lang__icons
+                        i.uil.uil-closed-captioning.icons__fa
+                      span.more-lang__tooltip
                         | English, Dutch
-                        span.caption_tooltip
+                        span.tooltip--caption_tooltip
                           | 12 more
-                          span.caption-content
-                            span French
-                            span Hindi
-                            span German [Auto-generated]
-                            span Indonesian [Auto-generated]
-                            span Italian [Auto-generated]
-                            span Japanese [Auto-generated]
-                            span Korean
-                            span Polish
-                            span Portuguese [Auto-generated]
-                            span Spanish [Auto-generated]
-                            span Traditional Chinese
-                            span Turkish [Auto-generated]
-                  ._215b05
+                          span.tooltip__caption-content
+                            span.caption-content__lang-item French
+                            span.caption-content__lang-item Hindi
+                            span.caption-content__lang-item German [Auto-generated]
+                            span.caption-content__lang-item Indonesian [Auto-generated]
+                            span.caption-content__lang-item Italian [Auto-generated]
+                            span.caption-content__lang-item Japanese [Auto-generated]
+                            span.caption-content__lang-item Korean
+                            span.caption-content__lang-item Polish
+                            span.caption-content__lang-item Portuguese [Auto-generated]
+                            span.caption-content__lang-item Spanish [Auto-generated]
+                            span.caption-content__lang-item Traditional Chinese
+                            span.caption-content__lang-item Turkish [Auto-generated]
+                  .wrapper__last-update
                     | Last updated 1/2020
-                  ul._215b31
-                    li
-                      button.btn_adcart Add to Cart
-                    li
-                      button.btn_buy Buy Now
-                  ._215fgt1
+                  ul.wrapper__btn-list
+                    li.btn-list__list-item
+                      button.list-item--btn-Enrole Enrol
+                    li.btn-list__list-item
+                      button.list-item--btn-Enrole Enrol Chiled
+                    //- li.btn-list__list-item
+                    //-   button.list-item--btn-Enrole-childe Enrol Chiled
+                  .wrapper__title-buy
                     | 30-Day Money-Back Guarantee
     ._215b15._byt1458
       .container-fluid
@@ -133,68 +136,7 @@ block content
                   .reviews
                     .row
                       .col-lg-5
-                        .reviews__all-reviews
-                          h3.all-reviews__title Student Feedback
-                          .all-reviews__total-rating
-                            .total-rating__number 4.6
-                            .total-rating__rating-box
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--half-star
-                            .total-rating__title Course Rating
-                          .all-reviews__details-rate
-                            .details-rate__rating
-                              .rating__progress
-                                .progress--progress-bar.w-70(role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
-                              .rating__rating-box
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                              .rating--total 70%
-                            .details-rate__rating
-                              .rating__progress
-                                .progress--progress-bar.w-30(role='progressbar' aria-valuenow='30' aria-valuemin='0' aria-valuemax='100')
-                              .rating__rating-box
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                              .rating--total 40%
-                            .details-rate__rating
-                              .rating__progress
-                                .progress--progress-bar.w-5(role='progressbar' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
-                              .rating__rating-box
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                              .rating--total 5%
-                            .details-rate__rating
-                              .rating__progress
-                                .progress--progress-bar.w-2(role='progressbar' aria-valuenow='2' aria-valuemin='0' aria-valuemax='100')
-                              .rating__rating-box
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                              .rating--total 2%
-                            .details-rate__rating
-                              .rating__progress
-                                .progress--progress-bar.w-1(role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
-                              .rating__rating-box
-                                span.rating-box__rating-star.rating-box--full-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                                span.rating-box__rating-star.rating-box__empty-star
-                              .rating--total 1%
+                        include ../components/review.pug
                       .col-lg-7
                         .review__header
                           .header__header-content
@@ -204,126 +146,7 @@ block content
                               button.search__btn
                                 i.uil.uil-search
                         .review__all-reviews
-                          .all-reviews__item
-                            .item__reviews-user
-                              img.reviews-user__img(src='images/left-imgs/img-1.jpg' alt='')
-                              .reviews-user__title
-                                h4.title__name John Doe
-                                span.title__time 2 hour ago
-                            .item__rating-box.mt-20
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--half-star
-                            p.item__comment
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .item__helpful
-                              span.helpful__ask Was this review helpful?
-                              .helpful__radio-group
-                                .radio-group__item
-                                  input#radio-1.item--input(name='radio' type='radio')
-                                  label.item__radio-label(for='radio-1') Yes
-                                .radio-group__item
-                                  input#radio-2.item--input(name='radio' type='radio')
-                                  label.item__radio-label(for='radio-2') No
-                              a.helpful__text(href='#') Report
-                          .all-reviews__item
-                            .item__reviews-user
-                              img.reviews-user__img(src='images/left-imgs/img-2.jpg' alt='')
-                              .reviews-user__title
-                                h4.title__name Jassica William
-                                span.title__time 12 hour ago
-                            .item__rating-box.mt-20
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box__empty-star
-                            p.item__comment
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .item__helpful
-                              span.helpful__ask Was this review helpful?
-                              .helpful__radio-group
-                                .radio-group__item
-                                  input#radio-3.item--input(name='radio1' type='radio')
-                                  label.item__radio-label(for='radio-3') Yes
-                                .radio-group__item
-                                  input#radio-4.item--input(name='radio1' type='radio')
-                                  label.item__radio-label(for='radio-4') No
-                              a.helpful__text(href='#') Report
-                          .all-reviews__item
-                            .item__reviews-user
-                              img.reviews-user__img(src='images/left-imgs/img-3.jpg' alt='')
-                              .reviews-user__title
-                                h4.title__name Albert Dua
-                                span.title__time 5 days ago
-                            .item__rating-box.mt-20
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--half-star
-                              span.rating-box__rating-star.rating-box__empty-star
-                            p.item__comment
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .item__helpful
-                              span.helpful__ask Was this review helpful?
-                              .helpful__radio-group
-                                .radio-group__item
-                                  input#radio-5.item--input(name='radio2' type='radio')
-                                  label.item__radio-label(for='radio-5') Yes
-                                .radio-group__item
-                                  input#radio-6.item--input(name='radio2' type='radio')
-                                  label.item__radio-label(for='radio-6') No
-                              a.helpful__text(href='#') Report
-                          .all-reviews__item
-                            .item__reviews-user
-                              img.reviews-user__img(src='images/left-imgs/img-4.jpg' alt='')
-                              .reviews-user__title
-                                h4.title__name Zoena Singh
-                                span.title__time 15 days ago
-                            .item__rating-box.mt-20
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                            p.item__comment
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .item__helpful
-                              span.helpful__ask Was this review helpful?
-                              .helpful__radio-group
-                                .radio-group__item
-                                  input#radio-7.item--input(name='radio3' type='radio')
-                                  label.item__radio-label(for='radio-7') Yes
-                                .radio-group__item
-                                  input#radio-8.item--input(name='radio3' type='radio')
-                                  label.item__radio-label(for='radio-8') No
-                              a.helpful__text(href='#') Report
-                          .all-reviews__item
-                            .item__reviews-user
-                              img.reviews-user__img(src='images/left-imgs/img-5.jpg' alt='')
-                              .reviews-user__title
-                                h4.title__name Joy Dua
-                                span.title__time 20 days ago
-                            .item__rating-box.mt-20
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box--full-star
-                              span.rating-box__rating-star.rating-box__empty-star
-                              span.rating-box__rating-star.rating-box__empty-star
-                            p.item__comment
-                              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-                            .item__helpful
-                              span.helpful__ask Was this review helpful?
-                              .helpful__radio-group
-                                .radio-group__item
-                                  input#radio-9.item--input(name='radio4' type='radio')
-                                  label.item__radio-label(for='radio-9') Yes
-                                .radio-group__item
-                                  input#radio-10.item--input(name='radio4' type='radio')
-                                  label.item__radio-label(for='radio-10') No
-                              a.helpful__text(href='#') Report
+                          include ../components/review-item.pug
                           .all-reviews__review-item
                             a.review-item__more-reviews(href='#') See More Reviews
 

@@ -394,9 +394,10 @@ text-indent: -1.5rem;
     }
   }
 }
-
 @media (min-width: 576px) and (max-width: 767.98px){
-.reviews .reviews__all-reviews {
+.reviews{
+  .reviews__all-reviews {
     margin-bottom: 50px;
+}
 }
 }

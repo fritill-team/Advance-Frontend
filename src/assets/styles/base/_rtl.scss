@@ -300,4 +300,114 @@ html[dir='rtl']{
         }
       }
     }
+    // start course-video
+    .course-video{
+      float: right;
+      .course-video__wrapper{
+        float: right;
+        .wrapper__preview-video{
+          float: right;
+          .preview-video__modiel-img{
+            float: right;
+          .modiel-img__course-overlay{
+            right: 0;
+            left: 0;
+          .course-overlay--seller{
+            right: 0;
+            &::after{
+              left: -5px;
+              border-bottom-right-radius: 2px;
+              border-top-right-radius: 3px;
+              border-bottom-left-radius: 3px;
+            }
+          }
+          .course-overlay--play{
+            float: right;
+            left: 40%;
+            padding: 12px 10px;
+          .play__fa{
+            &::before{
+              margin-left: .2em;
+              margin-right: .2em;
+            }
+          }
+          }
+        }
+        }
+
+      }
+    }
+    .preview-video__action{
+      float: right;
+      .action__save-video{
+        text-align: right;
+        float: right;
+        margin-left: 30px;
+        .save-video__icons{
+          .icons__fa{
+            margin-left: 5px;
+          }
+        }
+      }
+      .action__rebort-vedios{
+        text-align: right;
+        float: right;
+        .rebort-video__icons{
+          .icons__fa{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .wrapper__header{
+      .header__title{
+        text-align: right;
+      }
+      .header__description{
+        text-align: right;
+      }
+    }
+    .wrapper__review-video{
+      text-align: right;
+      .review-video__review{
+        padding: 3px 10px 3px 15px;
+        .review__icone{
+          margin-left: 2px;
+        }
+      }
+    }
+    .wrapper__enrolled-text{
+      text-align: right;
+    }
+    .wrapper__language{
+      .language__lang{
+        margin-left: 20px;
+        }
+        .language__more-lang{
+          .more-lang__tooltip{
+            .tooltip--caption_tooltip{
+              .tooltip__caption-content{
+                left: 0;
+                }
+            }
+          }
+        }
+      }
+      .wrapper__last-update{
+          text-align: right;
+        }
+        .wrapper__btn-list{
+          .btn-list__list-item{
+            .list-item--btn-Enrole{
+              margin-left: 6px;
+            }
+            .list-item--btn-Enrole-childe{
+              margin-right: 10px;
+            }
+          }
+        }
+        .wrapper__title-buy{
+          text-align: right;
+        }
+    }
 }
