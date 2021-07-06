@@ -1,0 +1,19 @@
+mixin interactions( seenicon, seenNumber, likeIcone,likeNumber, dislikeIcon,dislikeNumber ,shareIcon , shareNumber )
+  section.interactions-course
+    ul.interactions-course__list
+      li.list__list-item
+        a.list-item__box.mr-1(href='#')
+          i(class=seenicon)
+          span(class="box--number")= seenNumber
+      li.list__list-item
+        a.list-item__box.mr-1(href='#')
+          i(class=likeIcone)
+          span(class="box--number")=likeNumber
+      li.list__list-item
+        a.list-item__box.mr-1(href='#')
+          i(class=dislikeIcon)
+          span(class="box--number")=dislikeNumber
+      li.list__list-item
+        a.list-item__box.mr-1(href='#')
+          i(class=shareIcon)
+          span(class="box--number")=shareNumber

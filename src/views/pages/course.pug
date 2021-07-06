@@ -20,27 +20,15 @@ block content
               include ../components/single-course/user-acount.pug
               include ../components/single-course/btn.pug
               +user-acount("Johnson Smith", "Subscribe")
-                +btn('user-content__subscribe-btn', 'subscrip')
-              .user_dt_right
-                ul
-                  li
-                    a.lkcm152.mr-1(href='#')
-                      i.uil.uil-eye
-                      span 1452
-                  li
-                    a.lkcm152.mr-1(href='#')
-                      i.uil.uil-thumbs-up
-                      span 100
-                  li
-                    a.lkcm152.mr-1(href='#')
-                      i.uil.uil-thumbs-down
-                      span 20
-                  li
-                    a.lkcm152.mr-1(href='#')
-                      i.uil.uil-share-alt
-                      span 9
+                +btn('user-content__subscribe-btn', 'subscribe')
+              include ../components/single-course/interaction.pug
+              +interactions(
+              "uil uil-eye box--fa",'1452',
+              "uil uil-thumbs-up box--fa", '100',
+              "uil uil-thumbs-down box--fa", '20',
+              "uil uil-share-alt box--fa" , '9'
+              )
             .course_tabs
-              nav
                 #nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
                   a#nav-about-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='true') About
                   a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-courses' role='tab' aria-selected='false') Courses Content
