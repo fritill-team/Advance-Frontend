@@ -410,4 +410,19 @@ html[dir='rtl']{
           text-align: right;
         }
     }
+    .user-wrapper__acount{
+      float: right;
+      .acount__live-user{
+        float: right;
+        .live-user__content{
+          text-align: right;
+          .user-img__img{
+            margin-left: 15px;
+          }
+        }
+        .live-user__content{
+          text-align: right;
+        }
+      }
+    }
 }
