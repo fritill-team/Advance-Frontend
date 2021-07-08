@@ -41,7 +41,9 @@ ul{
 /*
 
 */
+
 @import './base/style.scss';
+@import './base/_rtl.scss';
 @import './base/instructor-dashboard.css';
 @import './base/jquery-steps.css';
 @import './base/datepicker.min.css';

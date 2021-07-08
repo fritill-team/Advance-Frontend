@@ -1,3 +1,71 @@
 html[dir="rtl"]{
-  
-}
+  .course-card {
+    .course-card__card-media {
+      float: right;
+  // start card-img part1
+      .card-media__card-img {
+        float: right;
+        .card-img__card-overlay {
+          .card-overlay__badge-seller{
+            &::after {
+              right:-5px;
+            }
+          }
+          .card-overlay__crd-reviews{
+            right:10px;
+            .crd-reviews i {
+              margin-left: 2px;
+              [class*=" uil-"]::before,
+              [class^="uil-"]::before {
+                margin-left: 0.2em;
+                margin-right: 0.2em;
+              }
+            }
+          }
+          span.card-overlay__play_btn1{
+            float: right;
+            left: 40%;
+            i.uil-play{
+              &::before {
+                margin-left: .2em;
+                margin-right: .2em;
+              }
+            }
+          }
+          .card-overlay__crd-timer{
+            left: 0;
+            margin-left: 10px;
+          }
+        }  
+      }
+      // start card-content part2
+      .card-media__card-content{
+        float: right;
+        .card-content__card-details {
+          text-align: right;     
+        }
+        a.card-content__card-discription{
+          text-align: right;  
+        }
+        a.card-content__card-title{
+          text-align: right;
+        }
+        .card-content__card-auther{
+          p.card-auther__name-auth{
+            float: right;
+            text-align: right;    
+          }
+          .card-auther__price{
+            float: left;
+            text-align: left;
+          }
+        }
+      }
+      .shrt-cart-btn {
+        margin-left: 10px;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }  
+}  
