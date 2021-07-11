@@ -7,8 +7,12 @@ html[dir="rtl"]{
         float: right;
         .card-img__card-overlay {
           .card-overlay__badge-seller{
+            left: 0;
             &::after {
-              right:-5px;
+              right: -5;
+              border-bottom-right-radius: 2px;
+              border-top-right-radius: 3px;
+              border-bottom-left-radius: 3px; 
             }
           }
           .card-overlay__crd-reviews{
