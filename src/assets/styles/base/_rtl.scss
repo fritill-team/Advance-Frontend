@@ -9,6 +9,114 @@ html[dir='rtl']{
       }
     }
   }
+  /*start sidebar*/
+  .toggle_menu{
+    float: right;
+    i {
+      float: right;
+    }
+  }
+  .vertical_nav {
+    right: -240px;
+    .menu_left {
+      .left_section {
+        ul{
+          .menu--item{
+            .menu--link{
+              .menu--icon{
+                float: right;
+              }
+            }
+          }
+          .menu--item__has_sub_menu{
+            .menu--link{
+              &::after{
+                left: 15px;
+                right: auto;
+              }
+            }
+            .sub_menu{
+              .sub_menu--item{
+                .sub_menu--link{
+                  padding-right: 50px;
+                  padding-left: 16px;
+                }
+              }
+            }
+          }
+        }
+        .left_title{
+          padding: 20px 17px 10px;
+          text-align: right;
+        }
+        ul{
+          .menu--item{
+            .user_img{
+              img{
+                margin-right: 17px;
+                margin-left: 15px;
+              }
+            }
+          }
+        }
+      }
+      .left_footer{
+        ul{
+          li{
+          a{
+            text-align: right;
+          }
+          }
+        }
+        .left_footer_content{
+          p{
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  .vertical_nav__closed {
+    right: -240px !important;
+  }
+  .vertical_nav__opened {
+    right: 0 !important;
+    box-shadow: rgba(0,0,0,.2)-30px 0 30px 30px;
+  }
+  @media (min-width:992px) {
+    /*wrapper conent*/
+  .wrapper{
+    margin-right: 240px;
+    margin-left: 0;
+    }
+    .wrapper__minify {
+      margin-right: 0;
+    }
+    .collapse_menu {
+      float: right;
+      .collapse_menu--icon {
+        transform: rotate(180deg);
+        float: right;
+      }
+  }
+    .vertical_nav{
+      right: 0;
+    }
+    .vertical_nav__minify {
+      .menu--label {
+        right: 0;
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+      .menu--subitens__opened{
+        .sub_menu {
+          right: 50px;
+        }
+      }
+    }
+  }
+
+  /*End sidebar*/
   /*start component course*/
   .course-content{
     float: right;
@@ -409,5 +517,23 @@ html[dir='rtl']{
         .wrapper__title-buy{
           text-align: right;
         }
+    }
+    .user-wrapper__acount{
+      float: right;
+      .acount__live-user{
+        float: right;
+        .live-user__content{
+          text-align: right;
+          .user-img__img{
+            margin-left: 15px;
+          }
+        }
+        .live-user__content{
+          text-align: right;
+        }
+      }
+    }
+    .interactions-course{
+      float: left;
     }
 }
