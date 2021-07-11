@@ -36,8 +36,8 @@ mixin menu(currentPage)
           i.uil.uil-search-alt.icon.icon1
     .header_right
       ul
-        li
-          a.upload_btn(href='create_new_course.html' title='Create New Course') Create New Course
+        include ../components/single-course/btn.pug
+        +btn-item('upload_btn', 'Create New Course' , '#create_new_course.html')
         li
           a.option_links(href='shopping_cart.html' title='cart')
             i.uil.uil-shopping-cart-alt
@@ -69,7 +69,7 @@ mixin menu(currentPage)
                   p Thanks Sir, Such a nice video.
                   span.nm_time 25 min ago
             a.vbm_btn(href='instructor_messages.html')
-              | View All 
+              | View All
               i.uil.uil-arrow-right
         li.ui.dropdown
           a.option_links(href='#' title='Notifications')
@@ -82,7 +82,7 @@ mixin menu(currentPage)
                 .pd_content
                   h6 Rock William
                   p
-                    | Like Your Comment On Video 
+                    | Like Your Comment On Video
                     strong How to create sidebar menu
                     | .
                   span.nm_time 2 min ago
@@ -92,7 +92,7 @@ mixin menu(currentPage)
                 .pd_content
                   h6 Jassica Smith
                   p
-                    | Added New Review In Video 
+                    | Added New Review In Video
                     strong Full Stack PHP Developer
                     | .
                   span.nm_time 12 min ago
@@ -101,12 +101,12 @@ mixin menu(currentPage)
                 img(src='../../assets/images/left-imgs/img-9.jpg' alt='')
                 .pd_content
                   p
-                    | Your Membership Approved 
+                    | Your Membership Approved
                     strong Upload Video
                     | .
                   span.nm_time 20 min ago
             a.vbm_btn(href='instructor_notifications.html')
-              | View All 
+              | View All
               i.uil.uil-arrow-right
         li.ui.dropdown
           a.opts_account(href='#' title='Account')
@@ -135,4 +135,3 @@ mixin menu(currentPage)
             a.item.channel_item(href='feedback.html') Send Feedback
             a.item.channel_item(href='sign_in.html') Sign Out
 
-  
