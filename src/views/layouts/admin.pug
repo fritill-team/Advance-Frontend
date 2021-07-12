@@ -26,10 +26,16 @@ html(lang='en' dir="")
   body
 
     //- Menu
-    include ../components/header-layout.pug
+    include ../components/header-admin.pug
       //- block category
-    include ../components/sidebar-layout.pug
-
+    //-sidebar
+    include ../components/sidebar.pug
+      block sidebar
+        ul
+          li.menu--item
+            a.menu--link.active(href='index.html' title='Home')
+              i.uil.uil-home-alt.menu--icon
+              span.menu--label Home
     //- block content
 
     block content

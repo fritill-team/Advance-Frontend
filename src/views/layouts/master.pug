@@ -26,10 +26,13 @@ html(lang='en' dir="")
   body
 
     //- Menu
-    include ../components/menu.pug
+    include ../components/header.pug
+
 
 
     include ../components/sidebar.pug
+      block sidebar
+        include ../components/sidebar-content.pug
 
     //- block content
 
