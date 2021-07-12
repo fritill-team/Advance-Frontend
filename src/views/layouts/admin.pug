@@ -1,5 +1,4 @@
 //- Master layout
-
 doctype html
 html(lang='en' dir="")
   head
@@ -27,8 +26,9 @@ html(lang='en' dir="")
   body
 
     //- Menu
-    include ../components/menu.pug
-    include ../components/sidebar.pug
+    include ../components/header-layout.pug
+      //- block category
+    include ../components/sidebar-layout.pug
 
     //- block content
 

@@ -1,6 +1,5 @@
 mixin btn(className , btnName )
   button(class=className)= btnName
-  //- btn header
-mixin btn-item(className , btnName , href)
-  li
-    a(class=className href=href)= btnName
+  //- btn Link
+mixin btn-link(className , btnName , href)
+  a(class=className href=href)= btnName

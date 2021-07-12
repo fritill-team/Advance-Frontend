@@ -10,8 +10,6 @@ mixin menu(currentPage)
         img(src='../../assets/images/logo.svg' alt='')
       a(href='index.html')
         img.logo-inverse(src='../../assets/images/ct_logo.svg' alt='')
-    include ../components/header-blocks/selectCategory.pug
-    block category
     .search120
       .ui.search
         .ui.left.icon.input.swdh10
@@ -19,10 +17,6 @@ mixin menu(currentPage)
           i.uil.uil-search-alt.icon.icon1
     .header_right
       ul
-        li
-          block btn-link
-            include ../components/single-course/btn.pug
-            +btn-link('upload_btn', 'Create New Course' , '#create_new_course.html')
         li
           a.option_links(href='shopping_cart.html' title='cart')
             i.uil.uil-shopping-cart-alt
