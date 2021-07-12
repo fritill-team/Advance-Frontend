@@ -976,7 +976,7 @@ Night Mood
     background: #cc2622;
 }
 
-.night-mode .sign_form {
+.night-mode .auth-form__content {
     background: #242424;
 }
 
@@ -1280,7 +1280,7 @@ Night Mood
     color: rgba(255,255,255,.6);
 }
 
-.night-mode .sign_in_up_bg:before {
+.night-mode .auth-form-wrapper:before {
     opacity: 0.2;
 }
 
@@ -1288,7 +1288,7 @@ Night Mood
 	background-color: #fff !important;
 }
 
-.night-mode .sign_in_up_bg {
+.night-mode .auth-form-wrapper {
     height: 100% !important;
 	background: #000 !important;
 }

@@ -37,10 +37,20 @@ block content
 
 
     .col-lg-12.col-md-6.col-sm-12
-      .field-wrapper
+      .field-wrapper.field-wrapper--no-message
         label.text-field__label Course Title*
         .text-field__content
           input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+        .field-wrapper__message
+          | Please provide a valid city.
+   
+    .col-lg-12.col-md-6.col-sm-12
+      .field-wrapper.field-wrapper__file-input.field-wrapper--error
+        label.text-field__label File*
+        .input-group
+          .file-input
+            input#inputGroupFile06.custom-file-input(type='file')
+            label.file-input__label(for='inputGroupFile06') No Choose file - (Pdf, Video)
         .field-wrapper__message
           | Please provide a valid city.
     //- .col-lg-12.col-md-6.col-sm-12
@@ -64,14 +74,6 @@ block content
     //-     option(value='14') &#x92E;&#x930;&#x93E;&#x920;&#x940;
     //-     option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
     
-    .col-lg-12.col-md-6.col-sm-12
-      .part_input.mt-30.lbel25
-        label File*
-        .input-group
-          .custom-file
-            input#inputGroupFile06.custom-file-input(type='file')
-            label.custom-file-label(for='inputGroupFile06') No Choose file - (Pdf, Video)
-
     //- .col-lg-12.col-md-6.col-sm-12
     //-   .ui.search.focus.mt-30.lbel25
     //-     label Volume*

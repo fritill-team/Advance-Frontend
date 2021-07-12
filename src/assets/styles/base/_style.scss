@@ -5799,7 +5799,7 @@ a.rmv-btn i {
 
 /* --- Signup Signin Page --- */
 
-.main_logo25 {
+.auth-form__title {
     float: none;
     width: 135px;
     text-align: center;
@@ -5809,7 +5809,7 @@ a.rmv-btn i {
 
 }
 
-.sign_in_up_bg {
+.auth-form-wrapper {
     background: #f7f7f7 !important;
     position: relative;
 	width: 100%;
@@ -5829,7 +5829,7 @@ a.rmv-btn i {
         z-index: -1;
     }
 }
-.sign_in_up_bg:before {
+.auth-form-wrapper:before {
   content: "";
   background: url("/assets/images/sign.svg") no-repeat center;
   left: 0;
@@ -5843,7 +5843,7 @@ a.rmv-btn i {
 }
 
 
-.sign_form {
+.auth-form__content {
 	background: #fff;
     border-radius: 10px;
     padding: 50px 50px 30px;
@@ -5900,7 +5900,7 @@ a.rmv-btn i {
     background: #333;
 }
 
-.sign_form h2 {
+.auth-form__content h2 {
 	font-size: 24px;
     margin-bottom: 20px;
     font-weight: 600;
@@ -5910,7 +5910,7 @@ a.rmv-btn i {
     margin-bottom: 40px;
 }
 
-.sign_form p {
+.auth-form__content p {
 	font-size: 14px;
     margin-bottom: 47px;
     font-weight: 400;
@@ -6052,7 +6052,7 @@ a.rmv-btn i {
   padding-left: 15px;
 }
 /*  reset password    */
-.sign_form .verification .vcode-input{
+.auth-form__content .verification .vcode-input{
     outline: none;
     display: block;
     height: 50px;
@@ -7392,7 +7392,7 @@ a.rmv-btn i {
     background-color: #ed2a26 !important;
 }
 
-.sign_form p {
+.auth-form__content p {
     font-size: 14px;
     margin-bottom: 47px;
     font-weight: 400;

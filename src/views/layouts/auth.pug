@@ -22,18 +22,18 @@ html(lang='en' dir="")
     block title
       title Login
   body
-    section.sign_in_up_bg
+    section.auth-form-wrapper
       div.container
         div.row.justify-content-lg-center.justify-content-md-center
           .col-lg-12
-            div.main_logo25#logo
+            div.auth-form__title#logo
               h2.fw-bold Advance
               //- a(href='index.html')
               //-   img(src='../../assets/images/sign_logo.png' alt='')
               //- a(href='index.html')
               //-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
           div.col-lg-6.col-md-8
-            article.sign_form
+            article.auth-form__content
                 block content
           .sign_footer
             | &copy; 2020
