@@ -1,3 +1,21 @@
+.auth-forms__alert{
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+  margin: 15px 0;
+  font-size: 16px;
+  &.auth-forms__alert-invalid{
+    border: 1px solid #dc3545;
+    color: #dc3545;
+  }
+  &.auth-forms__alert-valid{
+    border: 1px solid #198754;
+    color: #198754;
+  }
+}
+
 .auth-form-wrapper {
   background: #f7f7f7 !important;
   position: relative;
