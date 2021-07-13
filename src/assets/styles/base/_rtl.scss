@@ -7,16 +7,24 @@ html[dir="rtl"]{
         float: right;
         .card-img__card-overlay {
           .card-overlay__badge-seller{
+            right: unset;
             left: 0;
             &::after {
-              right: -5;
+              left: unset;
+              right: -7;
+              height: 12px;
+              width: 15px;
+              position: absolute;
+              left: 70px;
               border-bottom-right-radius: 2px;
               border-top-right-radius: 3px;
               border-bottom-left-radius: 3px; 
             }
           }
           .card-overlay__crd-reviews{
+            left: unset;
             right:10px;
+            text-align: center;
             .crd-reviews i {
               margin-left: 2px;
               [class*=" uil-"]::before,
@@ -37,6 +45,7 @@ html[dir="rtl"]{
             }
           }
           .card-overlay__crd-timer{
+            right: unset;
             left: 0;
             margin-left: 10px;
           }
@@ -47,6 +56,10 @@ html[dir="rtl"]{
         float: right;
         .card-content__card-details {
           text-align: right;     
+        }
+        .eps_dots{
+          left: 0;
+          right: unset;
         }
         a.card-content__card-discription{
           text-align: right;  
@@ -64,11 +77,6 @@ html[dir="rtl"]{
             text-align: left;
           }
         }
-      }
-      .shrt-cart-btn {
-        margin-left: 10px;
-        float: left;
-        margin-right: 10px;
       }
     }
   }  
