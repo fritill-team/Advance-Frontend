@@ -129,6 +129,9 @@
   }
   // this class adds styling of error message
   &.field-wrapper--error{
+    .text-field__label{
+      color: #dc3545;
+    }
     .field-wrapper__message{
       color: #ed2a26;
     }
@@ -167,8 +170,6 @@
         display: none;
       }
     }
-    
-    
     .file-input__label {
       position: absolute;
       cursor: pointer;
@@ -205,6 +206,21 @@
     }
   }
 
+
+  // input type select
+  &.field-wrapper__select-input{
+    .select-menu{
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center;
+      position: relative;
+      i.icon{
+        width: 40px !important;
+        top: 10px !important;
+        font-size: 14px !important;
+      }
+    }
+  }
   // .text-field__input{
 
   // }
@@ -214,3 +230,21 @@
 }
 
 
+html[dir='rtl']{
+  .field-wrapper{
+    &.field-wrapper__select-input{
+      .select-menu{
+        i.icon{
+          right: unset !important;
+          left: 1em !important;
+          width: 40px !important;
+        }
+        .menu{
+          .item{
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
