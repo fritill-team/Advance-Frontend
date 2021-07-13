@@ -117,6 +117,151 @@ html[dir='rtl']{
   }
 
   /*End sidebar*/
+  /*start header*/
+  .header{
+  .header--main-logo{
+    float: right;
+    margin-right: 20px;
+  }
+  //
+  .header__top-category{
+    .top-category--menu-dropdown{
+      .menu-dropdown--item{
+        .item--menu{
+          .menu--item{
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  //
+  .header__search{
+    float: right;
+    margin-right: 50px;
+    .search__wrapper{
+      .wrapper__inputs-form{
+        .inputs-form--input{
+          padding-right: 3.2em!important;
+          padding-left: 1em!important;
+          text-align: right;
+        }
+        .inputs-form--icon{
+          right: 1px;
+          left: auto;
+        }
+      }
+    }
+  }
+  .header__notification{
+    margin-right: auto;
+    float: left;
+    padding-left: 15px;
+    margin-left: 0;
+
+    .notification__list{
+      .list__list-item{
+        .list-item--upload-course{
+          margin-left: 10px;
+        }
+        .list-item--opencard{
+          .opencard__count-num{
+            left: 8px;
+          }
+        }
+      }
+      //item 3 massege
+      .list__massege{
+        text-align: right;
+        .massege__opencard {
+          .opencard__count-num{
+            left: 8px;
+          }
+        }
+        .massege__menu{
+          text-align: right;
+          right: auto!important;
+          left: 0!important;
+          .menu--item{
+            text-align: right;
+            .item__profile-link{
+              .profile-link__img{
+                margin-left: 10px;
+              }
+              .profile-link__content{
+                .content__name{
+                  text-align: right;
+                }
+                .content__details{
+                  text-align: right;
+                }
+              }
+            }
+          }
+          .item__view-all{
+            float: right;
+          }
+        }
+      }
+      .list__profile{
+        text-align: right;
+        .profile__account{
+          float: left;
+          .accoutn__img{
+            margin-right: 10px;
+          }
+        }
+        .profile__menu{
+          right: auto!important;
+          left: 0!important;
+          text-align: right;
+          .menu__channel-item{
+            .channel-item__profile{
+              .profile__img{
+                margin-left: 10px;
+              }
+              .profile__content{
+                  .content__header{
+                    .header__name{
+                      text-align: right;
+                    }
+                  }
+              }
+            }
+            .channel-item--view{
+              text-align: right;
+            }
+            .menu__night-mode{
+              .night-mode--btn-mode{
+                .btn-mode__icone{
+                  margin-left: 10px;
+                }
+                .btn-mode--switch-mode{
+                  left: 13px;
+                  .switch-mode--switch-btn{
+                    right: 0;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          .channel-item--item{
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px){
+  .header__search{
+    margin-right: 0 !important;
+  }
+  }
+
+
+  /*End header*/
   /*start component course*/
   .course-content{
     float: right;
