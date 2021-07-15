@@ -7,3 +7,11 @@ mixin user-acount(userText,className)
       .live-user__user-content
         a(class="user-content__text" href='#')= userText
         block
+
+//- user-acount rating
+mixin acount-review(userName,time)
+  .item__reviews-user
+    img.reviews-user__img(src='images/left-imgs/img-1.jpg' alt='')
+    .reviews-user__title
+      h4(class="title__name")= userName
+      span(class="title__time")= time
