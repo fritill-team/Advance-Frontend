@@ -61,6 +61,12 @@ html[dir="rtl"]{
           left: 0;
           right: unset;
         }
+        .more_dropdown a{
+          .dropdown-content {
+            z-index: 1;
+            left: 0;
+          }
+        }
         a.card-content__card-discription{
           text-align: right;  
         }
