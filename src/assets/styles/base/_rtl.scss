@@ -37,6 +37,7 @@ html[dir="rtl"]{
           span.card-overlay__play_btn1{
             float: right;
             left: 40%;
+            padding: 12px 10px;
             i.uil-play{
               &::before {
                 margin-left: .2em;
@@ -56,6 +57,10 @@ html[dir="rtl"]{
         float: right;
         .card-content__card-details {
           text-align: right;     
+        }
+        .dropdown-content{
+          left: 0;
+          right: unset;
         }
         .eps_dots{
           left: 0;

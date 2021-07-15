@@ -10,7 +10,7 @@
     border-radius: 10px;
     border: 1px solid #efefef;
     transition: all .2s ease-in-out;
-    a.card-auther__btn-enroll {
+    .card-media .enroll-btn {
       display: none;
     }
  // start card-img part1
@@ -126,7 +126,7 @@
           float: left;
           text-align: center;
           border-radius: 100%;
-          padding: 13px 10px;
+          padding: 15px 13px;
           font-size: 20px;
           top: 40%;
           right: 40%;
@@ -224,7 +224,9 @@
         padding-top: 15px;
         margin-top: 18px;
         p.card-auther__name-auth{
+          
           float: left;
+          
           font-size: 14px;
           font-family: 'Roboto', sans-serif;
           color: #686f7a;
@@ -248,32 +250,41 @@
         }
         button {
           outline: none;
-          .shrt-cart-btn {
+          .enroll-btn {
             display: none;
           }
         }
       }
     }
+    .enroll-btn {
+      height: 30px;
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 20px;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background: #ed2a26;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 10px !important;
+      &:hover  {
+        color: #fff;
+      }
+    }
   }
-  .btn-enroll {
-    height: 30px;
-    padding: 6px 10px;
-    border: 0;
-    border-radius: 20px;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    background: #ed2a26;
-    opacity: 0.9;
-    font-size: 12px;
-    font-weight: 500;
-    display: inline-block;
-    position: absolute;
-    left: 60px;
-    &:hover{
-      color: #fff !important;
-      background: #333; 
-      transition: all 0.5s ease;
-      transform: translateY(-5px); 
+  &:hover{
+    transition: all 0.5s ease;
+	  transform: translateY(-5px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    .enroll-btn{
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      transition: all .5s ease; 
+      transform: translateY(-5px);
     }
   }
 }
