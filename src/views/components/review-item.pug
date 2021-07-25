@@ -1,120 +1,47 @@
 .all-reviews__item
-  .item__reviews-user
-    img.reviews-user__img(src='images/left-imgs/img-1.jpg' alt='')
-    .reviews-user__title
-      h4.title__name John Doe
-      span.title__time 2 hour ago
-  .item__rating-box.mt-20
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--half-star
+  include ../components/single-course/user-acount.pug
+  +acount-review("John Doe","2 hour ago")
+  include ../components/general-component/rating.pug
+  +rating(
+    'rating-box--full-star',
+    'rating-box--half-star',
+    'rating-box__empty-star',
+    )
   p.item__comment
     | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-  .item__helpful
-    span.helpful__ask Was this review helpful?
-    .helpful__radio-group
-      .radio-group__item
-        input#radio-1.item--input(name='radio' type='radio')
-        label.item__radio-label(for='radio-1') Yes
-      .radio-group__item
-        input#radio-2.item--input(name='radio' type='radio')
-        label.item__radio-label(for='radio-2') No
-    a.helpful__text(href='#') Report
 .all-reviews__item
-  .item__reviews-user
-    img.reviews-user__img(src='images/left-imgs/img-2.jpg' alt='')
-    .reviews-user__title
-      h4.title__name Jassica William
-      span.title__time 12 hour ago
-  .item__rating-box.mt-20
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box__empty-star
+  +acount-review("Jassica William","12 hour ago")
+  +rating(
+    'rating-box--full-star',
+    'rating-box--half-star',
+    'rating-box__empty-star',
+    )
   p.item__comment
     | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-  .item__helpful
-    span.helpful__ask Was this review helpful?
-    .helpful__radio-group
-      .radio-group__item
-        input#radio-3.item--input(name='radio1' type='radio')
-        label.item__radio-label(for='radio-3') Yes
-      .radio-group__item
-        input#radio-4.item--input(name='radio1' type='radio')
-        label.item__radio-label(for='radio-4') No
-    a.helpful__text(href='#') Report
 .all-reviews__item
-  .item__reviews-user
-    img.reviews-user__img(src='images/left-imgs/img-3.jpg' alt='')
-    .reviews-user__title
-      h4.title__name Albert Dua
-      span.title__time 5 days ago
-  .item__rating-box.mt-20
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--half-star
-    span.rating-box__rating-star.rating-box__empty-star
+  +acount-review("Albert Dua","5 hour ago")
+  +rating(
+    'rating-box--full-star',
+    'rating-box--half-star',
+    'rating-box__empty-star',
+    )
   p.item__comment
     | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-  .item__helpful
-    span.helpful__ask Was this review helpful?
-    .helpful__radio-group
-      .radio-group__item
-        input#radio-5.item--input(name='radio2' type='radio')
-        label.item__radio-label(for='radio-5') Yes
-      .radio-group__item
-        input#radio-6.item--input(name='radio2' type='radio')
-        label.item__radio-label(for='radio-6') No
-    a.helpful__text(href='#') Report
 .all-reviews__item
-  .item__reviews-user
-    img.reviews-user__img(src='images/left-imgs/img-4.jpg' alt='')
-    .reviews-user__title
-      h4.title__name Zoena Singh
-      span.title__time 15 days ago
-  .item__rating-box.mt-20
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
+  +acount-review("Zoena Singh","15 hour ago")
+  +rating(
+    'rating-box--full-star',
+    'rating-box--half-star',
+    'rating-box__empty-star',
+    )
   p.item__comment
     | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-  .item__helpful
-    span.helpful__ask Was this review helpful?
-    .helpful__radio-group
-      .radio-group__item
-        input#radio-7.item--input(name='radio3' type='radio')
-        label.item__radio-label(for='radio-7') Yes
-      .radio-group__item
-        input#radio-8.item--input(name='radio3' type='radio')
-        label.item__radio-label(for='radio-8') No
-    a.helpful__text(href='#') Report
 .all-reviews__item
-  .item__reviews-user
-    img.reviews-user__img(src='images/left-imgs/img-5.jpg' alt='')
-    .reviews-user__title
-      h4.title__name Joy Dua
-      span.title__time 20 days ago
-  .item__rating-box.mt-20
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box--full-star
-    span.rating-box__rating-star.rating-box__empty-star
-    span.rating-box__rating-star.rating-box__empty-star
+  +acount-review("Joy Dua","20 hour ago")
+  +rating(
+    'rating-box--full-star',
+    'rating-box--half-star',
+    'rating-box__empty-star',
+    )
   p.item__comment
     | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
-  .item__helpful
-    span.helpful__ask Was this review helpful?
-    .helpful__radio-group
-      .radio-group__item
-        input#radio-9.item--input(name='radio4' type='radio')
-        label.item__radio-label(for='radio-9') Yes
-      .radio-group__item
-        input#radio-10.item--input(name='radio4' type='radio')
-        label.item__radio-label(for='radio-10') No
-    a.helpful__text(href='#') Report
