@@ -1,4 +1,4 @@
-//- Master layout
+//- course-display layout
 
 doctype html
 html(lang='en' dir="")
@@ -34,18 +34,39 @@ html(lang='en' dir="")
     //- block content
 
     block content
+      // Menu
+      +menu('home')
+        //- Desktop page
+      .wrapper._bg4586
+        //- course viewe
+        //- course video
+        section.course-video
+          .container-fluid
+            .row
+              .col-lg-12
+                .course-video__wrapper
+                  .row.justify-content-center
+                    block coursVideo
 
+          //- section.course-video
+          //-   block courseVideo
+        ._215b15._byt1458
+          .container-fluid
+            .row
+              .col-lg-12
+                .user-wrapper
+                  block userAccount
+        ._215b17
+          .container-fluid
+            .row
+              .col-lg-12
+                block tabs
 
-    //- Footer
+        include ../components/footer.pug
 
     //- block scripts
     block scripts
 
 
-    //- script(src='../assets/scripts/jquery-3.3.1.min.js')
-    //- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-    //- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-    //- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-    //- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-    //- script(src='../assets/scripts/custom.js')
-    //- script(src='../assets/scripts/night-mode.js')
+
+
