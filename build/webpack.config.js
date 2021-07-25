@@ -12,7 +12,7 @@ module.exports = env => ({
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "assets/js/[name].[hash:7].bundle.js"
+    filename: "assets/js/[name].bundle.js"
   },
   devServer: {
     contentBase: path.resolve(__dirname, "../src/views"),
@@ -84,17 +84,17 @@ module.exports = env => ({
       },
       {
         test: /\.(png|jpg|gif|svg|ico)(\?.*)?$/,
-        loader: "url-loader",
+        loader: "file-loader",
         options: {
-          limit: 3000,
-          name: "assets/images/[name].[hash:7].[ext]"
+          limit: 30000,
+          name: 'assets/images/[name].[ext]'
         }
       },
       {
-        test: /\.(svg|woff|woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff|woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: "url-loader",
         options: {
-          name: "assets/fonts/[name].[hash:7].[ext]"
+          name: "assets/fonts/[name].[ext]"
         }
       },
       {
@@ -102,7 +102,7 @@ module.exports = env => ({
         loader: "url-loader",
         options: {
           limit: 10000,
-          name: "assets/videos/[name].[hash:7].[ext]"
+          name: "assets/videos/[name].[ext]"
         }
       },
       {
@@ -125,7 +125,7 @@ module.exports = env => ({
         default: false,
         vendors: false,
         vendor: {
-          filename: "assets/js/vendor.[hash:7].bundle.js",
+          filename: "assets/js/vendor.bundle.js",
           chunks: "all",
           test: /node_modules/
         }
@@ -134,7 +134,7 @@ module.exports = env => ({
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].[hash:7].bundle.css",
+      filename: "assets/css/[name].bundle.css",
       chunkFilename: "[id].css"
     }),
     ...utils.pug(),
