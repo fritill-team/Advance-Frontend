@@ -24,7 +24,7 @@ ul{
 // @import './components/link';
 // @import './components/_menu';
 @import './components/course-card';
-
+@import './components/instructor-card';
 /*
   Layout
 */
@@ -41,8 +41,9 @@ ul{
 /*
 
 */
+
 @import './base/style.scss';
-@import './base/rtl.scss';
+@import './base/_rtl.scss';
 @import './custom/auth-forms.scss';
 @import './components/header';
 @import './components/menu-responsive';
