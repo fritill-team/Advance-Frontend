@@ -60,15 +60,15 @@ html[dir='rtl']{
           }
         }
       }
-      .left_footer{
-        ul{
-          li{
-          a{
+      .sidebar__footer{
+        ul.footer-list{
+          li.list-item{
+          a.item-link{
             text-align: right;
           }
           }
         }
-        .left_footer_content{
+        .footer_content{
           p{
             text-align: right;
           }
