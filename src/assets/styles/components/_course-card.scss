@@ -40,14 +40,18 @@
         right: 0;
         bottom: 0;
         background-image: linear-gradient(transparent, rgba(51, 51, 51, 0.3) 90%);
-        &:hover .play_btn1{
-          background-image: linear-gradient(transparent,rgba(51,51,51,.4) 90%);
-          display: block;
-          visibility: visible;
-          opacity: 1;
-          transition: all .5s ease; 
-          transform: translateY(-5px);  
-        }
+        &:hover{
+          .play_btn1{
+            background-image: linear-gradient(transparent,rgba(51,51,51,.4) 90%);
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            padding: 15px 13px;
+            transition: all .5s ease; 
+            transform: translateY(-5px);  
+          }
+        } 
+        
         .card-overlay__badge-seller{
           border-radius: 3px;
           font-size: 10px;
