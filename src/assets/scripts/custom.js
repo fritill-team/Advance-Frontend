@@ -222,6 +222,7 @@ headers.click(function() {
     return false;
 });
 
+
 // hook up the expand/collapse all
 expandLink.click(function(){
     var isAllOpen = !$(this).data('isAllOpen');
@@ -242,13 +243,12 @@ $('input[name="paymentmethod"]').on('click', function () {
 
 // Tap Explore "DoaaNegm"
 
- $('.menu--item .menu--link').each(function(){
-	 $(this).on('click',function(){
-		 $(this).addClass('active').parent().siblings().find('a').removeClass('active')
-	 });
- });
-// $('.menu--item').on('click',function(){
-// 	$(this).removeClass('active'); 
-// 	$(this).addClass('active');
-// });
+  $('.menu--item .menu--link').each(function(){
+	  $(this).on('click',function(e){
+		e.preventDefault();
+    	$(this).addClass('active').parent().siblings().find('a').removeClass('active')
+     });
+    });
+
+	
   
