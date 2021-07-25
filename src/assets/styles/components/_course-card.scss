@@ -10,8 +10,24 @@
     border-radius: 10px;
     border: 1px solid #efefef;
     transition: all .2s ease-in-out;
-    .card-media .enroll-btn {
-      display: none;
+    .card-media__card-content {
+      .card-content__card-auther{
+        .enroll-btn{
+          opacity: 0;
+          padding: 4px 8px 3px 8px;
+          border: 0;
+          border-radius: 20px;
+          color: #fff;
+          font-family: 'Roboto', sans-serif;
+          background: #ed2a26;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 0 5px !important;
+          &:hover  {
+            color: #000;
+          }
+        }
+      } 
     }
  // start card-img part1
     .card-media__card-img {
@@ -41,17 +57,16 @@
         bottom: 0;
         background-image: linear-gradient(transparent, rgba(51, 51, 51, 0.3) 90%);
         &:hover{
-          .play_btn1{
+          span.card-overlay__play_btn1{
             background-image: linear-gradient(transparent,rgba(51,51,51,.4) 90%);
             display: block;
             visibility: visible;
             opacity: 1;
-            padding: 15px 13px;
+            padding: 12px 12px;
             transition: all .5s ease; 
             transform: translateY(-5px);  
           }
         } 
-        
         .card-overlay__badge-seller{
           border-radius: 3px;
           font-size: 10px;
@@ -228,7 +243,7 @@
         padding-top: 15px;
         margin-top: 18px;
         p.card-auther__name-auth{
-          
+          margin-right: 10px;
           float: left;
           
           font-size: 14px;
@@ -247,32 +262,19 @@
         }
         .card-auther__price{
           float: right;
-          font-size: 18px;
-          font-weight: 500;
           color: #333;
           text-align: right;
-        }
-        button {
-          outline: none;
-          .enroll-btn {
-            display: none;
+          display: flex;
+          align-items: center;
+          p{
+            line-height: 1;
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
           }
         }
-      }
-    }
-    .enroll-btn {
-      height: 30px;
-      padding: 10px 15px;
-      border: 0;
-      border-radius: 20px;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      background: #ed2a26;
-      font-size: 14px;
-      font-weight: 500;
-      margin-right: 10px !important;
-      &:hover  {
-        color: #fff;
+        
       }
     }
   }
@@ -283,12 +285,16 @@
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     -o-transform: translateY(-5px);
-    .enroll-btn{
-      display: block;
-      visibility: visible;
-      opacity: 1;
-      transition: all .5s ease; 
-      transform: translateY(-5px);
+    .card-media__card-content {
+      .card-content__card-auther{
+        .enroll-btn{
+          display: block;
+          visibility: visible;
+          opacity: 1;
+          transition: all .5s ease; 
+          transform: translateY(-1px);
+        }
+      } 
     }
   }
 }

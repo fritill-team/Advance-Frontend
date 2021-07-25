@@ -11,14 +11,11 @@ html[dir="rtl"]{
             left: 0;
             &::after {
               left: unset;
-              right: -7;
-              height: 12px;
+              right: -6px;
+              height: 15px;
               width: 15px;
               position: absolute;
-              left: 70px;
-              border-bottom-right-radius: 2px;
-              border-top-right-radius: 3px;
-              border-bottom-left-radius: 3px; 
+              top:2px;
             }
           }
           .card-overlay__crd-reviews{
