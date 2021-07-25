@@ -4,106 +4,133 @@ block title
   title My Page - Home
 
 block content
-
-  .container
-    .course__form
-      .general_info10
-        .row
-          .col-lg-12.col-md-6.col-sm-12
-            .ui.search.focus.mt-30.lbel25
-              label Course Title*
-              .ui.left.icon.input.swdh19
-                input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                .badge_num 60
-              .invalid-feedback
-                | Please provide a valid city.
-          .col-lg-12.col-md-6.col-sm-12
-            .ui.search.focus.mt-30.lbel25
-              label Course Title*
-              .ui.left.icon.input.swdh19
-                input.prompt.srch_explore(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-          .col-lg-12.col-md-6.col-sm-12
-            .mt-30.lbel25
-              label Language*
-            select.ui.hj145.dropdown.cntry152.prompt.srch_explore.select-menu
-              option(value='') Select Language
-              option(value='1') English
-              option(value='2') Espa&ntilde;ol
-              option(value='3') Portugu&ecirc;s
-              option(value='4') &#x65E5;&#x672C;&#x8A9E;
-              option(value='5') Deutsch
-              option(value='6') Fran&ccedil;ais
-              option(value='7') T&uuml;rk&ccedil;e
-              option(value='8') &#x939;&#x93F;&#x928;&#x94D;&#x926;&#x940;
-              option(value='9') Italiano
-              option(value='10') Polski
-              option(value='11') &#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;
-              option(value='12') Rom&acirc;n&abreve;
-              option(value='13') Telugu
-              option(value='14') &#x92E;&#x930;&#x93E;&#x920;&#x940;
-              option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
-          
-          .col-lg-12.col-md-6.col-sm-12
-            .part_input.mt-30.lbel25
-              label File*
-              .input-group
-                .custom-file
-                  input#inputGroupFile06.custom-file-input(type='file')
-                  label.custom-file-label(for='inputGroupFile06') No Choose file - (Pdf, Video)
-
-          .col-lg-12.col-md-6.col-sm-12
-            .ui.search.focus.mt-30.lbel25
-              label Volume*
-              .ui.left.icon.input.swdh19.swdh95
-                input.prompt.srch_explore(type='number' min='0' name='size' required='' placeholder='0')
-                .badge_mb MB
-
-          .col-lg-12.col-md-6.col-sm-12
-            .caption__check.mt-30
-              .ui.form
-                .grouped.fields
-                  .ui.form.checkbox_sign.cp_458
-                    .inline.field
-                      .ui.checkbox.mncheck
-                        input.hidden(type='checkbox' tabindex='0')
-                        label
-                          | English
-                          span.filter__counter (300)
+  .auth-forms__alert.auth-forms__alert-invalid(role='alert') 
+    | this is nonfield messages
+  form
+    //- .col-lg-12.col-md-6.col-sm-12
+    //-   .ui.search.focus
+    //-     .icon.input.lbel25
+    //-       label(for="validationServeriPassword" class="form-label") Password *
+    //-       .ui.left.icon.input.swdh95.w-100
+    //-         input(
+    //-           class="prompt srch_explore form-control is-invalid"
+    //-           type="password"
+    //-           name="password"
+    //-           required maxlength="64"
+    //-           id="validationServeriPassword"
+    //-           aria-describedby="validationServer05Feedback"
+    //-           placeholder="Password"
+    //-           )
+    //-         i.uil.uil-key-skeleton-alt.icon.icon2
+    //-       .invalid-feedback.my-2#validationServer05Feedback Requerd
 
 
-          .col-lg-12
-            .course_des_textarea.mt-30.lbel25
-              label Course Description*
-              .course_des_bg
-                ul.course_des_ttle
-                  li
-                    a(href='#')
-                      i.uil.uil-bold
-                  li
-                    a(href='#')
-                      i.uil.uil-italic
-                  li
-                    a(href='#')
-                      i.uil.uil-list-ul
-                  li
-                    a(href='#')
-                      i.uil.uil-left-to-right-text-direction
-                  li
-                    a(href='#')
-                      i.uil.uil-right-to-left-text-direction
-                  li
-                    a(href='#')
-                      i.uil.uil-list-ui-alt
-                  li
-                    a(href='#')
-                      i.uil.uil-link
-                  li
-                    a(href='#')
-                      i.uil.uil-text-size
-                  li
-                    a(href='#')
-                      i.uil.uil-text
-                .textarea_dt
-                  .ui.form.swdh339
-                    .field
-                      textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+    .col-lg-12.col-md-6.col-sm-12
+      .field-wrapper.field-wrapper--error
+        label.text-field__label Course Title*
+        .text-field__content
+          //- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+          input.text-field__input.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+          .text-field__limit 60
+        .field-wrapper__message
+          | Please provide a valid city.
+
+
+    .col-lg-12.col-md-6.col-sm-12
+      .field-wrapper.field-wrapper--no-message
+        label.text-field__label Course Title*
+        .text-field__content
+          input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+        .field-wrapper__message
+          | Please provide a valid city.
+   
+    .col-lg-12.col-md-6.col-sm-12
+      .field-wrapper.field-wrapper__file-input.field-wrapper--error
+        label.text-field__label File*
+        .input-group
+          .file-input
+            input#inputGroupFile06.custom-file-input(type='file')
+            label.file-input__label(for='inputGroupFile06') No Choose file - (Pdf, Video)
+        .field-wrapper__message
+          | Please provide a valid city.
+
+
+    .col-lg-12.col-md-6.col-sm-12
+      .field-wrapper.field-wrapper__select-input
+        label.text-field__label Language*
+        .text-field__content
+          select.ui.hj145.dropdown.cntry152.prompt.srch_explore.select-menu
+            option(value='') Select Language
+            option(value='1') English
+            option(value='2') Espa&ntilde;ol
+            option(value='3') Portugu&ecirc;s
+            option(value='4') &#x65E5;&#x672C;&#x8A9E;
+            option(value='5') Deutsch
+            option(value='6') Fran&ccedil;ais
+            option(value='7') T&uuml;rk&ccedil;e
+            option(value='8') &#x939;&#x93F;&#x928;&#x94D;&#x926;&#x940;
+            option(value='9') Italiano
+            option(value='10') Polski
+            option(value='11') &#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;
+            option(value='12') Rom&acirc;n&abreve;
+            option(value='13') Telugu
+            option(value='14') &#x92E;&#x930;&#x93E;&#x920;&#x940;
+            option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
+        .field-wrapper__message
+          | Please select a valid city.
+    //- .col-lg-12.col-md-6.col-sm-12
+    //-   .ui.search.focus.mt-30.lbel25
+    //-     label Volume*
+    //-     .ui.left.icon.input.swdh19.swdh95
+    //-       input.prompt.srch_explore(type='number' min='0' name='size' required='' placeholder='0')
+    //-       .badge_mb MB
+
+    //- .col-lg-12.col-md-6.col-sm-12
+    //-   .ui.form.mt-30.checkbox_sign
+    //-     .inline.field
+    //-       .ui.checkbox.mncheck
+    //-         input(
+    //-           type="checkbox"
+    //-           tabindex="0"
+    //-           class="hidden"
+    //-           id="remembr-signup"
+    //-           )
+    //-         label(for="remembr-signup") checkbox
+
+
+    //- .col-lg-12
+    //-   .course_des_textarea.mt-30.lbel25
+    //-     label Course Description*
+    //-     .course_des_bg
+    //-       ul.course_des_ttle
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-bold
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-italic
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-list-ul
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-left-to-right-text-direction
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-right-to-left-text-direction
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-list-ui-alt
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-link
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-text-size
+    //-         li
+    //-           a(href='#')
+    //-             i.uil.uil-text
+    //-       .textarea_dt
+    //-         .ui.form.swdh339
+    //-           .field
+    //-             textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')

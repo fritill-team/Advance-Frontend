@@ -2298,6 +2298,7 @@ i.icon1 {
     color: #686f7a;
     border: 1px solid #efefef;
     border-radius: 10px;
+    margin: 0 3px;
 }
 
 .lkcm152 span {
@@ -2889,7 +2890,7 @@ i.icon2 {
 }
 
 ._abc124 {
-	padding-left: 30px;
+  padding-left: 30px !important;
 }
 
 ._htgdrt {
@@ -5798,7 +5799,7 @@ a.rmv-btn i {
 
 /* --- Signup Signin Page --- */
 
-.main_logo25 {
+.auth-form__title {
     float: none;
     width: 135px;
     text-align: center;
@@ -5808,28 +5809,41 @@ a.rmv-btn i {
 
 }
 
-.sign_in_up_bg {
+.auth-form-wrapper {
     background: #f7f7f7 !important;
     position: relative;
 	width: 100%;
     z-index: 0;
     height: 100%;
+    &::before{
+        content: "";
+        background: url('/assets/images/sign.svg') no-repeat center;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        pointer-events: none;
+        background-size: cover;
+        opacity: 0.04;
+        z-index: -1;
+    }
+}
+.auth-form-wrapper:before {
+  content: "";
+  background: url("/assets/images/sign.svg") no-repeat center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  opacity: 0.04;
 }
 
-.sign_in_up_bg--img {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    opacity: 0.04;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
 
-.sign_form {
+.auth-form__content {
 	background: #fff;
     border-radius: 10px;
     padding: 50px 50px 30px;
@@ -5838,7 +5852,7 @@ a.rmv-btn i {
     float: left;
     width: 100%;
     margin-top: 0;
-    text-align: center;
+    // text-align: center;
     z-index: 2;
 }
 
@@ -5886,16 +5900,17 @@ a.rmv-btn i {
     background: #333;
 }
 
-.sign_form h2 {
+.auth-form__content h2 {
 	font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
 	color: #333;
 	text-align: center;
+    margin-bottom: 40px;
 }
 
-.sign_form p {
+.auth-form__content p {
 	font-size: 14px;
     margin-bottom: 47px;
     font-weight: 400;
@@ -5912,6 +5927,7 @@ a.rmv-btn i {
     .sgntrm146 {
       padding: 47px 0 30px;
       margin-bottom: 0 !important;
+      margin-top: 0px;
       border-bottom: 1px solid #efefef;}
       .sgntrm146 a {
         color: #ed2a26;
@@ -5935,6 +5951,7 @@ a.rmv-btn i {
 
 .sgntrm145 a {
     color: #ed2a26;
+    text-decoration: none;
 }
 
 .sgntrm145 a:hover {
@@ -5954,6 +5971,17 @@ a.rmv-btn i {
 .ui.swdh95 {
     font-size: 14px !important;
     width: 100%;
+}
+.ui.swdh95 .key-number{
+  position: absolute;
+  height: 100%;
+  border-radius: 20%;
+  background: none;
+  border: 0;
+  outline: none;
+  padding-left: 14px;
+  color: #aaaaaa;
+  appearance: none;
 }
 
 .ui[class*="left icon"].swdh95.input>input {
@@ -5994,7 +6022,8 @@ a.rmv-btn i {
     border-radius: 20px;
     text-align: center;
   	border: 0;
-    height: 32px;
+    height: 40px;
+     width: 40px !important;
     padding: 5px;
     margin: 15px 10px 0px;
 }
@@ -6021,6 +6050,20 @@ a.rmv-btn i {
 .invalid-feedback{
   text-align: left;
   padding-left: 15px;
+}
+/*  reset password    */
+.auth-form__content .verification .vcode-input{
+    outline: none;
+    display: block;
+    height: 50px;
+    margin-right: 0.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    min-width: 0;
+     background: #fff!important;
+    border: 1px solid #e5e5e5!important;
+    color: #333!important;
+     box-shadow: inset 0 1px 4px rgba(0,0,0,.1)!important;
 }
 /* --- Forgot Password Page --- */
 
@@ -7349,7 +7392,7 @@ a.rmv-btn i {
     background-color: #ed2a26 !important;
 }
 
-.sign_form p {
+.auth-form__content p {
     font-size: 14px;
     margin-bottom: 47px;
     font-weight: 400;
@@ -8023,41 +8066,4 @@ a.rmv-btn i {
 .select-menu{
     display: flex !important;
     justify-content: space-between !important;
-}
-
-
-html[dir='rtl']{
-    label{
-        text-align: right;
-    }
-    input{
-        text-align: inherit !important;
-    }
-    .badge_num{
-        right: unset;
-        left: 3px;
-    }
-    .badge_mb{
-        right: unset;
-        left: 3px;
-        top: 2px;
-    }
-    .selection{
-        &.select-menu{
-            .dropdown{
-                & .icon{
-                    right: auto !important;
-                    left: 1em !important;
-                }
-            }
-        }
-    }
-    .custom-file-label{
-        &::after{
-            left: 0;
-            right: unset;
-            border-radius: 10rem 0 0 10rem;
-        }
-    }
-
 }

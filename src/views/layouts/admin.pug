@@ -1,10 +1,9 @@
 //- Master layout
-
 doctype html
-
 html(lang='en' dir="")
   head
     //- Stylesheets
+
     //- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
     //- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
     //- link(href='../assets/styles/base/style.css' rel='stylesheet')
@@ -27,14 +26,16 @@ html(lang='en' dir="")
   body
 
     //- Menu
-    include ../components/header.pug
-
-
-
+    include ../components/header-admin.pug
+      //- block category
+    //-sidebar
     include ../components/sidebar.pug
       block sidebar
-        include ../components/sidebar-content.pug
-
+        ul
+          li.menu--item
+            a.menu--link.active(href='index.html' title='Home')
+              i.uil.uil-home-alt.menu--icon
+              span.menu--label Home
     //- block content
 
     block content
