@@ -239,7 +239,9 @@ $('input[name="paymentmethod"]').on('click', function () {
 	$('.return-departure-dts').slideUp();
 	$('[data-method="' + $value + '"]').slideDown();
 });
-const videojs = require("video.js/core")
+
+
+const videojs = require("video.js/dist/video")
 // video player
 var player = videojs('my-player', {
   html5: {
