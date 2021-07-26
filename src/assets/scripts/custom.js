@@ -222,6 +222,7 @@ headers.click(function() {
     return false;
 });
 
+
 // hook up the expand/collapse all
 expandLink.click(function(){
     var isAllOpen = !$(this).data('isAllOpen');
@@ -239,6 +240,14 @@ $('input[name="paymentmethod"]').on('click', function () {
 	$('.return-departure-dts').slideUp();
 	$('[data-method="' + $value + '"]').slideDown();
 });
+
+$('.menu--item .menu--link').each(function(){
+	  $(this).on('click',function(e){
+		e.preventDefault();
+    	$(this).addClass('active').parent().siblings().find('a').removeClass('active')
+     });
+    });
+
 const videojs = require("video.js/core")
 // video player
 var player = videojs('my-player', {
@@ -247,17 +256,15 @@ var player = videojs('my-player', {
   },
   textTrackSettings: true
 });
-
 player.ready(function () {
   var options = {
     showTitle: true,
     showTrackSelector: true,
   };
-
   // Initialize the plugin.
   var transcript = this.transcript(options);
-
   // Then attach the widget to the page.
   var transcriptContainer = document.querySelector('#transcript');
   transcriptContainer.appendChild(transcript.el());
 });
+
