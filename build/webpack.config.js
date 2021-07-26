@@ -1,3 +1,4 @@
+
 const path = require("path"),
   webpack = require("webpack"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
@@ -83,7 +84,7 @@ module.exports = env => ({
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg|ico)(\?.*)?$/,
+        test: /\.(png|jpg|gif|svg|ico|srt|vtt)(\?.*)?$/,
         loader: "file-loader",
         options: {
           limit: 30000,
@@ -91,7 +92,7 @@ module.exports = env => ({
         }
       },
       {
-        test: /\.(woff|woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff|woff2?|eot|ttf|otf|srt|vtt)(\?.*)?$/,
         loader: "url-loader",
         options: {
           name: "assets/fonts/[name].[ext]"

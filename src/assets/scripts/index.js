@@ -15,9 +15,14 @@ import "./night-mode.js"
 import "../scripts/login";
 import "../styles/app.scss";
 import 'bootstrap/dist/css/bootstrap.css';
+
+// video.js
+import './videojs-transcript.min.js'
+
 // import 'bootstrap/dist/js/popper.min.js';
 import Vue from 'vue';
 import Test from "../scripts/vue/Test.vue";
+// import * from 'video';
 
 console.log("hello from webpack");
 

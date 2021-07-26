@@ -239,4 +239,25 @@ $('input[name="paymentmethod"]').on('click', function () {
 	$('.return-departure-dts').slideUp();
 	$('[data-method="' + $value + '"]').slideDown();
 });
+const videojs = require("video.js/core")
+// video player
+var player = videojs('my-player', {
+  html5: {
+    nativeTextTracks: false
+  },
+  textTrackSettings: true
+});
 
+player.ready(function () {
+  var options = {
+    showTitle: true,
+    showTrackSelector: true,
+  };
+
+  // Initialize the plugin.
+  var transcript = this.transcript(options);
+
+  // Then attach the widget to the page.
+  var transcriptContainer = document.querySelector('#transcript');
+  transcriptContainer.appendChild(transcript.el());
+});
