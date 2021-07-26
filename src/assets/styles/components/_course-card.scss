@@ -1,0 +1,320 @@
+/* src/assets/styles/components/_course-card.scss  */
+
+.course-card { 
+  .course-card__card-media {
+    background: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    transition: all .2s ease-in-out;
+    .card-media__card-content {
+      .card-content__card-auther{
+        .enroll-btn{
+          opacity: 0;
+          padding: 4px 8px 3px 8px;
+          border: 0;
+          border-radius: 20px;
+          color: #fff;
+          font-family: 'Roboto', sans-serif;
+          background: #ed2a26;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 0 5px !important;
+          &:hover  {
+            color: #000;
+          }
+        }
+      } 
+    }
+ // start card-img part1
+    .card-media__card-img {
+      width: 100%;
+      height: 185px;
+      float: left;
+      position: relative;
+      a {
+        color: #4183c4;
+        text-decoration: none;
+        background-color: transparent;
+        &:hover{
+          text-decoration: none !important;
+          color: inherit !important;
+        }
+      }
+      .card-img img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .card-img__card-overlay {
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(transparent, rgba(51, 51, 51, 0.3) 90%);
+        &:hover{
+          span.card-overlay__play_btn1{
+            background-image: linear-gradient(transparent,rgba(51,51,51,.4) 90%);
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            padding: 12px 12px;
+            transition: all .5s ease; 
+            transform: translateY(-5px);  
+          }
+        } 
+        .card-overlay__badge-seller{
+          border-radius: 3px;
+          font-size: 10px;
+          position: absolute;
+          padding: 2px 10px;
+          background: #fa8305;
+          border: none;
+          color: #fff;
+          font-family: Roboto, sans-serif;
+          font-weight: 600;
+          line-height: 1.5;
+          right: 0;
+          text-align: center;
+          text-transform: uppercase;
+          top: 10px;
+          z-index: 2;
+          vertical-align: baseline;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+          &::after {
+            background: inherit;
+            content: "";
+            height: 12px;
+            position: absolute;
+            top: 3px;
+            transform: rotate(45deg);
+            width: 12px;
+            z-index: 1;
+            display: block;
+            left: -5px;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+          }
+        }
+        .card-overlay__crd-reviews{
+          color: #fff;
+          background: #fdcc0d;
+          display: inline-block;
+          padding: 3px 15px 3px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 500;
+          font-family: Roboto,sans-serif;
+          position: absolute;
+          left: 10px;
+          .crd-reviews i {
+            margin-right: 2px;
+            .uil-star::before {
+              content: "\EBAF";
+            }
+            [class*=" uil-"]::before,
+            [class^="uil-"]::before {
+              font-family: unicons;
+              font-style: normal;
+              font-weight: 400;
+              display: inline-block;
+              text-decoration: inherit;
+              width: 1em;
+              margin-right: 0.2em;
+              text-align: center;
+              font-feature-settings: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1em;
+              margin-left: 0.2em;
+            }
+          }
+        }
+        span.card-overlay__play_btn1{
+          display: none;
+          border: 0;
+          width: 50px;
+          height: 50px;
+          float: left;
+          text-align: center;
+          border-radius: 100%;
+          padding: 15px 13px;
+          font-size: 20px;
+          top: 40%;
+          right: 40%;
+          opacity: 0;
+          position: absolute;
+          color: #fff;
+          background: rgba(51,51,51,.8);
+          i.uil-play{
+            &::before {
+              font-family: unicons;
+              font-style: normal;
+              font-weight: 400;
+              speak-as: none;
+              display: inline-block;
+              text-decoration: inherit;
+              width: 1em;
+              margin-right: .2em;
+              text-align: center;
+              -webkit-font-feature-settings: normal;
+              font-feature-settings: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1em;
+              margin-left: .2em;
+            }
+          }
+        }
+        .card-overlay__crd-timer{
+          position: absolute;
+          color: white;
+          background: rgba(51,51,51,.8);
+          bottom: 0;
+          margin-bottom: 10px;
+          right: 0;
+          margin-right: 10px;
+          display: inline-block;
+          padding: 3px 10px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 500;
+          font-family: Roboto, sans-serif;
+        }
+      }  
+    }
+    // start card-content part2
+    .card-media__card-content{
+      padding: 10px 5px;
+      float: left;
+      width: 100%;
+      position: relative;
+      .card-content__card-details {
+        margin-bottom: 10px;
+        font-size: 12px;
+        margin-top: 5px;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        color: #686f7a;
+        text-align: left;
+        display: block;
+        span.card-details__card-view{
+          &::after{
+            content: "\2022";
+            margin: 0 4px;
+          } 
+          &:last-of-type {
+            &::after{
+              display: none;
+              content: '';
+            }
+          }
+        }    
+      }
+      a.card-content__card-discription{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        text-align: left;
+        margin-bottom: 7px;
+        line-height: 24px;   
+      }
+      a.card-content__card-title{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 400;
+        color: #686f7a;
+        padding-top: 2px;
+      }
+      .card-content__card-auther{
+        width: 100%;
+        border-top: 1px solid #efefef;
+        padding-top: 15px;
+        margin-top: 18px;
+        p.card-auther__name-auth{
+          margin-right: 10px;
+          float: left;
+          
+          font-size: 14px;
+          font-family: 'Roboto', sans-serif;
+          color: #686f7a;
+          text-align: left;
+          line-height: 24px;
+          a {
+            color: #333;
+            font-weight: 500;
+            &:hover{
+              color: #333 !important;
+	            text-decoration: underline !important;
+            }
+          }    
+        }
+        .card-auther__price{
+          float: right;
+          color: #333;
+          text-align: right;
+          display: flex;
+          align-items: center;
+          p{
+            line-height: 1;
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+        
+      }
+    }
+  }
+  &:hover{
+    transition: all 0.5s ease;
+	  transform: translateY(-5px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    .card-media__card-content {
+      .card-content__card-auther{
+        .enroll-btn{
+          display: block;
+          visibility: visible;
+          opacity: 1;
+          transition: all .5s ease; 
+          transform: translateY(-1px);
+        }
+      } 
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
