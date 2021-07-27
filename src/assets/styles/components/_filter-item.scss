@@ -1,0 +1,14 @@
+.tb_145 {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+// .panel-default
+  .filter-list{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #efefef;
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+}
