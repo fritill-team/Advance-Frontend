@@ -1,5 +1,6 @@
 .more-dropdown{
   display: inline-block;
+  position: relative;
   .more-dropdown__link{
     font-size: 20px;
     color: #afafaf!important;
@@ -14,7 +15,6 @@
     z-index: 1;
     right: 0;
     border-radius: 5px;
-    right: 30px;
 
     .content__item{
       color: #686f7a;

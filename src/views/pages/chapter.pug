@@ -1,7 +1,10 @@
 extends ../layouts/course-display.pug
 
+
 block title
 	title chapter-page
+block collapse
+	include ../components/colleps.pug
 block courseVideo
 	.col-xl-8.col-lg-5.col-md-6
 		//- video#my-player.video-js(controls='')
@@ -30,35 +33,21 @@ block courseVideo
 block userAccount
 	.course_tabs
 		#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
+			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-about' role='tab' aria-selected='false') About
+			a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Transcript
 			a#nav-courses-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
-			a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') TranScript
-			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-reviews' role='tab' aria-selected='false') Reviews
 block tabs
 	.course_tab_content
 		#nav-tabContent.tab-content
-			#nav-comment.tab-pane.fade.show.active(role='tabpanel')
-				include ../components/comments.pug
+			//- include ../components/review-item.pug
+			#nav-about.tab-pane.fade(role='tabpanel')
+				include ../components/about.pug
 			//- start course list component
 			//- include ../components/course.pug
 			#nav-tranScript.tab-pane.fade(role='tabpanel')
-				h2 TranScript
-				//- include ../components/review-item.pug
-			#nav-reviews.tab-pane.fade(role='tabpanel')
-				.reviews
-					.row
-						.col-lg-5
-							include ../components/review.pug
-						.col-lg-7
-							.review__header
-								.header__header-content
-									h3.header-content__title Reviews
-									.header-content__search
-										input.search__input(type='text' placeholder='Search reviews...')
-										button.search__btn
-											i.uil.uil-search
-							.review__all-reviews
-								include ../components/review-item.pug
-								.all-reviews__review-item
-									a.review-item__more-reviews(href='#') See More Reviews
+				h2 Transcript
+			#nav-comment.tab-pane.fade.show.active(role='tabpanel')
+				include ../components/comments.pug
+
 
 

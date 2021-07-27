@@ -9,7 +9,8 @@ header.header.clearfix
       img(src='../../assets/images/logo.svg' alt='')
     a(href='index.html')
       img.img--logo-inverse(src='../../assets/images/ct_logo.svg' alt='')
-  include ../components/header-blocks/selectCategory.pug
+  block category
+    //- include ../components/header-blocks/selectCategory.pug
   //- block category
   .header__search
     .search__wrapper
@@ -20,8 +21,7 @@ header.header.clearfix
     ul.notification__list
       li.list__list-item
         block btn-link
-          include ../components/single-course/btn.pug
-          +btn-link('list-item--upload-course', 'Create New Course' , '#create_new_course.html')
+
       //- li.list__list-item
       //-   a.list-item--opencard(href='shopping_cart.html' title='cart')
       //-     i.opencard__icone.uil-shopping-cart-alt
