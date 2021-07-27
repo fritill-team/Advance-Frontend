@@ -1,4 +1,95 @@
-html[dir='rtl']{
+html[dir="rtl"]{
+  .course-card {
+    .course-card__card-media {
+      float: right;
+  // start card-img part1
+      .card-media__card-img {
+        float: right;
+        .card-img__card-overlay {
+          .card-overlay__badge-seller{
+            right: unset;
+            left: 0;
+            &::after {
+              left: unset;
+              right: -6px;
+              height: 15px;
+              width: 15px;
+              position: absolute;
+              top:2px;
+            }
+          }
+          .card-overlay__crd-reviews{
+            left: unset;
+            right:10px;
+            text-align: center;
+            .crd-reviews i {
+              margin-left: 2px;
+              [class*=" uil-"]::before,
+              [class^="uil-"]::before {
+                margin-left: 0.2em;
+                margin-right: 0.2em;
+              }
+            }
+          }
+          span.card-overlay__play_btn1{
+            float: right;
+            left: 40%;
+            padding: 12px 10px;
+            i.uil-play{
+              &::before {
+                margin-left: .2em;
+                margin-right: .2em;
+              }
+            }
+          }
+          .card-overlay__crd-timer{
+            right: unset;
+            left: 0;
+            margin-left: 10px;
+          }
+        }  
+      }
+      // start card-content part2
+      .card-media__card-content{
+        float: right;
+        .card-content__card-details {
+          text-align: right;     
+        }
+        .dropdown-content{
+          left: 0;
+          right: unset;
+        }
+        .eps_dots{
+          left: 0;
+          right: unset;
+        }
+        .more_dropdown a{
+          .dropdown-content {
+            z-index: 1;
+            left: 0;
+          }
+        }
+        a.card-content__card-discription{
+          text-align: right;  
+        }
+        a.card-content__card-title{
+          text-align: right;
+        }
+        .card-content__card-auther{
+          p.card-auther__name-auth{
+            float: right;
+            text-align: right;    
+          }
+          .card-auther__price{
+            float: left;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }  
+
+
   .field-wrapper{
     &.field-wrapper--limit{
       .text-field__content{
@@ -744,3 +835,4 @@ html[dir='rtl']{
     }
   }
 }
+

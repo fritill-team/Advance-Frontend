@@ -100,9 +100,9 @@ module.exports = env => ({
       },
       {
         test: /\.(mp4)(\?.*)?$/,
-        loader: "url-loader",
+        loader: "file-loader",
         options: {
-          limit: 10000,
+          limit: 30000,
           name: "assets/videos/[name].[ext]"
         }
       },
