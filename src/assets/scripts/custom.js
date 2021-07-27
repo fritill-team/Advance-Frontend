@@ -248,8 +248,8 @@ $('.menu--item .menu--link').each(function(){
    });
   });
 
-// const videojs = require("video.js/dist/video")
-const videojs = require("video.js/core")
+const videojs = require("video.js/dist/video")
+// const videojs = require("video.js/core")
 // video player
 var player = videojs('my-player', {
   html5: {

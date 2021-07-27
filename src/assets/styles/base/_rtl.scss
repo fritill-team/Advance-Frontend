@@ -773,5 +773,66 @@ html[dir="rtl"]{
     .interactions-course{
       float: left;
     }
+    //start page chapter
+     // start comments component
+    .comments{
+      float: right;
+      .comments__header{
+        float: right;
+        .header__title{
+          float: right;
+          .title__name{
+            text-align: right;
+            float: right;
+          }
+        }
+      }
+      .comments__add-comment{
+        float: right;
+        .add-comment__group{
+          display: flex;
+          .group__img-wrapper{
+          }
+          .group__textarea{
+            margin-right: 20px;
+          }
+        }
+      }
+      .group--btn{
+        float: left;
+      }
+      .comment__review-comment{
+        float: right;
+        .review-comment__item,.review_reply{
+          .review-comment__comment{
+            text-align: right;
+          }
+          .item__actions{
+            .action__report{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  // start list-dropdown
+  .more-dropdown{
+    position: relative;
+    .more-dropdown__content{
+      position: absolute;
+      right: -130px;
+      .content__item{
+        .item__icone{
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  // userAcount comment
+  .item__reviews-user{
+    .reviews-user__img{
+      margin-left: 15px;
+    }
+  }
 }
 
