@@ -1,0 +1,28 @@
+section.student_reviews
+  .row
+    .col-lg-12
+      .review_right
+        .review_right_heading
+          h3 Discussions
+      section.cmmnt_1526
+        .cmnt_group
+          .img160
+            img(src="images/left-imgs/img-1.jpg" alt="")
+          textarea._cmnt001(placeholder="Add a public comment")
+          button.cmnt-btn(type="submit")  Comment
+      section.review_all120
+        .review_item
+          include ../components/single-course/user-acount.pug
+          +acount-review("John Doe", "2 hour ago")
+            .eps_dots.more_dropdown
+              a(href="#")
+                i.uil.uil-ellipsis-v
+              .dropdown-content
+                span
+                  i.uil.uil-comment-alt-edit
+                  | Edite
+                span
+                  i.uil.uil-trash-alt
+                  | Delete
+          p.rvds10
+          | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
