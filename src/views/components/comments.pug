@@ -1,28 +1,51 @@
-section.student_reviews
+section.comments
   .row
     .col-lg-12
-      .review_right
-        .review_right_heading
-          h3 Discussions
-      section.cmmnt_1526
-        .cmnt_group
-          .img160
-            img(src="images/left-imgs/img-1.jpg" alt="")
-          textarea._cmnt001(placeholder="Add a public comment")
-          button.cmnt-btn(type="submit")  Comment
-      section.review_all120
-        .review_item
-          include ../components/single-course/user-acount.pug
-          +acount-review("John Doe", "2 hour ago")
-            .eps_dots.more_dropdown
-              a(href="#")
-                i.uil.uil-ellipsis-v
-              .dropdown-content
-                span
-                  i.uil.uil-comment-alt-edit
-                  | Edite
-                span
-                  i.uil.uil-trash-alt
-                  | Delete
-          p.rvds10
-          | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
+      .comments__header
+        .header__title
+          h3.title__name Discussions
+      section.comments__add-comment
+        .add-comment__group
+          .group__img-wrapper
+            img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+          textarea.group__textarea(placeholder="Add a public comment")
+        button.group--btn(type="submit")  Comment
+      section.comment__review-comment
+        .review-comment__item
+          .item__wrapper.d-flex
+            include ../components/single-course/user-acount.pug
+            +acount-review("John Doe", "2 hour ago")
+            block dropdown
+              include ../components/list-dropdown.pug
+          p.review-comment__comment
+            | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
+          .item__actions
+            a.action__report
+              i.report__icone.uil.uil-thumbs-up
+              | 10
+            a.action__report
+              i.report__icone.uil.uil-thumbs-down
+              | 1
+            a.action__report
+              i.report__icone.uil.uil-heart
+            a.action__report.ml-3
+              | Reply
+        .review_reply
+          .review_item
+            .item__wrapper.d-flex
+              +acount-review("John Doe", "2 hour ago")
+              block dropdown
+                include ../components/list-dropdown.pug
+            p.review-comment__comment
+              | Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.
+            .item__actions
+              a.action__report
+                i.report__icone.uil.uil-thumbs-up
+                | 10
+              a.action__report
+                i.report__icone.uil.uil-thumbs-down
+                | 1
+              a.action__report
+                i.report__icone.uil.uil-heart
+              a.action__report.ml-3
+                | Reply

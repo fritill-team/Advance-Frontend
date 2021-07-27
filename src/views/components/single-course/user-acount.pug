@@ -15,13 +15,4 @@ mixin acount-review(userName,time)
     .reviews-user__title
       h4(class="title__name")= userName
       span(class="title__time")= time
-    //- .eps_dots.more_dropdown
-    //-   a(href="#")
-    //-     i.uil.uil-ellipsis-v
-    //-   .dropdown-content
-    //-     span
-    //-       i.uil.uil-comment-alt-edit
-    //-       | Edite
-    //-     span
-    //-       i.uil.uil-trash-alt
-    //-       | Delete
+    block dropdown
