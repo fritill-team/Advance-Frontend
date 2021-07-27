@@ -23,7 +23,8 @@ module.exports = env => ({
     alias: {
       source: path.resolve(__dirname, "../src"), // Relative path of src
       images: path.resolve(__dirname, "../src/assets/images"), // Relative path of images
-      fonts: path.resolve(__dirname, "../src/assets/fonts") // Relative path of fonts
+      fonts: path.resolve(__dirname, "../src/assets/fonts"), // Relative path of fonts
+      videos: path.resolve(__dirname, "../src/assets/videos")
     }
   },
   module: {
@@ -146,6 +147,10 @@ module.exports = env => ({
       "window.jQuery": "jquery",
       Popper: ['popper.js', 'default']
     }),
+    // new webpack.ProvidePlugin({
+    //   "videojs": "video.js",
+    //   "window.videojs": "video.js"
+    // }),
     new VueLoaderPlugin()
   ]
 })

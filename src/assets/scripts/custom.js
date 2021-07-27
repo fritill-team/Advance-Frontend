@@ -263,9 +263,9 @@ player.ready(function () {
     showTrackSelector: true,
   };
   // Initialize the plugin.
-  var transcript = this.transcript(options);
+  // var transcript = this.transcript(options);
   // Then attach the widget to the page.
-  var transcriptContainer = document.querySelector('#transcript');
-  transcriptContainer.appendChild(transcript.el());
+  // var transcriptContainer = document.querySelector('#transcript');
+  // transcriptContainer.appendChild(transcript.el());
 });
 

@@ -17,6 +17,7 @@ import "../styles/app.scss";
 import 'bootstrap/dist/css/bootstrap.css';
 
 // video.js
+// import 'https://vjs.zencdn.net/7.11.4/video.min.js';
 import './videojs-transcript.min.js'
 
 // import 'bootstrap/dist/js/popper.min.js';
