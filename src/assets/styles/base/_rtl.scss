@@ -47,13 +47,13 @@ html[dir="rtl"]{
             left: 0;
             margin-left: 10px;
           }
-        }  
+        }
       }
       // start card-content part2
       .card-media__card-content{
         float: right;
         .card-content__card-details {
-          text-align: right;     
+          text-align: right;
         }
         .dropdown-content{
           left: 0;
@@ -70,7 +70,7 @@ html[dir="rtl"]{
           }
         }
         a.card-content__card-discription{
-          text-align: right;  
+          text-align: right;
         }
         a.card-content__card-title{
           text-align: right;
@@ -78,7 +78,7 @@ html[dir="rtl"]{
         .card-content__card-auther{
           p.card-auther__name-auth{
             float: right;
-            text-align: right;    
+            text-align: right;
           }
           .card-auther__price{
             float: left;
@@ -87,7 +87,7 @@ html[dir="rtl"]{
         }
       }
     }
-  }  
+  }
 
 
   .field-wrapper{
@@ -813,6 +813,14 @@ html[dir="rtl"]{
             }
           }
         }
+        .review_reply{
+          padding-left: 0;
+          padding: 0px 20px;
+          .review_item{
+            padding-left: 0;
+            padding-right: 20px;
+          }
+        }
       }
     }
   // start list-dropdown
@@ -832,6 +840,18 @@ html[dir="rtl"]{
   .item__reviews-user{
     .reviews-user__img{
       margin-left: 15px;
+    }
+  }
+  // collaps
+  .sub__menu{
+    padding: 10px 0px;
+    .menu__list{
+      padding: 4px 2px 4px 6px;
+      .list__wrapper{
+        .list--link{
+          padding-right: 0 !important;
+        }
+      }
     }
   }
 }
