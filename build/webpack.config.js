@@ -1,10 +1,9 @@
-
 const path = require("path"),
   webpack = require("webpack"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   TerserPlugin = require("terser-webpack-plugin"),
-  {VueLoaderPlugin} = require("vue-loader"),
-  utils = require("./utils")
+  { VueLoaderPlugin } = require("vue-loader"),
+  utils = require("./utils");
 
 module.exports = env => ({
   context: path.resolve(__dirname, "../src"),
@@ -16,7 +15,7 @@ module.exports = env => ({
     filename: "assets/js/[name].bundle.js"
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "../src/views"),
+    contentBase: path.resolve(__dirname, "../src/views")
   },
   resolve: {
     extensions: [".js"],
@@ -35,16 +34,14 @@ module.exports = env => ({
         use: [
           {
             loader: "babel-loader",
-            options: {presets: ["es2015"]}
+            options: { presets: ["es2015"] }
           }
         ]
       },
       {
         test: /\.css$/,
         use: [
-          env === "development"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader,
+          env === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -60,9 +57,7 @@ module.exports = env => ({
       {
         test: /\.scss$/,
         use: [
-          env === "development"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
+          env === "development" ? "style-loader" : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           {
             loader: "css-loader",
             options: {
@@ -89,7 +84,7 @@ module.exports = env => ({
         loader: "file-loader",
         options: {
           limit: 30000,
-          name: 'assets/images/[name].[ext]'
+          name: "assets/images/[name].[ext]"
         }
       },
       {
@@ -145,7 +140,7 @@ module.exports = env => ({
       jQuery: "jquery",
       "window.$": "jquery",
       "window.jQuery": "jquery",
-      Popper: ['popper.js', 'default']
+      Popper: ["popper.js", "default"]
     }),
     // new webpack.ProvidePlugin({
     //   "videojs": "video.js",
@@ -153,4 +148,4 @@ module.exports = env => ({
     // }),
     new VueLoaderPlugin()
   ]
-})
+});

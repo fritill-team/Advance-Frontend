@@ -4,10 +4,9 @@
 
 <script>
   export default {
-    name: 'Test',
+    name: 'Exam',
     data() {
-      return { title: "test vue" }
+      return { title: "test exam page with vue" }
     }
-    
   }
 </script>
