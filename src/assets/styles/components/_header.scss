@@ -18,6 +18,7 @@
         display: none;
       }
     }
+
   }
   //
   .header__top-category{
@@ -525,4 +526,12 @@
         }
       }
     }
+}
+
+@media (max-width: 340px) {
+  .header{
+    .header--main-logo{
+      width: 100px;
+    }
+  }
 }
