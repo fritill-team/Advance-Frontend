@@ -815,6 +815,11 @@ html[dir="rtl"]{
         }
         .review_reply{
           padding-left: 0;
+          padding: 0px 20px;
+          .review_item{
+            padding-left: 0;
+            padding-right: 20px;
+          }
         }
       }
     }
@@ -844,7 +849,7 @@ html[dir="rtl"]{
       padding: 4px 2px 4px 6px;
       .list__wrapper{
         .list--link{
-          padding-left: 0 !important;
+          padding-right: 0 !important;
         }
       }
     }

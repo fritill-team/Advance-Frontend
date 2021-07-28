@@ -116,7 +116,10 @@
       }
     }
     .review_reply{
-      padding-right: 0;
+      padding: 0px 20px 0px 20px;
+      .review_item{
+        padding-right: 0;
+      }
     }
   }
 }
