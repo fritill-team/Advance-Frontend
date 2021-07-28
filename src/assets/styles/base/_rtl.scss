@@ -813,6 +813,9 @@ html[dir="rtl"]{
             }
           }
         }
+        .review_reply{
+          padding-left: 0;
+        }
       }
     }
   // start list-dropdown
@@ -838,10 +841,10 @@ html[dir="rtl"]{
   .sub__menu{
     padding: 10px 0px;
     .menu__list{
-      padding: 4px 2px 4px 5px;
+      padding: 4px 2px 4px 6px;
       .list__wrapper{
         .list--link{
-          padding-right: 0 !important;
+          padding-left: 0 !important;
         }
       }
     }

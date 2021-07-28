@@ -1,9 +1,14 @@
+.menu-colleps{
+  &:hover{
+    overflow-y: auto !important;
+  }
+}
 .sub__menu{
   padding: 10px 0px;
   .menu__list{
     display: flex !important;
     justify-content: space-between;
-    padding: 4px 5px 4px 2px;
+    padding: 4px 6px 4px 2px;
     align-items: center;
     transition: all 0.3s ease-in;
     .list__wrapper{
