@@ -5,7 +5,7 @@ block title
 block category
 	include ../components/header-blocks/selectCategory.pug
 block btn-link
-	include ../components/single-course/btn.pug
+	include ../components/general-component/btn.pug
 	+btn-link('list-item--upload-course', 'Create New Course' , '#create_new_course.html')
 block sidebar
 	include ../components/sidebar-content.pug
@@ -77,17 +77,15 @@ block courseVideo
 		.wrapper__title-buy
 			| 30-Day Money-Back Guarantee
 block userAccount
-	include ../components/single-course/user-acount.pug
-	include ../components/single-course/btn.pug
-	+user-acount("Johnson Smith", "Subscribe")
+	include ../components/general-component/user-acount.pug
+	include ../components/general-component/btn.pug
+	+user-acount("Johnson Smith", "Subscribe" , "images/left-imgs/img-1.jpg")
 		+btn('user-content__subscribe-btn', 'subscribe')
-	include ../components/single-course/interaction.pug
-	+interactions(
-	"uil uil-eye box--fa",'1452',
-	"uil uil-thumbs-up box--fa", '100',
-	"uil uil-thumbs-down box--fa", '20',
-	"uil uil-share-alt box--fa" , '9'
-	)
+	include ../components/general-component/interaction.pug
+	+interactions("uil uil-share-alt box--fa" , '9')
+	+interactions( "uil uil-thumbs-up box--fa", '100')
+	+interactions("uil uil-thumbs-down box--fa", '20')
+	+interactions( "uil uil-eye box--fa",'1452')
 	.course_tabs
 		#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
 			a#nav-about-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='true') About
