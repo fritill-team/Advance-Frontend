@@ -24,10 +24,11 @@ import Vue from "vue";
 import Exam from "../scripts/vue/Exam.vue";
 // import * from 'video';
 
-import "../scripts/login";
 console.log("hello from webpack");
 
 new Vue({
   el: "#vue",
   render: h => h(Exam)
 });
+
+// import "../scripts/login";
