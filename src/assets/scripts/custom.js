@@ -83,6 +83,39 @@ $(".featured_courses").owlCarousel({
     }
   }
 });
+// Featured Courses home
+$(".category_courses").owlCarousel({
+  items: 10,
+  loop: false,
+  margin: 20,
+  nav: true,
+  dots: false,
+  navText: [
+    "<i class='uil uil-angle-left'></i>",
+    "<i class='uil uil-angle-right'></i>"
+  ],
+  responsive: {
+    0: {
+      items: 1
+    },
+    576:{
+      items: 2
+    },
+    960: {
+     item: 3
+    },
+    1000: {
+      items: 3
+    },
+    1200: {
+      items: 4
+    },
+    1400: {
+      items: 4
+    }
+  }
+});
+
 
 // Featured Courses home
 $(".top_instrutors").owlCarousel({

@@ -862,7 +862,7 @@ i.icon1 {
   text-align: center;
   height: 30px !important;
   width: 30px !important;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   color: #333 !important;
   background: #fff !important;
   border-radius: 100% !important;
@@ -875,7 +875,7 @@ i.icon1 {
   position: absolute;
   right: 0px;
   top: 40%;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   text-align: center;
   height: 30px !important;
   width: 30px !important;
@@ -1317,7 +1317,8 @@ i.icon1 {
   opacity: 1;
 }
 
-.featured_courses .owl-nav .owl-prev {
+.featured_courses .owl-nav .owl-prev,
+.category_courses .owl-prev {
   left: -20px;
   font-size: 20px !important;
   position: absolute;
@@ -1325,7 +1326,7 @@ i.icon1 {
   text-align: center;
   height: 30px !important;
   width: 30px !important;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   color: #333 !important;
   background: #fff !important;
   border-radius: 100% !important;
@@ -1333,12 +1334,13 @@ i.icon1 {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
 }
 
-.featured_courses .owl-nav .owl-next {
+.featured_courses .owl-nav .owl-next,
+.category_courses .owl-next {
   font-size: 20px !important;
   position: absolute;
   right: -20px;
   top: 43%;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   text-align: center;
   height: 30px !important;
   width: 30px !important;
@@ -1349,7 +1351,8 @@ i.icon1 {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
 }
 
-.featured_courses .owl-nav .owl-prev:hover {
+.featured_courses .owl-nav .owl-prev:hover,
+.category_courses .owl-prev:hover {
   color: #fff !important;
   opacity: 1;
   background: #ed2a26 !important;
@@ -1357,7 +1360,8 @@ i.icon1 {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
 }
 
-.featured_courses .owl-nav .owl-next:hover {
+.featured_courses .owl-nav .owl-next:hover,
+.category_courses .owl-next:hover {
   color: #fff !important;
   opacity: 1;
   border: 1px solid #ed2a26 !important;
@@ -1373,7 +1377,7 @@ i.icon1 {
   text-align: center;
   height: 30px !important;
   width: 30px !important;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   color: #333 !important;
   background: #fff !important;
   border-radius: 100% !important;
@@ -1386,7 +1390,7 @@ i.icon1 {
   position: absolute;
   right: -20px;
   top: 43%;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   text-align: center;
   height: 30px !important;
   width: 30px !important;
@@ -1897,7 +1901,7 @@ i.icon1 {
   text-align: center;
   height: 30px !important;
   width: 30px !important;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   color: #333 !important;
   background: #fff !important;
   border-radius: 100% !important;
@@ -1910,7 +1914,7 @@ i.icon1 {
   position: absolute;
   right: -20px;
   top: 40%;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   text-align: center;
   height: 30px !important;
   width: 30px !important;
@@ -5622,7 +5626,7 @@ a.rmv-btn i {
   text-align: center;
   height: 30px !important;
   width: 30px !important;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   color: #333 !important;
   background: #fff !important;
   border-radius: 100% !important;
@@ -5635,7 +5639,7 @@ a.rmv-btn i {
   position: absolute;
   right: -20px;
   top: 43%;
-  padding: 4px 0 !important;
+  padding: 1px 0 !important;
   text-align: center;
   height: 30px !important;
   width: 30px !important;
