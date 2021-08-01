@@ -31,4 +31,4 @@ new Vue({
   render: h => h(Exam)
 });
 
-// import "../scripts/login";
+import "../scripts/login";
