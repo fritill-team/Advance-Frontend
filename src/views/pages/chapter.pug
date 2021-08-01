@@ -6,9 +6,16 @@ block title
 block sidebar
 	include ../components/sidebar-content.pug
 block courseVideo
-	.col-xl-5.col-sm-12
+	.col-xl-4.col-lg-5.col-md-6
+		//- video#my-player.video-js()
+		//- 	source(src='//vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+			//- track(kind='captions' src='../assets/videos/en.vtt' srclang='en' label='English' default='')
+			//- track(kind='captions' src='../assets/videos/ar.vtt' srclang='en' label='Arabic' default='')
+		//- #transcript
+
 		section.wrapper__preview-video
-			a.preview-video__modiel-img(href='#' data-toggle='modal' data-target='#videoModal')
+			a.preview-video__modiel-img(href='#'
+			data-toggle='modal' data-target='#videoModal')
 				img.modiel-img--img(src='images/courses/img-2.jpg' alt='')
 				.modiel-img__course-overlay
 					.course-overlay--seller Bestseller
@@ -24,122 +31,145 @@ block courseVideo
 				span.rebort-video__icons
 					i.uil.uil-windsock.icons__fa
 				| Report abuse
-	.col-xl-7.col-sm-12
-		.course-content.chapter-lessons__list
-			.course-content__course-list
-				a.course-list__header(href='javascript:void(0)')
-					.header__header-title
-						span.header-title__title
-							i.uil.uil-presentation-play.title__icone
-							span.title__title-text Introduction fgdfg to this Course
-					.header__header-details
-						span.header-details__num-item 8 lectures
-						span.header-details__length-item 22:08
-				.course-list__list-content
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-file.content-name__icon
-							.content-name__top-title
-								.top-title__title A Note On Asking For Help
-						.content-item__details
-							span.details__content-summary 00:12
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Unit Objectives
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 01.40
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-file.content-name__icon
-							.content-name__top-title
-								.top-title__title A Note On Asking For Help
-						.content-item__details
-							span.details__content-summary 00:12
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-file.content-name__icon
-							.content-name__top-title
-								.top-title__title A Note On Asking For Help
-						.content-item__details
-							span.details__content-summary 00:12
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48	
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48	
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48	
-					.list-content__content-item
-						.content-item__content-name
-							i.uil.uil-play-circle.content-name__icon
-							.content-name__top-title
-								.top-title__title Why This Course?
-						.content-item__details
-							a.details--preview-text(href='#') Preview
-							span.details__content-summary 07:48			
+	.col-xl-8.col-lg-7.col-md-6
+		article.wrapper__header
+			h2.header__title The Web Developer Bootcamp
+			span.header__description
+				| The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+		.wrapper__review-video
+			.review-video__review.mr-2
+				i.uil.uil-star.review__icone
+				| 4.5
+			| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(81,665 ratings)
+		.wrapper__enrolled-text
+			| 114,521 students enrolled
+		.wrapper__language
+			.language__lang
+				span.lang__icons
+					i.uil.uil-comment.icons__fa
+				| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;English
+			.language__more-lang
+				span.more-lang__icons
+					i.uil.uil-closed-captioning.icons__fa
+				span.more-lang__tooltip
+					| English, Dutch
+					span.tooltip--caption_tooltip
+						| 12 more
+						span.tooltip__caption-content
+							span.caption-content__lang-item French
+							span.caption-content__lang-item Hindi
+							span.caption-content__lang-item German [Auto-generated]
+							span.caption-content__lang-item Indonesian [Auto-generated]
+							span.caption-content__lang-item Italian [Auto-generated]
+							span.caption-content__lang-item Japanese [Auto-generated]
+							span.caption-content__lang-item Korean
+							span.caption-content__lang-item Polish
+							span.caption-content__lang-item Portuguese [Auto-generated]
+							span.caption-content__lang-item Spanish [Auto-generated]
+							span.caption-content__lang-item Traditional Chinese
+							span.caption-content__lang-item Turkish [Auto-generated]
+		.wrapper__last-update
+			| Last updated 1/2020
+		
+		.wrapper__title-buy
+			| 30-Day Money-Back Guarantee
 block userAccount
 	.course_tabs
 		#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
-			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-about' role='tab' aria-selected='false') About
-			//- a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Transcript
-			a#nav-courses-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
-block tabs
-	.course_tab_content
-		#nav-tabContent.tab-content
-			//- include ../components/review-item.pug
-			#nav-about.tab-pane.fade(role='tabpanel')
-				include ../components/about.pug
-			//- start course list component
-			//- include ../components/course.pug
-			//- #nav-tranScript.tab-pane.fade(role='tabpanel')
-			//- 	h2 Transcript
-			#nav-comment.tab-pane.fade.show.active(role='tabpanel')
-				include ../components/comments.pug
+			a#nav-reviews-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='false') About
+			a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Content
+			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
 
+//- .col-lg-8 
+block tabs
+	.container 
+		.row
+			.col-lg-8
+				.course_tab_content
+					#nav-tabContent.tab-content
+						//- include ../components/review-item.pug
+						#nav-about.tab-pane.fade.show.active(role='tabpanel')
+							include ../components/about.pug
+						//- start course list component
+						//- include ../components/course.pug
+						#nav-tranScript.tab-pane.fade(role='tabpanel')
+							//- h2 Transcript
+							.course-content
+								h3.course-content__title Chapter content
+								.course-content__details
+									ul.details__list
+										li.list__list-item
+											span.list--list-content-number  402 lessons
+										li.list__list-item
+											span.list--time-course 47:06:29
+								.course-content__course-list
+									.course-list__list-content
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Unit Objectives
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 01.40
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+								//- include ../components/course.pug
+						#nav-comment.tab-pane.fade(role='tabpanel')
+							include ../components/comments.pug
+			.col-lg-4.mt-5
+				include ../components/course-card.pug
 
 
 
