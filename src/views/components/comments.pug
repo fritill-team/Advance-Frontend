@@ -13,8 +13,8 @@ section.comments
       section.comment__review-comment
         .review-comment__item
           .item__wrapper.d-flex
-            include ../components/single-course/user-acount.pug
-            +acount-review("John Doe", "2 hour ago")
+            include ../components/general-component/user-acount.pug
+            +acount-review("images/left-imgs/img-1.jpg","John Doe", "2 hour ago")
             block dropdown
               include ../components/list-dropdown.pug
           p.review-comment__comment
@@ -33,7 +33,7 @@ section.comments
         .review_reply
           .review_item
             .item__wrapper.d-flex
-              +acount-review("John Doe", "2 hour ago")
+              +acount-review("images/left-imgs/img-1.jpg","John Doe", "2 hour ago")
               block dropdown
                 include ../components/list-dropdown.pug
             p.review-comment__comment
