@@ -1,4 +1,4 @@
-// script reset page 
+// script reset page
 
 // let emailEl = document.querySelector('#emailtype');
 $('#emailtype').on('input', function(e){
@@ -14,80 +14,38 @@ $('#emailtype').on('input', function(e){
       e.target.type = 'email';
   }
 
-})
- 
-// script reset page 
-const form = document.querySelector('[name="verify"]');
-const inputs = form.querySelectorAll('input')
-const KEYBOARDS = {
-      backspace: 8,
-  arrowLeft: 37,
-  arrowRight: 39,
-}
+});
 
-function handleInput(e) {
-  const input = e.target
-  const nextInput = input.nextElementSibling
-  if (nextInput && input.value) {
-    nextInput.focus()
-    if (nextInput.value) {
-          nextInput.select()
+// script reset page
+var verification = (function(){
+  //cache dom
+  var $inputs = $("#verification").find("input");
+
+  //bind events
+  $inputs.on('keyup', processInput);
+
+  //define methods
+  function processInput(e) {
+    var x = e.charCode || e.keyCode;
+    if( (x == 8 || x == 46) && this.value.length == 0) {
+      var indexNum = $inputs.index(this);
+      if(indexNum != 0) {
+        $inputs.eq($inputs.index(this) - 1).focus();
+      }
+    }
+
+    if( ignoreChar(e) )
+      return false;
+    else if (this.value.length == this.maxLength) {
+      $(this).next('input').focus();
     }
   }
-}
+  function ignoreChar(e) {
+    var x = e.charCode || e.keyCode;
+    if (x == 37 || x == 38 || x == 39 || x == 40 )
+      return true;
+    else
+      return false
+  }
 
-function handlePaste(e) {
-      e.preventDefault()
-  const paste = e.clipboardData.getData('text')
-  inputs.forEach((input, i) => {
-    input.value = paste[i] || ''
-  })
-}
-
-function handleBackspace(e) { 
-const input = e.target
-if (input.value) {
-    input.value = ''
-return
-} 
-input.previousElementSibling.focus()
-}
-    
- function handleArrowLeft(e) {
-  const previousInput = e.target.previousElementSibling
-  if (!previousInput) return
-  previousInput.focus()
-}
-
-function handleArrowRight(e) {
-    const nextInput = e.target.nextElementSibling
-    if (!nextInput) return
-    nextInput.focus()
-}
-    
-form.addEventListener('input', handleInput)
-inputs[0].addEventListener('paste', handlePaste)
-
-inputs.forEach(input => {
-input.addEventListener('focus', e => {
-setTimeout(() => {
-e.target.select()
-}, 0)
-})
-            
-input.addEventListener('keydown', e => {
-switch(e.keyCode) {
-        case KEYBOARDS.backspace:
-        handleBackspace(e)
-        break
-        case KEYBOARDS.arrowLeft:
-        handleArrowLeft(e)
-        break
-        case KEYBOARDS.arrowRight:
-        handleArrowRight(e)
-        break
-      default:  
-    }
-  })
-})
- 
+})();
