@@ -744,6 +744,9 @@ i.icon1 {
 .wrapper {
   padding: 90px 0 0;
   transition: all 0.3s ease-out;
+  &.wrapper--display{
+    padding: 60px 0 0;
+  }
 }
 
 .clearfix:after {
@@ -5312,6 +5315,8 @@ a.rmv-btn i {
   width: 100%;
   text-align: right;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .main-p-pagination .pagination {
@@ -8237,17 +8242,17 @@ a.rmv-btn i {
   }
 }
 
-.chapter-lessons__list{
+.chapter-lessons__list {
   border-radius: 10px;
   overflow: hidden;
-  &.course-content{
+  &.course-content {
     margin-top: 0;
-    .course-content__course-list{
+    .course-content__course-list {
       margin-top: 0;
-      .course-list__header{
+      .course-list__header {
         margin-top: 0;
       }
-      .course-list__list-content{
+      .course-list__list-content {
         max-height: 200px;
         height: 100%;
         overflow-y: scroll;

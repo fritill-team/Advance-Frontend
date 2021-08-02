@@ -1,0 +1,23 @@
+.category_course {
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item_title {
+      font-size: 18px;
+      color: #333;
+      text-align: left;
+      float: left;
+      margin-top: 0px !important;
+    }
+    .item__result {
+      font-size: 18px;
+      line-height: 2.2rem;
+      font-weight: 400;
+      color: #313131;
+      .num-result {
+        font-size: 18px;
+      }
+    }
+  }
+}
