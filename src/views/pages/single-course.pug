@@ -75,22 +75,25 @@ block courseVideo
 		.wrapper__title-buy
 			| 30-Day Money-Back Guarantee
 block userAccount
-	include ../components/general-component/user-acount.pug
-	include ../components/general-component/btn.pug
-	+user-acount("Johnson Smith", "Subscribe" , "images/left-imgs/img-1.jpg")
-		+btn('user-content__subscribe-btn', 'subscribe')
-	include ../components/general-component/interaction.pug
-	+interactions("uil uil-share-alt box--fa" , '9')
-	+interactions( "uil uil-thumbs-up box--fa", '100')
-	+interactions("uil uil-thumbs-down box--fa", '20')
-	+interactions( "uil uil-eye box--fa",'1452')
+	.user-wrapper
+		include ../components/general-component/user-acount.pug
+		include ../components/general-component/btn.pug
+		+user-acount("Johnson Smith", "Subscribe" , "images/left-imgs/img-1.jpg")
+			+btn('user-content__subscribe-btn', 'subscribe')
+		include ../components/general-component/interaction.pug
+		section.interactions-course
+			ul.interactions-course__list
+				+interactions("uil uil-share-alt box--fa" , '9')
+				+interactions( "uil uil-thumbs-up box--fa", '100')
+				+interactions("uil uil-thumbs-down box--fa", '20')
+				+interactions( "uil uil-eye box--fa",'1452')
 	.course_tabs
 		#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
 			a#nav-about-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='true') About
-			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-courses' role='tab' aria-selected='false') Courses Content
+			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-courses' role='tab' aria-selected='false') Content
 			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-reviews' role='tab' aria-selected='false') Reviews
 block tabs
-	.container 
+	.container
 		.row
 			.col-lg-8
 				.course_tab_content
@@ -105,9 +108,7 @@ block tabs
 							//- start reviews
 							.reviews
 								.row
-									.col-lg-5
-										include ../components/review.pug
-									.col-lg-7
+									.col-lg-12
 										.review__header
 											.header__header-content
 												h3.header-content__title Reviews
@@ -115,9 +116,11 @@ block tabs
 													input.search__input(type='text' placeholder='Search reviews...')
 													button.search__btn
 														i.uil.uil-search
-										.review__all-reviews
+										include ../components/review.pug
+										.review__all-reviews.mt-3
 											include ../components/review-item.pug
 											.all-reviews__review-item
 												a.review-item__more-reviews(href='#') See More Reviews
 			.col-lg-4.mt-5
+
 				include ../components/course-card.pug

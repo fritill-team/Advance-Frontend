@@ -188,3 +188,22 @@
     width: 40%;
   }
 }
+@media (max-width: 575.98px) {
+  .course-list__header {
+    flex-wrap: wrap;
+  }
+  .header__header-title {
+    margin-bottom: 10px;
+  }
+  .header__header-details {
+    justify-content: flex-start;
+    padding-left: 7px;
+  }
+  .header-title__title {
+    display: flex;
+    align-items: self-end;
+  }
+  .title__icone {
+    display: block;
+  }
+}
