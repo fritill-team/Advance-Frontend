@@ -1,7 +1,10 @@
 /* src/assets/styles/components/_course-card.scss  */
 
 .course-card {
-  max-width: 25%;
+  &.course-card--fixed-width{
+    max-width: 28%;
+  }
+  // @media (max-width: )
   .course-card__card-media {
     background: #fff;
     margin-bottom: 20px;
@@ -304,3 +307,5 @@
   //   }
   // }
 }
+
+

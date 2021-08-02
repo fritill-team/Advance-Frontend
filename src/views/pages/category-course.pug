@@ -1,4 +1,4 @@
-extends ../layouts/master.pug
+extends ../layouts/category-filter.pug
 block title
 	title Category Page
 block content
@@ -16,14 +16,16 @@ block content
 						h4.item_title.mt-3.mb-0 Category Item
 						p.item__result results (
 							span.num-result 15 )
-				section.all-courses.mb-15.mt-25
-					include ../components/course-card.pug
-					include ../components/course-card.pug
-					include ../components/course-card.pug
-					include ../components/course-card.pug
-					include ../components/course-card.pug
-					include ../components/course-card.pug
-					include ../components/course-card.pug
+				.col-lg-3 
+				.col-lg-9
+					section.all-courses.mb-15.mt-25
+						include ../components/course-card.pug
+						include ../components/course-card.pug
+						include ../components/course-card.pug
+						include ../components/course-card.pug
+						include ../components/course-card.pug
+						include ../components/course-card.pug
+						include ../components/course-card.pug
 					//- .row
 					//- 	.col-xl-3.col-lg-4.col-md-4.col-sm-6
 					//- 		include ../components/course-card.pug
