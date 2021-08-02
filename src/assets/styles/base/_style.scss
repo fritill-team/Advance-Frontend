@@ -372,6 +372,7 @@ input[type="text"] {
 
   .wrapper {
     margin-left: 240px;
+
   }
 
   .wrapper__minify {
@@ -744,6 +745,10 @@ i.icon1 {
 .wrapper {
   padding: 90px 0 0;
   transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   &.wrapper--display{
     padding: 60px 0 0;
   }
@@ -1978,7 +1983,8 @@ i.icon1 {
   width: 100%;
   padding: 0;
   float: left;
-  position: fixed;
+  // clear: both;
+  // position: relative;
   bottom: 0;
   z-index: 10;
 }
