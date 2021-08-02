@@ -290,17 +290,17 @@ $('input[name="paymentmethod"]').on("click", function() {
   $('[data-method="' + $value + '"]').slideDown();
 });
 
-$(".menu--item .menu--link").each(function() {
-  $(this).on("click", function(e) {
-    e.preventDefault();
-    $(this)
-      .addClass("active")
-      .parent()
-      .siblings()
-      .find("a")
-      .removeClass("active");
-  });
-});
+// $(".menu--item .menu--link").each(function() {
+//   $(this).on("click", function(e) {
+//     e.preventDefault();
+//     $(this)
+//       .addClass("active")
+//       .parent()
+//       .siblings()
+//       .find("a")
+//       .removeClass("active");
+//   });
+// });
 
 // const videojs = require("video.js/dist/video")
 // const videojs = require("video.js/core")
