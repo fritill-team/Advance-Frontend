@@ -14,52 +14,54 @@
       &:first-of-type {
         border-top: 0;
       }
-    }
-  }
-  // .panel-title10
-  .filter-title{
-    a{
-      font-size: 16px;
-      font-weight: 500;
-      color: #333;
-      font-family: 'Roboto', sans-serif;
-      padding: 15px 0 18px;
-      display: block;
-      line-height: 26px;
-      &::before{
-        float: right !important;
-        font-family: 'Roboto', sans-serif;
-        content: "\-";
-        padding-right: 0px;
-        margin-left: 200px;
-        font-size: 18px;
-        padding-top: 2px;
-      }
-      &.collapsed{
-        &::before{
-          float: right !important;
-          font-family: 'Roboto', sans-serif;
-          content:"\+";
-          padding-right: 0px;
-          margin-left: 200px;
-          font-size: 18px;
-          padding-top: 2px;
-          &:hover :active :focus {
-            text-decoration:none;
+      .filter-list__filter-heading{
+        // .panel-title10
+        .filter-heading__filter-title{
+          a{
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            padding: 15px 0 18px;
+            display: block;
+            line-height: 26px;
+            &::before{
+              float: right !important;
+              font-family: 'Roboto', sans-serif;
+              content: "\-";
+              padding-right: 0px;
+              margin-left: 200px;
+              font-size: 18px;
+              padding-top: 2px;
+            }
+            &.collapsed{
+              &::before{
+                float: right !important;
+                font-family: 'Roboto', sans-serif;
+                content:"\+";
+                padding-right: 0px;
+                margin-left: 200px;
+                font-size: 18px;
+                padding-top: 2px;
+                &:hover :active :focus {
+                  text-decoration:none;
+                }
+              }
+            }
           }
+        }
+        //panel-body 
+        .filter-heading__filter-body{
+          font-size: 14px;
+          font-weight: 400;
+          font-family: 'Roboto', sans-serif;
+          color: #686f7a;
+          line-height: 26px;
+          padding-bottom: 20px;
+          text-align: left;
         }
       }
     }
-  }
-  //panel-body 
-  .filter-body{
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    color: #686f7a;
-    line-height: 26px;
-    padding-bottom: 20px;
-    text-align: left;
   }
 }
 
