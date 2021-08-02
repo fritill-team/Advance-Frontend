@@ -7,29 +7,32 @@ block content
 	//- +menu('Explore')
 		//- Desktop page
 
-	.wrapper
-		.sa4d25
-			.container-fluid
-				.row
-					.col-xl-12.col-lg-12
-						section.section3125
-					h4.item_title.mt-3.mb-0 Category Item
-					section.section3125.mb-15.mt-25
-						.row
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-							.col-xl-3.col-lg-4.col-md-4.col-sm-6
-								include ../components/course-card.pug
-		include ../components/footer.pug
+
+	.category_course
+		.container-fluid
+			.row
+				.col-xl-12.col-lg-12
+					section.category-item
+						h4.item_title.mt-3.mb-0 Category Item
+						p.item__result results (
+							span.num-result 15 )
+				section.section3125.mb-15.mt-25
+					.row
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+						.col-xl-3.col-lg-4.col-md-4.col-sm-6
+							include ../components/course-card.pug
+				include ../components/general-component/pagination.pug
+
