@@ -1,6 +1,7 @@
 /* src/assets/styles/components/_course-card.scss  */
 
 .course-card {
+  max-width: 25%;
   .course-card__card-media {
     background: #fff;
     margin-bottom: 20px;
@@ -13,7 +14,7 @@
     .card-media__card-content {
       .card-content__card-auther {
         .enroll-btn {
-          opacity: 0;
+          // opacity: 0;
           padding: 4px 8px 3px 8px;
           border: 0;
           border-radius: 20px;
@@ -22,7 +23,7 @@
           background: #ed2a26;
           font-size: 14px;
           font-weight: 500;
-          margin: 0 5px !important;
+          margin: 0 !important;
         }
       }
     }
@@ -241,35 +242,37 @@
         color: #686f7a;
         padding-top: 2px;
       }
+      p.card-auther__name-auth {
+        margin-right: 10px;
+        float: left;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        color: #686f7a;
+        text-align: left;
+        line-height: 24px;
+        a {
+          color: #333;
+          font-weight: 500;
+          &:hover {
+            color: #333 !important;
+            text-decoration: underline !important;
+          }
+        }
+      }
       .card-content__card-auther {
         width: 100%;
         border-top: 1px solid #efefef;
-        padding-top: 15px;
-        margin-top: 18px;
-        p.card-auther__name-auth {
-          margin-right: 10px;
-          float: left;
-
-          font-size: 14px;
-          font-family: "Roboto", sans-serif;
-          color: #686f7a;
-          text-align: left;
-          line-height: 24px;
-          a {
-            color: #333;
-            font-weight: 500;
-            &:hover {
-              color: #333 !important;
-              text-decoration: underline !important;
-            }
-          }
-        }
+        padding-top: 10px;
+        margin-top: 30px;
+        
         .card-auther__price {
           float: right;
           color: #333;
           text-align: right;
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          width: 100%;
           p {
             line-height: 1;
             color: #000;
@@ -281,23 +284,23 @@
       }
     }
   }
-  &:hover {
-    transition: all 0.5s ease;
-    transform: translateY(-5px);
-    -webkit-transform: translateY(1px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    .card-media__card-content {
-      .card-content__card-auther {
-        .enroll-btn {
-          display: block;
-          visibility: visible;
-          opacity: 1;
-          transition: all 0.5s ease;
-          transform: translateY(-1px);
-        }
-      }
-    }
-  }
+  // &:hover {
+  //   transition: all 0.5s ease;
+  //   transform: translateY(-5px);
+  //   -webkit-transform: translateY(1px);
+  //   -moz-transform: translateY(-5px);
+  //   -ms-transform: translateY(-5px);
+  //   -o-transform: translateY(-5px);
+  //   .card-media__card-content {
+  //     .card-content__card-auther {
+  //       .enroll-btn {
+  //         display: block;
+  //         visibility: visible;
+  //         opacity: 1;
+  //         transition: all 0.5s ease;
+  //         transform: translateY(-1px);
+  //       }
+  //     }
+  //   }
+  // }
 }
