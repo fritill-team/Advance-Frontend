@@ -299,6 +299,7 @@ $('.toggle-filter').on('click', function () {
     $('.filter').addClass('filter__opened')
     $('body').addClass('hide')
   }
+})
 $('.list').on('click', function(){
   $('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
   $(this).addClass('active').siblings().removeClass('active')
@@ -340,4 +341,4 @@ $('.grid').on('click', function(){
 // Then attach the widget to the page.
 // var transcriptContainer = document.querySelector('#transcript');
 // transcriptContainer.appendChild(transcript.el());
-// });
+
