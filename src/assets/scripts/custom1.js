@@ -1,87 +1,87 @@
 // === Dropdown === //
 
 $('.ui.dropdown')
-  .dropdown()
-;
+	.dropdown()
+	;
 
 // === Model === //
 $('.ui.modal')
-  .modal({
-    blurring: true
-  })
-  .modal('show')
-;
+	.modal({
+		blurring: true
+	})
+	.modal('show')
+	;
 
 // === Tab === //
 $('.menu .item')
-  .tab()
-;
+	.tab()
+	;
 
 // === checkbox Toggle === //
 $('.ui.checkbox')
-  .checkbox()
-;
+	.checkbox()
+	;
 
 // === Toggle === //
 $('.enable.button')
-  .on('click', function() {
-    $(this)
-      .nextAll('.checkbox')
-        .checkbox('enable')
-    ;
-  })
-;
+	.on('click', function () {
+		$(this)
+			.nextAll('.checkbox')
+			.checkbox('enable')
+			;
+	})
+	;
 
 // Featured Courses home
 $('.courses_performance').owlCarousel({
-	items:10,
-	loop:false,
-	margin:30,
-	nav:true,
-	dots:false,
+	items: 10,
+	loop: false,
+	margin: 30,
+	nav: true,
+	dots: false,
 	navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
-	responsive:{
-		0:{
-			items:1
+	responsive: {
+		0: {
+			items: 1
 		},
-		600:{
-			items:1
+		600: {
+			items: 1
 		},
-		1000:{
-			items:1
+		1000: {
+			items: 1
 		},
-		1200:{
-			items:1
+		1200: {
+			items: 1
 		},
-		1400:{
-			items:1
+		1400: {
+			items: 1
 		}
 	}
 })
 
 // Latest News Dashboard
 $('.edututs_news').owlCarousel({
-	items:10,
-	loop:false,
-	margin:30,
-	nav:true,
-	dots:false,
+	items: 10,
+	loop: false,
+	margin: 30,
+	nav: true,
+	dots: false,
 	navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
-	responsive:{
-		0:{
-			items:1
+	responsive: {
+		0: {
+			items: 1
 		},
-		600:{
-			items:1
+		600: {
+			items: 1
 		},
-		1000:{
-			items:1
+		1000: {
+			items: 1
 		},
-		1200:{
-			items:1
+		1200: {
+			items: 1
 		},
-		1400:{
-			items:1
+		1400: {
+			items: 1
 		}
 	}
 })
@@ -92,7 +92,7 @@ if (jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://p
 	/*Wrap (all code inside div) all vedio code inside div*/
 	jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap("<div class='iframe-parent-class'></div>");
 	/*main code of each (particular) vedio*/
-	jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function(index) {
+	jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
 
 		/*Floating js Start*/
 		var windows = jQuery(window);
@@ -100,7 +100,7 @@ if (jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://p
 		var iframe = jQuery(this);
 		var iframeHeight = iframe.outerHeight();
 		var iframeElement = iframe.get(0);
-		windows.on('scroll', function() {
+		windows.on('scroll', function () {
 			var windowScrollTop = windows.scrollTop();
 			var iframeBottom = iframeHeight + iframeWrap.offset().top;
 			//alert(iframeBottom);
@@ -108,7 +108,7 @@ if (jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://p
 			if ((windowScrollTop > iframeBottom)) {
 				iframeWrap.height(iframeHeight);
 				iframe.addClass('stuck');
-				jQuery(".scrolldown").css({"display": "none"});
+				jQuery(".scrolldown").css({ "display": "none" });
 			} else {
 				iframeWrap.height('auto');
 				iframe.removeClass('stuck');
@@ -122,30 +122,30 @@ if (jQuery('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://p
 
 var headers = $('#accordion .accordion-header');
 var contentAreas = $('#accordion .ui-accordion-content ').hide()
-.first().show().end();
+	.first().show().end();
 var expandLink = $('.accordion-expand-all');
 
 // add the accordion functionality
-headers.click(function() {
-    // close all panels
-    contentAreas.slideUp();
-    // open the appropriate panel
-    $(this).next().slideDown();
-    // reset Expand all button
-    expandLink.text('Expand all')
-        .data('isAllOpen', false);
-    // stop page scroll
-    return false;
+headers.click(function () {
+	// close all panels
+	contentAreas.slideUp();
+	// open the appropriate panel
+	$(this).next().slideDown();
+	// reset Expand all button
+	expandLink.text('Expand all')
+		.data('isAllOpen', false);
+	// stop page scroll
+	return false;
 });
 
 // hook up the expand/collapse all
-expandLink.click(function(){
-    var isAllOpen = !$(this).data('isAllOpen');
-    console.log({isAllOpen: isAllOpen, contentAreas: contentAreas})
-    contentAreas[isAllOpen? 'slideDown': 'slideUp']();
+expandLink.click(function () {
+	var isAllOpen = !$(this).data('isAllOpen');
+	console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
+	contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
 
-    expandLink.text(isAllOpen? 'Collapse All': 'Expand all')
-                .data('isAllOpen', isAllOpen);
+	expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all')
+		.data('isAllOpen', isAllOpen);
 });
 
 
@@ -156,6 +156,12 @@ $('input[name="paymentmethod"]').on('click', function () {
 	$('[data-method="' + $value + '"]').slideDown();
 });
 
+// sidebar fillter 
+// var filter = document.querySelector('.filter');
+
+// querySelector('.filter__button-wrapper').onclick = function () {
+// 	filter.classList.toggle('filter__opened');
+// };
 
 
 

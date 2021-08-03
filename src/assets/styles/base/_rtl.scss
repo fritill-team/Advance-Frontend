@@ -786,9 +786,7 @@ html[dir="rtl"] {
     .comments__add-comment {
       float: right;
       .add-comment__group {
-        display: flex;
-        .group__img-wrapper {
-        }
+        display: flex; 
         .group__textarea {
           margin-right: 20px;
         }
@@ -878,4 +876,100 @@ html[dir="rtl"] {
       padding-right: 15px;
     }
   }
+  //filter
+  .filter{
+    float: right;  
+    transform: translate(0%,-30px);
+    margin-top: 30px;
+    .filter__result{ 
+      float: right; 
+      .result__title{   
+        text-align: right;
+        float: right;
+      } 
+    }
+  } 
+  .filter__selector{
+      float: left; 
+    .selector--dropdown{ 
+      transition: box-shadow .1s ease,width .1s ease ; 
+      text-align: right;   
+    }
+  }
+  .selector--menu{     
+    text-align: right !important;  
+    right: -90px !important; 
+    .selector__item{ 
+      text-align: right;  
+    }
+  }
+  .filter-category{ 
+    float: right;  
+  }
+  .filter__panal{
+    float: right; 
+  }
+  .panal__title{
+    .collapsed{
+      &::before{
+        float: left!important; 
+        padding-left: 0; 
+      }
+    }
+    }
+    .panal__title>a:before{
+      float: left!important; 
+      padding-left: 0; 
+    }
+    .panel-collapse--wrapper{
+      .collapse-item__item{  
+        text-align: right;  
+      }
+    }
+    .collapse-item__group{ 
+      margin: 0 0 1em;
+      .collapse-item__checkbox-sign{
+        text-align: right; 
+        .collapse-item__field{  
+          .collapse-item--chechbox{  
+            .collapse-item__input{ 
+              right: 0; 
+            }
+            .collapse-item__title{ 
+              padding-right: 1.85714em;
+              &::before{  
+                right: 0;
+               } 
+              .collapse-item__counter{ 
+                margin-right: 5px;
+              }
+              &::after{
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .filter__button-wrapper{	 
+      .filter__btn{ 
+        margin-right: auto;
+      }
+    }
+    @media(max-width: 768px) { 
+      .filter{ 
+        right: 0; 
+        transform: translate(100%,-30px);
+        
+        .filter__result{
+          padding: 15px 10px 15px;
+        }
+      }
+      .filter__wrapper { 
+        right: 0;
+      } 
+    }
+    .filter__opened{
+      transform: translate(0%, -30px);
+    }
 }
