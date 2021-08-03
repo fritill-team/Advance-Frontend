@@ -290,6 +290,7 @@ $('input[name="paymentmethod"]').on("click", function () {
   $('[data-method="' + $value + '"]').slideDown();
 });
 
+
 $('.toggle-filter').on('click', function () {
   if ($('.filter').hasClass('filter__opened')) {
     $('.filter').removeClass('filter__opened')
@@ -298,6 +299,14 @@ $('.toggle-filter').on('click', function () {
     $('.filter').addClass('filter__opened')
     $('body').addClass('hide')
   }
+$('.list').on('click', function(){
+  $('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
+  $(this).addClass('active').siblings().removeClass('active')
+})
+$('.grid').on('click', function(){
+  $('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--fixed-width')
+  $(this).addClass('active').siblings().removeClass('active')
+
 })
 
 // $(".menu--item .menu--link").each(function() {

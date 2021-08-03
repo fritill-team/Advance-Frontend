@@ -11,24 +11,28 @@ block content
 
 	.category_course
 		.container-fluid
-			.row 
+			.row
+				.col-xl-12.col-lg-12
+					section.category-item
+						h4.item_title.mt-3.mb-0 Category Item
 				.col-lg-3.col-md-3 
 					include ../components/filter.pug
 				.col-lg-9.col-md-9
-					.col-xl-12.col-lg-12
-						section.category-item
-							h4.item_title.mt-3.mb-0 Category Item
-							p.item__result results (
-								span.num-result 15 )
+					section.category-results
+						p.item__result results (
+							span.num-result 15 )
+						.display
+							span.list <i class="fas fa-stream"></i>
+							span.grid.active <i class="fas fa-th"></i>
 					section.all-courses.mb-15.mt-25
 						include ../components/course-card.pug
-						+course-card("course-card--fixed-width") 
-						+course-card("course-card--fixed-width")
-						+course-card("course-card--fixed-width")
-						+course-card("course-card--fixed-width")
-						+course-card("course-card--fixed-width")
-						+course-card("course-card--fixed-width")
-						+course-card("course-card--fixed-width")
+						+course-card("course-card--fixed-width ") 
+						+course-card("course-card--fixed-width ")
+						+course-card("course-card--fixed-width ")
+						+course-card("course-card--fixed-width ")
+						+course-card("course-card--fixed-width ")
+						+course-card("course-card--fixed-width ")
+						+course-card("course-card--fixed-width ")
 
 					//- .row
 					//- 	.col-xl-3.col-lg-4.col-md-4.col-sm-6
