@@ -13,12 +13,12 @@ $(".ui.modal")
 $(".menu .item").tab();
 
 // === checkbox Toggle === //
-// $('.ui.checkbox')
-//   .checkbox()
-// ;
+$('.ui.checkbox')
+  .checkbox()
+  ;
 
 // === Toggle === //
-$(".enable.button").on("click", function() {
+$(".enable.button").on("click", function () {
   $(this)
     .nextAll(".checkbox")
     .checkbox("enable");
@@ -98,11 +98,11 @@ $(".category_courses").owlCarousel({
     0: {
       items: 1
     },
-    576:{
+    576: {
       items: 2
     },
     960: {
-     item: 3
+      item: 3
     },
     1000: {
       items: 3
@@ -220,14 +220,14 @@ if (
   /*main code of each (particular) vedio*/
   jQuery(
     'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]'
-  ).each(function(index) {
+  ).each(function (index) {
     /*Floating js Start*/
     var windows = jQuery(window);
     var iframeWrap = jQuery(this).parent();
     var iframe = jQuery(this);
     var iframeHeight = iframe.outerHeight();
     var iframeElement = iframe.get(0);
-    windows.on("scroll", function() {
+    windows.on("scroll", function () {
       var windowScrollTop = windows.scrollTop();
       var iframeBottom = iframeHeight + iframeWrap.offset().top;
       //alert(iframeBottom);
@@ -258,7 +258,7 @@ var contentAreas = $("#accordion .course-list__list-content ")
 var expandLink = $(".list--expand-all");
 
 // add the accordion functionality
-headers.click(function() {
+headers.click(function () {
   // close all panels
   contentAreas.slideUp();
   // open the appropriate panel
@@ -273,7 +273,7 @@ headers.click(function() {
 });
 
 // hook up the expand/collapse all
-expandLink.click(function() {
+expandLink.click(function () {
   var isAllOpen = !$(this).data("isAllOpen");
   console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas });
   contentAreas[isAllOpen ? "slideDown" : "slideUp"]();
@@ -284,11 +284,21 @@ expandLink.click(function() {
 });
 
 // Payment Method Accordion
-$('input[name="paymentmethod"]').on("click", function() {
+$('input[name="paymentmethod"]').on("click", function () {
   var $value = $(this).attr("value");
   $(".return-departure-dts").slideUp();
   $('[data-method="' + $value + '"]').slideDown();
 });
+
+$('.toggle-filter').on('click', function () {
+  if ($('.filter').hasClass('filter__opened')) {
+    $('.filter').removeClass('filter__opened')
+    $('body').removeClass('hide')
+  } else {
+    $('.filter').addClass('filter__opened')
+    $('body').addClass('hide')
+  }
+})
 
 // $(".menu--item .menu--link").each(function() {
 //   $(this).on("click", function(e) {

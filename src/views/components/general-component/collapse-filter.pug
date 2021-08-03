@@ -1,0 +1,45 @@
+mixin collapse-fillter(collapseData , collapseId)
+	.filter__panal
+		#headingOne.panal__header
+			.panal__title
+				a.collapsed.panal--collapsed(data-toggle='collapse' data-target=collapseData href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+					| Topic
+		.panel-collapse.collapse.collapse--wrapper(id=collapseId aria-labelledby='headingOne' data-parent='#accordionfilter')
+			.collapse-item__item
+				.collapse-item__form
+					.collapse-item__group
+						.collapse-item__checkbox-sign
+							.collapse-item__field
+								.ui.checkbox.collapse-item--chechbox
+									input.hidden.collapse-item__input(type='checkbox' tabindex='0')
+									label.collapse-item__title
+										| SEO
+										span.collapse-item__counter (428)
+						.collapse-item__checkbox-sign
+							.collapse-item__field
+								.ui.checkbox.collapse-item--chechbox
+									input.hidden.collapse-item__input(type='checkbox' tabindex='0')
+									label.collapse-item__title
+										| SEO
+										span.collapse-item__counter (428)
+						.collapse-item__checkbox-sign
+							.collapse-item__field
+								.ui.checkbox.collapse-item--chechbox
+									input.hidden.collapse-item__input(type='checkbox' tabindex='0')
+									label.collapse-item__title
+										| SEO
+										span.collapse-item__counter (428)
+						.collapse-item__checkbox-sign
+							.collapse-item__field
+								.ui.checkbox.collapse-item--chechbox
+									input.hidden.collapse-item__input(type='checkbox' tabindex='0')
+									label.collapse-item__title
+										| SEO
+										span.collapse-item__counter (428)
+						.collapse-item__checkbox-sign
+							.collapse-item__field
+								.ui.checkbox.collapse-item--chechbox
+									input.hidden.collapse-item__input(type='checkbox' tabindex='0')
+									label.collapse-item__title
+										| SEO
+										span.collapse-item__counter (428) 
