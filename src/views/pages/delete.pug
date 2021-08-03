@@ -1,0 +1,16 @@
+extends ../layouts/admin.pug
+
+block title
+	title courses
+block content
+	.action-wrapper
+		i.far.fa-meh-rolling-eyes.emoji
+		form.actions-form
+			div
+				h3.item-item Are you sure ?
+				p.card-content__card-description test test test test tes
+				input(type="submit", value="")
+			div
+				include ../components/general-component/btn.pug
+				+btn-input('btn1542 mt-4 ml-auto', 'submit', 'submit') 
+				+btn-link('cancel', 'cancel' , '#create_new_course.html')
