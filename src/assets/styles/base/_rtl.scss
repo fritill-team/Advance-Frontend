@@ -880,6 +880,7 @@ html[dir="rtl"] {
   .filter{
     float: right;  
     transform: translate(0%,-30px);
+    margin-top: 30px;
     .filter__result{ 
       float: right; 
       .result__title{   
@@ -922,7 +923,7 @@ html[dir="rtl"] {
     }
     .panel-collapse--wrapper{
       .collapse-item__item{  
-        text-align: right; 
+        text-align: right;  
       }
     }
     .collapse-item__group{ 
@@ -959,6 +960,7 @@ html[dir="rtl"] {
       .filter{ 
         right: 0; 
         transform: translate(100%,-30px);
+        
         .filter__result{
           padding: 15px 10px 15px;
         }

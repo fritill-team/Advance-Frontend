@@ -3,6 +3,7 @@
 	width: 100%;
 	position: relative;
 	transition: all .3s ease-out;
+	// margin-top: 20px;
 
 	.filter__result{
     padding: 15px 10px 15px;
@@ -98,6 +99,7 @@
 	float: left;
 	width: 100%;
 	margin-bottom: 30px;
+	background-color: #FFF;
 	&:first-child{
 		border-top: 0;
 	}
@@ -108,10 +110,11 @@
 				font-size: 16px;
 				font-weight: 500;
 				color: #333;
-				font-family: Roboto,sans-serif;
-				padding: 15px 0 18px;
+				font-family: Roboto,sans-serif; 
 				display: block;
 				line-height: 26px; 
+				background-color: #FFF;
+				padding: 15px;
 			}
 		}
 	}
@@ -145,6 +148,7 @@
 			line-height: 26px;
 			padding-bottom: 20px;
 			text-align: left;
+			padding: 0 15px;
 			.collapse-item__form{
 				font-size: 1rem;
 				position: relative;
