@@ -2,9 +2,11 @@
 
 .course-card {
   &.course-card--fixed-width{
-    max-width: 28%;
+    max-width: 32%;
   }
-  // @media (max-width: )
+  @media (max-width: 1199.98px){
+    max-width: 30%;
+  }
   .course-card__card-media {
     background: #fff;
     margin-bottom: 20px;
