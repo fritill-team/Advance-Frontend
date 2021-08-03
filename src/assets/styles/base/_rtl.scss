@@ -851,4 +851,31 @@ html[dir="rtl"] {
       }
     }
   }
+  //footer-admin
+  .footer {
+    float: right;
+    .container-fluid {
+      .footer__item {
+        .item__link {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+  .footer-button__link {
+    .footer-button__logo {
+      .footer-button__img {
+        margin-left: 20px;
+      }
+    }
+  }
+  .footer-button__copyRight {
+    text-align: right;
+  }
+  .footer-button__social {
+    text-align: left;
+    .social__link {
+      padding-right: 15px;
+    }
+  }
 }
