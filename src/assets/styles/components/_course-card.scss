@@ -63,15 +63,20 @@
       // }
       .enroll-btn {
         // opacity: 0;
-        padding: 4px 8px 3px 8px;
-        border: 0;
+        cursor: pointer;
+        border: 2px solid #ed2a26;
+        padding: 8px 45px 9px;
+        background-color: transparent;
+        transition: .3s ease all;
         border-radius: 20px;
-        color: #fff;
+        color:#ed2a26;
         font-family: "Roboto", sans-serif;
-        background: #ed2a26;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 500;
-        margin: 0 !important;
+        &:hover{
+          background-color: #ed2a26;
+          color: #fff;
+        }
       }
     }
     // start card-img part1
@@ -244,7 +249,7 @@
     }
     // start card-content part2
     .card-media__card-content {
-      padding: 10px 5px;
+      padding: 10px 5px 0 5px;
       float: left;
       width: 100%;
       position: relative;
@@ -277,7 +282,7 @@
         font-family: "Roboto", sans-serif;
         color: #333;
         text-align: left;
-        margin-bottom: 7px;
+        // margin-bottom: 7px;
         line-height: 24px;
       }
       a.card-content__card-title {
@@ -288,9 +293,11 @@
         font-weight: 400;
         color: #686f7a;
         padding-top: 2px;
+        margin-bottom: 0.7rem;
       }
       p.card-auther__name-auth {
-        margin-right: 10px;
+        // margin-right: 10px;
+        margin: 0 10px 5px 0;
         float: left;
         font-size: 14px;
         font-family: "Roboto", sans-serif;
@@ -311,7 +318,7 @@
         
       // }
       .card-auther__price {
-        margin-top: 30px;
+        // margin-top: 30px;
         padding-top: 10px;
         border-top: 1px solid #efefef;
         float: right;
@@ -327,9 +334,6 @@
           font-family: "Roboto", sans-serif;
           font-weight: 500;
           font-size: 18px;
-        }
-        @media (max-width: 992.98px){
-          margin-top: 20px;
         }
       }
     }
