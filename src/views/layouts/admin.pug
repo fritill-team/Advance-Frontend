@@ -1,52 +1,52 @@
 //- Master layout
 doctype html
 html(lang='en' dir="")
-  head
-    //- Stylesheets
+	head
+		//- Stylesheets
 
-    //- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/style.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/night-mode.css' rel='stylesheet')
-    //- Vendor Stylesheets
-    //- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
-    meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    //- Title
-    block title
-      title Your project!
+		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/style.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/night-mode.css' rel='stylesheet')
+		//- Vendor Stylesheets
+		//- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
+		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+		//- Title
+		block title
+			title Your project!
 
-  body
+	body
 
-    //- Menu
-    include ../components/header.pug
-      //- block category
-    //-sidebar
-    include ../components/sidebar.pug
-      block sidebar
-        
-    //- block content
-  .wrapper
-    block content
-    include ../components/footer-admin.pug
-
-
-
-    //- Footer
-
-    //- block scripts
-    block scripts
+		//- Menu
+		include ../components/header.pug
+			//- block category
+		//-sidebar
+		include ../components/sidebar.pug
+			block sidebar
+				
+		//- block content
+		.wrapper
+			block content
+			include ../components/footer-admin.pug
 
 
-    //- script(src='../assets/scripts/jquery-3.3.1.min.js')
-    //- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-    //- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-    //- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-    //- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-    //- script(src='../assets/scripts/custom.js')
-    //- script(src='../assets/scripts/night-mode.js')
+
+			//- Footer
+
+			//- block scripts
+			block scripts
+
+
+		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
+		//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
+		//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
+		//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
+		//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
+		//- script(src='../assets/scripts/custom.js')
+		//- script(src='../assets/scripts/night-mode.js')
