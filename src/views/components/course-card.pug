@@ -1,47 +1,47 @@
 mixin course-card(className)
-  .course-card(class= className)
-    .course-card__card-media
-      a.card-media__card-img(href='course_detail_view.html')
-        img(src='../assets/images/courses/img-1.jpg' alt='')
-        .card-img__card-overlay
-          .card-overlay__badge-seller Bestseller
-          .card-overlay__crd-reviews
-            i.uil.uil-star
-            | 4.5
-          span.card-overlay__play_btn1
-            i.uil.uil-play
-          .card-overlay__crd-timer
-            | 25 hours
-      //-  start card-content part2
-      .card-media__card-content
-        .eps_dots.more_dropdown
-          a(href='#')
-            i.uil.uil-ellipsis-v
-          .dropdown-content
-            span
-              i.uil.uil-share-alt
-              | Share
-            span
-              i.uil.uil-heart
-              | Save
-            span
-              i.uil.uil-ban
-              | Not Interested
-            span
-              i.uil.uil-windsock
-              | Report
-        .card-content__card-details
-          span.card-details__card-view 109k views
-          span.card-details__card-view 15 days ago
-        a.card-content__card-discription(href='course_detail_view.html')
-          | Complete Python Bootcamp: Go from zero to hero
-          | in Python 3
-        a.card-content__card-title(href='#') Web Development | Python
-        p.card-auther__name-auth
-          | By 
-          a(href='#') John Doe
-        .card-content__card-auther
-        .card-auther__price 
-          button.enroll-btn(title='Enroll')
-            |Enroll 
-          p $10
+	.course-card(class= className)
+		.course-card__card-media
+			a.card-media__card-img(href='course_detail_view.html')
+				img(src='../assets/images/courses/img-1.jpg' alt='')
+				.card-img__card-overlay
+					.card-overlay__badge-seller Bestseller
+					.card-overlay__crd-reviews
+						i.uil.uil-star
+						| 4.5
+					span.card-overlay__play_btn1
+						i.uil.uil-play
+					.card-overlay__crd-timer
+						| 25 hours
+			//-  start card-content part2
+			.card-media__card-content
+				.course-card__details
+					.eps_dots.more_dropdown
+						a(href='#')
+							i.uil.uil-ellipsis-v
+						.dropdown-content
+							span
+								i.uil.uil-share-alt
+								| Share
+							span
+								i.uil.uil-heart
+								| Save
+							span
+								i.uil.uil-ban
+								| Not Interested
+							span
+								i.uil.uil-windsock
+								| Report
+					.card-content__card-details
+						span.card-details__card-view 109k views
+						span.card-details__card-view 15 days ago
+					a.card-content__card-discription(href='course_detail_view.html')
+						| Complete Python Bootcamp: Go from zero to hero
+						| in Python 3
+					a.card-content__card-title(href='#') Web Development | Python
+					p.card-auther__name-auth
+						| By 
+						a(href='#') John Doe
+				.card-auther__price 
+					button.enroll-btn(title='Enroll')
+						|Enroll 
+					p $10

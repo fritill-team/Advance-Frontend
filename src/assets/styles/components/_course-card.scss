@@ -6,7 +6,6 @@
     margin: 0 5px;
     animation: grid;
     animation-duration: .3s;
-    // animation-iteration-count: 1;
     @media (max-width: 1440.98px){
       max-width: 32%;
     }
@@ -38,6 +37,15 @@
       .card-media__card-img{
         max-width: 35%;
       }
+      .card-media__card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 0;
+      }
+    }
+    .card-auther__price{
+      flex-direction: row-reverse;
     }
   }
   .course-card__card-media {
