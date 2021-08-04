@@ -1,9 +1,10 @@
 //- Master layout
+
 doctype html
+
 html(lang='en' dir="")
 	head
 		//- Stylesheets
-
 		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
 		//- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
 		//- link(href='../assets/styles/base/style.css' rel='stylesheet')
@@ -17,6 +18,7 @@ html(lang='en' dir="")
 		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
 		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
 		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+
 		//- Title
 		block title
 			title Your project!
@@ -25,8 +27,7 @@ html(lang='en' dir="")
 
 		//- Menu
 		include ../components/header.pug
-			//- block category
-		//-sidebar
+			
 		include ../components/sidebar.pug
 			block sidebar
 				
@@ -35,12 +36,11 @@ html(lang='en' dir="")
 			block content
 			include ../components/footer-admin.pug
 
-
-
 			//- Footer
 
 			//- block scripts
 			block scripts
+
 
 
 		//- script(src='../assets/scripts/jquery-3.3.1.min.js')

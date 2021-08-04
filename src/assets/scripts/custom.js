@@ -338,6 +338,7 @@ $('.toggle-filter').on('click', function () {
 		$('body').addClass('hide')
 	}
 })
+
 $('.list').on('click', function(){
 	$('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
 	$(this).addClass('active').siblings().removeClass('active')
@@ -345,7 +346,6 @@ $('.list').on('click', function(){
 $('.grid').on('click', function(){
 	$('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--fixed-width')
 	$(this).addClass('active').siblings().removeClass('active')
-
 })
 
 // $(".menu--item .menu--link").each(function() {
@@ -380,3 +380,48 @@ $('.grid').on('click', function(){
 // var transcriptContainer = document.querySelector('#transcript');
 // transcriptContainer.appendChild(transcript.el());
 
+// sidebar admin
+
+'use strict';
+
+var tid = setInterval(function () {
+  if (document.readyState !== 'complete') return;
+  clearInterval(tid);
+  var querySelector = document.querySelector.bind(document);
+  var nav = document.querySelector('.vertical_nav');
+  var navWithIcon = document.querySelector('.vertical_nav');
+  var wrapper = document.querySelector('.wrapper');
+  var menu = document.getElementById("js-menu");
+  var subnavs = menu.querySelectorAll('.menu--item__has_sub_menu');
+  // Toggle menu click
+  querySelector('.toggle_menu').onclick = function () {
+    nav.classList.toggle('vertical_nav__opened test');
+    wrapper.classList.toggle('toggle-content');
+  };
+
+  // Minify menu on menu_minifier click
+  querySelector('.collapse_menu').onclick = function () {
+    nav.classList.toggle('vertical_nav__minify');
+    navWithIcon.classList.toggle('vertical_nav--show-icon')
+    // wrapper.classList.toggle('wrapper__minify');
+    wrapper.classList.toggle('wrapper__minify-admin');
+
+    for (var j = 0; j < subnavs.length; j++) {
+      subnavs[j].classList.remove('menu--subitens__opened');
+    }
+  };
+  // Open Sub Menu
+
+  for (var i = 0; i < subnavs.length; i++) {
+    if (subnavs[i].classList.contains('menu--item__has_sub_menu')) {
+      subnavs[i].querySelector('.menu--link').addEventListener('click', function (e) {
+        for (var j = 0; j < subnavs.length; j++) {
+          if (e.target.offsetParent != subnavs[j])
+            subnavs[j].classList.remove('menu--subitens__opened');
+        }
+        e.target.offsetParent.classList.toggle('menu--subitens__opened');
+      }, false);
+
+    }
+  }
+}, 100);

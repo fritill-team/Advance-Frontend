@@ -1,8 +1,8 @@
 mixin collapse-fillter(collapseData , collapseId)
-	.filter__panal
-		#headingOne.panal__header
-			.panal__title
-				a.collapsed.panal--collapsed(data-toggle='collapse' data-target=collapseData href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+	.filter__panel
+		#headingOne.panel__header
+			.panel__title
+				a.collapsed.panel--collapsed(data-toggle='collapse' data-target=collapseData href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
 					| Topic
 		.panel-collapse.collapse.collapse--wrapper(id=collapseId aria-labelledby='headingOne' data-parent='#accordionfilter')
 			.collapse-item__item
