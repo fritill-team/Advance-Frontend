@@ -973,15 +973,15 @@ html[dir="rtl"] {
 		// pagination
 		.pagination{
 			.pagination__navbar {
-				.pagnation__list {
-					.pagnation__item {
+				.pagination__list {
+					.pagination__item {
 						&:first-of-type{
-							.pagnation__link {
+							.pagination__link {
 								transform: rotate(180deg);
 							}
 						}
 						&:last-of-type{
-							.pagnation__link{
+							.pagination__link{
 		
 								transform: rotate(180deg);
 							}
