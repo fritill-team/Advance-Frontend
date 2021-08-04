@@ -8305,6 +8305,10 @@ a.rmv-btn i {
     color: inherit
   }
 }
+.hide{
+  overflow: hidden;
+  height: 100vh;
+}
 
 @keyframes emoji {
   0% {transform: translatex(200px); opacity: 0;}

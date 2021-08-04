@@ -3,11 +3,13 @@
 	width: 100%;
 	position: relative;
 	transition: all .3s ease-out;
+	
 	// margin-top: 20px;
 
 	.filter__result{
     padding: 15px 10px 15px;
     border-bottom: 1px solid #e5e5e5;
+		background-color: #FFF;
     margin-bottom: 0;
     float: left;
     width: 100%;
@@ -239,24 +241,32 @@
 		.filter__button-wrapper{
 			display: block;
 		}
+		.selector--menu{
+			right: 0 !important;
+			left: unset !important;
+		}
 		.filter{
 			position: absolute;
 			background-color:#FFF;
-			width: 70vw; 
+			width: 80vw; 
 			z-index: 10000;
-			transform: translate(-100%, -30px); 
+			transform: translate(-100%, -75px); 
 			left: 0;
 			height: 100%;
 			overflow: scroll;
 			.filter__result{
 				padding: 15px 10px 15px;
 			}
+			&::-webkit-scrollbar {
+				display: none;
+		}
 		}
 		.filter__wrapper {
-			padding: 0 20px;
+			padding: 0 10px;
 			left: 0;
 		} 
+		.filter__opened{
+			transform: translate(0%, -75px);
+		}
 	}
-	.filter__opened{
-		transform: translate(0%, -30px);
-	}
+ 
