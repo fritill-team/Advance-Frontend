@@ -13,6 +13,9 @@
     margin-bottom: 0;
     float: left;
     width: 100%;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
 		.result__title{
 			font-size: 18px;
 			color: #333;
@@ -97,7 +100,7 @@
     margin-top: 20px; 
 	}
 }
-.filter__panal{
+.filter__panel{
 	float: left;
 	width: 100%;
 	margin-bottom: 30px;
@@ -105,10 +108,10 @@
 	&:first-child{
 		border-top: 0;
 	}
-	.panal__header{
-		.panal__title{
+	.panel__header{
+		.panel__title{
 			vertical-align: middle;
-			.panal--collapsed{
+			.panel--collapsed{
 				font-size: 16px;
 				font-weight: 500;
 				color: #333;
@@ -121,7 +124,7 @@
 		}
 	}
 }
-.panal__title{
+.panel__title{
 	.collapsed{
 		&::before{
 			float: right!important;
@@ -133,7 +136,7 @@
 		}
 	}
 	}
-	.panal__title>a:before{
+	.panel__title>a:before{
 		float: right!important;
     font-family: Roboto,sans-serif;
     content: "-";

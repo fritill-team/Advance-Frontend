@@ -375,9 +375,10 @@ input[type="text"] {
 
   }
 
-  .wrapper__minify {
-    margin-left: 0;
+  .wrapper__minify-admin {
+    margin-left: 60px;
   }
+
 }
 
 /*--- Left Side Footer ---*/
@@ -8320,10 +8321,40 @@ a.rmv-btn i {
 
 @media (min-width: 992px){
 .vertical_nav__minify {
-    width: 60px;
+    width: 60px ;
 }
+// sidebar admin
 .vertical_nav {
   left: 0;
+  &.vertical_nav--show-icon{
+    width: 60px ; 
+      .menu_left{
+        .left_section{
+          ul{
+            .menu--item{
+              .menu--link{
+                display: flex;
+                justify-content: center;
+                font-size: 25px;
+                .menu--label{
+                  display: none;
+                }
+                .menu--icon{
+                  font-size: 25px;
+                }
+              }
+            }
+          }
+      }
+    }           
+    .menu--label{
+      display: none;
+    }
+    .menu--icon{
+      font-size: 30px;
+    }
+
+  } 
 }
 .vertical_nav__minify .menu--label {
   display: none; 

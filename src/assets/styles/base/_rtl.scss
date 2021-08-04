@@ -904,10 +904,10 @@ html[dir="rtl"] {
 	.filter-category{ 
 		float: right;  
 	}
-	.filter__panal{
+	.filter__panel{
 		float: right; 
 	}
-	.panal__title{
+	.panel__title{
 		.collapsed{
 			&::before{
 				float: left!important; 
@@ -915,7 +915,7 @@ html[dir="rtl"] {
 			}
 		}
 		}
-		.panal__title>a:before{
+		.panel__title>a:before{
 			float: left!important; 
 			padding-left: 0; 
 		}
