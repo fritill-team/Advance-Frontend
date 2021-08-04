@@ -8316,3 +8316,17 @@ a.rmv-btn i {
 
   100% {transform: translateY(0)}
 }
+//sidebar dashbord
+
+@media (min-width: 992px){
+.vertical_nav__minify {
+    width: 60px;
+}
+.vertical_nav {
+  left: 0;
+}
+.vertical_nav__minify .menu--label {
+  display: none; 
+}
+
+}

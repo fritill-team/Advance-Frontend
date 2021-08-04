@@ -4,14 +4,14 @@
 	display: flex;
 	justify-content: center;
 	.pagination__navbar {
-		.pagnation__list {
+		.pagination__list {
 			display: inline-flex;
 			padding-left: 0;
 			list-style: none;
 			border-radius: 0.25rem;
 			text-align: right;
-			.pagnation__item {
-				.pagnation__link {
+			.pagination__item {
+				.pagination__link {
 					background: none;
 					border: none;
 					color: #000;
@@ -30,7 +30,7 @@
 						background: #ed2a26;
 						color: #fff !important;
 					}
-					.pagnation-icone {
+					.pagination-icone {
 						font-size: 12px;
 					}
 					&.active {
