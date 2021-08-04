@@ -46,6 +46,19 @@
     }
     .card-auther__price{
       flex-direction: row-reverse;
+      .course-card__actions{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .btn-wishlist{
+        // display: inline-block !important;
+        // margin: 0 10px;
+        i{
+          display: block;
+          margin: 0 10px;
+        }
+      }
     }
   }
   .course-card__card-media {
@@ -342,6 +355,21 @@
           font-family: "Roboto", sans-serif;
           font-weight: 500;
           font-size: 18px;
+        }
+        .course-card__actions{
+          display: flex;
+          align-items: center;
+        }
+        .btn-wishlist{
+          display: inline-block !important;
+          margin: 0 10px;
+          color: #ed2a26;
+          font-size: 20px;
+          
+          // i{
+          //   display: block;
+          //   margin: 0 10px;
+          // }
         }
       }
     }

@@ -42,6 +42,8 @@ mixin course-card(className)
 						| By 
 						a(href='#') John Doe
 				.card-auther__price 
-					button.enroll-btn(title='Enroll')
-						|Enroll 
+					.course-card__actions
+						button.enroll-btn(title='Enroll')
+							|Enroll 
+						a.btn-wishlist(href="#") <i class="fas fa-heart"></i>
 					p $10

@@ -250,7 +250,7 @@
 			background-color:#FFF;
 			width: 80vw; 
 			z-index: 10000;
-			transform: translate(-100%, -75px); 
+			transform: translate(-100%, -126px); 
 			left: 0;
 			height: 100%;
 			overflow: scroll;
@@ -266,7 +266,7 @@
 			left: 0;
 		} 
 		.filter__opened{
-			transform: translate(0%, -75px);
+			transform: translate(0, -126px); 
 		}
 	}
  
