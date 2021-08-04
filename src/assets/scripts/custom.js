@@ -4,245 +4,283 @@ $(".ui.dropdown").dropdown();
 
 // === Model === //
 $(".ui.modal")
-  .modal({
-    blurring: true
-  })
-  .modal("show");
+	.modal({
+		blurring: true
+	})
+	.modal("show");
 
 // === Tab === //
 $(".menu .item").tab();
 
 // === checkbox Toggle === //
 $('.ui.checkbox')
-  .checkbox()
-  ;
+	.checkbox()
+	;
 
 // === Toggle === //
 $(".enable.button").on("click", function () {
-  $(this)
-    .nextAll(".checkbox")
-    .checkbox("enable");
+	$(this)
+		.nextAll(".checkbox")
+		.checkbox("enable");
 });
 
 // Home Live Stream
 $(".live_stream").owlCarousel({
-  items: 10,
-  loop: false,
-  margin: 10,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 2
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 3
-    },
-    1200: {
-      items: 5
-    },
-    1400: {
-      items: 6
-    }
-  }
+	items: 10,
+	loop: false,
+	margin: 10,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 2
+		},
+		600: {
+			items: 3
+		},
+		1000: {
+			items: 3
+		},
+		1200: {
+			items: 5
+		},
+		1400: {
+			items: 6
+		}
+	}
 });
 
 // Featured Courses home
 $(".featured_courses").owlCarousel({
-  items: 10,
-  loop: false,
-  margin: 20,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 1
-    },
-    1200: {
-      items: 2
-    },
-    1400: {
-      items: 3
-    }
-  }
+	items: 10,
+	loop: false,
+	margin: 20,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 2
+		},
+		1000: {
+			items: 1
+		},
+		1200: {
+			items: 2
+		},
+		1400: {
+			items: 3
+		}
+	}
+});
+// related courses
+$(".related_courses").owlCarousel({
+	items: 10,
+	loop: false,
+	margin: 50,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		500:{
+			items: 2,
+			margin: 10
+		},
+		768: {
+			items: 3,
+			margin: 10,
+		},
+		992: {
+			items: 1
+		},
+		1200: {
+			items: 1,
+			margin: 100,
+			center: true
+		},
+		1400: {
+			items: 1,
+			margin: 100,
+			center: true
+		}
+	}
 });
 // Featured Courses home
 $(".category_courses").owlCarousel({
-  items: 10,
-  loop: false,
-  margin: 20,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 1
-    },
-    576: {
-      items: 2
-    },
-    960: {
-      item: 3
-    },
-    1000: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    },
-    1400: {
-      items: 4
-    }
-  }
+	items: 10,
+	loop: false,
+	margin: 20,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		576: {
+			items: 2
+		},
+		960: {
+			item: 3
+		},
+		1000: {
+			items: 3
+		},
+		1200: {
+			items: 4
+		},
+		1400: {
+			items: 4
+		}
+	}
 });
 
 
 // Featured Courses home
 $(".top_instrutors").owlCarousel({
-  items: 10,
-  loop: false,
-  margin: 20,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 1
-    },
-    1200: {
-      items: 2
-    },
-    1400: {
-      items: 3
-    }
-  }
+	items: 10,
+	loop: false,
+	margin: 20,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 2
+		},
+		1000: {
+			items: 1
+		},
+		1200: {
+			items: 2
+		},
+		1400: {
+			items: 3
+		}
+	}
 });
 
 // Student Says
 $(".Student_says").owlCarousel({
-  items: 10,
-  loop: false,
-  margin: 30,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 2
-    },
-    1200: {
-      items: 3
-    },
-    1400: {
-      items: 3
-    }
-  }
+	items: 10,
+	loop: false,
+	margin: 30,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 2
+		},
+		1000: {
+			items: 2
+		},
+		1200: {
+			items: 3
+		},
+		1400: {
+			items: 3
+		}
+	}
 });
 
 // features Careers
 $(".feature_careers").owlCarousel({
-  items: 4,
-  loop: false,
-  margin: 20,
-  nav: true,
-  dots: false,
-  navText: [
-    "<i class='uil uil-angle-left'></i>",
-    "<i class='uil uil-angle-right'></i>"
-  ],
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 1
-    },
-    1000: {
-      items: 1
-    },
-    1200: {
-      items: 1
-    },
-    1400: {
-      items: 1
-    }
-  }
+	items: 4,
+	loop: false,
+	margin: 20,
+	nav: true,
+	dots: false,
+	navText: [
+		"<i class='uil uil-angle-left'></i>",
+		"<i class='uil uil-angle-right'></i>"
+	],
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 1
+		},
+		1000: {
+			items: 1
+		},
+		1200: {
+			items: 1
+		},
+		1400: {
+			items: 1
+		}
+	}
 });
 
 /*Floating Code for Iframe Start*/
 if (
-  jQuery(
-    'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
-  ).length > 0
+	jQuery(
+		'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
+	).length > 0
 ) {
-  /*Wrap (all code inside div) all vedio code inside div*/
-  jQuery(
-    'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]'
-  ).wrap("<div class='iframe-parent-class'></div>");
-  /*main code of each (particular) vedio*/
-  jQuery(
-    'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]'
-  ).each(function (index) {
-    /*Floating js Start*/
-    var windows = jQuery(window);
-    var iframeWrap = jQuery(this).parent();
-    var iframe = jQuery(this);
-    var iframeHeight = iframe.outerHeight();
-    var iframeElement = iframe.get(0);
-    windows.on("scroll", function () {
-      var windowScrollTop = windows.scrollTop();
-      var iframeBottom = iframeHeight + iframeWrap.offset().top;
-      //alert(iframeBottom);
+	/*Wrap (all code inside div) all vedio code inside div*/
+	jQuery(
+		'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]'
+	).wrap("<div class='iframe-parent-class'></div>");
+	/*main code of each (particular) vedio*/
+	jQuery(
+		'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]'
+	).each(function (index) {
+		/*Floating js Start*/
+		var windows = jQuery(window);
+		var iframeWrap = jQuery(this).parent();
+		var iframe = jQuery(this);
+		var iframeHeight = iframe.outerHeight();
+		var iframeElement = iframe.get(0);
+		windows.on("scroll", function () {
+			var windowScrollTop = windows.scrollTop();
+			var iframeBottom = iframeHeight + iframeWrap.offset().top;
+			//alert(iframeBottom);
 
-      if (windowScrollTop > iframeBottom) {
-        iframeWrap.height(iframeHeight);
-        iframe.addClass("stuck");
-        jQuery(".scrolldown").css({ display: "none" });
-      } else {
-        iframeWrap.height("auto");
-        iframe.removeClass("stuck");
-      }
-    });
-    /*Floating js End*/
-  });
+			if (windowScrollTop > iframeBottom) {
+				iframeWrap.height(iframeHeight);
+				iframe.addClass("stuck");
+				jQuery(".scrolldown").css({ display: "none" });
+			} else {
+				iframeWrap.height("auto");
+				iframe.removeClass("stuck");
+			}
+		});
+		/*Floating js End*/
+	});
 }
 
 /*Floating Code for Iframe End*/
@@ -251,62 +289,62 @@ if (
 
 var headers = $("#accordion .course-list__header");
 var contentAreas = $("#accordion .course-list__list-content ")
-  .hide()
-  .first()
-  .show()
-  .end();
+	.hide()
+	.first()
+	.show()
+	.end();
 var expandLink = $(".list--expand-all");
 
 // add the accordion functionality
 headers.click(function () {
-  // close all panels
-  contentAreas.slideUp();
-  // open the appropriate panel
-  $(this)
-    .next()
-    .slideDown();
+	// close all panels
+	contentAreas.slideUp();
+	// open the appropriate panel
+	$(this)
+		.next()
+		.slideDown();
 
-  // reset Expand all button
-  expandLink.text("Expand all").data("isAllOpen", false);
-  // stop page scroll
-  return false;
+	// reset Expand all button
+	expandLink.text("Expand all").data("isAllOpen", false);
+	// stop page scroll
+	return false;
 });
 
 // hook up the expand/collapse all
 expandLink.click(function () {
-  var isAllOpen = !$(this).data("isAllOpen");
-  console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas });
-  contentAreas[isAllOpen ? "slideDown" : "slideUp"]();
+	var isAllOpen = !$(this).data("isAllOpen");
+	console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas });
+	contentAreas[isAllOpen ? "slideDown" : "slideUp"]();
 
-  expandLink
-    .text(isAllOpen ? "Collapse All" : "Expand all")
-    .data("isAllOpen", isAllOpen);
+	expandLink
+		.text(isAllOpen ? "Collapse All" : "Expand all")
+		.data("isAllOpen", isAllOpen);
 });
 
 // Payment Method Accordion
 $('input[name="paymentmethod"]').on("click", function () {
-  var $value = $(this).attr("value");
-  $(".return-departure-dts").slideUp();
-  $('[data-method="' + $value + '"]').slideDown();
+	var $value = $(this).attr("value");
+	$(".return-departure-dts").slideUp();
+	$('[data-method="' + $value + '"]').slideDown();
 });
 
 
 $('.toggle-filter').on('click', function () {
-  if ($('.filter').hasClass('filter__opened')) {
-    $('.filter').removeClass('filter__opened')
-    $('body').removeClass('hide')
-  } else {
-    $('.filter').addClass('filter__opened')
-    $('body').addClass('hide')
-  }
+	if ($('.filter').hasClass('filter__opened')) {
+		$('.filter').removeClass('filter__opened')
+		$('body').removeClass('hide')
+	} else {
+		$('.filter').addClass('filter__opened')
+		$('body').addClass('hide')
+	}
 })
 $('.list').on('click', function(){
-  $('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
-  $(this).addClass('active').siblings().removeClass('active')
+	$('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
+	$(this).addClass('active').siblings().removeClass('active')
 })
 $('.grid').on('click', function(){
-  $('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--fixed-width')
-  $(this).addClass('active').siblings().removeClass('active')
+	$('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--fixed-width')
+	$(this).addClass('active').siblings().removeClass('active')
 
 })
 
