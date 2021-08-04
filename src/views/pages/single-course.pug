@@ -93,35 +93,35 @@ block userAccount
 			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-courses' role='tab' aria-selected='false') Content
 			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-reviews' role='tab' aria-selected='false') Reviews
 block tabs
-	.container
-		.row
-			.col-lg-8
-				.course_tab_content
-					#nav-tabContent.tab-content
-						#nav-about.tab-pane.fade.show.active(role='tabpanel')
-							include ../components/about.pug
-						#nav-courses.tab-pane.fade(role='tabpanel')
-								//- start course list component
-								include ../components/course.pug
-								a.btn1458(href='#') 20 More Sections
-						#nav-reviews.tab-pane.fade(role='tabpanel')
-							//- start reviews
-							.reviews
-								.row
-									.col-lg-12
-										.review__header
-											.header__header-content
-												h3.header-content__title Reviews
-												.header-content__search
-													input.search__input(type='text' placeholder='Search reviews...')
-													button.search__btn
-														i.uil.uil-search
-										include ../components/review.pug
-										.review__all-reviews.mt-3
-											include ../components/review-item.pug
-											.all-reviews__review-item
-												a.review-item__more-reviews(href='#') See More Reviews
-			.col-lg-4.mt-5
+	//- .container
+	.row
+		.col-lg-8
+			.course_tab_content
+				#nav-tabContent.tab-content
+					#nav-about.tab-pane.fade.show.active(role='tabpanel')
+						include ../components/about.pug
+					#nav-courses.tab-pane.fade(role='tabpanel')
+							//- start course list component
+							include ../components/course.pug
+							a.btn1458(href='#') 20 More Sections
+					#nav-reviews.tab-pane.fade(role='tabpanel')
+						//- start reviews
+						.reviews
+							.row
+								.col-lg-12
+									.review__header
+										.header__header-content
+											h3.header-content__title Reviews
+											.header-content__search
+												input.search__input(type='text' placeholder='Search reviews...')
+												button.search__btn
+													i.uil.uil-search
+									include ../components/review.pug
+									.review__all-reviews.mt-3
+										include ../components/review-item.pug
+										.all-reviews__review-item
+											a.review-item__more-reviews(href='#') See More Reviews
+		.col-lg-4.mt-5
 
-				include ../components/course-card.pug
-				+course-card
+			include ../components/course-card.pug
+			+course-card
