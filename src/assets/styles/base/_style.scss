@@ -8310,6 +8310,9 @@ a.rmv-btn i {
   overflow: hidden;
   height: 100vh;
 }
+.wrapper__minify{
+  margin-left: 0px;
+}
 
 @keyframes emoji {
   0% {transform: translatex(200px); opacity: 0;}
@@ -8323,6 +8326,7 @@ a.rmv-btn i {
 .vertical_nav__minify {
     width: 60px ;
 }
+ 
 // sidebar admin
 .vertical_nav {
   left: 0;

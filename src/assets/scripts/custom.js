@@ -365,8 +365,9 @@ var tid = setInterval(function () {
   querySelector('.collapse_menu').onclick = function () {
     nav.classList.toggle('vertical_nav__minify');
     navWithIcon.classList.toggle('vertical_nav--show-icon')
-    wrapper.classList.toggle('wrapper__minify');
+    // wrapper.classList.toggle('wrapper__minify');
     wrapper.classList.toggle('wrapper__minify-admin');
+
     for (var j = 0; j < subnavs.length; j++) {
       subnavs[j].classList.remove('menu--subitens__opened');
     }
