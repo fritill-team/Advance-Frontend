@@ -2,7 +2,7 @@
 
 doctype html
 
-html(lang='en' dir="ltr")
+html(lang='en' dir="")
 	head
 		//- Stylesheets
 		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
@@ -17,28 +17,30 @@ html(lang='en' dir="ltr")
 		//- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
 		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
 		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+
 		//- Title
 		block title
 			title Your project!
-
-
 
 	body
 
 		//- Menu
 		include ../components/header.pug
-		//- +menu('home')
-		include ../components/sidebar-admin.pug 
-
-		//- block content 
+			
+		include ../components/sidebar.pug
+			block sidebar
+				
+		//- block content
 		.wrapper
-			block content 
+			block content
 			include ../components/footer-admin.pug
-		//- Footer
 
-		//- block scripts
-		block scripts
+			//- Footer
+
+			//- block scripts
+			block scripts
+
 
 
 		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
