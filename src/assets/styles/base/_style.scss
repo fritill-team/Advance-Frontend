@@ -767,6 +767,7 @@ i.icon1 {
 .section3125 {
   float: left;
   width: 100%;
+  padding-top: 25px;
 }
 
 .section3126 {
@@ -8406,9 +8407,15 @@ a.rmv-btn i {
     }
 
   } 
+  &::-webkit-scrollbar {
+    display: none;
+}
 }
 .vertical_nav__minify .menu--label {
   display: none; 
 }
 
+}
+.vertical_nav::-webkit-scrollbar {
+  display: none;
 }
