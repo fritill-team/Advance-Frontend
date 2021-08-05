@@ -23,13 +23,14 @@ html(lang='en' dir="")
 		block title
 			title Your project!
 
-	body
+	body.sidebar-with-icon
 
 		//- Menu
 		include ../components/header.pug
 			
-		include ../components/sidebar-admin.pug
+		include ../components/sidebar.pug
 			block sidebar
+				include ../components/sidebar-content.pug
 				
 		//- block content
 		.wrapper

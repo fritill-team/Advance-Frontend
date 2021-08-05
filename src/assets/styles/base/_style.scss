@@ -8419,3 +8419,34 @@ a.rmv-btn i {
 .vertical_nav::-webkit-scrollbar {
   display: none;
 }
+// body
+@media (min-width : 992px){
+  body{
+    &.sidebar-with-icon{
+        .wrapper{
+          margin-left: 60px;
+        }
+        .vertical_nav {
+          width: 60px;
+        }
+      .menu--label{
+        display: none !important;
+      }
+      .menu--icon{
+        width: 60px !important;
+      }
+    }
+    &.open-side-nav{
+      .wrapper{
+        margin-left: 240px;
+      }
+      .vertical_nav{
+        width: 240px;
+      }
+      .menu--label{
+        display: block !important;
+      }
+    }
+  }
+}
+ 
