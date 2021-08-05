@@ -1,13 +1,12 @@
 .sidebar{
 	position: fixed;
-	left: 0px;
+	left: -240px;
 	top: 60px;
 	bottom: 0;
 	background: #fff;
 	overflow: hidden;
 	width: 240px;
-	z-index: 995; 
-	transition: all .3s ease-in;
+	z-index: 995;
 	.sidebar__menu{
 		position: absolute;
     top: 0;
@@ -35,8 +34,7 @@
 			font-weight: 500;
 			white-space: nowrap;
 			cursor: pointer;
-			font-family: Roboto,sans-serif;
-			margin-bottom: .5rem;
+			font-family: Roboto,sans-serif; 
 			display: block;
 			.item__icon{
 				display: block;
@@ -50,7 +48,21 @@
 			.item__label{
 				display: block;
 				height: 45px;
-				line-height: 43px;
+				line-height: 43px; 
+			}
+			&:hover{
+				background: #ffecec;
+				color: #ed2a26 !important;
+			}
+			&::before{
+				position: absolute;
+				top: 0;
+				right: 15px;
+				height: 45px;
+				line-height: 45px;
+				font-family: 'Font Awesome 5 Free';
+				content: "\f0d7";
+				font-weight: 900;
 			}
 		}
 	}
@@ -80,6 +92,10 @@
 	overflow: hidden;
 	list-style: none;
 	.sum-menu__item{
+		&:hover{
+			background: #ffecec;
+			color: #ed2a26 !important;
+		}
 	} 
 	.sub-menu__link{
 		display: block;
@@ -92,4 +108,67 @@
     text-decoration: none;
 	}
 }
+ 
+
+@media (min-width: 992px){
+	.vertical_nav__minify {
+			width: 0px ;
+	}
+	 
+	// sidebar admin
+	.sidebar {
+		left: 0;
+		&.vertical_nav--show-icon{
+			width: 60px ; 
+				.menu_left{
+					.left_section{
+						ul{
+							.menu--item{
+								.menu--link{
+									display: flex;
+									justify-content: center;
+									font-size: 25px;
+									.menu--label{
+										display: none;
+									}
+									.menu--icon{
+										font-size: 25px;
+									}
+								}
+							}
+						}
+				}
+			}           
+			.menu--label{
+				display: none;
+			}
+			.menu--icon{
+				font-size: 30px;
+			}
+	
+  } 
+		&::-webkit-scrollbar {
+			display: none;
+	}
+	}
+	.vertical_nav__minify .menu--label {
+		display: none; 
+	}
+	
+	}
+	.sidebar::-webkit-scrollbar {
+		display: none;
+	}
+ 
+
+	.sidebar__closed {
+		left: -240px !important;
+	}
+
+	.sidebar__opened {
+		left: 0 !important;
+		box-shadow: rgba(0,0,0,.2)-30px 0 30px 30px;
+	}
+
+
  

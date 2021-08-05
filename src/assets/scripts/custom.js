@@ -425,13 +425,24 @@ $('.grid').on('click', function () {
 //   }
 // }, 100);
 
-var nav = $('.vertical_nav'),
+// var nav = $('.vertical_nav'),
+// 	wrapper = $('.wrapper'),
+// 	sidemenu = $('.menu_left')
+
+// $(document)
+// 	.on('click', '.collapse_menu', function () {
+// 		console.log('dlkvdogn')
+// 		nav.toggleClass('vertical_nav__opened vertical_nav__minify')
+// 		wrapper.toggleClass('toggle-content wrapper__minify ');
+// 	})
+
+var nav = $('.sidebar'),
 	wrapper = $('.wrapper'),
-	sidemenu = $('.menu_left')
+	sidemenu = $('.sidebar__menu')
 
 $(document)
-	.on('click', '.collapse_menu', function () {
-		console.log('dlkvdogn')
+	.on('click', '.toggle__menu', function () {
 		nav.toggleClass('vertical_nav__opened vertical_nav__minify')
 		wrapper.toggleClass('toggle-content wrapper__minify ');
+
 	})
