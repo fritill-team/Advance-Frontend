@@ -1,23 +1,23 @@
 // script reset page
 
 // let emailEl = document.querySelector('#emailtype');
-$('#emailtype').on('input', function(e){
+$('#emailtype').on('input', function (e) {
   let value = e.target.value;
 
-  if(value.match(/^\d+$/)){
-      $('#iconmassege').hide();
-      $('#keynumber').show();
-      e.target.type = 'number';
-  } else  {
-      $('#iconmassege').show();
-      $('#keynumber').hide();
-      e.target.type = 'email';
+  if (value.match(/^\d+$/)) {
+    $('#iconmassege').hide();
+    $('#keynumber').show();
+    e.target.type = 'number';
+  } else {
+    $('#iconmassege').show();
+    $('#keynumber').hide();
+    e.target.type = 'email';
   }
 
 });
 
 // script reset page
-var verification = (function(){
+var verification = (function () {
   //cache dom
   var $inputs = $("#verification").find("input");
 
@@ -27,14 +27,14 @@ var verification = (function(){
   //define methods
   function processInput(e) {
     var x = e.charCode || e.keyCode;
-    if( (x == 8 || x == 46) && this.value.length == 0) {
+    if ((x == 8 || x == 46) && this.value.length == 0) {
       var indexNum = $inputs.index(this);
-      if(indexNum != 0) {
+      if (indexNum != 0) {
         $inputs.eq($inputs.index(this) - 1).focus();
       }
     }
 
-    if( ignoreChar(e) )
+    if (ignoreChar(e))
       return false;
     else if (this.value.length == this.maxLength) {
       $(this).next('input').focus();
@@ -42,10 +42,56 @@ var verification = (function(){
   }
   function ignoreChar(e) {
     var x = e.charCode || e.keyCode;
-    if (x == 37 || x == 38 || x == 39 || x == 40 )
+    if (x == 37 || x == 38 || x == 39 || x == 40)
       return true;
     else
       return false
   }
 
 })();
+
+
+//login phone number
+
+// var input = document.querySelector("#phone");
+// var iti = window.intlTelInput(input, {
+//   // separateDialCode:true,
+//   utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+// });
+
+// // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+// window.iti = iti;
+
+// const phoneInputField = document.querySelector("#phone");
+// const phoneInput = window.intlTelInput(phoneInputField, {
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//   initialCountry: "auto",
+//   geoIpLookup: getIp,
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//   preferredCountries: ["us", "co", "in", "de"],
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+// });
+
+// function getIp(callback) {
+//   fetch('https://ipinfo.io/json?token=<your token>', { headers: { 'Accept': 'application/json' } })
+//     .then((resp) => resp.json())
+//     .catch(() => {
+//       return {
+//         country: 'us',
+//       };
+//     })
+//     .then((resp) => callback(resp.country));
+// };
+
+var input = document.querySelector("#phone");
+var iti = window.intlTelInput(input, {
+  // separateDialCode:true,
+  utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+});
+
+// store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+window.iti = iti;
+
