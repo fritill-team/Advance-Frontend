@@ -176,7 +176,7 @@ html[dir="rtl"] {
 	@media (min-width: 992px) {
 		/*wrapper conent*/
 		.wrapper {
-			margin-right: 240px;
+			// margin-right: 240px;
 			margin-left: 0;
 		}
 		.wrapper__minify {
@@ -991,13 +991,82 @@ html[dir="rtl"] {
 				}
 			}
 		}
-		//sidebar admin
+	//sidebar admin
 .vertical_nav {
   right: 0; 
 }
 .wrapper__minify-admin{
 	margin-right: 60px !important;
+} 
+//sidebar admin
+.sidebar{ 
+	right: -240px;  
+	.menu__section{ 
+		padding-right: 6px;
+	}
 }
+.list__sidebar{
+	.list__item{ 
+		.item__link{  
+			.item__icon{ 
+				float: right; 
+			}  
+			&::before{ 
+				left: 15px; 
+			}
+		}
+	}
+}
+.menu__link{   
+	.menu__icon { 
+    float: right; 
+} 
+}
+.sub-menu{ 
+	.sub-menu__link{ 
+    padding-right: 50px;
+    padding-left: 16px; 
+	}
+}
+ 
 
+@media (min-width: 992px){ 
+	// sidebar admin
+	.sidebar {
+		right: 0;  
+	}  
+	}  
+	.sidebar__closed {
+		right: -240px !important;
+	} 
+	.sidebar__opened {
+		right: 0 !important; 
+	}
+	// body
+	@media (min-width : 992px){
+		body{
+      &.sidebar-with-icon{
+        .wrapper{
+          margin-right: 60px;
+        }  
+    }
+      &.open-side-nav{
+				.wrapper{
+					margin-right: 240px;
+				} 
+			}  
+		}
+       .toggle__menu{ 
+          float: right; 
+          .menu__icon{  
+            float: right; 
+        }
+     }
+	} 
+ @media (max-width : 992px){
+  .toggle__menu{    
+    float: right;  
+ }
+ }  
 }
-  
+ 

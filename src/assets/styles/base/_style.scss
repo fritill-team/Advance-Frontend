@@ -8452,6 +8452,23 @@ a.rmv-btn i {
  	// body
    @media (min-width : 992px){
 		body{
+      &.sidebar-with-icon{
+        .wrapper{
+          margin-left: 60px;
+        }
+        .sidebar {
+          width: 60px;
+        }
+        .list__sidebar{
+          .list__item{
+            .item__link{ 
+              .item__label{
+                display: none !important;
+              } 
+            }
+          }
+        }
+    }
       &.open-side-nav{
 				.wrapper{
 					margin-left: 240px;
@@ -8459,41 +8476,16 @@ a.rmv-btn i {
 				.sidebar{
 					width: 240px;
 				}
-				.item__label{
-					display: block !important;
-				} 
-       
-			}
-			&.sidebar-with-icon{
-					.wrapper{
-						margin-left: 60px;
-					}
-					.sidebar {
-						width: 60px;
-					}
-				.item__label{
-					display: none !important;
-				}
-				.item__link{
-					width: 60px !important;
-				}
-        .item__icon{
-          width: 60px !important;
+        .list__sidebar{
+          .list__item{
+            .item__link{
+              .item__label{
+                display: block !important;
+              } 
+            }
+          }
         }
-			}
-	 
-
-      &.sidebar-with-icon.open-side-nav {
-        // .wrapper{
-				// 	margin-left: 240px;
-				// }
-				// .sidebar{
-				// 	width: 240px;
-				// }
-				.item__label{
-					display: block !important;
-				} 
-      }
+			}  
 		}
        .toggle__menu{
           width: 60px;
