@@ -6,10 +6,15 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  .card__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
   .card__title{
     text-transform: capitalize;
-    margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
   }
   .card__content{

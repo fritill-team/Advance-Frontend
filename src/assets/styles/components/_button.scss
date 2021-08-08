@@ -5,14 +5,27 @@
   background: none;
 }
 
-.button {
-  @extend .clean-button;
-  font-family: $quicksand;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 5px;
-  color: white;
-  padding: 14px 40px;
-  background: $lightseagreen;
-}
+// .button {
+//   @extend .clean-button;
+//   font-family: $quicksand;
+//   font-size: 18px;
+//   font-weight: 700;
+//   border-radius: 5px;
+//   color: white;
+//   padding: 14px 40px;
+//   background: $lightseagreen;
+// }
 
+.btn{
+  &.btn--filled{
+    padding: 5px 20px;
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    background: #ed2a26;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+}
