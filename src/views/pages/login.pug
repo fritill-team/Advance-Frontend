@@ -8,59 +8,83 @@ block title
 block content
 
   h2 Welcome Back
-  //- p Log In to Your Edututs+ Account! 
+  //- p Log In to Your Edututs+ Account!
+  .course_tabs.mb-5
+    #nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
+      a#nav-about-tab.nav-item.nav-link.active(data-toggle='tab' href='#login-email' role='tab' aria-selected='true') Login
+      a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#login-number' role='tab' aria-selected='false') Verify
+  //- .course_tab_content.pt-5
+  //-   #nav-tabContent.tab-content
+  //-     #login-email.tab-pane.fade.show.active(role='tabpanel')
+  //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
+  //-     #login-number.tab-pane.fade.show(role='tabpanel')
+  //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
   form
-    .ui.search.focus.mt-15
-      .icon.input.lbel25
-        label.sr-only.d-none(for="emailtype") Email Address *
-        .ui.left.icon.input.swdh95.w-100
-          input.prompt.srch_explore(
-            type="email"
-            name="emailaddress"
-            required
-            id="emailtype" 
-            aria-describedby="validationServer04Feedback" equals()
-            placeholder="Email Address Or Number" autofocus)
-          select.key-number#keynumber(style="display : none")
-            option(value) +02
-            option(value="") +966
-            option(value="") +02
-            option(value="") +092
-          i.uil.uil-envelope.icon-massege.icon.icon2#iconmassege(style="display : block")
-        .invalid-feedback.my-2#idvalidationServer04Feedback Requerd
-      .ui.search.focus.mt-15
-        .icon.input.lbel25
-          label.form-label.d-none(for="validationServeriPassword") Password *
-          .ui.left.icon.input.swdh95.w-100
-            input.prompt.srch_explore#validationServeriPassword(
-              type="password"
-              name="password"
-              required
-              aria-describedby="validationServer05Feedback"
-              placeholder="Password"
-              )
-            i.uil.uil-key-skeleton-alt.icon.icon2
-          .invalid-feedback.my-2#validationServer05Feedback  Requerd
-      .ui.form.checkbox_sign.mt-30
-        .inline.field
-          .ui.checkbox.mncheck
-            input.hidden#remember( 
-              type="checkbox"
-              tabindex="0" )
-            label(for="remember") Remember Me
+    .course_tab_content.pt-5
+      #nav-tabContent.tab-content
+        #login-email.tab-pane.fade.show.active(role='tabpanel')
+          .ui.search.focus.mt-15
+            .icon.input.lbel25
+              label.sr-only.d-none(for="emailtype") Email Address *
+              .ui.left.icon.input.swdh95.w-100
+                input.prompt.srch_explore(
+                  type="email"
+                  name="emailaddress"
+                  required
+                  id="emailtype"
+                  aria-describedby="validationServer04Feedback" equals()
+                  placeholder="Email Address Or Number" autofocus)
+                select.key-number#keynumber(style="display : none")
+                  option(value) +02
+                  option(value="") +966
+                  option(value="") +02
+                  option(value="") +092
+                i.uil.uil-envelope.icon-massege.icon.icon2#iconmassege(style="display : block")
+              .invalid-feedback.my-2#idvalidationServer04Feedback Requerd
+            .ui.search.focus.mt-15
+              .icon.input.lbel25
+                label.form-label.d-none(for="validationServeriPassword") Password *
+                .ui.left.icon.input.swdh95.w-100
+                  input.prompt.srch_explore#validationServeriPassword(
+                    type="password"
+                    name="password"
+                    required
+                    aria-describedby="validationServer05Feedback"
+                    placeholder="Password"
+                    )
+                  i.uil.uil-key-skeleton-alt.icon.icon2
+                .invalid-feedback.my-2#validationServer05Feedback  Requerd
+            .ui.form.checkbox_sign.mt-30
+              .inline.field
+                .ui.checkbox.mncheck
+                  input.hidden#remember(
+                    type="checkbox"
+                    tabindex="0" )
+                  label(for="remember") Remember Me
+        #login-number.tab-pane.fade(role='tabpanel')
+          .ui.search.focus.mt-15
+              .icon.input.lbel25
+                label.form-label.d-none(for="phone") Password *
+                .ui.left.icon.input.swdh95.w-100
+                  input.prompt.srch_explore#phone(
+                    type="tel"
+                    name="phone"
+                    )
+                  //- i.uil.uil-key-skeleton-alt.icon.icon2
+                .invalid-feedback.my-2#validationServer05Feedback  Requerd
       button.login-btn(type="submit")  Sign In
-    p.sgntrm145.mt-4
-      a(href="forgot_password.html")  Forgot Password
-    .middle-or.d-flex.my-2
-      hr
-      p.mb-0  Or
-      hr
-    .socialMedia.d-flex.justify-content-center
-      button.social_lnk_btn.color_btn_fb
-        i.uil.uil-facebook-f
-      button.social_lnk_btn.mt-15.color_btn_tw
-        i.uil.uil-twitter
-      button.social_lnk_btn.mt-15.color_btn_go
-        i.uil.uil-google
-    p.mb-0.mt-30.hvsng145  Don't have an account?
-      a(href="sign_up.html")  Sign Up
+      p.sgntrm145.mt-4
+        a(href="forgot_password.html")  Forgot Password
+      .middle-or.d-flex.my-2
+        hr
+        p.mb-0  Or
+        hr
+      .socialMedia.d-flex.justify-content-center
+        button.social_lnk_btn.color_btn_fb
+          i.uil.uil-facebook-f
+        button.social_lnk_btn.mt-15.color_btn_tw
+          i.uil.uil-twitter
+        button.social_lnk_btn.mt-15.color_btn_go
+          i.uil.uil-google
+      p.mb-0.mt-30.hvsng145  Don't have an account?
+        a(href="sign_up.html")  Sign Up
