@@ -1101,4 +1101,22 @@ input[type=email],
   left: auto;
   border-radius: .28571429rem 0 0 .28571429rem;
 }
+.ui.form.checkbox_sign {
+  text-align: right;
+}
+.ui.checkbox input[type=checkbox],
+ .ui.checkbox input[type=radio]{
+  right: 0;
+}
+.ui.checkbox .box:after,
+ .ui.checkbox .box:before,
+  .ui.checkbox label:after,
+   .ui.checkbox label:before{
+  right: 0;
+}
+.ui.checkbox.mncheck .box,
+ .ui.checkbox.mncheck label{
+  padding-right: 1.85714em;
+
+}
 }
