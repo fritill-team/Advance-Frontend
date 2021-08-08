@@ -5,7 +5,8 @@ block title
 
 block content
   .auth-forms__alert.auth-forms__alert-invalid(role='alert') 
-    | this is nonfield messages
+    | Author Form Content
+  
   form
     //- .col-lg-12.col-md-6.col-sm-12
     //-   .ui.search.focus
@@ -25,7 +26,7 @@ block content
     //-       .invalid-feedback.my-2#validationServer05Feedback Requerd
 
 
-    .col-lg-12.col-md-6.col-sm-12
+    .col-lg-12.col-md-12.col-sm-12
       .field-wrapper.field-wrapper--error
         label.text-field__label Course Title*
         .text-field__content
@@ -36,7 +37,7 @@ block content
           | Please provide a valid city.
 
 
-    .col-lg-12.col-md-6.col-sm-12
+    .col-lg-12.col-md-12.col-sm-12
       .field-wrapper.field-wrapper--no-message
         label.text-field__label Course Title*
         .text-field__content
@@ -44,7 +45,7 @@ block content
         .field-wrapper__message
           | Please provide a valid city.
    
-    .col-lg-12.col-md-6.col-sm-12
+    .col-lg-12.col-md-12.col-sm-12
       .field-wrapper.field-wrapper__file-input.field-wrapper--error
         label.text-field__label File*
         .input-group
@@ -55,7 +56,7 @@ block content
           | Please provide a valid city.
 
 
-    .col-lg-12.col-md-6.col-sm-12
+    .col-lg-12.col-md-12.col-sm-12
       .field-wrapper.field-wrapper__select-input
         label.text-field__label Language*
         .text-field__content
@@ -78,26 +79,55 @@ block content
             option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
         .field-wrapper__message
           | Please select a valid city.
+
+    .col-lg-12.col-md-12.col-sm-12
+      .field-wrapper.field-wrapper--error
+        label.text-field__label Course checkbox*
+        .ui.form.checkbox_sign
+          .inline.field
+            .ui.checkbox.mncheck
+              input(type="checkbox" tabindex="0" class="hidden" id="remembr-signup")
+              label(for="remembr-signup") checkbox
+          .inline.field
+            .ui.checkbox.mncheck
+              input(type="checkbox" tabindex="0" class="hidden" id="remembr-signin")
+              label(for="remembr-signin") checkbox
+        .field-wrapper__message
+          | Please check any item
+
+    .col-lg-12.col-md-12.col-sm-12
+      .field-wrapper.field-wrapper--error
+        label.text-field__label Course Radio Button*
+        ul.radio--group-inline
+          li.radio-item_1
+            input#radio-1(value="radio-1" name="paymentmethod" type="radio" data-minimum="50.0")
+            label.radio-label-1(for="radio-1")  Radio
+          li.radio-item_1
+            input#radio-2(value="radio-2" name="paymentmethod" type="radio" data-minimum="50.0")
+            label.radio-label-1(for="radio-2")  Radio  
+        .field-wrapper__message
+          | Please Choose any item
+
+    .col-lg-12.col-md-12.col-sm-12
+      .field-wrapper
+        label.text-field__label Course Radio Button*
+        .text-field__content
+          textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+        .field-wrapper__message
+          | Please Choose any item
+        //- .course_des_textarea.lbel25
+        //-   label Course Description* 
+        //-     .course_des_bg.mt-10                        
+        
+
+
     //- .col-lg-12.col-md-6.col-sm-12
     //-   .ui.search.focus.mt-30.lbel25
     //-     label Volume*
     //-     .ui.left.icon.input.swdh19.swdh95
     //-       input.prompt.srch_explore(type='number' min='0' name='size' required='' placeholder='0')
     //-       .badge_mb MB
-
-    //- .col-lg-12.col-md-6.col-sm-12
-    //-   .ui.form.mt-30.checkbox_sign
-    //-     .inline.field
-    //-       .ui.checkbox.mncheck
-    //-         input(
-    //-           type="checkbox"
-    //-           tabindex="0"
-    //-           class="hidden"
-    //-           id="remembr-signup"
-    //-           )
-    //-         label(for="remembr-signup") checkbox
-
-
+    
     //- .col-lg-12
     //-   .course_des_textarea.mt-30.lbel25
     //-     label Course Description*
