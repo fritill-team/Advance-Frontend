@@ -446,12 +446,12 @@ html[dir="rtl"] {
 			.description__list {
 				padding-right: 30px !important;
 				.list__item-list {
-					.item-list__item {  
-						text-align: right;  
+					.item-list__item {
+						text-align: right;
 						padding-right: 15px;
-						&::before {   
-							margin-left: 10px; 
-							right: -25px; 
+						&::before {
+							margin-left: 10px;
+							right: -25px;
 						}
 					}
 				}
@@ -788,7 +788,7 @@ html[dir="rtl"] {
 		.comments__add-comment {
 			float: right;
 			.add-comment__group {
-				display: flex; 
+				display: flex;
 				.group__textarea {
 					margin-right: 20px;
 				}
@@ -880,67 +880,67 @@ html[dir="rtl"] {
 	}
 	//filter
 	.filter{
-		float: right;    
-		.filter__result{ 
-			float: right; 
-			.result__title{   
+		float: right;
+		.filter__result{
+			float: right;
+			.result__title{
 				text-align: right;
 				float: right;
-			} 
+			}
 		}
-	} 
+	}
 	.filter__selector{
-			float: left; 
-		.selector--dropdown{ 
-			transition: box-shadow .1s ease,width .1s ease ; 
-			text-align: right;   
+			float: left;
+		.selector--dropdown{
+			transition: box-shadow .1s ease,width .1s ease ;
+			text-align: right;
 		}
 	}
-	.selector--menu{     
-		text-align: right !important;  
-		right: -90px !important; 
-		.selector__item{ 
-			text-align: right;  
+	.selector--menu{
+		text-align: right !important;
+		right: -90px !important;
+		.selector__item{
+			text-align: right;
 		}
 	}
-	.filter-category{ 
-		float: right;  
+	.filter-category{
+		float: right;
 	}
 	.filter__panel{
-		float: right; 
+		float: right;
 	}
 	.panel__title{
 		.collapsed{
 			&::before{
-				float: left!important; 
-				padding-left: 0; 
+				float: left!important;
+				padding-left: 0;
 			}
 		}
 		}
 		.panel__title>a:before{
-			float: left!important; 
-			padding-left: 0; 
+			float: left!important;
+			padding-left: 0;
 		}
 		.panel-collapse--wrapper{
-			.collapse-item__item{  
-				text-align: right;  
+			.collapse-item__item{
+				text-align: right;
 			}
 		}
-		.collapse-item__group{ 
+		.collapse-item__group{
 			margin: 0 0 1em;
 			.collapse-item__checkbox-sign{
-				text-align: right; 
-				.collapse-item__field{  
-					.collapse-item--chechbox{  
-						.collapse-item__input{ 
-							right: 0; 
+				text-align: right;
+				.collapse-item__field{
+					.collapse-item--chechbox{
+						.collapse-item__input{
+							right: 0;
 						}
-						.collapse-item__title{ 
+						.collapse-item__title{
 							padding-right: 1.85714em;
-							&::before{  
+							&::before{
 								right: 0;
-							 } 
-							.collapse-item__counter{ 
+							 }
+							.collapse-item__counter{
 								margin-right: 5px;
 							}
 							&::after{
@@ -951,25 +951,25 @@ html[dir="rtl"] {
 				}
 			}
 		}
-		.filter__button-wrapper{	 
-			.filter__btn{ 
+		.filter__button-wrapper{
+			.filter__btn{
 				margin-right: auto;
 			}
 		}
-		@media(max-width: 768px) { 
-			.filter{ 
-				right: 0; 
-				transform: translate(100%,-75px); 
-				
+		@media(max-width: 768px) {
+			.filter{
+				right: 0;
+				transform: translate(100%,-75px);
+
 				.filter__result{
 					padding: 15px 10px 15px;
 				}
 			}
-			.filter__wrapper { 
+			.filter__wrapper {
 				right: 0;
-			} 
+			}
 		}
-		.filter__opened{ 
+		.filter__opened{
 			transform: translate(0%, -75px);
 		}
 		// pagination
@@ -993,54 +993,54 @@ html[dir="rtl"] {
 		}
 	//sidebar admin
 .vertical_nav {
-  right: 0; 
+  right: 0;
 }
 .wrapper__minify-admin{
 	margin-right: 60px !important;
-} 
+}
 //sidebar admin
-.sidebar{ 
-	right: -240px;  
-	.menu__section{ 
+.sidebar{
+	right: -240px;
+	.menu__section{
 		padding-right: 6px;
 	}
 }
 .list__sidebar{
-	.list__item{ 
-		.item__link{  
-			.item__icon{ 
-				float: right; 
-			}  
-			&::before{ 
-				left: 15px; 
+	.list__item{
+		.item__link{
+			.item__icon{
+				float: right;
+			}
+			&::before{
+				left: 15px;
 			}
 		}
 	}
 }
-.menu__link{   
-	.menu__icon { 
-    float: right; 
-} 
+.menu__link{
+	.menu__icon {
+    float: right;
 }
-.sub-menu{ 
-	.sub-menu__link{ 
+}
+.sub-menu{
+	.sub-menu__link{
     padding-right: 50px;
-    padding-left: 16px; 
+    padding-left: 16px;
 	}
 }
- 
 
-@media (min-width: 992px){ 
+
+@media (min-width: 992px){
 	// sidebar admin
 	.sidebar {
-		right: 0;  
-	}  
-	}  
+		right: 0;
+	}
+	}
 	.sidebar__closed {
 		right: -240px !important;
-	} 
+	}
 	.sidebar__opened {
-		right: 0 !important; 
+		right: 0 !important;
 	}
 	// body
 	@media (min-width : 992px){
@@ -1048,25 +1048,75 @@ html[dir="rtl"] {
       &.sidebar-with-icon{
         .wrapper{
           margin-right: 60px;
-        }  
+        }
     }
       &.open-side-nav{
 				.wrapper{
 					margin-right: 240px;
-				} 
-			}  
+				}
+			}
 		}
-       .toggle__menu{ 
-          float: right; 
-          .menu__icon{  
-            float: right; 
+       .toggle__menu{
+          float: right;
+          .menu__icon{
+            float: right;
         }
      }
-	} 
+	}
  @media (max-width : 992px){
-  .toggle__menu{    
-    float: right;  
+  .toggle__menu{
+    float: right;
  }
- }  
+ }
+ // login
+ input[type=tel] {
+  padding-left: 6px;
+  padding-right: 52px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 0;
+  width: 100% !important;
 }
- 
+input[type=password] {
+  text-align: right;
+  padding-right: 4.2em!important;
+  padding-left: 1em!important;
+}
+input[type=email],
+.ui[class*="left icon"].swdh95.input>input {
+  text-align: right;
+  padding-right: 4.2em!important;
+  padding-left: 1em!important;
+}
+.iti--allow-dropdown{
+  width: 100% !important;
+}
+.iti__flag-container{
+  right: 0;
+  left: auto;
+  padding-right: 8px;
+}
+.ui[class*="left icon"].input>i.icon {
+  right: 1px;
+  left: auto;
+  border-radius: .28571429rem 0 0 .28571429rem;
+}
+.ui.form.checkbox_sign {
+  text-align: right;
+}
+.ui.checkbox input[type=checkbox],
+ .ui.checkbox input[type=radio]{
+  right: 0;
+}
+.ui.checkbox .box:after,
+ .ui.checkbox .box:before,
+  .ui.checkbox label:after,
+   .ui.checkbox label:before{
+  right: 0;
+}
+.ui.checkbox.mncheck .box,
+ .ui.checkbox.mncheck label{
+  padding-right: 1.85714em;
+
+}
+}

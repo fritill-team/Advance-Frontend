@@ -8372,12 +8372,12 @@ a.rmv-btn i {
 // .vertical_nav__minify {
 //     width: 60px ;
 // }
- 
+
 // sidebar admin
 .vertical_nav {
   left: 0;
   &.vertical_nav--show-icon{
-    width: 60px ; 
+    width: 60px ;
       .menu_left{
         .left_section{
           ul{
@@ -8396,7 +8396,7 @@ a.rmv-btn i {
             }
           }
       }
-    }           
+    }
     .menu--label{
       display: none;
     }
@@ -8404,13 +8404,13 @@ a.rmv-btn i {
       font-size: 30px;
     }
 
-  } 
+  }
   &::-webkit-scrollbar {
     display: none;
 }
 }
 .vertical_nav__minify .menu--label {
-  display: none; 
+  display: none;
 }
 
 }
@@ -8459,10 +8459,10 @@ a.rmv-btn i {
         }
         .list__sidebar{
           .list__item{
-            .item__link{ 
+            .item__link{
               .item__label{
                 display: none !important;
-              } 
+              }
             }
           }
         }
@@ -8479,11 +8479,11 @@ a.rmv-btn i {
             .item__link{
               .item__label{
                 display: block !important;
-              } 
+              }
             }
           }
         }
-			}  
+			}
 		}
        .toggle__menu{
           width: 60px;
@@ -8502,24 +8502,24 @@ a.rmv-btn i {
             color: #fff;
             background: #af1f24;
           }
-          .menu__icon{ 
+          .menu__icon{
             display: block;
             float: left;
             width: 60px;
             height: 60px;
             line-height: 60px;
-            font-size: 22px; 
+            font-size: 22px;
         }
      }
 	}
- 
+
  @media (max-width : 992px){
   .toggle__menu{
-    width: 60px;  
-    height: 60px;   
-    color: #fff; 
+    width: 60px;
+    height: 60px;
+    color: #fff;
     margin: 0;
-    cursor: pointer; 
+    cursor: pointer;
     display: block;
     float: left;
     padding: 0;
@@ -8531,8 +8531,26 @@ a.rmv-btn i {
     .menu__icon{
       width: 60px;
       background: #fff;
-      color: #737373; 
-      margin: 0; 
+      color: #737373;
+      margin: 0;
     }
  }
  }
+ // input
+//  .phone-field__input{
+
+//  }
+input[type=tel] {
+  padding-right: 6px;
+  padding-left: 52px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 0;
+  width: 100% !important;
+}
+.iti--allow-dropdown{
+  width: 100% !important;
+}
+.iti__flag-container{
+  padding-left: 8px;
+}

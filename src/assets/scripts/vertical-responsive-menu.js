@@ -55,7 +55,7 @@
 //           for (var j = 0; j < subnavs.length; j++) {
 
 //             if(e.target.offsetParent != subnavs[j])
-//               subnavs[j].classList.remove('menu--subitens__opened');          
+//               subnavs[j].classList.remove('menu--subitens__opened');
 
 //           }
 
