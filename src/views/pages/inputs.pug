@@ -30,10 +30,13 @@ block content
 				label.text-field__label Course Title*
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					.text-field__limit 60
-				.field-wrapper__message
-					| Please provide a valid city.
+				.message this is for hint
+				.messages
+					ul 
+						li 
+							| Please provide a valid city.
 
 
 		.col-lg-12.col-md-6.col-sm-12
@@ -41,8 +44,11 @@ block content
 				label.text-field__label Course Title*
 				.text-field__content
 					input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-				.field-wrapper__message
-					| Please provide a valid city.
+				.message this is for hint
+				.messages
+					ul 
+						li 
+							| Please provide a valid city.
 	 
 		.col-lg-12.col-md-6.col-sm-12
 			.field-wrapper.field-wrapper__file-input.field-wrapper--error
@@ -51,8 +57,11 @@ block content
 					.file-input
 						input#inputGroupFile06.custom-file-input(type='file')
 						label.file-input__label(for='inputGroupFile06') No Choose file - (Pdf, Video)
-				.field-wrapper__message
-					| Please provide a valid city.
+				.message this is for hint
+				.messages
+					ul 
+						li 
+							| Please provide a valid city.
 
 
 		.col-lg-12.col-md-6.col-sm-12
@@ -76,8 +85,11 @@ block content
 						option(value='13') Telugu
 						option(value='14') &#x92E;&#x930;&#x93E;&#x920;&#x940;
 						option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
-				.field-wrapper__message
-					| Please select a valid city.
+				.message this is for hint
+				.messages
+					ul 
+						li 
+							| Please provide a valid city.
 
 		.col-lg-12.mb-4
 			h4.item__title General card
