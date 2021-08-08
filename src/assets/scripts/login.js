@@ -1,93 +1,97 @@
-// script reset page 
+// script reset page
 
 // let emailEl = document.querySelector('#emailtype');
-$('#emailtype').on('input', function(e){
+$('#emailtype').on('input', function (e) {
   let value = e.target.value;
 
-  if(value.match(/^\d+$/)){
-      $('#iconmassege').hide();
-      $('#keynumber').show();
-      e.target.type = 'number';
-  } else  {
-      $('#iconmassege').show();
-      $('#keynumber').hide();
-      e.target.type = 'email';
+  if (value.match(/^\d+$/)) {
+    $('#iconmassege').hide();
+    $('#keynumber').show();
+    e.target.type = 'number';
+  } else {
+    $('#iconmassege').show();
+    $('#keynumber').hide();
+    e.target.type = 'email';
   }
 
-})
- 
-// script reset page 
-const form = document.querySelector('[name="verify"]');
-const inputs = form.querySelectorAll('input')
-const KEYBOARDS = {
-      backspace: 8,
-  arrowLeft: 37,
-  arrowRight: 39,
-}
+});
 
-function handleInput(e) {
-  const input = e.target
-  const nextInput = input.nextElementSibling
-  if (nextInput && input.value) {
-    nextInput.focus()
-    if (nextInput.value) {
-          nextInput.select()
+// script reset page
+var verification = (function () {
+  //cache dom
+  var $inputs = $("#verification").find("input");
+
+  //bind events
+  $inputs.on('keyup', processInput);
+
+  //define methods
+  function processInput(e) {
+    var x = e.charCode || e.keyCode;
+    if ((x == 8 || x == 46) && this.value.length == 0) {
+      var indexNum = $inputs.index(this);
+      if (indexNum != 0) {
+        $inputs.eq($inputs.index(this) - 1).focus();
+      }
+    }
+
+    if (ignoreChar(e))
+      return false;
+    else if (this.value.length == this.maxLength) {
+      $(this).next('input').focus();
     }
   }
-}
+  function ignoreChar(e) {
+    var x = e.charCode || e.keyCode;
+    if (x == 37 || x == 38 || x == 39 || x == 40)
+      return true;
+    else
+      return false
+  }
 
-function handlePaste(e) {
-      e.preventDefault()
-  const paste = e.clipboardData.getData('text')
-  inputs.forEach((input, i) => {
-    input.value = paste[i] || ''
-  })
-}
+})();
 
-function handleBackspace(e) { 
-const input = e.target
-if (input.value) {
-    input.value = ''
-return
-} 
-input.previousElementSibling.focus()
-}
-    
- function handleArrowLeft(e) {
-  const previousInput = e.target.previousElementSibling
-  if (!previousInput) return
-  previousInput.focus()
-}
 
-function handleArrowRight(e) {
-    const nextInput = e.target.nextElementSibling
-    if (!nextInput) return
-    nextInput.focus()
-}
-    
-form.addEventListener('input', handleInput)
-inputs[0].addEventListener('paste', handlePaste)
+//login phone number
 
-inputs.forEach(input => {
-input.addEventListener('focus', e => {
-setTimeout(() => {
-e.target.select()
-}, 0)
-})
-            
-input.addEventListener('keydown', e => {
-switch(e.keyCode) {
-        case KEYBOARDS.backspace:
-        handleBackspace(e)
-        break
-        case KEYBOARDS.arrowLeft:
-        handleArrowLeft(e)
-        break
-        case KEYBOARDS.arrowRight:
-        handleArrowRight(e)
-        break
-      default:  
-    }
-  })
-})
- 
+// var input = document.querySelector("#phone");
+// var iti = window.intlTelInput(input, {
+//   // separateDialCode:true,
+//   utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+// });
+
+// // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+// window.iti = iti;
+
+// const phoneInputField = document.querySelector("#phone");
+// const phoneInput = window.intlTelInput(phoneInputField, {
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//   initialCountry: "auto",
+//   geoIpLookup: getIp,
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//   preferredCountries: ["us", "co", "in", "de"],
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+// });
+
+// function getIp(callback) {
+//   fetch('https://ipinfo.io/json?token=<your token>', { headers: { 'Accept': 'application/json' } })
+//     .then((resp) => resp.json())
+//     .catch(() => {
+//       return {
+//         country: 'us',
+//       };
+//     })
+//     .then((resp) => callback(resp.country));
+// };
+
+var input = document.querySelector("#phone");
+var iti = window.intlTelInput(input, {
+  // separateDialCode:true,
+  utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+});
+
+// store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+window.iti = iti;
+

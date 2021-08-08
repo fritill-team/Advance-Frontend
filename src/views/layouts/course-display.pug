@@ -1,0 +1,71 @@
+//- course-display layout
+
+doctype html
+html(lang='en' dir="")
+	head
+		//- Stylesheets
+		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/style.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
+		//- link(href='https://unpkg.com/video.js/dist/video.min.js' rel='stylesheet')
+		//- Vendor Stylesheets
+		//- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
+		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+ 
+		//- Title
+		block title
+			title Your project!
+
+	body
+
+		//- Menu
+		include ../components/header.pug
+			block category
+		include ../components/sidebar.pug
+			block sidebar
+				include ../components/sidebar-content.pug
+					block collapse
+				//- include ../components/sidebar-content.pug
+
+		//- block content
+
+		block content
+			.wrapper.wrapper--display
+				//- course viewe
+				//- course video
+				section.course-video
+					.container-fluid
+						.row
+							.col-lg-12
+								.course-video__wrapper
+									.row.justify-content-center
+										block courseVideo
+
+					//- section.course-video
+					//-   block courseVideo
+				section.wrapper-user
+					.container-fluid
+						.row
+							.col-lg-12
+									block userAccount
+				section.wrapper-tabs
+					.container-fluid
+						.row
+							.col-lg-12
+								block tabs
+
+				include ../components/footer.pug
+
+		//- block scripts
+		block scripts
+			//- script(src='https://unpkg.com/video.js/dist/video-js.min.css')
+
+
+
+

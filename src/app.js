@@ -4,7 +4,6 @@
 // import './assets/styles/_app.scss';
 
 $(function() {
-  console.log('Ready!');
-
-  require('./assets/scripts/index');
-})
+  console.log("Ready!");
+  require("./assets/scripts/index");
+});

@@ -88,10 +88,18 @@
     padding: 0 1em;
   }
   // general message styling
-  .field-wrapper__message{
+  .messages{
     font-size: 14px;
     font-weight: 500;
     color: inherit;
+    padding: 0 1em;
+  }
+  // general style for hint
+  .message{
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    text-align: left;
     margin: 8px 0;
     padding: 0 1em;
   }
@@ -113,6 +121,7 @@
       padding: 12px 1em;
       box-shadow: inset 0 1px 4px rgba(0,0,0,.1)!important;
       border: 1px solid #e5e5e5!important;
+      // padding: 10px;
       &.text-field--left{
         padding: 0 1em !important;
         height: 40px;
@@ -162,7 +171,7 @@
     .text-field__label{
       color: #dc3545;
     }
-    .field-wrapper__message{
+    .messages{
       color: #ed2a26;
     }
     .text-field__content{
@@ -174,11 +183,11 @@
   }
 
   // this class hides messages
-  &.field-wrapper--no-message{
-    .field-wrapper__message{
-      display: none;
-    }
-  }
+  // &.field-wrapper--no-message{
+  //   .field-wrapper__message{
+  //     display: none;
+  //   }
+  // }
 
   // input type file
   &.field-wrapper__file-input{
@@ -239,6 +248,9 @@
 
   // input type select
   &.field-wrapper__select-input{
+    .text-field__content{
+      height: 40px;
+    }
     .select-menu{
       display: flex !important;
       justify-content: space-between !important;
