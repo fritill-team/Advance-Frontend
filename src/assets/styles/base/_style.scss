@@ -8329,20 +8329,18 @@ a.rmv-btn i {
 	.actions-form{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		height: 100%;
 		padding: 20px ;
 	}
   .emoji{
     position: absolute;
     right: 50px;
-		// opacity: 0;
     bottom: 100px;
     font-size: 500px;
     opacity: 0.07;
-    // animation: emoji infinite;
-		// animation-delay: .2s;
-    // animation-duration: .5s;
+  }
+  .card-content__card-description{
+    margin-bottom: 15px;
   }
 }
 .cancel{
