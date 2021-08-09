@@ -17,14 +17,12 @@
 					.item.selector__item Highest Price
 	.filter-category
 		#accordionfilter.filter__wrapper.accordion
-			include ../components/general-component/collapse-filter.pug
+			include /general-component/collapse-filter.pug
 			+collapse-filter('#collapseTwo','collapseTwo')
-				block filter-checkbox
-				include ./general-component/filter-checkbox.pug
 			+collapse-filter('#collapseThree','collapseThree')
-			+collapse-filter('#collapsefour','collapsefour')
-			+collapse-filter('#collapsefive','collapsefive')
-			+collapse-filter('#collapsesix','collapsesix')
+			+collapse-filter('#collapse-four','collapse-four')
+			+collapse-filter('#collapse-five','collapse-five')
+			+collapse-filter-rating('#collapse-six','collapse-six')
 				//- #collapseTen.panel-collapse.collapse(aria-labelledby='headingOne' data-parent='#accordionfilter')
 				//- 	.panel-body
 				//- 		.ui.form
