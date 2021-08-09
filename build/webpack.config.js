@@ -2,8 +2,8 @@ const path = require("path"),
   webpack = require("webpack"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   TerserPlugin = require("terser-webpack-plugin"),
-  {VueLoaderPlugin} = require("vue-loader"),
-  utils = require("./utils")
+  { VueLoaderPlugin } = require("vue-loader"),
+  utils = require("./utils");
 
 module.exports = env => ({
   context: path.resolve(__dirname, "../src"),
@@ -15,14 +15,15 @@ module.exports = env => ({
     filename: "assets/js/[name].bundle.js"
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "../src/views"),
+    contentBase: path.resolve(__dirname, "../src/views")
   },
   resolve: {
     extensions: [".js"],
     alias: {
       source: path.resolve(__dirname, "../src"), // Relative path of src
       images: path.resolve(__dirname, "../src/assets/images"), // Relative path of images
-      fonts: path.resolve(__dirname, "../src/assets/fonts") // Relative path of fonts
+      fonts: path.resolve(__dirname, "../src/assets/fonts"), // Relative path of fonts
+      videos: path.resolve(__dirname, "../src/assets/videos")
     }
   },
   module: {
@@ -33,16 +34,14 @@ module.exports = env => ({
         use: [
           {
             loader: "babel-loader",
-            options: {presets: ["es2015"]}
+            options: { presets: ["es2015"] }
           }
         ]
       },
       {
         test: /\.css$/,
         use: [
-          env === "development"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader,
+          env === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -58,9 +57,7 @@ module.exports = env => ({
       {
         test: /\.scss$/,
         use: [
-          env === "development"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
+          env === "development" ? "style-loader" : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           {
             loader: "css-loader",
             options: {
@@ -83,15 +80,15 @@ module.exports = env => ({
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg|ico)(\?.*)?$/,
+        test: /\.(png|jpg|gif|svg|ico|srt|vtt)(\?.*)?$/,
         loader: "file-loader",
         options: {
           limit: 30000,
-          name: 'assets/images/[name].[ext]'
+          name: "assets/images/[name].[ext]"
         }
       },
       {
-        test: /\.(woff|woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff|woff2?|eot|ttf|otf|srt|vtt)(\?.*)?$/,
         loader: "url-loader",
         options: {
           name: "assets/fonts/[name].[ext]"
@@ -99,9 +96,9 @@ module.exports = env => ({
       },
       {
         test: /\.(mp4)(\?.*)?$/,
-        loader: "url-loader",
+        loader: "file-loader",
         options: {
-          limit: 10000,
+          limit: 30000,
           name: "assets/videos/[name].[ext]"
         }
       },
@@ -143,8 +140,12 @@ module.exports = env => ({
       jQuery: "jquery",
       "window.$": "jquery",
       "window.jQuery": "jquery",
-      Popper: ['popper.js', 'default']
+      Popper: ["popper.js", "default"]
     }),
+    // new webpack.ProvidePlugin({
+    //   "videojs": "video.js",
+    //   "window.videojs": "video.js"
+    // }),
     new VueLoaderPlugin()
   ]
-})
+});

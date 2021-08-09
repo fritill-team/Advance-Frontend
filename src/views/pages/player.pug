@@ -1,0 +1,43 @@
+extends ../layouts/course-display.pug
+
+block title
+	title video-player
+block collapse
+	include ../components/collapse.pug
+block courseVideo
+block userAccount
+	.course_tabs
+		#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
+			a#nav-courses-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
+			a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Transcript
+block tabs
+	//- .container 
+	.row
+		.col-lg-8
+			.course_tab_content
+				#nav-tabContent.tab-content
+					#nav-comment.tab-pane.fade.show.active(role='tabpanel')
+						include ../components/comments.pug
+					//- start course list component
+					//- include ../components/course.pug
+					#nav-tranScript.tab-pane.fade(role='tabpanel')
+						h2 TranScript
+						//- include ../components/review-item.pug
+					#nav-reviews.tab-pane.fade(role='tabpanel')
+						.reviews
+							.row
+								.col-lg-5
+									include ../components/review.pug
+								.col-lg-7
+									.review__header
+										.header__header-content
+											h3.header-content__title Reviews
+											.header-content__search
+												input.search__input(type='text' placeholder='Search reviews...')
+												button.search__btn
+													i.uil.uil-search
+		.col-lg-4.mt-5
+			<h3 class="about-required__title">Related courses</h3>
+			include ../components/related-courses.pug
+
+

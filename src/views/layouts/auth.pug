@@ -2,52 +2,58 @@
 
 doctype html
 html(lang='en' dir="")
-  head
-    //- Stylesheets
+	head
+		//- Stylesheets
 
-    //- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/style.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
-    //- link(href='../assets/styles/base/night-mode.css' rel='stylesheet')
-    //- Vendor Stylesheets
-    //- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-    //- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
-    meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-    meta(charset="utf-8")
-     //- Title
-    block title
-      title Login
-  body
-    section.auth-form-wrapper
-      div.container
-        div.row.justify-content-lg-center.justify-content-md-center
-          .col-lg-12
-            div.auth-form__title#logo
-              h2.fw-bold Advance
-              //- a(href='index.html')
-              //-   img(src='../../assets/images/sign_logo.png' alt='')
-              //- a(href='index.html')
-              //-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
-          div.col-lg-6.col-md-8
-            article.auth-form__content
-                block content
-          .sign_footer
-            | &copy; 2020
-            strong  Advance
-            |. All Rights Reserved.
+		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/style.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
+		//- link(href='../assets/styles/base/night-mode.css' rel='stylesheet')
+		//- Vendor Stylesheets
+		//- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
+		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js") 
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css")
+      
+  
+
+		meta(charset="utf-8")
+		//- Title
+		block title
+			title Login
+	body
+		section.auth-form-wrapper
+			div.container
+				div.row.justify-content-lg-center.justify-content-md-center
+					.col-lg-12
+						div.auth-form__title#logo
+							h2.fw-bold Advance
+							//- a(href='index.html')
+							//-   img(src='../../assets/images/sign_logo.png' alt='')
+							//- a(href='index.html')
+							//-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
+					div.col-lg-6.col-md-8
+						article.auth-form__content
+								block content
+					.sign_footer
+						| &copy; 2020
+						strong  Advance
+						|. All Rights Reserved.
 
 
 
 
-    block scripts
-    //- script(src='../assets/scripts/jquery-3.3.1.min.js')
-    //- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-    //- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-    //- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-    //- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-    //- script(src='../assets/scripts/custom.js')
-    //- script(src='../assets/scripts/night-mode.js')
+		block scripts
+		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
+		//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
+		//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
+		//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
+		//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
+		//- script(src='../assets/scripts/custom.js')
+		//- script(src='../assets/scripts/night-mode.js')
