@@ -8464,24 +8464,27 @@ a.rmv-btn i {
             .item__label {
               display: none !important;
             }
+            // &::before {
+            //   display: none;
+            // }
           }
         }
       }
-      // .sub-menu-item {
-      //   .item__link {
-      //     &::before {
-      //       position: absolute;
-      //       top: 0;
-      //       right: 15px;
-      //       height: 45px;
-      //       line-height: 45px;
-      //       font-family: "Font Awesome 5 Free";
-      //       content: "\f0d7";
-      //       font-weight: 900;
-      //       display: none;
-      //     }
-      //   }
-      // }
+      .sub-menu-item {
+        .item__label {
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            height: 45px;
+            line-height: 45px;
+            font-family: "Font Awesome 5 Free";
+            content: "\f0d7";
+            font-weight: 900;
+            display: block;
+          }
+        }
+      }
     }
     &.open-side-nav {
       .wrapper {
