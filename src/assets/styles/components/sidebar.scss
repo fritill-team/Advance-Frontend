@@ -82,14 +82,25 @@
 .sub-menu-item {
   .item__label {
     &::before {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+
+      border-top: 20px solid #f00;
+
       position: absolute;
       top: 0;
       right: 15px;
-      height: 45px;
-      line-height: 45px;
-      font-family: "Font Awesome 5 Free";
-      content: "\f0d7";
-      font-weight: 900;
+      // height: 5px;
+      // width: 5px;
+      // line-height: 45px;
+      // font-family: "Font Awesome 5 Free";
+      // display: block;
+      content: "";
+      // font-weight: 900;
+      // border-width: 10px 15px 10px 0;
+      // border: solid black;
     }
   }
 }
