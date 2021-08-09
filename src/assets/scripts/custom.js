@@ -465,3 +465,27 @@ for (var i = 0; i < subnavs.length; i++) {
 
   }
 };
+
+
+// scrolling
+// $(function() {  
+//   $(".card__content").niceScroll({
+//     cursorcolor: "red",
+//     autohidemode: "scroll",
+//     cursorwidth: "20px",
+//   });
+// });
+
+$(".card__header--collapse").each(function(){
+  $(this).on('click', function(){
+    $(this).next().toggleClass('active');
+    $(this).children('.card__collapse--toggle').toggleClass('active');
+  })
+})
+
+// $('.card__collapse--toggle').each(function(){
+//   $(this).on('click', function(){
+//     $(this).parent.next().toggleClass('active')
+//     $(this).toggleClass('active');
+//   })
+// })
