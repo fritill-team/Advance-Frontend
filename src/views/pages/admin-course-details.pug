@@ -1,8 +1,99 @@
 extends ../layouts/admin.pug
 block title
-	title Admin Dashbord 
-block content	
-	.container 
-		.row 
-			.col-lg-6 
-				include ../components/card-collapse
+	title Admin course details 
+block sidebar
+	include ../components/sidebar-content.pug
+	
+block content
+	.container
+		.row
+			.col-lg-12 
+				.course_tabs
+					#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
+						a#nav-reviews-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='false') About
+						a#nav-about-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Content
+						a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
+			.col-lg-8
+				.course_tab_content
+					#nav-tabContent.tab-content
+						//- include ../components/review-item.pug
+						#nav-about.tab-pane.fade.show.active(role='tabpanel')
+							include ../components/about.pug
+						//- start course list component
+						//- include ../components/course.pug
+						#nav-tranScript.tab-pane.fade(role='tabpanel')
+							//- h2 Transcript
+							.course-content
+								h3.course-content__title Chapter content
+								.course-content__details
+									ul.details__list
+										li.list__list-item
+											span.list--list-content-number  402 lessons
+										li.list__list-item
+											span.list--time-course 47:06:29
+								.course-content__course-list
+									.course-list__list-content
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Unit Objectives
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 01.40
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-file.content-name__icon
+												.content-name__top-title
+													.top-title__title A Note On Asking For Help
+											.content-item__details
+												span.details__content-summary 00:12
+										.list-content__content-item
+											.content-item__content-name
+												i.uil.uil-play-circle.content-name__icon
+												.content-name__top-title
+													.top-title__title Why This Course?
+											.content-item__details
+												a.details--preview-text(href='#') Preview
+												span.details__content-summary 07:48
+								//- include ../components/course.pug
+						#nav-comment.tab-pane.fade(role='tabpanel')
+							include ../components/comments.pug
