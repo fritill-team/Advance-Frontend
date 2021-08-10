@@ -1,13 +1,13 @@
-.filter__button-wrapper 
+.filter__button-wrapper
 	button#toggleMenu.toggle_menu.toggle-filter(type='button')
-		i.uil.uil-bars 
-.filter 
+		i.uil.uil-bars
+.filter
 	.filter__result
 		.result__title Filters
 		.filter__selector
 			.ui.inline.dropdown.selector--dropdown
 				.selector__text Sort
-				i.dropdown.icon.selector__icone
+				i.dropdown.icon.selector__icon
 				.menu.selector--menu
 					.item.selector__item Most Relevant
 					.item.selector__item Most Reviewed
@@ -17,115 +17,114 @@
 					.item.selector__item Highest Price
 	.filter-category
 		#accordionfilter.filter__wrapper.accordion
-			include ../components/general-component/collapse-filter.pug
-			+collapse-fillter('#collapseOne','collapseOne')
-			+collapse-fillter('#collapseTwo','collapseTwo')
-			+collapse-fillter('#collapseThree','collapseThree')
-			+collapse-fillter('#collapsefour','collapsefour')
-			+collapse-fillter('#collapsefive','collapsefive')
-			+collapse-fillter('#collapsesix','collapsesix')
-				#collapseTen.panel-collapse.collapse(aria-labelledby='headingOne' data-parent='#accordionfilter')
-					.panel-body
-						.ui.form
-							.grouped.fields
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| SEO
-												span.filter__counter (428)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Php
-												span.filter__counter (1526)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Wordpress Pro
-												span.filter__counter (428)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| WooCommerce
-												span.filter__counter (958)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Bootstrap
-												span.filter__counter (748)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Web Development
-												span.filter__counter (2256)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Web Design
-												span.filter__counter (4859)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Digital Marketing
-												span.filter__counter (2458)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| E-commerce
-												span.filter__counter (1245)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Wordpress Themes
-												span.filter__counter (5879)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Wordpress Plugins
-												span.filter__counter (2654)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Wordpress Hosting
-												span.filter__counter (1485)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Elementor
-												span.filter__counter (3658)
-								.ui.form.checkbox_sign
-									.inline.field
-										.ui.checkbox.mncheck
-											input.hidden(type='checkbox' tabindex='0')
-											label
-												| Wordpress for Ecommerce
-												span.filter__counter (5894)
+			include /general-component/collapse-filter.pug
+			+collapse-filter('#collapseTwo','collapseTwo')
+			+collapse-filter('#collapseThree','collapseThree')
+			+collapse-filter('#collapse-four','collapse-four')
+			+collapse-filter('#collapse-five','collapse-five')
+			+collapse-filter-rating('#collapse-six','collapse-six')
+				//- #collapseTen.panel-collapse.collapse(aria-labelledby='headingOne' data-parent='#accordionfilter')
+				//- 	.panel-body
+				//- 		.ui.form
+				//- 			.grouped.fields
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| SEO
+				//- 								span.filter__counter (428)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Php
+				//- 								span.filter__counter (1526)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Wordpress Pro
+				//- 								span.filter__counter (428)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| WooCommerce
+				//- 								span.filter__counter (958)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Bootstrap
+				//- 								span.filter__counter (748)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Web Development
+				//- 								span.filter__counter (2256)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Web Design
+				//- 								span.filter__counter (4859)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Digital Marketing
+				//- 								span.filter__counter (2458)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| E-commerce
+				//- 								span.filter__counter (1245)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Wordpress Themes
+				//- 								span.filter__counter (5879)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Wordpress Plugins
+				//- 								span.filter__counter (2654)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Wordpress Hosting
+				//- 								span.filter__counter (1485)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Elementor
+				//- 								span.filter__counter (3658)
+				//- 				.ui.form.checkbox_sign
+				//- 					.inline.field
+				//- 						.ui.checkbox.mncheck
+				//- 							input.hidden(type='checkbox' tabindex='0')
+				//- 							label
+				//- 								| Wordpress for Ecommerce
+				//- 								span.filter__counter (5894)
 			//- .panel.panel-default
 			//- 	#headingTwo.panel-heading
 			//- 		.panel-title10

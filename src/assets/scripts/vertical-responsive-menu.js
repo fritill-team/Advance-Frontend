@@ -23,7 +23,7 @@
 //   // Toggle menu click
 //   querySelector('.toggle_menu').onclick = function () {
 
-//     nav.classList.toggle('vertical_nav__opened');
+//     nav.classList.toggle('nav--opened');
 
 //     wrapper.classList.toggle('toggle-content');
 
