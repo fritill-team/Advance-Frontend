@@ -1,0 +1,8 @@
+.media-card{
+  display: flex;
+  flex-direction: column;
+  .media-card__image{
+    max-height: 300px;
+    
+  }
+}
