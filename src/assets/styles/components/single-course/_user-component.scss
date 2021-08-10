@@ -38,6 +38,7 @@
       }
     }
     .live-user__user-content {
+      width: 100%;
       .user-content__text {
         color: #333 !important;
         font-size: 16px;
@@ -65,5 +66,7 @@
     background: #fff;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }

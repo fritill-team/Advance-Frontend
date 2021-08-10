@@ -22,7 +22,18 @@ block content
 						#nav-details.tab-pane.fade.show.active(role='tabpanel')
 							include ../components/general-wrapper.pug
 								block details
-									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusantium, officiis voluptatibus ipsam eveniet magni delectus sapiente quisquam qui quaerat est fugiat unde ratione natus error? Odit deleniti quas excepturi!
+									h3.about-required__title Requirements
+									.d-flex.align-item-center 
+										.description__name title 
+										.description__details Lorem ipsum, dolor sit amet consectetur 
+									ul.about-required__list
+										li.list__list-item
+
+											span.list-item__details Have a computer with Internet
+										li.list__list-item
+											span.list-item__details Be ready to learn an insane amount of awesome stuff
+										li.list__list-item
+											span.list-item__details Prepare to build real web apps!
 						//- start course list component
 						//- include ../components/course.pug
 						#nav-tranScript.tab-pane.fade(role='tabpanel')
@@ -359,28 +370,51 @@ block content
 										//-End-List
 
 						#nav-comment.tab-pane.fade(role='tabpanel')
-							include ../components/comments.pug
-						#nav-thread.tab-pane.fade(role='tabpanel')
-							include ../components/comments.pug
-						#nav-media.tab-pane.fade(role='tabpanel')
-							.row
-								.col-lg-3
-									include ../components/media-card.pug
+							.row 
+								.col-lg-8
+									include ../components/comments.pug
+								.col-lg-4
+									.header__title
+										h3.title__name Subscripers
 									include ../components/general-component/user-acount.pug
 									include ../components/general-component/progress.pug
 									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
-
+									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+										+progress("progress--height","w-70", "70" , "0", "100")
+									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+										+progress("progress--height","w-70", "70" , "0", "100")
+									
+						#nav-thread.tab-pane.fade(role='tabpanel')
+							include ../components/comments.pug
+						#nav-media.tab-pane.fade(role='tabpanel')
+							.row
 								.col-lg-12
 									include ../components/general-wrapper.pug
 										block details
-											div
-												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
-													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
-												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
-													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg' alt='')
-												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
-													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg' alt='')
-												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
-													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg' alt='')
+											.row 
+												.col-lg-3 
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
+														include ../components/media-card.pug
+												.col-lg-3 
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
+														include ../components/media-card.pug
+												.col-lg-3
+													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
+														include ../components/media-card.pug
 
