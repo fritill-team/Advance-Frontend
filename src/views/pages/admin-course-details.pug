@@ -1,13 +1,13 @@
 extends ../layouts/admin.pug
 block title
-	title Admin course details 
+	title Admin course details
 block sidebar
 	include ../components/sidebar-content.pug
-	
+
 block content
 	.container
 		.row
-			.col-lg-12 
+			.col-lg-12
 				.course_tabs
 					#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
 						a#nav-details-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-details' role='tab' aria-selected='false') Details
@@ -364,6 +364,13 @@ block content
 							include ../components/comments.pug
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row
+								.col-lg-3
+									include ../components/media-card.pug
+									include ../components/general-component/user-acount.pug
+									include ../components/general-component/progress.pug
+									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+										+progress("progress--height","w-70", "70" , "0", "100")
+
 								.col-lg-12
 									include ../components/general-wrapper.pug
 										block details

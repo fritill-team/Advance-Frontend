@@ -1,3 +1,4 @@
-mixin progress(widthProgres,valuenow ,valuemin , valuemax)
-  .rating__progress
+mixin progress(heightProgress,widthProgres,valuenow ,valuemin , valuemax)
+  .rating__progress(class=heightProgress)
     .progress--progress-bar(class=widthProgres)(role='progressbar' aria-valuenow=valuenow aria-valuemin=valuemin aria-valuemax=valuemax)
+
