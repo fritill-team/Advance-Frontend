@@ -117,12 +117,12 @@
     text-decoration: none;
   }
 }
-.menu--subitems__opened {
+.menu--opened {
   .sub-menu {
     display: block;
   }
 }
-.menu--subitems__opened {
+.menu--opened {
   .menu--label {
     display: block;
   }
@@ -136,7 +136,7 @@
   }
 }
 @media (min-width: 992px) {
-  .vertical_nav__minify {
+  .vertical--minify {
     width: 0px;
   }
 
@@ -165,17 +165,17 @@
         font-size: 30px;
       }
     }
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
   }
-  .vertical_nav__minify .menu--label {
+  .vertical--minify .menu--label {
     display: none;
   }
 }
-.sidebar::-webkit-scrollbar {
-  display: none;
-}
+// .sidebar::-webkit-scrollbar {
+//   display: none;
+// }
 
 .sidebar__closed {
   left: -240px !important;
@@ -185,7 +185,7 @@
   left: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.2)-30px 0 30px 30px;
 }
-.active-menu {
+.active--menu {
   background: #ffecec;
   color: #ed2a26 !important;
 }

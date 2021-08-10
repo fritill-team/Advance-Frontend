@@ -342,10 +342,10 @@ body {
   background: #f7f7f7 !important;
 }
 
-.menu_left::-webkit-scrollbar {
+.menu_scrollbar::-webkit-scrollbar {
   width: 4px;
 }
-.menu_left::-webkit-scrollbar-thumb {
+.menu_scrollbar::-webkit-scrollbar-thumb {
   height: 50px;
   background: hsla(0, 0%, 53.3%, 0.4);
 }
@@ -8354,7 +8354,7 @@ a.rmv-btn i {
   overflow: hidden;
   height: 100vh;
 }
-.wrapper__minify {
+.wrapper--minify {
   margin-left: 0px;
 }
 
@@ -8372,7 +8372,7 @@ a.rmv-btn i {
 //sidebar dashbord
 
 @media (min-width: 992px) {
-  // .vertical_nav__minify {
+  // .vertical--minify {
   //     width: 60px ;
   // }
 
@@ -8381,7 +8381,7 @@ a.rmv-btn i {
     left: 0;
     &.vertical_nav--show-icon {
       width: 60px;
-      .menu_left {
+      .menu_scrollbar {
         .left_section {
           ul {
             .menu--item {
@@ -8407,17 +8407,17 @@ a.rmv-btn i {
         font-size: 30px;
       }
     }
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
   }
-  .vertical_nav__minify .menu--label {
+  .vertical--minify .menu--label {
     display: none;
   }
 }
-.vertical_nav::-webkit-scrollbar {
-  display: none;
-}
+// .vertical_nav::-webkit-scrollbar {
+//   display: none;
+// }
 // body
 // @media (min-width : 992px){
 //   body{

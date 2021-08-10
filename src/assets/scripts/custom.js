@@ -393,7 +393,7 @@ $('.grid').on('click', function () {
 
 //   // Toggle menu click
 //   querySelector('.toggle_menu').onclick = function () {
-//     nav.classList.toggle('vertical_nav__opened test');
+//     nav.classList.toggle('nav--opened test');
 //     wrapper.classList.toggle('toggle-content');
 //   };
 
@@ -431,7 +431,7 @@ $('.grid').on('click', function () {
 // $(document)
 // 	.on('click', '.collapse_menu', function () {
 // 		console.log('dlkvdogn')
-// 		nav.toggleClass('vertical_nav__opened vertical_nav__minify')
+// 		nav.toggleClass('nav--opened vertical_nav__minify')
 // 		wrapper.toggleClass('toggle-content wrapper__minify ');
 // 	})
 
@@ -445,26 +445,21 @@ var nav = $('.sidebar'),
   sidebarIcon = $('.sidebar-with-icon'),
   menuItem = $('.sub-menu-item'),
   menu = $("#js-menu")
+
 $(document)
   .on('click', '.toggle__menu', function () {
-    nav.toggleClass('vertical_nav__opened vertical_nav__minify')
-    wrapper.toggleClass('toggle-content wrapper__minify ');
+    nav.toggleClass('nav--opened vertical--minify')
+    wrapper.toggleClass('toggle-content wrapper--minify ');
     sidebarIcon.toggleClass("open-side-nav");
+    $('.sub-menu-item').each(function(i, item) {
+      $(item).removeClass('menu--opened')
+    })
   })
 
-
-  // $(document).ready(function() {
-  //   $(".sub-menu-item").click(function () {
-  //       $(".sub-menu-item").toggleClass("active-menu");
-  //   });
-  //   });
-    // $(document).ready(function() {
-    //   $(".sub-menu-item").click(function () {
-    //       $(".sub-menu-item .item__link").removeClass("active-menu");
-    //       // $(".tab").addClass("active"); // instead of this do the below
-    //       $(".sub-menu-item .item__link").addClass("active-menu");
-    //   });
-    //   });
+  // remove class
+  if ($('.sidebar').hasClass("sidebar-with-icon")){
+    $('sub-menu-item').removeClass('menu--opened')
+  };
 
 // Open Sub Menu
 
@@ -473,9 +468,9 @@ for (var i = 0; i < subnavs.length; i++) {
     subnavs[i].querySelector('.item__link').addEventListener('click', function (e) {
       for (var j = 0; j < subnavs.length; j++) {
         if (e.target.offsetParent != subnavs[j])
-          subnavs[j].classList.remove('menu--subitems__opened');
+          subnavs[j].classList.remove('menu--opened');
       }
-      e.target.offsetParent.classList.toggle('menu--subitems__opened');
+      e.target.offsetParent.classList.toggle('menu--opened');
     }, false);
 
   }
@@ -484,38 +479,17 @@ for (var i = 0; i < subnavs.length; i++) {
 // active class in collapsed sidebar
 
 $('.sub-menu-item').click(function() {
-  if ($(this).hasClass('menu--subitems__opened')){
-    $('.menu--subitems__opened .item__link').addClass('active-menu');
+  if ($(this).hasClass('menu--opened')){
+    $('.menu--opened .item__link').addClass('active--menu');
   } else {
-    $('.sub-menu-item .item__link').removeClass('active-menu');
+    $('.sub-menu-item .item__link').removeClass('active--menu');
   }
 });
-
-
 // click icon open sidebar
 
  $(document)
  .on('click', '.sidebar-with-icon .sub-menu-item', function () {
-   nav.addClass('vertical_nav__opened vertical_nav__minify')
-   wrapper.addClass('toggle-content wrapper__minify ');
+   nav.addClass('nav--opened vertical--minify')
+   wrapper.addClass('toggle-content wrapper--minify ');
    sidebarIcon.addClass("open-side-nav");
  })
-// $(document).ready(function () {
-//   $('.sub-menu-item').on('click', function () {
-//        $('.sub-menu-item .item__link').toggleClass('active-menu');
-//    });
-// });
-    // $('.sub-menu-item').click(function() {
-    //   $( ".sub-menu-item" ).each(function( i ) {
-    //     if ($('this').hasClass('menu--subitems__opened')){
-    //     $('.sub-menu-item .item__link').addClass('active-menu');
-    //   } else {
-    //     $('.sub-menu-item .item__link').removeClass('active-menu');
-    //   }
-    //   });
-    // });
-
-// if($('sub-menu-item').hasClass('menu--subitems__opened')){
-//   $(".sub-menu-item .item__link").addClass("active-menu");
-//   $(".sub-menu-item .item__link").removeClass("active-menu");
-//  }
