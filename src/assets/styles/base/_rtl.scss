@@ -1008,7 +1008,17 @@ html[dir="rtl"] {
   .sidebar {
     right: -240px;
     .menu__section {
-      padding-right: 6px;
+      padding: 0px 5px 0px 3px;
+    }
+  }
+  .sub-menu-item {
+    .item__link {
+      .item__label {
+        &::before {
+          left: 15px;
+          right: auto;
+        }
+      }
     }
   }
   .list__sidebar {
@@ -1065,6 +1075,14 @@ html[dir="rtl"] {
       float: right;
       .menu__icon {
         float: right;
+      }
+    }
+    .sub-menu-item {
+      .item__label {
+        &::before {
+          left: 15px;
+          right: auto;
+        }
       }
     }
   }

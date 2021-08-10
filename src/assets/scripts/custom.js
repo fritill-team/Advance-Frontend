@@ -451,6 +451,8 @@ $(document)
     wrapper.toggleClass('toggle-content wrapper__minify ');
     sidebarIcon.toggleClass("open-side-nav");
   })
+
+
   // $(document).ready(function() {
   //   $(".sub-menu-item").click(function () {
   //       $(".sub-menu-item").toggleClass("active-menu");
@@ -463,6 +465,7 @@ $(document)
     //       $(".sub-menu-item .item__link").addClass("active-menu");
     //   });
     //   });
+
 // Open Sub Menu
 
 for (var i = 0; i < subnavs.length; i++) {
@@ -477,11 +480,41 @@ for (var i = 0; i < subnavs.length; i++) {
 
   }
 };
-$(document).ready(function () {
-  $('.sub-menu-item').on('click', function () {
-       $('.sub-menu-item .item__link').toggleClass('active-menu');
-   });
+
+// active class in collapsed sidebar
+
+$('.sub-menu-item').click(function() {
+  if ($(this).hasClass('menu--subitems__opened')){
+    $('.menu--subitems__opened .item__link').addClass('active-menu');
+  } else {
+    $('.sub-menu-item .item__link').removeClass('active-menu');
+  }
 });
+
+
+// click icon open sidebar
+
+ $(document)
+ .on('click', '.sidebar-with-icon .sub-menu-item', function () {
+   nav.addClass('vertical_nav__opened vertical_nav__minify')
+   wrapper.addClass('toggle-content wrapper__minify ');
+   sidebarIcon.addClass("open-side-nav");
+ })
+// $(document).ready(function () {
+//   $('.sub-menu-item').on('click', function () {
+//        $('.sub-menu-item .item__link').toggleClass('active-menu');
+//    });
+// });
+    // $('.sub-menu-item').click(function() {
+    //   $( ".sub-menu-item" ).each(function( i ) {
+    //     if ($('this').hasClass('menu--subitems__opened')){
+    //     $('.sub-menu-item .item__link').addClass('active-menu');
+    //   } else {
+    //     $('.sub-menu-item .item__link').removeClass('active-menu');
+    //   }
+    //   });
+    // });
+
 // if($('sub-menu-item').hasClass('menu--subitems__opened')){
 //   $(".sub-menu-item .item__link").addClass("active-menu");
 //   $(".sub-menu-item .item__link").removeClass("active-menu");
