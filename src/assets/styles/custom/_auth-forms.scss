@@ -1,20 +1,50 @@
+// .auth-forms__alert{
+//   width: 100%;
+//   padding: 10px;
+//   border-radius: 25px;
+//   text-align: center;
+//   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+//   margin: 15px 0;
+//   font-size: 16px;
+//   &.auth-forms__alert-invalid{
+//     border: 1px solid #dc3545;
+//     color: #dc3545;
+//   }
+//   &.auth-forms__alert-valid{
+//     border: 1px solid #198754;
+//     color: #198754;
+//   }
+// }
 .auth-forms__alert{
+  background-color: rgba(220, 17, 1, 0.16);
+  box-shadow: 0px 0px 2px #ff0303;
   width: 100%;
   padding: 10px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+  color: #ff0303;
+  transition:0.5s;
   margin: 15px 0;
   font-size: 16px;
+  font-family: montserrat ;
+  font-size:16px;
+  font-weight:lighter;
   &.auth-forms__alert-invalid{
-    border: 1px solid #dc3545;
-    color: #dc3545;
+    border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.09);
+    transition:0.5s;
+  }
+  &:hover{
+    background-color: rgba(220, 17, 1, 0.33);
+    transition:0.5s;
   }
   &.auth-forms__alert-valid{
-    border: 1px solid #198754;
-    color: #198754;
+    background-color: #198754;
+    color: #fff;
   }
 }
+
+
 
 .auth-form-wrapper {
   background: #f7f7f7 !important;
@@ -57,10 +87,18 @@
     padding: 0 1em;
   }
   // general message styling
-  .field-wrapper__message{
+  .messages{
     font-size: 14px;
     font-weight: 500;
     color: inherit;
+    padding: 0 1em;
+  }
+  // general style for hint
+  .message{
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    text-align: left;
     margin: 8px 0;
     padding: 0 1em;
   }
@@ -72,7 +110,10 @@
     display: inline-flex;
     width: 100%;
     color: rgba(0,0,0,.6);
-    height: 40px;
+    div[id^='cke_id_']{
+      width: 100% !important;
+    }
+    // height: 40px;
     &::placeholder{
       transition: .3s ease all;
     }
@@ -80,9 +121,10 @@
       font-size: 14px !important;
       width: 100%;
       border-radius: 20px!important;
-      padding: 0 1em;
+      padding: 12px 1em;
       box-shadow: inset 0 1px 4px rgba(0,0,0,.1)!important;
       border: 1px solid #e5e5e5!important;
+      // padding: 10px;
       &.text-field--left{
         padding: 0 1em !important;
         height: 40px;
@@ -132,7 +174,7 @@
     .text-field__label{
       color: #dc3545;
     }
-    .field-wrapper__message{
+    .messages{
       color: #ed2a26;
     }
     .text-field__content{
@@ -144,11 +186,11 @@
   }
 
   // this class hides messages
-  &.field-wrapper--no-message{
-    .field-wrapper__message{
-      display: none;
-    }
-  }
+  // &.field-wrapper--no-message{
+  //   .field-wrapper__message{
+  //     display: none;
+  //   }
+  // }
 
   // input type file
   &.field-wrapper__file-input{
@@ -209,6 +251,9 @@
 
   // input type select
   &.field-wrapper__select-input{
+    .text-field__content{
+      height: 40px;
+    }
     .select-menu{
       display: flex !important;
       justify-content: space-between !important;
@@ -221,12 +266,73 @@
       }
     }
   }
+  &.field-wrapper__checkbox_sign{
+    text-align: left;
+    
+  }
+  
+  // .mncheck
+  .mncheck{
+    label{
+      &::before{
+        border-radius: unset !important;
+        width: 18px !important;
+        height: 18px !important;
+        margin-top: 1px;
+      }
+    }
+  }
+  .radio-item_1 input[type="radio"] + .radio-label:before {
+    content: '';
+    background: #f7f7f7;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    top: 0px;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    .radio--group-inline-container .radio-item input[type="radio"]:checked + .radio-label:before {
+      background-color: #ed2a26;
+      box-shadow: inset 0 0 0 2px #f4f4f4;
+    }
+  }  
+  // textarea
+  .textarea{
+    width: 100%;
+    margin: 0;
+    outline: none;
+    font-size: 1em;
+    background: #fff;
+    color: rgba(0,0,0,.87);
+    border-radius: 10px;
+    padding: 1em;
+    border: none;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+    &:focus{
+      color: rgba(0,0,0,.95);
+    }  
+  }
+
   // .text-field__input{
 
   // }
   // .text-field__error{
 
   // }
+  ul.radio--group-inline{
+    li.radio-item_1{
+      label{
+        padding: 5px;
+      }
+    }         
+  }        
 }
 
 
