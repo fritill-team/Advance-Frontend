@@ -16,7 +16,7 @@ block content
 						a#nav-thread-tab.nav-item.nav-link(data-toggle='tab' href='#nav-thread' role='tab' aria-selected='false') Thread
 						a#nav-media-tab.nav-item.nav-link(data-toggle='tab' href='#nav-media' role='tab' aria-selected='false') Media
 			.col-lg-12
-				.course_tab_content
+				.course_tab_content.mt-5
 					#nav-tabContent.tab-content
 						//- include ../components/review-item.pug
 						#nav-details.tab-pane.fade.show.active(role='tabpanel')
@@ -370,4 +370,17 @@ block content
 									include ../components/general-component/progress.pug
 									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
+
+								.col-lg-12
+									include ../components/general-wrapper.pug
+										block details
+											div
+												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
+													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
+													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg' alt='')
+												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
+													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg' alt='')
+												a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
+													img.example-image(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg' alt='')
 

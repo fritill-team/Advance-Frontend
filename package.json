@@ -63,6 +63,7 @@
     "gsap": "^3.6.0",
     "jquery": "^3.6.0",
     "jquery.nicescroll": "^3.7.6",
+    "lightbox2": "^2.11.3",
     "normalize.css": "^8.0.0",
     "popper.js": "^1.16.1",
     "scrollmagic": "^2.0.5",
