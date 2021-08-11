@@ -8576,3 +8576,29 @@ input[type="tel"] {
 .iti__flag-container {
   padding-left: 8px;
 }
+
+.general-btn{
+  &.btn--filled{
+    padding: 5px 20px;
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    background: #ed2a26;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+}
+
+.secondary-title{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto,sans-serif;
+  text-align: left;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
