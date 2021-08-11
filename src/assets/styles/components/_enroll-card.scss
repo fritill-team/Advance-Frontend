@@ -1,23 +1,26 @@
-.user-card{
+.enroll-form {
+  padding: 20px 0 0;
+}
+.user-card {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.05);
-  .user-card__label{
+  .user-card__label {
     position: relative;
     z-index: 0;
     cursor: pointer;
-    .user-card__image{
+    .user-card__image {
       width: 100%;
       height: 200px;
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
     }
-    .user-card__name{
+    .user-card__name {
       margin: 0;
       padding: 0 8px 8px 8px;
     }
-    .check{
+    .check {
       position: absolute;
       max-width: 40px;
       max-height: 40px;
@@ -33,28 +36,25 @@
       font-size: 30px;
       top: 10px;
       right: 10px;
-      transition: .3s ease all;
+      transition: 0.3s ease all;
       opacity: 0;
       z-index: 3;
       color: #fff;
     }
-    &:hover{
-      .check{
-        opacity: .5;
+    &:hover {
+      .check {
+        opacity: 0.5;
       }
     }
   }
-  input{
+  input {
     display: none;
-    &:checked{
-      & + .user-card__label{
-        .check{
+    &:checked {
+      & + .user-card__label {
+        .check {
           opacity: 1;
         }
       }
     }
   }
-  
-  
 }
-

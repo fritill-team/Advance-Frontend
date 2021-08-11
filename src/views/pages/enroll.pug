@@ -4,15 +4,39 @@ block title
 	title Enrollment
 
 block content
+	section.course-video
+		img(src="/assets/images/sign.svg", alt="")
+		.container-fluid
+			.row
+				.col-lg-12
+					.description-enroll
+						.row.justify-content-center
+								.col-xl-4.col-lg-5.col-md-6
+									block course-video
+									//- include ../components/general-component/course-video.pug
+									block img
+									include ../components/general-component/course-img.pug
+									block video-action
+								.col-xl-8.col-lg-7.col-md-6
+									article.wrapper__header
+										h2.header__title The Web Developer Bootcamp
+										span.header__description
+											| The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+									.wrapper__review-video
+										.review-video__review.mr-2
+											i.uil.uil-star.review__icone
+											| 4.5
+										|   (81,665 ratings)
+									.wrapper__enrolled-text
+										| 114,521 students enrolled
 
-	
 	form.enroll-form
 		.container
 			.row
-				.col-lg-12 
+				.col-lg-12
 					h4.item_title.mb-3 Enroll as :
 				.col-xl-3.col-lg-3.col-col-sm-2
-					.user-card 
+					.user-card
 						input#user(type="checkbox", name="user")
 						label.user-card__label(for="user")
 							img.user-card__image(src="https://placeholder.com/100x100", alt="", srcset="")
@@ -21,7 +45,7 @@ block content
 							.check
 								<i class="far fa-check-circle"></i>
 				.col-xl-3.col-lg-3.col-col-sm-2
-					.user-card 
+					.user-card
 						input#chiled(type="checkbox", name="chiled")
 						label.user-card__label(for="chiled")
 							img.user-card__image(src="https://placeholder.com/100x100", alt="", srcset="")
@@ -29,6 +53,6 @@ block content
 								| Chiled
 							.check
 								<i class="far fa-check-circle"></i>
-				.col-lg-12 
+				.col-lg-12
 					include ../components/general-component/btn.pug
-					+btn-input('btn1542 mt-4 ml-auto', 'submit', 'submit') 
+					+btn-input('btn1542 mt-4 ml-auto', 'submit', 'submit')

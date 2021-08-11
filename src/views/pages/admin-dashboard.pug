@@ -18,15 +18,8 @@ block content
 											span.course-overlay--play
 												i.uil.uil-play.play__fa
 											span._215b02.course-overlay__title Preview this course
-								.preview-video__action
-									.action__save-video(href='#')
-										span.save-video__icons
-											i.uil.uil-heart.icons__fa
-										| Save
-									a.action__rebort-vedios(href='#')
-										span.rebort-video__icons
-											i.uil.uil-windsock.icons__fa
-										| Report abuse
+								block video-action
+								include ../components/general-component/video-action.pug
 							.col-xl-8.col-lg-7.col-md-6
 								article.wrapper__header
 									h2.header__title The Web Developer Bootcamp
