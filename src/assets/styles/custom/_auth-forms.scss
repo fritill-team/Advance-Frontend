@@ -310,12 +310,11 @@
 					text-align: center;
 				}
 			}
-			.radio-item_1 input[type="radio"] + .radio-label_1::before :checked{
-				transition: all 250ms ease;
-				background-color: #ed2a26;
-				box-shadow: inset 0 0 0 2px #f4f4f4;
-			}
 		}
+    .radio-item_1 input[type="radio"]:checked + .radio-label-1::before {
+      background-color: #ed2a26;
+      box-shadow: inset 0 0 0 2px #f4f4f4;
+    }
   }
   // textarea
   .textarea{

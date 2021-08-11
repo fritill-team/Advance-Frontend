@@ -190,7 +190,7 @@ block content
 				label.text-field__label start number
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input__date(type='number' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='number' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				.messages
 					ul 
 						li 
@@ -247,10 +247,20 @@ block content
 		//- input__select
 		.col-lg-12.col-md-6.col-sm-12
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start select :
+				label.text-field__label start select 2 :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='url' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					select.ui.dropdown.text-field__input.templateSelection(multiple="multiple")
+						option(selected="selected" value='') orange
+						option(value='1') purple
+						option(value='2')  white
+						option(value='3') black
+						option(value='4') red
+						option(value='5') blue
+						option(value='6') green
+						option(value='7') yellow
+						option(value='8') gray
+						option(value='9') pink
+						option(value='10') brown
 				.messages
 					ul 
 						li 
