@@ -5,30 +5,12 @@ block sidebar
 	include ../components/sidebar-content.pug
 block courseVideo
 	.col-xl-4.col-lg-5.col-md-6
-		//- video#my-player.video-js()
-		//- 	source(src='//vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
-			//- track(kind='captions' src='../assets/videos/en.vtt' srclang='en' label='English' default='')
-			//- track(kind='captions' src='../assets/videos/ar.vtt' srclang='en' label='Arabic' default='')
-		//- #transcript
-
-		section.wrapper__preview-video
-			a.preview-video__modiel-img(href='#'
-			data-toggle='modal' data-target='#videoModal')
-				img.modiel-img--img(src='images/courses/img-2.jpg' alt='')
-				.modiel-img__course-overlay
-					.course-overlay--seller Bestseller
-					span.course-overlay--play
-						i.uil.uil-play.play__fa
-					span._215b02.course-overlay__title Preview this course
-		.preview-video__action
-			.action__save-video(href='#')
-				span.save-video__icons
-					i.uil.uil-heart.icons__fa
-				| Save
-			a.action__rebort-vedios(href='#')
-				span.rebort-video__icons
-					i.uil.uil-windsock.icons__fa
-				| Report abuse
+		block course-video
+		include ../components/general-component/course-video.pug
+		block img
+		//- include ../components/general-component/course-img.pug
+		block video-action
+		include ../components/general-component/video-action.pug
 	.col-xl-8.col-lg-7.col-md-6
 		article.wrapper__header
 			h2.header__title The Web Developer Bootcamp
@@ -68,7 +50,7 @@ block courseVideo
 							span.caption-content__lang-item Turkish [Auto-generated]
 		.wrapper__last-update
 			| Last updated 1/2020
-		
+
 		.wrapper__title-buy
 			| 30-Day Money-Back Guarantee
 block userAccount
@@ -79,7 +61,7 @@ block userAccount
 			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
 
 block tabs
-	//- .container 
+	//- .container
 	.row
 		.col-lg-8
 			.course_tab_content
