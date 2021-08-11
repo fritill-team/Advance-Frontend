@@ -36,9 +36,15 @@
     }
   }
   .general-wrapper__content{
+    z-index: 0;
     .general-details__item{
       display: flex;
       margin-bottom: 10px;
+      &.general-details__item--white{
+        & > *{
+          color: #fff;
+        }
+      }
     }
     .description__name{
       margin-right: 5px;
