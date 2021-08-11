@@ -8,6 +8,8 @@ import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js";
 import "../styles/vendor/OwlCarousel/owl.carousel.js";
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
+
+import "../scripts/login";
 import "../styles/vendor/semantic/semantic.min.js";
 import "./custom.js";
 import "./night-mode.js";
@@ -32,4 +34,4 @@ new Vue({
   render: h => h(Exam)
 });
 
-// import "../scripts/login";
+
