@@ -92,6 +92,7 @@
     font-weight: 500;
     color: inherit;
     padding: 0 1em;
+    margin-top: 1em;
   }
   // general style for hint
   .message{
@@ -266,11 +267,10 @@
       }
     }
   }
-  &.field-wrapper__checkbox_sign{
+  &.field-wrapper__checkbox-sign{
     text-align: left;
     
   }
-  
   // .mncheck
   .mncheck{
     label{
@@ -282,30 +282,45 @@
       }
     }
   }
-  .radio-item_1 input[type="radio"] + .radio-label:before {
-    content: '';
-    background: #f7f7f7;
-    border-radius: 100%;
-    border: 1px solid #b4b4b4;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    top: 0px;
-    position: relative;
-    margin-right: 10px;
-    vertical-align: top;
-    cursor: pointer;
-    text-align: center;
-    -webkit-transition: all 250ms ease;
-    transition: all 250ms ease;
-    .radio--group-inline-container .radio-item input[type="radio"]:checked + .radio-label:before {
-      background-color: #ed2a26;
-      box-shadow: inset 0 0 0 2px #f4f4f4;
-    }
-  }  
+  // input type radio
+  ul.field-wrapper__radio-group{
+		li.radio-item_1{
+			input{
+				display: none;
+			}
+			label.radio-label-1{
+				font-size: 14px;
+				font-weight: 400;
+				font-family: 'Roboto', sans-serif;
+				line-height: 17px;
+				padding: 5px;
+      	&::before{
+					content: '';
+					background: #f7f7f7;
+					border-radius: 100%;
+					border: 1px solid #b4b4b4;
+					display: inline-block;
+					width: 1em;
+					height: 1em;
+					top: 0px;
+					position: relative;
+					margin-right: 10px;
+					vertical-align: top;
+					cursor: pointer;
+					text-align: center;
+				}
+			}
+			.radio-item_1 input[type="radio"] + .radio-label_1::before :checked{
+				transition: all 250ms ease;
+				background-color: #ed2a26;
+				box-shadow: inset 0 0 0 2px #f4f4f4;
+			}
+		}
+  }
   // textarea
   .textarea{
     width: 100%;
+    height: 150px;
     margin: 0;
     outline: none;
     font-size: 1em;
@@ -314,15 +329,13 @@
     border-radius: 10px;
     padding: 1em;
     border: none;
-    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+		resize: none;
+    box-shadow: inset 2px 1px 4px rgba(59, 42, 42, 0.2);
     &:focus{
       color: rgba(0,0,0,.95);
     }  
   }
 
-  // .text-field__input{
-
-  // }
   // .text-field__error{
 
   // }
