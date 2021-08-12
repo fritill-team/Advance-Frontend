@@ -8558,10 +8558,8 @@ a.rmv-btn i {
     }
   }
 }
-// input
-//  .phone-field__input{
+// login style
 
-//  }
 input[type="tel"] {
   padding-right: 6px;
   padding-left: 52px;
@@ -8575,4 +8573,7 @@ input[type="tel"] {
 }
 .iti__flag-container {
   padding-left: 8px;
+}
+.alert {
+  margin-top: 5px;
 }
