@@ -24,41 +24,89 @@ block content
 							include ../components/general-wrapper.pug
 								block details
 									.general-details__item
-										h4.description__name Id :
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Id :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Author :
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Author :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name duration : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name duration : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Total rate : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Total rate : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name category : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name category : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name No.chapters : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name No.chapters : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Slug : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Slug : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Tags : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Tags : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Languages : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Languages : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Created at : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Created at : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Updated at : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										div
+											h4.description__name Updated at : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name Deleted at : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										div
+											h4.description__name Deleted at : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 								
 						//- start course list component
 						//- include ../components/course.pug
@@ -94,6 +142,9 @@ block content
 															.top-title__title A Note On Asking For Help
 													.content-item__details
 														span.details__content-summary 00:12
+													.general-actions
+														a(href="/"): i.far.fa-edit(aria-hidden="true")
+														a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 												.list-content__content-item
 													.content-item__content-name
 														i.uil.uil-play-circle.content-name__icon
@@ -102,6 +153,9 @@ block content
 													.content-item__details
 														a.details--preview-text(href='#') Preview
 														span.details__content-summary 07:48
+													.general-actions
+														a(href="/"): i.far.fa-edit(aria-hidden="true")
+														a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 												.list-content__content-item
 													.content-item__content-name
 														i.uil.uil-play-circle.content-name__icon
@@ -454,18 +508,34 @@ block content
 								block details
 									h3.secondary-title Titles
 									.general-details__item
-										h4.description__name arabic : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										div
+											h4.description__name arabic : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name english : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										div
+											h4.description__name english : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 							//- descriptions
 							include ../components/general-wrapper.pug
 								block details
 									h3.secondary-title descriptions
 									.general-details__item
-										h4.description__name arabic : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										div
+											h4.description__name arabic : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
-										h4.description__name english : 
-										p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										div
+											h4.description__name english : 
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+										.general-actions
+											a(href="/"): i.far.fa-edit(aria-hidden="true")
+											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
