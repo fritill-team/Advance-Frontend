@@ -135,7 +135,7 @@ block content
 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper
-				label.text-field__label Course Radio Button*
+				label.text-field__label Course Description*
 				.text-field__content
 					textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 				.messages
@@ -143,7 +143,7 @@ block content
 						li
 							| Please provide a valid city.
 		//- input__date
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label(for='start Date') start Date :
 				.text-field__content
@@ -153,7 +153,7 @@ block content
 						li 
 							| Please provide a valid city.
 		//- input__time
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label start Time :
 				.text-field__content
@@ -163,9 +163,9 @@ block content
 						li 
 							| Please provide a valid content.
 		//- input__datetime-local
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Date and Time
+				label.text-field__label start Date and Time :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='datetime-local' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
@@ -174,64 +174,64 @@ block content
 						li 
 							| Please provide a valid content.
 		//- input__password
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start password
+				label.text-field__label start password :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='password' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				.messages
 					ul 
 						li 
 							| Please provide a valid content.
 		//- input__number
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start number
+				label.text-field__label Start Number :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='number' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' required)
 				.messages
 					ul 
 						li 
-							| Please provide a cvalid content.
+							| Please provide a valid content.
 		//- input__email
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Email
+				label.text-field__label Start Email :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='email' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
 				.messages
 					ul 
 						li 
 							| Please provide a valid content.	
 		//- input__tel
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Telephone
+				label.text-field__label Start Telephone :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='tel' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
 				.messages
 					ul 
 						li 
 							| Please provide a valid content.
 			//- input__url
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Url
+				label.text-field__label Start Url :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='url' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type='url' placeholder='Insert Your Link.' name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' value='' required)
 				.messages
 					ul 
 						li 
 							| Please provide a valid content.
 		//- input__select
-		.col-lg-12.col-md-12.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start select
+				label.text-field__label Start Select :
 				.text-field__content
 					select.ui.dropdown.text-field__input
 						option(value='') Select option
@@ -245,11 +245,11 @@ block content
 						li 
 							| Please provide a valid content.	
 		//- input__select
-		.col-lg-12.col-md-6.col-sm-12
+		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start select 2 :
+				label.text-field__label Start Select 2 :
 				.text-field__content
-					select.ui.dropdown.text-field__input.templateSelection(multiple="multiple")
+					select.ui.dropdown.text-field__input.js-example-basic-single(name="state")
 						option(selected="selected" value='') orange
 						option(value='1') purple
 						option(value='2')  white

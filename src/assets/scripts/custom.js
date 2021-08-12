@@ -466,9 +466,6 @@ for (var i = 0; i < subnavs.length; i++) {
   }
 };
 // select2
-$('select').select2({
-  insertTag: function (data, tag) {
-    // Insert the tag at the end of the results
-    data.push(tag);
-  }
+$(document).ready(function() {
+  $('.js-example-basic-single').select2();
 });
