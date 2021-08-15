@@ -362,10 +362,10 @@ body {
   background: #f7f7f7 !important;
 }
 
-.menu_left::-webkit-scrollbar {
+.menu--scrollbar::-webkit-scrollbar {
   width: 4px;
 }
-.menu_left::-webkit-scrollbar-thumb {
+.menu--scrollbar::-webkit-scrollbar-thumb {
   height: 50px;
   background: hsla(0, 0%, 53.3%, 0.4);
 }
@@ -394,7 +394,7 @@ input[type="text"] {
     margin-left: 240px;
   }
 
-  .wrapper__minify {
+  .wrapper--minify {
     margin-left: 0;
   }
 }

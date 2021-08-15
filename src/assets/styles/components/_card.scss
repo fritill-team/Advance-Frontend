@@ -10,7 +10,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 1px;
+      background-color: rgba($color: #000000, $alpha: .1);
+    }
+    &.card__collapse--toggle{
+      transition: .3s ease all;
+      font-size: 14px;
+      &.active{
+        transform: rotate(180deg);
+      }
+    }
   }
   .card__title{
     text-transform: capitalize;
@@ -21,9 +39,15 @@
     font-size: 16px;
     display: flex;
     flex-direction: column;
+    max-height: auto;
+    overflow-y: scroll;
+    transition: 0.5s ease all;
     & > *{
       margin-bottom: 10px;
       text-align: start;
+    }
+    &.active{
+      max-height: 300px;
     }
   }
 }
