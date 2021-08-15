@@ -478,7 +478,78 @@ block content
 									.thread__details 
 										span.details__name Asked	
 										span.details__data 3 years 
-								#rich-textarea 
+							.thread__wrapper
+								.thread__post 	
+									//- .post__votecell
+									//- 	i.fas.fa-check.votecell__icon
+									//- 	span.votecell__number 454
+									.post__qustion
+										p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+										ul.qustion__list
+											li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+											li.qustion__item use regular HTML/CSS to get visual styles
+											li.qustion__item suggest you pick a third-party editor.
+										.qustion__tags 	
+											.qustion__taglist 	 
+												a.taglist__item(href='#') Development
+												a.taglist__item(href='#') Bootestrap  
+										include ../components/general-component/user-acount.pug
+										+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ") 
+										.item__actions.thread--actions
+											a.action__report
+												i.report__icone.uil.uil-thumbs-up
+												| 10
+											a.action__report
+												i.report__icone.uil.uil-thumbs-down
+												| 1
+							.answers-header
+								h3.course-content__title 5	
+									span Answer   
+							.thread__wrapper
+								.thread__post  
+									.post__qustion 
+										p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+										ul.qustion__list
+											li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+											li.qustion__item use regular HTML/CSS to get visual styles
+											li.qustion__item suggest you pick a third-party editor.
+										.qustion__tags 	
+											.qustion__taglist 	 
+												a.taglist__item(href='#') Development
+												a.taglist__item(href='#') Html
+												a.taglist__item(href='#') Bootestrap  
+										include ../components/general-component/user-acount.pug
+										+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ") 
+										.item__actions.thread--actions
+											a.action__report
+												i.report__icone.uil.uil-thumbs-up
+												| 10
+											a.action__report
+												i.report__icone.uil.uil-thumbs-down
+												| 1
+								.thread__post.thread--replay 
+									.post__qustion 
+										p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+										ul.qustion__list
+											li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+											li.qustion__item use regular HTML/CSS to get visual styles
+											li.qustion__item suggest you pick a third-party editor.
+										.qustion__tags 	
+											.qustion__taglist 	 
+												a.taglist__item(href='#') Development
+												a.taglist__item(href='#') Html
+												a.taglist__item(href='#') Bootestrap  
+										include ../components/general-component/user-acount.pug
+										+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ") 		
+										.item__actions.thread--actions
+											a.action__report
+												i.report__icone.uil.uil-thumbs-up
+												| 10
+											a.action__report
+												i.report__icone.uil.uil-thumbs-down
+												| 1
+
+							#rich-textarea 
 
 
 						#nav-media.tab-pane.fade(role='tabpanel')
