@@ -117,11 +117,9 @@ if ("intlTelInput" in window) {
     if (phoneInputField.value.length >= 20) {
       phoneInputField.value = '';
     }
-
     // IMask(phoneInputField, {
     //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
-    // });
-
+    // }); 
     const phoneNumber = phoneInput.getNumber();
 
     info.style.display = "none";
