@@ -129,8 +129,6 @@ const phoneNumber = phoneInput.getNumber();
     error.style.display = "";
     error.innerHTML = `Invalid phone number.`;
   }
-})
-
-
+}) 
 }
 
