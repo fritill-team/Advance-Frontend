@@ -102,6 +102,12 @@ block tabs
 												input.search__input(type='text' placeholder='Search reviews...')
 												button.search__btn
 													i.uil.uil-search
+									section.comments__add-comment
+										.add-comment__group
+											.group__img-wrapper
+												img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+											textarea.group__textarea(placeholder="Add a public comment")
+										button.group--btn(type="submit") Add review 
 									include ../components/review.pug
 									.review__all-reviews.mt-3
 										include ../components/review-item.pug
