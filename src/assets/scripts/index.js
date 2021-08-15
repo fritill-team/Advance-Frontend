@@ -11,7 +11,6 @@ import "../styles/vendor/OwlCarousel/owl.carousel.js";
 import "../styles/vendor/semantic/semantic.min.js";
 import "./custom.js";
 import "./night-mode.js";
-import "./sortable.js";
 import "../styles/app.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import "../vendor/fontawesome-free/js/all";
@@ -32,4 +31,5 @@ new Vue({
   render: h => h(Exam)
 });
 
+import "./sortable.js";
 // import "../scripts/login";
