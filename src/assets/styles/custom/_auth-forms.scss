@@ -294,6 +294,7 @@
 				font-family: 'Roboto', sans-serif;
 				line-height: 17px;
 				padding: 5px;
+        cursor: pointer;
       	&::before{
 					content: '';
 					background: #f7f7f7;
@@ -329,7 +330,9 @@
     padding: 1em;
     border: none;
 		resize: none;
-    box-shadow: inset 2px 1px 4px rgba(59, 42, 42, 0.2);
+    box-shadow: 0px 1px 4px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 1px 4px 3px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 1px 4px 3px rgba(0,0,0,0.1);
     &:focus{
       color: rgba(0,0,0,.95);
     }  

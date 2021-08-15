@@ -467,5 +467,9 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 // select2
 $(document).ready(function() {
-  $('.js-example-basic-single').select2();
+  $('.js-example-basic-single').select2({
+    tags: "true",
+    placeholder: "Select an option",
+    allowClear: true
+  });
 });

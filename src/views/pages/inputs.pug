@@ -167,8 +167,7 @@ block content
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label start Date and Time :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='datetime-local' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input.text-field__input(type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
 				.messages
 					ul 
 						li 
@@ -187,10 +186,10 @@ block content
 		//- input__number
 		.col-md-6.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Start Number :
+				label(for='number').text-field__label Start Number :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' required)
+					input.text-field__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
 				.messages
 					ul 
 						li 
@@ -223,7 +222,7 @@ block content
 				label.text-field__label Start Url :
 				.text-field__content
 					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					input.text-field__input(type='url' placeholder='Insert Your Link.' name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' value='' required)
+					input.text-field__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
 				.messages
 					ul 
 						li 
@@ -249,8 +248,7 @@ block content
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label Start Select 2 :
 				.text-field__content
-					select.ui.dropdown.text-field__input.js-example-basic-single(name="state")
-						option(selected="selected" value='') orange
+					select.ui.dropdown.text-field__input.js-example-basic-single(multiple="multiple" data-tags="true" data-placeholder="Select an option" data-allow-clear="true")
 						option(value='1') purple
 						option(value='2')  white
 						option(value='3') black
