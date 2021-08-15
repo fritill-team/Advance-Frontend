@@ -86,12 +86,52 @@ var verification = (function () {
 //     .then((resp) => callback(resp.country));
 // };
 
-var input = document.querySelector("#phone");
-var iti = window.intlTelInput(input, {
-  // separateDialCode:true,
-  utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
-});
 
-// store the instance variable so we can access it in the console e.g. window.iti.getNumber()
-window.iti = iti;
+
+
+// var dsada = document.querySelector(".input");
+// dsada?.addEventListener("click" , function(){
+//   console.log("fsdfsd");
+// });
+
+if ("intlTelInput" in window) {
+  const phoneInputField = document.querySelector("#phone"),
+    tokinMask = "5hy8RjDWfiqwO051SlFiQh1hkwDfwvJSSw2my7fF";
+
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "eg",
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    preferredCountries: ["eg", "us"],
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+
+
+  const info = document.querySelector(".alert-info");
+  const error = document.querySelector(".alert-error");
+
+  phoneInputField.addEventListener("input", function process(event) {
+    event.preventDefault();
+
+    if (phoneInputField.value.length >= 20) {
+      phoneInputField.value = '';
+    }
+    // IMask(phoneInputField, {
+    //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
+    // }); 
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "none";
+    error.style.display = "none";
+
+    if (phoneInput.isValidNumber()) {
+      info.style.display = "";
+      info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+    } else {
+      error.style.display = "";
+      error.innerHTML = `Invalid phone number.`;
+    }
+  })
+}
 

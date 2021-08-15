@@ -742,7 +742,7 @@ i.icon1 {
 /*--- Index Homepage ---*/
 
 .wrapper {
-  padding: 100px 0 0;
+  padding: 60px 0 0;
   transition: all 0.3s ease-out;
   display: flex;
   flex-direction: column;
@@ -8558,10 +8558,8 @@ a.rmv-btn i {
     }
   }
 }
-// input
-//  .phone-field__input{
+// login style
 
-//  }
 input[type="tel"] {
   padding-right: 6px;
   padding-left: 52px;
@@ -8576,6 +8574,9 @@ input[type="tel"] {
 .iti__flag-container {
   padding-left: 8px;
 }
+.alert {
+  margin-top: 5px;
+
 
 .general-btn{
   &.btn--filled{
@@ -8602,3 +8603,4 @@ input[type="tel"] {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
+
