@@ -8573,6 +8573,9 @@ input[type="tel"] {
 }
 .iti__flag-container {
   padding-left: 8px;
+  &:hover{
+    
+  }
 }
 .alert {
   margin-top: 5px;
@@ -8603,4 +8606,13 @@ input[type="tel"] {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
-
+ 
+.iti--allow-dropdown{
+  .iti__flag-container{
+    &:hover{
+      .iti__selected-flag{
+        background-color: transparent;
+      }
+    }
+  }
+}
