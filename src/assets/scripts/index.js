@@ -22,7 +22,7 @@ import "./lightbox.min.js"
 // import "./videojs-transcript.min.js";
 
 // import 'bootstrap/dist/js/popper.min.js';
-import Vue from "vue";
+import * as Vue from 'vue';
 import Exam from "../scripts/vue/Exam.vue";
 // import * from 'video';
 

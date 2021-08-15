@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <h1>{{title}}</h1>
-    <question-wrapper/>
-  </div>
+  <form class="exam" >
+    <question-wrapper 
+      question="what is your name?" 
+      hint="my name is mohammed">
+
+    </question-wrapper>
+  </form>
 </template>
 
 <script>
