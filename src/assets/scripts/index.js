@@ -13,7 +13,6 @@ import "../scripts/login";
 import "../styles/vendor/semantic/semantic.min.js";
 import "./custom.js";
 import "./night-mode.js";
-import "./sortable.js";
 import "../styles/app.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import "../vendor/fontawesome-free/js/all";
@@ -33,5 +32,8 @@ new Vue({
   el: "#vue",
   render: h => h(Exam)
 });
+
+
+import "./sortable.js";
 
 
