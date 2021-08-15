@@ -1,0 +1,21 @@
+.thread__header {
+	.course-content__title{
+		display: contents;
+	}
+}
+.details__wrapper {
+	padding: 5px 0px;
+	display: flex;
+	.thread__details { 
+		.details__name{
+			color: #333;
+			font-weight: 500;
+			padding-left: 5px;
+		}
+		.details__data{
+			color: #686f7a;
+			padding-left: 5px;
+		}
+	}
+}
+ 

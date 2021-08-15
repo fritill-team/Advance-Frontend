@@ -468,8 +468,19 @@ block content
 									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
 									
-						#nav-thread.tab-pane.fade(role='tabpanel')
-							include ../components/comments.pug
+						#nav-thread.tab-pane.fade(role='tabpanel') 
+							.thread__header 
+								h3.course-content__title Thread Chapter content
+								.details__wrapper 
+									.thread__details 
+										span.details__name Asked	
+										span.details__data 3 years   
+									.thread__details 
+										span.details__name Asked	
+										span.details__data 3 years 
+								#rich-textarea 
+
+
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row
 								.col-lg-12
