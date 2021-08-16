@@ -8475,15 +8475,7 @@ a.rmv-btn i {
       // }
       .sub-menu-item { 
         &::before {
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-top: 5px solid #000;
-          position: absolute;
-          top: 20px;
-          right: 15px;
-          content: "";
+          display: none;
         }
       }
     }
@@ -8501,6 +8493,12 @@ a.rmv-btn i {
               display: block !important;
             }
           }
+        }
+      }
+      .sub-menu-item { 
+        &::before {
+          display: block;
+          transition: all 0.4s ease-in-out;
         }
       }
     }
