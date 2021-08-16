@@ -11,23 +11,9 @@ block sidebar
 	include ../components/sidebar-content.pug
 block courseVideo
 	.col-xl-4.col-lg-5.col-md-6
-		section.wrapper__preview-video
-			a.preview-video__modiel-img(href='#' data-toggle='modal' data-target='#videoModal')
-				img.modiel-img--img(src='images/courses/img-2.jpg' alt='')
-				.modiel-img__course-overlay
-					.course-overlay--seller Bestseller
-					span.course-overlay--play
-						i.uil.uil-play.play__fa
-					span._215b02.course-overlay__title Preview this course
-		.preview-video__action
-			.action__save-video(href='#')
-				span.save-video__icons
-					i.uil.uil-heart.icons__fa
-				| Save
-			a.action__rebort-vedios(href='#')
-				span.rebort-video__icons
-					i.uil.uil-windsock.icons__fa
-				| Report abuse
+		block course-video
+		include ../components/general-component/course-video.pug
+		include ../components/general-component/video-action.pug
 	.col-xl-8.col-lg-7.col-md-6
 		article.wrapper__header
 			h2.header__title The Web Developer Bootcamp
@@ -78,7 +64,7 @@ block userAccount
 	.user-wrapper
 		include ../components/general-component/user-acount.pug
 		include ../components/general-component/btn.pug
-		+user-acount("Johnson Smith", "Subscribe" , "images/left-imgs/img-1.jpg")
+		+user-acount("images/left-imgs/img-1.jpg", "Subscribe" , "Johnson Smith")
 			+btn('user-content__subscribe-btn', 'subscribe')
 		include ../components/general-component/interaction.pug
 		section.interactions-course
@@ -124,4 +110,3 @@ block tabs
 		.col-lg-4.mt-5
 			<h3 class="about-required__title">Related courses</h3>
 			include ../components/related-courses.pug
-			

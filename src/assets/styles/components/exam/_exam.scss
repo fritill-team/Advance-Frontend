@@ -1,7 +1,31 @@
+.exam{
+  padding-top: 50px;
+}
+.answer-wrapper{
+  display: flex;
+  margin-bottom: 15px;
+}
+
 .question-wrapper{
   padding: 16px;
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .question{
+    font-size: 30px;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+  .hints{
+    list-style: none;
+    li{
+      font-size: 16px;
+      margin: 0;
+      color: #686f7a;
+    }
+  }
 }

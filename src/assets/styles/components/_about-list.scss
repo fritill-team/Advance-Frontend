@@ -122,22 +122,22 @@
   }
 }
 .about-content__description {
-  .description__name {
-    font-family: Roboto, sans-serif;
-    text-align: left;
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-  }
-  .description__details {
-    font-size: 14px;
-    font-weight: 400;
-    color: #686f7a;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    line-height: 26px;
-  }
+}
+.description__name {
+  font-family: Roboto, sans-serif;
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.description__details {
+  font-size: 14px;
+  font-weight: 400;
+  color: #686f7a;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  line-height: 26px;
 }
 .list-item__title {
   display: flex;

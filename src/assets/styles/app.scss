@@ -56,11 +56,16 @@ ul {
 @import "./components/list-dropdown";
 @import "./components/course-card.scss";
 @import "./components/enroll-card";
+@import "./components/description-enroll";
 @import "./components/footer-admin";
 @import "./components/filter";
 @import "./components/card";
-@import "./components/button";
+@import "./components/btn-links";
 @import "./components/card-collapse";
+@import "./components/media-card";
+@import "./components/thread";
+@import "./components/general-wrappaer";
+@import "./components/rich-textarea";
 
 @import "./components/colleps";
 @import "./components/single-course/interactions-course.scss";
@@ -70,9 +75,11 @@ ul {
 @import "./base/instructor-dashboard.css";
 @import "./base/jquery-steps.css";
 @import "./base/datepicker.min.css"; 
-@import './components/button.scss';
+
+@import "./base/datepicker.min.css";
 @import "./components/sidebar.scss";
 @import "./vendor/unicons-2.0.1/css/unicons.css";
+@import "./base/lightbox.min.css";
 
 // @import './base/vertical-responsive-menu.min.css';
 @import "./base/responsive.css";
