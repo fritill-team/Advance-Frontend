@@ -47,23 +47,23 @@ block content
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Id :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Author :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name duration : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name duration :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name Total rate : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name Total rate :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name category : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name category :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 							include ../components/general-wrapper.pug
 								block details
 									section.course-video
@@ -90,23 +90,23 @@ block content
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Id :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Author :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name duration : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name duration :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name Total rate : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name Total rate :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name category : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name category :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 							include ../components/general-wrapper.pug
 								block details
 									section.course-video
@@ -133,27 +133,27 @@ block content
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Id :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
 																			h4.description__name Author :
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name duration : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name duration :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name Total rate : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name Total rate :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 																	.general-details__item.general-details__item--white
 																		div
-																			h4.description__name category : 
-																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
+																			h4.description__name category :
+																			p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 
 
 
-									
+
 						//- start course list component
 						//- include ../components/course.pug
 						#nav-transcript.tab-pane.fade(role='tabpanel')
@@ -496,7 +496,7 @@ block content
 										//-End-List
 
 						#nav-comment.tab-pane.fade(role='tabpanel')
-							.row 
+							.row
 								.col-lg-8
 									include ../components/comments.pug
 								.col-lg-4
@@ -510,21 +510,45 @@ block content
 										+progress("progress--height","w-70", "70" , "0", "100")
 									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
-									
+
 						#nav-thread.tab-pane.fade(role='tabpanel')
-							include ../components/comments.pug
+							.thread__header
+								h3.course-content__title Thread Chapter content
+								.details__wrapper
+									.thread__details
+										span.details__name Asked
+										span.details__data 3 years
+									.thread__details
+										span.details__name Asked
+										span.details__data 3 years
+							.thread__wrapper
+								.thread__post
+									.post__qustion
+										include ../components/general-component/user-acount.pug
+										+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")
+											time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+										p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+										ul.qustion__list
+											li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+											li.qustion__item use regular HTML/CSS to get visual styles
+											li.qustion__item suggest you pick a third-party editor.
+										.qustion__tags
+											.qustion__taglist
+												a.taglist__item(href='#') Development
+												a.taglist__item(href='#') Bootestrap
+
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row
 								.col-lg-12
 									include ../components/general-wrapper.pug
 										block details
-											.row 
-												.col-lg-12 
+											.row
+												.col-lg-12
 													h3.secondary-title media title
 													.general-details__item
-														h4.description__name arabic : 
-														p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
-												.col-lg-3 
+														h4.description__name arabic :
+														p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+												.col-lg-3
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
 														include ../components/media-card.pug
 												.col-lg-3
@@ -536,7 +560,7 @@ block content
 												.col-lg-3
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
 														include ../components/media-card.pug
-												.col-lg-3 
+												.col-lg-3
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
 														include ../components/media-card.pug
 												.col-lg-3
@@ -548,22 +572,22 @@ block content
 												.col-lg-3
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
 														include ../components/media-card.pug
-						
+
 						#nav-translates.tab-pane.fade(role='tabpanel')
 							include ../components/general-wrapper.pug
 								block details
 									h3.secondary-title Titles
 									.general-details__item
 										div
-											h4.description__name arabic : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name arabic :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
 										div
-											h4.description__name english : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name english :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
@@ -573,15 +597,15 @@ block content
 									h3.secondary-title descriptions
 									.general-details__item
 										div
-											h4.description__name arabic : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name arabic :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
 										div
-											h4.description__name english : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name english :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
