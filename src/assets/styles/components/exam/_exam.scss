@@ -18,7 +18,15 @@
   .question-header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  .question-type{
+    max-width: 250px;
+    border-radius: 25px;
+  }
+  .field-wrapper{
+    max-width: 750px;
   }
 }
 .question{
