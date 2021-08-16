@@ -22,21 +22,7 @@
   .acount__live-user {
     float: left;
     width: 100%;
-    display: flex;
-    .live-user__content {
-      text-align: left;
-      .content__user-img {
-        .user-img__img {
-          width: 50px !important;
-          height: 50px !important;
-          display: inline-block !important;
-          border-radius: 100%;
-          margin-right: 15px;
-          border: 2px solid #fff;
-          // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
-        }
-      }
-    }
+    display: flex; 
     .live-user__user-content {
       width: 100%;
       .user-content__text {
@@ -62,6 +48,20 @@
         font-family: Roboto, sans-serif;
         font-size: 14px;
         cursor: pointer;
+      }
+    }
+  }
+  .live-user__content {
+    text-align: left;
+    .content__user-img {
+      .user-img__img {
+        width: 50px !important;
+        height: 50px !important;
+        display: inline-block !important;
+        border-radius: 100%;
+        margin-right: 15px;
+        border: 2px solid #fff;
+        // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
       }
     }
   }
