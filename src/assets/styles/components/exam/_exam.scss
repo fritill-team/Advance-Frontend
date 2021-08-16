@@ -15,6 +15,11 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  .question-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .question{
   font-size: 30px;

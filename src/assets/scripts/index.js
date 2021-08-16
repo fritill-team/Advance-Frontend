@@ -1,7 +1,7 @@
 // import "jquery";
 import "./vertical-responsive-menu.js";
 import "./jquery-3.3.1.min.js";
-// import "../styles/vendor/bootstrap/js/bootstrap.bundle.min";
+import "../styles/vendor/bootstrap/js/bootstrap.bundle.min";
 // require('bootstrap');
 // require('popper.js');
 import "../styles/vendor/bootstrap/js/bootstrap.bundle.min.js";
@@ -9,7 +9,7 @@ import "../styles/vendor/OwlCarousel/owl.carousel.js";
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
 
-import "../scripts/login";
+// import "../scripts/login";
 import "../styles/vendor/semantic/semantic.min.js";
 import "./custom.js";
 import "./night-mode.js";
@@ -22,17 +22,12 @@ import "./lightbox.min.js"
 // import "./videojs-transcript.min.js";
 
 // import 'bootstrap/dist/js/popper.min.js';
-import {createApp}from 'vue';
-import Exam from "../scripts/vue/Exam.vue";
-
-createApp(Exam).mount('#vue')
 // import * from 'video';
 
-console.log("hello from webpack");
 
 
 
-
+// import "./vue/index"
 import "./sortable.js";
 
 

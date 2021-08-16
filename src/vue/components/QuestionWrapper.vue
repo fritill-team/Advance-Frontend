@@ -1,6 +1,9 @@
 <template>
   <div class="question-wrapper">
-    <h3 class="question" v-text="question" />
+    <div class="question-header">
+      <h3 class="question" v-text="question" />
+      
+    </div>
     
     <ul class="hints">
       <li v-text="hint" />
