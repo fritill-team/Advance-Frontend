@@ -47,6 +47,9 @@
         margin-top: 0;
         display: block;
         margin-bottom: 10px !important;
+        &.user-content--mb{
+          margin-bottom: 0px !important;
+        }
       }
       .user-content__subscribe-btn {
         border: 0;
@@ -68,5 +71,8 @@
     border-radius: 10px;
     margin-bottom: 15px;
     width: 100%;
+  }
+  &.user-acount--mt{
+    margin-top: 15px;
   }
 }

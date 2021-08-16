@@ -8473,19 +8473,17 @@ a.rmv-btn i {
       // .sub-menu {
       //   display: none;
       // }
-      .sub-menu-item {
-        .item__label {
-          &::before {
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid #000;
-            position: absolute;
-            top: 20px;
-            right: 15px;
-            content: "";
-          }
+      .sub-menu-item { 
+        &::before {
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000;
+          position: absolute;
+          top: 20px;
+          right: 15px;
+          content: "";
         }
       }
     }

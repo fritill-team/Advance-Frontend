@@ -27,10 +27,8 @@
 	background-color: #FFF;
 }
 .thread__post{
-	display: flex;
-	margin-bottom: 15px; 
-	padding-bottom: 15px; 
-	padding: 20px 15px 20px;
+	display: flex; 
+	padding: 15px 15px 20px;
 	border-radius: 5px;
 	.post__votecell{
 		width: auto;  
@@ -49,25 +47,28 @@
 	}
 }
 .post__qustion{
-	border-bottom: 1px solid #e4e6e8;
-	padding-bottom: 20px;
 	display: flex;
 	flex-direction: column;
-	.qustion__text{
-		margin-bottom: 15px;
+	.qustion__text{ 
 		font-size: 18px;
 		color: #333;
+		background: #f7f7f7;
+		padding: 10px 15px;
 	}
 	.qustion__list{
 		margin-bottom: 15px !important;
 		list-style-type: disc !important;
+		background: #f7f7f7; 
+		padding: 10px 0px;
 		.qustion__item {
 			display: block;
 			margin-bottom: 5px;
-			color: #686f7a;
+			color: #686f7a; 
+			padding-left: 15px;
+			font-size: 15px;
 		}
-	}
- }	
+	} 
+ }	 
  .qustion__tags{
 	 margin-bottom: 15px;
 	.qustion__taglist{
@@ -91,8 +92,30 @@
 	}
  }
  .answers-header{
-	margin-bottom: 15px;
+	margin: 15px 0;
 	display: flex;
 	align-items: center; 
  }
- 
+ .relativetime{
+	 font-size: 14px;
+ }
+//  .thread--actions{
+// 	 display: flex;
+//  }
+ .post__action{
+	display: flex;
+    justify-content: flex-end;
+	.action__number{
+	   font-size: 20px;
+	   position: relative;  
+	   padding: 0px 15px;
+	}
+	.btn__action{
+		border: 0; 
+		padding: 5px;
+		background: #f7f7f7;
+		.icon__action{
+			font-size: 20px;
+		}
+	}
+ }

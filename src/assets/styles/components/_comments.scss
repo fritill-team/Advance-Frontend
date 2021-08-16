@@ -1,3 +1,6 @@
+.threads{
+  padding: 30px 10px;
+}
 .comments {
   float: left;
   width: 100%;
@@ -87,6 +90,10 @@
       background: #333;
     }
   }
+  &.comment--remov-mb{
+    margin-bottom: 0;
+    padding-left: 0;
+  }  
 }
 .review-comment__item,
 .review_reply {
@@ -127,4 +134,7 @@
   &.thread--actions{
     margin-top: 10px;
    }
+}
+.relativetime{
+  font-size: 10px;
 }

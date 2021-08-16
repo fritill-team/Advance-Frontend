@@ -522,7 +522,7 @@ html[dir="rtl"] {
               right: 1.5rem;
             }
           }
-          .rating-box__empty-star {
+          .rating-box--empty-star {
             &:before {
               right: 0;
             }
@@ -1011,14 +1011,10 @@ html[dir="rtl"] {
       padding: 0px 5px 0px 3px;
     }
   }
-  .sub-menu-item {
-    .item__link {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
-      }
+  .sub-menu-item { 
+    &::before {
+      left: 15px;
+      right: auto;
     }
   }
   .list__sidebar {
@@ -1077,12 +1073,10 @@ html[dir="rtl"] {
         float: right;
       }
     }
-    .sub-menu-item {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
+    .sub-menu-item { 
+      &::before {
+        left: 15px;
+        right: auto;
       }
     }
   }

@@ -1,0 +1,89 @@
+extends ../layouts/admin.pug
+block title
+	title Admin course details
+block sidebar
+	include ../components/sidebar-content.pug
+
+block content 
+	.container-fluid
+		.d-flex.flex-column.mb-3.pt-3 	 
+			.thread__header 
+				h3.course-content__title Thread Chapter content
+				.details__wrapper 
+					.thread__details 
+						span.details__name Asked	
+						span.details__data 3 years   
+					.thread__details 
+						span.details__name Asked	
+						span.details__data 3 years 
+			.thread__wrapper
+				.thread__post 	
+					//- .post__votecell
+					//- 	i.fas.fa-check.votecell__icon
+					//- 	span.votecell__number 454
+					.post__qustion
+						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+						ul.qustion__list
+							li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+							li.qustion__item use regular HTML/CSS to get visual styles
+							li.qustion__item suggest you pick a third-party editor.
+						.qustion__tags 	
+							.qustion__taglist 	 
+								a.taglist__item(href='#') Development
+								a.taglist__item(href='#') Bootestrap  
+						.thread--actions
+							include ../components/general-component/user-acount.pug
+							+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")  
+								time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+							.post__action 
+								button.btn__action
+									i.fas.fa-chevron-up.icon__action
+								span.action__number 0
+								button.btn__action
+									i.fas.fa-chevron-down.icon__action
+						//- 	a.action__report
+						//- 		i.report__icone.uil.uil-thumbs-up
+						//- 		| 10
+						//- 	a.action__report
+						//- 		i.report__icone.uil.uil-thumbs-down
+						//- 		| 1
+			.answers-header
+				h3.course-content__title 5	
+					span Answer   
+			.thread__wrapper
+				.thread__post  
+					.post__qustion 
+						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+						ul.qustion__list
+							li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+							li.qustion__item use regular HTML/CSS to get visual styles
+							li.qustion__item suggest you pick a third-party editor. 
+						include ../components/general-component/user-acount.pug 
+						+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")  
+							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+						section.comments__add-comment.comment--remov-mb
+							.add-comment__group
+								//- .group__img-wrapper
+								//- 	img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+								textarea.group__textarea(placeholder="Add a public comment")
+							button.group--btn(type="submit")  Comment	
+				.thread__post.thread--replay 
+					.post__qustion 
+						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a. 
+						include ../components/general-component/user-acount.pug
+						+user-acount("user-acount--mt"," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb") 
+							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+						//- .item__actions.thread--actions
+						//- 	a.action__report
+						//- 		i.report__icone.uil.uil-thumbs-up
+						//- 		| 10
+						//- 	a.action__report
+						//- 		i.report__icone.uil.uil-thumbs-down
+						//- 		| 1 
+						section.comments__add-comment.comment--remov-mb
+							.add-comment__group
+								//- .group__img-wrapper
+								//- 	img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+								textarea.group__textarea(placeholder="Add a public comment")
+							button.group--btn(type="submit")  Comment
+			#rich-textarea 
