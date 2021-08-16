@@ -140,7 +140,7 @@
         @include hulf-star-after;
       }
     }
-    .rating-box__empty-star {
+    .rating-box--empty-star {
       @include empty-star;
       &:before {
         @include empty-star-before;
@@ -178,7 +178,7 @@
       @include hulf-star-after;
     }
   }
-  .rating-box__empty-star {
+  .rating-box--empty-star {
     @include empty-star;
     &:before {
       @include empty-star-before;
@@ -262,7 +262,7 @@
       @include hulf-star-after;
     }
   }
-  .rating-box__empty-star {
+  .rating-box--empty-star {
     @include empty-star;
     &:before {
       @include empty-star-before;
