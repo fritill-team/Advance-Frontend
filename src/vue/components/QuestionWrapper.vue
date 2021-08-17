@@ -16,7 +16,7 @@
     </div>
 
     <ul class="hints">
-      <li v-text="hint" />
+      <li>this is hint</li>
     </ul>
   </div>
 </template>
@@ -24,8 +24,7 @@
 <script>
   export default {
     name: 'QuestionWrapper',
-    props: ['question', 'hint'],
-    components: {
+    setup(props){
 
     }
   }

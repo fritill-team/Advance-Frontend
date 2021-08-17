@@ -1,21 +1,21 @@
 <template>
   <form class="exam">
-    <question-wrapper
-      question="what is your name?"
-      hint="my name is mohammed">
-    </question-wrapper>
+    <question-wrapper />
   </form>
 </template>
 
 <script>
+import QuestionWrapper from "./components/QuestionWrapper.vue";
+import AnswerWrapper from "./components/AnswerWrapper.vue";
 
-  import QuestionWrapper from "./components/QuestionWrapper.vue";
-
-  export default {
-    name: 'Exam',
-    components: {
-      QuestionWrapper
-    },
-
-  }
+export default {
+  name: "Exam",
+  components: {
+    QuestionWrapper,
+    AnswerWrapper,
+  },
+  setup() {
+    return {};
+  },
+};
 </script>
