@@ -496,15 +496,6 @@ block content
 
 						#nav-thread.tab-pane.fade(role='tabpanel')
 							.thread__header
-								h3.course-content__title Thread Chapter content
-								.details__wrapper
-									.thread__details
-										span.details__name Asked
-										span.details__data 3 years
-									.thread__details
-										span.details__name Asked
-										span.details__data 3 years
-							.thread__header
 								h3.course-content__title.thread--title-fs Create Thread
 							.create__thread-post
 								.thread__post.post--pb0
@@ -520,10 +511,11 @@ block content
 														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
 											.comments__add-comment.create--threads
 												.add-comment__group 
-													textarea.group__textarea(placeholder="Add a post")
-												button.group--btn(type="submit")  Create Thread
+													form.form__action(action="")
+														textarea.group__textarea(placeholder="Add a post")
+														button.group--btn(type="submit")  Create Thread
 							.thread__header
-								h3.course-content__title.thread--title-fs Available
+								h3.course-content__title.thread--title-fs Threads
 							.thread__wrapper
 								.thread__post.post--pb0
 									.post__qustion
@@ -536,13 +528,15 @@ block content
 													.wrapper-acount.d-flex.justify-content-between.align-items-center
 														a.user-content__text.user-content--mb(href='#') Johnson Smith
 														include ../components/list-dropdown.pug
-													p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium .
+													a.thread-question(href="thread.html") ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium .
 													.wrapper__tags
 														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
 														.qustion__tags
 															.qustion__taglist
 																a.taglist__item.taglist--no-bg(href='#') #Development
 																a.taglist__item.taglist--no-bg(href='#') #Bootestrap
+ 
+
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row
 								.col-lg-12

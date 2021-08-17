@@ -34,15 +34,16 @@ block content
 										li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
 										li.qustion__item use regular HTML/CSS to get visual styles
 										li.qustion__item suggest you pick a third-party editor.
-									.qustion__tags 	
-										.qustion__taglist 	 
-											a.taglist__item(href='#') Development
-											a.taglist__item(href='#') Bootestrap   
+									.qustion__tags
+										.qustion__taglist
+											a.taglist__item.taglist--no-bg(href='#') #Development
+											a.taglist__item.taglist--no-bg(href='#') #Bootestrap
 					.comments__add-comment.comment--remov-mb
 						.live-user__content
 							.content__user-img
 								img.user-img__img(src=" images/left-imgs/img-1.jpg")
-						input.group__textarea.textarea--thread(placeholder="Add a public comment")  
+						form.form__action(action="")
+							input.group__textarea.textarea--thread(placeholder="Add a public comment")  
 			.thread__wrapper
 				.thread__post 
 					.post__qustion 
@@ -92,13 +93,15 @@ block content
 				.live-user__content
 					.content__user-img
 						img.user-img__img(src=" images/left-imgs/img-1.jpg")
-				input.group__textarea.textarea--thread(placeholder="Add a public comment")  
+				form.form__action(action="")
+					input.group__textarea.textarea--thread(placeholder="Add a public comment") 
 			.field-wrapper
 				.answers-header
 					h3.course-content__title Your Answer	 
 				.text-field__content
-					textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
-				.submit__thread
-					include ../components/general-component/btn.pug
-					+btn-link('btn1542', 'Submit' , '#create_new_course.html')
+					form.form__action(action="")
+						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+						.submit__thread
+							include ../components/general-component/btn.pug
+							+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
 			#rich-textarea 
