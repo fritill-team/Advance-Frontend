@@ -1011,14 +1011,10 @@ html[dir="rtl"] {
       padding: 0px 5px 0px 3px;
     }
   }
-  .sub-menu-item {
-    .item__link {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
-      }
+  .sub-menu-item { 
+    &::before {
+      left: 15px;
+      right: auto;
     }
   }
   .list__sidebar {
@@ -1077,12 +1073,10 @@ html[dir="rtl"] {
         float: right;
       }
     }
-    .sub-menu-item {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
+    .sub-menu-item { 
+      &::before {
+        left: 15px;
+        right: auto;
       }
     }
   }
@@ -1141,4 +1135,48 @@ html[dir="rtl"] {
   .ui.checkbox.mncheck label {
     padding-right: 1.85714em;
   }
+  // thread
+   
+  .details__wrapper {
+    padding: 5px 0px;
+    .thread__details { 
+      margin-left: 16px;
+      .details__name{
+        padding-right: 5px;
+      }
+      .details__data{
+        padding-right: 5px;
+      }
+    }
+  }
+  .thread__wrapper{ 
+    &.thread--replay{
+      padding-right: 50px;
+    }
+  }
+  .thread__post{
+    .post__votecell{
+      padding: 10px 0px 10px 20px;
+    }
+  }
+  
+   .qustion__tags{
+    .qustion__taglist{
+      .taglist__item{   
+        margin: 2px 0px 2px 6; 
+      }
+    }
+   }
+  //  @media (min-width: 767px) {
+  //  }  
+  .comment--remov-mb{ 
+    .live-user__content{
+      .content__user-img{
+        .user-img__img{
+          margin-left: 15px;
+        }
+      }
+    }
+  }
 }
+ 

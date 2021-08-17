@@ -1,3 +1,6 @@
+.threads{
+  padding: 30px 10px;
+}
 .comments {
   float: left;
   width: 100%;
@@ -68,7 +71,7 @@
       color: #333;
       padding: 12px;
       border-radius: 10px;
-      background: #f9f9f9;
+      background: #f9f9f9; 
     }
   }
   .group--btn {
@@ -85,6 +88,19 @@
     &:hover {
       color: #fff;
       background: #333;
+    }
+  }
+  &.comment--remov-mb{
+    margin-bottom: 0; 
+  }  
+  &.create--threads{
+    margin-bottom: 0; 
+    padding-left: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+    .group__textarea{
+      margin-left: 0px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -127,4 +143,7 @@
   &.thread--actions{
     margin-top: 10px;
    }
+}
+.relativetime{
+  font-size: 10px;
 }
