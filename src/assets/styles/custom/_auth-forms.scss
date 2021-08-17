@@ -355,6 +355,7 @@
     margin-bottom: 5px;
 
   }
+  
   .select2-selection__choice__remove{
     border-right: 0 !important;
     height: 100%;
@@ -373,6 +374,11 @@
   }
   .select2-container--default{
 
+  }
+}
+.select2-results{
+  .select2-results__option--highlighted{
+    background-color: rgba($color: #ed2a26, $alpha: 0.1);
   }
 }
 
