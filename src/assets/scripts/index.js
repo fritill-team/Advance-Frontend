@@ -9,7 +9,7 @@ import "../styles/vendor/OwlCarousel/owl.carousel.js";
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel';
 
-import "../scripts/login";
+// import "../scripts/login";
 import "../styles/vendor/semantic/semantic.min.js";
 import "./custom.js";
 import "./night-mode.js";
@@ -17,6 +17,7 @@ import "../styles/app.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import "../vendor/fontawesome-free/js/all";
 import "./lightbox.min.js"
+import "./select2.min.js";
 // video.js
 // import 'https://vjs.zencdn.net/7.11.4/video.min.js';
 // import "./videojs-transcript.min.js";
