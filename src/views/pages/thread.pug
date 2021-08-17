@@ -13,53 +13,81 @@ block content
 					.thread__details 
 						span.details__name Asked	
 						span.details__data 3 years   
-					.thread__details 
+					.thread__details 	
 						span.details__name Asked	
 						span.details__data 3 years 
 			.thread__wrapper
-				.thread__post 	 
-					.post__qustion
-						include ../components/general-component/user-acount.pug
-						+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")  
-							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
-						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
-						ul.qustion__list
-							li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
-							li.qustion__item use regular HTML/CSS to get visual styles
-							li.qustion__item suggest you pick a third-party editor.
-						.qustion__tags 	
-							.qustion__taglist 	 
-								a.taglist__item(href='#') Development
-								a.taglist__item(href='#') Bootestrap   
-				.comments__add-comment.comment--remov-mb
-					.live-user__content
-						.content__user-img
-							img.user-img__img(src=" images/left-imgs/img-1.jpg")
-					input.group__textarea.textarea--thread(placeholder="Add a public comment")  
+				.post__qustion
+					.thread__post 	 
+						.user-wrapper__acount
+							.acount__live-user
+								.live-user__content
+									a.content__user-img(href='#')
+										img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+								.live-user__user-content
+									.wrapper-acount.d-flex.justify-content-between.align-items-center
+										a.user-content__text.user-content--mb(href='#') Johnson Smith
+										include ../components/list-dropdown.pug
+									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
+									ul.qustion__list
+										li.qustion__item As far as I know, all JavaScript WYSIWYG editors use a regular
+										li.qustion__item use regular HTML/CSS to get visual styles
+										li.qustion__item suggest you pick a third-party editor.
+									.qustion__tags 	
+										.qustion__taglist 	 
+											a.taglist__item(href='#') Development
+											a.taglist__item(href='#') Bootestrap   
+					.comments__add-comment.comment--remov-mb
+						.live-user__content
+							.content__user-img
+								img.user-img__img(src=" images/left-imgs/img-1.jpg")
+						input.group__textarea.textarea--thread(placeholder="Add a public comment")  
 			.thread__wrapper
 				.thread__post 
 					.post__qustion 
-						include ../components/general-component/user-acount.pug
-						+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")  
-							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56 
-						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a. 
+						.user-wrapper__acount
+							.acount__live-user
+								.live-user__content
+									a.content__user-img(href='#')
+										img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+								.live-user__user-content
+									.wrapper-acount.d-flex.justify-content-between.align-items-center
+										a.user-content__text.user-content--mb(href='#') Johnson Smith
+										include ../components/list-dropdown.pug
+									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
 			.answers-header
 				h3.course-content__title 5	
 					span Answer   
 			.thread__wrapper
 				.thread__post.best--answer  
 					.post__qustion 
-						include ../components/general-component/user-acount.pug 
-						+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")  
-							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
-						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a. 
+						.user-wrapper__acount
+							.acount__live-user
+								.live-user__content
+									a.content__user-img(href='#')
+										img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+								.live-user__user-content
+									.wrapper-acount.d-flex.justify-content-between.align-items-center
+										a.user-content__text.user-content--mb(href='#') Johnson Smith
+										include ../components/list-dropdown.pug
+									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
 			.thread__wrapper.thread--replay 
 				.thread__post 
 					.post__qustion 
-						include ../components/general-component/user-acount.pug
-						+user-acount("user-acount--mt"," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb") 
-							time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56 
-						p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a. 
+						.user-wrapper__acount
+							.acount__live-user
+								.live-user__content
+									a.content__user-img(href='#')
+										img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+								.live-user__user-content
+									.wrapper-acount.d-flex.justify-content-between.align-items-center
+										a.user-content__text.user-content--mb(href='#') Johnson Smith
+										include ../components/list-dropdown.pug
+									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
 			.comments__add-comment.comment--remov-mb
 				.live-user__content
 					.content__user-img

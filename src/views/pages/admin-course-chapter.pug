@@ -478,24 +478,46 @@ block content
 									.thread__details
 										span.details__name Asked
 										span.details__data 3 years
+							.thread__header
+								h3.course-content__title.thread--title-fs Create Thread
+							.create__thread-post
+								.thread__post.post--pb0
+									.post__qustion
+										.user-wrapper__acount
+											.acount__live-user
+												.live-user__content
+													a.content__user-img(href='#')
+														img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+												.live-user__user-content
+													.wrapper-acount
+														a.user-content__text.user-content--mb(href='#') Johnson Smith
+														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+											.comments__add-comment.create--threads
+												.add-comment__group 
+													textarea.group__textarea(placeholder="Add a post")
+												button.group--btn(type="submit")  Create Thread
+							.thread__header
+								h3.course-content__title.thread--title-fs Available
 							.thread__wrapper
 								.thread__post.post--pb0
 									.post__qustion
-										include ../components/general-component/user-acount.pug
-										+user-acount("user-wrapper__acount "," images/left-imgs/img-1.jpg", "Johnson Smith ", "user-content--mb")
-											p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! 
-											.d-flex.justify-content-between.align-item-center
-												time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
-												.qustion__tags
-													.qustion__taglist
-														a.taglist__item.taglist--no-bg(href='#') Development
-														a.taglist__item.taglist--no-bg(href='#') Bootestrap
-				//- .comments__add-comment.comment--remov-mb
-				//- 	.live-user__content
-				//- 		.content__user-img
-				//- 			img.user-img__img(src=" images/left-imgs/img-1.jpg")
-				//- 	input.group__textarea.textarea--thread(placeholder="Add a public comment")
-
+										.user-wrapper__acount
+											.acount__live-user
+												.live-user__content
+													a.content__user-img(href='#')
+														img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+												.live-user__user-content
+													.wrapper-acount.d-flex.justify-content-between.align-items-center
+														a.user-content__text.user-content--mb(href='#') Johnson Smith
+														include ../components/list-dropdown.pug
+													p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium .
+													.wrapper__tags
+														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+														.qustion__tags
+															.qustion__taglist
+																a.taglist__item.taglist--no-bg(href='#') #Development
+																a.taglist__item.taglist--no-bg(href='#') #Bootestrap
+ 
 
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row

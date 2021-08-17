@@ -93,6 +93,16 @@
   &.comment--remov-mb{
     margin-bottom: 0; 
   }  
+  &.create--threads{
+    margin-bottom: 0; 
+    padding-left: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+    .group__textarea{
+      margin-left: 0px;
+      margin-bottom: 10px;
+    }
+  }
 }
 .review-comment__item,
 .review_reply {

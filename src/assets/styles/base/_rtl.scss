@@ -1167,19 +1167,8 @@ html[dir="rtl"] {
       }
     }
    }
-   @media (min-width: 767px) {
-    .post__qustion{
-      .qustion__text{
-        padding-right: 67px;
-      }
-    }
-    .qustion__item {
-      padding-right: 67px;
-    }
-    .qustion__tags{
-      padding-right: 67px;
-    } 
-   }  
+  //  @media (min-width: 767px) {
+  //  }  
   .comment--remov-mb{ 
     .live-user__content{
       .content__user-img{

@@ -53,16 +53,17 @@
   }
   .live-user__content {
     text-align: left;
-    .content__user-img {
-      .user-img__img {
-        width: 50px !important;
-        height: 50px !important;
-        display: inline-block !important;
-        border-radius: 100%;
-        margin-right: 15px;
-        border: 2px solid #fff;
-        // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
-      }
+   
+  }
+  .content__user-img {
+    .user-img__img {
+      width: 50px !important;
+      height: 50px !important;
+      display: inline-block !important;
+      border-radius: 100%;
+      margin-right: 15px;
+      border: 2px solid #fff;
+      // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
     }
   }
   &.user-wrapper--bg {
