@@ -1,3 +1,11 @@
+.exam{
+  padding-top: 50px;
+}
+.answer-wrapper{
+  display: flex;
+  margin-bottom: 15px;
+}
+
 .question-wrapper{
   padding: 16px;
   width: 100%;
@@ -5,4 +13,52 @@
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .question-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    .field-wrapper{
+      .text-field__label{
+        font-size: 2.4rem !important;
+        padding: 0;
+      }
+    }
+  }
+  .question-type{
+    max-width: 250px;
+    border-radius: 25px;
+  }
+  .field-wrapper{
+    max-width: 75%;
+  }
+}
+.question{
+  font-size: 30px;
+  margin: 0 0 15px 0;
+  color: #333;
+}
+.hints{
+  list-style: none;
+  li{
+    font-size: 16px;
+    margin: 0;
+    color: #686f7a;
+  }
+}
+
+// answer component
+
+.answer-wrapper{
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.mcq-wrapper{
+  padding-left: 30px;
+  position: relative;
+  
 }

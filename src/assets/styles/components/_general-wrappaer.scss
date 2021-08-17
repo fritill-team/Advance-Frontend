@@ -14,8 +14,7 @@
     padding-bottom: 5px;
     border-bottom: 1px solid rgba($color: #000000, $alpha: .05);
     h3{
-      font-size: 30px;
-      font-weight: 500;
+      font-size: 28px;
       font-family: Roboto,sans-serif;
       text-align: left;
       margin-bottom: 15px;
@@ -27,27 +26,60 @@
 	
   .general-wrapper__content{
     z-index: 0;
-    .general-details__item{
+
+  }
+  .general-details__item{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    div{
       display: flex;
-      margin-bottom: 10px;
-			justify-content: space-between;
-			div{
-				display: flex;
-				align-items: center;
-			}
-      &.general-details__item--white{
-				div{
-					& > *{
-						color: #fff;
-					}
-				}
+      align-items: center;
+    }
+    &.general-details__item--white{
+      div{
+        & > *{
+          color: #fff;
+        }
       }
     }
-    .description__name{
-      margin-right: 5px;
-    }
-    .description__details{
-      line-height: 1.5;
+  }
+  .description__name{
+    margin-right: 5px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .description__details{
+    line-height: 1.5;
+  }
+  &.general-wrapper--details{
+    padding: 16px;
+    .general-details__item{
+      div{
+        align-items: flex-start;
+        flex-direction: column;
+        // align-items: flex-start;
+        .description__name{
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        .description__details{
+          font-size: 16px;
+          position: relative;
+          padding: 0 10px;
+          margin: 5px 10px;
+          &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 2px;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba($color: #000000, $alpha: .5);
+          }
+        }
+      }
     }
   }
 }
@@ -71,6 +103,21 @@
 		}
 	}
 }
+
+.course-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 30px 0;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  h2{
+    font-size: 36px;
+    font-weight: 600;
+  }
+}
+
 html[dir="rtl"]{
   .general-actions{
 		display: flex;

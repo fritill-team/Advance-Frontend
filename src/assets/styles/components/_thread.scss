@@ -75,6 +75,9 @@
 		// padding-bottom: 0px;
 		margin-top: 10px;
 	}
+  &:last-of-type{
+    border-bottom: 0;
+  }
 }
 .post__qustion{
 	display: flex;
@@ -100,7 +103,7 @@
 	//  margin-bottom: 15px;  
 	.qustion__taglist{
 		.taglist__item{   
-			padding: 8px 5px;
+			padding: 8px 16px;
 			margin: 2px 6px 2px 0; 
 			line-height: 1;
 			white-space: nowrap;
