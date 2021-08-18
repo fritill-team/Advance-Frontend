@@ -495,7 +495,7 @@ $(document)
   })
 
 // scrolling
-// $(function() {  
+// $(function() {
 //   $(".card__content").niceScroll({
 //     cursorcolor: "red",
 //     autohidemode: "scroll",
@@ -522,4 +522,25 @@ $(".card__header--collapse").each(function () {
 // In your Javascript (external .js resource or <script> tag)
 $(document).ready(function() {
   $('.js-example-basic-single').select2();
+});
+
+
+//sidebar__playlist
+
+var subnavs = $('#js-menu .sub-menu-item');
+var navPlayer = $('.sidebar__playlist'),
+  wrapper = $('.wrapper'),
+  sidebarIcon = $('.sidebar-with-icon'),
+  menuItem = $('.sub-menu-item'),
+  menu = $("#js-menu")
+
+$(".header-course__course-name").click(function() {
+  $(".sidebar__playlist").toggleClass("sidebar--opened vertical--minify");
+  wrapper.toggleClass("toggle-content wrapper--minify ");
+  // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
+});
+
+$(".sidebar__close").click(function() {
+  $(".sidebar__playlist").toggleClass("sidebar--opened vertical--minify");
+  wrapper.toggleClass("toggle-content wrapper--minify ");
 });
