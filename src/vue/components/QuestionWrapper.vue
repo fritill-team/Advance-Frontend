@@ -14,7 +14,7 @@
         <option value="3">Three</option>
       </select>
     </div>
-
+		<slot/>
     <ul class="hints">
       <li>this is hint</li>
     </ul>
