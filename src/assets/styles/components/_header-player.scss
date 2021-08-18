@@ -34,13 +34,27 @@
   float: left;
   background: #23515b;
    padding: 10px 5px 10px 10px;
-  // background: #ed2a26;
-  .courses__name{
+   position: relative;
+   margin-right: 10px;
+   .courses__name{
     color: #5baec0;
     font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
    white-space: nowrap;
+  }
+  &::after{
+    border: 23px solid transparent;
+    border-left: 10px solid #23515b;
+    border-right: 0;
+    content: "";
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 1;
+    margin-right: 5px;
   }
 }
 .header-course__course-name{

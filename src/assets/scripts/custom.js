@@ -535,12 +535,12 @@ var navPlayer = $('.sidebar__playlist'),
   menu = $("#js-menu")
 
 $(".header-course__course-name").click(function() {
-  $(".sidebar__playlist").toggleClass("sidebar--opened vertical--minify");
+  $(".playlist").toggleClass("playlist--opened vertical--minify");
   wrapper.toggleClass("toggle-content wrapper--minify ");
   // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
 });
 
-$(".sidebar__close").click(function() {
-  $(".sidebar__playlist").toggleClass("sidebar--opened vertical--minify");
+$(".playlist__close").click(function() {
+  $(".playlist").toggleClass("playlist--opened vertical--minify");
   wrapper.toggleClass("toggle-content wrapper--minify ");
 });
