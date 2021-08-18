@@ -534,7 +534,7 @@ var navPlayer = $('.sidebar__playlist'),
   menuItem = $('.sub-menu-item'),
   menu = $("#js-menu")
 
-$(".header-course__course-name").click(function() {
+$(".header-player__course-name").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
   wrapper.toggleClass("toggle-content wrapper--minify ");
   // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");

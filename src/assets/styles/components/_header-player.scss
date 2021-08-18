@@ -1,19 +1,19 @@
-.header-course{
+.header-player{
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: auto;
+  height: 45px;
   background: #242424;
   display: flex!important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
-.header-course__logo{
+.header-player__logo{
   float: left;
-  width: 135px;
-  // margin-left: 20px;
   height: 100%;
+  width: 150px;
+  margin-left: 10px;
   .logo__link{
     .logo__img{
       width: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.header-course__courses{
+.header-player__courses{
   width: auto;
   text-align: center;
   display: block;
@@ -32,12 +32,12 @@
   margin: 0;
   cursor: pointer;
   float: left;
-  background: #23515b;
+  background: rgba(#7FC8A9 , 0.1);
    padding: 10px 5px 10px 10px;
    position: relative;
    margin-right: 10px;
    .courses__name{
-    color: #5baec0;
+    color: #7FC8A9;
     font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -45,7 +45,7 @@
   }
   &::after{
     border: 23px solid transparent;
-    border-left: 10px solid #23515b;
+    border-left: 10px solid rgba(#7FC8A9 , 0.1);
     border-right: 0;
     content: "";
     height: 0;
@@ -54,10 +54,9 @@
     top: 0;
     width: 0;
     z-index: 1;
-    margin-right: 5px;
   }
 }
-.header-course__course-name{
+.header-player__course-name{
   width: auto;
   text-align: center;
   display: block;
@@ -68,10 +67,15 @@
   float: left;
   padding: 10px 5px 10px 10px;
   .course-name__title{
-    color: #5baec0;
+    color: #7FC8A9;
     font-size: 18px;
     overflow: hidden;
      text-overflow: ellipsis;
     white-space: nowrap;
   }
  }
+@media(max-width: 767px){
+  .header-player__logo{
+    width: 80px;
+  }
+}
