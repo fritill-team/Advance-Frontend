@@ -65,6 +65,7 @@
 	&.ad-card--centered{
 		.ad-card__content--header{
 			div{
+				justify-content: center;
 				flex-direction: column;
 				align-items: center;
 			}
@@ -103,6 +104,9 @@
 		}
 	}
 	&.ad-card--with-actions{
+		// .ad-card__content--header{
+			
+		// }
 		.more-dropdown{
 			display: inline-block !important;
 		}
