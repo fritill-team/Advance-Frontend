@@ -360,7 +360,7 @@ input[type="text"] {
 ==========================*/
 @media (min-width: 992px) {
   body {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .logo img {
@@ -8473,7 +8473,7 @@ a.rmv-btn i {
       // .sub-menu {
       //   display: none;
       // }
-      .sub-menu-item { 
+      .sub-menu-item {
         &::before {
           display: none;
         }
@@ -8495,7 +8495,7 @@ a.rmv-btn i {
           }
         }
       }
-      .sub-menu-item { 
+      .sub-menu-item {
         &::before {
           display: block;
           transition: all 0.4s ease;

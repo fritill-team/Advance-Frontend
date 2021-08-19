@@ -2,7 +2,7 @@
 
 doctype html
 
-html(lang='en' dir="")
+html(lang='en' dir="ltr")
 	head
 		//- Stylesheets
 		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
@@ -23,15 +23,15 @@ html(lang='en' dir="")
 		block title
 			title Your project!
 
-	body.sidebar-with-icon 
+	body.sidebar-with-icon
 
 		//- Menu
 		include ../components/header.pug
-			
+
 		include ../components/sidebar.pug
 			block sidebar
 				include ../components/sidebar-content.pug
-				
+
 		//- block content
 		.wrapper
 			block content
