@@ -4,22 +4,22 @@ block title
 block sidebar
 	include ../components/sidebar-content.pug
 
-block content 
-	//- 
+block content
+	//-
 	.container-fluid
-		.d-flex.flex-column.mb-3.pt-3 	 
-			.thread__header 
+		.d-flex.flex-column.mb-3.pt-3
+			.thread__header
 				h3.course-content__title Thread Chapter content
-				.details__wrapper 
-					.thread__details 
-						span.details__name Asked	
-						span.details__data 3 years   
-					.thread__details 	
-						span.details__name Asked	
-						span.details__data 3 years 
+				.details__wrapper
+					.thread__details
+						span.details__name Asked
+						span.details__data 3 years
+					.thread__details
+						span.details__name Asked
+						span.details__data 3 years
 			.thread__wrapper
 				.post__qustion
-					.thread__post 	 
+					.thread__post
 						.user-wrapper__acount
 							.acount__live-user
 								.live-user__content
@@ -44,10 +44,10 @@ block content
 							.content__user-img
 								img.user-img__img(src=" images/left-imgs/img-1.jpg")
 						form.form__action(action="")
-							input.group__textarea.textarea--thread(placeholder="Add a public comment")  
+							input.group__textarea.textarea--thread(placeholder="Add a public comment")
 			.thread__wrapper
-				.thread__post 
-					.post__qustion 
+				.thread__post
+					.post__qustion
 						.user-wrapper__acount
 							.acount__live-user
 								.live-user__content
@@ -60,11 +60,11 @@ block content
 									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
 									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
 			.answers-header
-				h3.course-content__title 5	
-					span Answer   
+				h3.course-content__title 5
+					span Answer
 			.thread__wrapper
-				.thread__post.best--answer  
-					.post__qustion 
+				.thread__post.best--answer
+					.post__qustion
 						.user-wrapper__acount
 							.acount__live-user
 								.live-user__content
@@ -76,9 +76,9 @@ block content
 										include ../components/list-dropdown.pug
 									time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
 									p.qustion__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium vel beatae sequi ducimus ipsa perferendis! Suscipit eum fugiat, debitis ducimus corrupti aperiam ipsa tenetur, laudantium distinctio obcaecati asperiores a.
-			.thread__wrapper.thread--replay 
-				.thread__post 
-					.post__qustion 
+			.thread__wrapper.thread--replay
+				.thread__post
+					.post__qustion
 						.user-wrapper__acount
 							.acount__live-user
 								.live-user__content
@@ -95,14 +95,14 @@ block content
 					.content__user-img
 						img.user-img__img(src=" images/left-imgs/img-1.jpg")
 				form.form__action(action="")
-					input.group__textarea.textarea--thread(placeholder="Add a public comment") 
+					input.group__textarea.textarea--thread(placeholder="Add a public comment")
 			.field-wrapper
 				.answers-header
-					h3.course-content__title Your Answer	 
+					h3.course-content__title Your Answer
 				.text-field__content
 					form.form__action(action="")
 						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 						.submit__thread
 							include ../components/general-component/btn.pug
 							+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
-			#rich-textarea 
+			#rich-textarea
