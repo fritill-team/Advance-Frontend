@@ -7,5 +7,46 @@ block sidebar
 block content
 	.container
 		.row
+				//- ad-card
 			.col-lg-12
-				p cards
+				h2.title-2 ad-card
+			.col-lg-12
+				.ad-card
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.ad-card__content--header
+							.d-flex
+								.user-image
+									img(src="./images/sign.svg" alt="")
+									i.uil.uil-check-circle
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									p.text-3.gray Jose Portilla Jose Portilla Jose
+									a.text-3.gray(href="#") Jose Portilla
+							include ../components/list-dropdown.pug
+						.ad-card__content--details
+							p.text-1 lorem ipsum dolor sit amet
+
+				//- .ad-card--with-title
+			.col-lg-12
+				h2.title-2 ad-card ad-card--with-title
+			.col-lg-12
+				.ad-card.ad-card--with-title
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.ad-card__content--header
+							.d-flex
+								.user-image
+									img(src="./images/sign.svg" alt="")
+									i.uil.uil-check-circle
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									p.text-3.gray Jose Portilla Jose Portilla Jose
+									a.text-3.gray(href="#") Jose Portilla
+							include ../components/list-dropdown.pug
+						.ad-card__content--details
+							p.text-1 lorem ipsum dolor sit amet
+
+
