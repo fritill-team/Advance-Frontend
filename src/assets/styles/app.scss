@@ -68,7 +68,11 @@ ul {
 @import "./components/header-player";
 @import "./components/sidebar-player";
 @import "./components/general-wrappaer";
+
+@import "./components/rich-textarea";
+
 @import "./components/general-card";
+
 @import "./components/colleps";
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";
@@ -77,6 +81,8 @@ ul {
 @import "./components/typography";
 @import "./base/instructor-dashboard.css";
 @import "./base/jquery-steps.css";
+@import "./base/datepicker.min.css"; 
+
 @import "./base/datepicker.min.css";
 @import "./components/sidebar.scss";
 @import "./vendor/unicons-2.0.1/css/unicons.css";
@@ -86,6 +92,7 @@ ul {
 // @import './base/vertical-responsive-menu.min.css';
 @import "./base/responsive.css";
 @import "./base/night-mode.css";
+@import "./base/select2.min.css";
 @import "./vendor/OwlCarousel/assets/owl.carousel.css";
 @import "./vendor/OwlCarousel/assets/owl.theme.default.min.css";
 @import "./vendor/semantic/semantic.css";
