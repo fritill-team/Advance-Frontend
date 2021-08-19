@@ -67,7 +67,7 @@
 		margin-bottom: 15px;
 	}
 
-	// 
+	//
 	&.ad-card--with-title{
 		.ad-card__title{
 			display: block;
@@ -104,7 +104,23 @@
 				text-align: center;
 			}
 			align-items: center;
+      .text-3{
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Roboto,sans-serif;
+        color: #333;
+        &:hover{
+          color: #ed2a26!important;
+        }
+      }
 		}
+    .uil-check-circle{
+      font-size: 16px;
+      left: 8px;
+      bottom: -30px;
+      height: 35px;
+      color: #1da1f2;
+    }
 	}
 	&.ad-card--trusted{
 		border: 2px solid $gold;
@@ -154,8 +170,15 @@
 		.ad-card__content--details{
 			display: none;
 		}
-
-
+    .text-2{
+      text-align: left;
+    }
+    .details{
+      text-align: left;
+    }
+    .profile {
+      text-align: left;
+    }
 		.ad-card__content{
 			flex-direction: row;
 			align-items: center;
@@ -163,6 +186,9 @@
 				font-size: 14px;
 			}
 		}
+    .social-icon{
+      justify-content: flex-start;
+    }
 		.ad-card__content-header{
 			margin-bottom: 0;
 			& > div{
@@ -171,9 +197,9 @@
 			width: auto;
 			padding-right: 10px;
 			margin-right: 10px;
-			
+
 		}
-		
+
 	}
 	&.ad-card--transparent{
 		background-color: transparent;
@@ -182,4 +208,25 @@
 
 *{
 	transition: .3s ease all
+}
+.details{
+  font-size: 12px;
+  margin-top: 20px;
+  font-weight: 400;
+  display: block;
+  font-family: Roboto,sans-serif;
+  color: #686f7a;
+  text-align: center;
+  .total-students,
+  .total-course{
+    color: #686f7a;
+    text-align: center;
+    font-size: 12px;
+  }
+  .total-students{
+    &::after{
+      content: ".";
+      margin: 0 4px;
+    }
+  }
 }

@@ -11,7 +11,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 Default card
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card
 			.col-lg-12
 				.ad-card
@@ -34,7 +34,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 Card with title with centerd components
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--with-title .ad-card--centered
 			.col-lg-3
 				.ad-card.ad-card--with-title.ad-card--centered
@@ -57,7 +57,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 Card with centered components
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--centered
 			.col-lg-3
 				.ad-card.ad-card--centered
@@ -76,11 +76,50 @@ block content
 								include ../../../components/list-dropdown.pug
 							.ad-card__content--details
 								p.text-1 lorem ipsum dolor sit amet
+			//- .ad-card--centered
+			.col-lg-12
+				h2.title-2.my-3 Card with centered components user
+				p.text-2.mb-1
+					| we use
+					code .ad-card--centered
+			.col-lg-3
+				.ad-card.ad-card--centered
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+										i.uil.uil-check-circle
+									p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+									ul.social-icon
+										li.social-icon__list
+											a.social-icon__link.social-icon--fa-bg(href="#")
+												i.fab.fa-facebook-f
+										li.social-icon__list
+											a.social-icon__link.social-icon--tw-bg(href="#")
+												i.fab.fa-twitter
+										li.social-icon__list
+											a.social-icon__link.social-icon--li-bg(href="#")
+												i.fab.fa-linkedin-in
+										li.social-icon__list
+											a.social-icon__link.social-icon--yu-bg(href="#")
+												i.fab.fa-youtube
+									.details
+										span.total-students 615K Students
+										span.total-course 12 Courses
+									a.text-3.gray.profile.mt-3(href="#") Go To Profile
+								include ../../../components/list-dropdown.pug
+								//- p.text-1 lorem ipsum dolor sit amet
 			//- ad-card--interactive
 			.col-lg-12
 				h2.title-2.my-3 Trusted answer
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--trusted
 			.col-lg-12
 				.ad-card.ad-card--trusted
@@ -102,7 +141,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 Reverced Card
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--reversed
 			.col-lg-12
 				.ad-card.ad-card--reversed
@@ -125,7 +164,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 Card contains action list
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--with-actions
 			.col-lg-4
 				.ad-card.ad-card--with-actions
@@ -148,7 +187,7 @@ block content
 			.col-lg-12
 				h2.title-2.my-3 This card shows up when any user account hovered
 				p.text-2.mb-1
-					| we use 
+					| we use
 					code .ad-card--horizontal
 			.col-lg-6
 				.ad-card.ad-card--horizontal
@@ -167,9 +206,10 @@ block content
 								include ../../../components/list-dropdown.pug
 							.ad-card__content--details
 								p.text-1 lorem ipsum dolor sit amet
+
 				
 			.col-lg-12
 				pre
 					code.language-html 
 						<div class="ad-card ad-card--horizontal"><div class="ad-card__title"><h4 class="title-h4">card title</h4></div><div class="ad-card__content"><div class="user-image"><img src="./images/sign.svg" alt=""><i class="uil uil-check-circle"></i></div><div class="ad-card__body"><div class="ad-card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icone uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icone uil uil-trash-alt"></i>Delete</span></div></div></div><div class="ad-card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
-			
+ 
