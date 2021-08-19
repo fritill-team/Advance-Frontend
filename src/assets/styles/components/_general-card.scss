@@ -1,17 +1,17 @@
-.general-card{
+.ad-card{
 	background-color: #fff;
 	border-radius: 10px;
-	.general-card__title{
+	.ad-card__title{
 		display: none;
 		padding: 15px 20px;
 		border-bottom: 1px solid rgba(#333, .1);
 	}
-	.general-card__content{
+	.ad-card__content{
 		display: flex;
 		flex-direction: column;
 		padding: 20px
 	}
-	.general-card__content--header{
+	.ad-card__content--header{
 		display: flex;
 		align-items: flex-start;
 		width: 100%;
@@ -50,20 +50,20 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.general-card__content--details{
+	.ad-card__content--details{
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 15px;
 	}
 
 	// 
-	&.general-card--with-title{
-		.general-card__title{
+	&.ad-card--with-title{
+		.ad-card__title{
 			display: block;
 		}
 	}
-	&.general-card--centerd{
-		.general-card__content--header{
+	&.ad-card--centered{
+		.ad-card__content--header{
 			div{
 				flex-direction: column;
 				align-items: center;
@@ -78,15 +78,15 @@
 			height: 100px;
 			margin-bottom: 15px;
 		}
-		.general-card__content--details{
+		.ad-card__content--details{
 			*{
 				text-align: center;
 			}
 			align-items: center;
 		}
 	}
-	&.general-card--interactive{
-		.general-card__content--details{
+	&.ad-card--interactive{
+		.ad-card__content--details{
 			padding-left: 60px;
 		}
 		&.trusted{
@@ -97,14 +97,45 @@
 			}
 		}
 	}
-	&.general-card--reverced{
-		.general-card__content{
+	&.ad-card--reversed{
+		.ad-card__content{
 			flex-direction: column-reverse;
 		}
 	}
-	&.general-card--with-actions{
+	&.ad-card--with-actions{
 		.more-dropdown{
 			display: inline-block !important;
+		}
+	}
+	&.ad-card--shows-on-hover{
+		max-width: 500px;
+		.ad-card__content{
+			flex-direction: row;
+			align-items: center;
+			*{
+				font-size: 14px;
+			}
+		}
+		.ad-card__content--header{
+			position: relative;
+			margin-bottom: 0;
+			& > div{
+				flex-direction: column;
+			}
+			&::after{
+				position: absolute;
+				content: '';
+				width: 1px;
+				height: 100%;
+				background-color: rgba(#333, .2);
+				top: 0;
+				right: 10px;
+			}
+		}
+		.user-image{
+			width: 80px;
+			height: 80px;
+			margin-bottom: 10px;
 		}
 	}
 }

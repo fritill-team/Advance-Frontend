@@ -7,21 +7,19 @@ block content
 		.container
 			.row
 				.col-lg-8
-					.general-card.general-card--interactive.general-card--with-actions
-						.general-card__title
+					.ad-card.ad-card--shows-on-hover
+						.ad-card__title
 							h4.title-h4 card title
-						.general-card__content
-							.general-card__content--header
-								.d-flex.w-100
+						.ad-card__content
+							.ad-card__content--header
+								.d-flex
 									.user-image
 										img(src="./images/sign.svg" alt="")
 										i.uil.uil-check-circle
 									.user-data
 										a.text-2(href="#") Jose Portilla
-										p.text-3.gray Jose Portilla Jose Portilla Jose Portilla Jose PortillaJose Portilla Jose Portilla
+										p.text-3.gray Jose Portilla Jose Portilla Jose
 										a.text-3.gray(href="#") Jose Portilla
 								include ../components/list-dropdown.pug
-							.general-card__content--details
-								p.text-1 lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt quam accusamus culpa, dolore aut, quisquam ipsam id quidem voluptates, tempore molestiae quas aperiam consequuntur nam at earum sit voluptatem?
-							//- include ../components/general-component/user-acount.pug
-							//- +user-acount("user-wrapper--bg","images/left-imgs/img-1.jpg", "Johnson Smith ")
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet 
