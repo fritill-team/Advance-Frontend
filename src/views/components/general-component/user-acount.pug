@@ -1,11 +1,11 @@
-mixin user-acount(className,srcImg,userText)
-  section.user-wrapper__acount(class=className)
+mixin user-acount(className,srcImg,userText,userName)
+  .user-wrapper__acount(class=className)
     .acount__live-user
       .live-user__content
         a.content__user-img(href='#')
           img.user-img__img(src=srcImg alt='')
       .live-user__user-content
-        a(class="user-content__text" href='#')= userText
+        a.user-content__text(class=userName href='#')= userText
         block
 
 //- user-acount rating

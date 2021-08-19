@@ -118,7 +118,7 @@ ul {
   margin-bottom: 0 !important;
 }
 a:hover {
-  color: inherit !important;
+  // color: inherit !important;
   text-decoration: none;
 }
 blockquote,
@@ -298,11 +298,11 @@ nav ul li a,
 .next-prev > a,
 nav ul li:hover > ul,
 .user-pro-img > a i {
-  -webkit-transition: all 0.4s ease-in;
-  -moz-transition: all 0.4s ease-in;
-  -ms-transition: all 0.4s ease-in;
-  -o-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 /* === Body Scrollbar === */
@@ -360,7 +360,7 @@ input[type="text"] {
 ==========================*/
 @media (min-width: 992px) {
   body {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .logo img {
@@ -1012,7 +1012,7 @@ i.icon1 {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .fcrse_1 .shrt-cart-btn {
@@ -1317,10 +1317,10 @@ i.icon1 {
   right: 40%;
   opacity: 0;
   background: rgba(51, 51, 51, 0.8);
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .course-overlay:hover .play_btn1 {
@@ -1605,11 +1605,11 @@ i.icon1 {
   text-align: center;
   padding: 9px 0;
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tutor_social_links li a:hover {
@@ -1695,7 +1695,7 @@ i.icon1 {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .prfle12link {
@@ -1778,7 +1778,7 @@ i.icon1 {
   border-radius: 10px;
   margin-bottom: 30px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .cater_ttle {
@@ -1902,7 +1902,7 @@ i.icon1 {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .say_content {
@@ -2145,11 +2145,11 @@ i.icon1 {
   font-size: 16px;
   display: inline-block;
   color: #f7f7f7;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .edu_social_links a:hover {
@@ -2193,8 +2193,8 @@ i.icon1 {
   height: 10px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease both;
+  animation: sk-bouncedelay 1.4s infinite ease both;
 }
 
 .spinner .bounce1 {
@@ -4527,7 +4527,7 @@ a.rmv-btn i {
 
 .radio-label_1:hover {
   box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
 }
 
 .pymnt_title h4 {
@@ -5365,7 +5365,7 @@ a.rmv-btn i {
   border-radius: 10px;
   border: 1px solid #efefef;
   box-shadow: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .main-p-pagination {
@@ -6339,7 +6339,7 @@ a.rmv-btn i {
   border-radius: 10px;
   border: 1px solid #efefef;
   box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   margin-top: 47px;
 }
 
@@ -6522,7 +6522,7 @@ a.rmv-btn i {
   border-radius: 10px;
   border: 1px solid #efefef;
   box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   margin-top: 45px;
   margin-bottom: 28px;
 }
@@ -6552,7 +6552,7 @@ a.rmv-btn i {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   margin-bottom: 30px;
 }
 
@@ -7638,7 +7638,7 @@ a.rmv-btn i {
 }
 
 .testtrm145 a:hover {
-  color: #333 !important;
+  // color: #333 !important;
   text-decoration: underline !important;
 }
 
@@ -7666,7 +7666,7 @@ a.rmv-btn i {
   border-radius: 10px;
   margin-bottom: 50px;
   border: 1px solid #efefef;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .test_timer_left {
@@ -8474,18 +8474,8 @@ a.rmv-btn i {
       //   display: none;
       // }
       .sub-menu-item {
-        .item__label {
-          &::before {
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid #000;
-            position: absolute;
-            top: 20px;
-            right: 15px;
-            content: "";
-          }
+        &::before {
+          display: none;
         }
       }
     }
@@ -8503,6 +8493,12 @@ a.rmv-btn i {
               display: block !important;
             }
           }
+        }
+      }
+      .sub-menu-item {
+        &::before {
+          display: block;
+          transition: all 0.4s ease;
         }
       }
     }
@@ -8592,7 +8588,7 @@ input[type="tel"] {
 }
 
 .secondary-title{
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   font-family: Roboto,sans-serif;
   text-align: left;

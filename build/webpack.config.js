@@ -7,9 +7,11 @@ const path = require("path"),
 
 module.exports = env => ({
   context: path.resolve(__dirname, "../src"),
-  entry: {
-    app: "./app.js"
-  },
+  entry: ['./app.js', './vue/index.js'],
+  // entry: {
+  //   app: "./app.js",
+  //   // vue: "./vue/index.js"
+  // },
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "assets/js/[name].bundle.js"

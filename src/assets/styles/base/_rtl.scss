@@ -177,7 +177,9 @@ html[dir="rtl"] {
     /*wrapper conent*/
     .wrapper {
       // margin-right: 240px;
+      margin-right: 240px;
       margin-left: 0;
+
     }
     .wrapper--minify {
       margin-right: 0;
@@ -522,7 +524,7 @@ html[dir="rtl"] {
               right: 1.5rem;
             }
           }
-          .rating-box__empty-star {
+          .rating-box--empty-star {
             &:before {
               right: 0;
             }
@@ -614,7 +616,7 @@ html[dir="rtl"] {
               right: 1.5rem;
             }
           }
-          .rating-box__empty-star {
+          .rating-box--empty-star {
             &:before {
               right: 0;
             }
@@ -1012,13 +1014,9 @@ html[dir="rtl"] {
     }
   }
   .sub-menu-item {
-    .item__link {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
-      }
+    &::before {
+      left: 15px;
+      right: auto;
     }
   }
   .list__sidebar {
@@ -1078,11 +1076,9 @@ html[dir="rtl"] {
       }
     }
     .sub-menu-item {
-      .item__label {
-        &::before {
-          left: 15px;
-          right: auto;
-        }
+      &::before {
+        left: 15px;
+        right: auto;
       }
     }
   }
@@ -1141,4 +1137,79 @@ html[dir="rtl"] {
   .ui.checkbox.mncheck label {
     padding-right: 1.85714em;
   }
+  // thread
+
+  .details__wrapper {
+    padding: 5px 0px;
+    .thread__details {
+      margin-left: 16px;
+      .details__name{
+        padding-right: 5px;
+      }
+      .details__data{
+        padding-right: 5px;
+      }
+    }
+  }
+  .thread__wrapper{
+    &.thread--replay{
+      padding-right: 50px;
+    }
+  }
+  .thread__post{
+    .post__votecell{
+      padding: 10px 0px 10px 20px;
+    }
+  }
+
+   .qustion__tags{
+    .qustion__taglist{
+      .taglist__item{
+        margin: 2px 0px 2px 6;
+      }
+    }
+   }
+  //  @media (min-width: 767px) {
+  //  }
+  .comment--remov-mb{
+    .live-user__content{
+      .content__user-img{
+        .user-img__img{
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  //header-player
+
+ .header-player__logo{
+   float: right;
+   margin-right: 10px;
+ }
+ .header-player__courses{
+   float: right;
+    padding: 10px 10px 10px 5px;
+    margin-left: 10px;
+   &::after{
+     border-right: 10px solid rgba(#7FC8A9 , 0.1);
+     border-left: 0;
+     left: -10px;
+   }
+ }
+ .header-player__course-name{
+   float: right;
+   padding: 10px 10px 10px 5px;
+  }
+  //sidebar playlist
+  .playlist{
+   right: -240px;
+ }
+ @media (min-width: 992px) {
+   .playlist{
+     right: 0px;
+   }
+ }
+ .playlist--opened {
+   right: 0 !important;
+ }
 }
