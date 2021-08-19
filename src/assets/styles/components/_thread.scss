@@ -1,71 +1,72 @@
- 
+
 .thread__header {
 	.course-content__title{
 		display: contents;
 		font-size: 30px;
 		&.thread--title-fs{
-			font-size: 20px; 
+			font-size: 20px;
 		}
 	}
 }
-.details__wrapper {
+.info {
 	padding: 5px 0px;
 	display: flex;
 	margin-bottom: 16px;
 	border-bottom: 1px solid #e4e6e8;
-	.thread__details { 
+	.info__wrapper {
 		margin-bottom: 8px;
 		margin-right: 16px;
-		.details__name{
-			color: #333; 
+    display: contents;
+		.info__name{
+			color: #333;
 			padding-left: 5px;
 		}
-		.details__data{
+		.info__data{
 			color: #686f7a;
 			padding-left: 5px;
 		}
 	}
 }
-.thread__wrapper{ 
-	margin-bottom: 10px;
-	&.thread--replay{
-		padding-left: 50px;
-		.thread__post{
-			background: unset;
-			padding: 0px;
-		}
-		.user-acount--mt {
-			margin-top: 0;
-		}
-		.qustion__text{
-			font-size: 12px;
-			padding-top: 0px;
-		}
-		.user-content__text{
-			font-size: 14px;
-		}
-		.relativetime{
-			font-size: 12px;
-		}
-	}
-}
+// .card{
+// 	margin-bottom: 10px;
+// 	&.thread--replay{
+// 		padding-left: 50px;
+// 		.thread__post{
+// 			background: unset;
+// 			padding: 0px;
+// 		}
+// 		.user-account--mt {
+// 			margin-top: 0;
+// 		}
+// 		.qustion__text{
+// 			font-size: 12px;
+// 			padding-top: 0px;
+// 		}
+// 		.user-content__text{
+// 			font-size: 14px;
+// 		}
+// 		.relativetime{
+// 			font-size: 12px;
+// 		}
+// 	}
+// }
 .thread__post{
-	// display: flex; 
+	// display: flex;
 	padding: 15px;
 	border-radius: 5px;
 	background-color: #fff;
 	margin-bottom: 10px;
 	.post__votecell{
-		width: auto;  
+		width: auto;
 		padding: 10px 20px 10px 0px;
 		.votecell__icon{
 			font-size: xx-large;
-			color: #48a868;	
+			color: #48a868;
 			margin-bottom: 10px;
 		}
 		.votecell__number{
 			font-size: 15px;
-		} 
+		}
 	}
 	&.best--answer{
 		border: 2px solid rgba(253,204,13,0.5);
@@ -82,46 +83,46 @@
 .post__qustion{
 	display: flex;
 	flex-direction: column;
-	.qustion__text{ 
+	.qustion__text{
 		font-size: 18px;
-		color: #333; 
-		padding: 10px 0px; 
-	} 
- }	 
+		color: #333;
+		padding: 10px 0px;
+	}
+ }
  .qustion__list{
 	margin-bottom: 15px !important;
-	list-style-type: disc !important; 
+	list-style-type: disc !important;
 	padding: 10px 0px;
 	.qustion__item {
 		display: block;
 		margin-bottom: 5px;
-		color: #686f7a;  
-		font-size: 15px; 
+		color: #686f7a;
+		font-size: 15px;
 	}
-} 
+}
  .qustion__tags{
-	//  margin-bottom: 15px;  
+	//  margin-bottom: 15px;
 	.qustion__taglist{
-		.taglist__item{   
+		.taglist__item{
 			padding: 8px 10px;
-			margin: 2px 6px 2px 0; 
+			margin: 2px 6px 2px 0;
 			line-height: 1;
 			white-space: nowrap;
 			text-decoration: none;
 			text-align: center;
 			color: #fff;
 			background: #fdcc0d;
-			display: inline-block; 
+			display: inline-block;
 			border-radius: 20px;
 			font-size: 13px;
 			font-weight: 500;
 			font-family: 'Roboto', sans-serif;
 			/* border-width: 1px; */
-			border-style: solid;  
+			border-style: solid;
 			&.taglist--no-bg{
 				background: none;
-				color: #333; 
-				margin: 0px;  
+				color: #333;
+				margin: 0px;
         position: relative;
         &::before{
           position: absolute;
@@ -146,7 +147,7 @@
  .answers-header{
 	margin: 15px 0;
 	display: flex;
-	align-items: center; 
+	align-items: center;
  }
  .relativetime{
 	 font-size: 14px;
@@ -167,11 +168,11 @@
      display: inline-block;
    }
  }
- 
+
 .group__textarea {
 	height: 40px;
 	font-size: 14px;
-	font-family: Roboto, sans-serif; 
+	font-family: Roboto, sans-serif;
 	border: 1px solid #efefef;
 	width: 100%;
 	overflow: hidden;
@@ -182,7 +183,7 @@
 	padding: 12px;
 	border-radius: 10px;
 	background: #f9f9f9;
-	&.textarea--thread{ 
+	&.textarea--thread{
 		resize: none;
 	}
 }
@@ -192,8 +193,8 @@
  .comment--remov-mb{
 	 display: flex;
 	 align-items: center;
-}  
-.comment--remov-mb{ 
+}
+.comment--remov-mb{
 	.live-user__content{
 		.content__user-img{
 			.user-img__img{
@@ -214,12 +215,12 @@
 	display: flex;
 	align-items: center;
  }
- @media (max-width: 576px) {  
+ @media (max-width: 576px) {
 	 .wrapper__tags{
 		display: block;
 	 }
- 
-	 .taglist__item{    
+
+	 .taglist__item{
 		&.taglist--no-bg{
 			margin-left: 0px;
 			padding-left: 0;

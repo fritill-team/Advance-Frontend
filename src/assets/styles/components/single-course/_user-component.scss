@@ -17,12 +17,12 @@
     }
   }
 }
-.user-wrapper__acount {
+.user-wrapper__account {
   float: left;
-  .acount__live-user {
+  .account__live-user {
     float: left;
     width: 100%;
-    display: flex; 
+    display: flex;
     .live-user__user-content {
       width: 100%;
       .user-content__text {
@@ -53,7 +53,7 @@
   }
   .live-user__content {
     text-align: left;
-   
+
   }
   .content__user-img {
     .user-img__img {
@@ -73,7 +73,7 @@
     margin-bottom: 15px;
     width: 100%;
   }
-  &.user-acount--mt{
+  &.user-account--mt{
     margin-top: 15px;
   }
 }

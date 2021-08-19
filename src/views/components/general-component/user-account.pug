@@ -1,6 +1,6 @@
-mixin user-acount(className,srcImg,userText,userName)
-  .user-wrapper__acount(class=className)
-    .acount__live-user
+mixin user-account(className,srcImg,userText,userName)
+  .user-wrapper__account(class=className)
+    .account__live-user
       .live-user__content
         a.content__user-img(href='#')
           img.user-img__img(src=srcImg alt='')
@@ -8,8 +8,8 @@ mixin user-acount(className,srcImg,userText,userName)
         a.user-content__text(class=userName href='#')= userText
         block
 
-//- user-acount rating
-mixin acount-review(srcImg,userName,time)
+//- user-account rating
+mixin account-review(srcImg,userName,time)
   .item__reviews-user
     img.reviews-user__img(src=srcImg alt='')
     .reviews-user__title
