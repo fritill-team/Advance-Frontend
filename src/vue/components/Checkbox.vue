@@ -1,9 +1,12 @@
 <template>
   <div class="mcq-wrapper">
     <input type="checkbox" name="mcq" id="checkbox">
-    <div class="mcq-card">
-			<label class="label--checkbox" for="checkbox"/>
-    </div>
+		<label class="mcq-card" for="checkbox">
+			<p class='text-2'>
+				this is answer
+			</p>
+			<img src='' alt='' />
+		</label>
   </div>
 </template>
 

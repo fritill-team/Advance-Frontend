@@ -1,11 +1,28 @@
 <template>
-  <form class="exam">
-    <question-wrapper>
+	
+	<form class="exam">
+		<question-wrapper>
 			<answer-wrapper>
-				<Checkbox/>
+				<div class="container-fluid">
+					<div class='row'>
+						<div class='col-lg-3'>
+							<Checkbox/>
+						</div>
+						<div class='col-lg-3'>
+							<Checkbox/>
+						</div>
+						<div class='col-lg-3'>
+							<Checkbox/>
+						</div>
+						<div class='col-lg-3'>
+							<Checkbox/>
+						</div>
+					</div>
+				</div>
 			</answer-wrapper>
 		</question-wrapper>
-  </form>
+	</form>
+
 </template>
 
 <script>
