@@ -9,69 +9,98 @@ block content
 		.row
 			//- ad-card default
 			.col-lg-12
-				h2.title-2.my-3 ad-card
+				h2.title-2.my-3 Default card
+				p.text-2.mb-1
+					| we use 
+					code .ad-card
 			.col-lg-12
 				.ad-card
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			//- .ad-card--with-title
 			.col-lg-12
-				h2.title-2.my-3 ad-card ad-card--with-title
-			.col-lg-12
-				.ad-card.ad-card--with-title
+				h2.title-2.my-3 Card with title with centerd components
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--with-title .ad-card--centered
+			.col-lg-3
+				.ad-card.ad-card--with-title.ad-card--centered
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			//- .ad-card--centered
 			.col-lg-12
-				h2.title-2.my-3 ad-card--centered
+				h2.title-2.my-3 Card with centered components
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--centered
 			.col-lg-3
 				.ad-card.ad-card--centered
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			//- ad-card--interactive
 			.col-lg-12
-				h2.title-2.my-3 ad-card--interactive
+				h2.title-2.my-3 Trusted answer
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--trusted
 			.col-lg-12
-				.ad-card.ad-card--interactive.trusted
+				.ad-card.ad-card--trusted
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									p.text-3.gray Jose Portilla Jose Portilla Jose
+									a.text-3.gray(href="#") Jose Portilla
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
+			//- .col-lg-12
+				.ad-card.ad-card--interactive
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
@@ -89,62 +118,71 @@ block content
 							p.text-1 lorem ipsum dolor sit amet
 			//- ad-card--reversed
 			.col-lg-12
-				h2.title-2.my-3 ad-card--reversed
+				h2.title-2.my-3 Reverced Card
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--reversed
 			.col-lg-12
 				.ad-card.ad-card--reversed
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			//- ad-card--with-actions
 			.col-lg-12
-				h2.title-2.my-3 ad-card--with-actions
+				h2.title-2.my-3 Card contains action list
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--with-actions
 			.col-lg-4
 				.ad-card.ad-card--with-actions
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex.w-100
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			//- ad-card--shows-on-hover
 			.col-lg-12
-				h2.title-2.my-3 ad-card--shows-on-hover
+				h2.title-2.my-3 This card shows up when any user account hovered
+				p.text-2.mb-1
+					| we use 
+					code .ad-card--shows-on-hover
 			.col-lg-6
 				.ad-card.ad-card--shows-on-hover
 					.ad-card__title
 						h4.title-h4 card title
 					.ad-card__content
-						.ad-card__content--header
-							.d-flex
-								.user-image
-									img(src="./images/sign.svg" alt="")
-									i.uil.uil-check-circle
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content--header
 								.user-data
 									a.text-2(href="#") Jose Portilla
 									p.text-3.gray Jose Portilla Jose Portilla Jose
 									a.text-3.gray(href="#") Jose Portilla
-							include ../../../components/list-dropdown.pug
-						.ad-card__content--details
-							p.text-1 lorem ipsum dolor sit amet
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								p.text-1 lorem ipsum dolor sit amet
 			
