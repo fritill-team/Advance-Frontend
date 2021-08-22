@@ -1,46 +1,68 @@
 /* src/assets/styles/components/_button.scss  */
+$primary: #ff263e;
+$secondary: #1c282c;
+$success: #39444f;
+$info: blue;
+$danger: #828a91;
+$warning: #ffddd0;
 
-.clean-button {
-  border: none;
-  background: none;
+$bk-color: ("primary" $primary, "secondary" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
+@each $name, $color in $bk-color {
+	.ad-btn--#{$name}{
+		background-color: #{$color};
+	}
 }
-
-// .button {
-//   @extend .clean-button;
-//   font-family: $quicksand;
-//   font-size: 18px;
-//   font-weight: 700;
-//   border-radius: 5px;
-//   color: white;
-//   padding: 14px 40px;
-//   background: $lightseagreen;
-// }
-
-.general-btn{
-  &.btn--filled{
-    padding: 5px 20px;
-    border: 0;
+$border-color: ("primary" $primary, "black" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
+@each $name, $color in $border-color {
+	.ad-btn--#{$name}--outlined{
+		border: 1px solid #{$color};
+		color:#{$color} ;
+		background-color: #fff;
+		&:hover{
+			color: #fff;
+			background-color: #{$color};
+			transition: all 0.1s ease;
+		}
+	}
+} 
+button.ad-btn{
+  padding: 10px 20px;
+  margin: 5px;
+	border: 0;
+	border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  display:inline-block;
+  font-family: "Roboto", sans-serif;
+	cursor: pointer;
+	&.ad-btn--rounded{
     border-radius: 20px;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    background: #ed2a26;
-    font-size: 14px;
-    font-weight: 500;
-    display: inline-block;
-    text-transform: capitalize;
+    background: $bk-color;
+		color: #fff;
+	}
+  &.ad-btn--outlined{
+    background: #fff;
+    color: $bk-color;
+    border: 2px solid $bk-color;
+    &:hover{
+      color: #fff;
+      transition: all 0.1s ease;
+    }
+  }
+  &.ad-btn--text{
+    border: none;
+    background-color: inherit;
+    color: $bk-color;
+    &:hover{
+      color: #fff;
+			background-color: $bk-color
+    }
+  }
+  &.ad-btn--icon{
+
+  }
+  &.ad-btn--with-icon{
+
   }
 }
-
-.btn-general{
-  height: 40px;
-  border: 0;
-  padding: 10px 15px;
-  color: #fff;
-  border-radius: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  background: #ed2a26;
-  font-size: 14px;
-  display: inline-block;
-}
-
