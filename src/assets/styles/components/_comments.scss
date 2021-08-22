@@ -143,7 +143,7 @@
   &.thread--actions{
     margin-top: 10px;
    }
-}
+} 
 // comment no background
 .create-comment{
   float: left;
@@ -151,7 +151,7 @@
   background: transparent;
   border-radius: 10px;
   // margin-bottom: 30px;
-  padding: 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   .form__action{
@@ -184,5 +184,12 @@
 		resize: none;
 	}
 }
-
+html[dir="rtl"] { 
+  .create-comment{
+    float: right;   
+  }
+  .user-img__img{ 
+    margin-left: 15px; 
+  } 
+}
 

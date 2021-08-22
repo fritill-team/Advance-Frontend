@@ -540,12 +540,12 @@ var navPlayer = $('.sidebar__playlist'),
 
 $(".header-player__course-name").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content wrapper--minify ");
+  wrapper.toggleClass("toggle-content wrapper--minify wrapper--video-player ");
   // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
 });
 
 $(".playlist__close").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content wrapper--minify ");
+  wrapper.toggleClass("toggle-content wrapper--minify wrapper--video-player ");
 });
 
