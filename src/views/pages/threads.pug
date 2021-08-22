@@ -7,7 +7,7 @@ block sidebar
 block content
 	.container-fluid
 		.row 
-			.col-md-8
+			.col-md-12
 				.d-flex.flex-column.my-3
 					.d-flex.justify-content-between.align-items-center.w-100
 						h3.course-content__title Thread Chapter content
@@ -23,6 +23,7 @@ block content
 								span.details__name Asked
 								span.details__data 3 years
 						//- info components
+			.col-md-9
 				.row
 					.col-lg-12
 						//- question
@@ -95,9 +96,9 @@ block content
 								input text & btn-submit
 					.col-lg-12
 						//- list of replaies this takes the padding
-						.comments-card
+						.comments-list
 							//- compent 1 add class transparent (no-background)
-							.ad-card.ad-card--transparent.ad-card--with-actions
+							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
 								.ad-card__title
 									h4.title-h4 card title
 								.ad-card__content
@@ -108,15 +109,15 @@ block content
 										.ad-card__content-header
 											.user-data
 												a.text-2(href="#") Jose Portilla
-												time.text-3.gray Jan 15 '18 at 13:56
+												time.text-1.gray Jan 15 '18 at 13:56
 											include ../components/list-dropdown.pug
 										.ad-card__content--details
-											p.text-1 lorem ipsum dolor sit amet
+											p.text-3 lorem ipsum dolor sit amet
 							//- comment 2
-							.ad-card.ad-card--transparent.ad-card--with-actions
+							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
 								.ad-card__title
 									h4.title-h4 card title
-								.ad-card__content
+								.ad-card__content 
 									.user-image
 										img(src="./images/sign.svg" alt="")
 										i.uil.uil-check-circle
@@ -124,15 +125,15 @@ block content
 										.ad-card__content-header
 											.user-data
 												a.text-2(href="#") Jose Portilla
-												time.text-3.gray Jan 15 '18 at 13:56
+												time.text-1.gray Jan 15 '18 at 13:56
 											include ../components/list-dropdown.pug
 										.ad-card__content--details
-											p.text-1 lorem ipsum dolor sit amet
+											p.text-3 lorem ipsum dolor sit amet
 							//- comment 3
-							.ad-card.ad-card--transparent.ad-card--with-actions
+							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
 								.ad-card__title
 									h4.title-h4 card title
-								.ad-card__content
+								.ad-card__content 
 									.user-image
 										img(src="./images/sign.svg" alt="")
 										i.uil.uil-check-circle
@@ -140,10 +141,10 @@ block content
 										.ad-card__content-header
 											.user-data
 												a.text-2(href="#") Jose Portilla
-												time.text-3.gray Jan 15 '18 at 13:56
+												time.text-1.gray Jan 15 '18 at 13:56
 											include ../components/list-dropdown.pug
 										.ad-card__content--details
-											p.text-1 lorem ipsum dolor sit amet
+											p.text-3 lorem ipsum dolor sit amet
 							.create-comment
 								.create-comment__content
 									.content__user-img
@@ -161,10 +162,45 @@ block content
 									h3.course-content__title.my-3 Your Answer
 							.text-field__content
 								form.form__action.mb-3(action="")
+									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 									textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+									
+									select.js-example-basic-single.select2(name='state' multiple='multiple')
+										option(value='eg') Egypt
+										option(value='AL') Alabama
+										option(value='WY') Wyoming
 									.submit-post
 										include ../components/general-component/btn.pug
 										+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
-			.col-md-4
-				h2.mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit.  
-
+			.col-md-3
+				.ad-card.ad-card--centered
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+										i.uil.uil-check-circle
+									p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+									ul.social-icon
+										li.social-icon__list
+											a.social-icon__link.social-icon--fa-bg(href="#")
+												i.fab.fa-facebook-f
+										li.social-icon__list
+											a.social-icon__link.social-icon--tw-bg(href="#")
+												i.fab.fa-twitter
+										li.social-icon__list
+											a.social-icon__link.social-icon--li-bg(href="#")
+												i.fab.fa-linkedin-in
+										li.social-icon__list
+											a.social-icon__link.social-icon--yu-bg(href="#")
+												i.fab.fa-youtube
+									.details
+										span.total-students 615K Students
+										span.total-course 12 Courses
+									a.text-3.gray.profile.mt-3(href="#") Go To Profile
+								include ../components/list-dropdown.pug

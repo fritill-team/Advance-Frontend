@@ -1,4 +1,4 @@
-.threads{
+.threads {
   padding: 30px 10px;
 }
 .comments {
@@ -90,15 +90,15 @@
       background: #333;
     }
   }
-  &.comment--remov-mb{
+  &.comment--remov-mb {
     margin-bottom: 0;
   }
-  &.create--threads{
+  &.create--threads {
     margin-bottom: 0;
     padding-left: 0px;
     padding: 10px;
     padding-bottom: 0px;
-    .group__textarea{
+    .group__textarea {
       margin-left: 0px;
       margin-bottom: 10px;
     }
@@ -140,12 +140,12 @@
       color: #ed2a26 !important;
     }
   }
-  &.thread--actions{
+  &.thread--actions {
     margin-top: 10px;
-   }
-} 
+  }
+}
 // comment no background
-.create-comment{
+.create-comment {
   float: left;
   width: 100%;
   background: transparent;
@@ -154,42 +154,42 @@
   padding: 0px 20px;
   display: flex;
   align-items: center;
-  .form__action{
+  padding-left: 0;
+  .form__action {
     width: 100%;
   }
 }
-.user-img__img{
-  width: 50px!important;
-  height: 50px!important;
-  display: inline-block!important;
+.user-img__img {
+  width: 50px !important;
+  height: 50px !important;
+  display: inline-block !important;
   border-radius: 100%;
   margin-right: 15px;
   border: 2px solid #fff;
 }
 .group__textarea {
-	height: 40px;
-	font-size: 14px;
-	font-family: Roboto, sans-serif;
-	border: 1px solid #efefef;
-	width: 100%;
-	overflow: hidden;
-	word-wrap: break-word;
-	resize: horizontal;
-	font-weight: 400;
-	color: #333;
-	padding: 12px;
-	border-radius: 10px;
-	background: #f9f9f9;
-	&.textarea--thread{
-		resize: none;
-	}
-}
-html[dir="rtl"] { 
-  .create-comment{
-    float: right;   
+  height: 40px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid #efefef;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: horizontal;
+  font-weight: 400;
+  color: #333;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  &.textarea--thread {
+    resize: none;
   }
-  .user-img__img{ 
-    margin-left: 15px; 
-  } 
 }
-
+html[dir="rtl"] {
+  .create-comment {
+    float: right;
+  }
+  .user-img__img {
+    margin-left: 15px;
+  }
+}

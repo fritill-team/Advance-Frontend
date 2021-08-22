@@ -1,6 +1,6 @@
-.tags{
-  .tags__item{
-    padding: 8px 10px 8px 0px;
+.tags {
+  .tags__item {
+    padding: 8px 0px 8px 0px;
     margin: 8px 6px 2px 0;
     line-height: 1;
     white-space: nowrap;
@@ -12,12 +12,12 @@
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     border-style: solid;
     position: relative;
-    &::before{
+    &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 0;
       height: 1px;
       left: 0;
@@ -25,11 +25,11 @@
       background-color: #333;
       transition: 0.3s ease all;
     }
-    &:hover{
+    &:hover {
       color: #333;
       &::before {
         width: 100%;
       }
     }
-    }
- }
+  }
+}
