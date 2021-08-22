@@ -1,35 +1,4 @@
 /* src/assets/styles/components/_button.scss  */
-
-// .clean-button {
-//   border: none;
-//   background: none;
-// }
-
-// .button {
-//   @extend .clean-button;
-//   font-family: $quicksand;
-//   font-size: 18px;
-//   font-weight: 700;
-//   border-radius: 5px;
-//   color: white;
-//   padding: 14px 40px;
-//   background: $lightseagreen;
-// }
-
-// .general-btn{
-//   &.btn--filled{
-//     padding: 5px 20px;
-//     border: 0;
-//     border-radius: 20px;
-//     color: #fff;
-//     font-family: "Roboto", sans-serif;
-//     background: #ed2a26;
-//     font-size: 14px;
-//     font-weight: 500;
-//     display: inline-block;
-//     text-transform: capitalize;
-//   }
-// }
 $primary: #ff263e;
 $secondary: #1c282c;
 $success: #39444f;
@@ -96,5 +65,4 @@ button.ad-btn{
   &.ad-btn--with-icon{
 
   }
-  
 }

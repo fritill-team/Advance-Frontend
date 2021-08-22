@@ -476,6 +476,16 @@ for (var i = 0; i < subnavs.length; i++) {
   }
 };
 
+// select2
+$(document).ready(function() {
+  $('.js-example-basic-single').select2({
+    tags: "true",
+    placeholder: "Select an option",
+    allowClear: true
+  });
+});
+
+
 // active class in collapsed sidebar
 
 $('.sub-menu-item').click(function () {
@@ -517,12 +527,6 @@ $(".card__header--collapse").each(function () {
 //   })
 // })
 
-// select2
-
-// In your Javascript (external .js resource or <script> tag)
-$(document).ready(function() {
-  $('.js-example-basic-single').select2();
-});
 
 
 //sidebar__playlist
@@ -544,3 +548,4 @@ $(".playlist__close").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
   wrapper.toggleClass("toggle-content wrapper--minify ");
 });
+
