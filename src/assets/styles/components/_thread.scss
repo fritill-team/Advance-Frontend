@@ -18,7 +18,8 @@
 		margin-right: 16px;
     display: contents;
 		.info__name{
-			color: #333;
+
+      color: #333;
 			padding-left: 5px;
 		}
 		.info__data{
@@ -27,29 +28,7 @@
 		}
 	}
 }
-// .card{
-// 	margin-bottom: 10px;
-// 	&.thread--replay{
-// 		padding-left: 50px;
-// 		.thread__post{
-// 			background: unset;
-// 			padding: 0px;
-// 		}
-// 		.user-account--mt {
-// 			margin-top: 0;
-// 		}
-// 		.qustion__text{
-// 			font-size: 12px;
-// 			padding-top: 0px;
-// 		}
-// 		.user-content__text{
-// 			font-size: 14px;
-// 		}
-// 		.relativetime{
-// 			font-size: 12px;
-// 		}
-// 	}
-// }
+
 .thread__post{
 	// display: flex;
 	padding: 15px;

@@ -71,7 +71,7 @@
       color: #333;
       padding: 12px;
       border-radius: 10px;
-      background: #f9f9f9; 
+      background: #f9f9f9;
     }
   }
   .group--btn {
@@ -91,10 +91,10 @@
     }
   }
   &.comment--remov-mb{
-    margin-bottom: 0; 
-  }  
+    margin-bottom: 0;
+  }
   &.create--threads{
-    margin-bottom: 0; 
+    margin-bottom: 0;
     padding-left: 0px;
     padding: 10px;
     padding-bottom: 0px;
@@ -144,6 +144,45 @@
     margin-top: 10px;
    }
 }
-.relativetime{
-  font-size: 10px;
+// comment no background
+.create-comment{
+  float: left;
+  width: 100%;
+  background: transparent;
+  border-radius: 10px;
+  // margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  .form__action{
+    width: 100%;
+  }
 }
+.user-img__img{
+  width: 50px!important;
+  height: 50px!important;
+  display: inline-block!important;
+  border-radius: 100%;
+  margin-right: 15px;
+  border: 2px solid #fff;
+}
+.group__textarea {
+	height: 40px;
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+	border: 1px solid #efefef;
+	width: 100%;
+	overflow: hidden;
+	word-wrap: break-word;
+	resize: horizontal;
+	font-weight: 400;
+	color: #333;
+	padding: 12px;
+	border-radius: 10px;
+	background: #f9f9f9;
+	&.textarea--thread{
+		resize: none;
+	}
+}
+
+
