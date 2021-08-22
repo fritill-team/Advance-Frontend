@@ -8,29 +8,160 @@ block content
 	.container-fluid
 		.d-flex.flex-column
 			.d-flex.justify-content-between.align-items-center.w-100
-				div lorem1
-				div lorem2
+				h3.course-content__title Thread Chapter content
+				//- div lorem2
 				//- put title here
 				//- put secound element here
 			.d-flex
-				div lorem2
+				.info
+					.info__details
+						span.details__name Asked
+						span.details__data 3 years
+					.info__details
+						span.details__name Asked
+						span.details__data 3 years
 				//- info components
 		.row
 			.col-lg-12
 				//- question
-				div lorem
-
+				.ad-card.ad-card--with-actions.mb-3
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									time.text-3.gray Jan 15 '18 at 13:56 
+								include ../components/list-dropdown.pug
+							.ad-card__content--details
+								.rich-textarea
+									h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									span  Lorem ipsum dolor
+									ul
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+									q Lorem ipsum dolor
+									a(href="#") mostafa
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									i mostafa
+								.tags
+									.tags__item #Development
+									.tags__item #Development
+		.d-flex.flex-column
+			.d-flex.justify-content-between.align-items-center.w-100
+				h3.course-content__title.mb-3 1 Answer
 			.col-lg-12
-			//- answer form
-				input text & btn-submit
-
+				.ad-card.ad-card--with-actions
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									time.text-3.gray Jan 15 '18 at 13:56 
+								include ../components/list-dropdown.pug
+							.ad-card__content--details
+								.rich-textarea
+									h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									span  Lorem ipsum dolor
+									ul
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+									q Lorem ipsum dolor
+									a(href="#") mostafa
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									i mostafa
+					//- answer form
+						input text & btn-submit
 			.col-lg-12
 				//- list of replaies this takes the padding
+				.comments-card
+					//- compent 1 add class transparent (no-background)
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					//- comment 2
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					//- comment 3
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					.create-comment
+						.create-comment__content
+							.content__user-img
+								img.user-img__img(src=" images/left-imgs/img-1.jpg")
+						form.form__action(action="")
+							input(placeholder="Add a public comment").group__textarea.textarea--thread 	 			
 				.replays 
 					//- replay component contains user-component, paragraph & #tags
 
 				//- form add replay at the end of list
 			.col-lg-12
 				//- form add
+				.field-wrapper
+					.answers-header
+						h3.course-content__title Your Answer
+					.text-field__content
+						form.form__action(action="")
+							textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+							.submit__thread
+								include ../components/general-component/btn.pug
+								+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
 			
 
