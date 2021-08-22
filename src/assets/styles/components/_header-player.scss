@@ -1,21 +1,21 @@
-.header-player{
+.header-player {
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 45px;
   background: #242424;
-  display: flex!important;
+  display: flex !important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
-.header-player__logo{
+.header-player__logo {
   float: left;
   height: 100%;
   width: 150px;
   margin-left: 10px;
-  .logo__link{
-    .logo__img{
+  .logo__link {
+    .logo__img {
       width: 100%;
       height: 100%;
       padding: 12px 10px 8px;
@@ -23,59 +23,65 @@
   }
 }
 
-.header-player__courses{
-  width: auto;
-  text-align: center;
+.header-player__courses {
   display: block;
-  padding: 0px 5px;
-  border: 0;
-  margin: 0;
   cursor: pointer;
-  float: left;
-  background: rgba(#7FC8A9 , 0.1);
-   padding: 10px 5px 10px 10px;
-   position: relative;
-   margin-right: 10px;
-   .courses__name{
-    color: #7FC8A9;
+  position: relative;
+  width: 50%;
+  background: #ccc;
+  color: #808080 !important;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  //  display: grid;
+
+  .courses__name {
     font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
-   white-space: nowrap;
+    white-space: nowrap;
   }
-  &::after{
-    border: 23px solid transparent;
-    border-left: 10px solid rgba(#7FC8A9 , 0.1);
-    border-right: 0;
-    content: "";
-    height: 0;
-    left: 100%;
-    position: absolute;
-    top: 0;
-    width: 0;
-    z-index: 1;
-  }
+  // &::after {
+  //   border: 23px solid transparent;
+  //   border-left: 10px solid rgba(#7fc8a9, 0.1);
+  //   border-right: 0;
+  //   content: "";
+  //   height: 0;
+  //   left: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 0;
+  //   z-index: 1;
+  // }
 }
-.header-player__course-name{
+.header-player__course-name {
   width: auto;
   text-align: center;
   display: block;
-   border: 0;
-  // background: #ed2a26;
+  border: 0;
   margin: 0;
   cursor: pointer;
-  float: left;
-  padding: 10px 5px 10px 10px;
-  .course-name__title{
-    color: #7FC8A9;
+  background: #242424;
+  color: #fff !important;
+  font-size: 18px;
+  padding: 10px;
+  &:hover {
+    background-color: #ed2a26;
+    color: #fff;
+  }
+  .course-name__title {
     font-size: 18px;
     overflow: hidden;
-     text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
   }
- }
-@media(max-width: 767px){
-  .header-player__logo{
+}
+@media (max-width: 767px) {
+  .header-player__logo {
     width: 80px;
+  }
+  .header-player__courses,
+  .header-player__course-name {
+    display: grid;
   }
 }

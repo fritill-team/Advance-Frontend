@@ -2130,7 +2130,7 @@ Night Mood
 .night-mode .dropdown-user-name span,
 .night-mode .comment-by ,
 .night-mode .post .post-state .post-state-btns {
-    color: #c7c7c7 !important;
+    color: #c7c7c7 ;
 }
 
 .night-mode a:hover,

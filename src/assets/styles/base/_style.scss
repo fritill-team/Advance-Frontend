@@ -372,13 +372,22 @@ input[type="text"] {
 
   .wrapper {
     margin-left: 240px;
+    &.wrapper--video-player {
+      margin-left: 300px;
+    }
   }
 
   .wrapper__minify-admin {
     margin-left: 60px;
   }
 }
-
+@media (max-width: 992px) {
+  .wrapper {
+    &.wrapper--video-player {
+      margin-left: 0px !important;
+    }
+  }
+}
 /*--- Left Side Footer ---*/
 
 .alrt_dot {
@@ -8572,8 +8581,8 @@ input[type="tel"] {
   margin-top: 5px;
 }
 
-.general-btn{
-  &.btn--filled{
+.general-btn {
+  &.btn--filled {
     padding: 5px 20px;
     border: 0;
     border-radius: 20px;
@@ -8587,20 +8596,20 @@ input[type="tel"] {
   }
 }
 
-.secondary-title{
+.secondary-title {
   font-size: 25px;
   font-weight: 500;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   text-align: left;
   margin-bottom: 15px;
   color: #333;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
-.iti--allow-dropdown{
-  .iti__flag-container{
-    &:hover{
-      .iti__selected-flag{
+.iti--allow-dropdown {
+  .iti__flag-container {
+    &:hover {
+      .iti__selected-flag {
         background-color: transparent;
       }
     }
