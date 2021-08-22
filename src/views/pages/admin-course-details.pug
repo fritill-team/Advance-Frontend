@@ -444,47 +444,48 @@ block content
 									+user-account("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
 
-						#nav-thread.tab-pane.fade(role='tabpanel')
-							.thread__header
-								h3.course-content__title.thread--title-fs Create Thread
-							.create__thread-post
-								.thread__post.post--pb0
-									.post__qustion
-										.user-wrapper__account
-											.account__live-user
-												.live-user__content
-													a.content__user-img(href='#')
-														img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
-												.live-user__user-content
-													.wrapper-account
-														a.user-content__text.user-content--mb(href='#') Johnson Smith
-														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
-											.comments__add-comment.create--threads
-												.add-comment__group
-													form.form__action(action="")
-														textarea.group__textarea(placeholder="Add a post")
-														button.group--btn(type="submit")  Create Thread
-							.thread__header
-								h3.course-content__title.thread--title-fs Threads
-							.thread__wrapper
-								.thread__post.post--pb0
-									.post__qustion
-										.user-wrapper__account
-											.account__live-user
-												.live-user__content
-													a.content__user-img(href='#')
-														img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
-												.live-user__user-content
-													.wrapper-account.d-flex.justify-content-between.align-items-center
-														a.user-content__text.user-content--mb(href='#') Johnson Smith
-														include ../components/list-dropdown.pug
-													a.thread-question(href="thread.html") ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium .
-													.wrapper__tags
-														time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
-														.qustion__tags
-															.qustion__taglist
-																a.taglist__item.taglist--no-bg(href='#') #Development
-																a.taglist__item.taglist--no-bg(href='#') #Bootestrap
+						#nav-thread.tab-pane.fade(role='tabpanel')  
+							.d-flex.justify-content-between.align-items-center.w-100
+								h3.course-content__title.mb-0 Thread Chapter content
+								button.ad-btn.ad-btn--primary.ad-btn--rounded create thread
+							.row 
+								.col-lg-12 
+									.ad-card.ad-card--with-actions.mb-3
+										.ad-card__title
+											h4.title-h4 card title
+										.ad-card__content
+											.user-image
+												img(src="./images/sign.svg" alt="")
+												i.uil.uil-check-circle
+											.ad-card__body
+												.ad-card__content-header
+													.user-data
+														a.text-2(href="#") Jose Portilla
+														time.text-3.gray Jan 15 '18 at 13:56
+													include ../components/list-dropdown.pug
+												.ad-card__content--details
+													p.text-1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta blanditiis quam eos alias. Illo dicta expedita culpa unde repellendus iste dolores quae, eos, cumque facilis maxime, voluptatem natus esse!
+													.tags
+														.tags__item #Development
+														.tags__item #Development
+									.ad-card.ad-card--with-actions.mb-3
+										.ad-card__title
+											h4.title-h4 card title
+										.ad-card__content
+											.user-image
+												img(src="./images/sign.svg" alt="")
+												i.uil.uil-check-circle
+											.ad-card__body
+												.ad-card__content-header
+													.user-data
+														a.text-2(href="#") Jose Portilla
+														time.text-3.gray Jan 15 '18 at 13:56
+													include ../components/list-dropdown.pug
+												.ad-card__content--details
+													p.text-1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta blanditiis quam eos alias. Illo dicta expedita culpa unde repellendus iste dolores quae, eos, cumque facilis maxime, voluptatem natus esse!
+													.tags
+														.tags__item #Development
+														.tags__item #Development
 
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row

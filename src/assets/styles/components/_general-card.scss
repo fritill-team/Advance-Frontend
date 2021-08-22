@@ -204,6 +204,34 @@
 	&.ad-card--transparent{
 		background-color: transparent;
 	}
+	&.ad-card--primary{
+		background-color: rgba($primary , 0.1) ;
+		border: 1px solid $primary;
+	}
+	&.ad-card--dark{
+		background-color: rgba($black , 0.1) ;
+		border: 1px solid $black;
+	}
+	&.ad-card--gray{
+		background-color: rgba($gray , 0.1) ;
+		border: 1px solid $gray;
+	}
+	&.ad-card--light-gray{
+		background-color: rgba($light-gray , 0.1) ;
+		border: 1px solid $light-gray;
+	}
+	&.ad-card--gold{
+		background-color: rgba($gold , 0.1) ;
+		border: 1px solid $gold;
+	}
+	&.ad-card--info{
+		background-color: rgba($info , 0.1) ;
+		border: 1px solid $info;
+	}
+	&.ad-card--warning{
+		background-color: rgba($warning , 0.1) ;
+		border: 1px solid $warning;
+	}
 }
 
 *{
@@ -229,4 +257,73 @@
       margin: 0 4px;
     }
   }
+}
+
+.comments-card{
+	margin-left: 30px;
+}
+@media (max-width : 767px) {
+	.comments-card{
+		margin-left: 0px;
+	}
+}
+// dir en to ar
+html[dir="rtl"] { 
+	.ad-card{   
+		.ad-card__content-header{ 
+			align-items: flex-start; 
+		} 
+		.user-image{
+			margin-left: 10px; 
+			flex-direction: column;  
+			i{ 
+				right: 8px;  
+			}
+		}   
+		//  
+			.uil-check-circle{ 
+				right: 8px; 
+			}
+		} 
+		&.ad-card--reversed{  
+			.ad-card__content{
+				align-items: flex-end;
+			}
+			.ad-card__body{
+				flex-direction: column-reverse;
+			}
+		}
+		&.ad-card--horizontal{ 
+			.user-image{ 
+				flex-direction: column; 
+				&::after{ 
+					left: 0;
+				}
+			} 
+			.text-2{
+				text-align: right;
+			}
+			.details{
+				text-align: right;
+			}
+			.profile {
+				text-align: right;
+			} 
+			.social-icon{
+				justify-content: flex-start;
+			}
+			.ad-card__content-header{   
+				padding-left: 10px;
+				margin-left: 10px; 
+			}
+	
+		}  
+ 	.comments-card{
+		margin-right: 30px;
+	}
+	@media (max-width : 767px) {
+		.comments-card{
+			margin-right: 0px;
+		}
+	}
 }
