@@ -67,6 +67,8 @@ ul {
 @import "./components/thread";
 @import "./components/header-player";
 @import "./components/sidebar-player";
+@import "./components/social-icons";
+@import "./components/tags";
 @import "./components/general-wrappaer";
 
 @import "./components/rich-textarea";
@@ -81,12 +83,11 @@ ul {
 @import "./components/typography";
 @import "./base/instructor-dashboard.css";
 @import "./base/jquery-steps.css";
-@import "./base/datepicker.min.css"; 
+@import "./base/datepicker.min.css";
 
 @import "./base/datepicker.min.css";
 @import "./components/sidebar.scss";
-@import "./components/social-icons";
-@import "./vendor/unicons-2.0.1/css/unicons.css";
+ @import "./vendor/unicons-2.0.1/css/unicons.css";
 @import "./base/lightbox.min.css";
 @import "./base/select2.min.css";
 

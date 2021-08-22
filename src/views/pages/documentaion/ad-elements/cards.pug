@@ -30,6 +30,146 @@ block content
 								include ../../../components/list-dropdown.pug
 							.ad-card__content--details
 								p.text-1 lorem ipsum dolor sit amet
+			//-Thread questions
+			.col-lg-12
+				h2.title-2.my-3 Thread card questions
+				p.text-2.mb-1
+					| we use
+					code .ad-card
+			.col-lg-12
+				.ad-card.ad-card--with-actions
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									time.text-3.gray Jan 15 '18 at 13:56
+									//- a.text-3.gray(href="#") Jose Portilla
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								.rich-textarea
+									h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									span  Lorem ipsum dolor
+									ul
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+									q Lorem ipsum dolor
+									a(href="#") mostafa
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									i mostafa
+								.tags
+									.tags__item #Development
+									.tags__item #Development
+			//-Thread answer
+			.col-lg-12
+				h2.title-2.my-3 Thread card questions
+				p.text-2.mb-1
+					| we use
+					code .ad-card
+			.col-lg-12
+				.ad-card.ad-card--with-actions
+					.ad-card__title
+						h4.title-h4 card title
+					.ad-card__content
+						.user-image
+							img(src="./images/sign.svg" alt="")
+							i.uil.uil-check-circle
+						.ad-card__body
+							.ad-card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									time.text-3.gray Jan 15 '18 at 13:56
+									//- a.text-3.gray(href="#") Jose Portilla
+								include ../../../components/list-dropdown.pug
+							.ad-card__content--details
+								.rich-textarea
+									h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									span  Lorem ipsum dolor
+									ul
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+										li Lorem ipsum dolor
+									q Lorem ipsum dolor
+									a(href="#") mostafa
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									i mostafa
+
+			//- ad-card comments
+			.col-lg-12
+				h2.title-2.my-3 Default card comments
+				p.text-2.mb-1
+					| we use
+					code .ad-card
+			.col-lg-12
+				.comments-card
+					//- compent 1 add class transparent (no-background)
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../../../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					//- comment 2
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../../../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					//- comment 3
+					.ad-card.ad-card--transparent.ad-card--with-actions
+						.ad-card__title
+							h4.title-h4 card title
+						.ad-card__content
+							.user-image
+								img(src="./images/sign.svg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.text-2(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									include ../../../components/list-dropdown.pug
+								.ad-card__content--details
+									p.text-1 lorem ipsum dolor sit amet
+					.create-comment
+						.create-comment__content
+							.content__user-img
+								img.user-img__img(src=" images/left-imgs/img-1.jpg")
+						form.form__action(action="")
+							input.group__textarea.textarea--thread(placeholder="Add a public comment")
 			//- .ad-card--with-title
 			.col-lg-12
 				h2.title-2.my-3 Card with title with centerd components
@@ -207,9 +347,9 @@ block content
 							.ad-card__content--details
 								p.text-1 lorem ipsum dolor sit amet
 
-				
+
 			.col-lg-12
 				pre
-					code.language-html 
+					code.language-html
 						<div class="ad-card ad-card--horizontal"><div class="ad-card__title"><h4 class="title-h4">card title</h4></div><div class="ad-card__content"><div class="user-image"><img src="./images/sign.svg" alt=""><i class="uil uil-check-circle"></i></div><div class="ad-card__body"><div class="ad-card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icone uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icone uil uil-trash-alt"></i>Delete</span></div></div></div><div class="ad-card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
- 
+
