@@ -519,15 +519,7 @@ $(".card__header--collapse").each(function () {
     $(this).children('.card__collapse--toggle').toggleClass('active');
   })
 })
-
-// $('.card__collapse--toggle').each(function(){
-//   $(this).on('click', function(){
-//     $(this).parent.next().toggleClass('active')
-//     $(this).toggleClass('active');
-//   })
-// })
-
-
+ 
 
 //sidebar__playlist
 
