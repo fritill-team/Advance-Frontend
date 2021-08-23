@@ -34,17 +34,22 @@ block content
                 // end of list
               .ad-card__content--details
                 p.text-1 lorem ipsum dolor sit amet
+              // start tags
+                .tags
+                  a(href='#').tags__item #Development
+                  a(href='#').tags__item #Development
+              // end of tags
           // end of whatever
       //-Thread questions
 
 
       .col-lg-12
         h2.title-2.my-3 Thread card questions
-        p.text-2.mb-1
+        //p.text-2.mb-1
           | we use
           code .ad-card
       .col-lg-12
-        .ad-card.ad-card--with-actions
+        .ad-card
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
@@ -78,7 +83,7 @@ block content
       //-Thread answer
       .col-lg-12
         h2.title-2.my-3 Thread card questions
-        p.text-2.mb-1
+        //p.text-2.mb-1
           | we use
           code .ad-card
       .col-lg-12
@@ -117,10 +122,10 @@ block content
         h2.title-2.my-3 Default card comments
         p.text-2.mb-1
           | we use
-          code .ad-card
+          code .ad-card .ad-card--transparent
       .col-lg-12
         .comments-list
-          //- compent 1 add class transparent (no-background)
+          //- component 1 add class transparent (no-background)
           .ad-card.ad-card--transparent
             .ad-card__content
               .user-image
@@ -149,9 +154,7 @@ block content
                 .ad-card__content--details
                   p.text-1 lorem ipsum dolor sit amet
           //- comment 3
-          .ad-card.ad-card--transparent.ad-card--with-actions
-            .ad-card__title
-              h4.title-h4 card title
+          .ad-card.ad-card--transparent
             .ad-card__content
               .user-image
                 img(src="./images/sign.svg" alt="")
@@ -172,7 +175,7 @@ block content
               input.group__textarea.textarea--thread(placeholder="Add a public comment")
       //- .ad-card--with-title
       .col-lg-12
-        h2.title-2.my-3 Card with title with centerd components
+        h2.title-2.my-3 Card with title with centered components
         p.text-2.mb-1
           | we use
           code .ad-card--with-title .ad-card--centered
@@ -199,8 +202,6 @@ block content
           code .ad-card--centered
       .col-lg-3
         .ad-card.ad-card--centered
-          .ad-card__title
-            h4.title-h4 card title
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
@@ -222,8 +223,6 @@ block content
           code .ad-card--centered
       .col-lg-3
         .ad-card.ad-card--centered
-          .ad-card__title
-            h4.title-h4 card title
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
@@ -261,8 +260,6 @@ block content
           code .ad-card--trusted
       .col-lg-12
         .ad-card.ad-card--trusted
-          .ad-card__title
-            h4.title-h4 card title
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
@@ -283,8 +280,6 @@ block content
           code .ad-card--reversed
       .col-lg-12
         .ad-card.ad-card--reversed
-          .ad-card__title
-            h4.title-h4 card title
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
@@ -299,28 +294,7 @@ block content
               .ad-card__content--details
                 p.text-1 lorem ipsum dolor sit amet
       //- ad-card--with-actions
-      .col-lg-12
-        h2.title-2.my-3 Card contains action list
-        p.text-2.mb-1
-          | we use
-          code .ad-card--with-actions
-      .col-lg-4
-        .ad-card.ad-card--with-actions
-          .ad-card__title
-            h4.title-h4 card title
-          .ad-card__content
-            .user-image
-              img(src="./images/sign.svg" alt="")
-              i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
-                .user-data
-                  a.text-2(href="#") Jose Portilla
-                  p.text-3.gray Jose Portilla Jose Portilla Jose
-                  a.text-3.gray(href="#") Jose Portilla
-                //include ../../../components/list-dropdown.pug
-              .ad-card__content--details
-                p.text-1 lorem ipsum dolor sit amet
+
       //- ad-card--shows-on-hover
       .col-lg-12
         h2.title-2.my-3 This card shows up when any user account hovered
@@ -329,8 +303,6 @@ block content
           code .ad-card--horizontal
       .col-lg-6
         .ad-card.ad-card--horizontal
-          .ad-card__title
-            h4.title-h4 card title
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
