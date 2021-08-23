@@ -12,7 +12,7 @@
 // 		background-color: #{$color};
 // 	}
 // }
-// $border-color: ("primary" $primary, "black" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
+// $border-color: ("defult" $light-gray, "primary" $primary, "black" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
 // @each $name, $color in $border-color {
 // 	.ad-btn--#{$name}--outlined{
 // 		border: 1px solid #{$color};
@@ -25,6 +25,12 @@
 // 		}
 // 	}
 // } 
+// $back-ground-color: ("defult"$light-gray "primary" $primary, "secondary" $black, "success" $gray, "info" $info,"warning" $warning,"danger" $gold);
+// @each $name, $color in $back-ground-color {
+// 	.ad-btn--#{$name}{
+// 		background-color: #{$color};
+// 	}
+// }
 button.ad-btn{
   padding: 10px 20px;
   margin: 5px;
@@ -36,33 +42,173 @@ button.ad-btn{
   display:inline-block;
   font-family: "Roboto", sans-serif;
 	cursor: pointer;
-	&.ad-btn--rounded{
-    border-radius: 20px;
-    background: $black;
+	
+	&.ad-btn--filled{
 		color: #fff;
+		&.ad-btn--default{
+			background-color: $light-gray;
+		}	
+		&.ad-btn--primary{
+			background-color: $primary;
+		}
+		&.ad-btn--secondary{
+			background-color: $black;
+		}
+		&.ad-btn--success{
+			background-color: $gray;
+		}
+		&.ad-btn--info{
+			background-color: $info;
+		}
+		&.ad-btn--warning{
+			background-color: $warning;
+		}
+		&.ad-btn--danger{
+			background-color: $gold;
+			color: $light-gray;
+		}
 	}
-  &.ad-btn--outlined{
-    background: #fff;
-    color: $black;
-    border: 2px solid $black;
-    &:hover{
-      color: #fff;
-      transition: all 0.1s ease;
-    }
-  }
-  &.ad-btn--text{
-    border: none;
-    background-color: inherit;
-    color: $black;
-    &:hover{
-      color: #fff;
-			background-color:$black;
-    }
-  }
-  &.ad-btn--icon{
 
-  }
+	&.ad-btn--rounded{
+		color: #fff;
+    border-radius: 20px;
+		&.ad-btn--default{
+			background-color: $light-gray;
+		}	
+		&.ad-btn--primary{
+			background-color: $primary;
+		}
+		&.ad-btn--secondary{
+			background-color: $black;
+		}
+		&.ad-btn--success{
+			background-color: $gray;
+		}
+		&.ad-btn--info{
+			background-color: $info;
+		}
+		&.ad-btn--warning{
+			background-color: $warning;
+		}
+		&.ad-btn--danger{
+			background-color: $gold;
+			color: $light-gray;
+		}
+	}
+
+	&.ad-btn--outlined{
+		background-color: transparent;
+		&.ad-btn--default{
+			border: 2px solid $light-gray;
+			color:$light-gray ;
+		}
+		&.ad-btn--primary{
+			border: 2px solid $primary;
+			color: $primary;
+		}
+		&.ad-btn--secondary{
+			border: 2px solid $black;
+			color: $black;
+		}
+		&.ad-btn--success{
+			border: 2px solid $gray;
+			color: $gray;
+		}
+		&.ad-btn--info{
+			border: 2px solid $info;
+			color: $info;
+		}
+		&.ad-btn--warning{
+			border: 2px solid $warning;
+			color: $warning;
+		}
+		&.ad-btn--danger{
+			border: 2px solid $gold;
+			color: $gold;
+		}	
+	}
+	&.ad-btn--text{
+		border:none;
+		background-color: transparent;
+		text-decoration: underline;
+		&.ad-btn--default{
+			color:$light-gray ;
+		}
+		&.ad-btn--primary{
+			color: $primary;
+		}
+		&.ad-btn--secondary{
+			color: $black;
+		}
+		&.ad-btn--success{
+			color: $gray;
+		}
+		&.ad-btn--info{
+			color: $info;
+		}
+		&.ad-btn--warning{
+			color: $warning;
+		}
+		&.ad-btn--danger{
+			color: $gold;
+		}	
+	}
+	&.ad-btn--icon{
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		color: #fff;
+		padding: 5px;
+		&.ad-btn--default{
+			background-color: $light-gray;
+		}	
+		&.ad-btn--primary{
+			background-color: $primary;
+		}
+		&.ad-btn--secondary{
+			background-color: $black;
+		}
+		&.ad-btn--success{
+			background-color: $gray;
+		}
+		&.ad-btn--info{
+			background-color: $info;
+		}
+		&.ad-btn--warning{
+			background-color: $warning;
+		}
+		&.ad-btn--danger{
+			background-color: $gold;
+			color: $light-gray;
+		} 
+	}
   &.ad-btn--with-icon{
-
+		color: #fff;
+    &i{
+      display: inline-block;
+      margin-right: 7px;
+    }
+		&.ad-btn--default{
+			background-color: $light-gray;
+		}	
+		&.ad-btn--primary{
+			background-color: $primary;
+		}
+		&.ad-btn--secondary{
+			background-color: $black;
+		}
+		&.ad-btn--success{
+			background-color: $gray;
+		}
+		&.ad-btn--info{
+			background-color: $info;
+		}
+		&.ad-btn--warning{
+			background-color: $warning;
+		}
+		&.ad-btn--danger{
+			background-color: $gold;
+			color: $light-gray;
+		} 
   }
 }
