@@ -419,4 +419,35 @@ html[dir="rtl"] {
       }
     }
   }
+  //select
+  .select2 {
+    text-align: right;
+    .select2-selection {
+    }
+    .select2-container--focus {
+    }
+    .select2-selection__choice {
+      padding: 3px 18px 4px 6px !important;
+      position: relative;
+    }
+
+    .select2-selection__choice__remove {
+      align-items: center;
+
+      span {
+        position: absolute;
+        right: -60px !important;
+      }
+    }
+    .select2-search__field {
+      text-align: right;
+    }
+    .select2-selection__clear {
+      right: unset;
+      left: 10px;
+    }
+    .select2-selection--clearable{
+      padding-right: 10px;
+    }
+  }
 }
