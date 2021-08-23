@@ -373,7 +373,7 @@ input[type="text"] {
   .wrapper {
     margin-left: 240px;
     &.wrapper--video-player {
-      margin-left: 300px;
+      margin-left: 285px;
     }
   }
 
@@ -762,6 +762,9 @@ i.icon1 {
   }
   &.wrapper--display-2 {
     margin-left: 0px;
+  }
+  &.wrapper--pt {
+    padding: 45px 0px;
   }
 }
 

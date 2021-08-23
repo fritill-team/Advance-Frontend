@@ -541,3 +541,7 @@ $(".playlist__close").click(function() {
   wrapper.toggleClass("toggle-content wrapper--minify wrapper--video-player ");
 });
 
+// checked box icon in video-list icon
+$(".play-list--hide").click(function() { 
+  $(".play-list--hide").toggleClass("play-list__check--show"); 
+});
