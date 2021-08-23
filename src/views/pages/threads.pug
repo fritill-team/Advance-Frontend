@@ -6,17 +6,14 @@ block sidebar
 
 block content
 	.container-fluid
-		.row 
+		.row
 			.col-md-12
 				.d-flex.flex-column.my-3
 					.d-flex.justify-content-between.align-items-center.w-100
 						h3.course-content__title Thread Chapter content
-						//- div lorem2
-						//- put title here
-						//- put secound element here
 					.d-flex
 						.info
-							.info__details
+							//.info__details
 								span.details__name Asked
 								span.details__data 3 years
 							.info__details
@@ -28,8 +25,6 @@ block content
 					.col-lg-12
 						//- question
 						.ad-card.ad-card--with-actions.mb-3
-							.ad-card__title
-								h4.title-h4 card title
 							.ad-card__content
 								.user-image
 									img(src="./images/sign.svg" alt="")
@@ -38,8 +33,8 @@ block content
 									.ad-card__content-header
 										.user-data
 											a.text-2(href="#") Jose Portilla
-											time.text-3.gray Jan 15 '18 at 13:56 
-										include ../components/list-dropdown.pug
+											time.text-3.gray Jan 15 '18 at 13:56
+										//include ../components/list-dropdown.pug
 									.ad-card__content--details
 										.rich-textarea
 											h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -64,8 +59,6 @@ block content
 						h3.course-content__title.mb-3 1 Answer
 					.col-lg-12
 						.ad-card.ad-card--with-actions
-							.ad-card__title
-								h4.title-h4 card title
 							.ad-card__content
 								.user-image
 									img(src="./images/sign.svg" alt="")
@@ -74,8 +67,7 @@ block content
 									.ad-card__content-header
 										.user-data
 											a.text-2(href="#") Jose Portilla
-											time.text-3.gray Jan 15 '18 at 13:56 
-										include ../components/list-dropdown.pug
+											time.text-3.gray Jan 15 '18 at 13:56
 									.ad-card__content--details
 										.rich-textarea
 											h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -95,12 +87,10 @@ block content
 							//- answer form
 								input text & btn-submit
 					.col-lg-12
-						//- list of replaies this takes the padding
+						//- list of replies this takes the padding
 						.comments-list
-							//- compent 1 add class transparent (no-background)
+							//- comment 1 add class transparent (no-background)
 							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
-								.ad-card__title
-									h4.title-h4 card title
 								.ad-card__content
 									.user-image
 										img(src="./images/sign.svg" alt="")
@@ -115,9 +105,7 @@ block content
 											p.text-3 lorem ipsum dolor sit amet
 							//- comment 2
 							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
-								.ad-card__title
-									h4.title-h4 card title
-								.ad-card__content 
+								.ad-card__content
 									.user-image
 										img(src="./images/sign.svg" alt="")
 										i.uil.uil-check-circle
@@ -131,9 +119,7 @@ block content
 											p.text-3 lorem ipsum dolor sit amet
 							//- comment 3
 							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
-								.ad-card__title
-									h4.title-h4 card title
-								.ad-card__content 
+								.ad-card__content
 									.user-image
 										img(src="./images/sign.svg" alt="")
 										i.uil.uil-check-circle
@@ -150,9 +136,9 @@ block content
 									.content__user-img
 										img.user-img__img(src=" images/left-imgs/img-1.jpg")
 								form.form__action(action="")
-									input(placeholder="Add a public comment").group__textarea.textarea--thread 	 			
+									input(placeholder="Add a public comment").group__textarea.textarea--thread
 						//- replay component contains user-component, paragraph & #tags
-			
+
 						//- form add replay at the end of list
 					.col-lg-12
 						//- form add
@@ -164,7 +150,7 @@ block content
 								form.form__action.mb-3(action="")
 									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Insert your course description')
-									
+
 									select.js-example-basic-single.select2(name='state' multiple='multiple')
 										option(value='eg') Egypt
 										option(value='AL') Alabama
@@ -174,8 +160,6 @@ block content
 										+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
 			.col-md-3
 				.ad-card.ad-card--centered
-					.ad-card__title
-						h4.title-h4 card title
 					.ad-card__content
 						.user-image
 							img(src="./images/sign.svg" alt="")
@@ -203,4 +187,3 @@ block content
 										span.total-students 615K Students
 										span.total-course 12 Courses
 									a.text-3.gray.profile.mt-3(href="#") Go To Profile
-								include ../components/list-dropdown.pug
