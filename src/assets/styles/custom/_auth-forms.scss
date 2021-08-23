@@ -351,10 +351,16 @@
 
 .select2 {
   width: 100% !important;
-  border-radius: 25px;
+  border-radius: 10px;
+  &.select2--rounded{
+    border-radius: 25px;
+    .select2-selection{
+      border-radius: 25px;
+    }
+  }
   .select2-selection {
     border: #ed2a26 1px solid !important;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 0 20px;
   }
   .select2-container--focus {
