@@ -70,12 +70,13 @@ ul {
 @import "./components/social-icons";
 @import "./components/tags";
 @import "./components/info";
+@import "./components/video-player";
 @import "./components/general-wrappaer";
 
 @import "./components/rich-textarea";
 
 @import "./components/general-card";
-
+@import "./components/general-playlist";
 @import "./components/colleps";
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";
@@ -88,7 +89,7 @@ ul {
 
 @import "./base/datepicker.min.css";
 @import "./components/sidebar.scss";
- @import "./vendor/unicons-2.0.1/css/unicons.css";
+@import "./vendor/unicons-2.0.1/css/unicons.css";
 @import "./base/lightbox.min.css";
 @import "./base/select2.min.css";
 
