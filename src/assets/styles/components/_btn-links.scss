@@ -1,41 +1,10 @@
 /* src/assets/styles/components/_button.scss  */
-// $primary: #ff263e;
-// $secondary: #1c282c;
-// $success: #39444f;
-// $info: blue;
-// $danger: #828a91;
-// $warning: #ffddd0;
 
-// $bk-color: ("primary" $primary, "secondary" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
-// @each $name, $color in $bk-color {
-// 	.ad-btn--#{$name}{
-// 		background-color: #{$color};
-// 	}
-// }
-// $border-color: ("default" $light-gray, "primary" $primary, "black" $secondary, "success" $success, "info" $info, "danger"$danger, "warning"$warning);
-// @each $name, $color in $border-color {
-// 	.ad-btn--#{$name}--outlined{
-// 		border: 1px solid #{$color};
-// 		color:#{$color} ;
-// 		background-color: #fff;
-// 		&:hover{
-// 			color: #fff;
-// 			background-color: #{$color};
-// 			transition: all 0.1s ease;
-// 		}
-// 	}
-// } 
-// $back-ground-color: ("default"$light-gray "primary" $primary, "secondary" $black, "success" $gray, "info" $info,"warning" $warning,"danger" $gold);
-// @each $name, $color in $back-ground-color {
-// 	.ad-btn--#{$name}{
-// 		background-color: #{$color};
-// 	}
-// }
 a,button,input{
 	&.ad-btn{
 		padding: 10px 20px;
 		margin: 5px;
-		border: 0;
+		border: 2px solid;
 		border-radius: 5px;
 		text-transform: uppercase;
 		font-size: 14px;
@@ -45,6 +14,10 @@ a,button,input{
 		cursor: pointer;
 		color: #fff;
 		text-align: center;
+		line-height: 14px;
+		&:hover{
+			opacity: 0.8;	
+		}
 		&.ad-btn--default{
 			background-color: $light-gray;
 		}	
@@ -98,31 +71,31 @@ a,button,input{
 		&.ad-btn--outlined{
 			background-color: transparent;
 			&.ad-btn--default{
-				border: 2px solid $light-gray;
+				border-color: $light-gray;
 				color:$light-gray ;
 			}
 			&.ad-btn--primary{
-				border: 2px solid $primary;
+				border-color: $primary;
 				color: $primary;
 			}
 			&.ad-btn--secondary{
-				border: 2px solid $black;
+				border-color: $black;
 				color: $black;
 			}
 			&.ad-btn--success{
-				border: 2px solid $gray;
+				border-color: $gray;
 				color: $gray;
 			}
 			&.ad-btn--info{
-				border: 2px solid $info;
+				border-color: $info;
 				color: $info;
 			}
 			&.ad-btn--warning{
-				border: 2px solid $warning;
+				border-color: $warning;
 				color: $warning;
 			}
 			&.ad-btn--danger{
-				border: 2px solid $gold;
+				border-color: $gold;
 				color: $gold;
 			}	
 		}
@@ -155,9 +128,12 @@ a,button,input{
 		&.ad-btn--icon{
 			width: 35px;
 			height: 35px;
-			border-radius: 50%;
+			border-radius: 100%;
 			color: #fff;
-			padding: 5px;
+			padding: 8px 0;
+			text-align: center;
+			font-size: 14px;
+			transition: all .3s ease;
 			&.ad-btn--default{
 				background-color: $light-gray;
 			}	
@@ -183,10 +159,10 @@ a,button,input{
 		}
 		&.ad-btn--with-icon{
 			color: #fff;
-			&i{
-				display: inline-block;
-				margin-right: 7px;
-			}
+		&i{
+			display: inline-block;
+			margin-right: 7px;
+		}
 			&.ad-btn--default{
 				background-color: $light-gray;
 			}	
@@ -210,6 +186,59 @@ a,button,input{
 				color: $light-gray;
 			} 
 		}
+		&.ad-btn--disabled{
+			pointer-events: none;
+			opacity: .65;
+		}
+		&.ad-btn--lg{
+			padding: 9px 15px;
+			margin: 5px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		.ad-btn--sm{
+			padding: 9px 15px;
+			margin: 5px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		&.ad-btn--ripple{
+			box-shadow: 0 0 4px rgb(104, 102, 102);
+			outline: none;
+			background-position: center;
+			transition: background 0.3s;
+			&:hover{
+				background-image: radial-gradient(circle,transparent 1%, #999 1%);
+				background-position: center;
+				background-size: 15000%;
+			}
+			&:active{
+				transition: background 0s;
+				background-size: 100%;
+				&.ad-btn--default{
+					background-color: $light-gray;
+				}	
+				&.ad-btn--primary{
+					background-color: $primary;
+				}
+				&.ad-btn--secondary{
+					background-color: $black;
+				}
+				&.ad-btn--success{
+					background-color: $gray;
+				}
+				&.ad-btn--info{
+					background-color: $info;
+				}
+				&.ad-btn--warning{
+					background-color: $warning;
+				}
+				&.ad-btn--danger{
+					background-color: $gold;
+					color: $light-gray;
+				} 
+			}
+		}
 	}
 }
 a.ad-btn {
@@ -219,7 +248,6 @@ a.ad-btn {
 	&:hover, &:active {
 		&.ad-btn{
 			color: #fff;
-			opacity: 0.8;
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;	
@@ -245,42 +273,35 @@ a.ad-btn {
 		} 
 	}
 }
-// .ad-btn-group{
-// 	position: relative;
-// 	display: block;
-// 	margin: 10px;
-// 	& button:not(:last-child) {
-// 		border-right: none; /* Prevent double borders */
-// 	}
-// 	button.ad-btn{
-// 		margin: 0;
-// 		position: relative;
-// 		flex: 1 1 auto;
-// 	}
-// }
-
-// Make the div behave like a button
-
 .ad-btn-group{
 	margin: 5px;
-	.ad-btn-group >:first-child:last-child > .ad-btn {
-		border-radius: 0;
+	&:first-child{
+		border-top-right-radius:0;
+		border-bottom-right-radius: 0;
 	}
-	// .ad-btn-group > .ad-btn-group:first-child:not(:last-child) {
-	// 	> .ad-btn:last-child{
-	// 		border-top-right-radius:0;
-	// 		border-bottom-right-radius: 0;
-	// 	}
-	// }
-	// .ad-btn-group > .ad-btn-group:last-child:not(:first-child) > .ad-btn:first-child {
-	// 	border-top-left-radius:0;
-	// 	border-bottom-left-radius: 0;
-	// }
 	.ad-btn{
 		margin: 0;
-		// .ad-btn:first-of-type{
-		// 	border-top-right-radius: 0;
-		// 	border-bottom-right-radius: 0;
-		// }
+		border: unset;
+		&.ad-btn.ad-btn--outlined{
+			border: 2px solid;
+		}
+		&:first-of-type{
+			border-top-right-radius:0;
+			border-bottom-right-radius: 0;
+			margin-right: -1;
+		}
+		&:nth-child(2){
+			border-radius:0;
+			border-right: 0px;
+			border-left: 0px;
+			margin-left: -1px;
+			margin-right: -1px;
+		}
+		&:last-of-type{
+			border-top-left-radius:0;
+			border-bottom-left-radius: 0;
+		}
 	}
 }
+
+
