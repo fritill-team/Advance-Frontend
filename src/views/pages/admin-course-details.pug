@@ -8,111 +8,85 @@ block content
 	.container
 		.row
 			.col-lg-12
-				.course_tabs
+				.d-flex.justify-content-between.align-items-center.my-5.px-2
+					h1.text-bold Course name is here
+					.general-actions
+						a(href="/"): i.far.fa-edit(aria-hidden="true")
+						a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+			.col-lg-4
+				.general-wrapper.general-wrapper--details
+					.general-wrapper__header
+						h3 general details
+						.general-actions
+							a(href="/"): i.far.fa-edit(aria-hidden="true")
+							a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+					.general-wrapper__content
+						.general-details__item
+							div
+								h4.description__name Id :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Author :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name duration :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Total rate :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name category :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name No.chapters :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Slug :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Tags :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Languages :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Created at :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Updated at :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+						.general-details__item
+							div
+								h4.description__name Deleted at :
+								p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+
+			.col-lg-8
+				.course_tabs.mb-3.mt-0
 					#nav-tab.nav.nav-tabs.tab_crse.justify-content-center(role='tablist')
-						a#nav-details-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-details' role='tab' aria-selected='false') Details
-						a#nav-content-tab.nav-item.nav-link(data-toggle='tab' href='#nav-tranScript' role='tab' aria-selected='true') Content
+						a#nav-content-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-content' role='tab' aria-selected='true') Content
 						a#nav-discussion-tab.nav-item.nav-link(data-toggle='tab' href='#nav-comment' role='tab' aria-selected='false') Discussion
 						a#nav-thread-tab.nav-item.nav-link(data-toggle='tab' href='#nav-thread' role='tab' aria-selected='false') Thread
 						a#nav-media-tab.nav-item.nav-link(data-toggle='tab' href='#nav-media' role='tab' aria-selected='false') Media
 						a#nav-translations-tab.nav-item.nav-link(data-toggle='tab' href='#nav-translates' role='tab' aria-selected='false') Translations
-			.col-lg-12
-				.course_tab_content.mt-5
+				.course_tab_content
 					#nav-tabContent.tab-content
 						//- include ../components/review-item.pug
-						#nav-details.tab-pane.fade.show.active(role='tabpanel')
-							include ../components/general-wrapper.pug
-								block details
-									.general-details__item
-										div
-											h4.description__name Id :
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Author :
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name duration : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Total rate : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name category : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name No.chapters : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Slug : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Tags : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Languages : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Created at : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Updated at : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur 
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-									.general-details__item
-										div
-											h4.description__name Deleted at : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
-										.general-actions
-											a(href="/"): i.far.fa-edit(aria-hidden="true")
-											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-								
 						//- start course list component
 						//- include ../components/course.pug
-						#nav-tranScript.tab-pane.fade(role='tabpanel')
+
+						#nav-content.tab-pane.fade.show.active(role='tabpanel')
 							//- h2 Transcript
-							.course-content
+							.course-content.mt-0
 								h3.course-content__title Chapter content
 								.course-content__details
 									ul.details__list
@@ -142,9 +116,9 @@ block content
 															.top-title__title A Note On Asking For Help
 													.content-item__details
 														span.details__content-summary 00:12
-													.general-actions
-														a(href="/"): i.far.fa-edit(aria-hidden="true")
-														a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+														.general-actions
+															a(href="/"): i.far.fa-edit(aria-hidden="true")
+															a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 												.list-content__content-item
 													.content-item__content-name
 														i.uil.uil-play-circle.content-name__icon
@@ -153,9 +127,9 @@ block content
 													.content-item__details
 														a.details--preview-text(href='#') Preview
 														span.details__content-summary 07:48
-													.general-actions
-														a(href="/"): i.far.fa-edit(aria-hidden="true")
-														a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+														.general-actions
+															a(href="/"): i.far.fa-edit(aria-hidden="true")
+															a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 												.list-content__content-item
 													.content-item__content-name
 														i.uil.uil-play-circle.content-name__icon
@@ -164,6 +138,9 @@ block content
 													.content-item__details
 														a.details--preview-text(href='#') Preview
 														span.details__content-summary 07:48
+														.general-actions
+															a(href="/"): i.far.fa-edit(aria-hidden="true")
+															a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 												.list-content__content-item
 													.content-item__content-name
 														i.uil.uil-play-circle.content-name__icon
@@ -449,75 +426,118 @@ block content
 														span.details__content-summary 07:48
 										//-End-List
 
+						#nav-tranScript.tab-pane.fade(role='tabpanel')
+
 						#nav-comment.tab-pane.fade(role='tabpanel')
-							.row 
+							.row
 								.col-lg-8
 									include ../components/comments.pug
 								.col-lg-4
 									.header__title
 										h3.title__name Subscripers
-									include ../components/general-component/user-acount.pug
+									include ../components/general-component/user-account.pug
 									include ../components/general-component/progress.pug
-									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+									+user-account("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
-									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+									+user-account("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
-									+user-acount("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
+									+user-account("user-wrapper--bg"," images/left-imgs/img-1.jpg", "Johnson Smith ")
 										+progress("progress--height","w-70", "70" , "0", "100")
-									
-						#nav-thread.tab-pane.fade(role='tabpanel')
-							include ../components/comments.pug
+
+						#nav-thread.tab-pane.fade(role='tabpanel')  
+							.d-flex.justify-content-between.align-items-center.w-100
+								h3.course-content__title.mb-0 Thread Chapter content
+								button.ad-btn.ad-btn--primary.ad-btn--rounded create thread
+							.row 
+								.col-lg-12 
+									.ad-card.ad-card--with-actions.mb-3
+										.ad-card__title
+											h4.title-h4 card title
+										.ad-card__content
+											.user-image
+												img(src="./images/sign.svg" alt="")
+												i.uil.uil-check-circle
+											.ad-card__body
+												.ad-card__content-header
+													.user-data
+														a.text-2(href="#") Jose Portilla
+														time.text-3.gray Jan 15 '18 at 13:56
+													include ../components/list-dropdown.pug
+												.ad-card__content--details
+													p.text-1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta blanditiis quam eos alias. Illo dicta expedita culpa unde repellendus iste dolores quae, eos, cumque facilis maxime, voluptatem natus esse!
+													.tags
+														.tags__item #Development
+														.tags__item #Development
+									.ad-card.ad-card--with-actions.mb-3
+										.ad-card__title
+											h4.title-h4 card title
+										.ad-card__content
+											.user-image
+												img(src="./images/sign.svg" alt="")
+												i.uil.uil-check-circle
+											.ad-card__body
+												.ad-card__content-header
+													.user-data
+														a.text-2(href="#") Jose Portilla
+														time.text-3.gray Jan 15 '18 at 13:56
+													include ../components/list-dropdown.pug
+												.ad-card__content--details
+													p.text-1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta blanditiis quam eos alias. Illo dicta expedita culpa unde repellendus iste dolores quae, eos, cumque facilis maxime, voluptatem natus esse!
+													.tags
+														.tags__item #Development
+														.tags__item #Development
+
 						#nav-media.tab-pane.fade(role='tabpanel')
 							.row
 								.col-lg-12
 									include ../components/general-wrapper.pug
 										block details
-											.row 
-												.col-lg-12 
+											.row
+												.col-lg-12
 													h3.secondary-title media title
 													.general-details__item
-														h4.description__name arabic : 
-														p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
-												.col-lg-3 
+														h4.description__name arabic :
+														p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
 														include ../components/media-card.pug
-												.col-lg-3 
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
 														include ../components/media-card.pug
-												.col-lg-3
+												.col-lg-4
 													a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
 														include ../components/media-card.pug
-						
+
 						#nav-translates.tab-pane.fade(role='tabpanel')
 							include ../components/general-wrapper.pug
 								block details
 									h3.secondary-title Titles
 									.general-details__item
 										div
-											h4.description__name arabic : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name arabic :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
 										div
-											h4.description__name english : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name english :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
@@ -527,15 +547,16 @@ block content
 									h3.secondary-title descriptions
 									.general-details__item
 										div
-											h4.description__name arabic : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name arabic :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 									.general-details__item
 										div
-											h4.description__name english : 
-											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur  
+											h4.description__name english :
+											p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
 										.general-actions
 											a(href="/"): i.far.fa-edit(aria-hidden="true")
 											a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+

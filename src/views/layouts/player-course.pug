@@ -1,6 +1,8 @@
 //- Master layout
+
 doctype html
-html(lang='en' dir="ltr")
+
+html(lang='en' dir="ltr" class="night-mode")
 	head
 		//- Stylesheets
 		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
@@ -16,6 +18,7 @@ html(lang='en' dir="ltr")
 		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
 		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
 		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+
 		//- Title
 		block title
 			title Your project!
@@ -23,19 +26,18 @@ html(lang='en' dir="ltr")
 	body
 
 		//- Menu
-		include ../components/header-fillter.pug
+		include ../components/header-player.pug
+		//- +menu('home')
+		include ../components/sidebar-play-list.pug
+			block playlist
 
-			//- block category
+
 		//- block content
-		.wrapper.wrapper--minify
+		.wrapper.wrapper--video-player.wrapper--pt
 			block content
-			include ../components/footer.pug
+			//- Footer
 
-
-
-		//- Footer
-
-		//- block scripts
+			//- block scripts
 		block scripts
 
 

@@ -1,0 +1,118 @@
+.play-list {
+  .play-list__item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    // align-items: center;
+  }
+  .play-list__video-img {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .play-list__img {
+      min-width: 80px;
+      max-width: 80px;
+      max-height: 60px;
+      min-height: 60px;
+      background-color: #aaa;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .play-list__header {
+    margin-left: 5px;
+    display: grid;
+  }
+  .play-list__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.3;
+    &.text-2__list-video {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+  }
+  &.play-list__with-icon {
+    .play-list__video-img {
+      margin-left: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      .play-list__img {
+        min-width: 80px;
+        max-width: 80px;
+        max-height: 60px;
+        min-height: 60px;
+        background-color: #aaa;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .play-list__check {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: rgba(#000, 0.1);
+        color: #fff;
+        padding: 2px 4px;
+        border-radius: 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &.play-list__with-icon-hover {
+    .play-list__video-img {
+      .play-list__check {
+        display: none;
+        &.play-list__check--show {
+          display: block;
+          color: #fff;
+          background: #333;
+        }
+      }
+    }
+    &:hover .play-list__check {
+      display: block;
+    }
+    &:hover .text-2 {
+      color: #48a360 !important;
+    }
+  }
+}
+html[dir="rtl"] {
+  .play-list__item {
+    padding-right: 10px;
+  }
+  .play-list {
+    .play-list__video-img {
+      margin-right: 5px;
+    }
+    .play-list__header {
+      margin-right: 5px;
+    }
+    &.play-list__with-icon {
+      .play-list__video-img {
+        margin-right: 5px;
+        .play-list__check {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+    }
+  }
+}

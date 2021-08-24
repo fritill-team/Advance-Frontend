@@ -2,7 +2,7 @@
 
 doctype html
 
-html(lang='en' dir="")
+html(lang='en' dir="ltr")
 	head
 		//- Stylesheets
 		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
@@ -18,20 +18,21 @@ html(lang='en' dir="")
 		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
 		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
 		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+		link(href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" rel="stylesheet")
 
 		//- Title
 		block title
 			title Your project!
 
-	body.sidebar-with-icon 
+	body.sidebar-with-icon
 
 		//- Menu
 		include ../components/header.pug
-			
+
 		include ../components/sidebar.pug
 			block sidebar
 				include ../components/sidebar-content.pug
-				
+
 		//- block content
 		.wrapper
 			block content
@@ -43,7 +44,8 @@ html(lang='en' dir="")
 			block scripts
 
 
-
+		script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-bash.min.js")
 		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
 		//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
 		//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')

@@ -40,6 +40,7 @@ ul {
 
 */
 
+@import "./base/variables.scss";
 @import "./base/style.scss";
 @import "./base/_rtl.scss";
 @import "./custom/auth-forms.scss";
@@ -64,23 +65,38 @@ ul {
 @import "./components/card-collapse";
 @import "./components/media-card";
 @import "./components/thread";
+@import "./components/header-player";
+@import "./components/sidebar-player";
+@import "./components/social-icons";
+@import "./components/tags";
+@import "./components/info";
+@import "./components/video-player";
 @import "./components/general-wrappaer";
 
+@import "./components/rich-textarea";
+
+@import "./components/general-card";
+@import "./components/general-playlist";
 @import "./components/colleps";
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";
 @import "./components/single-course/user-item";
 @import "./components/exam/exam.scss";
+@import "./components/typography";
 @import "./base/instructor-dashboard.css";
 @import "./base/jquery-steps.css";
+@import "./base/datepicker.min.css";
+
 @import "./base/datepicker.min.css";
 @import "./components/sidebar.scss";
 @import "./vendor/unicons-2.0.1/css/unicons.css";
 @import "./base/lightbox.min.css";
+@import "./base/select2.min.css";
 
 // @import './base/vertical-responsive-menu.min.css';
 @import "./base/responsive.css";
 @import "./base/night-mode.css";
+@import "./base/select2.min.css";
 @import "./vendor/OwlCarousel/assets/owl.carousel.css";
 @import "./vendor/OwlCarousel/assets/owl.theme.default.min.css";
 @import "./vendor/semantic/semantic.css";

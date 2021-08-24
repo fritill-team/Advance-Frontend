@@ -62,9 +62,9 @@ block courseVideo
 			| 30-Day Money-Back Guarantee
 block userAccount
 	.user-wrapper
-		include ../components/general-component/user-acount.pug
+		include ../components/general-component/user-account.pug
 		include ../components/general-component/btn.pug
-		+user-acount("images/left-imgs/img-1.jpg", "Subscribe" , "Johnson Smith")
+		+user-account("images/left-imgs/img-1.jpg", "Subscribe" , "Johnson Smith")
 			+btn('user-content__subscribe-btn', 'subscribe')
 		include ../components/general-component/interaction.pug
 		section.interactions-course
@@ -78,6 +78,9 @@ block userAccount
 			a#nav-about-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-about' role='tab' aria-selected='true') About
 			a#nav-courses-tab.nav-item.nav-link(data-toggle='tab' href='#nav-courses' role='tab' aria-selected='false') Content
 			a#nav-reviews-tab.nav-item.nav-link(data-toggle='tab' href='#nav-reviews' role='tab' aria-selected='false') Reviews
+			a#nav-thread-tab.nav-item.nav-link(data-toggle='tab' href='#nav-thread' role='tab' aria-selected='false') Thread
+
+
 block tabs
 	//- .container
 	.row
@@ -107,12 +110,53 @@ block tabs
 											.group__img-wrapper
 												img.group__img(src="images/left-imgs/img-1.jpg" alt="")
 											textarea.group__textarea(placeholder="Add a public comment")
-										button.group--btn(type="submit") Add review 
+										button.group--btn(type="submit") Add review
 									include ../components/review.pug
 									.review__all-reviews.mt-3
 										include ../components/review-item.pug
 										.all-reviews__review-item
 											a.review-item__more-reviews(href='#') See More Reviews
+					#nav-thread.tab-pane.fade(role='tabpanel')
+						.thread__header
+							h3.course-content__title.thread--title-fs Create Thread
+						.create__thread-post
+							.thread__post.post--pb0
+								.post__qustion
+									.user-wrapper__account
+										.account__live-user
+											.live-user__content
+												a.content__user-img(href='#')
+													img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+											.live-user__user-content
+												.wrapper-account
+													a.user-content__text.user-content--mb(href='#') Johnson Smith
+													time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+										.comments__add-comment.create--threads
+											.add-comment__group
+												textarea.group__textarea(placeholder="Add a post")
+											button.group--btn(type="submit")  Create Thread
+						.thread__header
+							h3.course-content__title.thread--title-fs Threads
+						.thread__wrapper
+							.thread__post.post--pb0
+								.post__qustion
+									.user-wrapper__account
+										.account__live-user
+											.live-user__content
+												a.content__user-img(href='#')
+													img.user-img__img(src="images/left-imgs/img-1.jpg" alt='')
+											.live-user__user-content
+												.wrapper-account.d-flex.justify-content-between.align-items-center
+													a.user-content__text.user-content--mb(href='#') Johnson Smith
+													include ../components/list-dropdown.pug
+												a.thread-question(href="thread.html") ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium .
+												.wrapper__tags
+													time.relativetime(datetime="2018-01-15 13:56:28Z") Jan 15 '18 at 13:56
+													.qustion__tags
+														.qustion__taglist
+															a.taglist__item.taglist--no-bg(href='#') #Development
+															a.taglist__item.taglist--no-bg(href='#') #Bootestrap
+
 		.col-lg-4.mt-5
 			<h3 class="about-required__title">Related courses</h3>
 			include ../components/related-courses.pug
