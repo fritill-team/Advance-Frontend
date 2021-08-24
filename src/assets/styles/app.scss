@@ -36,12 +36,8 @@ ul {
 // @import './pages/blog';
 // @import './pages/contact';
 
-/*
-
-*/
-
-@import "./base/variables.scss";
-@import "./base/style.scss";
+@import "./base/_variables.scss";
+// @import "./base/_style.scss";
 @import "./base/_rtl.scss";
 @import "./custom/auth-forms.scss";
 @import "./components/header";

@@ -24,21 +24,21 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body
+		div
+			//- Menu
+			include ../components/header.pug
+			//- +menu('home')
+			include ../components/sidebar.pug
+				block sidebar
+					include ../components/sidebar-content.pug
 
-		//- Menu
-		include ../components/header.pug
-		//- +menu('home')
-		include ../components/sidebar.pug
-			block sidebar
-				include ../components/sidebar-content.pug
+			//- block content
+			.wrapper
+				block content
+				include ../components/footer.pug
+				//- Footer
 
-		//- block content
-		.wrapper
-			block content
-			include ../components/footer.pug
-			//- Footer
-
-			//- block scripts
+				//- block scripts
 		block scripts
 
 

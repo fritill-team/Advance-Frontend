@@ -21,21 +21,21 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body
+		div
+			//- Menu
+			include ../components/header-fillter.pug
 
-		//- Menu
-		include ../components/header-fillter.pug
-
-			//- block category
-		//- block content
-		.wrapper.wrapper--minify
-			block content
-			include ../components/footer.pug
+				//- block category
+			//- block content
+			.wrapper.wrapper--minify
+				block content
+				include ../components/footer.pug
 
 
 
-		//- Footer
+			//- Footer
 
-		//- block scripts
+			//- block scripts
 		block scripts
 
 

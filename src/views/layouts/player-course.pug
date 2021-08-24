@@ -24,20 +24,20 @@ html(lang='en' dir="ltr" class="night-mode")
 			title Your project!
 
 	body
+		div
+			//- Menu
+			include ../components/header-player.pug
+			//- +menu('home')
+			include ../components/sidebar-play-list.pug
+				block playlist
 
-		//- Menu
-		include ../components/header-player.pug
-		//- +menu('home')
-		include ../components/sidebar-play-list.pug
-			block playlist
 
+			//- block content
+			.wrapper.wrapper--video-player.wrapper--pt
+				block content
+				//- Footer
 
-		//- block content
-		.wrapper.wrapper--video-player.wrapper--pt
-			block content
-			//- Footer
-
-			//- block scripts
+				//- block scripts
 		block scripts
 
 
