@@ -303,6 +303,7 @@
     .ad-card__content {
       background: rgba(#e5e0e5, 0.06);
       box-shadow: 0 6px 25px #00000021;
+      padding: 15px 20px;
     }
     .user-data {
       text-overflow: ellipsis;
@@ -320,7 +321,7 @@
           position: absolute;
           border-radius: 100%;
           top: 2px;
-          right: 20px;
+          right: 14px;
         }
       }
     }
