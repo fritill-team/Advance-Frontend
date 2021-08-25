@@ -548,15 +548,21 @@ $(".play-list--hide").click(function() {
 
 // edit thread
 
-// $(document)
-// .on('click', 'content__item', function () {
-//   $(".content__item").toggleClass('nav--opened vertical--minify')
-//   wrapper.toggleClass('toggle-content wrapper--minify ');
-//   sidebarIcon.toggleClass("open-side-nav");
-//   // $('.sub-menu-item').each(function (i, item) {
-//   //   $(item).removeClass('menu--opened')
-//   // })
-// })
+$(document)
+.on('click', 'content__item', function () {
+  $(".content__item").toggleClass('nav--opened vertical--minify')
+  wrapper.toggleClass('toggle-content wrapper--minify ');
+  sidebarIcon.toggleClass("open-side-nav");
+  // $('.sub-menu-item').each(function (i, item) {
+  //   $(item).removeClass('menu--opened')
+  // })
+})
+//  $( ".submit-post .submit__btn").click(function() {
+//   $(this).each(function(){
+//     $(".edit-post").css("display", "none");
+//     $("#post-card").css("display", "block")
+//   })
+//  });
 // $(document).on('click', '.edit', function () {
 //   $(this).closest('p').remove();
 // });
@@ -571,30 +577,37 @@ $(".play-list--hide").click(function() {
 //    })
 //   }
 // });
- // $(".edit").each(function(i) {
-// $(this).on("click",function(){
-//      $(".post--card").css("display", "none");
-//     $(".edit--post").css("display", "block");
-//   })
-//  });
-  // const edit = document.getElementsByClassName("edit");
-  // const postCard = document.getElementsByClassName("post--card");
-  // const editPost = document.getElementsByClassName("edit--post");
 
-  //       for (let i = 0; i < edit.length; i++) {
-  //         // edit.addEventListener("click", function() {
-  //         //   postCard.style.display = "none";
-  //         //   editPost.style.display = "block";
-  //         // })
-  //       }
+// edit thread
+ $("#edit").each(function() {
+$(this).on("click",function(){
+     $("#postCard").css("display", "none");
+    $("#editPostThread").css("display", "block");
+  })
+ });
+ $(".submit-post .submit__btn").each(function() {
+  $(this).on("click",function(e){
+    e.preventDefault();
+    $("#editPostThread").css("display", "none");
+    $("#postCard").css("display", "block")
+  })
+ });
+ // edit replay
 
-//  $(".submit-post .submit__btn").each(function(i) {
-//   $(this).on("click",function(e){
-//     e.preventDefault();
-//     $(".edit--post").css("display", "none");
-//     $(".post--card").css("display", "block")
-//   })
-//  });
+ $("#editReplay").each(function() {
+  $(this).on("click",function(){
+       $("#CardReplay").css("display", "none");
+      $("#editCardReplay").css("display", "block");
+    })
+   });
+   $(".submit-post .submit__btn").each(function() {
+    $(this).on("click",function(e){
+      e.preventDefault();
+      $("#editCardReplay").css("display", "none");
+      $("#CardReplay").css("display", "block")
+    })
+   });
+
 //  $( ".submit-post .submit__btn").click(function() {
 //   $(this).each(function(){
 //     $(".edit-post").css("display", "none");

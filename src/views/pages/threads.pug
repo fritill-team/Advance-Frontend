@@ -24,8 +24,8 @@ block content
 				.row
 					.col-lg-12
 						//- question
-						.ad-card.ad-card--with-actions.mb-3
-							.field-wrapper.edit--post
+						.ad-card#editPostThread.ad-card--d-none.mb-3
+							.field-wrapper.p-3
 								form.form__action.mb-3(action="")
 									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Edit post')
 									select.js-example-basic-single.select2(name='state' multiple='multiple')
@@ -35,6 +35,7 @@ block content
 									.submit-post
 										include ../components/general-component/btn.pug
 										+btn('submit__btn', 'post' , '#create_new_course.html')
+						.ad-card.ad-card--with-actions#postCard.mb-3
 							.ad-card__content
 								.user-image
 									img(src="./images/sign.svg" alt="")
@@ -48,11 +49,11 @@ block content
 											.more-dropdown__link(href="#")
 												i.uil.uil-ellipsis-v
 											.more-dropdown__content
-												span.content__item
-													i.item__icone.uil.uil-comment-alt-edit
+												span.content__item#edit
+													i.item__icon.uil.uil-comment-alt-edit
 													| Edite
 												span.content__item
-													i.item__icone.uil.uil-trash-alt
+													i.item__icon.uil.uil-trash-alt
 													| Delete
 									.ad-card__content--details
 										.rich-textarea
@@ -77,13 +78,14 @@ block content
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.course-content__title.mb-0 1 Answer
 					.col-lg-12
-						.ad-card.ad-card--with-actions
-							.field-wrapper.edit--post
-								form.form__action.mb-3(action="")
-									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Edit post')
-									.submit-post
-										include ../components/general-component/btn.pug
-										+btn('submit__btn', 'post' , '#create_new_course.html')
+						.ad-card#editCardReplay.ad-card--d-none.mb-3
+							.field-wrapper.p-3
+									form.form__action.mb-3(action="")
+										textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Edit post')
+										.submit-post
+											include ../components/general-component/btn.pug
+											+btn('submit__btn', 'post' , '#create_new_course.html')
+						.ad-card.ad-card--with-actions#CardReplay
 							.ad-card__content
 								.user-image
 									img(src="./images/sign.svg" alt="")
@@ -97,11 +99,11 @@ block content
 											.more-dropdown__link(href="#")
 												i.uil.uil-ellipsis-v
 											.more-dropdown__content
-												span.content__item
-													i.item__icone.uil.uil-comment-alt-edit
+												span.content__item#editReplay
+													i.item__icon.uil.uil-comment-alt-edit
 													| Edite
 												span.content__item
-													i.item__icone.uil.uil-trash-alt
+													i.item__icon.uil.uil-trash-alt
 													| Delete
 									.ad-card__content--details
 										.rich-textarea
@@ -139,11 +141,11 @@ block content
 												.more-dropdown__link(href="#")
 													i.uil.uil-ellipsis-v
 												.more-dropdown__content
-													span.content__item
-														i.item__icone.uil.uil-comment-alt-edit
+													span.content__item.edit
+														i.item__icon.uil.uil-comment-alt-edit
 														| Edite
 													span.content__item
-														i.item__icone.uil.uil-trash-alt
+														i.item__icon.uil.uil-trash-alt
 														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
@@ -163,10 +165,10 @@ block content
 													i.uil.uil-ellipsis-v
 												.more-dropdown__content
 													span.content__item
-														i.item__icone.uil.uil-comment-alt-edit
+														i.item__icon.uil.uil-comment-alt-edit
 														| Edite
 													span.content__item
-														i.item__icone.uil.uil-trash-alt
+														i.item__icon.uil.uil-trash-alt
 														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
@@ -186,10 +188,10 @@ block content
 													i.uil.uil-ellipsis-v
 												.more-dropdown__content
 													span.content__item
-														i.item__icone.uil.uil-comment-alt-edit
+														i.item__icon.uil.uil-comment-alt-edit
 														| Edite
 													span.content__item
-														i.item__icone.uil.uil-trash-alt
+														i.item__icon.uil.uil-trash-alt
 														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
