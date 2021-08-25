@@ -97,7 +97,7 @@ a,button,input{
 			&.ad-btn--danger{
 				border-color: $gold;
 				color: $gold;
-			}	
+			}
 		}
 		&.ad-btn--text{
 			border:none;
@@ -125,6 +125,33 @@ a,button,input{
 				color: $gold;
 			}	
 		}
+    &:hover {
+      &.ad-btn{
+        color: #fff;
+      }
+      &.ad-btn--default{
+        background-color: $light-gray;	
+      }	
+      &.ad-btn--primary{
+        background-color: $primary;
+      }
+      &.ad-btn--secondary{
+        background-color: $black;
+      }
+      &.ad-btn--success{
+        background-color: $gray;
+      }
+      &.ad-btn--info{
+        background-color: $info;
+      }
+      &.ad-btn--warning{
+        background-color: $warning;
+      }
+      &.ad-btn--danger{
+        background-color: $gold;
+        color: $light-gray;
+      } 
+    }	
 		&.ad-btn--icon{
 			width: 35px;
 			height: 35px;
@@ -159,10 +186,6 @@ a,button,input{
 		}
 		&.ad-btn--with-icon{
 			color: #fff;
-		&i{
-			display: inline-block;
-			margin-right: 7px;
-		}
 			&.ad-btn--default{
 				background-color: $light-gray;
 			}	
@@ -188,19 +211,19 @@ a,button,input{
 		}
 		&.ad-btn--disabled{
 			pointer-events: none;
-			opacity: .65;
+			opacity: .60;
 		}
 		&.ad-btn--lg{
-			padding: 9px 15px;
+			padding: 15px 25px;
 			margin: 5px;
-			font-size: 14px;
-			font-weight: 500;
+			font-size: 18px;
+			font-weight: 600;
 		}
-		.ad-btn--sm{
+		&.ad-btn--sm{
 			padding: 9px 15px;
 			margin: 5px;
-			font-size: 14px;
-			font-weight: 500;
+			font-size: 12px;
+			font-weight: 300;
 		}
 		&.ad-btn--ripple{
 			box-shadow: 0 0 4px rgb(104, 102, 102);
@@ -242,35 +265,13 @@ a,button,input{
 	}
 }
 a.ad-btn {
+  line-height:18px ;
+  padding-top: 12px;
 	&:link, &:visited {
 		color: red;
 	}
-	&:hover, &:active {
-		&.ad-btn{
-			color: #fff;
-		}
-		&.ad-btn--default{
-			background-color: $light-gray;	
-		}	
-		&.ad-btn--primary{
-			background-color: $primary;
-		}
-		&.ad-btn--secondary{
-			background-color: $black;
-		}
-		&.ad-btn--success{
-			background-color: $gray;
-		}
-		&.ad-btn--info{
-			background-color: $info;
-		}
-		&.ad-btn--warning{
-			background-color: $warning;
-		}
-		&.ad-btn--danger{
-			background-color: $gold;
-			color: $light-gray;
-		} 
+	&:active {
+		opacity: 1.8;	
 	}
 }
 .ad-btn-group{
