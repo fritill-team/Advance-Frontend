@@ -519,7 +519,7 @@ $(".card__header--collapse").each(function () {
     $(this).children('.card__collapse--toggle').toggleClass('active');
   })
 })
- 
+
 
 //sidebar__playlist
 
@@ -542,6 +542,71 @@ $(".playlist__close").click(function() {
 });
 
 // checked box icon in video-list icon
-$(".play-list--hide").click(function() { 
-  $(".play-list--hide").toggleClass("play-list__check--show"); 
+$(".play-list--hide").click(function() {
+  $(".play-list--hide").toggleClass("play-list__check--show");
 });
+
+// edit thread
+
+// $(document)
+// .on('click', 'content__item', function () {
+//   $(".content__item").toggleClass('nav--opened vertical--minify')
+//   wrapper.toggleClass('toggle-content wrapper--minify ');
+//   sidebarIcon.toggleClass("open-side-nav");
+//   // $('.sub-menu-item').each(function (i, item) {
+//   //   $(item).removeClass('menu--opened')
+//   // })
+// })
+// $(document).on('click', '.edit', function () {
+//   $(this).closest('p').remove();
+// });
+
+// var edit = $('.edit');
+
+// $(document).ready(function(){
+//    for(var i = 0; edit.length; i++) {
+//     $(edit).on("click",function(){
+//       $(".post--card").css("display", "none");
+//      $(".edit--post").css("display", "block");
+//    })
+//   }
+// });
+ // $(".edit").each(function(i) {
+// $(this).on("click",function(){
+//      $(".post--card").css("display", "none");
+//     $(".edit--post").css("display", "block");
+//   })
+//  });
+  // const edit = document.getElementsByClassName("edit");
+  // const postCard = document.getElementsByClassName("post--card");
+  // const editPost = document.getElementsByClassName("edit--post");
+
+  //       for (let i = 0; i < edit.length; i++) {
+  //         // edit.addEventListener("click", function() {
+  //         //   postCard.style.display = "none";
+  //         //   editPost.style.display = "block";
+  //         // })
+  //       }
+
+//  $(".submit-post .submit__btn").each(function(i) {
+//   $(this).on("click",function(e){
+//     e.preventDefault();
+//     $(".edit--post").css("display", "none");
+//     $(".post--card").css("display", "block")
+//   })
+//  });
+//  $( ".submit-post .submit__btn").click(function() {
+//   $(this).each(function(){
+//     $(".edit-post").css("display", "none");
+//     $("#post-card").css("display", "block")
+//   })
+//  });
+
+
+// $('.sub-menu-item').click(function () {
+//   if ($(this).hasClass('menu--opened')) {
+//     $('.menu--opened .item__link').addClass('active--menu');
+//   } else {
+//     $('.sub-menu-item .item__link').removeClass('active--menu');
+//   }
+// });
