@@ -126,8 +126,15 @@ block content
 					.col-lg-12
 						//- list of replies this takes the padding
 						.comments-list
+							.field-wrapper.ad-card--d-none#editCommentForm.m-0
+								.text-field__content
+									form.form__action.mb-3(action="")
+										input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+										.submit-post
+											include ../components/general-component/btn.pug
+											+btn('submit__btn', 'comment' , '#create_new_course.html')
 							//- comment 1 add class transparent (no-background)
-							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
+							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
 								.ad-card__content
 									.user-image
 										img(src="./images/sign.svg" alt="")
@@ -141,7 +148,7 @@ block content
 												.more-dropdown__link(href="#")
 													i.uil.uil-ellipsis-v
 												.more-dropdown__content
-													span.content__item.edit
+													span.content__item.edit#editComment
 														i.item__icon.uil.uil-comment-alt-edit
 														| Edite
 													span.content__item

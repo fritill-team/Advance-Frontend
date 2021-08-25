@@ -593,7 +593,6 @@ $(this).on("click",function(){
   })
  });
  // edit replay
-
  $("#editReplay").each(function() {
   $(this).on("click",function(){
        $("#CardReplay").css("display", "none");
@@ -607,7 +606,20 @@ $(this).on("click",function(){
       $("#CardReplay").css("display", "block")
     })
    });
-
+ // edit comment
+ $("#editComment").each(function() {
+  $(this).on("click",function(){
+       $("#comment").css("display", "none");
+      $("#editCommentForm").css("display", "block");
+    })
+   });
+   $(".submit-post .submit__btn").each(function() {
+    $(this).on("click",function(e){
+      e.preventDefault();
+      $("#editCommentForm").css("display", "none");
+      $("#comment").css("display", "block")
+    })
+   });
 //  $( ".submit-post .submit__btn").click(function() {
 //   $(this).each(function(){
 //     $(".edit-post").css("display", "none");
