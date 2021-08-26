@@ -25,23 +25,23 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body.sidebar-with-icon
+		div
+			//- Menu
+			include ../components/header.pug
 
-		//- Menu
-		include ../components/header.pug
+			include ../components/sidebar.pug
+				block sidebar
+					include ../components/sidebar-content.pug
 
-		include ../components/sidebar.pug
-			block sidebar
-				include ../components/sidebar-content.pug
+			//- block content
+			.wrapper
+				block content
+				include ../components/footer-admin.pug
 
-		//- block content
-		.wrapper
-			block content
-			include ../components/footer-admin.pug
+				//- Footer
 
-			//- Footer
-
-			//- block scripts
-			block scripts
+				//- block scripts
+				block scripts
 
 
 		script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js")

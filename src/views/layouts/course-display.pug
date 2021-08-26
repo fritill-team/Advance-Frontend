@@ -23,47 +23,47 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body
+		div
+			//- Menu
+			include ../components/header.pug
+				block category
+			include ../components/sidebar.pug
+				block sidebar
+					include ../components/sidebar-content.pug
+						block collapse
+					//- include ../components/sidebar-content.pug
 
-		//- Menu
-		include ../components/header.pug
-			block category
-		include ../components/sidebar.pug
-			block sidebar
-				include ../components/sidebar-content.pug
-					block collapse
-				//- include ../components/sidebar-content.pug
+			//- block content
 
-		//- block content
+			block content
+				.wrapper.wrapper--display
+					//- course viewe
+					//- course video
+					section.course-video
+						//- img(src="/src/assets/images/sign.svg", alt="")
+						.container-fluid
+							.row
+								.col-lg-12
+									.course-video__wrapper
+										.row.justify-content-center
+											block courseVideo
 
-		block content
-			.wrapper.wrapper--display
-				//- course viewe
-				//- course video
-				section.course-video
-					//- img(src="/src/assets/images/sign.svg", alt="")
-					.container-fluid
-						.row
-							.col-lg-12
-								.course-video__wrapper
-									.row.justify-content-center
-										block courseVideo
+						//- section.course-video
+						//-   block courseVideo
+					section.wrapper-user
+						.container-fluid
+							.row
+								.col-lg-12
+										block userAccount
+					section.wrapper-tabs
+						.container-fluid
+							.row
+								.col-lg-12
+									block tabs
 
-					//- section.course-video
-					//-   block courseVideo
-				section.wrapper-user
-					.container-fluid
-						.row
-							.col-lg-12
-									block userAccount
-				section.wrapper-tabs
-					.container-fluid
-						.row
-							.col-lg-12
-								block tabs
+					include ../components/footer.pug
 
-				include ../components/footer.pug
-
-		//- block scripts
+			//- block scripts
 		block scripts
 			//- script(src='https://unpkg.com/video.js/dist/video-js.min.css')
 
