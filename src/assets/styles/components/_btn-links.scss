@@ -161,6 +161,10 @@ a,button,input{
 			text-align: center;
 			font-size: 14px;
 			transition: all .3s ease;
+			svg, i{
+				color: #fff;
+				display: inline-block;
+			}
 			&.ad-btn--default{
 				background-color: $light-gray;
 			}	
@@ -185,10 +189,10 @@ a,button,input{
 			} 
 		}
 		&.ad-btn--with-icon{
-			color: #fff;
 			svg, i{
+				color: #fff;
 				display: inline-block;
-				margin-right: 5px !important;
+				margin-right: 5px;
 			}
 			&.ad-btn--default{
 				background-color: $light-gray;
