@@ -39,12 +39,12 @@ mixin course-card(className)
 						| in Python 3
 					a.card-content__card-title(href='#') Web Development | Python
 					p.card-auther__name-auth
-						| By 
+						| By
 						a(href='#') John Doe
-				.card-auther__price 
+				.card-auther__price
 					.course-card__actions
-						button.enroll-btn(title='Enroll')
-							|Enroll 
+						a(href="#").ad-btn.ad-btn--primary.ad-btn--outlined(title='Enroll')
+							|Enroll
 						a.btn-wishlist(href="#") <i class="fas fa-heart"></i>
 						a.btn-wishlist(href="#") <i class="far fa-heart"></i>
 					p $10

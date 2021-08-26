@@ -12,15 +12,16 @@ a,button,input{
 		display:inline-block;
 		font-family: "Roboto", sans-serif;
 		cursor: pointer;
-		color: #fff;
+		color: #fff ;
 		text-align: center;
 		line-height: 14px;
+    float: right;
 		&:hover{
-			opacity: 0.8;	
+			opacity: 0.8;
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;
-		}	
+		}
 		&.ad-btn--primary{
 			background-color: $primary;
 		}
@@ -40,13 +41,13 @@ a,button,input{
 			background-color: $gold;
 			color: $light-gray;
 		}
-	
+
 		&.ad-btn--rounded{
 			color: #fff;
 			border-radius: 20px;
 			&.ad-btn--default{
 				background-color: $light-gray;
-			}	
+			}
 			&.ad-btn--primary{
 				background-color: $primary;
 			}
@@ -67,7 +68,7 @@ a,button,input{
 				color: $light-gray;
 			}
 		}
-	
+
 		&.ad-btn--outlined{
 			background-color: transparent;
 			&.ad-btn--default{
@@ -123,15 +124,15 @@ a,button,input{
 			}
 			&.ad-btn--danger{
 				color: $gold;
-			}	
+			}
 		}
     &:hover {
       &.ad-btn{
         color: #fff;
       }
       &.ad-btn--default{
-        background-color: $light-gray;	
-      }	
+        background-color: $light-gray;
+      }
       &.ad-btn--primary{
         background-color: $primary;
       }
@@ -150,8 +151,8 @@ a,button,input{
       &.ad-btn--danger{
         background-color: $gold;
         color: $light-gray;
-      } 
-    }	
+      }
+    }
 		&.ad-btn--icon{
 			width: 35px;
 			height: 35px;
@@ -167,7 +168,7 @@ a,button,input{
 			}
 			&.ad-btn--default{
 				background-color: $light-gray;
-			}	
+			}
 			&.ad-btn--primary{
 				background-color: $primary;
 			}
@@ -186,7 +187,7 @@ a,button,input{
 			&.ad-btn--danger{
 				background-color: $gold;
 				color: $light-gray;
-			} 
+			}
 		}
 		&.ad-btn--with-icon{
 			svg, i{
@@ -196,7 +197,7 @@ a,button,input{
 			}
 			&.ad-btn--default{
 				background-color: $light-gray;
-			}	
+			}
 			&.ad-btn--primary{
 				background-color: $primary;
 			}
@@ -215,7 +216,7 @@ a,button,input{
 			&.ad-btn--danger{
 				background-color: $gold;
 				color: $light-gray;
-			} 
+			}
 		}
 		&.ad-btn--disabled{
 			pointer-events: none;
@@ -248,7 +249,7 @@ a,button,input{
 				background-size: 100%;
 				&.ad-btn--default{
 					background-color: $light-gray;
-				}	
+				}
 				&.ad-btn--primary{
 					background-color: $primary;
 				}
@@ -267,7 +268,7 @@ a,button,input{
 				&.ad-btn--danger{
 					background-color: $gold;
 					color: $light-gray;
-				} 
+				}
 			}
 		}
 	}
@@ -276,10 +277,10 @@ a.ad-btn {
   line-height:18px ;
   padding-top: 12px;
 	&:link, &:visited {
-		color: red;
+		// color: red;
 	}
 	&:active {
-		opacity: 1.8;	
+		opacity: 1.8;
 	}
 }
 .ad-btn-group{
