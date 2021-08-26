@@ -186,6 +186,10 @@ a,button,input{
 		}
 		&.ad-btn--with-icon{
 			color: #fff;
+			svg, i{
+				display: inline-block;
+				margin-right: 5px !important;
+			}
 			&.ad-btn--default{
 				background-color: $light-gray;
 			}	
