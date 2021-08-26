@@ -36,12 +36,9 @@ ul {
 // @import './pages/blog';
 // @import './pages/contact';
 
-/*
-
-*/
-
-@import "./base/variables.scss";
-// @import "./base/style.scss";
+@import "./base/_variables.scss";
+@import "./base/_style.scss";
+// @import "./base/new-style";
 @import "./base/_rtl.scss";
 @import "./custom/auth-forms.scss";
 @import "./components/header";
@@ -59,7 +56,6 @@ ul {
 @import "./components/enroll-card";
 @import "./components/description-enroll";
 @import "./components/footer-admin";
-@import "./components/footer";
 @import "./components/filter";
 @import "./components/card";
 @import "./components/btn-links";
