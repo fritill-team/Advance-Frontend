@@ -27,7 +27,7 @@ block content
 						.ad-card#editPostThread.ad-card--d-none.mb-3
 							.field-wrapper.p-3
 								form.form__action.mb-3(action="")
-									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Edit post')
+									textarea.textarea#course_description.mb-2(rows='5' name='description' placeholder='Edit post')
 									select.js-example-basic-single.select2(name='state' multiple='multiple')
 										option(value='eg') Egypt
 										option(value='AL') Alabama
@@ -81,7 +81,7 @@ block content
 						.ad-card#editCardReplay.ad-card--d-none.mb-3
 							.field-wrapper.p-3
 									form.form__action.mb-3(action="")
-										textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Edit post')
+										textarea.textarea#description.mb-2(rows='5' name='description' placeholder='Edit post')
 										.submit-post
 											include ../components/general-component/btn.pug
 											+btn('submit__btn', 'post' , '#create_new_course.html')
@@ -129,7 +129,7 @@ block content
 							.field-wrapper.ad-card--d-none#editCommentForm.m-0
 								.text-field__content
 									form.form__action.mb-3(action="")
-										input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+										input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
 										.submit-post
 											include ../components/general-component/btn.pug
 											+btn('submit__btn', 'comment' , '#create_new_course.html')
@@ -219,8 +219,8 @@ block content
 									h3.course-content__title.my-3 Your Answer
 							.text-field__content
 								form.form__action.mb-3(action="")
-									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Insert your course description')
+									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='title' value='' required)
+									textarea.textarea#card.mb-2(rows='5' name='description' placeholder='Insert your course description')
 									select.js-example-basic-single.select2(name='state' multiple='multiple')
 										option(value='eg') Egypt
 										option(value='AL') Alabama
