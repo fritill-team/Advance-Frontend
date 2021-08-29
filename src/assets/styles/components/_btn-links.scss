@@ -16,7 +16,8 @@ a,button,input{
 		text-align: center;
 		line-height: 14px;
 		&:hover{
-			opacity: 0.8;	
+			opacity: 0.8;
+			transition: .3s ease all;	
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;
@@ -103,6 +104,7 @@ a,button,input{
 			border:none;
 			background-color: transparent;
 			text-decoration: underline;
+			transition: .3s ease all;
 			&.ad-btn--default{
 				color:$light-gray ;
 			}
@@ -125,33 +127,36 @@ a,button,input{
 				color: $gold;
 			}	
 		}
-    &:hover {
-      &.ad-btn{
-        color: #fff;
-      }
-      &.ad-btn--default{
-        background-color: $light-gray;	
-      }	
-      &.ad-btn--primary{
-        background-color: $primary;
-      }
-      &.ad-btn--secondary{
-        background-color: $black;
-      }
-      &.ad-btn--success{
-        background-color: $gray;
-      }
-      &.ad-btn--info{
-        background-color: $info;
-      }
-      &.ad-btn--warning{
-        background-color: $warning;
-      }
-      &.ad-btn--danger{
-        background-color: $gold;
-        color: $light-gray;
-      } 
-    }	
+    &.ad-btn--hover {
+			&:hover {
+				&.ad-btn{
+					color: #fff;
+					transition: .3s ease all;
+				}
+				&.ad-btn--default{
+					background-color: $light-gray;	
+				}	
+				&.ad-btn--primary{
+					background-color: $primary;
+				}
+				&.ad-btn--secondary{
+					background-color: $black;
+				}
+				&.ad-btn--success{
+					background-color: $gray;
+				}
+				&.ad-btn--info{
+					background-color: $info;
+				}
+				&.ad-btn--warning{
+					background-color: $warning;
+				}
+				&.ad-btn--danger{
+					background-color: $gold;
+					color: $light-gray;
+				} 
+			}	
+		}
 		&.ad-btn--icon{
 			width: 35px;
 			height: 35px;
