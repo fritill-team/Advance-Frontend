@@ -41,20 +41,20 @@
   .list__list-item {
     display: inline-block !important;
     vertical-align: middle;
-    .list-item--upload-course {
-      font-size: 14px;
-      font-weight: 500;
-      font-family: Roboto, sans-serif;
-      color: #fff;
-      background: #ed2a26;
-      padding: 9px 15px;
-      border-radius: 25px;
-      margin-right: 10px;
-      &:hover {
-        color: #fff !important;
-        background: #333;
-      }
-    }
+    // .list-item--upload-course {
+    //   font-size: 14px;
+    //   font-weight: 500;
+    //   font-family: Roboto, sans-serif;
+    //   color: #fff;
+    //   background: #ed2a26;
+    //   padding: 9px 15px;
+    //   border-radius: 25px;
+    //   margin-right: 10px;
+    //   &:hover {
+    //     color: #fff !important;
+    //     background: #333;
+    //   }
+    // }
     .list-item--opencard {
       padding: 18px 8px;
       font-size: 20px;

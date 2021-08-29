@@ -2,62 +2,56 @@ extends ../layouts/auth.pug
 
 
 block title
-  title signup
+	title sign-up
 
 block content
-  h2 Welcome Back
-  //- p Log In to Your Edututs+ Account! 
-  form
-    .ui.search.focus
-      .icon.input.lbel25
-        label.sr-only.d-none(for="validationServerFullName") Full Name *
-        .ui.left.icon.input.swdh19.w-100
-          input.prompt.srch_explore.form-control(
-            type="text"
-            name="fullname"
-            id="validationServerFullName" required maxlength="64"
-            aria-describedby="validationServer01Feedback"
-            placeholder="Full Name" autofocus)
-        .invalid-feedback.my-2 Requerd
-    .ui.search.focus.mt-15
-      .icon.left.input.lbel25
-        label.sr-only.d-none(for="validationServerEmail") Email Address *
-        .ui.left.icon.input.swdh19.w-100
-          input.prompt.srch_explore(
-            type="email"
-            name="emailaddress"
-            id="validationServerEmail" required maxlength="64"
-            aria-describedby="validationServer02Feedback"
-            placeholder="Email Address" )
-        .invalid-feedback.my-2#validationServer02Feedback Requerd
-      .ui.search.focus.mt-15
-        .icon.input.lbel25
-          label.sr-only.d-none(for="validationServerPassword")  Password *
-          .ui.left.icon.input.swdh19.w-100
-            input.prompt.srch_explore( 
-              type="password"
-              name="password"
-              id="validationServerPassword"
-              aria-describedby="validationServer03Feedback"
-              required maxlength="64"
-              placeholder="Password" )
-          .invalid-feedback.my-2#validationServer03Feedback Requerd
-        .ui.form.mt-30.checkbox_sign
-          .inline.field
-            .ui.checkbox.mncheck
-              input.hidden(
-                type="checkbox"
-                tabindex="0"
-                id="remembr-signup"
-                )
-              label(for="remembr-signup") I’m in for emails with exciting discounts and personalized recommendations
-            button.login-btn( 
-              type="submit")
-              | Next
-          p.sgntrm146  By signing up, you agree to our
-            a(href="terms_of_use.html")   Terms of Use
-            |   and
-            a(href="terms_of_use.html")  Privacy Policy
-            |  .
-          p.mb-0.mt-30  Already have an account?
-            a(href="sign_in.html")  Log In
+	h2.title-h6.semi-bold  Welcome Back
+	//- p Log In to Your Edututs+ Account! 
+	form.ad-form
+		.field-wrapper.field-wrapper--no-message.mt-15
+			.text-field__content
+				input.text-field__input(
+					type='text'
+					placeholder='fullName'
+					name='fullName'  
+					maxlength=''
+					required 
+					) 
+				.invalid-feedback.my-2 required
+		.field-wrapper.field-wrapper--no-message.mt-15
+			.text-field__content
+				input.text-field__input(
+					type='email'
+					placeholder='Email Address'
+					name='emailAddress'  
+					maxlength=''
+					required 
+					) 
+				.invalid-feedback.my-2 required
+		.field-wrapper.field-wrapper--no-message.mt-15
+			.text-field__content
+				input.text-field__input(
+					type='Password'
+					placeholder='Password'
+					name='Password'  
+					maxlength=''
+					required
+					id="emailType" 
+					)  
+			.mt-30
+				.inline.field
+					.ui.checkbox.icon
+						input.hidden(
+							type="checkbox"
+							tabindex="0"
+							id="remember-signUp"
+							)
+						label(for="remember-signUp") I’m in for emails with exciting discounts and personalized recommendations
+				button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--center(type="submit")  Sign Up
+				p.title-2.terms-link  By signing up, you agree to our
+					a(href="terms_of_use.html")   Terms of Use
+					|   and
+					a(href="terms_of_use.html")  Privacy Policy
+					|  .
+				p.mb-0.mt-30  Already have an account?
+					a(href="sign_in.html")  Log In

@@ -1,6 +1,6 @@
 extends ../../../layouts/admin.pug
 block title
-  title Admin course details
+  title cards
 block sidebar
   include ../../../components/sidebar-content.pug
 
@@ -180,7 +180,7 @@ block content
           | we use
           code .ad-card--with-title .ad-card--centered
       .col-lg-3
-        .ad-card.ad-card--with-title.ad-card--centered 
+        .ad-card.ad-card--with-title.ad-card--centered
           .ad-card__title.mb-2
             h5.title-h5 Live Streaming
           .ad-card__content
@@ -200,21 +200,21 @@ block content
         h2.title-2.my-3 Card with title with centered components
         p.text-2.mb-1
           | we use
-          code .ad-card--with-title .ad-card--centered .ad-card--live-stream 
+          code .ad-card--with-title .ad-card--centered .ad-card--live-stream
       .col-lg-3
-        .ad-card.ad-card--with-title.ad-card--centered.ad-card--live-stream 
+        .ad-card.ad-card--with-title.ad-card--centered.ad-card--live-stream
           .ad-card__title.mb-2
-            h5.title-h6 Live Streaming
+            h5.title-h6.semi-bold Live Streaming
           .ad-card__content
             .user-image
               img(src="./images/sign.svg" alt="")
               i.uil.uil-check-circle
             .ad-card__body
               .ad-card__content-header
-                .user-data 
+                .user-data
                   p.text-3.gray Set up your channel and stream live to your students
                   .ad-card__btn
-                    button.list-item--btn-Enrole.my-2  Get Started 
+                    a(href="#").ad-btn.ad-btn--primary.ad-btn--rounded.my-2  Get Started
               .ad-card__content--details
                 p.text-2.gray Info : This feature only for 'Instructors'.
       //- .ad-card--with-title .ad-card--top-category
@@ -226,24 +226,24 @@ block content
       .col-lg-3
         .ad-card.ad-card--with-title.ad-card--top-category
           .ad-card__title.mb-2
-            h5.title-h6 Top Categories
-          .ad-card__content 
-            .ad-card__body 
+            h5.title-h6.semi-bold Top Categories
+          .ad-card__content
+            .ad-card__body
               .ad-card__content--details
-                ul.ad-card__list 
-                  li.ad-card__list-item 
-                    a.ad-card__item-link(href="#") 
+                ul.ad-card__list
+                  li.ad-card__list-item
+                    a.ad-card__item-link(href="#")
                       i.uil.uil-arrow
                       | Development
-                  li.ad-card__list-item 
+                  li.ad-card__list-item
                     a.ad-card__item-link(href="#")
                       i.uil.uil-graph-bar
                       | Business
-                  li.ad-card__list-item 
+                  li.ad-card__list-item
                     a.ad-card__item-link(href="#")
                       i.uil.uil-graph-bar
                       | IT and Software
-                  li.ad-card__list-item 
+                  li.ad-card__list-item
                     a.ad-card__item-link(href="#")
                       i.uil-ruler
                       | Design
@@ -252,17 +252,34 @@ block content
         h2.title-2.my-3 Card with title with centered components no img
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--with-btn .ad-card--no-bg
+          code .ad-card--centered .ad-card--no-bg
       .col-lg-3
-        .ad-card.ad-card--centered.ad-card--live-stream.ad-card--no-bg
-          .ad-card__content 
+        .ad-card.ad-card--centered.ad-card--no-bg
+          .ad-card__content
             .ad-card__body
               .ad-card__content-header
-                .user-data 
+                .user-data
                   h2.text-2 Become an Instructor
                   p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
                   .ad-card__btn
-                    button.list-item--btn-Enrole.my-2  Get Started  
+                    a(href="#").ad-btn.ad-btn--primary.ad-btn--rounded.my-2  Get Started
+      //- .ad-card--with-bg
+      .col-lg-12
+        h2.title-2.my-3 Card with title with centered components no img
+        p.text-2.mb-1
+          | we use
+          code .ad-card--centered .ad-card--bg
+      .col-lg-3
+        .ad-card.ad-card--bg
+          img(src="../../../images/get-img.jpg", alt="")
+          .ad-card__content
+            .ad-card__body
+              .ad-card__content-header
+                .user-data
+                  h2.text-2 Become an Instructor
+                  p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
+                  .ad-card__btn
+                    a(href="#").ad-btn.ad-btn--primary.ad-btn--rounded.my-2  Get Started
       //- .ad-card--live-section
       .col-lg-12
         h2.title-2.my-3 Card with centered components
@@ -271,14 +288,14 @@ block content
           code .ad-card--centered .ad-card--live-section
       .col-lg-3
         .ad-card.ad-card--centered.ad-card--live-section
-          .ad-card__content 
+          .ad-card__content
             .user-image
-              img(src="./images/sign.svg" alt="") 
+              img(src="./images/sign.svg" alt="")
             .ad-card__body
               .ad-card__content-header
                 .user-data
-                  a.text-2(href="#") Jose Portilla
-                  p.text-3.gray 
+                  a.text-3.semi-bold(href="#") Jose Portilla
+                  p.text-3.gray
                     span
                     | Live
       //- .ad-card--centered .ad-card--icon
@@ -287,15 +304,15 @@ block content
         p.text-2.mb-1
           | we use
           code .ad-card--centered .ad-card--icon
-      .col-lg-6 
+      .col-lg-6
         .ad-card.ad-card--centered.ad-card--icon
           .ad-card__content
             .user-image
-              i.uil.uil-user-check.ad-card--user-icon
+              i.uil.uil-history.ad-card--user-icon
             .ad-card__body
               .ad-card__content-header
                 .user-data
-                   p.text-2 100,000 online courses 
+                  p.title-h6.semi-bold 100,000 online courses
               .ad-card__content--details
                 p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
       //- ad-card testimonial
@@ -315,7 +332,7 @@ block content
             .ad-card__body
               .ad-card__content-header
                 .user-data
-                  a.text-2(href="#") Jose Portilla  
+                  h2.title-h6.semi-bold Jose Portilla
       //- .ad-card--centered
       .col-lg-12
         h2.title-2.my-3 Card with centered components
@@ -352,7 +369,7 @@ block content
             .ad-card__body
               .ad-card__content-header
                 .user-data
-                  a.title-h6(href="#") Jose Portilla
+                  a.text-1.semi-bold(href="#") Jose Portilla
                     i.uil.uil-check-circle
                   p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
                   ul.social-icon
@@ -371,9 +388,9 @@ block content
                   .details
                     span.total-students 615K Students
                     span.total-course 12 Courses
-                  a.text-2.mt-3(href="#") Go To Profile
+                  a.text-2.medium.mt-3(href="#") Go To Profile
                 //include ../../../components/list-dropdown.pug
-                //- p.text-1 lorem ipsum dolor sit amet 
+                //- p.text-1 lorem ipsum dolor sit amet
       //- ad-card--interactive
       .col-lg-12
         h2.title-2.my-3 Trusted answer
