@@ -11,7 +11,7 @@ input {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
-    display: block;
+    display: inline-block;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     color: #fff;
@@ -278,6 +278,7 @@ input {
       margin: auto;
       padding: 10px 60px;
       margin-top: 25px;
+      display: block;
     }
   }
 
