@@ -1,16 +1,16 @@
 // script reset page
 
 // let emailEl = document.querySelector('#emailtype');
-$('#emailtype').on('input', function (e) {
+$('#emailType').on('input', function (e) {
   let value = e.target.value;
 
   if (value.match(/^\d+$/)) {
-    $('#iconmassege').hide();
-    $('#keynumber').show();
+    $('#icon-message').hide();
+    $('#key-number').show();
     e.target.type = 'number';
   } else {
-    $('#iconmassege').show();
-    $('#keynumber').hide();
+    $('#icon-message').show();
+    $('#key-number').hide();
     e.target.type = 'email';
   }
 

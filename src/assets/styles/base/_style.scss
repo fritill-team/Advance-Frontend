@@ -6068,15 +6068,15 @@ a.rmv-btn i {
   text-align: left;
 }
 
-.ui.checkbox.mncheck .box,
-.ui.checkbox.mncheck label {
+.ui.checkbox.icon .box,
+.ui.checkbox.icon label {
   font-family: "Roboto", sans-serif !important;
   color: #333;
   line-height: 20px;
 }
 
-.ui.checkbox.mncheck input:checked ~ .box:after,
-.ui.checkbox.mncheck input:checked ~ label:after {
+.ui.checkbox.icon input:checked ~ .box:after,
+.ui.checkbox.icon input:checked ~ label:after {
   opacity: 1;
   color: #ed2a26 !important;
   font-size: 10px !important;
@@ -6084,8 +6084,8 @@ a.rmv-btn i {
   margin-top: 0;
 }
 
-.ui.checkbox.mncheck .box:before,
-.ui.checkbox.mncheck label:before {
+.ui.checkbox.icon .box:before,
+.ui.checkbox.icon label:before {
   border-radius: 100%;
   width: 18px !important;
   height: 18px !important;

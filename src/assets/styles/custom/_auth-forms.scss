@@ -135,7 +135,7 @@
         font-family: "Roboto", sans-serif;
       }
       &.text-field--icon {
-        padding: 0 4em !important;
+        padding-left:  4em !important;
       }
 
       &:focus {
@@ -271,7 +271,7 @@
     text-align: left;
   }
   // .mncheck
-  .mncheck {
+  .icon {
     label {
       &::before {
         border-radius: unset !important;

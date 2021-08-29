@@ -1,9 +1,8 @@
-
 // index
 .section-index {
   float: left;
   width: 100%;
-  &.section-index--pt{
+  &.section-index--pt {
     padding-top: 20px;
   }
 }
@@ -16,39 +15,6 @@
   margin: auto !important;
   padding: 50px 0;
   z-index: 1;
-}
-
-.auth-form-wrapper {
-  background: #f7f7f7 !important;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  height: 100%;
-  &::before {
-    content: "";
-    background: url("/assets/images/sign.svg") no-repeat center;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    pointer-events: none;
-    background-size: cover;
-    opacity: 0.04;
-    z-index: -1;
-  }
-}
-.auth-form-wrapper:before {
-  content: "";
-  background: url("/assets/images/sign.svg") no-repeat center;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  pointer-events: none;
-  background-size: cover;
-  opacity: 0.04;
 }
 
 .auth-form__content {
@@ -68,15 +34,15 @@
   text-align: left;
 }
 
-.ui.checkbox.mncheck .box,
-.ui.checkbox.mncheck label {
+.ui.checkbox.icon .box,
+.ui.checkbox.icon label {
   font-family: "Roboto", sans-serif !important;
   color: #333;
   line-height: 20px;
 }
 
-.ui.checkbox.mncheck input:checked ~ .box:after,
-.ui.checkbox.mncheck input:checked ~ label:after {
+.ui.checkbox.icon input:checked ~ .box:after,
+.ui.checkbox.icon input:checked ~ label:after {
   opacity: 1;
   color: #ed2a26 !important;
   font-size: 10px !important;
@@ -84,32 +50,32 @@
   margin-top: 0;
 }
 
-.ui.checkbox.mncheck .box:before,
-.ui.checkbox.mncheck label:before {
+.ui.checkbox.icon .box:before,
+.ui.checkbox.icon label:before {
   border-radius: 100%;
   width: 18px !important;
   height: 18px !important;
   margin-top: 1px;
 }
 
-.login-btn {
-  font-size: 14px;
-  margin-top: 30px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  background: #ed2a26;
-  border-radius: 20px;
-  text-align: center;
-  border: 0;
-  width: 100%;
-  height: 40px;
-}
+// .login-btn {
+//   font-size: 14px;
+//   margin-top: 30px;
+//   font-weight: 400;
+//   font-family: "Roboto", sans-serif;
+//   color: #fff;
+//   background: #ed2a26;
+//   border-radius: 20px;
+//   text-align: center;
+//   border: 0;
+//   width: 100%;
+//   height: 40px;
+// }
 
-.login-btn:hover {
-  color: #fff;
-  background: #333;
-}
+// .login-btn:hover {
+//   color: #fff;
+//   background: #333;
+// }
 
 .auth-form__content h2 {
   font-size: 24px;
@@ -121,27 +87,16 @@
   margin-bottom: 40px;
 }
 
-.auth-form__content p {
-  font-size: 14px;
-  margin-bottom: 47px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  color: #686f7a;
-  text-align: center;
-  line-height: 26px;
-}
-
 .sgntrm145 {
   padding: 10px 0 10px;
   margin-bottom: 0 !important;
 }
-.sgntrm146 {
-  padding: 47px 0 30px;
+.terms-link {
+  padding: 30px 0 30px;
   margin-bottom: 0 !important;
   margin-top: 0px;
-  border-bottom: 1px solid #efefef;
 }
-.sgntrm146 a {
+.terms-link a {
   color: #ed2a26;
 }
 .sign_footer {
@@ -171,13 +126,23 @@
   text-decoration: underline !important;
 }
 
-.hvsng145 a {
-  color: #ed2a26;
-}
+// .hvsng145 a {
+//   color: #ed2a26;
+// }
 
-.hvsng145 a:hover {
-  color: #333 !important;
-  text-decoration: underline !important;
+// .hvsng145 a:hover {
+//   color: #333 !important;
+//   text-decoration: underline !important;
+// }
+
+.auth-form__content p {
+  // font-size: 14px;
+  // margin-bottom: 47px;
+  // font-weight: 400;
+  // font-family: "Roboto", sans-serif;
+  // color: #686f7a;
+  text-align: center;
+  // line-height: 26px;
 }
 
 .ui.swdh95 {
@@ -194,6 +159,32 @@
   padding-left: 14px;
   color: #aaaaaa;
   appearance: none;
+}
+.field-wrapper {
+  .key-number {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+  }
+  .icon-message {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+    font-size: 18px;
+    bottom: -11px;
+  }
 }
 
 .ui[class*="left icon"].swdh95.input > input {
@@ -604,15 +595,15 @@
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
 }
 
-.owl-theme .owl-nav  {
+.owl-theme .owl-nav {
   margin-top: 0px !important;
- }
+}
 
- .owl-carousel .owl-dots {
+.owl-carousel .owl-dots {
   display: none;
- }
- //////// nav tabs
- .course_tabs {
+}
+//////// nav tabs
+.course_tabs {
   float: left;
   width: 100%;
   margin-top: 10px;
@@ -653,7 +644,7 @@
   padding: 0.5rem 1.5rem !important;
 }
 // custom styles
-.wrapper{
+.wrapper {
   padding: 60px 0 0;
 }
 .select-menu {
@@ -928,15 +919,21 @@
 // login style
 
 input[type="tel"] {
-  padding-right: 6px;
-  padding-left: 52px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-left: 0;
-  width: 100% !important;
+  // padding-right: 6px;
+  // padding-left: 52px;
+  // padding-top: 15px;
+  // padding-bottom: 15px;
+  // margin-left: 0;
+  // width: 100% !important;
+  border: 0;
 }
 .iti--allow-dropdown {
   width: 100% !important;
+  border-radius: 10px;
+  padding: 12px 1em;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e5e5e5 !important;
 }
 
 .alert {
