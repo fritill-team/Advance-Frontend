@@ -65,7 +65,7 @@
         position: absolute;
         top: 5px;
         left: 5px;
-        background: rgba(#000, 0.1);
+        background: rgba($darkBlack2, 0.1);
         color: #fff;
         padding: 2px 4px;
         border-radius: 15px;
@@ -88,7 +88,7 @@
     &:hover .play-list__check {
       display: block;
     }
-    &:hover .text-2 {
+    &:hover .text-3 {
       color: #48a360 !important;
     }
   }

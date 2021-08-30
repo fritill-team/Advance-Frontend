@@ -14,14 +14,14 @@
     display: block;
     padding: 0;
     border: 0;
-    background: #fff;
+    background: $white;
     color: #737373;
     font-size: 120%;
     margin: 0;
     cursor: pointer;
     float: left;
     &:hover {
-      color: #ed2a26;
+      color: $primaryLight;
     }
   }
 }
@@ -30,7 +30,7 @@
   left: -240px;
   top: 60px;
   bottom: 0;
-  background: #fff;
+  background: $white;
   overflow: hidden;
   width: 240px;
   z-index: 995;
@@ -83,12 +83,12 @@
             }
             &:hover {
               background: #ffecec;
-              color: #ed2a26 !important;
+              color: $primaryLight !important;
             }
           }
           .active {
             background: #ffecec;
-            color: #ed2a26;
+            color: $primaryLight;
           }
         }
         .menu--item__has_sub_menu {
@@ -124,7 +124,7 @@
                 color: #333;
                 text-decoration: none;
                 &:hover {
-                  color: #ed2a26 !important;
+                  color: $primaryLight !important;
                   background: #ffecec;
                 }
               }
@@ -186,7 +186,7 @@
             padding: 0 3px;
             color: #333;
             &:hover {
-              color: #ed2a26 !important;
+              color: $primaryLight !important;
             }
           }
         }
@@ -224,8 +224,8 @@
     height: 60px;
     padding: 0;
     border: 0;
-    background: #ed2a26;
-    color: #fff;
+    background: $primaryLight;
+    color: $white;
     font-size: 30px;
     margin: 0;
     cursor: pointer;
@@ -245,7 +245,7 @@
       line-height: 40px;
     }
     &:hover {
-      color: #fff;
+      color: $white;
       background: #af1f24;
     }
   }
@@ -315,14 +315,14 @@
       display: block;
       padding: 0;
       border: 0;
-      background: #fff;
+      background: $white;
       color: #737373;
       font-size: 120%;
       margin: 0;
       cursor: pointer;
       float: left;
       &:hover {
-        color: #ed2a26;
+        color: $primaryLight;
       }
     }
   }
