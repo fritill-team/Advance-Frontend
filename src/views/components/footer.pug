@@ -4,31 +4,31 @@ footer.footer
   .container-fluid
     .row
       .col-lg-3.col-md-3.col-sm-6
-        .footer__footer-top-part1
+        .footer__footer-content 
           //- a(href='about.pug') About
-          a.footer-top-part1__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
-          a.footer-top-part1__link(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
+          a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
+          a.footer-content__link(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
           //- a(href='our_blog.html') Blog
-          a.footer-top-part1__link(href='career.html') Careers
-          a.footer-top-part1__link(href='press.html') Press
+          a.footer-content__link(href='career.html') Careers
+          a.footer-content__link(href='press.html') Press
       .col-lg-3.col-md-3.col-sm-6
-        .footer__footer-top-part1
-          a.footer-top-part1__link(href='help.html') Help
-          a.footer-top-part1__link(href='coming_soon.html') Advertise
-          a.footer-top-part1__link(href='coming_soon.html') Developers
-          a.footer-top-part1__link(href='contact_us.html') Contact Us
+        .footer__footer-content
+          a.footer-content__link(href='help.html') Help
+          a.footer-content__link(href='coming_soon.html') Advertise
+          a.footer-content__link(href='coming_soon.html') Developers
+          a.footer-content__link(href='contact_us.html') Contact Us
       .col-lg-3.col-md-3.col-sm-6
-        .footer__footer-top-part1
-          a.footer-top-part1__link(href='terms_of_use.html') Copyright Policy
-          a.footer-top-part1__link(href='terms_of_use.html') Terms
-          a.footer-top-part1__link(href='terms_of_use.html') Privacy Policy
-          a.footer-top-part1__link(href='sitemap.html') Sitemap
+        .footer__footer-content
+          a.footer-content__link(href='terms_of_use.html') Copyright Policy
+          a.footer-content__link(href='terms_of_use.html') Terms
+          a.footer-content__link(href='terms_of_use.html') Privacy Policy
+          a.footer-content__link(href='sitemap.html') Sitemap
       .col-lg-3.col-md-3.col-sm-6
-        .footer__footer-top-part2
-          a.footer-top-part2__link(href='#') Teach on Cursus
-          .footer-top-part2__btn-language
+        .footer__footer-buttons
+          a.footer-buttons__link(href='terms_of_use.html') Teach on Cursus
+          .footer-buttons__btn-language
             #languages.ui.language.bottom.right.pointing.dropdown.floating(data-content='Select Language')
-              a(href='#')
+              a.btn-language__link(href='#')
                 i.uil.uil-globe.lft
                 | Language
                 i.uil.uil-angle-down.rgt
@@ -107,10 +107,10 @@ footer.footer
                     span.description rom&acirc;ne&#x219;te
                     | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Romanian
       .col-lg-12
-        .footer-bottom
+        .footer-line
           .row
             .col-md-6.col-sm-6
-              ul.footer-bottom__copy-right
+              ul.copy-right
                 li.copy-right__list
                   a.list__link(href='index.html')
                     .footer-logo
@@ -121,7 +121,7 @@ footer.footer
                     strong Cursus
                     | . All Rights Reserved.
             .col-md-6.col-sm-6
-              .footer-bottom__social-links
+              .social-links
                 a.social-links__link(href='#')
                   i.fab.fa-facebook-f
                 a.social-links__link(href='#')

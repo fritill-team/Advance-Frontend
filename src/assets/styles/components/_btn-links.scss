@@ -6,7 +6,7 @@ a,button,input{
 		margin: 5px;
 		border: 2px solid;
 		border-radius: 5px;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		font-size: 14px;
 		font-weight: 500;
 		display:inline-block;
@@ -21,25 +21,32 @@ a,button,input{
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;
+			border-color: $light-gray;
 		}	
 		&.ad-btn--primary{
 			background-color: $primary;
+			border-color: $primary;
 		}
 		&.ad-btn--secondary{
 			background-color: $black;
+			border-color: $black;
 		}
 		&.ad-btn--success{
 			background-color: $gray;
+			border-color: $gray;
 		}
 		&.ad-btn--info{
 			background-color: $info;
+			border-color: $info;
 		}
 		&.ad-btn--warning{
 			background-color: $warning;
+			border-color: $warning;
 		}
 		&.ad-btn--danger{
 			background-color: $gold;
 			color: $light-gray;
+			border-color: $light-gray;
 		}
 	
 		&.ad-btn--rounded{
@@ -72,27 +79,21 @@ a,button,input{
 		&.ad-btn--outlined{
 			background-color: transparent;
 			&.ad-btn--default{
-				border-color: $light-gray;
 				color:$light-gray ;
 			}
 			&.ad-btn--primary{
-				border-color: $primary;
 				color: $primary;
 			}
 			&.ad-btn--secondary{
-				border-color: $black;
 				color: $black;
 			}
 			&.ad-btn--success{
-				border-color: $gray;
 				color: $gray;
 			}
 			&.ad-btn--info{
-				border-color: $info;
 				color: $info;
 			}
 			&.ad-btn--warning{
-				border-color: $warning;
 				color: $warning;
 			}
 			&.ad-btn--danger{
@@ -191,6 +192,9 @@ a,button,input{
 			&.ad-btn--danger{
 				background-color: $gold;
 				color: $light-gray;
+				svg, i{
+					color: $light-gray;
+				}
 			} 
 		}
 		&.ad-btn--with-icon{
@@ -220,6 +224,9 @@ a,button,input{
 			&.ad-btn--danger{
 				background-color: $gold;
 				color: $light-gray;
+				svg, i{
+					color: $light-gray;
+				}
 			} 
 		}
 		&.ad-btn--disabled{
@@ -280,9 +287,9 @@ a,button,input{
 a.ad-btn {
   line-height:18px ;
   padding-top: 12px;
-	&:link, &:visited {
-		color: red;
-	}
+	&.ad-btn--text{
+	  text-decoration:none ;
+  }
 	&:active {
 		opacity: 1.8;	
 	}
