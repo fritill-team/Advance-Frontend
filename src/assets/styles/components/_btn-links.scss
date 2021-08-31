@@ -1,287 +1,5 @@
 /* src/assets/styles/components/_button.scss  */
 
-a,
-button,
-input {
-  &.ad-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    border: 2px solid;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
-    display: inline-block;
-    font-family: $quicksand;
-    cursor: pointer;
-    color: #fff;
-    text-align: center;
-    line-height: 14px;
-    &:hover {
-      opacity: 0.8;
-    }
-    &.ad-btn--default {
-      background-color: $light-gray;
-    }
-    &.ad-btn--primary {
-      background-color: $primary;
-    }
-    &.ad-btn--secondary {
-      background-color: $black;
-    }
-    &.ad-btn--success {
-      background-color: $gray;
-    }
-    &.ad-btn--info {
-      background-color: $info;
-    }
-    &.ad-btn--warning {
-      background-color: $warning;
-    }
-    &.ad-btn--danger {
-      background-color: $gold;
-      color: $light-gray;
-    }
-
-    &.ad-btn--rounded {
-      color: #fff;
-      border-radius: 20px;
-      &.ad-btn--default {
-        background-color: $light-gray;
-      }
-      &.ad-btn--primary {
-        background-color: $primary;
-      }
-      &.ad-btn--secondary {
-        background-color: $black;
-      }
-      &.ad-btn--success {
-        background-color: $gray;
-      }
-      &.ad-btn--info {
-        background-color: $info;
-      }
-      &.ad-btn--warning {
-        background-color: $warning;
-      }
-      &.ad-btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-      }
-    }
-
-    &.ad-btn--outlined {
-      background-color: transparent;
-      &.ad-btn--default {
-        border-color: $light-gray;
-        color: $light-gray;
-      }
-      &.ad-btn--primary {
-        border-color: $primary;
-        color: $primary;
-      }
-      &.ad-btn--secondary {
-        border-color: $black;
-        color: $black;
-      }
-      &.ad-btn--success {
-        border-color: $gray;
-        color: $gray;
-      }
-      &.ad-btn--info {
-        border-color: $info;
-        color: $info;
-      }
-      &.ad-btn--warning {
-        border-color: $warning;
-        color: $warning;
-      }
-      &.ad-btn--danger {
-        border-color: $gold;
-        color: $gold;
-      }
-    }
-    &.ad-btn--text {
-      border: none;
-      background-color: transparent;
-      text-decoration: underline;
-      &.ad-btn--default {
-        color: $light-gray;
-      }
-      &.ad-btn--primary {
-        color: $primary;
-      }
-      &.ad-btn--secondary {
-        color: $black;
-      }
-      &.ad-btn--success {
-        color: $gray;
-      }
-      &.ad-btn--info {
-        color: $info;
-      }
-      &.ad-btn--warning {
-        color: $warning;
-      }
-      &.ad-btn--danger {
-        color: $gold;
-      }
-    }
-    &:hover {
-      &.ad-btn {
-        color: #fff;
-      }
-      &.ad-btn--default {
-        background-color: $light-gray;
-      }
-      &.ad-btn--primary {
-        background-color: $primary;
-      }
-      &.ad-btn--secondary {
-        background-color: $black;
-      }
-      &.ad-btn--success {
-        background-color: $gray;
-      }
-      &.ad-btn--info {
-        background-color: $info;
-      }
-      &.ad-btn--warning {
-        background-color: $warning;
-      }
-      &.ad-btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-      }
-    }
-    &.ad-btn--icon {
-      width: 35px;
-      height: 35px;
-      border-radius: 100%;
-      color: #fff;
-      padding: 8px 0;
-      text-align: center;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      svg,
-      i {
-        color: #fff;
-        display: inline-block;
-      }
-      &.ad-btn--default {
-        background-color: $light-gray;
-      }
-      &.ad-btn--primary {
-        background-color: $primary;
-      }
-      &.ad-btn--secondary {
-        background-color: $black;
-      }
-      &.ad-btn--success {
-        background-color: $gray;
-      }
-      &.ad-btn--info {
-        background-color: $info;
-      }
-      &.ad-btn--warning {
-        background-color: $warning;
-      }
-      &.ad-btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-      }
-    }
-    &.ad-btn--with-icon {
-      svg,
-      i {
-        color: #fff;
-        display: inline-block;
-        margin-right: 5px;
-      }
-      &.ad-btn--default {
-        background-color: $light-gray;
-      }
-      &.ad-btn--primary {
-        background-color: $primary;
-      }
-      &.ad-btn--secondary {
-        background-color: $black;
-      }
-      &.ad-btn--success {
-        background-color: $gray;
-      }
-      &.ad-btn--info {
-        background-color: $info;
-      }
-      &.ad-btn--warning {
-        background-color: $warning;
-      }
-      &.ad-btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-      }
-    }
-    &.ad-btn--disabled {
-      pointer-events: none;
-      opacity: 0.6;
-    }
-    &.ad-btn--lg {
-      padding: 15px 25px;
-      margin: 5px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    &.ad-btn--sm {
-      padding: 9px 15px;
-      margin: 5px;
-      font-size: 12px;
-      font-weight: 300;
-    }
-    &.ad-btn--ripple {
-      box-shadow: 0 0 4px rgb(104, 102, 102);
-      outline: none;
-      background-position: center;
-      transition: background 0.3s;
-      &:hover {
-        background-image: radial-gradient(circle, transparent 1%, #999 1%);
-        background-position: center;
-        background-size: 15000%;
-      }
-      &:active {
-        transition: background 0s;
-        background-size: 100%;
-        &.ad-btn--default {
-          background-color: $light-gray;
-        }
-        &.ad-btn--primary {
-          background-color: $primary;
-        }
-        &.ad-btn--secondary {
-          background-color: $black;
-        }
-        &.ad-btn--success {
-          background-color: $gray;
-        }
-        &.ad-btn--info {
-          background-color: $info;
-        }
-        &.ad-btn--warning {
-          background-color: $warning;
-        }
-        &.ad-btn--danger {
-          background-color: $gold;
-          color: $light-gray;
-        }
-      }
-    }
-    &.ad-btn--center {
-      margin: auto;
-      padding: 10px 60px;
-      margin-top: 25px;
-      display: block;
-    }
-  }
-
 a,button,input{
 	&.ad-btn{
 		padding: 10px 20px;
@@ -292,7 +10,7 @@ a,button,input{
 		font-size: 14px;
 		font-weight: 500;
 		display:inline-block;
-		font-family: $quicksand;
+		font-family: "Roboto", sans-serif;
 		cursor: pointer;
 		color: #fff;
 		text-align: center;
@@ -303,6 +21,7 @@ a,button,input{
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;
+			border-color: $light-gray;
 		}	
 		&.ad-btn--primary{
 			background-color: $primary;
@@ -566,12 +285,11 @@ a,button,input{
 	}
 }
 a.ad-btn {
-  line-height: 18px;
+  line-height:18px ;
   padding-top: 12px;
 	&.ad-btn--text{
 	  text-decoration:none ;
   }
-
 	&:active {
 		opacity: 1.8;	
 	}
