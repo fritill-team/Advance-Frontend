@@ -328,7 +328,7 @@ html[dir="rtl"] {
               .menu__night-mode {
                 margin-left: 10px;
                 .night-mode--btn-mode {
-                  .btn-mode__icone {
+                  .btn-mode__icon {
                     margin-left: 10px;
                   }
                   .btn-mode--switch-mode {
@@ -386,13 +386,13 @@ html[dir="rtl"] {
         float: right;
         .header__header-title {
           .header-title__title {
-            .title__icone {
+            .title__icon {
               margin-left: 5px;
             }
             .title__title-text {
               padding-right: 8px;
               padding-left: 10px;
-              color: #333;
+              color: $black;
               font-weight: 500;
               font-family: $quicksand;
             }
@@ -409,8 +409,8 @@ html[dir="rtl"] {
       }
       .course-list__list-content {
         float: right;
-        border-right: 1px solid #efefef;
-        border-left: 1px solid #efefef;
+        border-right: 1px solid $white;
+        border-left: 1px solid $white;
         .left-content__top-title {
           margin-right: 10px;
         }
@@ -718,7 +718,7 @@ html[dir="rtl"] {
       text-align: right;
       .review-video__review {
         padding: 3px 10px 3px 15px;
-        .review__icone {
+        .review__icon {
           margin-left: 2px;
         }
       }

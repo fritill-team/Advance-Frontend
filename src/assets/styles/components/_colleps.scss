@@ -21,11 +21,11 @@
         font-size: 14px;
         font-family: $quicksand;
         font-weight: 400;
-        color: #333;
+        color: $black;
         text-decoration: none;
         padding-left: 0 !important;
       }
-      .link__icone {
+      .link__icon {
         font-size: 20px !important;
         margin: 0;
       }
@@ -36,11 +36,11 @@
     }
     &:hover {
       .list--link {
-        color: #ed2a26;
+        color: $primary;
         transition: none;
       }
-      background-color: #ffecec;
-      color: #ed2a26;
+      background-color: $light-white;
+      color: $primary;
     }
   }
 }

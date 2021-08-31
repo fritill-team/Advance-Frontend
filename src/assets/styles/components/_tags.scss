@@ -6,7 +6,7 @@
     white-space: nowrap;
     text-decoration: none;
     text-align: center;
-    color: #333;
+    color: $darkBlack;
     background: transparent;
     display: inline-block;
     border-radius: 20px;
@@ -22,11 +22,11 @@
       height: 1px;
       left: 0;
       bottom: 3px;
-      background-color: #333;
+      background-color: $darkBlack;
       transition: 0.3s ease all;
     }
     &:hover {
-      color: #333;
+      color: $darkBlack;
       &::before {
         width: 100%;
       }

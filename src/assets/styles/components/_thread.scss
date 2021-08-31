@@ -16,9 +16,9 @@
     padding: 10px 15px;
     border: 0;
     border-radius: 20px;
-    color: #fff;
+    color: $white;
     font-family: $quicksand;
-    background: #ed2a26;
+    background: $primaryLight;
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
@@ -29,7 +29,7 @@
   height: 40px;
   font-size: 14px;
   font-family: $quicksand;
-  border: 1px solid #efefef;
+  border: 1px solid $light-white;
   width: 100%;
   overflow: hidden;
   word-wrap: break-word;

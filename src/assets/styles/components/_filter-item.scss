@@ -1,31 +1,31 @@
-.filter-item{
+.filter-item {
   width: 350px;
   float: left;
   margin-bottom: 30px;
   // .panel-group
   .filter-item__filter-group {
     float: left;
-	  margin-top: 20px;
+    margin-top: 20px;
     // .panel-default
-    .filter-group__filter-list{
+    .filter-group__filter-list {
       float: left;
       width: 100%;
-      border-top: 1px solid #efefef;
+      border-top: 1px solid $light-white;
       &:first-of-type {
         border-top: 0;
       }
-      .filter-list__filter-heading{
+      .filter-list__filter-heading {
         // .panel-title10
-        .filter-heading__filter-title{
-          a{
+        .filter-heading__filter-title {
+          a {
             font-size: 16px;
             font-weight: 500;
-            color: #333;
+            color: $darkBlack;
             font-family: $quicksand;
             padding: 15px 0 18px;
             display: block;
             line-height: 26px;
-            &::before{
+            &::before {
               float: right !important;
               font-family: $quicksand;
               content: "\-";
@@ -34,28 +34,28 @@
               font-size: 18px;
               padding-top: 2px;
             }
-            &.collapsed{
-              &::before{
+            &.collapsed {
+              &::before {
                 float: right !important;
                 font-family: $quicksand;
-                content:"\+";
+                content: "\+";
                 padding-right: 0px;
                 margin-left: 200px;
                 font-size: 18px;
                 padding-top: 2px;
                 &:hover :active :focus {
-                  text-decoration:none;
+                  text-decoration: none;
                 }
               }
             }
           }
         }
-        //panel-body 
-        .filter-heading__filter-body{
+        //panel-body
+        .filter-heading__filter-body {
           font-size: 14px;
           font-weight: 400;
           font-family: $quicksand;
-          color: #686f7a;
+          color: $darkGray;
           line-height: 26px;
           padding-bottom: 20px;
           text-align: left;
@@ -64,5 +64,3 @@
     }
   }
 }
-
-

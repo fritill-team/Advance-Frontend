@@ -15,15 +15,15 @@
   align-items: center;
   .result__title {
     font-size: 18px;
-    color: #333;
+    color: $darkBlack;
     font-weight: 500;
     font-family: $quicksand;
     text-align: left;
     float: left;
   }
   &.filter--white-bg {
-    border-bottom: 1px solid #e5e5e5;
-    background-color: #fff;
+    border-bottom: 1px solid $light-white;
+    background-color: $white;
   }
 }
 
@@ -31,7 +31,7 @@
   float: right;
   font-size: 14px;
   font-family: $quicksand;
-  color: #333;
+  color: $darkBlack;
   font-weight: 400;
   .selector--dropdown {
     cursor: pointer;
@@ -63,7 +63,7 @@
   min-width: max-content;
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: $white;
   font-size: 1em;
   text-shadow: none;
   text-align: left;
@@ -108,7 +108,7 @@
     border-top: 0;
   }
   &.filter-panel--white-bg {
-    background-color: #fff;
+    background-color: $white;
   }
 }
 .panel__header {
@@ -117,7 +117,7 @@
     .panel--collapsed {
       font-size: 16px;
       font-weight: 500;
-      color: #333;
+      color: $darkBlack;
       font-family: $quicksand;
       display: block;
       line-height: 26px;
@@ -150,7 +150,7 @@
     font-size: 14px;
     font-weight: 400;
     font-family: $quicksand;
-    color: #686f7a;
+    color: $darkGray;
     line-height: 26px;
     padding-bottom: 20px;
     text-align: left;
@@ -196,7 +196,7 @@
   cursor: pointer;
   user-select: none;
   font-family: $quicksand !important;
-  color: #333;
+  color: $darkBlack;
   line-height: 20px;
   &::before {
     border-radius: 100%;
@@ -211,20 +211,20 @@
   }
   &::after {
     opacity: 1;
-    color: #ed2a26 !important;
+    color: $primaryLight !important;
     font-size: 10px !important;
     border-radius: 100%;
     margin-top: 0;
   }
   .collapse__counter {
-    color: #686f7a;
+    color: $darkGray;
     margin-left: 5px;
   }
 }
 .filter-rating__star {
   font-size: 18px;
   margin: 0 -3px;
-  color: #fdcc0d;
+  color: $warning;
 }
 .filter__button-wrapper {
   position: fixed;
@@ -232,9 +232,9 @@
   z-index: 999999;
   display: none;
   .filter__btn {
-    color: #000;
-    background-color: #f4f4f4;
-    border-color: #f4f4f4;
+    color: $darkBlack2;
+    background-color: $light-white;
+    border-color: $light-white;
     display: block;
     margin-left: auto;
   }
@@ -249,7 +249,7 @@
   }
   .filter {
     position: absolute;
-    background-color: #fff;
+    background-color: $white;
     width: 80vw;
     z-index: 10000;
     transform: translate(-100%, -164px);

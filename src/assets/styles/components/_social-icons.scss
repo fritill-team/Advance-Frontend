@@ -15,27 +15,27 @@
   border-radius: 100%;
   text-align: center;
   padding: 9px 0;
-  color: #fff;
+  color: $white;
   transition: all 0.3s ease;
   &.social-icon--fa-bg {
-    background: #3b5998;
+    background: $facebook;
   }
   &.social-icon--tw-bg {
-    background: #1da1f2;
+    background: $twitter;
   }
   &.social-icon--li-bg {
-    background: #8d6cab;
+    background: $linkedIn;
   }
   &.social-icon--yu-bg {
-    background: red;
+    background: $youtube;
   }
   &.social-icon--go-bg {
-    background: #dd4b39;
+    background: $google;
   }
   &.social-icon--ml {
     margin: 5px;
   }
   &:hover {
-    color: #fff;
+    color: $white;
   }
 }

@@ -27,7 +27,7 @@
   margin-right: 7px;
 }
 @mixin full-star-before {
-  color: #f2b01e;
+  color: $yellow;
   content: "\f005";
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -35,7 +35,7 @@
   left: 0;
 }
 @mixin hulf-star-before {
-  color: #f2b01e;
+  color: $yellow;
   content: "\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -75,7 +75,7 @@
   font-family: $quicksand;
   text-align: left;
   margin-bottom: 20px;
-  color: #333;
+  color: $darkBlack;
 }
 .rating__progress {
   flex-basis: 50%;
@@ -84,16 +84,16 @@
   display: flex;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: #e9ecef;
+  background-color: $light-white;
   border-radius: 0.25rem;
   .progress--progress-bar {
-    background-color: #ed2a26 !important;
+    background-color: $primaryLight !important;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
+    color: $white;
     text-align: center;
     white-space: nowrap;
-    background-color: #0d6efd;
+    background-color: $blue;
     transition: width 0.6s ease;
   }
   &.progress--height {
@@ -114,8 +114,8 @@
   width: 100%;
   font-size: 16px;
   justify-items: center;
-  background: #f7f7f7;
-  border: 1px solid #efefef;
+  background: $light-white;
+  border: 1px solid $light-white;
   padding: 10px 20px;
   border-radius: 20px;
   .total-rating__number {
@@ -124,7 +124,7 @@
     font-family: $quicksand;
     text-align: left;
     margin-bottom: 0;
-    color: #333;
+    color: $darkBlack;
     margin-right: 10px;
     line-height: 22px;
   }
@@ -161,13 +161,13 @@
     font-family: $quicksand;
     text-align: left;
     margin-bottom: 0;
-    color: #333;
+    color: $darkBlack;
     margin-left: 10px;
     line-height: 22px;
   }
 }
 .rating__rating-box {
-  color: #dedfe0;
+  color: $light-white;
   display: flex;
   flex-basis: 30%;
   .rating-box__rating-star {
@@ -199,7 +199,7 @@
   font-family: $quicksand;
   text-align: left;
   margin-bottom: 0;
-  color: #333;
+  color: $darkBlack;
   margin-left: 10px;
   line-height: 22px;
 }
@@ -216,7 +216,7 @@
       font-family: $quicksand;
       text-align: left;
       margin-bottom: 0;
-      color: #333;
+      color: $darkBlack;
       float: left;
     }
     .header-content__search {
@@ -224,7 +224,7 @@
       width: 180px;
       position: relative;
       .search__input {
-        color: #333 !important;
+        color: $darkBlack !important;
         height: 30px;
         font-size: 12px;
         font-weight: 400;
@@ -232,7 +232,7 @@
         padding-left: 15px;
         padding-right: 40px;
         width: 100%;
-        border: 1px solid #efefef;
+        border: 1px solid $light-white;
         border-radius: 20px;
       }
       .search__btn {
@@ -243,15 +243,15 @@
         border: 0;
         height: 26px;
         width: 26px;
-        background: #ed2a26;
-        color: #fff;
+        background: $primaryLight;
+        color: $white;
         font-size: 14px;
       }
     }
   }
 }
 .item__rating-box {
-  color: #dedfe0;
+  color: $white;
   display: flex;
   flex-basis: 30%;
   .rating-box__rating-star {
@@ -284,7 +284,7 @@
   text-align: left;
   font-weight: 400;
   font-family: $quicksand;
-  color: #686f7a;
+  color: $darkGray;
 }
 .reviews {
   float: left;
@@ -294,9 +294,9 @@
   .reviews__all-reviews {
     float: left;
     width: 100%;
-    background: #fff;
+    background: $white;
     padding: 20px 30px 30px;
-    border: 1px solid #efefef;
+    border: 1px solid $light-white;
     border-radius: 10px;
     .all-reviews__details-rate {
       .details-rate__rating {
@@ -312,11 +312,11 @@
   .review__all-reviews {
     float: left;
     width: 100%;
-    background: #fff;
+    background: $white;
     border-radius: 10px;
     .all-reviews__item {
       padding: 20px;
-      border-bottom: 1px solid #efefef;
+      border-bottom: 1px solid $light-white;
       .item__helpful {
         display: flex;
         align-items: baseline;
@@ -324,7 +324,7 @@
           font-size: 14px;
           font-weight: 400;
           font-family: $quicksand;
-          color: #333;
+          color: $darkBlack;
           line-height: 24px;
           margin-right: 10px;
         }
@@ -341,16 +341,16 @@
             .item__radio-label {
               font-weight: 400;
               font-family: $quicksand;
-              color: #333;
+              color: $darkBlack;
               font-size: 14px;
               line-height: 12px;
               margin-bottom: 0;
               cursor: pointer;
               &::before {
                 content: "";
-                background: #f7f7f7;
+                background: $light-white;
                 border-radius: 100%;
-                border: 1px solid #b4b4b4;
+                border: 1px solid $light-gray;
                 display: inline-block;
                 width: 1em;
                 height: 1em;
@@ -364,8 +364,8 @@
               }
             }
             input[type="radio"]:checked + .item__radio-label:before {
-              background-color: #ed2a26;
-              box-shadow: inset 0 0 0 2px #f4f4f4;
+              background-color: $primaryLight;
+              box-shadow: inset 0 0 0 2px $light-white;
             }
           }
         }
@@ -375,7 +375,7 @@
           margin-left: 5px;
           font-weight: 400;
           font-family: $quicksand;
-          color: #333;
+          color: $darkBlack;
         }
       }
     }
@@ -383,14 +383,14 @@
 }
 .all-reviews__review-item {
   padding: 20px;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid $light-white;
   .review-item__more-reviews {
     display: block;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     font-family: $quicksand;
-    color: #333;
+    color: $darkBlack;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
