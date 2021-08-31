@@ -1,51 +1,41 @@
 //- Master layout
 
 doctype html
+head
+  //- Stylesheets
+  link(href='../assets/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
+  link(href='../assets/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
+  link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+  link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+
+  link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
+  link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+  link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+
+  meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+
+  //- Title
+  block title
+    title Your project!
+
+  block style
+
 
 html(lang='en' dir="ltr")
-	head
-		//- Stylesheets
-		//- link(href='../assets/styles/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet')
-		//- link(href='../assets/styles/base/vertical-responsive-menu.min.css' rel='stylesheet')
-		//- link(href='../assets/styles/base/style.css' rel='stylesheet')
-		//- link(href='../assets/styles/base/responsive.css' rel='stylesheet')
-		//- link(href='../assets/styles/base/night-mode.css' rel='stylesheet')
-		//- Vendor Stylesheets
-		//- link(href='../assets/styles/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
-		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-		//- link(href='../assets/styles/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-		//- link(href='../assets/styles/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-		//- link(href='../assets/styles/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
-		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-		link(href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+  body
+    div
+      // Menu
+      include ../components/header.pug
 
-		//- Title
-		block title
-			title Your project!
+      include ../components/sidebar.pug
+        block sidebar
+          include ../components/sidebar-content.pug
 
-	body
-		div
-			//- Menu
-			include ../components/header.pug
-			//- +menu('home')
-			include ../components/sidebar.pug
-				block sidebar
-					include ../components/sidebar-content.pug
+      // block content
+      .wrapper
+        block content
+        include ../components/footer.pug
+        //- Footer
 
-			//- block content
-			.wrapper
-				block content
-				include ../components/footer.pug
-				//- Footer
-
-				//- block scripts
-		block scripts
-
-
-		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
-		//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-		//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-		//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-		//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-		//- script(src='../assets/scripts/custom.js')
-		//- script(src='../assets/scripts/night-mode.js')
+        //- block scripts
+    block scripts
