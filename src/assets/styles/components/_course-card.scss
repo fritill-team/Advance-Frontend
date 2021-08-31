@@ -136,7 +136,7 @@
           background: #fa8305;
           border: none;
           color: #fff;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
           font-weight: 600;
           line-height: 1.5;
           right: 0;
@@ -173,7 +173,7 @@
           border-radius: 20px;
           font-size: 14px;
           font-weight: 500;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
           position: absolute;
           left: 10px;
           .crd-reviews i {
@@ -248,7 +248,7 @@
           border-radius: 20px;
           font-size: 12px;
           font-weight: 500;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
         }
       }
     }
@@ -263,7 +263,7 @@
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         color: #686f7a;
         text-align: left;
         display: block;
@@ -284,7 +284,7 @@
         display: block;
         font-size: 16px;
         font-weight: 600;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         color: #333;
         text-align: left;
         // margin-bottom: 7px;
@@ -292,7 +292,7 @@
       }
       a.card-content__card-title {
         display: block;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         text-align: left;
         font-size: 13px;
         font-weight: 400;
@@ -305,7 +305,7 @@
         margin: 0 10px 5px 0;
         float: left;
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         color: #686f7a;
         text-align: left;
         line-height: 24px;
@@ -336,7 +336,7 @@
         p {
           line-height: 1;
           color: #000;
-          font-family: "Roboto", sans-serif;
+          font-family: $quicksand;
           font-weight: 500;
           font-size: 18px;
         }
@@ -379,7 +379,7 @@
   transition: .3s ease all;
   border-radius: 20px;
   color:#ed2a26;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
   font-size: 16px;
   font-weight: 500;
   &:hover{

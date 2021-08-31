@@ -60,7 +60,7 @@
   .all-reviews__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     text-align: left;
     margin-bottom: 20px;
     color: #333;
@@ -77,7 +77,7 @@
     .total-rating__number {
       font-size: 16px;
       font-weight: 500;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       text-align: left;
       margin-bottom: 0;
       color: #333;
@@ -114,7 +114,7 @@
     .total-rating__title {
       font-size: 13px;
       font-weight: 500;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       text-align: left;
       margin-bottom: 0;
       color: #333;
@@ -179,7 +179,7 @@
       .rating--total {
         font-size: 13px;
         font-weight: 500;
-        font-family: Roboto, sans-serif;
+        font-family: $quicksand;
         text-align: left;
         margin-bottom: 0;
         color: #333;
