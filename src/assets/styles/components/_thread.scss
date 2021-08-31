@@ -17,7 +17,7 @@
     border: 0;
     border-radius: 20px;
     color: #fff;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     background: #ed2a26;
     font-size: 14px;
     font-weight: 500;
@@ -28,7 +28,7 @@
 .group__textarea {
   height: 40px;
   font-size: 14px;
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   border: 1px solid #efefef;
   width: 100%;
   overflow: hidden;

@@ -12,7 +12,7 @@ input {
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
-    font-family: "Roboto", sans-serif;
+    font-family: $quicksand;
     cursor: pointer;
     color: #fff;
     text-align: center;
@@ -292,7 +292,7 @@ a,button,input{
 		font-size: 14px;
 		font-weight: 500;
 		display:inline-block;
-		font-family: "Roboto", sans-serif;
+		font-family: $quicksand;
 		cursor: pointer;
 		color: #fff;
 		text-align: center;

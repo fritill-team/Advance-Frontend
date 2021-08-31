@@ -36,7 +36,7 @@
 
 .ui.checkbox.icon .box,
 .ui.checkbox.icon label {
-  font-family: "Roboto", sans-serif !important;
+  font-family: $quicksand !important;
   color: #333;
   line-height: 20px;
 }
@@ -62,7 +62,7 @@
 //   font-size: 14px;
 //   margin-top: 30px;
 //   font-weight: 400;
-//   font-family: "Roboto", sans-serif;
+//   font-family: $quicksand;
 //   color: #fff;
 //   background: #ed2a26;
 //   border-radius: 20px;
@@ -81,7 +81,7 @@
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
   color: #333;
   text-align: center;
   margin-bottom: 40px;
@@ -103,7 +103,7 @@
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
   color: #333;
   padding: 50px 0;
   display: block;
@@ -139,7 +139,7 @@
   // font-size: 14px;
   // margin-bottom: 47px;
   // font-weight: 400;
-  // font-family: "Roboto", sans-serif;
+  // font-family: $quicksand;
   // color: #686f7a;
   text-align: center;
   // line-height: 26px;
@@ -193,7 +193,7 @@
   height: 40px;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
 }
 
 .ui[class*="left icon"].swdh95.input > input:focus {
@@ -202,7 +202,7 @@
   height: 40px;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
 }
 .middle-or {
   align-items: center;
@@ -219,7 +219,7 @@
 .social_lnk_btn {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
   color: #fff;
   background: #efefef;
   border-radius: 20px;
@@ -311,7 +311,7 @@
   color: #686f7a;
   font-size: 14px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: $quicksand;
   line-height: 24px;
   padding: 15px 10px !important;
   margin-right: 0;
@@ -637,7 +637,7 @@
   border-top-right-radius: 0 !important;
   color: #333 !important;
   font-weight: 500 !important;
-  font-family: "Roboto", sans-serif !important;
+  font-family: $quicksand !important;
 }
 
 .tab_crse .nav-link {
@@ -946,7 +946,7 @@ input[type="tel"] {
     border: 0;
     border-radius: 20px;
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: $quicksand;
     background: #ed2a26;
     font-size: 14px;
     font-weight: 500;
@@ -958,7 +958,7 @@ input[type="tel"] {
 .secondary-title {
   font-size: 25px;
   font-weight: 500;
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   text-align: left;
   margin-bottom: 15px;
   color: #333;
