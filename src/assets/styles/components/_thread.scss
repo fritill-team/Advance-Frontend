@@ -16,9 +16,9 @@
     padding: 10px 15px;
     border: 0;
     border-radius: 20px;
-    color: #fff;
-    font-family: Roboto, sans-serif;
-    background: #ed2a26;
+    color: $white;
+    font-family: $quicksand;
+    background: $primaryLight;
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
@@ -28,8 +28,8 @@
 .group__textarea {
   height: 40px;
   font-size: 14px;
-  font-family: Roboto, sans-serif;
-  border: 1px solid #efefef;
+  font-family: $quicksand;
+  border: 1px solid $light-white;
   width: 100%;
   overflow: hidden;
   word-wrap: break-word;

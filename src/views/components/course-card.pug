@@ -37,14 +37,16 @@ mixin course-card(className)
 					a.card-content__card-discription(href='course_detail_view.html')
 						| Complete Python Bootcamp: Go from zero to hero
 						| in Python 3
-					a.card-content__card-title(href='#') Web Development | Python
+					a(href='#' class="card-content__card-title") Web Development | Python
 					p.card-auther__name-auth
 						| By
 						a(href='#') John Doe
 				.card-auther__price
 					.course-card__actions
-						a(href="#").ad-btn.ad-btn--primary.ad-btn--outlined(title='Enroll')
+						a(href="#" class="ad-btn ad-btn--primary ad-btn--outlined" title='Enroll')
 							|Enroll
-						a.btn-wishlist(href="#") <i class="fas fa-heart"></i>
-						a.btn-wishlist(href="#") <i class="far fa-heart"></i>
+						a(href="#" class="btn-wishlist")
+							i.fas.fa-heart
+						a(href="#" class="btn-wishlist")
+							i.far.fa-heart
 					p $10

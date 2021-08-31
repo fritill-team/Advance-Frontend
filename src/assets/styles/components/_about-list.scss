@@ -11,7 +11,7 @@
       font-size: 14px;
       font-family: Open Sans, sans-serif;
       font-weight: 400;
-      color: #686f7a;
+      color: $light-gray;
       text-align: left;
       line-height: 26px;
       &::before {
@@ -26,7 +26,7 @@
         font-family: Font awesome\5 Free;
         font-weight: 900;
         font-size: 6px;
-        color: #333;
+        color: $black;
         vertical-align: bottom;
         margin-right: 10px;
         line-height: 26px;
@@ -38,19 +38,19 @@
   .about-required__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     text-align: left;
     margin-bottom: 15px;
-    color: #333;
+    color: $black;
   }
 }
 .description__title {
   font-size: 20px;
   font-weight: 500;
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   text-align: left;
   margin-bottom: 15px;
-  color: #333;
+  color: $black;
 }
 .description__list {
   padding-left: 5px !important;
@@ -62,7 +62,7 @@
       font-size: 14px;
       font-family: Open Sans, sans-serif;
       font-weight: 400;
-      color: #686f7a;
+      color: $darkGray;
       text-align: left;
       line-height: 26px;
       position: relative;
@@ -77,13 +77,13 @@
         // font-family: Font awesome\5 Free;
         font-weight: 900;
         font-size: 35px;
-        color: #333;
+        color: $black;
         vertical-align: bottom;
         margin-right: 10px;
         line-height: 26px;
         position: absolute;
         left: 0;
-        top: -8px;
+        top: -10px;
       }
     }
   }
@@ -98,7 +98,7 @@
       font-size: 14px;
       font-family: Open Sans, sans-serif;
       font-weight: 400;
-      color: #686f7a;
+      color: $darkGray;
       text-align: left;
       line-height: 26px;
       &::before {
@@ -113,46 +113,52 @@
         font-family: Font awesome\5 Free;
         font-weight: 900;
         font-size: 6px;
-        color: #333;
+        color: $black;
         vertical-align: bottom;
         margin-right: 10px;
         line-height: 26px;
       }
     }
   }
+
 } 
+
 .description__name {
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   text-align: left;
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: $black;
 }
 .description__details {
   font-size: 14px;
   font-weight: 400;
-  color: #686f7a;
+  color: $darkGray;
   margin-bottom: 15px;
   margin-top: 15px;
   line-height: 26px;
 }
 .list-item__title {
   display: flex;
+  position: relative;
   .title__icon {
     line-height: 28px;
     font-size: 14px;
-    color: #333;
+    color: $black;
+    position: absolute;
+    top: 6px;
   }
   .title__name {
     display: block;
     font-size: 14px;
     font-family: Open Sans, sans-serif;
     font-weight: 400;
-    color: #686f7a;
+    color: $darkGray;
     text-align: left;
     line-height: 26px;
     margin-left: 15px;
+    padding-left: 8px;
   }
 }
 .about-content {
@@ -162,25 +168,25 @@
     .about-course__title {
       font-size: 20px;
       font-weight: 500;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       text-align: left;
       margin-bottom: 15px;
-      color: #333;
+      color: $black;
     }
   }
 }
 .about-content__about-learn {
-  background: #fff;
+  background: $white;
   padding: 30px;
-  border: 1px solid #efefef;
+  border: 1px solid $light-white;
   border-radius: 10px;
   .about-learn__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     text-align: left;
     margin-bottom: 15px;
-    color: #333;
+    color: $black;
   }
   .about-learn__content {
     .content__list {

@@ -8,7 +8,7 @@
   .more-dropdown__content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: $white;
     min-width: 160px;
     // box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
     border: 1px solid rgba(34, 36, 38, 0.15);
@@ -17,10 +17,10 @@
     border-radius: 5px;
 
     .content__item {
-      color: #686f7a;
+      color: $darkGray;
       font-size: 14px;
       font-weight: 400;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       padding: 10px;
       text-decoration: none;
       display: block;
@@ -30,7 +30,7 @@
         font-size: 115%;
       }
       &:hover {
-        color: #333 !important;
+        color: $darkBlack !important;
         background-color: #ffecec;
       }
     }

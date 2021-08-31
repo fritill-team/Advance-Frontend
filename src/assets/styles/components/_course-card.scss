@@ -1,60 +1,60 @@
 /* src/assets/styles/components/_course-card.scss  */
 
 .course-card {
-  &.course-card--fixed-width{
+  &.course-card--fixed-width {
     max-width: 24%;
     margin: 0 5px;
     animation: grid;
-    animation-duration: .3s;
-    @media (max-width: 1440.98px){
+    animation-duration: 0.3s;
+    @media (max-width: 1440.98px) {
       max-width: 32%;
     }
     @media (max-width: 1024.98px) {
       max-width: 31%;
       margin: 0 7px;
     }
-    @media (max-width: 890.98px){
+    @media (max-width: 890.98px) {
       max-width: 49%;
       margin: 0;
     }
-    @media (max-width: 768.98px){
+    @media (max-width: 768.98px) {
       max-width: 49%;
       margin: 0;
     }
-    @media (max-width: 450.98px){
+    @media (max-width: 450.98px) {
       max-width: 99%;
       margin: auto;
     }
   }
-  &.course-card--list-view{ 
+  &.course-card--list-view {
     max-width: 100%;
     width: 100%;
-    animation: list ;
-    animation-duration: .3s;
-    .course-card__card-media{
+    animation: list;
+    animation-duration: 0.3s;
+    .course-card__card-media {
       display: flex;
       width: 100%;
-      .card-media__card-img{
+      .card-media__card-img {
         max-width: 35%;
       }
-      .card-media__card-content{
+      .card-media__card-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding-top: 0;
       }
     }
-    .card-auther__price{
+    .card-auther__price {
       flex-direction: row-reverse;
-      .course-card__actions{
+      .course-card__actions {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
       }
-      .btn-wishlist{
+      .btn-wishlist {
         // display: inline-block !important;
         // margin: 0 10px;
-        i{
+        i {
           display: block;
           margin: 0 10px;
         }
@@ -62,27 +62,26 @@
     }
   }
   .course-card__card-media {
-    background: #fff;
+    background: $white;
     margin-bottom: 20px;
     width: 100%;
     float: left;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #efefef;
+    border: 1px solid $light-white;
     transition: all 0.2s ease-in-out;
-    @media (max-width: 1200.98px){
+    @media (max-width: 1200.98px) {
       margin-bottom: 18px;
     }
-    @media (max-width: 992.98px){
+    @media (max-width: 992.98px) {
       margin-bottom: 14px;
     }
-    @media (max-width: 875.98px){
+    @media (max-width: 875.98px) {
       margin-bottom: 12px;
     }
     .card-media__card-content {
       // .card-content__card-auther {
       // }
-      
     }
     // start card-img part1
     .card-media__card-img {
@@ -91,7 +90,7 @@
       float: left;
       position: relative;
       a {
-        color: #4183c4;
+        color: $twitter;
         text-decoration: none;
         background-color: transparent;
         &:hover {
@@ -133,10 +132,10 @@
           font-size: 10px;
           position: absolute;
           padding: 2px 10px;
-          background: #fa8305;
+          background: $info;
           border: none;
-          color: #fff;
-          font-family: Roboto, sans-serif;
+          color: $white;
+          font-family: $quicksand;
           font-weight: 600;
           line-height: 1.5;
           right: 0;
@@ -166,14 +165,14 @@
           }
         }
         .card-overlay__crd-reviews {
-          color: #fff;
-          background: #fdcc0d;
+          color: $white;
+          background: $warning;
           display: inline-block;
           padding: 3px 15px 3px 10px;
           border-radius: 20px;
           font-size: 14px;
           font-weight: 500;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
           position: absolute;
           left: 10px;
           .crd-reviews i {
@@ -213,7 +212,7 @@
           right: 40%;
           opacity: 0;
           position: absolute;
-          color: #fff;
+          color: $white;
           background: rgba(51, 51, 51, 0.8);
           i.uil-play {
             &::before {
@@ -248,7 +247,7 @@
           border-radius: 20px;
           font-size: 12px;
           font-weight: 500;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
         }
       }
     }
@@ -263,8 +262,8 @@
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
-        font-family: "Roboto", sans-serif;
-        color: #686f7a;
+        font-family: $quicksand;
+        color: $darkGray;
         text-align: left;
         display: block;
         span.card-details__card-view {
@@ -284,19 +283,19 @@
         display: block;
         font-size: 16px;
         font-weight: 600;
-        font-family: "Roboto", sans-serif;
-        color: #333;
+        font-family: $quicksand;
+        color: $black;
         text-align: left;
         // margin-bottom: 7px;
         line-height: 24px;
       }
       a.card-content__card-title {
         display: block;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         text-align: left;
         font-size: 13px;
         font-weight: 400;
-        color: #686f7a;
+        color: $darkGray;
         padding-top: 2px;
         margin-bottom: 0.7rem;
       }
@@ -305,29 +304,29 @@
         margin: 0 10px 5px 0;
         float: left;
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
-        color: #686f7a;
+        font-family: $quicksand;
+        color: $darkGray;
         text-align: left;
         line-height: 24px;
         a {
-          color: #333;
+          color: $black;
           font-weight: 500;
           &:hover {
-            color: #333 !important;
+            color: $black !important;
             text-decoration: underline !important;
           }
         }
       }
       // .card-content__card-auther {
       //   width: 100%;
-        
+
       // }
       .card-auther__price {
         // margin-top: 30px;
         padding-top: 10px;
-        border-top: 1px solid #efefef;
+        border-top: 1px solid $light-white;
         float: right;
-        color: #333;
+        color: $black;
         text-align: right;
         display: flex;
         align-items: center;
@@ -335,19 +334,19 @@
         width: 100%;
         p {
           line-height: 1;
-          color: #000;
-          font-family: "Roboto", sans-serif;
+          color: $black;
+          font-family: $quicksand;
           font-weight: 500;
           font-size: 18px;
         }
-        .course-card__actions{
+        .course-card__actions {
           display: flex;
           align-items: center;
         }
-        .btn-wishlist{
+        .btn-wishlist {
           display: inline-block !important;
           margin: 0 10px;
-          color: #ed2a26;
+          color: $primary;
           font-size: 20px;
 
           // i{
@@ -360,32 +359,38 @@
   }
 
   @keyframes grid {
-    0%   {transform: scale(0);}
+    0% {
+      transform: scale(0);
+    }
     // 50%  {transform: scale(1.2);}
-    100% {transform: scale(1);}
+    100% {
+      transform: scale(1);
+    }
   }
   @keyframes list {
-    0%   {transform: scale(0);}
+    0% {
+      transform: scale(0);
+    }
     // 50%  {transform: scale(1.2);}
-    100% {transform: scale(1);}
+    100% {
+      transform: scale(1);
+    }
   }
 }
 .enroll-btn {
   // opacity: 0;
   cursor: pointer;
-  border: 2px solid #ed2a26;
+  border: 2px solid $primary;
   padding: 8px 45px 9px;
   background-color: transparent;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
   border-radius: 20px;
-  color:#ed2a26;
-  font-family: "Roboto", sans-serif;
+  color: $primary;
+  font-family: $quicksand;
   font-size: 16px;
   font-weight: 500;
-  &:hover{
-    background-color: #ed2a26;
-    color: #fff;
+  &:hover {
+    background-color: $primary;
+    color: $white;
   }
 }
-
-
