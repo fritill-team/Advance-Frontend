@@ -7,13 +7,11 @@ a,button,input{
 		border: 2px solid;
 		border-radius: 5px;
 		text-transform: capitalize;
-		font-size: 14px;
 		display:inline-block;
 		font-family: "Roboto", sans-serif;
 		cursor: pointer;
 		color: #fff;
 		text-align: center;
-		line-height: 14px;
 		&:hover{
 			opacity: 0.8;
 			transition: .3s ease all;
@@ -227,6 +225,13 @@ a,button,input{
 					color: $light-gray;
 				}
 			}
+		}
+		&.ad-btn--link-text{
+			background-color: transparent;
+			padding: 0px;
+			margin: 0px;
+			border: none;
+			text-align: left;
 		}
 		&.ad-btn--disabled{
 			pointer-events: none;
