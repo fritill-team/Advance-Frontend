@@ -435,6 +435,46 @@
       }
     }
   }
+  &.ad-card--card-file {
+    position: relative;
+    transition: all 0.3s ease;
+    .ad-card__content {
+      flex-direction: row-reverse;
+    }
+    .ad-card__content-header {
+      margin-bottom: 0;
+    }
+    .user-image {
+      border-radius: 0;
+      margin-right: 0;
+      margin-left: 5px;
+    }
+    .ad-card--file-download {
+      color: #686f7a;
+      border-radius: 6px;
+      font-size: 20px;
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .file-card {
+      margin-right: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      color: #686f7a;
+      .file-icon {
+        font-size: 36px;
+      }
+    }
+    &:hover .ad-card--file-download {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+  }
   &.ad-card--transparent {
     background-color: transparent;
   }
@@ -524,6 +564,20 @@ html[dir="rtl"] {
       }
       .text-1 {
         margin-right: 5px;
+      }
+    }
+    &.ad-card--card-file {
+      .user-image {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+      .ad-card--file-download {
+        left: 18px;
+        right: unset;
+      }
+      .file-card {
+        margin-left: 16px;
+        margin-right: 0;
       }
     }
   }
