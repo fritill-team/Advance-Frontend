@@ -303,7 +303,6 @@ a,button,input{
 		}
 		&.ad-btn--default{
 			background-color: $light-gray;
-			border-color: $light-gray;;
 		}	
 		&.ad-btn--primary{
 			background-color: $primary;
@@ -474,6 +473,9 @@ a,button,input{
 			&.ad-btn--danger{
 				background-color: $gold;
 				color: $light-gray;
+				svg, i{
+					color: $light-gray;
+				}
 			} 
 		}
 		&.ad-btn--with-icon{
@@ -566,44 +568,9 @@ a,button,input{
 a.ad-btn {
   line-height: 18px;
   padding-top: 12px;
-  &:link,
-  &:visited {
-    // color: red;
+	&.ad-btn--text{
+	  text-decoration:none ;
   }
-  &:active {
-    opacity: 1.8;
-  }
-}
-.ad-btn-group {
-  margin: 5px;
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .ad-btn {
-    margin: 0;
-    border: unset;
-    &.ad-btn.ad-btn--outlined {
-      border: 2px solid;
-    }
-    &:first-of-type {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      margin-right: -1;
-    }
-    &:nth-child(2) {
-      border-radius: 0;
-      border-right: 0px;
-      border-left: 0px;
-      margin-left: -1px;
-      margin-right: -1px;
-    }
-    &:last-of-type {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-}
 
 	&:active {
 		opacity: 1.8;	
