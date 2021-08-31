@@ -38,4 +38,12 @@
   &:hover .more-dropdown__content {
     display: block;
   }
+  &.more-dropdown--absolute {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    .more-dropdown__icon {
+      color: #fff;
+    }
+  }
 }

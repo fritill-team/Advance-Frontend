@@ -46,7 +46,6 @@
   .description__name {
     margin-right: 5px;
     font-size: 16px;
-    white-space: nowrap;
   }
   .description__details {
     line-height: 1.5;
@@ -79,6 +78,12 @@
           }
         }
       }
+    }
+  }
+  &.general-wrapper--card-details {
+    .description__name {
+      font-size: 16px;
+      white-space: nowrap;
     }
   }
 }
