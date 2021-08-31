@@ -1,105 +1,60 @@
-@import "normalize.css";
 
-/*
-  Base
-*/
-@import "./base/fonts";
 
 ul {
   padding-left: 0 !important;
 }
-/*
-  Utils
-*/
-// @import './utils/dimensions';
-// @import './utils/mixins';
-// @import './utils/colors';
-// @import './utils/keyframes';
 
-/*
-  Componentslist-dropdown';
-// @import './components/button';
-// @import './components/link';
-// @import './components/_menu';
-@import './components/course-card';
-@import './components/instructor-card';
-/*
-  Layout
-*/
-// @import './layout/page';
-// @import './layout/general';
 
-/*
-  Pages
-*/
-// @import './pages/index';
-// @import './pages/blog';
-// @import './pages/contact';
-
+@import "./base/_fonts.scss";
 @import "./base/_variables.scss";
 @import "./base/_style.scss";
-// @import "./base/new-style";
+@import "./base/_new-style";
 @import "./base/_rtl.scss";
-@import "./custom/auth-forms.scss";
-@import "./components/header";
-@import "./components/menu-responsive";
-@import "./components/course-list";
-@import "./components/about-list";
-@import "./components/course-video";
-@import "./components/course-reviews";
-@import "./components/review.scss";
-@import "./components/comments";
-@import "./components/category-course";
+@import "./custom/_auth-forms.scss";
+@import "./components/_header";
+@import "./components/_menu-responsive";
+@import "./components/_course-list";
+@import "./components/_about-list";
+@import "./components/_course-video";
+@import "./components/_course-reviews";
+@import "./components/_review.scss";
+@import "./components/_comments";
+@import "./components/_category-course";
 @import "./components/_pagination.scss";
-@import "./components/list-dropdown";
-@import "./components/course-card.scss";
-@import "./components/enroll-card";
-@import "./components/description-enroll";
-@import "./components/footer-admin";
-@import "./components/footer";
-@import "./components/filter";
-@import "./components/card";
-@import "./components/btn-links";
-@import "./components/card-collapse";
-@import "./components/media-card";
-@import "./components/thread";
-@import "./components/header-player";
-@import "./components/sidebar-player";
-@import "./components/social-icons";
-@import "./components/tags";
-@import "./components/info";
-@import "./components/video-player";
-@import "./components/general-wrappaer";
 
-@import "./components/rich-textarea";
+@import "./components/_list-dropdown";
+@import "./components/_course-card.scss";
+@import "./components/_enroll-card";
+@import "./components/_description-enroll";
+@import "./components/_footer-admin";
+@import "./components/_footer";
+@import "./components/_filter";
+@import "./components/_card";
+@import "./components/_btn-links";
+@import "./components/_card-collapse";
+@import "./components/_media-card";
+@import "./components/_thread";
+@import "./components/_header-player";
+@import "./components/_sidebar-player";
+@import "./components/_social-icons";
+@import "./components/_tags";
+@import "./components/_info";
+@import "./components/_video-player";
+@import "./components/_general-wrappaer";
 
-@import "./components/general-card";
-@import "./components/general-playlist";
-@import "./components/colleps";
+@import "./components/_rich-textarea";
+
+@import "./components/_general-card";
+@import "./components/_general-playlist";
+@import "./components/_colleps";
+
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";
 @import "./components/single-course/user-item";
 @import "./components/exam/exam.scss";
 @import "./components/typography";
-@import "./base/instructor-dashboard.css";
-@import "./base/jquery-steps.css";
-@import "./base/datepicker.min.css";
+//@import "./base/instructor-dashboard.css";
 
-@import "./base/datepicker.min.css";
-@import "./components/sidebar.scss";
-@import "./vendor/unicons-2.0.1/css/unicons.css";
-@import "./base/lightbox.min.css";
-@import "./base/select2.min.css";
-
-// @import './base/vertical-responsive-menu.min.css';
-@import "./base/responsive.css";
+@import "components/sidebar";
 @import "./base/night-mode.css";
-@import "./base/select2.min.css";
-@import "./vendor/OwlCarousel/assets/owl.carousel.css";
-@import "./vendor/OwlCarousel/assets/owl.theme.default.min.css";
-@import "./vendor/semantic/semantic.css";
-// @import "../vendor/fontawesome-free/css/"
 
-// video.js
-// @import 'video.js/dist';
-@import "./base/videojs-transcript.css";

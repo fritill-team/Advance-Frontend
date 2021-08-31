@@ -17,7 +17,7 @@
     font-size: 18px;
     color: #333;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     text-align: left;
     float: left;
   }
@@ -30,7 +30,7 @@
 .filter__selector {
   float: right;
   font-size: 14px;
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   color: #333;
   font-weight: 400;
   .selector--dropdown {
@@ -43,7 +43,7 @@
     text-align: left;
     .selector__text {
       font-weight: 500 !important;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       display: contents;
     }
     .selector__icon {
@@ -118,7 +118,7 @@
       font-size: 16px;
       font-weight: 500;
       color: #333;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       display: block;
       line-height: 26px;
       padding: 15px;
@@ -129,7 +129,7 @@
   .collapsed {
     &::before {
       float: right !important;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       content: "+";
       padding-right: 0;
       font-size: 18px;
@@ -139,7 +139,7 @@
 }
 .panel__title > a:before {
   float: right !important;
-  font-family: Roboto, sans-serif;
+  font-family: $quicksand;
   content: "-";
   padding-right: 0;
   font-size: 18px;
@@ -149,7 +149,7 @@
   .collapse__item {
     font-size: 14px;
     font-weight: 400;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     color: #686f7a;
     line-height: 26px;
     padding-bottom: 20px;
@@ -195,7 +195,7 @@
 .collapse-rating {
   cursor: pointer;
   user-select: none;
-  font-family: Roboto, sans-serif !important;
+  font-family: $quicksand !important;
   color: #333;
   line-height: 20px;
   &::before {

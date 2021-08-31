@@ -255,9 +255,9 @@ html[dir="rtl"] {
 
       .notification__list {
         .list__list-item {
-          .list-item--upload-course {
-            margin-left: 10px;
-          }
+          // .list-item--upload-course {
+          //   margin-left: 10px;
+          // }
           .list-item--opencard {
             .opencard__count-num {
               left: 8px;
@@ -394,7 +394,7 @@ html[dir="rtl"] {
               padding-left: 10px;
               color: #333;
               font-weight: 500;
-              font-family: Roboto, sans-serif;
+              font-family: $quicksand;
             }
           }
         }
@@ -798,7 +798,7 @@ html[dir="rtl"] {
         }
       }
     }
-    .group--btn {
+    .ad-btn {
       float: left;
     }
     .comment__review-comment {
@@ -1135,8 +1135,8 @@ html[dir="rtl"] {
   .ui.checkbox label:before {
     right: 0;
   }
-  .ui.checkbox.mncheck .box,
-  .ui.checkbox.mncheck label {
+  .ui.checkbox.icon .box,
+  .ui.checkbox.icon label {
     padding-right: 1.85714em;
   }
   // thread

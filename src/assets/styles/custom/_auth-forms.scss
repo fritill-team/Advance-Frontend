@@ -132,10 +132,10 @@
         height: 40px;
         font-size: 14px;
         font-weight: 400;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
       }
       &.text-field--icon {
-        padding: 0 4em !important;
+        padding-left:  4em !important;
       }
 
       &:focus {
@@ -150,7 +150,7 @@
       background: #ed2a26;
       color: #fff;
       font-weight: 500;
-      font-family: "Roboto", sans-serif;
+      font-family: $quicksand;
       position: absolute;
       right: 3px;
       border-radius: 100%;
@@ -201,7 +201,7 @@
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       border: 0;
       padding: 0;
-      font-family: "Roboto", sans-serif;
+      font-family: $quicksand;
       color: #333;
       font-weight: 400;
       position: relative;
@@ -271,7 +271,7 @@
     text-align: left;
   }
   // .mncheck
-  .mncheck {
+  .icon {
     label {
       &::before {
         border-radius: unset !important;
@@ -290,7 +290,7 @@
       label.radio-label-1 {
         font-size: 14px;
         font-weight: 400;
-        font-family: "Roboto", sans-serif;
+        font-family: $quicksand;
         line-height: 17px;
         padding: 5px;
         cursor: pointer;
