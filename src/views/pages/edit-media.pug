@@ -1,0 +1,67 @@
+extends ../layouts/admin.pug
+block title
+	title Media-library
+block sidebar
+	include ../components/sidebar-content.pug
+
+block content
+	.container-fluid
+		.row
+			.col-lg-12
+				.d-flex.flex-column.my-3
+					.d-flex.justify-content-between.align-items-center
+						h1.title-h1.mb-0 Media
+				//- h3.secondary-title media title
+				//- .general-details__item
+				//- 	h4.description__name arabic :
+				//- 	p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+				.row
+					.col-lg-12
+						.d-flex.flex-column.my-3
+							.d-flex.justify-content-between.align-items-center
+								h2.title-h2.mb-0.mb-2 Media Library
+								button.ad-btn.ad-btn--primary.ad-btn--rounded.my-2 create
+					.col-lg-12
+						.row
+							.col-lg-9.col-md-9
+								.media-card.media-card--height
+									.media-card__image
+										img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+										.more-dropdown.more-dropdown--absolute
+											.more-dropdown__link
+												i.fas.fa-ellipsis-v.more-dropdown__icon
+											.more-dropdown__content
+												span.content__item
+													i.item__icon.uil.uil-comment-alt-edit
+													| Edit
+												span.content__item
+													i.item__icon.uil.uil-trash-alt
+													| Delete
+									.field-wrapper.my-2.px-2
+										.text-field__content
+											form.form__action.mb-0(action="")
+												input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
+							.col-lg-3
+								.general-wrapper.general-wrapper--card-details
+									//- .general-wrapper__header
+									//- 	h3 general details
+									//- 	.general-actions
+									//- 		a(href="/"): i.far.fa-edit(aria-hidden="true")
+									//- 		a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+									.general-wrapper__content
+										.row
+											.col-md-3
+												h4.description__name.my-2 Id :
+											.col-md-8
+												p.my-2 Lorem ipsum, dolor sit amet consectetur
+											.col-md-3
+												h4.description__name.my-2 Author :
+											.col-md-8
+												p.my-2 Lorem ipsum, dolor sit amet consectetur
+											.col-md-3
+												h4.description__name.my-2 duration :
+											.col-md-8
+												p.my-2 Lorem ipsum, dolor sit amet consectetur
+
+
+
