@@ -100,6 +100,7 @@
 }
 .social-links{
   text-align: right;
+  margin-left: -10px;
   .social-links__link{
     padding-top: 10px;
     padding-left: 15px;
@@ -117,7 +118,7 @@
   Responsive
 */
 
-@media (min-width: 0px) and (max-width: 1200px) {
+@media (min-width: 0px) and (max-width: 720px) {
   .container {
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -173,6 +174,19 @@ html[dir="rtl"] {
     text-align: left;
     .social-links__link{
       padding-top: 10px;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 720px) {
+    .container {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 768px){
+    .social-links {
+      text-align: right !important;
+      margin-top: 10px;
+      margin-right: 20px;
     }
   }
 }
