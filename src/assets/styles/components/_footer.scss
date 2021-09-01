@@ -73,6 +73,7 @@
 }
 // .fotb_left
 .copy-right{
+  margin-top: 0px;
   .copy-right__list{
     display: inline-block;
     vertical-align: middle;
@@ -81,9 +82,10 @@
         img{
           width: 30px;
           margin-right: 20px;
+          line-height: 24px;
+          padding-top: 10px;
         }
       }
-
     }
     p.list__paragraph{
       font-size: 14px;
@@ -115,18 +117,19 @@
   Responsive
 */
 
-@media (min-width: 500px) and (max-width: 1200px) {
-  .container-fluid {
-    padding-right: 30px !important;
-    padding-left: 30px !important;
+@media (min-width: 0px) and (max-width: 1200px) {
+  .container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
 }
-@media (max-width: 576px){
+@media (min-width: 0px) and (max-width: 768px){
   .social-links {
     text-align: left !important;
     margin-top: 10px;
   }
 }
+
 html[dir="rtl"] {
   .footer {
     padding: 0;
