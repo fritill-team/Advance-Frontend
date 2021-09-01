@@ -64,7 +64,7 @@ block userAccount
 	.user-wrapper
 		include ../components/general-component/user-account.pug
 		include ../components/general-component/btn.pug
-		+user-account("images/left-imgs/img-1.jpg", "Subscribe" , "Johnson Smith")
+		+user-account("subscribe", "../../assets/images/hd_dp.jpg" , "Johnson Smith")
 			+btn('user-content__subscribe-btn', 'subscribe')
 		include ../components/general-component/interaction.pug
 		section.interactions-course
@@ -108,7 +108,7 @@ block tabs
 									section.comments__add-comment
 										.add-comment__group
 											.group__img-wrapper
-												img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+												img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
 											textarea.group__textarea(placeholder="Add a public comment")
 										button.ad-btn.ad-btn--primary.ad-btn--rounded(type="submit") Add review
 									include ../components/review.pug
@@ -127,7 +127,7 @@ block tabs
 										h4.title-h4 card title
 									.ad-card__content
 										.user-image
-											img(src="./images/sign.svg" alt="")
+											img(src="../../assets/images/hd_dp.jpg" alt="")
 											i.uil.uil-check-circle
 										.ad-card__body
 											.ad-card__content-header
@@ -145,7 +145,7 @@ block tabs
 										h4.title-h4 card title
 									.ad-card__content
 										.user-image
-											img(src="./images/sign.svg" alt="")
+											img(src="../../assets/images/hd_dp.jpg" alt="")
 											i.uil.uil-check-circle
 										.ad-card__body
 											.ad-card__content-header
