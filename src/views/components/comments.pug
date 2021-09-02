@@ -7,14 +7,14 @@ section.comments
       section.comments__add-comment
         .add-comment__group
           .group__img-wrapper
-            img.group__img(src="images/left-imgs/img-1.jpg" alt="")
+            img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
           textarea.group__textarea(placeholder="Add a public comment")
         button.ad-btn.ad-btn--primary.ad-btn--rounded(type="submit")  Comment
       section.comment__review-comment
         .review-comment__item
           .item__wrapper.d-flex
             include ../components/general-component/user-account.pug
-            +account-review("images/left-imgs/img-1.jpg","John Doe", "2 hour ago")
+            +account-review("../../assets/images/hd_dp.jpg","John Doe", "2 hour ago")
             block dropdown
               include ../components/list-dropdown.pug
           p.review-comment__comment
@@ -33,7 +33,7 @@ section.comments
         .review_reply
           .review_item
             .item__wrapper.d-flex
-              +account-review("images/left-imgs/img-1.jpg","John Doe", "2 hour ago")
+              +account-review("../../assets/images/hd_dp.jpg","John Doe", "2 hour ago")
               block dropdown
                 include ../components/list-dropdown.pug
             p.review-comment__comment

@@ -7,8 +7,8 @@ header.header.clearfix
   #logo.header--main-logo
     a.main-logo--img(href='index.html')
       img(src='../../assets/images/logo.svg' alt='')
-    a(href='index.html')
-      img.img--logo-inverse(src='../../assets/images/ct_logo.svg' alt='')
+    a.img--logo-inverse(href='index.html')
+      img(src='../../assets/images/ct_logo.svg' alt='')
   block category
     //- include ../components/header-blocks/selectCategory.pug
   //- block category
@@ -26,7 +26,7 @@ header.header.clearfix
       //-   a.list-item--opencard(href='shopping_cart.html' title='cart')
       //-     i.opencard__icon.uil-shopping-cart-alt
       //-     span.opencard__count-num 2
-      li.ui.dropdown.list__massege.dropdown
+      li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
         a.massege__opencard(href='#' title='Messages')
           i.opencard__icon.uil-envelope-alt
           span.opencard__count-num 3
@@ -65,7 +65,7 @@ header.header.clearfix
             | View All
             i.uil.uil-arrow-right
       //- icon 2
-      li.ui.dropdown.list__massege.dropdown
+      li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
         a.massege__opencard(href='#' title='Messages')
           i.uil.uil-bell.opencard__icon
           span.opencard__count-num 3
@@ -104,7 +104,7 @@ header.header.clearfix
             | View All
             i.uil.uil-arrow-right
       //- icon 3
-      li.ui.dropdown.list__profile
+      li.ui.dropdown.list__profile(data-toggle="dropdown")
         a.opts_account.profile__account(href='#' title='Account')
           img.accoutn__img(src='../../assets/images/hd_dp.jpg' alt='')
         .menu.profile__menu
