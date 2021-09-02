@@ -1,34 +1,35 @@
 //- src/views/components/footer.pug
 
-footer.footer.mt-30
+footer.footer
   .container
     .row
-      .col-lg-3.col-md-3.col-sm-6
-        .item_f1
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+        .footer__footer-content 
           //- a(href='about.pug') About
-          a(href='/about', class=currentPage === 'about' ? 'active' : '') About
-          a(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
+          a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
+          a.footer-content__link(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
           //- a(href='our_blog.html') Blog
-          a(href='career.html') Careers
-          a(href='press.html') Press
-      .col-lg-3.col-md-3.col-sm-6
-        .item_f1
-          a(href='help.html') Help
-          a(href='coming_soon.html') Advertise
-          a(href='coming_soon.html') Developers
-          a(href='contact_us.html') Contact Us
-      .col-lg-3.col-md-3.col-sm-6
-        .item_f1
-          a(href='terms_of_use.html') Copyright Policy
-          a(href='terms_of_use.html') Terms
-          a(href='terms_of_use.html') Privacy Policy
-          a(href='sitemap.html') Sitemap
-      .col-lg-3.col-md-3.col-sm-6
-        .item_f3
-          a.btn1542(href='#') Teach on Cursus
-          .lng_btn
+          a.footer-content__link(href='career.html') Careers
+          a.footer-content__link(href='press.html') Press
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+        .footer__footer-content
+          a.footer-content__link(href='help.html') Help
+          a.footer-content__link(href='coming_soon.html') Advertise
+          a.footer-content__link(href='coming_soon.html') Developers
+          a.footer-content__link(href='contact_us.html') Contact Us
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+        .footer__footer-content
+          a.footer-content__link(href='terms_of_use.html') Copyright Policy
+          a.footer-content__link(href='terms_of_use.html') Terms
+          a.footer-content__link(href='terms_of_use.html') Privacy Policy
+          a.footer-content__link(href='sitemap.html') Sitemap
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+        .footer__footer-buttons
+          a.footer-buttons__link(href='terms_of_use.html') Teach on Cursus
+          .footer-buttons__btn-language
+
             #languages.ui.language.bottom.right.pointing.dropdown.floating(data-content='Select Language')
-              a(href='#')
+              a.btn-language__link(href='#')
                 i.uil.uil-globe.lft
                 | Language
                 i.uil.uil-angle-down.rgt
@@ -107,32 +108,32 @@ footer.footer.mt-30
                     span.description rom&acirc;ne&#x219;te
                     | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Romanian
       .col-lg-12
-        .footer_bottm
+        .footer-line
           .row
-            .col-md-6
-              ul.fotb_left
-                li
-                  a(href='index.html')
-                    .footer_logo
+            .col-md-6.col-sm-12.col-xs-12
+              ul.copy-right
+                li.copy-right__list
+                  a.list__link(href='index.html')
+                    .footer-logo
                       img(src='../../assets/images/logo1.svg' alt='')
-                li
-                  p
+                li.copy-right__list
+                  p.list__paragraph
                     | &copy; 2020 
                     strong Cursus
                     | . All Rights Reserved.
-            .col-md-6
-              .edu_social_links
-                a(href='#')
+            .col-md-6.col-sm-12.col-xs-12
+              .social-links
+                a.social-links__link(href='#')
                   i.fab.fa-facebook-f
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-twitter
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-google-plus-g
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-linkedin-in
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-instagram
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-youtube
-                a(href='#')
+                a.social-links__link(href='#')
                   i.fab.fa-pinterest-p

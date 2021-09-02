@@ -1,0 +1,39 @@
+extends ../../../layouts/admin.pug
+block title
+	title lists
+block sidebar
+	include ../../../components/sidebar-content.pug
+
+block content
+	.container
+		.row
+			//- .ad-card--with-title .ad-card--top-category
+			.col-lg-12
+				h2.title-2.my-3 Card with title with  category
+				p.text-2.mb-1
+					| we use
+					code .ad-card--with-title .ad-card--top-category
+			.col-lg-3
+				.ad-card.ad-card--with-title.ad-card--top-category
+					.ad-card__title.mb-2
+						h5.title-h6 Top Categories
+					.ad-card__content
+						.ad-card__body
+							.ad-card__content--details
+								ul.ad-card__list
+									li.ad-card__list-item
+										a.ad-card__item-link(href="#")
+											i.uil.uil-arrow
+											| Development
+									li.ad-card__list-item
+										a.ad-card__item-link(href="#")
+											i.uil.uil-graph-bar
+											| Business
+									li.ad-card__list-item
+										a.ad-card__item-link(href="#")
+											i.uil.uil-graph-bar
+											| IT and Software
+									li.ad-card__list-item
+										a.ad-card__item-link(href="#")
+											i.uil-ruler
+											| Design

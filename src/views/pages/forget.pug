@@ -5,23 +5,24 @@ block title
   title forget
 
 block content
-  h2 Request a Password Reset
+  h2.title-h6.semi-bold  Request a Password Reset
   form.needs-validation
-    .ui.search.focus.mt-50
-      .icon.input.lbel25
-        label.sr-onlyd-none(for="validationServerEmail") Email Address *
-        .ui.left.icon.input.swdh95
-          input.prompt.srch_explore(
-          type="email"
-          name="emailaddress"
-          id="validationServerEmail" required maxlength="64"
-          aria-describedby="validationServer06Feedback"
-          placeholder="Email Address" autofocus)
-          i.uil.uil-envelope.icon.icon2
-        .invalid-feedback.my-2#validationServer06Feedback Requerd
-    button.login-btn(type="submit")
-      | Reset Password
-  p.mb-0.mt-30 Go Back
-    a(href="../pages/login.pug")  Sign In 
+    .field-wrapper.field-wrapper--no-message 
+      .text-field__content
+        input.text-field__input.text-field--icon(
+          type='email'
+          placeholder='Email Address Or Number'
+          name='email address' 
+          data-purpose='edit-course-title' 
+          maxlength=''
+          required
+          id="emailType"
+          value=''
+          ) 
+        i.uil.uil-envelope.icon-message#icon-message(style="display : block") 
+        .invalid-feedback.my-2#validationServer06Feedback required
+    button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--center.medium.text-2.px-5.mt-4(type="submit")  Reset Password
+  p.mb-0.mt-30.title-2 Go Back
+    a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="../pages/login.pug")  Sign In 
 
 

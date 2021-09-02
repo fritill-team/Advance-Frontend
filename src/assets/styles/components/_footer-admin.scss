@@ -1,5 +1,5 @@
 .footer {
-  background: #333;
+  background: $darkBlack;
   width: 100%;
   padding: 0;
   float: left;
@@ -14,16 +14,16 @@
     .footer__item {
       display: flex;
       padding-top: 20px;
-      .footer__link{
+      .footer__link {
         font-size: 14px;
         font-weight: 400;
-        font-family: Roboto, sans-serif;
+        font-family: $quicksand;
         display: block;
         padding-bottom: 10px;
-        color: #fff;
+        color: $white;
         padding-right: 20px;
-        &:hover{
-          color: #FFF;
+        &:hover {
+          color: $white;
         }
       }
     }
@@ -32,7 +32,7 @@
 .footer-bottom {
   margin-top: 40px;
   padding: 20px 0;
-  border-top: 1px solid #454545;
+  border-top: 1px solid $gray;
 }
 .footer-button__list {
   .footer-button__item {
@@ -51,8 +51,8 @@
 .footer-button__copyRight {
   font-size: 14px;
   font-weight: 400;
-  font-family: Roboto, sans-serif;
-  color: #f7f7f7;
+  font-family: $quicksand;
+  color: $light-white;
   text-align: left;
   line-height: 24px;
 }
@@ -63,7 +63,7 @@
     padding-left: 15px;
     font-size: 16px;
     display: inline-block;
-    color: #f7f7f7;
+    color: $light-white;
     transition: all 0.2s ease-in-out;
   }
 }

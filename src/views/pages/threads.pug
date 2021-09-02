@@ -24,17 +24,37 @@ block content
 				.row
 					.col-lg-12
 						//- question
-						.ad-card.ad-card--with-actions.mb-3
+						.ad-card#editPostThread.ad-card--d-none.mb-3
+							.field-wrapper.p-3
+								form.form__action.mb-3(action="")
+									textarea.textarea#course_description.mb-2(rows='5' name='description' placeholder='Edit post')
+									select.js-example-basic-single.select2(name='state' multiple='multiple')
+										option(value='eg') Egypt
+										option(value='AL') Alabama
+										option(value='WY') Wyoming
+									.submit-post
+										include ../components/general-component/btn.pug
+										+btn('ad-btn ad-btn--primary ad-btn--rounded', 'post' , '#create_new_course.html')
+						.ad-card.ad-card--with-actions#postCard.mb-3
 							.ad-card__content
 								.user-image
-									img(src="./images/sign.svg" alt="")
+									img(src="../../assets/images/hd_dp.jpg" alt="")
 									i.uil.uil-check-circle
 								.ad-card__body
 									.ad-card__content-header
 										.user-data
-											a.text-2(href="#") Jose Portilla
+											a.ad-btn.ad-btn--secondary.ad-btn--link-text(href="#") Jose Portilla
 											time.text-3.gray Jan 15 '18 at 13:56
-										//include ../components/list-dropdown.pug
+										.more-dropdown
+											.more-dropdown__link(href="#")
+												i.uil.uil-ellipsis-v
+											.more-dropdown__content
+												span.content__item#edit
+													i.item__icon.uil.uil-comment-alt-edit
+													| Edit
+												span.content__item
+													i.item__icon.uil.uil-trash-alt
+													| Delete
 									.ad-card__content--details
 										.rich-textarea
 											h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -48,26 +68,43 @@ block content
 												li Lorem ipsum dolor
 												li Lorem ipsum dolor
 											q Lorem ipsum dolor
-											a(href="#") mostafa
+											a(href="#") Link
 											p Lorem ipsum dolor sit amet consectetur adipisicing elit.
 											i mostafa
 										.tags
 											.tags__item #Development
 											.tags__item #Development
-				.d-flex.flex-column
-					.d-flex.justify-content-between.align-items-center.w-100
-						h3.course-content__title.mb-3 1 Answer
+					.d-flex.flex-column
+						.d-flex.justify-content-between.align-items-center.w-100
+							h3.course-content__title.mb-0 1 Answer
 					.col-lg-12
-						.ad-card.ad-card--with-actions
+						.ad-card#editCardReplay.ad-card--d-none.mb-3
+							.field-wrapper.p-3
+									form.form__action.mb-3(action="")
+										textarea.textarea#description.mb-2(rows='5' name='description' placeholder='Edit post')
+										.submit-post
+											include ../components/general-component/btn.pug
+											+btn('ad-btn ad-btn--primary ad-btn--rounded', 'post' , '#create_new_course.html')
+						.ad-card.ad-card--with-actions#CardReplay
 							.ad-card__content
 								.user-image
-									img(src="./images/sign.svg" alt="")
+									img(src="../../assets/images/hd_dp.jpg" alt="")
 									i.uil.uil-check-circle
 								.ad-card__body
 									.ad-card__content-header
 										.user-data
-											a.text-2(href="#") Jose Portilla
+											a.ad-btn.ad-btn--secondary.ad-btn--link-text(href="#") Jose Portilla
 											time.text-3.gray Jan 15 '18 at 13:56
+										.more-dropdown
+											.more-dropdown__link(href="#")
+												i.uil.uil-ellipsis-v
+											.more-dropdown__content
+												span.content__item#editReplay
+													i.item__icon.uil.uil-comment-alt-edit
+													| Edit
+												span.content__item
+													i.item__icon.uil.uil-trash-alt
+													| Delete
 									.ad-card__content--details
 										.rich-textarea
 											h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -89,52 +126,86 @@ block content
 					.col-lg-12
 						//- list of replies this takes the padding
 						.comments-list
+							.field-wrapper.ad-card--d-none#editCommentForm.m-0
+								.text-field__content
+									form.form__action.mb-3(action="")
+										input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
+										.submit-post
+											include ../components/general-component/btn.pug
+											+btn('ad-btn ad-btn--primary ad-btn--rounded', 'comment' , '#create_new_course.html')
 							//- comment 1 add class transparent (no-background)
-							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
+							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
 								.ad-card__content
 									.user-image
-										img(src="./images/sign.svg" alt="")
+										img(src="../../assets/images/hd_dp.jpg" alt="")
 										i.uil.uil-check-circle
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												a.text-2(href="#") Jose Portilla
+												a.ad-btn.ad-btn--secondary.ad-btn--link-text(href="#") Jose Portilla
 												time.text-1.gray Jan 15 '18 at 13:56
-											include ../components/list-dropdown.pug
+											.more-dropdown
+												.more-dropdown__link(href="#")
+													i.uil.uil-ellipsis-v
+												.more-dropdown__content
+													span.content__item.edit#editComment
+														i.item__icon.uil.uil-comment-alt-edit
+														| Edit
+													span.content__item
+														i.item__icon.uil.uil-trash-alt
+														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
 							//- comment 2
 							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
 								.ad-card__content
 									.user-image
-										img(src="./images/sign.svg" alt="")
+										img(src="../../assets/images/hd_dp.jpg" alt="")
 										i.uil.uil-check-circle
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												a.text-2(href="#") Jose Portilla
+												a.ad-btn.ad-btn--secondary.ad-btn--link-text(href="#") Jose Portilla
 												time.text-1.gray Jan 15 '18 at 13:56
-											include ../components/list-dropdown.pug
+											.more-dropdown
+												.more-dropdown__link(href="#")
+													i.uil.uil-ellipsis-v
+												.more-dropdown__content
+													span.content__item
+														i.item__icon.uil.uil-comment-alt-edit
+														| Edit
+													span.content__item
+														i.item__icon.uil.uil-trash-alt
+														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
 							//- comment 3
 							.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm
 								.ad-card__content
 									.user-image
-										img(src="./images/sign.svg" alt="")
+										img(src="../../assets/images/hd_dp.jpg" alt="")
 										i.uil.uil-check-circle
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												a.text-2(href="#") Jose Portilla
+												a.ad-btn.ad-btn--secondary.ad-btn--link-text(href="#") Jose Portilla
 												time.text-1.gray Jan 15 '18 at 13:56
-											include ../components/list-dropdown.pug
+											.more-dropdown
+												a.more-dropdown__link(href="#")
+													i.uil.uil-ellipsis-v
+												.more-dropdown__content
+													span.content__item
+														i.item__icon.uil.uil-comment-alt-edit
+														| Edit
+													span.content__item
+														i.item__icon.uil.uil-trash-alt
+														| Delete
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit amet
 							.create-comment
 								.create-comment__content
 									.content__user-img
-										img.user-img__img(src=" images/left-imgs/img-1.jpg")
+										img.user-img__img(src=" ../../assets/images/hd_dp.jpg")
 								form.form__action(action="")
 									input(placeholder="Add a public comment").group__textarea.textarea--thread
 						//- replay component contains user-component, paragraph & #tags
@@ -148,26 +219,25 @@ block content
 									h3.course-content__title.my-3 Your Answer
 							.text-field__content
 								form.form__action.mb-3(action="")
-									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-									textarea.textarea#id_course_description.mb-2(rows='5' name='description' placeholder='Insert your course description')
-
+									input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='title' value='' required)
+									textarea.textarea#card.mb-2(rows='5' name='description' placeholder='Insert your course description')
 									select.js-example-basic-single.select2(name='state' multiple='multiple')
 										option(value='eg') Egypt
 										option(value='AL') Alabama
 										option(value='WY') Wyoming
 									.submit-post
 										include ../components/general-component/btn.pug
-										+btn-link('submit__btn', 'Submit' , '#create_new_course.html')
+										+btn('ad-btn ad-btn--primary ad-btn--rounded', 'Submit' , '#create_new_course.html')
 			.col-md-3
-				.ad-card.ad-card--centered
+				.ad-card.ad-card--centered.ad-card--user
 					.ad-card__content
 						.user-image
-							img(src="./images/sign.svg" alt="")
+							img(src="../../assets/images/hd_dp.jpg" alt="")
 							i.uil.uil-check-circle
 						.ad-card__body
 							.ad-card__content-header
 								.user-data
-									a.text-2(href="#") Jose Portilla
+									a.text-1.semi-bold(href="#") Jose Portilla
 										i.uil.uil-check-circle
 									p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
 									ul.social-icon
@@ -186,4 +256,4 @@ block content
 									.details
 										span.total-students 615K Students
 										span.total-course 12 Courses
-									a.text-3.gray.profile.mt-3(href="#") Go To Profile
+									a.text-2.medium.mt-3(href="#") Go To Profile

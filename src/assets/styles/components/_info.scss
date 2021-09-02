@@ -1,17 +1,16 @@
 .info {
-	padding: 5px 0px;
-	display: flex;  
-	.info__details { 
-		margin-right: 16px;
+  padding: 5px 0px;
+  display: flex;
+  .info__details {
+    margin-right: 16px;
     display: contents;
-		.details__name{
-
-      color: #333;
-			padding-left: 5px;
-		}
-		.details__data{
-			color: #686f7a;
-			padding-left: 5px;
-		}
-	}
+    .details__name {
+      color: $darkBlack;
+      padding-left: 5px;
+    }
+    .details__data {
+      color: $darkGray;
+      padding-left: 5px;
+    }
+  }
 }

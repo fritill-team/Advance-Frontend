@@ -255,9 +255,9 @@ html[dir="rtl"] {
 
       .notification__list {
         .list__list-item {
-          .list-item--upload-course {
-            margin-left: 10px;
-          }
+          // .list-item--upload-course {
+          //   margin-left: 10px;
+          // }
           .list-item--opencard {
             .opencard__count-num {
               left: 8px;
@@ -328,7 +328,7 @@ html[dir="rtl"] {
               .menu__night-mode {
                 margin-left: 10px;
                 .night-mode--btn-mode {
-                  .btn-mode__icone {
+                  .btn-mode__icon {
                     margin-left: 10px;
                   }
                   .btn-mode--switch-mode {
@@ -386,15 +386,15 @@ html[dir="rtl"] {
         float: right;
         .header__header-title {
           .header-title__title {
-            .title__icone {
+            .title__icon {
               margin-left: 5px;
             }
             .title__title-text {
               padding-right: 8px;
               padding-left: 10px;
-              color: #333;
+              color: $black;
               font-weight: 500;
-              font-family: Roboto, sans-serif;
+              font-family: $quicksand;
             }
           }
         }
@@ -409,8 +409,8 @@ html[dir="rtl"] {
       }
       .course-list__list-content {
         float: right;
-        border-right: 1px solid #efefef;
-        border-left: 1px solid #efefef;
+        border-right: 1px solid $white;
+        border-left: 1px solid $white;
         .left-content__top-title {
           margin-right: 10px;
         }
@@ -718,7 +718,7 @@ html[dir="rtl"] {
       text-align: right;
       .review-video__review {
         padding: 3px 10px 3px 15px;
-        .review__icone {
+        .review__icon {
           margin-left: 2px;
         }
       }
@@ -798,7 +798,7 @@ html[dir="rtl"] {
         }
       }
     }
-    .group--btn {
+    .ad-btn {
       float: left;
     }
     .comment__review-comment {
@@ -831,7 +831,7 @@ html[dir="rtl"] {
       position: absolute;
       right: -130px;
       .content__item {
-        .item__icone {
+        .item__icon {
           margin-left: 6px;
         }
       }
@@ -1135,8 +1135,8 @@ html[dir="rtl"] {
   .ui.checkbox label:before {
     right: 0;
   }
-  .ui.checkbox.mncheck .box,
-  .ui.checkbox.mncheck label {
+  .ui.checkbox.icon .box,
+  .ui.checkbox.icon label {
     padding-right: 1.85714em;
   }
   // thread

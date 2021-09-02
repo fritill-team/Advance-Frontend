@@ -8,7 +8,7 @@
   margin-right: 7px;
 }
 @mixin full-star-before {
-  color: #f2b01e;
+  color: $yellow;
   content: "\f005";
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -16,7 +16,7 @@
   left: 0;
 }
 @mixin hulf-star-before {
-  color: #f2b01e;
+  color: $yellow;
   content: "\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -53,14 +53,14 @@
 .reviews__all-reviews {
   float: left;
   width: 100%;
-  background: #fff;
+  background: $white;
   padding: 20px 30px 30px;
-  border: 1px solid #efefef;
+  border: 1px solid $light-white;
   border-radius: 10px;
   .all-reviews__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: $quicksand;
     text-align: left;
     margin-bottom: 20px;
     color: #333;
@@ -71,13 +71,13 @@
     font-size: 16px;
     justify-items: center;
     background: #f7f7f7;
-    border: 1px solid #efefef;
+    border: 1px solid $light-white;
     padding: 10px 20px;
     border-radius: 20px;
     .total-rating__number {
       font-size: 16px;
       font-weight: 500;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       text-align: left;
       margin-bottom: 0;
       color: #333;
@@ -114,7 +114,7 @@
     .total-rating__title {
       font-size: 13px;
       font-weight: 500;
-      font-family: Roboto, sans-serif;
+      font-family: $quicksand;
       text-align: left;
       margin-bottom: 0;
       color: #333;
@@ -139,13 +139,13 @@
         background-color: #e9ecef;
         border-radius: 0.25rem;
         .progress--progress-bar {
-          background-color: #ed2a26 !important;
+          background-color: $primaryLight !important;
           flex-direction: column;
           justify-content: center;
           color: #fff;
           text-align: center;
           white-space: nowrap;
-          background-color: #0d6efd;
+          background-color: $blue;
           transition: width 0.6s ease;
         }
       }
@@ -179,7 +179,7 @@
       .rating--total {
         font-size: 13px;
         font-weight: 500;
-        font-family: Roboto, sans-serif;
+        font-family: $quicksand;
         text-align: left;
         margin-bottom: 0;
         color: #333;

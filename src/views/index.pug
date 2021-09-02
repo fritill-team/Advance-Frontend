@@ -6,476 +6,158 @@ block category
 	include ./components/header-blocks/selectCategory.pug
 block btn-link
 	include ./components/general-component/btn.pug
-	+btn-link('list-item--upload-course', 'Create New Course' , '#create_new_course.html')
-	+btn-link('general-btn btn--field', 'Create new chapter', '#')
+	+btn-link('ad-btn ad-btn--primary ad-btn--rounded semi-bold', 'Create New Course' , '#create_new_course.html')
 block content
 
 	// Menu
 	//- +menu('home')
 		//- Desktop page
-
-
 	.container-fluid
 		.row
 			.col-xl-9.col-lg-8
-				section.section3125
-					h4.item_title Live Streams
-					a.see150(href='live_streams.html') See all
-					.la5lo1
+				section.section-index.section-index--pt
+					.d-flex.flex-column.my-2
+						.d-flex.justify-content-between.align-items-center.w-100
+							h3.title-h6.title-h6--bolder.mb-0 Live Streams
+							a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+					//- h4.item_title Live Streams
+					//- a.see150(href='live_streams.html') See all
+					.section-index
 						.owl-carousel.live_stream.owl-theme
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-1.jpg' alt='')
-										h4 John Doe
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-2.jpg' alt='')
-										h4 Jassica
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-9.jpg' alt='')
-										h4 Edututs+
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-3.jpg' alt='')
-										h4 Joginder Singh
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-4.jpg' alt='')
-										h4 Zoena
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-5.jpg' alt='')
-										h4 Albert Dua
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-6.jpg' alt='')
-										h4 Ridhima
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-7.jpg' alt='')
-										h4 Amritpal
-										p
-											| live
-											span
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
 							.item
-								.stream_1
-									a.stream_bg(href='live_output.html')
-										img(src='../assets/images/left-imgs/img-8.jpg' alt='')
-										h4 Jimmy
-										p
-											| live
-											span
-				section.section3125.mt-50
-					h4.item_title Featured Courses
-					a.see150(href='#') See all
-					.la5lo1
-						.owl-carousel.featured_courses.owl-theme
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-1.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 4.5
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 25 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 109k views
-											span.vdt14 15 days ago
-										a.crse14s(href='course_detail_view.html')
-											| Complete Python Bootcamp: Go from zero to hero
-											| in Python 3
-										a.crse-cate(href='#') Web Development | Python
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') John Doe
-											.prce142 $10
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-2.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 4.5
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 28 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 5M views
-											span.vdt14 15 days ago
-										a.crse14s(href='course_detail_view.html')
-											| The Complete JavaScript Course 2020: Build
-											| Real Projects!
-										a.crse-cate(href='#') Development | JavaScript
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Jassica William
-											.prce142 $5
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-3.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 4.5
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 12 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 1M views
-											span.vdt14 18 days ago
-										a.crse14s(href='course_detail_view.html')
-											| Beginning C++ Programming - From Beginner to
-											| Beyond
-										a.crse-cate(href='#') Development | C++
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Joginder Singh
-											.prce142 $13
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-4.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 5.0
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 1 hour
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 153k views
-											span.vdt14 3 months ago
-										a.crse14s(href='course_detail_view.html')
-											| The Complete Digital Marketing Course - 12
-											| Courses in 1
-										a.crse-cate(href='#') Digital Marketing | Marketing
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Poonam Verma
-											.prce142 $12
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-5.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 4.5
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 1.5 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 53k views
-											span.vdt14 14 days ago
-										a.crse14s(href='course_detail_view.html')
-											| Microsoft Excel - Excel from Beginner to
-											| Advanced
-										a.crse-cate(href='#') Office Productivity | Excel
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Rock William
-											.prce142 $6
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-6.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 5.0
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 36 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 253k views
-											span.vdt14 10 days ago
-										a.crse14s(href='course_detail_view.html')
-											| Angular 8 - The Complete Guide (2020
-											| Edition)
-										a.crse-cate(href='#') Development | Angular
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') John Doe
-											.prce142 $15
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-7.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 5.0
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 5.4 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 109k views
-											span.vdt14 15 days ago
-										a.crse14s(href='course_detail_view.html')
-											| WordPress for Beginners: Create a Website Step
-											| by Step
-										a.crse-cate(href='#') Design | Wordpress
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Sabnam SIngh
-											.prce142 $18
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-							.item
-								.fcrse_1.mb-20
-									a.fcrse_img(href='course_detail_view.html')
-										img(src='../assets/images/courses/img-8.jpg' alt='')
-										.course-overlay
-											.badge_seller Bestseller
-											.crse_reviews
-												i.uil.uil-star
-												| 4.0
-											span.play_btn1
-												i.uil.uil-play
-											.crse_timer
-												| 23 hours
-									.fcrse_content
-										.eps_dots.more_dropdown
-											a(href='#')
-												i.uil.uil-ellipsis-v
-											.dropdown-content
-												span
-													i.uil.uil-share-alt
-													| Share
-												span
-													i.uil.uil-heart
-													| Save
-												span
-													i.uil.uil-ban
-													| Not Interested
-												span
-													i.uil.uil-windsock
-													| Report
-										.vdtodt
-											span.vdt14 196k views
-											span.vdt14 1 month ago
-										a.crse14s(href='course_detail_view.html')
-											| CSS - The Complete Guide 2020 (incl. Flexbox,
-											| Grid &amp; Sass)
-										a.crse-cate(href='#') Design | CSS
-										.auth1lnkprce
-											p.cr1fot
-												| By
-												a(href='#') Jashanpreet Singh
-											.prce142 $10
-											button.shrt-cart-btn(title='cart')
-												i.uil.uil-shopping-cart-alt
-				section.section3125.mt-30
-					block content
-						include ./components/course-wrapper.pug
-							block category-header
-								.course-title
-									h4.item_title title Courses
-									a.see150(href="category-course.html")  see all
-							block content
-								.owl-carousel.featured_courses.owl-theme
-									.item
-										include ./components/course-card.pug
-										+course-card
-									.item
-										+course-card
-									.item
-										+course-card
-									.item
-										+course-card
-									.item
-										+course-card
-									.item
-										+course-card
-									.item
-										+course-card
+								.ad-card.ad-card--centered.ad-card--live-section
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
+													p.text-3.gray
+														span
+														| Live
+				section.section-index.mt-30
+					.d-flex.flex-column.my-2
+						.d-flex.justify-content-between.align-items-center.w-100
+							h3.title-h6.title-h6--bolder.mb-0 Newest Courses
+							a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+					.section-index.section-index--pt
+						block content
+							include ./components/course-wrapper.pug
+								block category-header
+								block content
+									.owl-carousel.featured_courses.owl-theme
+										.item
+											include ./components/course-card.pug
+											+course-card
+										.item
+											+course-card
+										.item
+											+course-card
+										.item
+											+course-card
+										.item
+											+course-card
+										.item
+											+course-card
+										.item
+											+course-card
 					//- h4.item_title Newest Courses
 					//- a.see150(href='#') See all
 					//- .la5lo1
@@ -809,400 +491,410 @@ block content
 					//- 						.prce142 $10
 					//- 						button.shrt-cart-btn(title='cart')
 					//- 							i.uil.uil-shopping-cart-alt
-				section.section3126
+				section.section-index.section-index--pt
 					.row
 						.col-xl-6.col-lg-12.col-md-6
-							.value_props
-								.value_icon
-									i.uil.uil-history
-								.value_content
-									h4 Go at your own pace
-									p Enjoy lifetime access to courses on Edututs+&apos;s website
+							.ad-card.ad-card--centered.ad-card--icon
+								.ad-card__content
+									.user-image
+										i.uil.uil-history.ad-card--user-icon
+									.ad-card__body
+										.ad-card__content-header
+											.user-data
+												p.title-h6.title-h6--bolder 100,000 online courses
+										.ad-card__content--details
+											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
-							.value_props
-								.value_icon
-									i.uil.uil-user-check
-								.value_content
-									h4 Learn from industry experts
-									p Select from top instructors around the world
+							.ad-card.ad-card--centered.ad-card--icon
+								.ad-card__content
+									.user-image
+										i.uil.uil-user-check.ad-card--user-icon
+									.ad-card__body
+										.ad-card__content-header
+											.user-data
+												p.title-h6.title-h6--bolder 100,000 online courses
+										.ad-card__content--details
+											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
-							.value_props
-								.value_icon
-									i.uil.uil-play-circle
-								.value_content
-									h4 Find video courses on almost any topic
-									p Build your library for your career and personal growth
+							.ad-card.ad-card--centered.ad-card--icon
+								.ad-card__content
+									.user-image
+										i.uil.uil-presentation-play.ad-card--user-icon
+									.ad-card__body
+										.ad-card__content-header
+											.user-data
+												p.title-h6.title-h6--bolder 100,000 online courses
+										.ad-card__content--details
+											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
-							.value_props
-								.value_icon
-									i.uil.uil-presentation-play
-								.value_content
-									h4 100,000 online courses
-									p Explore a variety of fresh topics
-				section.section3125.mt-50
-					h4.item_title Popular Instructors
-					a.see150(href='all_instructor.html') See all
-					.la5lo1
+							.ad-card.ad-card--centered.ad-card--icon
+								.ad-card__content
+									.user-image
+										i.uil.uil-play-circle.ad-card--user-icon
+									.ad-card__body
+										.ad-card__content-header
+											.user-data
+												p.title-h6.title-h6--bolder 100,000 online courses
+										.ad-card__content--details
+											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+				section.section-index.section-index--pt
+					.d-flex.justify-content-between.align-items-center.w-100
+						h3.title-h6.title-h6--bolder.mb-0  Popular Instructors
+						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+					.section-index.section-index--pt
 						.owl-carousel.top_instrutors.owl-theme
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-1.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') John Doe
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Wordpress &amp; Plugin Tutor
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 100K Students
-											span.vdt15 15 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-2.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Kerstin Cable
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Language Learning Coach, Writer, Online Tutor
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 14K Students
-											span.vdt15 11 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-3.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Jose Portilla
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Head of Data Science, Pierian Data Inc.
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 1M Students
-											span.vdt15 25 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-4.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Farhat Amin
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Cookery Coach
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 1.5K Students
-											span.vdt15 9 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-5.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Kyle Pew
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Microsoft Certified Trainer - 380,000+ Udemy Students
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 300K Students
-											span.vdt15 18 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-7.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Jaysen Batchelor
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Illustrator &amp; Designer
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 491K Students
-											span.vdt15 13 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-8.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Quinton Batchelor
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Photographer &amp; Instructor
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 364K Students
-											span.vdt15 6 Courses
-							.item
-								.fcrse_1.mb-20
-									.tutor_img
-										a(href='instructor_profile_view.html')
-											img(src='../assets/images/left-imgs/img-6.jpg' alt='')
-									.tutor_content_dt
-										.tutor150
-											a.tutor_name(href='instructor_profile_view.html') Eli Natoli
-											.mef78(title='Verify')
-												i.uil.uil-check-circle
-										.tutor_cate Entrepreneur - Passionate Teacher
-										ul.tutor_social_links
-											li
-												a.fb(href='#')
-													i.fab.fa-facebook-f
-											li
-												a.tw(href='#')
-													i.fab.fa-twitter
-											li
-												a.ln(href='#')
-													i.fab.fa-linkedin-in
-											li
-												a.yu(href='#')
-													i.fab.fa-youtube
-										.tut1250
-											span.vdt15 615K Students
-											span.vdt15 12 Courses
+								.ad-card.ad-card--centered.ad-card--user
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.title-h6(href="#") Jose Portilla
+														i.uil.uil-check-circle
+													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													ul.social-icon
+														li.social-icon__list
+															a.social-icon__link.social-icon--fa-bg(href="#")
+																i.fab.fa-facebook-f
+														li.social-icon__list
+															a.social-icon__link.social-icon--tw-bg(href="#")
+																i.fab.fa-twitter
+														li.social-icon__list
+															a.social-icon__link.social-icon--li-bg(href="#")
+																i.fab.fa-linkedin-in
+														li.social-icon__list
+															a.social-icon__link.social-icon--yu-bg(href="#")
+																i.fab.fa-youtube
+													.details
+														span.total-students 615K Students
+														span.total-course 12 Courses
+													a.text-2.profile.mt-3(href="#") Go To Profile
 			.col-xl-3.col-lg-4
-				aside.right_side
-					section.fcrse_2.mb-30
-						.tutor_img
-							a(href='my_instructor_profile_view.html')
-								img(src='../assets/images/left-imgs/img-10.jpg' alt='')
-						.tutor_content_dt
-							.tutor150
-								a.tutor_name(href='my_instructor_profile_view.html') Joginder Singh
-								.mef78(title='Verify')
-									i.uil.uil-check-circle
-							.tutor_cate Web Developer, Designer, and Teacher
-							ul.tutor_social_links
-								li
-									a.fb(href='#')
-										i.fab.fa-facebook-f
-								li
-									a.tw(href='#')
-										i.fab.fa-twitter
-								li
-									a.ln(href='#')
-										i.fab.fa-linkedin-in
-								li
-									a.yu(href='#')
-										i.fab.fa-youtube
-							.tut1250
-								span.vdt15 615K Students
-								span.vdt15 12 Courses
-							a.prfle12link(href='my_instructor_profile_view.html') Go To Profile
-					section.fcrse_3
-						.cater_ttle
-							h4 Live Streaming
-						.live_text
-							.live_icon
-								i.uil.uil-kayak
-							.live-content
-								p Set up your channel and stream live to your students
-								button.live_link(onclick="window.location.href = 'add_streaming.html';")
-									| Get
-									| Started
-								span.livinfo Info : This feature only for &apos;Instructors&apos;.
-					section.get1452
-						img(src="../assets/images/get_img.jpg", alt="", srcset="")
-						h4 Get personalized recommendations
-						p Answer a few questions for your top picks
-						button.Get_btn(onclick="window.location.href = '#';") Get Started
-					section.fcrse_3
-						.cater_ttle
-							h4 Top Categories
-						ul.allcate15
-							li
-								a.ct_item(href='#')
-									i.uil.uil-arrow
-									| Development
-							li
-								a.ct_item(href='#')
-									i.uil.uil-graph-bar
-									| Business
-							li
-								a.ct_item(href='#')
-									i.uil.uil-monitor
-									| IT and Software
-							li
-								a.ct_item(href='#')
-									i.uil.uil-ruler
-									| Design
-							li
-								a.ct_item(href='#')
-									i.uil.uil-chart-line
-									| Marketing
-							li
-								a.ct_item(href='#')
-									i.uil.uil-book-open
-									| Personal Development
-							li
-								a.ct_item(href='#')
-									i.uil.uil-camera
-									| Photography
-							li
-								a.ct_item(href='#')
-									i.uil.uil-music
-									| Music
-					article.strttech120
-						h4 Become an Instructor
-						p
-							| Top instructors from around the world teach millions of students on Cursus. We provide the tools and
-							| skills to teach what you love.
-						button.Get_btn(onclick="window.location.href = '#';") Start Teaching
+				aside.right_side.mt-5
+					.ad-card.ad-card--centered.ad-card--user
+						.ad-card__content
+							.user-image
+								img(src="../../assets/images/hd_dp.jpg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.title-h6(href="#") Jose Portilla
+											i.uil.uil-check-circle
+										p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+										ul.social-icon
+											li.social-icon__list
+												a.social-icon__link.social-icon--fa-bg(href="#")
+													i.fab.fa-facebook-f
+											li.social-icon__list
+												a.social-icon__link.social-icon--tw-bg(href="#")
+													i.fab.fa-twitter
+											li.social-icon__list
+												a.social-icon__link.social-icon--li-bg(href="#")
+													i.fab.fa-linkedin-in
+											li.social-icon__list
+												a.social-icon__link.social-icon--yu-bg(href="#")
+													i.fab.fa-youtube
+										.details
+											span.total-students 615K Students
+											span.total-course 12 Courses
+										a.text-2.profile.mt-3(href="#") Go To Profile
+					.ad-card.ad-card--with-title.ad-card--centered.ad-card--live-stream
+						.ad-card__title.mb-2
+							h5.title-h6 Live Streaming
+						.ad-card__content
+							.user-image
+								img(src="../../assets/images/hd_dp.jpg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										p.text-3.gray Set up your channel and stream live to your students
+										.ad-card__btn
+											button.ad-btn.ad-btn--primary.ad-btn--rounded.semi-bold.my-2  Get Started
+								.ad-card__content--details
+									p.text-2.gray Info : This feature only for 'Instructors'.
+					//- section.get1452
+					//- 	img(src="../assets/images/get_img.jpg", alt="", srcset="")
+					//- 	h4 Get personalized recommendations
+					//- 	p Answer a few questions for your top picks
+					//- 	button.Get_btn(onclick="window.location.href = '#';") Get Started
+					.ad-card.ad-card--with-title.ad-card--top-category
+						.ad-card__title.mb-2
+							h5.title-h6 Top Categories
+						.ad-card__content
+							.ad-card__body
+								.ad-card__content--details
+									ul.ad-card__list
+										li.ad-card__list-item
+											a.ad-card__item-link(href="#")
+												i.uil.uil-arrow
+												| Development
+										li.ad-card__list-item
+											a.ad-card__item-link(href="#")
+												i.uil.uil-graph-bar
+												| Business
+										li.ad-card__list-item
+											a.ad-card__item-link(href="#")
+												i.uil.uil-graph-bar
+												| IT and Software
+										li.ad-card__list-item
+											a.ad-card__item-link(href="#")
+												i.uil-ruler
+												| Design
+					.ad-card.ad-card--centered.ad-card--live-stream.ad-card--no-bg
+						.ad-card__content
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										h2.text-2 Become an Instructor
+										p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
+										.ad-card__btn
+											button(type="submit").ad-btn.ad-btn--primary.ad-btn--rounded.semi-bold.my-2  Get Started
 			.col-xl-12.col-lg-12
 				section.section3125.mt-30
-					h4.item_title What Our Student Have Today
+					.d-flex.flex-column.my-2
+						.d-flex.justify-content-between.align-items-center.w-100
+							h3.text-6.mb-0 What Our Student Have Today
 					.la5lo1
 						.owl-carousel.Student_says.owl-theme
 							.item
-								article.fcrse_4.mb-20
-									.say_content
-										p
-											| &quot;Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi, in placerat eros ultricies
-											| vitae. Praesent pellentesque blandit scelerisque. Suspendisse potenti.&quot;
-									.st_group
-										.stud_img
-											img(src='../assets/images/left-imgs/img-4.jpg' alt='')
-										h4 Jassica William
+								.ad-card.ad-card__testimonial
+									.ad-card__title
+										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
 							.item
-								article.fcrse_4.mb-20
-									.say_content
-										p
-											| &quot;Cras id enim lectus. Fusce at arcu tincidunt, iaculis libero quis, vulputate mauris. Morbi
-											| facilisis vitae ligula id aliquam. Nunc consectetur malesuada bibendum.&quot;
-									.st_group
-										.stud_img
-											img(src='../assets/images/left-imgs/img-1.jpg' alt='')
-										h4 Rock Smith
+								.ad-card.ad-card__testimonial
+									.ad-card__title
+										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
 							.item
-								article.fcrse_4.mb-20
-									.say_content
-										p
-											| &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad
-											| litora torquent per conubia nostra, per inceptos himenaeos eros ac, sagittis orci.&quot;
-									.st_group
-										.stud_img
-											img(src='../assets/images/left-imgs/img-7.jpg' alt='')
-										h4 Luoci Marchant
+								.ad-card.ad-card__testimonial
+									.ad-card__title
+										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
 							.item
-								article.fcrse_4.mb-20
-									.say_content
-										p
-											| &quot;Nulla bibendum lectus pharetra, tempus eros ac, sagittis orci. Suspendisse posuere dolor
-											| neque, at finibus mauris lobortis in. Pellentesque vitae laoreet tortor.&quot;
-									.st_group
-										.stud_img
-											img(src='../assets/images/left-imgs/img-6.jpg' alt='')
-										h4 Poonam Sharma
+								.ad-card.ad-card__testimonial
+									.ad-card__title
+										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
 							.item
-								article.fcrse_4.mb-20
-									.say_content
-										p
-											| &quot;Curabitur placerat justo ac mauris condimentum ultricies. In magna tellus, eleifend et
-											| volutpat id, sagittis vitae est. Pellentesque vitae laoreet tortor.&quot;
-									.st_group
-										.stud_img
-											img(src='../assets/images/left-imgs/img-3.jpg' alt='')
-										h4 Davinder Singh
+								.ad-card.ad-card__testimonial
+									.ad-card__title
+										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+									.ad-card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.ad-card__body
+											.ad-card__content-header
+												.user-data
+													a.text-2(href="#") Jose Portilla
 
 //- section.page.home__page
 //-   h1.page__title # Index page

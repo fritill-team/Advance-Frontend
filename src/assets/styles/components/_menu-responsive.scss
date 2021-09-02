@@ -14,14 +14,14 @@
     display: block;
     padding: 0;
     border: 0;
-    background: #fff;
+    background: $white;
     color: #737373;
     font-size: 120%;
     margin: 0;
     cursor: pointer;
     float: left;
     &:hover {
-      color: #ed2a26;
+      color: $primaryLight;
     }
   }
 }
@@ -30,7 +30,7 @@
   left: -240px;
   top: 60px;
   bottom: 0;
-  background: #fff;
+  background: $white;
   overflow: hidden;
   width: 240px;
   z-index: 995;
@@ -63,7 +63,7 @@
             font-weight: 500;
             white-space: nowrap;
             cursor: pointer;
-            font-family: Roboto, sans-serif;
+            font-family: $quicksand;
             margin-bottom: 0.5rem;
             display: block;
 
@@ -83,12 +83,12 @@
             }
             &:hover {
               background: #ffecec;
-              color: #ed2a26 !important;
+              color: $primaryLight !important;
             }
           }
           .active {
             background: #ffecec;
-            color: #ed2a26;
+            color: $primaryLight;
           }
         }
         .menu--item__has_sub_menu {
@@ -119,12 +119,12 @@
                 padding-left: 50px;
                 padding-right: 16px;
                 font-size: 14px;
-                font-family: Roboto, sans-serif;
+                font-family: $quicksand;
                 font-weight: 400;
                 color: #333;
                 text-decoration: none;
                 &:hover {
-                  color: #ed2a26 !important;
+                  color: $primaryLight !important;
                   background: #ffecec;
                 }
               }
@@ -144,7 +144,7 @@
         padding: 20px 17px 10px;
         font-size: 12px;
         font-weight: 500;
-        font-family: Roboto, sans-serif;
+        font-family: $quicksand;
         color: #afafaf;
         text-align: left;
         margin-bottom: 0;
@@ -166,7 +166,7 @@
               font-weight: 500;
               white-space: nowrap;
               cursor: pointer;
-              font-family: Roboto, sans-serif;
+              font-family: $quicksand;
             }
           }
         }
@@ -180,13 +180,13 @@
           .item-link {
             font-size: 13px;
             font-weight: 500;
-            font-family: Roboto, sans-serif;
+            font-family: $quicksand;
             text-align: left;
             line-height: 24px;
             padding: 0 3px;
             color: #333;
             &:hover {
-              color: #ed2a26 !important;
+              color: $primaryLight !important;
             }
           }
         }
@@ -196,7 +196,7 @@
         p {
           font-size: 12px;
           font-weight: 400;
-          font-family: Roboto, sans-serif;
+          font-family: $quicksand;
           color: #afafaf;
           text-align: left;
           line-height: 24px;
@@ -210,7 +210,7 @@
 }
 .nav--opened {
   left: 0 !important;
-  box-shadow: rgba(0, 0, 0, 0.2)-30px 0 30px 30px;
+  box-shadow: -30px 0 30px 30px rgba(0, 0, 0, 0.2);
 }
 .collapse_menu {
   display: none;
@@ -224,8 +224,8 @@
     height: 60px;
     padding: 0;
     border: 0;
-    background: #ed2a26;
-    color: #fff;
+    background: $primaryLight;
+    color: $white;
     font-size: 30px;
     margin: 0;
     cursor: pointer;
@@ -245,7 +245,7 @@
       line-height: 40px;
     }
     &:hover {
-      color: #fff;
+      color: $white;
       background: #af1f24;
     }
   }
@@ -315,14 +315,14 @@
       display: block;
       padding: 0;
       border: 0;
-      background: #fff;
+      background: $white;
       color: #737373;
       font-size: 120%;
       margin: 0;
       cursor: pointer;
       float: left;
       &:hover {
-        color: #ed2a26;
+        color: $primaryLight;
       }
     }
   }

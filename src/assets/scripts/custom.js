@@ -519,7 +519,7 @@ $(".card__header--collapse").each(function () {
     $(this).children('.card__collapse--toggle').toggleClass('active');
   })
 })
- 
+
 
 //sidebar__playlist
 
@@ -542,6 +542,145 @@ $(".playlist__close").click(function() {
 });
 
 // checked box icon in video-list icon
-$(".play-list--hide").click(function() { 
-  $(".play-list--hide").toggleClass("play-list__check--show"); 
+$(".play-list--hide").click(function() {
+  $(".play-list--hide").toggleClass("play-list__check--show");
 });
+
+// edit thread
+
+$(document)
+.on('click', 'content__item', function () {
+  $(".content__item").toggleClass('nav--opened vertical--minify')
+  wrapper.toggleClass('toggle-content wrapper--minify ');
+  sidebarIcon.toggleClass("open-side-nav");
+  // $('.sub-menu-item').each(function (i, item) {
+  //   $(item).removeClass('menu--opened')
+  // })
+})
+//  $( ".submit-post .submit__btn").click(function() {
+//   $(this).each(function(){
+//     $(".edit-post").css("display", "none");
+//     $("#post-card").css("display", "block")
+//   })
+//  });
+// $(document).on('click', '.edit', function () {
+//   $(this).closest('p').remove();
+// });
+
+// var edit = $('.edit');
+
+// $(document).ready(function(){
+//    for(var i = 0; edit.length; i++) {
+//     $(edit).on("click",function(){
+//       $(".post--card").css("display", "none");
+//      $(".edit--post").css("display", "block");
+//    })
+//   }
+// });
+
+// edit thread
+ $("#edit").each(function() {
+$(this).on("click",function(){
+     $("#postCard").css("display", "none");
+    $("#editPostThread").css("display", "block");
+  })
+ });
+ $(".submit-post .submit__btn").each(function() {
+  $(this).on("click",function(e){
+    e.preventDefault();
+    $("#editPostThread").css("display", "none");
+    $("#postCard").css("display", "block")
+  })
+ });
+ // edit replay
+ $("#editReplay").each(function() {
+  $(this).on("click",function(){
+       $("#CardReplay").css("display", "none");
+      $("#editCardReplay").css("display", "block");
+    })
+   });
+   $(".submit-post .submit__btn").each(function() {
+    $(this).on("click",function(e){
+      e.preventDefault();
+      $("#editCardReplay").css("display", "none");
+      $("#CardReplay").css("display", "block")
+    })
+   });
+ // edit comment
+ $("#editComment").each(function() {
+  $(this).on("click",function(){
+       $("#comment").css("display", "none");
+      $("#editCommentForm").css("display", "block");
+    })
+   });
+   $(".submit-post .submit__btn").each(function() {
+    $(this).on("click",function(e){
+      e.preventDefault();
+      $("#editCommentForm").css("display", "none");
+      $("#comment").css("display", "block")
+    })
+   });
+//  $( ".submit-post .submit__btn").click(function() {
+//   $(this).each(function(){
+//     $(".edit-post").css("display", "none");
+//     $("#post-card").css("display", "block")
+//   })
+//  });
+
+
+// $('.sub-menu-item').click(function () {
+//   if ($(this).hasClass('menu--opened')) {
+//     $('.menu--opened .item__link').addClass('active--menu');
+//   } else {
+//     $('.sub-menu-item .item__link').removeClass('active--menu');
+//   }
+// });
+
+
+// drop-zone
+
+$("div#myId").dropzone({ url: "/file/post" });
+ 
+
+//tabs 
+ 
+$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.tabs-login a').click(function(e){
+  e.preventDefault();
+    var $this = $(this),
+        tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
+        others = $this.closest('li').siblings().children('a'),
+        target = $this.attr('href');
+    others.removeClass('active');
+    $this.addClass('active');
+    $(tabgroup).children('div').hide();
+    $(target).show();
+  
+})
+
+// toaster js
+
+$("#toastr").on('click',function(){
+  toastr.info('test click')
+  // toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
+  // toastr.options = {
+  //   "closeButton": false,
+  //   "debug": false,
+  //   "newestOnTop": false,
+  //   "progressBar": false,
+  //   "positionClass": "toast-top-right",
+  //   "preventDuplicates": false,
+  //   "onclick": null,
+  //   "showDuration": "300",
+  //   "hideDuration": "1000",
+  //   "timeOut": "5000",
+  //   "extendedTimeOut": "1000",
+  //   "showEasing": "swing",
+  //   "hideEasing": "linear",
+  //   "showMethod": "fadeIn",
+  //   "hideMethod": "fadeOut"
+  // }
+})
+
+
