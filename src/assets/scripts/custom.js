@@ -636,10 +636,9 @@ $(this).on("click",function(){
 //   }
 // });
 
+
 // drop-zone
-// $("div#myId").dropzone({ url: "/file/post" });
-// myDropzone.on("complete", function(file) {
-//   myDropzone.removeFile(file);
-// });
+
 $("div#myId").dropzone({ url: "/file/post" });
  
+
