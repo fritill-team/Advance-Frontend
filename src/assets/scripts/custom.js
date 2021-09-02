@@ -644,8 +644,8 @@ $("div#myId").dropzone({ url: "/file/post" });
 
 // toaster js
 
-$("#toastr").click(function(){
-  toastr.success("My name is Inigo Montoya. You killed my father. Prepare to die!")
+$("#toastr").on('click',function(){
+  toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
   toastr.options = {
     "closeButton": false,
     "debug": false,
@@ -664,3 +664,4 @@ $("#toastr").click(function(){
     "hideMethod": "fadeOut"
   }
 })
+
