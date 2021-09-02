@@ -445,7 +445,7 @@
   z-index: 1000;
   position: absolute;
   display: block;
-  display: none;
+  display: none !important;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
