@@ -635,3 +635,9 @@ $(this).on("click",function(){
 //     $('.sub-menu-item .item__link').removeClass('active--menu');
 //   }
 // });
+
+// drop-zone
+$("div#myId").dropzone({ url: "/file/post" });
+myDropzone.on("complete", function(file) {
+  myDropzone.removeFile(file);
+});

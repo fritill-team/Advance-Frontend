@@ -19,7 +19,7 @@ block content
 					.col-lg-12
 						.d-flex.flex-column.my-3
 							.d-flex.justify-content-between.align-items-center
-								h11.title-h1.mb-0.mb-2 Media Library 
+								h2.title-h2.mb-0.mb-2 Media Library
 								button.ad-btn.ad-btn--primary.ad-btn--rounded.my-2 create
 					.col-lg-9
 						.row
@@ -48,32 +48,32 @@ block content
 								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
 								include ../components/media-card.pug
 					.col-lg-3
-						.general-wrapper.general-wrapper--card-details 
-							.general-wrapper__header
-								h3 general details
-								.general-actions
-									a(href="/"): i.far.fa-edit(aria-hidden="true")
-									a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-							.general-wrapper__content 
+						.general-wrapper.general-wrapper--card-details
+							//- .general-wrapper__header
+							//- 	h3 general details
+							//- 	.general-actions
+							//- 		a(href="/"): i.far.fa-edit(aria-hidden="true")
+							//- 		a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
+							.general-wrapper__content
 								.row
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Id :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Author :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 duration :
 									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur 
+										p.my-2 Lorem ipsum, dolor sit amet consectetur
 				// cover bg or video
 				.row
 					.col-lg-12
 						.d-flex.flex-column.my-3
 							.d-flex.justify-content-between.align-items-center
-								h11.title-h1.mb-0.mb-2 Media Library 
+								h2.title-h2.mb-0.mb-2 Media Library
 								button.ad-btn.ad-btn--primary.ad-btn--rounded.my-2 create
 					.col-lg-9
 						.row
@@ -86,124 +86,152 @@ block content
 										img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
 										.more-dropdown.more-dropdown--absolute
 											.more-dropdown__link(href="#")
-												i.uil.uil-ellipsis-v.more-dropdown__icon
+												i.fas.fa-ellipsis-v.more-dropdown__icon
 											.more-dropdown__content
 												span.content__item
 													i.item__icon.uil.uil-comment-alt-edit
 													| Edite
 												span.content__item
 													i.item__icon.uil.uil-trash-alt
-													| Delete 
+													| Delete
 									.details-card
 										p.title-2.gray Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae consequatur atque iste, quo similique eius repellat aliquam, vitae corporis excepturi dolore facere? Alias ipsum aliquid laborum, perferendis ipsam fugiat in.
-									 
+
 					.col-lg-3
-						.general-wrapper.general-wrapper--card-details 
-							.general-wrapper__header
-								h3 general details
-								.general-actions
-									a(href="/"): i.far.fa-edit(aria-hidden="true")
-									a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-							.general-wrapper__content 
+						.general-wrapper.general-wrapper--card-details
+							.general-wrapper__content
 								.row
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Id :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Author :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 duration :
 									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur 
+										p.my-2 Lorem ipsum, dolor sit amet consectetur
 
 				// fails
 				.row
 					.col-lg-12
 						.d-flex.flex-column.my-3
 							.d-flex.justify-content-between.align-items-center
-								h11.title-h1.mb-0.mb-2 Download File
+								h2.title-h2.mb-0.mb-2 Download File
 								button.ad-btn.ad-btn--primary.ad-btn--rounded.my-2 create
 					.col-lg-9
 						.row
 							.col-lg-6
-								.ad-card.ad-card--card-file  
-									a(href="#" class="ad-card--file-download")  
-										i.fas.fa-download
+								.ad-card.ad-card--card-file
+									//- a(href="#" class="ad-card--file-download")
+									//- 	i.fas.fa-download
+									.more-dropdown.more-dropdown--absolute
+										.more-dropdown__link
+											i.fas.fa-ellipsis-v.more-dropdown__icon
+										.more-dropdown__content
+											span.content__item
+												i.item__icon.uil.uil-comment-alt-edit
+												| Edit
+											span.content__item
+												i.item__icon.uil.uil-trash-alt
+												| Delete
 									.ad-card__content
-										.user-image
+										.file-card
+											i.far.fa-file-pdf.file-icon.gray
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													h3.text-h3(href="#") file Item 
+													h3.text-h3 file Item
 											.ad-card__content--details
-												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet 
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
+												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+										//- .file-card
+										//- 	i.far.fa-file-pdf.file-icon.gray
 							.col-lg-6
-								.ad-card.ad-card--card-file  
-									a(href="#" class="ad-card--file-download")  
-										i.fas.fa-download
+								.ad-card.ad-card--card-file
+									//- a(href="#" class="ad-card--file-download")
+									//- 	i.fas.fa-download
+									.more-dropdown.more-dropdown--absolute
+										.more-dropdown__link
+											i.fas.fa-ellipsis-v.more-dropdown__icon
+										.more-dropdown__content
+											span.content__item
+												i.item__icon.uil.uil-comment-alt-edit
+												| Edit
+											span.content__item
+												i.item__icon.uil.uil-trash-alt
+												| Delete
 									.ad-card__content
-										.user-image
+										.file-card
+											i.far.fa-file-pdf.file-icon.gray
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													h3.text-h3(href="#") file Item 
+													h3.text-h3 file Item
 											.ad-card__content--details
-												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet 
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
+												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 							.col-lg-6
-								.ad-card.ad-card--card-file  
-									a(href="#" class="ad-card--file-download")  
-										i.fas.fa-download
+								.ad-card.ad-card--card-file
+									//- a(href="#" class="ad-card--file-download")
+									//- 	i.fas.fa-download
+									.more-dropdown.more-dropdown--absolute
+										.more-dropdown__link
+											i.fas.fa-ellipsis-v.more-dropdown__icon
+										.more-dropdown__content
+											span.content__item
+												i.item__icon.uil.uil-comment-alt-edit
+												| Edit
+											span.content__item
+												i.item__icon.uil.uil-trash-alt
+												| Delete
 									.ad-card__content
-										.user-image
+										.file-card
+											i.far.fa-file-pdf.file-icon.gray
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													h3.text-h3(href="#") file Item 
+													h3.text-h3 file Item
 											.ad-card__content--details
-												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet 
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
+												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 							.col-lg-6
-								.ad-card.ad-card--card-file  
-									a(href="#" class="ad-card--file-download")  
-										i.fas.fa-download
+								.ad-card.ad-card--card-file
+									//- a(href="#" class="ad-card--file-download")
+									//- 	i.fas.fa-download
+									.more-dropdown.more-dropdown--absolute
+										.more-dropdown__link
+											i.fas.fa-ellipsis-v.more-dropdown__icon
+										.more-dropdown__content
+											span.content__item
+												i.item__icon.uil.uil-comment-alt-edit
+												| Edit
+											span.content__item
+												i.item__icon.uil.uil-trash-alt
+												| Delete
 									.ad-card__content
-										.user-image
+										.file-card
+											i.far.fa-file-pdf.file-icon.gray
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													h3.text-h3(href="#") file Item 
+													h3.text-h3 file Item
 											.ad-card__content--details
-												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet 
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
+												p.text-1 lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 					.col-lg-3
-						.general-wrapper.general-wrapper--card-details 
-							.general-wrapper__header
-								h3 general details
-								.general-actions
-									a(href="/"): i.far.fa-edit(aria-hidden="true")
-									a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-							.general-wrapper__content 
+						.general-wrapper.general-wrapper--card-details
+							.general-wrapper__content
 								.row
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Id :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 Author :
 									.col-md-8
 										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-3  
+									.col-md-3
 										h4.description__name.my-2 duration :
 									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur 
+										p.my-2 Lorem ipsum, dolor sit amet consectetur
 
 

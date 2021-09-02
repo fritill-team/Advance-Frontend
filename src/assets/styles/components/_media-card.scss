@@ -41,4 +41,9 @@
       padding: 20px;
     }
   }
+  &.media-card--height{
+    .media-card__image {
+      height: 350px;
+    }
+  }
 }
