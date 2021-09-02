@@ -29,6 +29,13 @@
 			vertical-align: middle;
 			border-top: 1px solid #efefef ;
 			padding: 1.5rem .75rem ;
+			td a {
+				color: #4183c4;
+				&:hover{
+					color: black;
+					transition: .3s ease all ;
+				}
+			}
 			b.course_active {
 				color: #ed2a26;
 				font-weight: bold;
