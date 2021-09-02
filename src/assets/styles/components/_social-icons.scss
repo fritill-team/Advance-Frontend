@@ -15,7 +15,7 @@
   border-radius: 100%;
   text-align: center;
   padding: 9px 0;
-  color: $white;
+  color: $white !important;
   transition: all 0.3s ease;
   &.social-icon--fa-bg {
     background: $facebook;

@@ -135,7 +135,7 @@
         font-family: $quicksand;
       }
       &.text-field--icon {
-        padding-left: 4em !important;
+        padding-left: 3em !important;
       }
 
       &:focus {
@@ -144,6 +144,10 @@
         }
         // border: 1px solid #333 !important;
         // box-shadow: none !important;
+      }
+      &.text-field__input--border-none {
+        border: none;
+        padding: 12px 14px 12px 50px;
       }
     }
     .text-field__limit {
