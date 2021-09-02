@@ -393,11 +393,21 @@
   float: left;
   width: 135px;
   margin-left: 20px;
-  .main-logo--img {
-    .img--logo-inverse {
-      display: none;
-    }
-  }
+	.main-logo--img{
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
+	}
+	.img--logo-inverse {
+		display: none;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
+	}
 }
 .header__top-category {
   .top-category--menu-dropdown {
@@ -523,10 +533,11 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 375px) {
   .header {
     .header--main-logo {
       width: 100px;
+			margin-left: 0;
     }
   }
 }

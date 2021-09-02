@@ -49,12 +49,20 @@
   }
   input {
     display: none;
-    &:checked {
+    &:checked{
       & + .user-card__label {
         .check {
           opacity: 1;
         }
       }
     }
+		&:disabled{
+			& + .user-card__label {
+				cursor: not-allowed;
+        .check {
+          opacity: 1;
+        }
+      }
+		}
   }
 }

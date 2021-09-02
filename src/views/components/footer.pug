@@ -1,9 +1,9 @@
 //- src/views/components/footer.pug
 
 footer.footer
-  .container-fluid
+  .container
     .row
-      .col-lg-3.col-md-3.col-sm-6
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
         .footer__footer-content 
           //- a(href='about.pug') About
           a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
@@ -11,19 +11,19 @@ footer.footer
           //- a(href='our_blog.html') Blog
           a.footer-content__link(href='career.html') Careers
           a.footer-content__link(href='press.html') Press
-      .col-lg-3.col-md-3.col-sm-6
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
         .footer__footer-content
           a.footer-content__link(href='help.html') Help
           a.footer-content__link(href='coming_soon.html') Advertise
           a.footer-content__link(href='coming_soon.html') Developers
           a.footer-content__link(href='contact_us.html') Contact Us
-      .col-lg-3.col-md-3.col-sm-6
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
         .footer__footer-content
           a.footer-content__link(href='terms_of_use.html') Copyright Policy
           a.footer-content__link(href='terms_of_use.html') Terms
           a.footer-content__link(href='terms_of_use.html') Privacy Policy
           a.footer-content__link(href='sitemap.html') Sitemap
-      .col-lg-3.col-md-3.col-sm-6
+      .col-lg-3.col-md-6.col-sm-6.col-xs-6
         .footer__footer-buttons
           a.footer-buttons__link(href='terms_of_use.html') Teach on Cursus
           .footer-buttons__btn-language
@@ -110,7 +110,7 @@ footer.footer
       .col-lg-12
         .footer-line
           .row
-            .col-md-6.col-sm-6
+            .col-md-6.col-sm-12.col-xs-12
               ul.copy-right
                 li.copy-right__list
                   a.list__link(href='index.html')
@@ -121,7 +121,7 @@ footer.footer
                     | &copy; 2020 
                     strong Cursus
                     | . All Rights Reserved.
-            .col-md-6.col-sm-6
+            .col-md-6.col-sm-12.col-xs-12
               .social-links
                 a.social-links__link(href='#')
                   i.fab.fa-facebook-f
