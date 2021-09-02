@@ -637,25 +637,9 @@ $(this).on("click",function(){
 // });
 
 // drop-zone
-var myDropzone = new Dropzone("#mydropzone", {
-  url: "/file/post",
-  acceptedFiles: accept,
-  uploadMultiple: false,
-  createImageThumbnails: false,
-  addRemoveLinks: true,
-  maxFiles: 3,
-  maxfilesexceeded: function(file) {
-    this.removeAllFiles();
-    this.addFile(file);
-  },
-  init: function() {
-    this.on('error', function(file, errorMessage) {
-      if (file.accepted) {
-        var mypreview = document.getElementsByClassName('dz-error');
-        mypreview = mypreview[mypreview.length - 1];
-        mypreview.classList.toggle('dz-error');
-        mypreview.classList.toggle('dz-success');
-      }
-    }); 
-  } 
-});
+// $("div#myId").dropzone({ url: "/file/post" });
+// myDropzone.on("complete", function(file) {
+//   myDropzone.removeFile(file);
+// });
+$("div#myId").dropzone({ url: "/file/post" });
+ 
