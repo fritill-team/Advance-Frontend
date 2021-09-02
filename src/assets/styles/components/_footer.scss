@@ -73,6 +73,7 @@
 }
 // .fotb_left
 .copy-right{
+  margin-top: 0px;
   .copy-right__list{
     display: inline-block;
     vertical-align: middle;
@@ -81,9 +82,10 @@
         img{
           width: 30px;
           margin-right: 20px;
+          line-height: 24px;
+          padding-top: 10px;
         }
       }
-
     }
     p.list__paragraph{
       font-size: 14px;
@@ -98,6 +100,7 @@
 }
 .social-links{
   text-align: right;
+  margin-left: -10px;
   .social-links__link{
     padding-top: 10px;
     padding-left: 15px;
@@ -115,18 +118,19 @@
   Responsive
 */
 
-@media (min-width: 500px) and (max-width: 1200px) {
-  .container-fluid {
-    padding-right: 30px !important;
-    padding-left: 30px !important;
+@media (min-width: 0px) and (max-width: 720px) {
+  .container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
 }
-@media (max-width: 576px){
+@media (min-width: 0px) and (max-width: 768px){
   .social-links {
     text-align: left !important;
     margin-top: 10px;
   }
 }
+
 html[dir="rtl"] {
   .footer {
     padding: 0;
@@ -170,6 +174,19 @@ html[dir="rtl"] {
     text-align: left;
     .social-links__link{
       padding-top: 10px;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 720px) {
+    .container {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 768px){
+    .social-links {
+      text-align: right !important;
+      margin-top: 10px;
+      margin-right: 20px;
     }
   }
 }
