@@ -1,34 +1,57 @@
-table{
-  margin-bottom: 0px;
-  font-size: 14px;
-  border-spacing: 0;
-  &.table{
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
-  }
-  &.ucp-table{
-    height: auto;
-    overflow: hidden;
-    border-radius: 4px;
-    border-top: 1px solid #efefef !important;
-  }
-  thead{
-    font-weight: 500;
-    padding: 14px !important;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    color: #333 !important;
-    tr th:first-child {
-      border-bottom-left-radius: 4px;
-      border-top: 0 !important;
-    }
-    tr th {
-      color: #333;
-      font-size: 14px;
-      background-color: #ffecec;
-      vertical-align: bottom;
-    border-bottom: 0 !important;
-    }
-  }
+.table-responsive{
+	border: 1px solid #efefef;
+	border-radius: 5px;
+	margin-bottom: 12px;
+}
+.table{
+	width: 100%;
+	color: #212529;
+	font-size: 14px;
+	text-align: center;
+}
+.table-dashboard{
+	height: auto;
+	border-radius: 4px;
+	border-top: 1px solid #efefef;
+	.thead-dashboard{
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		color: #333;
+		tr,th {
+			background-color: #ffecec;
+			padding: 12px;
+		}
+	}
+	tbody {
+		font-family: 'Roboto', sans-serif;
+		background: #fff;
+		tr,td {
+			vertical-align: middle;
+			border-top: 1px solid #efefef ;
+			padding: 1.5rem .75rem ;
+			b.course_active {
+				color: #ed2a26;
+				font-weight: bold;
+			}
+			a.icon {
+				color: #686f7a;
+				margin-right: 5px;
+
+			}
+		}	
+	}
+	th , td{
+		&:nth-of-type(2){
+			text-align: left;
+		}
+	}	
+}
+html[dir="rtl"] {
+	.table-dashboard{
+		th , td{
+			&:nth-of-type(2){
+				text-align: right;
+			}
+		}	
+	}
 }
