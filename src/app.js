@@ -20,3 +20,4 @@ import "./assets/vendor/sortable.js";
 
 // js
 import "./assets/scripts/index";
+

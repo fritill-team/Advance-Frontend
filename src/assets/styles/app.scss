@@ -7,7 +7,7 @@ ul {
 
 @import "./base/_fonts.scss";
 @import "./base/_variables.scss";
-
+@import "./custom/toastr";
 @import "./base/_style.scss";
 @import "./base/_rtl.scss";
 @import "./custom/_auth-forms.scss";
@@ -40,8 +40,9 @@ ul {
 @import "./components/_tags";
 @import "./components/_info";
 @import "./components/_video-player";
-@import "./components/_general-wrapper";
 
+@import "./components/_general-wrapper";
+@import "./components/_table-dashboard";
 @import "./components/_rich-textarea";
 
 @import "./components/_general-card";
