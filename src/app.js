@@ -10,7 +10,7 @@ import "./assets/vendor/select2.min.js";
 import "./assets/vendor/semantic/semantic.min.js";
 import "./assets/vendor/OwlCarousel/owl.carousel.js";
 
-import "./assets/vendor/bootstrap/js/bootstrap.min.js";
+// import "./assets/vendor/bootstrap/js/bootstrap.min.js";
 import "./assets/vendor/popper.min.js";
 import "./assets/vendor/lightbox.min.js";
 import "./assets/vendor/select2.min.js";
