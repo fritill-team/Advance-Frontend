@@ -2,5 +2,14 @@
   width: 500px;
   .toast{
     max-width: unset;
+    width: 100%;
+    &.toast-success{
+      background-color: $green;
+      // opacity: 1;
+      border: 1px solid red;
+      &:hover{
+        
+      }
+    }
   }
 }
