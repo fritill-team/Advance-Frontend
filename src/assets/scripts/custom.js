@@ -652,8 +652,8 @@ $('.tabs-login a').click(function(e){
         tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
         others = $this.closest('li').siblings().children('a'),
         target = $this.attr('href');
-    others.removeClass('active');
-    $this.addClass('active');
+    others.removeClass('active-tab');
+    $this.addClass('active-tab');
     $(tabgroup).children('div').hide();
     $(target).show();
   

@@ -312,7 +312,7 @@ nav ul li:hover > ul,
 /* === Body Scrollbar === */
 
 body::-webkit-scrollbar {
-  width: 14px;
+  width: 4px !important;
   height: 18px;
 }
 body::-webkit-scrollbar-button {
@@ -8431,6 +8431,12 @@ a.rmv-btn i {
     display: none;
   }
 }
+.sidebar__menu::-webkit-scrollbar {
+  width: 4px !important;
+}
+.sidebar::-webkit-scrollbar {
+  width: 4px !important;
+}
 // .vertical_nav::-webkit-scrollbar {
 //   display: none;
 // }
@@ -8657,6 +8663,66 @@ input[type="tel"] {
   justify-content: center;
   li {
     margin: 5px 20px;
+    .tab-link {
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+      }
+      &:hover {
+        color: $darkBlack;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    .active-tab {
+      transition: 0.3 ease all;
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+        width: 100%;
+      }
+    }
   }
 }
 .terms-link {
@@ -8695,5 +8761,13 @@ input[type="tel"] {
   .iti__country-list {
     width: 300px;
     height: 300px;
+  }
+}
+// index
+.section-index {
+  float: left;
+  width: 100%;
+  &.section-index--pt {
+    padding-top: 20px;
   }
 }
