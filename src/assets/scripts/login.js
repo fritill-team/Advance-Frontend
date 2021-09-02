@@ -1,20 +1,20 @@
 // script reset page
 
 // let emailEl = document.querySelector('#emailtype');
-$('#emailType').on('input', function (e) {
-  let value = e.target.value;
+// $('#emailType').on('input', function (e) {
+//   let value = e.target.value;
 
-  if (value.match(/^\d+$/)) {
-    $('#icon-message').hide();
-    $('#key-number').show();
-    e.target.type = 'number';
-  } else {
-    $('#icon-message').show();
-    $('#key-number').hide();
-    e.target.type = 'email';
-  }
+//   if (value.match(/^\d+$/)) {
+//     $('#icon-message').hide();
+//     $('#key-number').show();
+//     e.target.type = 'number';
+//   } else {
+//     $('#icon-message').show();
+//     $('#key-number').hide();
+//     e.target.type = 'email';
+//   }
 
-});
+// });
 
 // script reset page
 var verification = (function () {

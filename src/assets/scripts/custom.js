@@ -642,6 +642,23 @@ $(this).on("click",function(){
 $("div#myId").dropzone({ url: "/file/post" });
  
 
+//tabs 
+ 
+$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.tabs-login a').click(function(e){
+  e.preventDefault();
+    var $this = $(this),
+        tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
+        others = $this.closest('li').siblings().children('a'),
+        target = $this.attr('href');
+    others.removeClass('active');
+    $this.addClass('active');
+    $(tabgroup).children('div').hide();
+    $(target).show();
+  
+})
+
 // toaster js
 
 $("#toastr").on('click',function(){
@@ -665,4 +682,5 @@ $("#toastr").on('click',function(){
   //   "hideMethod": "fadeOut"
   // }
 })
+
 
