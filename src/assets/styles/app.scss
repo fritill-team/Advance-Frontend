@@ -6,7 +6,12 @@ ul {
 
 
 @import "./base/_fonts.scss";
+<<<<<<< HEAD
 @import "./base/_variables.scss"; 
+=======
+@import "./base/_variables.scss";
+@import "./custom/toastr";
+>>>>>>> 0c0103966ed9146887f9a7a2485b5dec36baa8fd
 @import "./base/_style.scss";
 @import "./base/_rtl.scss";
 @import "./custom/_auth-forms.scss";
@@ -39,8 +44,9 @@ ul {
 @import "./components/_tags";
 @import "./components/_info";
 @import "./components/_video-player";
-@import "./components/_general-wrapper";
 
+@import "./components/_general-wrapper";
+@import "./components/_table-dashboard";
 @import "./components/_rich-textarea";
 
 @import "./components/_general-card";
