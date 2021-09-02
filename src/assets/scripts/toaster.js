@@ -6,7 +6,7 @@ export const toggleToast = function (message,  type = 'info') {
     "closeButton": true,
     "debug": false,
     "newestOnTop": false,
-    "progressBar": true,
+    "progressBar": false,
     "positionClass": "toast-bottom-right",
     "preventDuplicates": false,
     "onclick": null,

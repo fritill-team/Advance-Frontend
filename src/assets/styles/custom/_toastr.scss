@@ -5,10 +5,24 @@
     width: 100%;
     &.toast-success{
       background-color: $green;
-      // opacity: 1;
-      border: 1px solid red;
+      border: 2px solid $green;
       &:hover{
-        
+        box-shadow: 0 0 12px $light-green;
+      }
+    }
+    &.toast-info{
+      background-color: $facebook;
+    }
+    &.toast-warning{
+      background-color: $yellow;
+      &:hover{
+        box-shadow: 0 0 12px $warning;
+      }
+    }
+    &.toast-error{
+      background-color: $primary;
+      &:hover{
+        box-shadow: 0 0 12px $primaryLight;
       }
     }
   }
