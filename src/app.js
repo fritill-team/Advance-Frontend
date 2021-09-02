@@ -10,7 +10,6 @@ import "./assets/vendor/select2.min.js";
 import "./assets/vendor/semantic/semantic.min.js";
 import "./assets/vendor/OwlCarousel/owl.carousel.js";
 import "./assets/vendor/dropzone.js";
-import "./assets/vendor/toastr.min.js";
  
 
 // import "./assets/vendor/bootstrap/js/bootstrap.min.js";
@@ -21,3 +20,4 @@ import "./assets/vendor/sortable.js";
 
 // js
 import "./assets/scripts/index";
+
