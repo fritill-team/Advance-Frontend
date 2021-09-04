@@ -23,9 +23,12 @@ block content
 	//-     #login-number.tab-pane.fade.show(role='tabpanel')
 	//-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
 	form.ad-form
-		section(id="first-tab-group" class="tabgroup").pt-5
+		section(id="first-tab-group" class="tabgroup")
 			#tab1.tabContent
-				.field-wrapper.field-wrapper--no-message 
+				.field-wrapper 
+					label.text-field__label 
+						|	Course Title 
+						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='email'
@@ -38,7 +41,10 @@ block content
 							value=''
 							)
 						i.far.fa-envelope.icon-message#icon-message(style="display : block") 
-				.field-wrapper.field-wrapper--no-message.mt-15
+				.field-wrapper
+					label.text-field__label 
+						|	Course Title 
+						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
@@ -49,17 +55,16 @@ block content
 							id="emailType3" 
 							) 
 						i.fas.fa-key.icon-message 
-				.field.mt-30
+				.field-wrapper
 					.ui.checkbox.icon
 						input.hidden#remember(
 							type="checkbox"
 							tabindex="0" )
 						label(for="remember") Remember Me
-			#tab2.tabContent
-				.mt-15
-					label.form-label.d-none(for="phone") Password *
+			#tab2.tabContent 
+				.field-wrapper
 					.text-field__content.w-100
-						input.text-field__input.text-field__input--rounded.text-field__input--border-none#phone(
+						input.text-field__input.text-field__input--border-none#phone(
 							type="tel"
 							name="phone"
 							)
@@ -67,7 +72,10 @@ block content
 					.alert.alert-error.alert-danger(style="display: none")
 						//- .alert.alert-info(style="display: none")
 						//- i.uil.uil-key-skeleton-alt.icon.icon2
-				.field-wrapper.field-wrapper--no-message.mt-15
+				.field-wrapper
+					label.text-field__label 
+						|	Course Title 
+						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
@@ -78,17 +86,18 @@ block content
 							id="emailType1" 
 							) 
 						i.fas.fa-key.icon-message  
-				.ui.form.checkbox_sign.mt-30 
+				.field-wrapper 
 					.ui.checkbox.icon
 						input.hidden#remember2(
 							type="checkbox"
 							tabindex="0" )
 						label(for="remember2") Remember Me
 
-			button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--center.medium.text-2.px-5.mt-4(type="submit")  Sign In
-			p.title-2.mt-4
+			.row.d-flex.justify-content-around
+				button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
+			p.title-2
 				a.title-2.ad-btn.ad-btn--primary.ad-btn--text(href="forgot_password.html")  Forgot Password
-			.middle-or.d-flex.my-2
+			.middle-or.d-flex
 				hr
 				p.mb-0  Or
 				hr

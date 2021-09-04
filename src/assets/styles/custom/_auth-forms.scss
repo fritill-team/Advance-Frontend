@@ -77,29 +77,39 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+	margin-bottom: 8px;
+
+	&:focus-within{
+		.messages { 
+			 li{
+				 display: block;
+			}
+		}
+	}
+	&.field-wrapper--no-label{
+		.text-field__label {
+			display: none;
+		}
+	}
   // general label styling
   .text-field__label {
-    margin-bottom: 10px !important;
-    font-size: 14px !important;
-    padding: 0 1em;
+    font-size: 14px ;
+		font-weight: 600;
+		padding: 4px 16px; 
+		abbr{
+			color: $primary;
+		}
   }
   // general message styling
-  .messages {
-    font-size: 14px;
+  .messages { 
     font-weight: 500;
     color: inherit;
-    padding: 0 1em;
-    margin-top: 1em;
-  }
-  // general style for hint
-  .message {
-    font-size: 14px;
-    line-height: 1;
-    color: #333;
-    text-align: left;
-    margin: 8px 0;
-    padding: 0 1em;
+ 		li{
+			font-size: 12px;
+			font-weight: 600; 
+			padding: 0.5em 1.3333333333333333em; 
+			display: none;
+		}
   }
   // general text input details styling
   .text-field__content {
@@ -182,6 +192,9 @@
     }
     .messages {
       color: $primaryLight;
+			li{
+				display: block;
+			}
     }
     .text-field__content {
       .text-field__input {
@@ -351,7 +364,7 @@
         padding: 5px;
       }
     }
-  }
+  } 
 }
 
 .select2 {
@@ -454,6 +467,73 @@ html[dir="rtl"] {
     }
     .select2-selection--clearable {
       padding-right: 10px;
+    }
+  }
+}
+.tabs-login {
+  justify-content: center;
+	padding-bottom: 30px;
+  li {
+    margin: 5px 20px;
+    .tab-link {
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+      }
+      &:hover {
+        color: $darkBlack;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    .active-tab {
+      transition: 0.3 ease all;
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+        width: 100%;
+      }
     }
   }
 }
