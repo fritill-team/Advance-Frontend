@@ -8,7 +8,10 @@ block content
 	h2.title-h6.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account! 
 	form.ad-form
-		.field-wrapper.field-wrapper--no-message.mt-15
+		.field-wrapper
+			label.text-field__label 
+				|	Course Title 
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='text'
@@ -17,8 +20,13 @@ block content
 					maxlength=''
 					required 
 					) 
-				.invalid-feedback.my-2 required
-		.field-wrapper.field-wrapper--no-message.mt-15
+			ul.messages
+				li 
+					| Please provide a valid city.
+		.field-wrapper
+			label.text-field__label 
+				|	Course Title 
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='email'
@@ -27,8 +35,13 @@ block content
 					maxlength=''
 					required 
 					) 
-				.invalid-feedback.my-2 required
-		.field-wrapper.field-wrapper--no-message.mt-15
+			ul.messages
+				li 
+					| Please provide a valid city.
+		.field-wrapper
+			label.text-field__label 
+				|	Course Title 
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='Password'
@@ -37,21 +50,24 @@ block content
 					maxlength=''
 					required
 					id="emailType" 
-					)  
-			.mt-30
-				.inline.field
-					.ui.checkbox.icon
-						input.hidden(
-							type="checkbox"
-							tabindex="0"
-							id="remember-signUp"
-							)
-						label(for="remember-signUp") I’m in for emails with exciting discounts and personalized recommendations
-				button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--center.medium.text-2.px-5.mt-4(type="submit")  Sign Up
-				p.title-2.terms-link  By signing up, you agree to our
-					a.ad-btn.ad-btn--primary.ad-btn--text.p-0.m-0(href="terms_of_use.html")    Terms of Use 
-					|   and
-					a.ad-btn.ad-btn--primary.ad-btn--text.p-0.m-0(href="terms_of_use.html")   Privacy Policy 
-					|  .
-				p.mb-0.mt-30  Already have an account?
-					a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="sign_in.html")  Log In
+					)   
+			ul.messages
+				li 
+					| Please provide a valid city.
+		.field-wrapper
+			.ui.checkbox.icon
+				input.hidden(
+					type="checkbox"
+					tabindex="0"
+					id="remember-signUp"
+					)
+				label(for="remember-signUp") I’m in for emails with exciting discounts and personalized recommendations
+		.row.d-flex.justify-content-around
+			button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
+		p.title-2.terms-link  By signing up, you agree to our
+			a.ad-btn.ad-btn--primary.ad-btn--text.ad-btn--style(href="terms_of_use.html")    Terms of Use 
+			|   and
+			a.ad-btn.ad-btn--primary.ad-btn--text.ad-btn--style(href="terms_of_use.html")   Privacy Policy 
+			|  .
+		p  Already have an account? 
+			a.ad-btn.ad-btn--success.ad-btn--text.ad-btn--style(href="login.html")  Log In
