@@ -2,27 +2,30 @@ extends ../layouts/auth.pug
 
 
 block title
-  title forget
-
+	title forget 
 block content
-  h2.title-h6.semi-bold  Request a Password Reset
-  form.needs-validation
-    .field-wrapper.field-wrapper--no-message 
-      .text-field__content
-        input.text-field__input.text-field--icon(
-          type='email'
-          placeholder='Email Address Or Number'
-          name='email address' 
-          data-purpose='edit-course-title' 
-          maxlength=''
-          required
-          id="emailType"
-          value=''
-          ) 
-        i.uil.uil-envelope.icon-message#icon-message(style="display : block") 
-        .invalid-feedback.my-2#validationServer06Feedback required
-    button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--center.medium.text-2.px-5.mt-4(type="submit")  Reset Password
-  p.mb-0.mt-30.title-2 Go Back
-    a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="../pages/login.pug")  Sign In 
+	h2.title-h6.semi-bold  Request a Password Reset
+	form.needs-validation
+		.field-wrapper 
+			label.text-field__label 
+				|	Course Title 
+				abbr(title="required") *
+			.text-field__content
+				input.text-field__input.text-field--icon(
+					type='email'
+					placeholder='Email Address'
+					name='email address' 
+					data-purpose='edit-course-title' 
+					maxlength=''
+					required
+					id="emailType"
+					value=''
+					)
+				i.far.fa-envelope.icon-message#icon-message(style="display : block") 
+				.invalid-feedback.my-2#validationServer06Feedback required
+		.row.d-flex.justify-content-around
+			button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Reset Password 
+	p.title-2 Go Back  
+		a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="../pages/login.pug")    Sign In 
 
 
