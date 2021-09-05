@@ -10,7 +10,7 @@ input {
     border-radius: 5px;
     text-transform: uppercase;
     display: inline-block;
-    font-family: $quicksand , sans-serif;
+    font-family: $quicksand, sans-serif;
     cursor: pointer;
     color: #fff;
     text-align: center;
@@ -74,10 +74,10 @@ input {
         color: $light-gray;
       }
     }
-		&.ad-btn--xl{
-			font-weight: bold;
-			font-size: 14px;
-		}
+    &.ad-btn--xl {
+      font-weight: bold;
+      font-size: 14px;
+    }
     &.ad-btn--outlined {
       background-color: transparent;
       &.ad-btn--default {
@@ -129,6 +129,10 @@ input {
       &.ad-btn--danger {
         color: $gold;
       }
+    }
+    &.ad-btn--style {
+      padding: 0;
+      margin: 0;
     }
     &.ad-btn--hover {
       &:hover {

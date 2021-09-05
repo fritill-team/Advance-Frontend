@@ -77,39 +77,39 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 
-	&:focus-within{
-		.messages { 
-			 li{
-				 display: block;
-			}
-		}
-	}
-	&.field-wrapper--no-label{
-		.text-field__label {
-			display: none;
-		}
-	}
+  &:focus-within {
+    .messages {
+      li {
+        display: block;
+      }
+    }
+  }
+  &.field-wrapper--no-label {
+    .text-field__label {
+      display: none;
+    }
+  }
   // general label styling
   .text-field__label {
-    font-size: 14px ;
-		font-weight: 600;
-		padding: 4px 16px; 
-		abbr{
-			color: $primary;
-		}
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 16px;
+    abbr {
+      color: $primary;
+    }
   }
   // general message styling
-  .messages { 
+  .messages {
     font-weight: 500;
     color: inherit;
- 		li{
-			font-size: 12px;
-			font-weight: 600; 
-			padding: 0.5em 1.3333333333333333em; 
-			display: none;
-		}
+    li {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0.5em 1.3333333333333333em;
+      display: none;
+    }
   }
   // general text input details styling
   .text-field__content {
@@ -192,9 +192,9 @@
     }
     .messages {
       color: $primaryLight;
-			li{
-				display: block;
-			}
+      li {
+        display: block;
+      }
     }
     .text-field__content {
       .text-field__input {
@@ -364,7 +364,7 @@
         padding: 5px;
       }
     }
-  } 
+  }
 }
 
 .select2 {
@@ -472,7 +472,7 @@ html[dir="rtl"] {
 }
 .tabs-login {
   justify-content: center;
-	padding-bottom: 30px;
+  padding-bottom: 30px;
   li {
     margin: 5px 20px;
     .tab-link {
@@ -536,4 +536,7 @@ html[dir="rtl"] {
       }
     }
   }
+}
+.socialMedia {
+  margin-bottom: 10px;
 }
