@@ -53,46 +53,7 @@ var verification = (function () {
 
 //login phone number
 
-// var input = document.querySelector("#phone");
-// var iti = window.intlTelInput(input, {
-//   // separateDialCode:true,
-//   utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
-// });
 
-// // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
-// window.iti = iti;
-
-// const phoneInputField = document.querySelector("#phone");
-// const phoneInput = window.intlTelInput(phoneInputField, {
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-//   initialCountry: "auto",
-//   geoIpLookup: getIp,
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-//   preferredCountries: ["us", "co", "in", "de"],
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-// });
-
-// function getIp(callback) {
-//   fetch('https://ipinfo.io/json?token=<your token>', { headers: { 'Accept': 'application/json' } })
-//     .then((resp) => resp.json())
-//     .catch(() => {
-//       return {
-//         country: 'us',
-//       };
-//     })
-//     .then((resp) => callback(resp.country));
-// };
-
-
-
-
-// var dsada = document.querySelector(".input");
-// dsada?.addEventListener("click" , function(){
-//   console.log("fsdfsd");
-// });
 
 if ("intlTelInput" in window) {
   const phoneInputField = document.querySelector("#phone"),
@@ -135,3 +96,19 @@ if ("intlTelInput" in window) {
   })
 }
 
+//tabs 
+ 
+$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.tabs-login a').click(function(e){
+  e.preventDefault();
+    var $this = $(this),
+        tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
+        others = $this.closest('li').siblings().children('a'),
+        target = $this.attr('href');
+    others.removeClass('active-tab');
+    $this.addClass('active-tab');
+    $(tabgroup).children('div').hide();
+    $(target).show();
+  
+})
