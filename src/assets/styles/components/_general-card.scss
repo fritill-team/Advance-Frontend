@@ -529,7 +529,44 @@
     }
   }
 }
-
+.user-list{
+  .user-list__title{
+    text-align: center;
+  }
+  a.ad-card__title-link{
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(51,51,51,.1);
+    cursor: pointer;
+  }
+  .ad-card__content{
+    a.content__item-link{
+      display: flex;
+      margin-left: 10px;
+    }
+    .field{
+      .checkbox.ui{
+        .ui.checkbox input:checked~ .ui.checkbox input:checked~label:after {
+          content: '\e800';
+          color: red;
+          border-radius: unset;
+        }
+        .ui.checkbox input:checked~.box:after, .ui.checkbox input:checked~label:after {
+          opacity: 1;
+          color: red;
+        }
+      }
+      justify-content: flex-start;
+      margin-left: 20px;
+    }
+    .ad-card__body{
+      a.text-2{
+        &:hover{
+          color: unset;
+        }
+      }  
+    }
+  }
+}
 .comments-list {
   padding-left: 80px;
 }
