@@ -62,8 +62,8 @@ $(".featured_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -91,8 +91,8 @@ $(".related_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -129,8 +129,8 @@ $(".category_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -163,8 +163,8 @@ $(".top_instrutors").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -193,8 +193,8 @@ $(".Student_says").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -223,8 +223,8 @@ $(".feature_careers").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-angle-left fa-xs'></i>",
-    "<i class='fas fa-angle-right fa-xs'></i>"
+    "<i class='fas fa-arrow-left'></i>",
+    "<i class='fas fa-arrow-right'></i>"
   ],
   responsive: {
     0: {
@@ -579,69 +579,35 @@ $(document)
 // });
 
 // edit thread
- $("#edit").each(function() {
-$(this).on("click",function(){
-     $("#postCard").css("display", "none");
-    $("#editPostThread").css("display", "block");
-  })
- });
- $(".submit-post .submit__btn").each(function() {
-  $(this).on("click",function(e){
-    e.preventDefault();
-    $("#editPostThread").css("display", "none");
-    $("#postCard").css("display", "block")
-  })
- });
- // edit replay
- $("#editReplay").each(function() {
-  $(this).on("click",function(){
-       $("#CardReplay").css("display", "none");
-      $("#editCardReplay").css("display", "block");
-    })
-   });
-   $(".submit-post .submit__btn").each(function() {
-    $(this).on("click",function(e){
-      e.preventDefault();
-      $("#editCardReplay").css("display", "none");
-      $("#CardReplay").css("display", "block")
-    })
-   });
- // edit comment
- $("#editComment").each(function() {
-  $(this).on("click",function(){
-       $("#comment").css("display", "none");
-      $("#editCommentForm").css("display", "block");
-    })
-   });
-   $(".submit-post .submit__btn").each(function() {
-    $(this).on("click",function(e){
-      e.preventDefault();
-      $("#editCommentForm").css("display", "none");
-      $("#comment").css("display", "block")
-    })
-   });
-//  $( ".submit-post .submit__btn").click(function() {
-//   $(this).each(function(){
-//     $(".edit-post").css("display", "none");
-//     $("#post-card").css("display", "block")
+//  $("#edit").each(function() {
+// $(this).on("click",function(){
+//      $("#postCard").css("display", "none");
+//     $("#editPostThread").css("display", "block");
+//   })
+//  });
+//  $(".submit-post .submit__btn .ad-btn").each(function() {
+//   $(this).on("click",function(e){
+//     $("#editPostThread").css("display", "none");
+//     $("#postCard").css("display", "block")
 //   })
 //  });
 
+// edit threads
 
-// $('.sub-menu-item').click(function () {
-//   if ($(this).hasClass('menu--opened')) {
-//     $('.menu--opened .item__link').addClass('active--menu');
-//   } else {
-//     $('.sub-menu-item .item__link').removeClass('active--menu');
-//   }
-// });
+$(".convert").on("click" ,function(e){
+  e.preventDefault();
+  let card = $(this).closest(".ad-card--convertible"),
+      form = card.children(".convertible__form"),
+      data = card.children(".convertible__data");
+  form.toggleClass("d-block");
+  data.toggleClass("d-none"); 
+  console.log(form)
+});
+
 
 
 // drop-zone
-
 $("div#myId").dropzone({ url: "/file/post" });
- 
-
 //tabs 
  
 $('.tabgroup > div').hide();
