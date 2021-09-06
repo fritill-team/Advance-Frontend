@@ -604,34 +604,29 @@ $(".convert").on("click" ,function(e){
   console.log(form)
 });
 
-
-
-// drop-zone
-$("div#myId").dropzone({ url: "/file/post" });
  
-
 // toaster js
 
-$("#toastr").on('click',function(){
-  toastr.info('test click')
-  // toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
-  // toastr.options = {
-  //   "closeButton": false,
-  //   "debug": false,
-  //   "newestOnTop": false,
-  //   "progressBar": false,
-  //   "positionClass": "toast-top-right",
-  //   "preventDuplicates": false,
-  //   "onclick": null,
-  //   "showDuration": "300",
-  //   "hideDuration": "1000",
-  //   "timeOut": "5000",
-  //   "extendedTimeOut": "1000",
-  //   "showEasing": "swing",
-  //   "hideEasing": "linear",
-  //   "showMethod": "fadeIn",
-  //   "hideMethod": "fadeOut"
-  // }
-})
+// $("#toastr").on('click',function(){
+//   toastr.info('test click')
+//   // toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
+//   // toastr.options = {
+//   //   "closeButton": false,
+//   //   "debug": false,
+//   //   "newestOnTop": false,
+//   //   "progressBar": false,
+//   //   "positionClass": "toast-top-right",
+//   //   "preventDuplicates": false,
+//   //   "onclick": null,
+//   //   "showDuration": "300",
+//   //   "hideDuration": "1000",
+//   //   "timeOut": "5000",
+//   //   "extendedTimeOut": "1000",
+//   //   "showEasing": "swing",
+//   //   "hideEasing": "linear",
+//   //   "showMethod": "fadeIn",
+//   //   "hideMethod": "fadeOut"
+//   // }
+// })
 
 
