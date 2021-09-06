@@ -34,7 +34,7 @@ block content
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
+												a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-3.bold(href="#") Jose Portilla
 												time.text-3.gray Jan 15 '18 at 13:56 
 										// start question form  
 										form.form__action(action="")
@@ -44,7 +44,7 @@ block content
 													option(value='eg') Egypt
 													option(value='AL') Alabama
 													option(value='WY') Wyoming
-												.d-flex
+												.d-flex.justify-content-end
 													include ../components/general-component/btn.pug
 													button(class="ad-btn ad-btn--secondary ad-btn--text convert text-2 bold" type="button") cancel
 													+btn('ad-btn ad-btn--primary ad-btn--rounded convert text-2 bold', 'post')
@@ -62,7 +62,7 @@ block content
 												a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
 												time.text-3.gray Jan 15 '18 at 13:56
 											.more-dropdown
-												.more-dropdown__link(href="#")
+												button.ad-btn.ad-btn--hover-dropdown
 													i.fas.fa-ellipsis-v
 												.more-dropdown__content
 													span.content__item.convert
@@ -97,70 +97,47 @@ block content
 					.d-flex.justify-content-between.align-items-center.w-100
 						h3.course-content__title.mb-0 1 Answer
 					// start Answer 
-				.d-flex.flex-column.w-100
-					.ad-card--convertible
-						// start convertible__form
-						.convertible__form.d-none
-							.ad-card
-								.ad-card__content
-									.user-image
-										img(src="../../assets/images/hd_dp.jpg" alt="")
-										i.uil.uil-check-circle
-									.ad-card__body
-										.ad-card__content-header
-											.user-data
-												a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
-												time.text-3.gray Jan 15 '18 at 13:56 
-										// start  form  
-										form.form__action(action="")
-											.field-wrapper.field-wrapper--no-margin
-												textarea.textarea#course_description.mb-2(rows='5' name='description' placeholder='Edit post')
-												.d-flex
-													include ../components/general-component/btn.pug
-													button(class="ad-btn ad-btn--secondary ad-btn--text convert text-2 bold" type="button") cancel
-													+btn('ad-btn ad-btn--primary ad-btn--rounded convert text-2 bold', 'post')
-						// End question form   
-						// start  convertible__date
-						.convertible__data
-							.ad-card.ad-card--with-actions.mb-3
-								.ad-card__content
-									.user-image
-										img(src="../../assets/images/hd_dp.jpg" alt="")
-										i.uil.uil-check-circle
-									.ad-card__body
-										.ad-card__content-header
-											.user-data
-												a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
-												time.text-3.gray Jan 15 '18 at 13:56
-											.more-dropdown
-												.more-dropdown__link(href="#")
-													i.fas.fa-ellipsis-v
-												.more-dropdown__content
-													span.content__item.convert
-														i.item__icon.uil.uil-comment-alt-edit
-														| Edit
-													span.content__item
-														i.item__icon.uil.uil-trash-alt
-														| Delete
-										//start Content
-										.ad-card__content--details
-											.rich-textarea
-												h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												span  Lorem ipsum dolor
-												ul
-													li Lorem ipsum dolor
-													li Lorem ipsum dolor
-													li Lorem ipsum dolor
-													li Lorem ipsum dolor
-												q Lorem ipsum dolor
-												a(href="#") Link
-												p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												i mostafa 
-										// End Content 
-							// End  convertible__date   
+				.d-flex.flex-column.w-100  
+					// start  convertible__date
+					.ad-card.ad-card--with-actions.mb-3
+						.ad-card__content
+							.user-image
+								img(src="../../assets/images/hd_dp.jpg" alt="")
+								i.uil.uil-check-circle
+							.ad-card__body
+								.ad-card__content-header
+									.user-data
+										a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-3.bold(href="#") Jose Portilla
+										time.text-3.gray Jan 15 '18 at 13:56
+									.more-dropdown
+										button.ad-btn.ad-btn--hover-dropdown
+											i.fas.fa-ellipsis-v
+										.more-dropdown__content
+											span.content__item.convert
+												i.item__icon.uil.uil-comment-alt-edit
+												| Edit
+											span.content__item
+												i.item__icon.uil.uil-trash-alt
+												| Delete
+								//start Content
+								.ad-card__content--details
+									.rich-textarea
+										h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										span  Lorem ipsum dolor
+										ul
+											li Lorem ipsum dolor
+											li Lorem ipsum dolor
+											li Lorem ipsum dolor
+											li Lorem ipsum dolor
+										q Lorem ipsum dolor
+										a(href="#") Link
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										i mostafa 
+								// End Content 
+						// End  convertible__date   
 					// start comment-list
 					.comments-list 
 						//- comment 1 add class transparent (no-background)
@@ -174,12 +151,12 @@ block content
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												aad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
+												aad-btn.ad-btn--secondary.ad-btn--link-text.text-3.bold(href="#") Jose Portilla
 												time.text-1.gray Jan 15 '18 at 13:56
 										form.form__action.mb-3(action="")
 											.field-wrapper#editCommentForm.m-0 
 												input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
-											.d-flex
+											.d-flex.justify-content-end
 												include ../components/general-component/btn.pug
 												button(class="ad-btn ad-btn--secondary ad-btn--text convert text-2 bold" type="button") cancel
 												+btn('ad-btn ad-btn--primary ad-btn--rounded convert text-2 bold', 'post')
@@ -193,13 +170,13 @@ block content
 									.ad-card__body
 										.ad-card__content-header
 											.user-data
-												aad-btn.ad-btn--secondary.ad-btn--link-text.text-2.bold(href="#") Jose Portilla
+												aad-btn.ad-btn--secondary.ad-btn--link-text.text-3.bold(href="#") Jose Portilla
 												time.text-1.gray Jan 15 '18 at 13:56
 											.more-dropdown
-												.more-dropdown__link(href="#")
+												button.ad-btn.ad-btn--hover-dropdown
 													i.fas.fa-ellipsis-v
 												.more-dropdown__content
-													span.content__item.edit#editComment.convert
+													span.content__item.convert.convert
 														i.item__icon.uil.uil-comment-alt-edit
 														| Edit
 													span.content__item
@@ -208,9 +185,7 @@ block content
 										.ad-card__content--details
 											p.text-3 lorem ipsum dolor sit 
 									// End comment-data
-						//- comment 2
-					 
-					 
+						//- comment 2 
 						.create-comment
 							.create-comment__content
 								.content__user-img

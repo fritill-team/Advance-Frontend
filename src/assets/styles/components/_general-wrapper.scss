@@ -82,7 +82,17 @@
   &.general-wrapper--card-details {
     .description__name {
       font-size: 16px;
-      white-space: nowrap;
+      // white-space: nowrap;
+    }
+    .general-wrapper--info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .description__details {
+      margin: 5px 0px;
     }
   }
 }
@@ -97,7 +107,8 @@
       }
     }
   }
-  i,svg {
+  i,
+  svg {
     display: inline-block;
     font-size: 16px;
     transition: 0.3s ease all;

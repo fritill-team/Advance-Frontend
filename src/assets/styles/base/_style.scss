@@ -316,9 +316,9 @@ body::-webkit-scrollbar {
   height: 18px;
 }
 body::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
-  display: none;
+  width: 4;
+  height: 18px;
+  display: block;
 }
 body::-webkit-scrollbar-corner {
   background-color: transparent;
@@ -6028,7 +6028,7 @@ a.rmv-btn i {
   width: 100%;
   z-index: 0;
   height: 100%;
-	z-index: -1;
+  z-index: -1;
 }
 .auth-form-wrapper:before {
   content: "";
@@ -6114,7 +6114,7 @@ a.rmv-btn i {
 }
 
 .auth-form__content p {
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 400;
   font-family: $quicksand;
   color: #686f7a;
@@ -8645,7 +8645,7 @@ input[type="tel"] {
 }
 .hide {
   display: none;
-} 
+}
 .terms-link {
   padding: 10px 0 10px;
   margin-bottom: 0 !important;
@@ -8653,8 +8653,8 @@ input[type="tel"] {
 }
 .iti--allow-dropdown {
   width: 100% !important;
- 	border: none !important;
- 	padding: 0;
+  border: none !important;
+  padding: 0;
 }
 .iti--allow-dropdown {
   .iti__flag-container {
