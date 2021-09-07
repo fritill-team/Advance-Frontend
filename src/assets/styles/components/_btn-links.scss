@@ -239,6 +239,22 @@ input {
         }
       }
     }
+    &.ad-btn--hover-dropdown {
+      font-size: 18px;
+      padding: 8px;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      border-radius: 20px;
+      background: transparent;
+      color: #686f7a;
+      border: 0;
+      line-height: 20px;
+      &:hover {
+        background-color: #828a91;
+        color: #fff !important;
+      }
+    }
     &.ad-btn--link-text {
       background-color: transparent;
       padding: 0px;

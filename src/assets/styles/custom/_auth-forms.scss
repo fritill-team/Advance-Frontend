@@ -333,7 +333,7 @@
     line-height: 17px;
     min-width: 17px;
   }
-  
+
   .ui.checkbox.icon .box,
   .ui.checkbox.icon label {
     font-family: $quicksand !important;
@@ -343,7 +343,7 @@
     // height: 18px !important;
     display: block;
   }
-  
+
   .ui.checkbox.icon input:checked ~ .box:after,
   .ui.checkbox.icon input:checked ~ label:after {
     opacity: 1;
@@ -353,7 +353,7 @@
     width: 18px !important;
     height: 18px !important;
   }
-  
+
   .ui.checkbox.icon .box:before,
   .ui.checkbox.icon label:before {
     width: 18px !important;
@@ -455,7 +455,7 @@
   .select2-selection {
     border: $primaryLight 1px solid !important;
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 0 6px;
   }
   .select2-container--focus {
     border: $primaryLight 1px solid;

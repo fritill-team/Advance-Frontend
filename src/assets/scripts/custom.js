@@ -62,8 +62,8 @@ $(".featured_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -91,8 +91,8 @@ $(".related_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -129,8 +129,8 @@ $(".category_courses").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -163,8 +163,8 @@ $(".top_instrutors").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -193,8 +193,8 @@ $(".Student_says").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -223,8 +223,8 @@ $(".feature_careers").owlCarousel({
   nav: true,
   dots: false,
   navText: [
-    "<i class='fas fa-arrow-left'></i>",
-    "<i class='fas fa-arrow-right'></i>"
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>"
   ],
   responsive: {
     0: {
@@ -604,34 +604,29 @@ $(".convert").on("click" ,function(e){
   console.log(form)
 });
 
-
-
-// drop-zone
-$("div#myId").dropzone({ url: "/file/post" });
  
-
 // toaster js
 
-$("#toastr").on('click',function(){
-  toastr.info('test click')
-  // toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
-  // toastr.options = {
-  //   "closeButton": false,
-  //   "debug": false,
-  //   "newestOnTop": false,
-  //   "progressBar": false,
-  //   "positionClass": "toast-top-right",
-  //   "preventDuplicates": false,
-  //   "onclick": null,
-  //   "showDuration": "300",
-  //   "hideDuration": "1000",
-  //   "timeOut": "5000",
-  //   "extendedTimeOut": "1000",
-  //   "showEasing": "swing",
-  //   "hideEasing": "linear",
-  //   "showMethod": "fadeIn",
-  //   "hideMethod": "fadeOut"
-  // }
-})
+// $("#toastr").on('click',function(){
+//   toastr.info('test click')
+//   // toastr["error"]("testtest jhbdvkjbavkjbskjvkdjfsu", "test")
+//   // toastr.options = {
+//   //   "closeButton": false,
+//   //   "debug": false,
+//   //   "newestOnTop": false,
+//   //   "progressBar": false,
+//   //   "positionClass": "toast-top-right",
+//   //   "preventDuplicates": false,
+//   //   "onclick": null,
+//   //   "showDuration": "300",
+//   //   "hideDuration": "1000",
+//   //   "timeOut": "5000",
+//   //   "extendedTimeOut": "1000",
+//   //   "showEasing": "swing",
+//   //   "hideEasing": "linear",
+//   //   "showMethod": "fadeIn",
+//   //   "hideMethod": "fadeOut"
+//   // }
+// })
 
 
