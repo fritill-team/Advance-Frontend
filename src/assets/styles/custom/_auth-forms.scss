@@ -44,9 +44,9 @@
   }
 }
 
-.auth-form-wrapper {
+.auth-form {
   background: #f7f7f7 !important;
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 0;
   height: 100%;
@@ -500,8 +500,179 @@
     color: $primaryLight !important;
   }
 }
+//login
+// auth login
+.field-wrapper {
+  .key-number {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+  }
+  .input__message {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+    font-size: 18px;
+    bottom: -14px;
+  }
+}
+.hide {
+  display: none;
+}
+.terms-link {
+  padding: 10px 0 10px;
+  margin-bottom: 0 !important;
+  margin-top: 0px;
+}
+.iti--allow-dropdown {
+  width: 100% !important;
+  border: none !important;
+  padding: 0;
+}
+.iti--allow-dropdown {
+  .iti__flag-container {
+    &:hover {
+      .iti__selected-flag {
+        background-color: transparent;
+      }
+    }
+  }
+}
+.iti input,
+.iti input[type="text"],
+.iti input[type="tel"] {
+  border: none;
+  padding: 12px 14px 12px 50px;
+}
+
+input[type="tel"] {
+  padding: 0;
+}
+.iti-mobile {
+  .iti__country-list {
+    width: 300px;
+    height: 300px;
+  }
+}
+.alert {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+// index
+.section-index {
+  float: left;
+  width: 100%;
+  &.section-index--pt {
+    padding-top: 20px;
+  }
+}
 
 html[dir="rtl"] {
+  //start rtl auth
+  // input field
+
+  .field-wrapper {
+    // general message styling
+    // general text input details styling
+    .text-field__content {
+      .text-field__limit {
+        left: 3px;
+        padding: 9px 11px;
+      }
+    }
+    .text-field__input {
+      &.text-field--icon {
+        padding-right: 3em !important;
+      }
+      &.text-field__input--border-none {
+        padding: 12px 50px 12px 14px;
+      }
+    }
+
+    // input type file
+    &.field-wrapper__file-input {
+      .file-input {
+        text-align: right;
+      }
+      .file-input__label {
+        &::after {
+          border-right: inherit;
+        }
+      }
+    }
+
+    // input type select
+    &.field-wrapper__select-input {
+      .select-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    ul.field-wrapper__radio-group {
+      li.radio-item_1 {
+        input {
+          display: none;
+        }
+        label.radio-label-1 {
+          cursor: pointer;
+          &::before {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .ui.checkbox.icon label{
+      text-align: right;
+    }
+    // textarea
+
+    // .text-field__error{
+
+    // }
+    .text-field__label {
+      text-align: right;
+    }
+    .messages {
+      li {
+        text-align: right;
+      }
+    }
+  }
+
+  .select2 {
+    .select2-selection__choice {
+      padding: 3px 18px 4px 6px !important;
+    }
+
+    .select2-selection__choice__remove {
+      border-left: 0 !important;
+      right: 3px !important;
+    }
+  }
+  .iti__country-list {
+    text-align: right;
+    margin: 0 -1px 0 0px;
+}
+.alert {
+ text-align: right;
+}
+  //End
   .field-wrapper {
     &.field-wrapper__select-input {
       .select-menu {
@@ -545,12 +716,32 @@ html[dir="rtl"] {
       padding-right: 10px;
     }
   }
+  //login
+// auth login
+.field-wrapper {
+  .key-number {
+    padding-right: 14px;
+  }
+  .input__message {
+    padding-right: 14px;
+  }
 }
-.tabs-login {
+.iti input,
+.iti input[type="text"],
+.iti input[type="tel"] {
+  padding: 12px 50px 12px 14px;
+}
+
+// index
+.section-index {
+  float: right;
+}
+}
+.nav-tab{
   justify-content: center;
   padding-bottom: 30px;
   li {
-    margin: 5px 20px;
+    padding: 5px 20px;
     .tab-link {
       padding-bottom: 10px !important;
       border-radius: 0;
