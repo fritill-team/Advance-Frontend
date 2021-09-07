@@ -56,19 +56,32 @@ block content
 							//- 		a(href="/"): i.far.fa-edit(aria-hidden="true")
 							//- 		a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
 							.general-wrapper__content
-								.row
-									.col-md-4
-										span.description__name.my-2 Id :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 Author :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 duration :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
+								.d-flex.mb-2
+									span.description__name Id
+										strong :
+									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+								.d-flex.mb-2
+									span.description__name Author
+										strong :
+									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+								.d-flex.mb-2
+									span.description__name AuthorAuthor
+										strong :
+									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+								
+								//- .row
+								//- 	.col-xl-4.col-lg-12
+								//- 		span.description__name Id:
+								//- 	.col-xl-8.col-lg-12
+								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+								//- 	.col-xl-4.col-lg-12
+								//- 		span.description__name Author:
+								//- 	.col-xl-8.col-lg-12
+								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur
+								//- 	.col-xl-4.col-lg-12 
+								//- 		span.description__name AuthorAuthor:
+								//- 	.col-xl-8.col-lg-12
+								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur 
 				// cover bg or video
 				.row
 					.col-lg-12
@@ -81,17 +94,18 @@ block content
 							.col-lg-12
 								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
 								.media-card.media-card--cover
-									.media-card-video
+									.media-card__video
 										iframe.video-player__iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")
+									
 									.media-card__image
 										img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
 										.more-dropdown.more-dropdown--absolute
-											.more-dropdown__link(href="#")
+											button.ad-btn.ad-btn--hover-dropdown
 												i.fas.fa-ellipsis-v.more-dropdown__icon
 											.more-dropdown__content
 												span.content__item
 													i.item__icon.uil.uil-comment-alt-edit
-													| Edite
+													| Edit
 												span.content__item
 													i.item__icon.uil.uil-trash-alt
 													| Delete
@@ -100,20 +114,20 @@ block content
 
 					.col-lg-3
 						.general-wrapper.general-wrapper--card-details
-							.general-wrapper__content
+							.general-wrapper__content 
 								.row
-									.col-md-4
-										span.description__name.my-2 Id :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 Author :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 duration :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12
+										span.description__name Id:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12
+										span.description__name Author:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12 
+										span.description__name AuthorAuthor:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur 
 
 				// fails
 				.row
@@ -129,7 +143,7 @@ block content
 									//- a(href="#" class="ad-card--file-download")
 									//- 	i.fas.fa-download
 									.more-dropdown.more-dropdown--absolute
-										.more-dropdown__link
+										button.ad-btn.ad-btn--hover-dropdown
 											i.fas.fa-ellipsis-v.more-dropdown__icon
 										.more-dropdown__content
 											span.content__item
@@ -160,7 +174,7 @@ block content
 									//- a(href="#" class="ad-card--file-download")
 									//- 	i.fas.fa-download
 									.more-dropdown.more-dropdown--absolute
-										.more-dropdown__link
+										button.ad-btn.ad-btn--hover-dropdown
 											i.fas.fa-ellipsis-v.more-dropdown__icon
 										.more-dropdown__content
 											span.content__item
@@ -188,7 +202,7 @@ block content
 									//- a(href="#" class="ad-card--file-download")
 									//- 	i.fas.fa-download
 									.more-dropdown.more-dropdown--absolute
-										.more-dropdown__link
+										button.ad-btn.ad-btn--hover-dropdown
 											i.fas.fa-ellipsis-v.more-dropdown__icon
 										.more-dropdown__content
 											span.content__item
@@ -216,7 +230,7 @@ block content
 									//- a(href="#" class="ad-card--file-download")
 									//- 	i.fas.fa-download
 									.more-dropdown.more-dropdown--absolute
-										.more-dropdown__link
+										button.ad-btn.ad-btn--hover-dropdown
 											i.fas.fa-ellipsis-v.more-dropdown__icon
 										.more-dropdown__content
 											span.content__item
@@ -243,17 +257,17 @@ block content
 						.general-wrapper.general-wrapper--card-details
 							.general-wrapper__content
 								.row
-									.col-md-4
-										span.description__name.my-2 Id :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 Author :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
-									.col-md-4
-										span.description__name.my-2 duration :
-									.col-md-8
-										p.my-2 Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12
+										span.description__name Id:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12
+										span.description__name Author:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur
+									.col-xl-4.col-lg-12 
+										span.description__name AuthorAuthor:
+									.col-xl-8.col-lg-12
+										p.description__details Lorem ipsum, dolor sit amet consectetur 
 
 
