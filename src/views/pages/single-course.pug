@@ -6,7 +6,7 @@ block category
 	include ../components/header-blocks/selectCategory.pug
 block btn-link
 	include ../components/general-component/btn.pug
-	+btn-link('ad-btn ad-btn--primary ad-btn--rounded', 'Create New Course' , '#create_new_course.html')
+	+btn-link('btn btn--primary btn--rounded', 'Create New Course' , '#create_new_course.html')
 block sidebar
 	include ../components/sidebar-content.pug
 block courseVideo
@@ -110,7 +110,7 @@ block tabs
 											.group__img-wrapper
 												img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
 											textarea.group__textarea(placeholder="Add a public comment")
-										button.ad-btn.ad-btn--primary.ad-btn--rounded(type="submit") Add review
+										button.btn.btn--primary.btn--rounded(type="submit") Add review
 									include ../components/review.pug
 									.review__all-reviews.mt-3
 										include ../components/review-item.pug
@@ -119,7 +119,7 @@ block tabs
 					#nav-thread.tab-pane.fade(role='tabpanel')
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.course-content__title.mb-0 Thread Chapter content
-							button.ad-btn.ad-btn--primary.ad-btn--rounded create thread
+							button.btn.btn--primary.btn--rounded create thread
 						.row
 							.col-lg-12
 								.ad-card.ad-card--with-actions.mb-3
@@ -132,7 +132,7 @@ block tabs
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2(href="#") Jose Portilla
+													a.btn.btn--secondary.btn--link-text.text-2(href="#") Jose Portilla
 													time.text-3.gray Jan 15 '18 at 13:56
 												include ../components/list-dropdown.pug
 											.ad-card__content--details
@@ -150,7 +150,7 @@ block tabs
 										.ad-card__body
 											.ad-card__content-header
 												.user-data
-													a.ad-btn.ad-btn--secondary.ad-btn--link-text.text-2(href="#") Jose Portilla
+													a.btn.btn--secondary.btn--link-text.text-2(href="#") Jose Portilla
 													time.text-3.gray Jan 15 '18 at 13:56
 												include ../components/list-dropdown.pug
 											.ad-card__content--details
