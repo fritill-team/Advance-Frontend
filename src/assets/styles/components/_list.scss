@@ -56,7 +56,6 @@
   &:last-child.list-item--border-bottom {
     border-bottom: none
   }
-
   .list-item__avatar {
     width: 50px;
     height:  50px;
@@ -71,16 +70,44 @@
   }
 
   .list-item__icon {
-    font-size: 14px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #efefef;
+    i{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 16px;
+    }
   }
-
   .list-item__content {
     padding: 10px;
 
   }
-
   .list-item__action {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    padding: 5px;
+  }
+  a.list-item__link{
+    display: flex;
+    align-items: center;
+    .link__avatar {
+      width: 50px;
+      height:  50px;
+      border-radius: 50%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
   }
 }

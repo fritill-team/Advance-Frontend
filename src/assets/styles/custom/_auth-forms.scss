@@ -275,17 +275,23 @@
   &.field-wrapper__checkbox-sign {
     text-align: left;
   }
-  // .mncheck
-  .icon {
-    label {
-      &::before {
-        border-radius: unset !important;
-        width: 18px !important;
-        height: 18px !important;
-        margin-top: 1px;
-      }
-    }
+  .check-field-group{
+
   }
+  .check-field{
+    
+  }
+  // .mncheck
+  // .icon {
+  //   label {
+  //     &::before {
+  //       border-radius: unset !important;
+  //       width: 18px !important;
+  //       height: 18px !important;
+  //       margin-top: 1px;
+  //     }
+  //   }
+  // }
   // input type radio
   ul.field-wrapper__radio-group {
     li.radio-item_1 {
