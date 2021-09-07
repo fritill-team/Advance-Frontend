@@ -25,46 +25,52 @@ block content
 	form.ad-form
 		section(id="first-tab-group" class="tabgroup")
 			#tab1.tabContent
-				.field-wrapper 
-					label.text-field__label 
-						|	Course Title 
+				.field-wrapper
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='email'
 							placeholder='Email Address'
-							name='email address' 
-							data-purpose='edit-course-title' 
+							name='email address'
+							data-purpose='edit-course-title'
 							maxlength=''
 							required
 							id="emailType"
 							value=''
 							)
-						i.far.fa-envelope.icon-message#icon-message(style="display : block") 
+						i.far.fa-envelope.input__icon(style="display : block")
+					ul.messages
+						li
+							| Please provide a valid city.
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
 							placeholder='Password'
-							name='Password'  
+							name='Password'
 							maxlength=''
 							required
-							id="emailType3" 
-							) 
-						i.fas.fa-key.icon-message 
+							id="emailType3"
+							)
+						i.fas.fa-key.input__icon
+					ul.messages
+						li
+							| Please provide a valid city.
 				.field-wrapper
 					.ui.checkbox.icon
 						input.hidden#remember(
 							type="checkbox"
 							tabindex="0" )
 						label(for="remember") Remember Me
-			#tab2.tabContent 
+			#tab2.tabContent
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content.w-100
 						input.text-field__input.text-field__input--border-none#phone(
@@ -76,20 +82,23 @@ block content
 						//- .alert.alert-info(style="display: none")
 						//- i.uil.uil-key-skeleton-alt.icon.icon2
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
 							placeholder='Password'
-							name='Password'  
+							name='Password'
 							maxlength=''
 							required
-							id="emailType1" 
-							) 
-						i.fas.fa-key.icon-message  
-				.field-wrapper 
+							id="emailType1"
+							)
+						i.fas.fa-key.input__icon
+					ul.messages
+						li
+							| Please provide a valid city.
+				.field-wrapper
 					.ui.checkbox.icon
 						input.hidden#remember2(
 							type="checkbox"
@@ -111,5 +120,5 @@ block content
 					i.fab.fa-twitter
 				a(href="#").social-icon__link.social-icon--go-bg.social-icon--ml
 					i.fab.fa-google
-			p.title-2 Don't have an account? 
+			p.title-2 Don't have an account?
 				a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="signup.html")  Sign Up
