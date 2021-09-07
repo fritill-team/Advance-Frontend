@@ -55,7 +55,7 @@
 	&:last-of-type{
 		padding-bottom: 0;
 	}
-
+	
   &.list-item--border-bottom {
     border-bottom: 1px solid rgba($darkBlack, 0.1);
   }
@@ -93,7 +93,7 @@
     }
   }
   .list-item__content {
-    padding: 10px;
+    padding: 0 10px;
 
   }
   .list-item__action {
