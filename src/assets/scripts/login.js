@@ -5,11 +5,11 @@
 //   let value = e.target.value;
 
 //   if (value.match(/^\d+$/)) {
-//     $('#icon-message').hide();
+//     $('#input__icon').hide();
 //     $('#key-number').show();
 //     e.target.type = 'number';
 //   } else {
-//     $('#icon-message').show();
+//     $('#input__icon').show();
 //     $('#key-number').hide();
 //     e.target.type = 'email';
 //   }
@@ -80,7 +80,7 @@ if ("intlTelInput" in window) {
     }
     // IMask(phoneInputField, {
     //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
-    // }); 
+    // });
     const phoneNumber = phoneInput.getNumber();
 
     info.style.display = "none";
@@ -96,8 +96,8 @@ if ("intlTelInput" in window) {
   })
 }
 
-//tabs 
- 
+//tabs
+
 $('.tabgroup > div').hide();
 $('.tabgroup > div:first-of-type').show();
 $('.tabs-login a').click(function(e){
@@ -110,5 +110,5 @@ $('.tabs-login a').click(function(e){
     $this.addClass('active-tab');
     $(tabgroup).children('div').hide();
     $(target).show();
-  
+
 })
