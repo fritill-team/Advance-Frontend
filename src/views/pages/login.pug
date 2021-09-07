@@ -9,7 +9,7 @@ block content
 
 	h2.title-h6.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account!
-	ul(class="tabs-login clearfix d-flex" data-tabgroup="first-tab-group")
+	ul(class="nav-tab clearfix d-flex" data-tabgroup="first-tab-group")
 		li
 			a(href="#tab1" class="active-tab tab-link ad-btn ad-btn--link-text text-1 medium ")
 				|Login
@@ -22,49 +22,58 @@ block content
 	//-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
 	//-     #login-number.tab-pane.fade.show(role='tabpanel')
 	//-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
-	form.ad-form
-		section(id="first-tab-group" class="tabgroup")
-			#tab1.tabContent
-				.field-wrapper 
-					label.text-field__label 
-						|	Course Title 
+	section(id="first-tab-group" class="tab__group")
+		#tab1.tab__content
+			form.ad-form
+				.field-wrapper
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='email'
 							placeholder='Email Address'
-							name='email address' 
-							data-purpose='edit-course-title' 
+							name='email address'
+							data-purpose='edit-course-title'
 							maxlength=''
 							required
 							id="emailType"
 							value=''
 							)
-						i.far.fa-envelope.icon-message#icon-message(style="display : block") 
+						i.far.fa-envelope.input__message
+					ul.messages
+						li
+							| Please provide a valid city.
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
 							placeholder='Password'
-							name='Password'  
+							name='Password'
 							maxlength=''
 							required
-							id="emailType3" 
-							) 
-						i.fas.fa-key.icon-message 
+							id="emailType3"
+							)
+						i.fas.fa-key.input__message
+					ul.messages
+						li
+							| Please provide a valid city.
 				.field-wrapper
 					.ui.checkbox.icon
 						input.hidden#remember(
 							type="checkbox"
 							tabindex="0" )
 						label(for="remember") Remember Me
-			#tab2.tabContent 
+				.d-flex.justify-content-around
+					button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
+		#tab2.tab__content
+			form.ad-form
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content.w-100
 						input.text-field__input.text-field__input--border-none#phone(
@@ -76,40 +85,43 @@ block content
 						//- .alert.alert-info(style="display: none")
 						//- i.uil.uil-key-skeleton-alt.icon.icon2
 				.field-wrapper
-					label.text-field__label 
-						|	Course Title 
+					label.text-field__label
+						|	Course Title
 						abbr(title="required") *
 					.text-field__content
 						input.text-field__input.text-field--icon(
 							type='Password'
 							placeholder='Password'
-							name='Password'  
+							name='Password'
 							maxlength=''
 							required
-							id="emailType1" 
-							) 
-						i.fas.fa-key.icon-message  
-				.field-wrapper 
+							id="emailType1"
+							)
+						i.fas.fa-key.input__message
+					ul.messages
+						li
+							| Please provide a valid city.
+				.field-wrapper
 					.ui.checkbox.icon
 						input.hidden#remember2(
 							type="checkbox"
 							tabindex="0" )
 						label(for="remember2") Remember Me
+				.d-flex.justify-content-around
+					button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
 
-			.row.d-flex.justify-content-around
-				button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
-			p.title-2
-				a.title-2.ad-btn.ad-btn--primary.ad-btn--text(href="forget.html")  Forgot Password
-			.middle-or.d-flex
-				hr
-				p.mb-0  Or
-				hr
-			.socialMedia.d-flex.justify-content-center
-				a(href="#").social-icon__link.social-icon--fa-bg.social-icon--ml
-					i.fab.fa-facebook-f
-				a(href="#").social-icon__link.social-icon--tw-bg.social-icon--ml
-					i.fab.fa-twitter
-				a(href="#").social-icon__link.social-icon--go-bg.social-icon--ml
-					i.fab.fa-google
-			p.title-2 Don't have an account? 
-				a.ad-btn.ad-btn--success.ad-btn--text.p-0.m-0(href="signup.html")  Sign Up
+	p.title-2
+		a(href="forget.html" class="title-2 ad-btn ad-btn--primary ad-btn--text")  Forgot Password
+	.middle-or.d-flex
+		hr
+		p.mb-0  Or
+		hr
+	.socialMedia.d-flex.justify-content-center
+		a(href="#" class="social-icon__link social-icon--fa-bg social-icon--ml")
+			i.fab.fa-facebook-f
+		a(href="#" class="social-icon__link social-icon--tw-bg social-icon--ml")
+			i.fab.fa-twitter
+		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
+			i.fab.fa-google
+	p.title-2 Don't have an account?
+		a(href="signup.html" class="text-3 ad-btn--link-text ad-btn--secondary ad-btn")  Sign Up

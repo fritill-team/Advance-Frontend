@@ -6022,7 +6022,7 @@ a.rmv-btn i {
   z-index: 1;
 }
 
-.auth-form-wrapper {
+.auth-form {
   background: #f7f7f7 !important;
   position: relative;
   width: 100%;
@@ -6030,7 +6030,7 @@ a.rmv-btn i {
   height: 100%;
   z-index: -1;
 }
-.auth-form-wrapper:before {
+.auth-form:before {
   content: "";
   background: url("/assets/images/sign.svg") no-repeat center;
   left: 0;
@@ -8579,6 +8579,7 @@ input[type="tel"] {
 
 .alert {
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .general-btn {
@@ -8629,7 +8630,7 @@ input[type="tel"] {
     color: #aaaaaa;
     appearance: none;
   }
-  .icon-message {
+  .input__message {
     position: absolute;
     height: 100%;
     border-radius: 20%;

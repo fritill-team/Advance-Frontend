@@ -80,7 +80,7 @@ if ("intlTelInput" in window) {
     }
     // IMask(phoneInputField, {
     //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
-    // }); 
+    // });
     const phoneNumber = phoneInput.getNumber();
 
     info.style.display = "none";
@@ -96,19 +96,19 @@ if ("intlTelInput" in window) {
   })
 }
 
-//tabs 
- 
-$('.tabgroup > div').hide();
-$('.tabgroup > div:first-of-type').show();
-$('.tabs-login a').click(function(e){
+//tabs
+
+$('.tab__group > div').hide();
+$('.tab__group > div:first-of-type').show();
+$('.nav-tab a').click(function(e){
   e.preventDefault();
     var $this = $(this),
-        tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
+        tab__group = '#'+$this.parents('.nav-tab').data('tabgroup'),
         others = $this.closest('li').siblings().children('a'),
         target = $this.attr('href');
     others.removeClass('active-tab');
     $this.addClass('active-tab');
-    $(tabgroup).children('div').hide();
+    $(tab__group).children('div').hide();
     $(target).show();
-  
+
 })
