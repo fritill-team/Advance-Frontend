@@ -9,109 +9,99 @@ block content
 
 	h2.title-h6.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account!
-	ul(class="nav-tab clearfix d-flex" data-tabgroup="first-tab-group")
-		li
-			a(href="#tab1" class="active-tab tab-link ad-btn ad-btn--link-text text-1 medium ")
-				|Login
-		li
-			a(href="#tab2" class="ad-btn tab-link  ad-btn--link-text text-1 medium ")
-				|Verify
-	//- .course_tab_content.pt-5
-	//-   #nav-tabContent.tab-content
-	//-     #login-email.tab-pane.fade.show.active(role='tabpanel')
-	//-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
-	//-     #login-number.tab-pane.fade.show(role='tabpanel')
-	//-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laudantium impedit nemo beatae necessitatibus quaerat vel, perspiciatis fuga provident reprehenderit quos enim aspernatur tenetur quo iusto ratione animi, quia fugit?
-	section(id="first-tab-group" class="tab__group")
-		#tab1.tab__content
-			form.ad-form
-				.field-wrapper
-					label.text-field__label
-						|	Course Title
-						abbr(title="required") *
-					.text-field__content
-						input.text-field__input.text-field--icon(
-							type='email'
-							placeholder='Email Address'
-							name='email address'
-							data-purpose='edit-course-title'
-							maxlength=''
-							required
-							id="emailType"
-							value=''
-							)
-						i.far.fa-envelope.input__message
-					ul.messages
-						li
-							| Please provide a valid city.
-				.field-wrapper
-					label.text-field__label
-						|	Course Title
-						abbr(title="required") *
-					.text-field__content
-						input.text-field__input.text-field--icon(
-							type='Password'
-							placeholder='Password'
-							name='Password'
-							maxlength=''
-							required
-							id="emailType3"
-							)
-						i.fas.fa-key.input__message
-					ul.messages
-						li
-							| Please provide a valid city.
-				.field-wrapper
-					.ui.checkbox.icon
-						input.hidden#remember(
-							type="checkbox"
-							tabindex="0" )
-						label(for="remember") Remember Me
-				.d-flex.justify-content-around
-					button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
-		#tab2.tab__content
-			form.ad-form
-				.field-wrapper
-					label.text-field__label
-						|	Course Title
-						abbr(title="required") *
-					.text-field__content.w-100
-						input.text-field__input.text-field__input--border-none#phone(
-							type="tel"
-							name="phone"
-							)
-					.alert.alert-info(style="display: none")
-					.alert.alert-error.alert-danger(style="display: none")
-						//- .alert.alert-info(style="display: none")
-						//- i.uil.uil-key-skeleton-alt.icon.icon2
-				.field-wrapper
-					label.text-field__label
-						|	Course Title
-						abbr(title="required") *
-					.text-field__content
-						input.text-field__input.text-field--icon(
-							type='Password'
-							placeholder='Password'
-							name='Password'
-							maxlength=''
-							required
-							id="emailType1"
-							)
-						i.fas.fa-key.input__message
-					ul.messages
-						li
-							| Please provide a valid city.
-				.field-wrapper
-					.ui.checkbox.icon
-						input.hidden#remember2(
-							type="checkbox"
-							tabindex="0" )
-						label(for="remember2") Remember Me
-				.d-flex.justify-content-around
-					button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Sign Up
-
+	.tabs
+		ul(class="tabs__header" data-tabs="tabs")
+			li.tabs__tab
+					a(href="#tab1" class="active-tab tab-link btn btn--link-text text-1 medium") Login With Email
+			li.tabs__tab
+					a(href="#tab2" class="btn tab-link btn--link-text text-1 medium ") Login With Phone
+		.tabs__panels#tabs
+			#tab1.tabs__panel
+				form.form
+					.field-wrapper
+						label.text-field__label Course Title
+							abbr(title="required") *
+						.text-field__content
+							input(
+                class="text-field__input text-field--icon"
+								type='email'
+								placeholder='Email Address'
+								name='email address'
+								maxlength=''
+								value=''
+								)
+							i.far.fa-envelope.field-wrapper__icon
+						ul.messages
+							li Please provide a valid city.
+					.field-wrapper
+						label.text-field__label Course Title
+							abbr(title="required") *
+						.text-field__content
+							input(
+                class="text-field__input text-field--icon"
+								type='Password'
+								placeholder='Password'
+								name='Password'
+								maxlength=''
+								required
+								)
+							i.fas.fa-key.field-wrapper__icon
+						ul.messages
+							li Please provide a valid city.
+					.field-wrapper
+						.ui.checkbox.icon
+							input(
+                id="remember"
+                class="hidden"
+								type="checkbox"
+								tabindex="0" )
+							label(for="remember") Remember Me
+					.d-flex.justify-content-around
+						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
+			#tab2.tabs__panel
+				form.ad-form
+					.field-wrapper
+						label.text-field__label Course Title
+							abbr(title="required") *
+						.text-field__content.w-100
+							input(
+                id="phone"
+                class="text-field__input text-field__input--border-none"
+								type="tel"
+								name="phone"
+								)
+						.alert.alert-info(style="display: none")
+						.alert.alert-error.alert-danger(style="display: none")
+							//- .alert.alert-info(style="display: none")
+							//- i.uil.uil-key-skeleton-alt.icon.icon2
+					.field-wrapper
+						label.text-field__label
+							|	Course Title
+							abbr(title="required") *
+						.text-field__content
+							input(
+                class ="text-field__input text-field--icon"
+								type='Password'
+								placeholder='Password'
+								name='Password'
+								maxlength=''
+								required
+								)
+							i.fas.fa-key.field-wrapper__icon
+						ul.messages
+							li Please provide a valid city.
+					.field-wrapper
+						.ui.checkbox.icon
+							input(
+                class="hidden"
+                id="remember2"
+								type="checkbox"
+								tabindex="0" )
+							label(for="remember2") Remember Me
+					.d-flex.justify-content-around
+						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
 	p.title-2
-		a(href="forget.html" class="title-2 ad-btn ad-btn--primary ad-btn--text")  Forgot Password
+		a(href="forget.html" class="title-2 btn btn--primary btn--text")  Forgot Password
 	.middle-or.d-flex
 		hr
 		p.mb-0  Or
@@ -124,4 +114,4 @@ block content
 		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
 			i.fab.fa-google
 	p.title-2 Don't have an account?
-		a(href="signup.html" class="text-3 ad-btn--link-text ad-btn--secondary ad-btn")  Sign Up
+		a(href="signup.html" class="text-3 btn--link-text btn--secondary btn")  Sign Up

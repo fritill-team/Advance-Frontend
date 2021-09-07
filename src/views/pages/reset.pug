@@ -9,15 +9,15 @@ block content
 	h2.title-h6.semi-bold  Mobile Phone Verification
 	p.text-4.gray semi-bold gray  Enter the code we just send on your mobile phone
 		span  +20155028165
-		form.ad-form(name="verify")
+		form(class="form" name="verify")
 			.verification.d-flex.justify-content-center.my-2#verification
-				input.vcode-input#vcode1(type="tel" maxlength="1" pattern="[0-9]")
-				input.vcode-input#vcode2(type="tel" maxlength="1" pattern="[0-9]")
-				input.vcode-input#vcode3(type="tel" maxlength="1" pattern="[0-9]")
-				input.vcode-input#vcode4(type="tel" maxlength="1" pattern="[0-9]")
-				input.vcode-input#vcode5(type="tel" maxlength="1" pattern="[0-9]")
-				input.vcode-input#vcode6(type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode1" type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode2" type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode3" type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode4" type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode5" type="tel" maxlength="1" pattern="[0-9]")
+				input(class="vcode-input" id="vcode6" type="tel" maxlength="1" pattern="[0-9]")
 			.d-flex.justify-content-around
-				button.ad-btn.ad-btn--primary.ad-btn--rounded.ad-btn--xl(type="submit")  Reset
+				button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Reset
 			p.title-2.terms-link  don't receive the code ?
 				a(href="#" class="text-3 ad-btn--link-text ad-btn--secondary ad-btn")  Reset

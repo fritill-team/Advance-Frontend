@@ -1,20 +1,3 @@
-// script reset page
-
-// let emailEl = document.querySelector('#emailtype');
-// $('#emailType').on('input', function (e) {
-//   let value = e.target.value;
-
-//   if (value.match(/^\d+$/)) {
-//     $('#icon-message').hide();
-//     $('#key-number').show();
-//     e.target.type = 'number';
-//   } else {
-//     $('#icon-message').show();
-//     $('#key-number').hide();
-//     e.target.type = 'email';
-//   }
-
-// });
 
 // script reset page
 var verification = (function () {
@@ -98,17 +81,17 @@ if ("intlTelInput" in window) {
 
 //tabs
 
-$('.tab__group > div').hide();
-$('.tab__group > div:first-of-type').show();
-$('.nav-tab a').click(function(e){
+$('.tabs__panels > div').hide();
+$('.tabs__panels > div:first-of-type').show();
+$('.tabs__header .tabs__tab a').click(function(e){
   e.preventDefault();
     var $this = $(this),
-        tab__group = '#'+$this.parents('.nav-tab').data('tabgroup'),
-        others = $this.closest('li').siblings().children('a'),
+        tabs__panels = '#'+$this.parents('.tabs__header').data('tabs'),
+        others = $this.closest('.tabs__tab').siblings().children('a'),
         target = $this.attr('href');
     others.removeClass('active-tab');
     $this.addClass('active-tab');
-    $(tab__group).children('div').hide();
+    $(tabs__panels).children('div').hide();
     $(target).show();
 
 })

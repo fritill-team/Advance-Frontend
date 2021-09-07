@@ -46,7 +46,7 @@
 
 .auth-form {
   background: #f7f7f7 !important;
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 0;
   height: 100%;
@@ -514,7 +514,7 @@
     color: #aaaaaa;
     appearance: none;
   }
-  .input__message {
+  .field-wrapper__icon {
     position: absolute;
     height: 100%;
     border-radius: 20%;
@@ -722,7 +722,7 @@ html[dir="rtl"] {
   .key-number {
     padding-right: 14px;
   }
-  .input__message {
+  .field-wrapper__icon {
     padding-right: 14px;
   }
 }
