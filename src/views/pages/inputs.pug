@@ -7,24 +7,6 @@ block content
 	.auth-forms__alert.auth-forms__alert-invalid(role='alert')
 		| Author Form Content
 	form
-		//- .col-lg-12.col-md-6.col-sm-12
-		//- 	.ui.search.focus
-		//-   	.icon.input.lbel25
-		//-     	label(for="validationServeriPassword" class="form-label") Password *
-		//-     	.ui.left.icon.input.swdh95.w-100
-		//-       	input(
-		//-           class="prompt srch_explore form-control is-invalid"
-		//-         	type="password"
-		//-         	name="password"
-		//-         	required maxlength="64"
-		//-         	id="validationServeriPassword"
-		//-         	aria-describedby="validationServer05Feedback"
-		//-         	placeholder="Password"
-		//-           )
-		//-       	i.uil.uil-key-skeleton-alt.icon.icon2
-		//-     	.invalid-feedback.my-2#validationServer05Feedback Requerd
-
-
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
 				label.text-field__label Course Title*
@@ -94,16 +76,22 @@ block content
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
 				label.text-field__label Course checkbox*
-				.form.checkbox_sign
-					.ui.checkbox.icon
-						input.box(type="checkbox" tabindex="0" class="hidden" id="checkbox-1")
-						label(for="checkbox-1") checkbox
-					.ui.checkbox.icon
-						input.box(type="checkbox" tabindex="0" class="hidden" id="checkbox-2")
-						label(for="checkbox-2") checkbox
-				ul.messages
-					li
-						| Please provide a valid city.
+				.check-field-group
+					.check-field
+						input.check-field__input.checked(type="checkbox" id="checkbox")
+						label.check-field__label(for="checkbox" ) Lorem ipsum dolor.
+						.check-field
+						input.check-field__input.checked(type="checkbox" id="checkbox")
+						label.check-field__label(for="checkbox" ) Lorem ipsum dolor.
+						.check-field
+						input.check-field__input(type="checkbox" id="checkbox")
+						label.check-field__label(for="checkbox" ) Lorem ipsum dolor.
+						.check-field
+						input.check-field__input(type="checkbox" id="checkbox")
+						label.check-field__label(for="checkbox" ) Lorem ipsum dolor.
+				.messages
+					ul 
+						li Please provide a valid city.
 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error

@@ -343,28 +343,64 @@
     // height: 18px !important;
     display: block;
   }
+  .check-field-group{
 
-  .ui.checkbox.icon input:checked ~ .box:after,
-  .ui.checkbox.icon input:checked ~ label:after {
-    opacity: 1;
-    color: #ed2a26 !important;
-    font-size: 10px !important;
-    margin-top: 0;
-    width: 18px !important;
-    height: 18px !important;
+  }
+  .check-field{
+    .check-field__input{
+      width: 18px;
+      height: 18px;
+      margin-top: .25em;
+      vertical-align: top;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: 1px solid rgba(0,0,0,.25);
+      appearance: none;
+      color-adjust: exact;
+    }
+    .check-field__label {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $quicksand;
+      line-height: 17px;
+      padding: 5px;
+      cursor: pointer;
+      &::before {
+        content: "";
+        background: #f7f7f7;
+        border: 1px solid #b4b4b4;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        top: 0px;
+        position: relative;
+        margin-right: 10px;
+        vertical-align: middle;
+        cursor: pointer;
+        text-align: center;
+      }
+      .check-field__input input:checked~label:after{
+        opacity: 1;
+        color: #ed2a26!important;
+        font-size: 10px!important;
+        border-radius: 100%;
+        margin-top: 0;
+        content: '\e800';
+      }
+    }
+    &:checked + i {
+      background: $primaryLight;
+      border-color: $primaryLight;
+    }
+    .check-field__input [type="checkbox"]:checked + .check-field__label::before {
+      color: $primaryLight;
+      border: 1px solid $primaryLight;
+      box-shadow: inset 0 0 0 2px #f4f4f4;
+    }
   }
 
-  .ui.checkbox.icon .box:before,
-  .ui.checkbox.icon label:before {
-    width: 18px !important;
-    height: 18px !important;
-    margin-top: 1px;
-  }
-  // ------End Checkbox------
-  // &.field-wrapper__checkbox-sign {
-  //   text-align: left;
-  // }
-  // // .mncheck
   // .icon {
   //   label {
   //     &::before {

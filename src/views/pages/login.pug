@@ -11,10 +11,10 @@ block content
 	//- p Log In to Your Edututs+ Account!
 	ul(class="nav-tab clearfix d-flex" data-tabgroup="first-tab-group")
 		li
-			a(href="#tab1" class="active-tab tab-link ad-btn ad-btn--link-text text-1 medium ")
+			a(href="#tab1" class="active-tab tab-link btn btn--link-text text-1 medium ")
 				|Login
 		li
-			a(href="#tab2" class="ad-btn tab-link  ad-btn--link-text text-1 medium ")
+			a(href="#tab2" class="btn tab-link  btn--link-text text-1 medium ")
 				|Verify
 
 	section(id="first-tab-group" class="tab__group")
@@ -121,4 +121,22 @@ block content
 			i.fab.fa-google
 	p.title-2 Don't have an account?
 		a(href="signup.html" class="text-3 ad-btn--link-text ad-btn--secondary ad-btn")  Sign Up
+
+
+			button.btn.btn--primary.btn--rounded.btn--center.medium.text-2.px-5.mt-4(type="submit")  Sign In
+			p.title-2.mt-4
+				a.title-2.btn.btn--primary.btn--text(href="forgot_password.html")  Forgot Password
+			.middle-or.d-flex.my-2
+				hr
+				p.mb-0  Or
+				hr
+			.socialMedia.d-flex.justify-content-center
+				a.social-icon__link.social-icon--fa-bg.social-icon--ml
+					i.fab.fa-facebook-f
+				a.social-icon__link.social-icon--tw-bg.social-icon--ml
+					i.fab.fa-twitter
+				a.social-icon__link.social-icon--go-bg.social-icon--ml
+					i.fab.fa-google
+			p.mb-0.mt-2.title-2 Don't have an account?
+				a.btn.btn--success.btn--text.p-0.m-0(href="signup.html")  Sign Up
 
