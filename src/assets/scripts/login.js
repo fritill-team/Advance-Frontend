@@ -5,11 +5,11 @@
 //   let value = e.target.value;
 
 //   if (value.match(/^\d+$/)) {
-//     $('#icon-message').hide();
+//     $('#input__icon').hide();
 //     $('#key-number').show();
 //     e.target.type = 'number';
 //   } else {
-//     $('#icon-message').show();
+//     $('#input__icon').show();
 //     $('#key-number').hide();
 //     e.target.type = 'email';
 //   }
@@ -97,10 +97,10 @@ if ("intlTelInput" in window) {
 }
 
 //tabs
-
 $('.tab__group > div').hide();
 $('.tab__group > div:first-of-type').show();
 $('.nav-tab a').click(function(e){
+
   e.preventDefault();
     var $this = $(this),
         tab__group = '#'+$this.parents('.nav-tab').data('tabgroup'),
