@@ -6,34 +6,47 @@ block title
 
 block content
 	h2.title-h6.semi-bold  Welcome Back
-	//- p Log In to Your Edututs+ Account! 
+	//- p Log In to Your Edututs+ Account!
 	form.ad-form
-		.field-wrapper.field-wrapper--no-message.mt-15
+		.field-wrapper
+			label.text-field__label
+				|	Course Title
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='text'
 					placeholder='fullName'
-					name='fullName'  
+					name='fullName'
 					maxlength=''
-					required 
-					) 
-				.invalid-feedback.my-2 required
-		.field-wrapper.field-wrapper--no-message.mt-15
+					required
+					)
+			ul.messages
+				li
+					| Please provide a valid city.
+		.field-wrapper
+			label.text-field__label
+				|	Course Title
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='email'
 					placeholder='Email Address'
-					name='emailAddress'  
+					name='emailAddress'
 					maxlength=''
-					required 
-					) 
-				.invalid-feedback.my-2 required
-		.field-wrapper.field-wrapper--no-message.mt-15
+					required
+					)
+			ul.messages
+				li
+					| Please provide a valid city.
+		.field-wrapper
+			label.text-field__label
+				|	Course Title
+				abbr(title="required") *
 			.text-field__content
 				input.text-field__input(
 					type='Password'
 					placeholder='Password'
-					name='Password'  
+					name='Password'
 					maxlength=''
 					required
 					id="emailType" 

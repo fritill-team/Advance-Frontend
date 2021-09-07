@@ -44,9 +44,9 @@
   }
 }
 
-.auth-form-wrapper {
+.auth-form {
   background: #f7f7f7 !important;
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 0;
   height: 100%;
@@ -77,29 +77,42 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-bottom: 8px;
+
+  &:focus-within {
+    .messages {
+      li {
+        display: block;
+      }
+    }
+  }
+  &.field-wrapper--no-label {
+    .text-field__label {
+      display: none;
+    }
+  }
   // general label styling
+  &.field-wrapper--no-margin {
+    margin-top: 0;
+  }
   .text-field__label {
-    margin-bottom: 10px !important;
-    font-size: 14px !important;
-    padding: 0 1em;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 16px;
+    abbr {
+      color: $primary;
+    }
   }
   // general message styling
   .messages {
-    font-size: 14px;
     font-weight: 500;
     color: inherit;
-    padding: 0 1em;
-    margin-top: 1em;
-  }
-  // general style for hint
-  .message {
-    font-size: 14px;
-    line-height: 1;
-    color: #333;
-    text-align: left;
-    margin: 8px 0;
-    padding: 0 1em;
+    li {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0.5em 1.3333333333333333em;
+      display: none;
+    }
   }
   // general text input details styling
   .text-field__content {
@@ -116,40 +129,40 @@
     &::placeholder {
       transition: 0.3s ease all;
     }
-    .text-field__input {
-      font-size: 14px !important;
-      width: 100%;
-      border-radius: 10px;
-      padding: 12px 1em;
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-      border: 1px solid #e5e5e5 !important;
-      // padding: 10px;
-      &.text-field__input--rounded {
-        border-radius: 20px !important;
-      }
-      &.text-field--left {
-        padding: 0 1em !important;
-        height: 40px;
-        font-size: 14px;
-        font-weight: 400;
-        font-family: $quicksand;
-      }
-      &.text-field--icon {
-        padding-left: 3em !important;
-      }
+    // .text-field__input {
+    //   font-size: 14px !important;
+    //   width: 100%;
+    //   border-radius: 10px;
+    //   padding: 12px 1em;
+    //   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+    //   border: 1px solid #e5e5e5 !important;
+    //   // padding: 10px;
+    //   &.text-field__input--rounded {
+    //     border-radius: 20px !important;
+    //   }
+    //   &.text-field--left {
+    //     padding: 0 1em !important;
+    //     height: 40px;
+    //     font-size: 14px;
+    //     font-weight: 400;
+    //     font-family: $quicksand;
+    //   }
+    //   &.text-field--icon {
+    //     padding-left: 3em !important;
+    //   }
 
-      &:focus {
-        &::placeholder {
-          color: rgba(0, 0, 0, 0.95);
-        }
-        // border: 1px solid #333 !important;
-        // box-shadow: none !important;
-      }
-      &.text-field__input--border-none {
-        border: none;
-        padding: 12px 14px 12px 50px;
-      }
-    }
+    //   &:focus {
+    //     &::placeholder {
+    //       color: rgba(0, 0, 0, 0.95);
+    //     }
+    //     // border: 1px solid #333 !important;
+    //     // box-shadow: none !important;
+    //   }
+    //   &.text-field__input--border-none {
+    //     border: none;
+    //     padding: 12px 14px 12px 50px;
+    //   }
+    // }
     .text-field__limit {
       background: $primaryLight;
       color: $white;
@@ -166,7 +179,40 @@
       display: none;
     }
   }
+  .text-field__input {
+    font-size: 14px !important;
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px 1em;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #e5e5e5 !important;
+    // padding: 10px;
+    &.text-field__input--rounded {
+      border-radius: 20px !important;
+    }
+    &.text-field--left {
+      padding: 0 1em !important;
+      height: 40px;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $quicksand;
+    }
+    &.text-field--icon {
+      padding-left: 3em !important;
+    }
 
+    &:focus {
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.95);
+      }
+      // border: 1px solid #333 !important;
+      // box-shadow: none !important;
+    }
+    &.text-field__input--border-none {
+      border: none;
+      padding: 12px 14px 12px 50px;
+    }
+  }
   // this class adds badge
   &.field-wrapper--limit {
     .text-field__content {
@@ -182,6 +228,9 @@
     }
     .messages {
       color: $primaryLight;
+      li {
+        display: block;
+      }
     }
     .text-field__content {
       .text-field__input {
@@ -272,8 +321,27 @@
       }
     }
   }
-  &.field-wrapper__checkbox-sign {
-    text-align: left;
+  // ------New Checkbox------
+  .ui.form.checkbox_sign {
+    position: relative;
+    backface-visibility: hidden;
+    outline: 0;
+    vertical-align: baseline;
+    font-style: normal;
+    min-height: 17px;
+    font-size: 1rem;
+    line-height: 17px;
+    min-width: 17px;
+  }
+
+  .ui.checkbox.icon .box,
+  .ui.checkbox.icon label {
+    font-family: $quicksand !important;
+    color: #333;
+    line-height: 20px;
+    // width: 18px !important;
+    // height: 18px !important;
+    display: block;
   }
   .check-field-group{
 
@@ -332,7 +400,7 @@
       box-shadow: inset 0 0 0 2px #f4f4f4;
     }
   }
-  // .mncheck
+
   // .icon {
   //   label {
   //     &::before {
@@ -423,7 +491,7 @@
   .select2-selection {
     border: $primaryLight 1px solid !important;
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 0 6px;
   }
   .select2-container--focus {
     border: $primaryLight 1px solid;
@@ -468,8 +536,179 @@
     color: $primaryLight !important;
   }
 }
+//login
+// auth login
+.field-wrapper {
+  .key-number {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+  }
+  .input__message {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    appearance: none;
+    font-size: 18px;
+    bottom: -14px;
+  }
+}
+.hide {
+  display: none;
+}
+.terms-link {
+  padding: 10px 0 10px;
+  margin-bottom: 0 !important;
+  margin-top: 0px;
+}
+.iti--allow-dropdown {
+  width: 100% !important;
+  border: none !important;
+  padding: 0;
+}
+.iti--allow-dropdown {
+  .iti__flag-container {
+    &:hover {
+      .iti__selected-flag {
+        background-color: transparent;
+      }
+    }
+  }
+}
+.iti input,
+.iti input[type="text"],
+.iti input[type="tel"] {
+  border: none;
+  padding: 12px 14px 12px 50px;
+}
+
+input[type="tel"] {
+  padding: 0;
+}
+.iti-mobile {
+  .iti__country-list {
+    width: 300px;
+    height: 300px;
+  }
+}
+.alert {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+// index
+.section-index {
+  float: left;
+  width: 100%;
+  &.section-index--pt {
+    padding-top: 20px;
+  }
+}
 
 html[dir="rtl"] {
+  //start rtl auth
+  // input field
+
+  .field-wrapper {
+    // general message styling
+    // general text input details styling
+    .text-field__content {
+      .text-field__limit {
+        left: 3px;
+        padding: 9px 11px;
+      }
+    }
+    .text-field__input {
+      &.text-field--icon {
+        padding-right: 3em !important;
+      }
+      &.text-field__input--border-none {
+        padding: 12px 50px 12px 14px;
+      }
+    }
+
+    // input type file
+    &.field-wrapper__file-input {
+      .file-input {
+        text-align: right;
+      }
+      .file-input__label {
+        &::after {
+          border-right: inherit;
+        }
+      }
+    }
+
+    // input type select
+    &.field-wrapper__select-input {
+      .select-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    ul.field-wrapper__radio-group {
+      li.radio-item_1 {
+        input {
+          display: none;
+        }
+        label.radio-label-1 {
+          cursor: pointer;
+          &::before {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .ui.checkbox.icon label{
+      text-align: right;
+    }
+    // textarea
+
+    // .text-field__error{
+
+    // }
+    .text-field__label {
+      text-align: right;
+    }
+    .messages {
+      li {
+        text-align: right;
+      }
+    }
+  }
+
+  .select2 {
+    .select2-selection__choice {
+      padding: 3px 18px 4px 6px !important;
+    }
+
+    .select2-selection__choice__remove {
+      border-left: 0 !important;
+      right: 3px !important;
+    }
+  }
+  .iti__country-list {
+    text-align: right;
+    margin: 0 -1px 0 0px;
+}
+.alert {
+ text-align: right;
+}
+  //End
   .field-wrapper {
     &.field-wrapper__select-input {
       .select-menu {
@@ -513,4 +752,94 @@ html[dir="rtl"] {
       padding-right: 10px;
     }
   }
+  //login
+// auth login
+.field-wrapper {
+  .key-number {
+    padding-right: 14px;
+  }
+  .input__message {
+    padding-right: 14px;
+  }
+}
+.iti input,
+.iti input[type="text"],
+.iti input[type="tel"] {
+  padding: 12px 50px 12px 14px;
+}
+
+// index
+.section-index {
+  float: right;
+}
+}
+.nav-tab{
+  justify-content: center;
+  padding-bottom: 30px;
+  li {
+    padding: 5px 20px;
+    .tab-link {
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+      }
+      &:hover {
+        color: $darkBlack;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    .active-tab {
+      transition: 0.3 ease all;
+      padding-bottom: 10px !important;
+      border-radius: 0;
+      padding: 8px 0px 8px 0px;
+      margin: 8px 6px 2px 0;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      color: $darkBlack;
+      background: transparent;
+      display: inline-block;
+      font-family: $quicksand;
+      border-style: solid;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 3px;
+        background-color: $darkBlack;
+        transition: 0.3s ease all;
+        width: 100%;
+      }
+    }
+  }
+}
+.socialMedia {
+  margin-bottom: 10px;
 }

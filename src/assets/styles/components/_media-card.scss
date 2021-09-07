@@ -27,7 +27,7 @@
       height: 450px;
       display: none;
     }
-    .media-card-video {
+    .media-card__video {
       height: 450px;
       .video-player__iframe {
         width: 100%;
@@ -41,7 +41,7 @@
       padding: 20px;
     }
   }
-  &.media-card--height{
+  &.media-card--height {
     .media-card__image {
       height: 350px;
     }

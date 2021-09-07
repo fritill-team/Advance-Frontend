@@ -1098,17 +1098,17 @@ html[dir="rtl"] {
     margin-right: 0;
     width: 100% !important;
   }
-  input[type="password"] {
-    text-align: right;
-    padding-right: 4.2em !important;
-    padding-left: 1em !important;
-  }
-  input[type="email"],
-  .ui[class*="left icon"].swdh95.input > input {
-    text-align: right;
-    padding-right: 4.2em !important;
-    padding-left: 1em !important;
-  }
+  // input[type="password"] {
+  //   text-align: right;
+  //   padding-right: 4.2em !important;
+  //   padding-left: 1em !important;
+  // }
+  // input[type="email"],
+  // .ui[class*="left icon"].swdh95.input > input {
+  //   text-align: right;
+  //   padding-right: 4.2em !important;
+  //   padding-left: 1em !important;
+  // }
   .iti--allow-dropdown {
     width: 100% !important;
   }

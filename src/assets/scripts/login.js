@@ -5,11 +5,11 @@
 //   let value = e.target.value;
 
 //   if (value.match(/^\d+$/)) {
-//     $('#icon-message').hide();
+//     $('#input__icon').hide();
 //     $('#key-number').show();
 //     e.target.type = 'number';
 //   } else {
-//     $('#icon-message').show();
+//     $('#input__icon').show();
 //     $('#key-number').hide();
 //     e.target.type = 'email';
 //   }
@@ -53,46 +53,7 @@ var verification = (function () {
 
 //login phone number
 
-// var input = document.querySelector("#phone");
-// var iti = window.intlTelInput(input, {
-//   // separateDialCode:true,
-//   utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
-// });
 
-// // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
-// window.iti = iti;
-
-// const phoneInputField = document.querySelector("#phone");
-// const phoneInput = window.intlTelInput(phoneInputField, {
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-//   initialCountry: "auto",
-//   geoIpLookup: getIp,
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-//   preferredCountries: ["us", "co", "in", "de"],
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-// });
-
-// function getIp(callback) {
-//   fetch('https://ipinfo.io/json?token=<your token>', { headers: { 'Accept': 'application/json' } })
-//     .then((resp) => resp.json())
-//     .catch(() => {
-//       return {
-//         country: 'us',
-//       };
-//     })
-//     .then((resp) => callback(resp.country));
-// };
-
-
-
-
-// var dsada = document.querySelector(".input");
-// dsada?.addEventListener("click" , function(){
-//   console.log("fsdfsd");
-// });
 
 if ("intlTelInput" in window) {
   const phoneInputField = document.querySelector("#phone"),
@@ -119,7 +80,7 @@ if ("intlTelInput" in window) {
     }
     // IMask(phoneInputField, {
     //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
-    // }); 
+    // });
     const phoneNumber = phoneInput.getNumber();
 
     info.style.display = "none";
@@ -135,3 +96,19 @@ if ("intlTelInput" in window) {
   })
 }
 
+//tabs
+$('.tab__group > div').hide();
+$('.tab__group > div:first-of-type').show();
+$('.nav-tab a').click(function(e){
+
+  e.preventDefault();
+    var $this = $(this),
+        tab__group = '#'+$this.parents('.nav-tab').data('tabgroup'),
+        others = $this.closest('li').siblings().children('a'),
+        target = $this.attr('href');
+    others.removeClass('active-tab');
+    $this.addClass('active-tab');
+    $(tab__group).children('div').hide();
+    $(target).show();
+
+})

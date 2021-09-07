@@ -172,18 +172,10 @@
     color: #aaaaaa;
     appearance: none;
   }
-  .icon-message {
+  .field-wrapper__message {
     position: absolute;
-    height: 100%;
-    border-radius: 20%;
-    background: none;
-    border: 0;
-    outline: none;
-    padding-left: 14px;
-    color: #aaaaaa;
-    appearance: none;
     font-size: 18px;
-    bottom: -11px;
+    padding: 12px;
   }
 }
 
