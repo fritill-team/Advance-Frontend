@@ -36,8 +36,6 @@ var verification = (function () {
 
 //login phone number
 
-
-
 if ("intlTelInput" in window) {
   const phoneInputField = document.querySelector("#phone"),
     tokinMask = "5hy8RjDWfiqwO051SlFiQh1hkwDfwvJSSw2my7fF";
@@ -89,8 +87,8 @@ $('.tabs__header .tabs__tab a').click(function(e){
         tabs__panels = '#'+$this.parents('.tabs__header').data('tabs'),
         others = $this.closest('.tabs__tab').siblings().children('a'),
         target = $this.attr('href');
-    others.removeClass('active-tab');
-    $this.addClass('active-tab');
+    others.removeClass('tab--active');
+    $this.addClass('tab--active');
     $(tabs__panels).children('div').hide();
     $(target).show();
 

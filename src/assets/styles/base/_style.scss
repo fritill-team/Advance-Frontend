@@ -6030,18 +6030,18 @@ a.rmv-btn i {
   height: 100%;
   z-index: -1;
 }
-.auth-form:before {
-  content: "";
-  background: url("/assets/images/sign.svg") no-repeat center;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  pointer-events: none;
-  background-size: cover;
-  opacity: 0.04;
-}
+// .auth-form:before {
+//   content: "";
+//   background: url("/assets/images/sign.svg") no-repeat center;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   position: absolute;
+//   pointer-events: none;
+//   background-size: cover;
+//   opacity: 0.04;
+// }
 
 .auth-form__content {
   background: #fff;
@@ -6134,22 +6134,6 @@ a.rmv-btn i {
 }
 .sgntrm146 a {
   color: #ed2a26;
-}
-.sign_footer {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  font-family: $quicksand;
-  color: #333;
-  padding: 50px 0;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-.sign_footer img {
-  margin-right: 10px;
-  vertical-align: middle;
 }
 
 .sgntrm145 a {
@@ -8618,32 +8602,32 @@ input[type="tel"] {
 }
 
 // auth login
-.field-wrapper {
-  .key-number {
-    position: absolute;
-    height: 100%;
-    border-radius: 20%;
-    background: none;
-    border: 0;
-    outline: none;
-    padding-left: 14px;
-    color: #aaaaaa;
-    appearance: none;
-  }
-  .field-wrapper__icon {
-    position: absolute;
-    height: 100%;
-    border-radius: 20%;
-    background: none;
-    border: 0;
-    outline: none;
-    padding-left: 14px;
-    color: #aaaaaa;
-    appearance: none;
-    font-size: 18px;
-    bottom: -14px;
-  }
-}
+// .field-wrapper {
+//   .key-number {
+//     position: absolute;
+//     height: 100%;
+//     border-radius: 20%;
+//     background: none;
+//     border: 0;
+//     outline: none;
+//     padding-left: 14px;
+//     color: #aaaaaa;
+//     appearance: none;
+//   }
+//   .field-wrapper__icon {
+//     position: absolute;
+//     height: 100%;
+//     border-radius: 20%;
+//     background: none;
+//     border: 0;
+//     outline: none;
+//     padding-left: 14px;
+//     color: #aaaaaa;
+//     appearance: none;
+//     font-size: 18px;
+//     bottom: -14px;
+//   }
+// }
 .hide {
   display: none;
 }

@@ -32,12 +32,12 @@ html(lang='en' dir="")
 
 	body
 		div
-			section.auth-form(style="background-image: url('/assets/images/auth/sign.svg') no-repeat center;")
+			.auth-form(style="background-image: url('/assets/images/auth/sign.svg')")
 				div.container
 					div.row.justify-content-lg-center.justify-content-md-center
 						.col-lg-12
-							div.auth-form__title#logo
-								h2.fw-bold Advance
+							div.auth-form__title
+								h2.title-h3 Advance
 								//- a(href='index.html')
 								//-   img(src='../../assets/images/sign_logo.png' alt='')
 								//- a(href='index.html')
@@ -45,7 +45,7 @@ html(lang='en' dir="")
 						div.col-lg-6.col-md-12
 							.auth-form__content
 								block content
-						.sign_footer
+						.auth-form__footer
 							| &copy; 2020
 							strong  Advance
 							|. All Rights Reserved.
