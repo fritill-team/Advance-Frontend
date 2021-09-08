@@ -50,8 +50,8 @@ if ("intlTelInput" in window) {
   });
 
 
-  const info = document.querySelector(".alert-info");
-  const error = document.querySelector(".alert-error");
+  const info = document.querySelector(".btn--success");
+  const error = document.querySelector(".btn--error");
 
   phoneInputField.addEventListener("input", function process(event) {
     event.preventDefault();

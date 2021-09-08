@@ -532,7 +532,7 @@ input[type="tel"] {
     height: 300px;
   }
 }
-.alert {
+.field-wrapper--alert {
   margin-top: 5px;
   margin-bottom: 0px;
 }
@@ -603,7 +603,7 @@ html[dir="rtl"] {
         }
       }
     }
-    .ui.checkbox.icon label{
+    .ui.checkbox.icon label {
       text-align: right;
     }
     // textarea
@@ -634,10 +634,10 @@ html[dir="rtl"] {
   .iti__country-list {
     text-align: right;
     margin: 0 -1px 0 0px;
-}
-.alert {
- text-align: right;
-}
+  }
+  .field-wrapper--alert {
+    text-align: right;
+  }
   //End
   .field-wrapper {
     &.field-wrapper__select-input {
@@ -683,27 +683,27 @@ html[dir="rtl"] {
     }
   }
   //login
-// auth login
-.field-wrapper {
-  .key-number {
-    padding-right: 14px;
+  // auth login
+  .field-wrapper {
+    .key-number {
+      padding-right: 14px;
+    }
+    .field-wrapper__icon {
+      padding-right: 14px;
+    }
   }
-  .field-wrapper__icon {
-    padding-right: 14px;
+  .iti input,
+  .iti input[type="text"],
+  .iti input[type="tel"] {
+    padding: 12px 50px 12px 14px;
   }
-}
-.iti input,
-.iti input[type="text"],
-.iti input[type="tel"] {
-  padding: 12px 50px 12px 14px;
-}
 
-// index
-.section-index {
-  float: right;
+  // index
+  .section-index {
+    float: right;
+  }
 }
-}
-.nav-tab{
+.nav-tab {
   justify-content: center;
   padding-bottom: 30px;
   li {

@@ -7,7 +7,7 @@ a:hover {
   // color: inherit !important;
   text-decoration: none;
 }
-input:focus{
+input:focus {
   outline: 0;
 }
 // start auth style
@@ -49,18 +49,18 @@ input:focus{
   float: left;
   width: 100%;
   margin-top: 0;
-  h2{
+  h2 {
     font-size: 24px;
-     font-weight: 600;
-    font-family: Quicksand,sans-serif;
+    font-weight: 600;
+    font-family: Quicksand, sans-serif;
     color: #333;
     text-align: center;
     margin-bottom: 40px;
   }
-  p{
+  p {
     font-size: 14px;
     font-weight: 400;
-    font-family: Quicksand,sans-serif;
+    font-family: Quicksand, sans-serif;
     color: #686f7a;
     text-align: center;
     line-height: 26px;
@@ -76,21 +76,21 @@ input:focus{
   display: block;
   float: left;
   width: 100%;
-.auth-form__footer img {
-  margin-right: 10px;
-  vertical-align: middle;
-}
+  .auth-form__footer img {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
 }
 // End auth style
 // start tabs
-.tabs{
-  .tabs__header{
+.tabs {
+  .tabs__header {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
   }
 }
-.tabs__tab{
+.tabs__tab {
   padding: 5px 20px;
   .tab__link {
     padding-bottom: 10px !important;
@@ -151,7 +151,7 @@ input:focus{
     }
   }
 }
- // End tabs
+// End tabs
 // input field
 .field-wrapper {
   width: 100%;
@@ -205,6 +205,7 @@ input:focus{
       display: none;
     }
   }
+
   // general text input details styling
   .text-field__content {
     position: relative;
@@ -474,6 +475,12 @@ input:focus{
       }
     }
   }
+  .field-wrapper--alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
 }
 /*  reset password    */
 .auth-form__content .verification .vcode-input {
@@ -547,7 +554,7 @@ html[dir="rtl"] {
         }
       }
     }
-    .ui.checkbox.icon label{
+    .ui.checkbox.icon label {
       text-align: right;
     }
     // textarea
@@ -578,10 +585,10 @@ html[dir="rtl"] {
   .iti__country-list {
     text-align: right;
     margin: 0 -1px 0 0px;
-}
-.alert {
- text-align: right;
-}
+  }
+  .field-wrapper--alert {
+    text-align: right;
+  }
   //End
   .field-wrapper {
     &.field-wrapper__select-input {
@@ -627,28 +634,28 @@ html[dir="rtl"] {
     }
   }
   //login
-// auth login
-.field-wrapper {
-  .key-number {
-    padding-right: 14px;
+  // auth login
+  .field-wrapper {
+    .key-number {
+      padding-right: 14px;
+    }
+    .field-wrapper__icon {
+      padding-right: 14px;
+    }
   }
-  .field-wrapper__icon {
-    padding-right: 14px;
+  .iti input,
+  .iti input[type="text"],
+  .iti input[type="tel"] {
+    padding: 12px 50px 12px 14px;
   }
-}
-.iti input,
-.iti input[type="text"],
-.iti input[type="tel"] {
-  padding: 12px 50px 12px 14px;
-}
 
-// index
-.section-index {
-  float: right;
-}
-.iti__arrow {
-  margin-left: 6px;
-}
+  // index
+  .section-index {
+    float: right;
+  }
+  .iti__arrow {
+    margin-right: 6px;
+  }
 }
 .hide {
   display: none;
