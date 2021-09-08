@@ -45,13 +45,14 @@
   }
   .description__name {
     margin-right: 8px;
-		max-width: 34%;
-		width: 100%;
-		display: flex;
+    max-width: 34%;
+    width: 100%;
+    display: flex;
     font-size: 16px;
-		strong{
-			margin-left: 4px;
-		}
+    word-break: break-all;
+    strong {
+      margin-left: 4px;
+    }
   }
   .description__details {
     line-height: 1.1;
