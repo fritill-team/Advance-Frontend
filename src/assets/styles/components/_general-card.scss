@@ -436,6 +436,10 @@
   &.ad-card--card-file {
     position: relative;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 15px;
     .ad-card__content {
       flex-direction: inherit;
     }
