@@ -11,7 +11,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-family: "Quicksand", sans-serif !important;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Sections
@@ -24,11 +24,6 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.42857143;
-  color: #333;
-  background: #f7f7f7 !important;
 }
 
 /**
@@ -48,16 +43,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  /* background-color: red !important; */
-}
+
 /* Grouping content
    ========================================================================== */
 
@@ -365,3 +351,5 @@ template {
 [hidden] {
   display: none;
 }
+
+

@@ -32,6 +32,7 @@
   left: 1.5rem;
   width: 60%;
   text-indent: -1.5rem;
+  color: #ddd;
 }
 @mixin empty-star {
   font-size: 1.3rem;
@@ -41,6 +42,7 @@
   display: block;
   float: left;
   margin-right: 7px;
+  color: #ddd;
 }
 @mixin empty-star-before {
   content: "\f005";
@@ -88,28 +90,6 @@
       color: #dedfe0;
       display: flex;
       flex-basis: 30%;
-      .rating-box__rating-star {
-        @include rating-star;
-      }
-      .rating-box--full-star {
-        &::before {
-          @include full-star-before;
-        }
-      }
-      .rating-box--half-star {
-        &::before {
-          @include hulf-star-before;
-        }
-        &::after {
-          @include hulf-star-after;
-        }
-      }
-      .rating-box--empty-star {
-        @include empty-star;
-        &:before {
-          @include empty-star-before;
-        }
-      }
     }
     .total-rating__title {
       font-size: 13px;
@@ -187,5 +167,27 @@
         line-height: 22px;
       }
     }
+  }
+}
+.rating-box__rating-star {
+  @include rating-star;
+}
+.rating-box--full-star {
+  &::before {
+    @include full-star-before;
+  }
+}
+.rating-box--half-star {
+  &::before {
+    @include hulf-star-before;
+  }
+  &::after {
+    @include hulf-star-after;
+  }
+}
+.rating-box--empty-star {
+  @include empty-star;
+  &:before {
+    @include empty-star-before;
   }
 }

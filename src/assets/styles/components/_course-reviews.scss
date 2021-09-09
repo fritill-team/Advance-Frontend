@@ -253,6 +253,7 @@
   color: $white;
   display: flex;
   flex-basis: 30%;
+  margin: 10px 0px;
   .rating-box__rating-star {
     @include rating-star;
   }

@@ -5,7 +5,7 @@ block title
   title Course
 
 block content
-  section(style="width:100%; background:  linear-gradient(90deg,rgba(255,0,0,0) -60%,#333)")
+  section(style="width:100%; background:  linear-gradient(90deg,rgba(255,0,0,0) -60% , #333)")
     .container
       .col-xl-4.col-lg-5.col-md-6
         block course-video
@@ -57,3 +57,54 @@ block content
           //-   button.list-item--btn-Enrole-childe Enrol Chiled
         .wrapper__title-buy
           | 30-Day Money-Back Guarantee
+  section.content 
+    .container 
+      .row   
+        .col-lg-8
+          .tabs
+            ul.tabs__header
+              li.tab.tab--active
+                a(href="#tab1" class="tab__link ") About
+              li.tab
+                a(href="#tab2" class="tab__link ") content
+              li.tab
+                a(href="#tab3" class="tab__link ") review 
+            .tabs-panels
+              #tab1.tab-panel
+                .rich-textarea
+                  p Lorem ipsum dolor sit amet consectetur
+                  h1  Lorem ipsum dolor sit amet consectetur
+                  h2  Lorem ipsum dolor sit amet consectetur
+                  h3  Lorem ipsum dolor sit amet consectetur
+                  h4  Lorem ipsum dolor sit amet consectetur
+                  h5  Lorem ipsum dolor sit amet consectetur
+                  h6  Lorem ipsum dolor sit amet consectetur
+                  ul  
+                    li  Lorem ipsum dolor sit amet consectetur
+                    li  Lorem ipsum dolor sit amet consectetur
+              #tab2.tab-panel
+                include ../components/course.pug
+              #tab3.tab-panel
+                //- start reviews
+                .reviews
+                  .row
+                    .col-lg-12 
+                      section.comments__add-comment
+                        .add-comment__group
+                          .group__img-wrapper
+                            img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
+                          textarea.group__textarea(placeholder="Add a public comment")
+                        a(class="btn btn--danger btn--rounded" href="#") Add review
+                      include ../components/review.pug
+                      .review__all-reviews.mt-3
+                        include ../components/review-item.pug
+                        .all-reviews__review-item
+                          a.review-item__more-reviews(href='#') See More Reviews
+        .col-lg-4.mt-5
+          h3.about-required__title Related courses
+          include ../components/related-courses.pug
+
+
+
+
+

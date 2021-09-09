@@ -216,7 +216,7 @@
   body {
     &.sidebar-with-icon {
       .page-content {
-        margin-left: 60px;
+        //margin-left: 60px;
       }
       .sidebar {
         width: 60px;
@@ -244,7 +244,7 @@
     }
     &.open-side-nav {
       .page-content {
-        margin-left: 240px;
+        //margin-left: 240px;
       }
       .sidebar {
         width: 240px;
@@ -306,7 +306,7 @@
   }
 
   .page-content {
-    margin-left: 240px;
+    //margin-left: 240px;
     &.page-content--video-player {
       margin-left: 285px;
     }

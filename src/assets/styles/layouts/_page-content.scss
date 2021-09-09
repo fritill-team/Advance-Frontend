@@ -3,7 +3,7 @@
   transition: all 0.3s ease-out;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   height: 100%;
 
   &.page-content--display {
@@ -21,7 +21,7 @@
 
 @media (min-width: 992px) {
   .page-content {
-    margin-left: 240px;
+    // margin-left: 240px;
 
     &.page-content--video-player {
       margin-left: 285px;

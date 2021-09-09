@@ -10,10 +10,10 @@
 @import "layouts/_sidebar";
 @import "layouts/playlist";
 @import "layouts/_footer";
-@import "layouts/_footer-admin";
 
 @import "./custom/toastr";
 // @import "./base/_style.scss";
+@import "./components/_tabs.scss";
 @import "./custom/_auth-forms.scss";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
