@@ -48,7 +48,16 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  /* background-color: red !important; */
+}
 /* Grouping content
    ========================================================================== */
 
