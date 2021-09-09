@@ -5,6 +5,7 @@
     padding-bottom: 30px;
   }
 }
+
 .tab {
   padding-bottom: 10px !important;
   border-radius: 0;
@@ -21,7 +22,7 @@
   position: relative;
   margin: 10px 25px;
 
-  &::before {
+  &:before {
     position: absolute;
     content: "";
     width: 0;
@@ -31,12 +32,15 @@
     background-color: $darkBlack;
     transition: 0.3s ease all;
   }
+
   &:hover {
     color: $darkBlack;
+
     &::before {
       width: 100%;
     }
   }
+
   &.tab--active {
     transition: 0.3 ease all;
     padding-bottom: 10px !important;
@@ -44,6 +48,7 @@
     line-height: 1;
     position: relative;
     font-weight: 600;
+
     &::before {
       position: absolute;
       content: "";
@@ -56,8 +61,10 @@
       width: 100%;
     }
   }
+
   .tab__link {
     color: #000;
   }
 }
+
 // End tabs

@@ -12,8 +12,8 @@
     .total-rating__title Course Rating
   .all-reviews__details-rate
     .details-rate__rating
-      include ../components/general-component/progress.pug
-      +progress("w-70", "70" , "0", "100")
+      .rating__progress
+        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
       .rating__rating-box
         +rating( 'rating-box--full-star')
         +rating( 'rating-box--full-star')
@@ -22,38 +22,42 @@
         +rating( 'rating-box--empty-star')
       .rating--total 70%
     .details-rate__rating
-      +progress("w-30", "30" , "0", "100")
+      .rating__progress
+        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
       .rating__rating-box
         +rating( 'rating-box--full-star')
         +rating( 'rating-box--full-star')
         +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
         +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 40%
+      .rating--total 70%
     .details-rate__rating
-      +progress("w-5", "5" , "0", "100")
+      .rating__progress
+        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
       .rating__rating-box
         +rating( 'rating-box--full-star')
         +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
         +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 10%
+      .rating--total 70%
     .details-rate__rating
-      +progress("w-2", "2" , "0", "100")
+      .rating__progress
+        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
       .rating__rating-box
         +rating( 'rating-box--full-star')
         +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
         +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 2%
+      .rating--total 70%
     .details-rate__rating
-      +progress("w-1", "1" , "0", "100")
+      .rating__progress
+        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
       .rating__rating-box
         +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
+        +rating( 'rating-box--full-star')
         +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 1%
+      .rating--total 70%
