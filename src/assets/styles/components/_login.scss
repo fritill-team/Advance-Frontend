@@ -1,55 +1,23 @@
-// .auth-forms__alert{
-//   width: 100%;
-//   padding: 10px;
-//   border-radius: 25px;
-//   text-align: center;
-//   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
-//   margin: 15px 0;
-//   font-size: 16px;
-//   &.auth-forms__alert-invalid{
-//     border: 1px solid #dc3545;
-//     color: #dc3545;
-//   }
-//   &.auth-forms__alert-valid{
-//     border: 1px solid #198754;
-//     color: #198754;
-//   }
-// }
-.auth-forms__alert {
-  background-color: rgba(220, 17, 1, 0.16);
-  box-shadow: 0px 0px 2px #ff0303;
-  width: 100%;
-  padding: 10px;
-  border-radius: 25px;
-  text-align: center;
-  color: #ff0303;
-  transition: 0.5s;
-  margin: 15px 0;
-  font-size: 16px;
-  font-family: montserrat;
-  font-size: 16px;
-  font-weight: lighter;
-  &.auth-forms__alert-invalid {
-    border: 1px solid rgba(241, 6, 6, 0.81);
-    background-color: rgba(220, 17, 1, 0.09);
-    transition: 0.5s;
-  }
-  &:hover {
-    background-color: rgba(220, 17, 1, 0.33);
-    transition: 0.5s;
-  }
-  &.auth-forms__alert-valid {
-    background-color: #198754;
-    color: $white;
-  }
+ol,
+ul {
+  list-style: none;
+  margin-bottom: 0 !important;
 }
-
+a:hover {
+  // color: inherit !important;
+  text-decoration: none;
+}
+input:focus {
+  outline: 0;
+}
+// start auth style
 .auth-form {
   background: #f7f7f7 !important;
   position: relative;
   width: 100%;
   z-index: 0;
   height: 100%;
+  z-index: 0;
   &::before {
     content: "";
     background: url("/assets/images/sign.svg") no-repeat center;
@@ -63,22 +31,133 @@
     opacity: 0.04;
     z-index: -1;
   }
-  .srch_explore {
-    background: $white !important;
-    border: 1px solid #e5e5e5 !important;
-    color: #333 !important;
-    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.auth-form__title {
+  float: none;
+  width: 135px;
+  text-align: center;
+  margin: auto !important;
+  padding: 50px 0;
+  z-index: 1;
+}
+.auth-form__content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 50px 30px;
+  box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
+  flex: 1;
+  float: left;
+  width: 100%;
+  margin-top: 0;
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Quicksand, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Quicksand, sans-serif;
+    color: #686f7a;
+    text-align: center;
+    line-height: 26px;
   }
 }
-
+.auth-form__footer {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  font-family: $quicksand;
+  color: #333;
+  padding: 50px 0;
+  display: block;
+  float: left;
+  width: 100%;
+  .auth-form__footer img {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+// End auth style
+// start tabs
+.tabs {
+  .tabs__header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+.tabs__tab {
+  padding: 5px 20px;
+  .tab__link {
+    padding-bottom: 10px !important;
+    border-radius: 0;
+    padding: 8px 0px 8px 0px;
+    margin: 8px 6px 2px 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    color: $darkBlack;
+    background: transparent;
+    display: inline-block;
+    font-family: $quicksand;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: 3px;
+      background-color: $darkBlack;
+      transition: 0.3s ease all;
+    }
+    &:hover {
+      color: $darkBlack;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .tab--active {
+    transition: 0.3 ease all;
+    padding-bottom: 10px !important;
+    border-radius: 0;
+    padding: 8px 0px 8px 0px;
+    margin: 8px 6px 2px 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    color: $darkBlack;
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: 3px;
+      background-color: $darkBlack;
+      transition: 0.3s ease all;
+      width: 100%;
+    }
+  }
+}
+// End tabs
 // input field
-
 .field-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
-
   &:focus-within {
     .messages {
       li {
@@ -103,6 +182,18 @@
       color: $primary;
     }
   }
+  .field-wrapper__icon {
+    position: absolute;
+    height: 100%;
+    border-radius: 20%;
+    background: none;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    color: #aaaaaa;
+    font-size: 18px;
+    bottom: -14px;
+  }
   // general message styling
   .messages {
     font-weight: 500;
@@ -114,6 +205,7 @@
       display: none;
     }
   }
+
   // general text input details styling
   .text-field__content {
     position: relative;
@@ -205,14 +297,6 @@
       }
     }
   }
-
-  // this class hides messages
-  // &.field-wrapper--no-message{
-  //   .field-wrapper__message{
-  //     display: none;
-  //   }
-  // }
-
   // input type file
   &.field-wrapper__file-input {
     .file-input {
@@ -309,58 +393,23 @@
     // height: 18px !important;
     display: block;
   }
-  // input type checkbox
-  .check-field-group{
-    
+
+  .ui.checkbox.icon input:checked ~ .box:after,
+  .ui.checkbox.icon input:checked ~ label:after {
+    opacity: 1;
+    color: #ed2a26 !important;
+    font-size: 10px !important;
+    margin-top: 0;
+    width: 18px !important;
+    height: 18px !important;
   }
-  .check-field{
-    position: relative;
-    width: 200px;
-    padding: 5px;
-    .check-field__input{
-      display: none;
-    }
-    .check-field__label{
-      position: relative;
-      font-size: 14px;
-      font-weight: 400;
-      font-family: $quicksand;
-      line-height: 17px;
-      cursor: pointer;
-      &::before {
-        font-family: "FontAwesome";
-        color: red;
-        content: "";
-        // content: "";
-        background: #f7f7f7;
-        border: 1px solid #b4b4b4;
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        top: 0px;
-        position: relative;
-        margin-right: 10px;
-        vertical-align: top;
-        cursor: pointer;
-        text-align: center;
-      }
-    }
+
+  .ui.checkbox.icon .box:before,
+  .ui.checkbox.icon label:before {
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 1px;
   }
-  // i.icon {
-  //   color: red;
-  //   position: absolute;
-  //   font-size: 16px;
-  //   left: 5px;
-  // }
-  .check-field input[type="checkbox"]:checked + .check-field__label::after{
-    font-family: "FontAwesome";
-    content: "\f00c";
-    position: absolute;
-    background-color: red;
-    left: 0;
-    font-size: 20px;
-  }
-  // input type radio
   ul.field-wrapper__radio-group {
     li.radio-item_1 {
       input {
@@ -426,144 +475,27 @@
       }
     }
   }
-}
-
-.select2 {
-  width: 100% !important;
-  border-radius: 10px;
-  &.select2--rounded {
-    border-radius: 25px;
-    .select2-selection {
-      border-radius: 25px;
-    }
-  }
-  .select2-selection {
-    border: $primaryLight 1px solid !important;
-    border-radius: 10px;
-    padding: 0 6px;
-  }
-  .select2-container--focus {
-    border: $primaryLight 1px solid;
-  }
-  .select2-selection__choice {
-    background-color: rgba($primaryLight, 0.1) !important;
-    color: $primaryLight;
-    border: none !important;
-    padding: 3px 6px 4px 18px !important;
-    border-radius: 25px !important;
-    margin-bottom: 5px;
-    border: 1px solid $primaryLight;
-  }
-
-  .select2-selection__choice__remove {
-    border-right: 0 !important;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    left: 3px !important;
-    span {
-      color: $primaryLight;
-    }
-    &:hover {
-      background-color: transparent;
-    }
-  }
-  .select2-search__field {
-    line-height: 20px;
+  .field-wrapper--alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
   }
 }
-.select2-dropdown {
-  border: 1px solid $primaryLight;
+/*  reset password    */
+.auth-form__content .verification .vcode-input {
+  outline: none;
+  display: block;
+  height: 50px;
+  margin-right: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  min-width: 0;
+  background: #fff !important;
+  border: 1px solid #e5e5e5 !important;
+  color: #333 !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
 }
-.select2-results {
-  .select2-results__option--highlighted {
-    background-color: rgba($color: $primaryLight, $alpha: 0.1) !important;
-    color: $primaryLight !important;
-  }
-  .select2-results__option--selected {
-    background-color: rgba($color: $primaryLight, $alpha: 0.1) !important;
-    color: $primaryLight !important;
-  }
-}
-//login
-// auth login
-.field-wrapper {
-  .key-number {
-    position: absolute;
-    height: 100%;
-    border-radius: 20%;
-    background: none;
-    border: 0;
-    outline: none;
-    padding-left: 14px;
-    color: #aaaaaa;
-    appearance: none;
-  }
-  .field-wrapper__icon {
-    position: absolute;
-    height: 100%;
-    border-radius: 20%;
-    background: none;
-    border: 0;
-    outline: none;
-    padding-left: 14px;
-    color: #aaaaaa;
-    appearance: none;
-    font-size: 18px;
-    bottom: -14px;
-  }
-}
-.hide {
-  display: none;
-}
-.terms-link {
-  padding: 10px 0 10px;
-  margin-bottom: 0 !important;
-  margin-top: 0px;
-}
-.iti--allow-dropdown {
-  width: 100% !important;
-  border: none !important;
-  padding: 0;
-}
-.iti--allow-dropdown {
-  .iti__flag-container {
-    &:hover {
-      .iti__selected-flag {
-        background-color: transparent;
-      }
-    }
-  }
-}
-.iti input,
-.iti input[type="text"],
-.iti input[type="tel"] {
-  border: none;
-  padding: 12px 14px 12px 50px;
-}
-
-input[type="tel"] {
-  padding: 0;
-}
-.iti-mobile {
-  .iti__country-list {
-    width: 300px;
-    height: 300px;
-  }
-}
-.field-wrapper--alert {
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
-// index
-.section-index {
-  float: left;
-  width: 100%;
-  &.section-index--pt {
-    padding-top: 20px;
-  }
-}
-
 html[dir="rtl"] {
   //start rtl auth
   // input field
@@ -721,74 +653,53 @@ html[dir="rtl"] {
   .section-index {
     float: right;
   }
+  .iti__arrow {
+    margin-right: 6px;
+  }
 }
-.nav-tab {
-  justify-content: center;
-  padding-bottom: 30px;
-  li {
-    padding: 5px 20px;
-    .tab__link {
-      padding-bottom: 10px !important;
-      border-radius: 0;
-      padding: 8px 0px 8px 0px;
-      margin: 8px 6px 2px 0;
-      line-height: 1;
-      white-space: nowrap;
-      text-decoration: none;
-      text-align: center;
-      color: $darkBlack;
-      background: transparent;
-      display: inline-block;
-      font-family: $quicksand;
-      border-style: solid;
-      position: relative;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 1px;
-        left: 0;
-        bottom: 3px;
-        background-color: $darkBlack;
-        transition: 0.3s ease all;
-      }
-      &:hover {
-        color: $darkBlack;
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-    .tab--active {
-      transition: 0.3 ease all;
-      padding-bottom: 10px !important;
-      border-radius: 0;
-      padding: 8px 0px 8px 0px;
-      margin: 8px 6px 2px 0;
-      line-height: 1;
-      white-space: nowrap;
-      text-decoration: none;
-      text-align: center;
-      color: $darkBlack;
-      background: transparent;
-      display: inline-block;
-      font-family: $quicksand;
-      border-style: solid;
-      position: relative;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 1px;
-        left: 0;
-        bottom: 3px;
-        background-color: $darkBlack;
-        transition: 0.3s ease all;
-        width: 100%;
+.hide {
+  display: none;
+}
+.terms-link {
+  padding: 10px 0 10px;
+  margin-bottom: 0 !important;
+  margin-top: 0px;
+}
+.iti--allow-dropdown {
+  width: 100% !important;
+  border: none !important;
+  padding: 0;
+}
+.iti--allow-dropdown {
+  .iti__flag-container {
+    &:hover {
+      .iti__selected-flag {
+        background-color: transparent;
       }
     }
   }
 }
-.socialMedia {
-  margin-bottom: 10px;
+.iti input,
+.iti input[type="text"],
+.iti input[type="tel"] {
+  border: none;
+  padding: 12px 14px 12px 50px;
+}
+
+input[type="tel"] {
+  padding: 0;
+}
+.iti-mobile {
+  .iti__country-list {
+    width: 300px;
+    height: 300px;
+  }
+}
+// index
+.section-index {
+  float: left;
+  width: 100%;
+  &.section-index--pt {
+    padding-top: 20px;
+  }
 }

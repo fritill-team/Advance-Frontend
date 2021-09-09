@@ -15,9 +15,9 @@ import "./assets/vendor/dropzone.js";
 // import "./assets/vendor/bootstrap/js/bootstrap.min.js";
 import "./assets/vendor/popper.min.js";
 import "./assets/vendor/lightbox.min.js";
+import "./assets/vendor/venobox.min.js"
 import "./assets/vendor/select2.min.js";
-import "./assets/vendor/sortable.js";
-
+import "./assets/vendor/sortable.js"; 
 // js
 import "./assets/scripts/index";
 

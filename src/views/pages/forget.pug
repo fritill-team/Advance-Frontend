@@ -10,21 +10,19 @@ block content
 			label.text-field__label Course Title
 				abbr(title="required") *
 			.text-field__content
-				input.text-field__input.text-field--icon(
+				input(
+          class="text-field__input text-field--icon"
 					type='email'
 					placeholder='Email Address'
 					name='email address'
-					data-purpose='edit-course-title'
 					maxlength=''
-					required
-					id="emailType"
 					value=''
 					)
-				i.far.fa-envelope.input__message
+				i.far.fa-envelope.field-wrapper__icon
 			ul.messages
 				li Please provide a valid city.
 		.d-flex.justify-content-around
-			button(class="btn btn--primary  btn--rounded btn--xl" type="submit")  Reset Password
+			button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Reset Password
 	p.title-2 Go Back
 		a(href="login.html" class="text-3 btn--link-text btn--secondary btn") Sign In
 
