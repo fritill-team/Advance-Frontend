@@ -301,7 +301,8 @@ input {
           background-color: $black;
         }
         &.btn--success {
-          background-color: $gray;
+         background-color: $success;
+          border-color: $success;
         }
         &.btn--info {
           background-color: $info;
@@ -314,6 +315,11 @@ input {
           color: $light-gray;
         }
       }
+    }
+    &.btn--error {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
     }
   }
 }
