@@ -11,263 +11,303 @@ block content
 				.d-flex.flex-column.my-3
 					.d-flex.justify-content-between.align-items-center
 						h1.title-h1.mb-0 Media
-				//- h3.secondary-title media title
-				//- .general-details__item
-				//- 	h4.description__name arabic :
-				//- 	p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur
+		.row
+			.col-lg-12
+				.d-flex.flex-column
+					.d-flex.justify-content-between.align-items-center
+						h2.title-h2 Media Library
+						a(class="ad-btn ad-btn--primary ad-btn--rounded" href="#") create
+		.row
+			.col-lg-9
 				.row
-					.col-lg-12
-						button(onclick=`toggleToast('hello', 'error')`) toast
-						.d-flex.flex-column.my-3
-							.d-flex.justify-content-between.align-items-center
-								h2.title-h2.mb-0.mb-2 Media Library
-								button.btn.btn--primary.btn--rounded.my-2 create
-					.col-lg-9
-						.row
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg' data-lightbox='example-set' data-title='Or press the right arrow on your keyboard.')
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg' data-lightbox='example-set' data-title="The next image in the set is preloaded as you're viewing.")
-								include ../components/media-card.pug
-							.col-lg-4.col-md-4
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg' data-lightbox='example-set' data-title='Click anywhere outside the image or the X to the right to close.')
-								include ../components/media-card.pug
-					.col-lg-3
-						.general-wrapper.general-wrapper--card-details
-							//- .general-wrapper__header
-							//- 	h3 general details
-							//- 	.general-actions
-							//- 		a(href="/"): i.far.fa-edit(aria-hidden="true")
-							//- 		a(href="/"): i.far.fa-trash-alt(aria-hidden="true")
-							.general-wrapper__content
-								.d-flex.mb-2
-									span.description__name Id
-										strong :
-									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-								.d-flex.mb-2
-									span.description__name Author
-										strong :
-									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-								.d-flex.mb-2
-									span.description__name AuthorAuthor
-										strong :
-									p.description__details.my-0 Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-								
-								//- .row
-								//- 	.col-xl-4.col-lg-12
-								//- 		span.description__name Id:
-								//- 	.col-xl-8.col-lg-12
-								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-								//- 	.col-xl-4.col-lg-12
-								//- 		span.description__name Author:
-								//- 	.col-xl-8.col-lg-12
-								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur
-								//- 	.col-xl-4.col-lg-12 
-								//- 		span.description__name AuthorAuthor:
-								//- 	.col-xl-8.col-lg-12
-								//- 		p.description__details Lorem ipsum, dolor sit amet consectetur 
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								//- a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.col-lg-4.col-md-4
+						.media-card
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+			.col-lg-3
+				.general-wrapper.general-wrapper--card-details
+					.general-wrapper__content
+						.d-flex
+							span.description__name Id
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+
 				// cover bg or video
+		.row
+			.col-lg-12
+				.d-flex.flex-column
+					.d-flex.justify-content-between.align-items-center
+						h2.title-h2.mt-0 Media Library
+						a(class="ad-btn ad-btn--primary ad-btn--rounded" href="#") create
+		.row
+			.col-lg-9
 				.row
 					.col-lg-12
-						.d-flex.flex-column.my-3
-							.d-flex.justify-content-between.align-items-center
-								h2.title-h2.mb-0.mb-2 Media Library
-								button.btn.btn--primary.btn--rounded.my-2 create
-					.col-lg-9
-						.row
-							.col-lg-12
-								a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
-								.media-card.media-card--cover
-									.media-card__video
-										iframe.video-player__iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")
-									
-									.media-card__image
-										img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
-										.more-dropdown.more-dropdown--absolute
-											button.ad-btn.ad-btn--hover-dropdown
-												i.fas.fa-ellipsis-v.more-dropdown__icon
-											.more-dropdown__content
-												span.content__item
-													i.item__icon.uil.uil-comment-alt-edit
-													| Edit
-												span.content__item
-													i.item__icon.uil.uil-trash-alt
-													| Delete
-									.details-card
-										p.title-2.gray Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae consequatur atque iste, quo similique eius repellat aliquam, vitae corporis excepturi dolore facere? Alias ipsum aliquid laborum, perferendis ipsam fugiat in.
+						.media-card.media-card--cover
+							.media-card__image
+								a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
+									img(src='http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg' alt='')
+								.more-dropdown.more-dropdown--absolute
+									button.ad-btn.ad-btn--hover-dropdown
+										i.fas.fa-ellipsis-v.more-dropdown__icon
+									.more-dropdown__content
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-comment-alt-edit
+											| Edit
+										a(href="#" class="content__item")
+											i.item__icon.uil.uil-trash-alt
+											| Delete
+							.media-card__description 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			.col-lg-3
+				.general-wrapper.general-wrapper--card-details
+					.general-wrapper__content
+						.d-flex
+							span.description__name Id
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
 
-					.col-lg-3
-						.general-wrapper.general-wrapper--card-details
-							.general-wrapper__content 
-								.row
-									.col-xl-4.col-lg-12
-										span.description__name Id:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-									.col-xl-4.col-lg-12
-										span.description__name Author:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur
-									.col-xl-4.col-lg-12 
-										span.description__name AuthorAuthor:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur 
-
-				// fails
+		.row
+			.col-lg-12
+				.d-flex.flex-column
+					.d-flex.justify-content-between.align-items-center
+						h2.title-h2 Download File
+						a(class="ad-btn ad-btn--primary ad-btn--rounded" href="#") create
+		.row
+			.col-lg-9
 				.row
-					.col-lg-12
-						.d-flex.flex-column.my-3
-							.d-flex.justify-content-between.align-items-center
-								h2.title-h2.mb-0.mb-2 Download File
-								button.btn.btn--primary.btn--rounded.my-2 create
-					.col-lg-9
-						.row
-							.col-lg-6
-								.ad-card.ad-card--card-file
-									//- a(href="#" class="ad-card--file-download")
-									//- 	i.fas.fa-download
-									.more-dropdown.more-dropdown--absolute
-										button.ad-btn.ad-btn--hover-dropdown
-											i.fas.fa-ellipsis-v.more-dropdown__icon
-										.more-dropdown__content
-											span.content__item
-												i.item__icon.uil.uil-comment-alt-edit
-												| Edit
-											span.content__item
-												i.item__icon.uil.uil-trash-alt
-												| Delete
-									.ad-card__content
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
-										.ad-card__body
-											.ad-card__content-header
-												.user-data
-													h3.text-h3 file Item
-											.ad-card__content--details
-												.ad-card__info
-													h4.text-3  Size :
-													span.text-3.gray 45m
-												.ad-card__info
-													h4.text-3  Type :
-													span.text-3.gray Pdf 
-												 
-										//- .file-card
-										//- 	i.far.fa-file-pdf.file-icon.gray
-							.col-lg-6
-								.ad-card.ad-card--card-file
-									//- a(href="#" class="ad-card--file-download")
-									//- 	i.fas.fa-download
-									.more-dropdown.more-dropdown--absolute
-										button.ad-btn.ad-btn--hover-dropdown
-											i.fas.fa-ellipsis-v.more-dropdown__icon
-										.more-dropdown__content
-											span.content__item
-												i.item__icon.uil.uil-comment-alt-edit
-												| Edit
-											span.content__item
-												i.item__icon.uil.uil-trash-alt
-												| Delete
-									.ad-card__content
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
-										.ad-card__body
-											.ad-card__content-header
-												.user-data
-													h3.text-h3 file Item
-											.ad-card__content--details
-												.ad-card__info
-													h4.text-3  Size :
-													span.text-3.gray 45m
-												.ad-card__info
-													h4.text-3  Type :
-													span.text-3.gray Pdf 
-							.col-lg-6
-								.ad-card.ad-card--card-file
-									//- a(href="#" class="ad-card--file-download")
-									//- 	i.fas.fa-download
-									.more-dropdown.more-dropdown--absolute
-										button.ad-btn.ad-btn--hover-dropdown
-											i.fas.fa-ellipsis-v.more-dropdown__icon
-										.more-dropdown__content
-											span.content__item
-												i.item__icon.uil.uil-comment-alt-edit
-												| Edit
-											span.content__item
-												i.item__icon.uil.uil-trash-alt
-												| Delete
-									.ad-card__content
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
-										.ad-card__body
-											.ad-card__content-header
-												.user-data
-													h3.text-h3 file Item
-											.ad-card__content--details
-												.ad-card__info
-													h4.text-3  Size :
-													span.text-3.gray 45m
-												.ad-card__info
-													h4.text-3  Type :
-													span.text-3.gray Pdf 
-							.col-lg-6
-								.ad-card.ad-card--card-file
-									//- a(href="#" class="ad-card--file-download")
-									//- 	i.fas.fa-download
-									.more-dropdown.more-dropdown--absolute
-										button.ad-btn.ad-btn--hover-dropdown
-											i.fas.fa-ellipsis-v.more-dropdown__icon
-										.more-dropdown__content
-											span.content__item
-												i.item__icon.uil.uil-comment-alt-edit
-												| Edit
-											span.content__item
-												i.item__icon.uil.uil-trash-alt
-												| Delete
-									.ad-card__content
-										.file-card
-											i.far.fa-file-pdf.file-icon.gray
-										.ad-card__body
-											.ad-card__content-header
-												.user-data
-													h3.text-h3 file Item
-											.ad-card__content--details
-												.ad-card__info
-													h4.text-3  Size :
-													span.text-3.gray 45m
-												.ad-card__info
-													h4.text-3  Type :
-													span.text-3.gray Pdf 
-					.col-lg-3
-						.general-wrapper.general-wrapper--card-details
-							.general-wrapper__content
-								.row
-									.col-xl-4.col-lg-12
-										span.description__name Id:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur
-									.col-xl-4.col-lg-12
-										span.description__name Author:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur
-									.col-xl-4.col-lg-12 
-										span.description__name AuthorAuthor:
-									.col-xl-8.col-lg-12
-										p.description__details Lorem ipsum, dolor sit amet consectetur 
-
-
+					.col-lg-6
+						.ad-card.ad-card--card-file 
+							.ad-card__content
+								.file-card
+									i.far.fa-file-pdf.file-icon.gray
+								.ad-card__body
+									.ad-card__content-header
+										.user-data
+											h3.text-h3 file Item
+									.ad-card__content--details
+										.ad-card__info
+											h4.text-3  Size :
+											span.text-3.gray 45m
+										.ad-card__info
+											h4.text-3  Type :
+											span.text-3.gray Pdf
+							.more-dropdown
+								button.ad-btn.ad-btn--hover-dropdown
+									i.fas.fa-ellipsis-v.more-dropdown__icon
+								.more-dropdown__content
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-comment-alt-edit
+										| Edit
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-trash-alt
+										| DownLoad
+					.col-lg-6
+						.ad-card.ad-card--card-file 
+							.ad-card__content
+								.file-card
+									i.far.fa-file-pdf.file-icon.gray
+								.ad-card__body
+									.ad-card__content-header
+										.user-data
+											h3.text-h3 file Item
+									.ad-card__content--details
+										.ad-card__info
+											h4.text-3  Size :
+											span.text-3.gray 45m
+										.ad-card__info
+											h4.text-3  Type :
+											span.text-3.gray Pdf
+							.more-dropdown
+								button.ad-btn.ad-btn--hover-dropdown
+									i.fas.fa-ellipsis-v.more-dropdown__icon
+								.more-dropdown__content
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-comment-alt-edit
+										| Edit
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-trash-alt
+										| DownLoad
+					.col-lg-6
+						.ad-card.ad-card--card-file 
+							.ad-card__content
+								.file-card
+									i.far.fa-file-pdf.file-icon.gray
+								.ad-card__body
+									.ad-card__content-header
+										.user-data
+											h3.text-h3 file Item
+									.ad-card__content--details
+										.ad-card__info
+											h4.text-3  Size :
+											span.text-3.gray 45m
+										.ad-card__info
+											h4.text-3  Type :
+											span.text-3.gray Pdf
+							.more-dropdown
+								button.ad-btn.ad-btn--hover-dropdown
+									i.fas.fa-ellipsis-v.more-dropdown__icon
+								.more-dropdown__content
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-comment-alt-edit
+										| Edit
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-trash-alt
+										| DownLoad
+					.col-lg-6
+						.ad-card.ad-card--card-file 
+							.ad-card__content
+								.file-card
+									i.far.fa-file-pdf.file-icon.gray
+								.ad-card__body
+									.ad-card__content-header
+										.user-data
+											h3.text-h3 file Item
+									.ad-card__content--details
+										.ad-card__info
+											h4.text-3  Size :
+											span.text-3.gray 45m
+										.ad-card__info
+											h4.text-3  Type :
+											span.text-3.gray Pdf
+							.more-dropdown
+								button.ad-btn.ad-btn--hover-dropdown
+									i.fas.fa-ellipsis-v.more-dropdown__icon
+								.more-dropdown__content
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-comment-alt-edit
+										| Edit
+									a(href="#" class="content__item")
+										i.item__icon.uil.uil-trash-alt
+										| DownLoad
+			.col-lg-3
+				.general-wrapper.general-wrapper--card-details
+					.general-wrapper__content
+						.d-flex
+							span.description__name Id
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur 
+						.d-flex
+							span.description__name Author
+								strong :
+							p.description__details Lorem ipsum, dolor sit amet consectetur

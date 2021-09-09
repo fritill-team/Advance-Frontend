@@ -6,10 +6,10 @@
   float: left;
   bottom: 0;
   z-index: 10;
-  .footer-admin__admin-content{
+  .footer-admin__admin-content {
     display: flex;
     padding-top: 30px;
-    .admin-content__link{
+    .admin-content__link {
       font-size: 14px;
       font-weight: 400;
       font-family: $quicksand;
@@ -22,93 +22,93 @@
       }
     }
   }
-  .footer-admin__admin-line{
+  .footer-admin__admin-line {
     margin-top: 20px;
     padding: 20px 0;
     border-top: 1px solid #454545;
   }
-  .admin-copyRight{
+  .admin-copyRight {
     margin-top: 0px;
-    .admin-copyRight__list{
+    .admin-copyRight__list {
       display: inline-block;
       vertical-align: middle;
       .list__link {
-        .link__logo{
-          img{
+        .link__logo {
+          img {
             width: 30px;
             margin-right: 20px;
             line-height: 24px;
           }
         }
       }
-      p.list__paragraph{
+      p.list__paragraph {
         font-size: 14px;
         font-weight: 400;
         font-family: $quicksand;
         color: #f7f7f7;
         text-align: left;
         line-height: 24px;
-        strong{
+        strong {
           font-weight: bold;
         }
       }
     }
   }
-  .admin-socialMedia{
+  .admin-socialMedia {
     text-align: right;
     margin-left: -10px;
-    .admin-socialMedia__links{
+    .admin-socialMedia__links {
       padding-top: 10px;
       padding-left: 15px;
       font-size: 16px;
       display: inline-block;
       color: $light-white;
       transition: all 0.2s ease-in-out;
-      &:hover{
+      &:hover {
         color: #fff !important;
         transform: scale(1.1);
       }
     }
   }
 }
-@media (min-width: 0px) and (max-width: 768px){
-	.admin-socialMedia {
-		text-align: left !important;
-		margin-top: 10px;
-	}
+@media (min-width: 0px) and (max-width: 768px) {
+  .admin-socialMedia {
+    text-align: left !important;
+    margin-top: 10px;
+  }
 }
 html[dir="rtl"] {
   .footer-admin {
-		float: right;
-		.footer-admin__admin-content{
-			.admin-content__link{
-				padding-left: 20px;
-			}
-		}
-		.footer-admin__admin-line{
-			padding: 20px 0;
-		}
-		.admin-copyRight{
-			float: right;
-			.admin-copyRight__list{
-				.list__link {
-					.link__logo{
-						img{
-							margin-left: 20px;
-						}
-					}
-				}
-			}
-		}
-		.admin-socialMedia{
-			margin-left: 0px;
-			text-align: left;
-			.admin-socialMedia__links{
-				padding-top: 10px;
-			}
-		}
-	}
-	@media (min-width: 0px) and (max-width: 768px){
+    float: right;
+    .footer-admin__admin-content {
+      .admin-content__link {
+        padding-left: 20px;
+      }
+    }
+    .footer-admin__admin-line {
+      padding: 20px 0;
+    }
+    .admin-copyRight {
+      float: right;
+      .admin-copyRight__list {
+        .list__link {
+          .link__logo {
+            img {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+    .admin-socialMedia {
+      margin-left: 0px;
+      text-align: left;
+      .admin-socialMedia__links {
+        padding-top: 10px;
+      }
+    }
+  }
+  @media (min-width: 0px) and (max-width: 768px) {
     .admin-socialMedia {
       text-align: right !important;
       margin-top: 10px;
