@@ -10,14 +10,14 @@ block content
 	h2.title-h6.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account!
 	.tabs
-		ul(class="tabs__header" data-tabs="tabs")
-			li.tabs__tab
-					a(href="#tab1" class="tab--active tab__link btn btn--link-text text-1 medium") Login With Email
-			li.tabs__tab
-					a(href="#tab2" class="btn tab__link btn--link-text text-1 medium ") Login With Phone
-		.tabs__panels#tabs
-			#tab1.tabs__panel
-				form.form
+		ul(class="tabs__header")
+			li.tab.tab--active
+					a(href="#tab1" class="tab__link") Login With Email
+			li.tab
+					a(href="#tab2" class="tab__link") Login With Phone
+		.tabs-panels
+			#tab1.tab-panel
+				form
 					.field-wrapper
 						label.text-field__label Course Title
 							abbr(title="required") *
@@ -58,8 +58,8 @@ block content
 							label(for="remember") Remember Me
 					.d-flex.justify-content-around
 						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
-			#tab2.tabs__panel
-				form.ad-form
+			#tab2.tab-panel
+				form
 					.field-wrapper
 						label.text-field__label Course Title
 							abbr(title="required") *
@@ -70,10 +70,6 @@ block content
 								type="tel"
 								name="phone"
 								)
-						.field-wrapper--alert.btn--success(style="display: none")
-						.field-wrapper--alert.btn--error(style="display: none")
-							//- .alert.alert-info(style="display: none")
-							//- i.uil.uil-key-skeleton-alt.icon.icon2
 					.field-wrapper
 						label.text-field__label
 							|	Course Title
@@ -100,6 +96,7 @@ block content
 							label(for="remember2") Remember Me
 					.d-flex.justify-content-around
 						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
+
 	p.title-2
 		a(href="forget.html" class="title-2 btn btn--primary btn--text")  Forgot Password
 	.middle-or.d-flex

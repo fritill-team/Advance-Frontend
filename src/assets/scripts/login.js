@@ -1,4 +1,3 @@
-
 // script reset page
 var verification = (function () {
   //cache dom
@@ -78,7 +77,6 @@ if ("intlTelInput" in window) {
 }
 
 //tabs
-
 $('.tabs__panels > div').hide();
 $('.tabs__panels > div:first-of-type').show();
 $('.tabs__header .tabs__tab a').click(function(e){
