@@ -95,13 +95,14 @@ block content
                             img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
                           textarea.group__textarea(placeholder="Add a public comment")
                         a(class="btn btn--danger btn--rounded" href="#") Add review
-                      include ../components/review.pug
+                      
                       .review__all-reviews.mt-3
                         include ../components/review-item.pug
                         .all-reviews__review-item
                           a.review-item__more-reviews(href='#') See More Reviews
         .col-lg-4.mt-5
-          h3.about-required__title Related courses
+          include ../components/review.pug
+          h3.text-h3 Related courses
           include ../components/related-courses.pug
 
 
