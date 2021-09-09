@@ -19,7 +19,6 @@
   }
 }
 
-
 @media (min-width: 992px) {
   .page-content {
     margin-left: 240px;
@@ -33,8 +32,8 @@
   }
 }
 @media (max-width: 992px) {
-  .wrapper {
-    &.wrapper--video-player {
+  .page-content {
+    &.page-content--video-player {
       margin-left: 0px !important;
     }
   }

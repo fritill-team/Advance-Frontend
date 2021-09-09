@@ -19,13 +19,13 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body
-		div
+		.wrapper.wrapper--minify
 			//- Menu
 			include ../components/header-fillter.pug
 
 				//- block category
 			//- block content
-			.wrapper.wrapper--minify
+			.page-content
 				block content
 				include ../components/footer.pug
 

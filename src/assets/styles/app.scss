@@ -5,11 +5,16 @@
 
 @import "layouts/_base";
 @import "layouts/_page-content";
+@import "layouts/_header";
+@import "layouts/_header-player";
+@import "layouts/_sidebar";
+@import "layouts/_sidebar-player";
+@import "layouts/_footer";
+@import "layouts/_footer-admin";
 
 @import "./custom/toastr";
-//@import "./base/_style.scss";
+// @import "./base/_style.scss";
 @import "./custom/_auth-forms.scss";
-@import "./components/_header";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
 @import "./components/_about-list";
@@ -24,16 +29,12 @@
 @import "./components/_course-card.scss";
 @import "./components/_enroll-card";
 @import "./components/_description-enroll";
-@import "./components/_footer-admin";
-@import "./components/_footer";
 @import "./components/_filter";
 @import "./components/_card";
 @import "components/buttons";
 @import "./components/_card-collapse";
 @import "./components/_media-card";
 @import "./components/_thread";
-@import "./components/_header-player";
-@import "./components/_sidebar-player";
 @import "./components/_social-icons";
 @import "./components/_tags";
 @import "./components/_info";
@@ -54,7 +55,6 @@
 @import "./components/typography";
 //@import "./base/instructor-dashboard.css";
 
-@import "components/sidebar";
 @import "./base/night-mode.css";
 @import "components/_list.scss";
 
