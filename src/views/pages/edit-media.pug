@@ -15,10 +15,10 @@ block content
 		.row
 			.col-lg-9
 				.update-media
-					form.form(action="/media-library.html" class="dropzone" id="my-awesome-dropzone")
+					form(action="/media-library.html" class="dropzone" id="my-awesome-dropzone")
 						.fallback#myId
 							input(name="file" type="file" multiple) 
-					form.form(action="")
+					form(action="")
 						.field-wrapper
 							label.text-field__label File Name
 								abbr(title="required") *
@@ -65,7 +65,4 @@ block content
 								strong :
 							p.description__details Lorem ipsum, dolor sit amet consectetur
 
-						 
-
-
-
+		

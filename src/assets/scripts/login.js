@@ -1,22 +1,4 @@
 // script reset page
-
-// let emailEl = document.querySelector('#emailtype');
-// $('#emailType').on('input', function (e) {
-//   let value = e.target.value;
-
-//   if (value.match(/^\d+$/)) {
-//     $('#icon-message').hide();
-//     $('#key-number').show();
-//     e.target.type = 'number';
-//   } else {
-//     $('#icon-message').show();
-//     $('#key-number').hide();
-//     e.target.type = 'email';
-//   }
-
-// });
-
-// script reset page
 var verification = (function () {
   //cache dom
   var $inputs = $("#verification").find("input");
@@ -53,8 +35,6 @@ var verification = (function () {
 
 //login phone number
 
-
-
 if ("intlTelInput" in window) {
   const phoneInputField = document.querySelector("#phone"),
     tokinMask = "5hy8RjDWfiqwO051SlFiQh1hkwDfwvJSSw2my7fF";
@@ -69,8 +49,8 @@ if ("intlTelInput" in window) {
   });
 
 
-  const info = document.querySelector(".alert-info");
-  const error = document.querySelector(".alert-error");
+  const info = document.querySelector(".btn--success");
+  const error = document.querySelector(".btn--error");
 
   phoneInputField.addEventListener("input", function process(event) {
     event.preventDefault();
@@ -80,7 +60,7 @@ if ("intlTelInput" in window) {
     }
     // IMask(phoneInputField, {
     //   mask: phoneInputField.getAttribute('placeholder').replace(/[0-9]/g, 0)
-    // }); 
+    // });
     const phoneNumber = phoneInput.getNumber();
 
     info.style.display = "none";
@@ -96,19 +76,18 @@ if ("intlTelInput" in window) {
   })
 }
 
-//tabs 
- 
-$('.tabgroup > div').hide();
-$('.tabgroup > div:first-of-type').show();
-$('.tabs-login a').click(function(e){
+//tabs
+$('.tabs__panels > div').hide();
+$('.tabs__panels > div:first-of-type').show();
+$('.tabs__header .tabs__tab a').click(function(e){
   e.preventDefault();
     var $this = $(this),
-        tabgroup = '#'+$this.parents('.tabs-login').data('tabgroup'),
-        others = $this.closest('li').siblings().children('a'),
+        tabs__panels = '#'+$this.parents('.tabs__header').data('tabs'),
+        others = $this.closest('.tabs__tab').siblings().children('a'),
         target = $this.attr('href');
-    others.removeClass('active-tab');
-    $this.addClass('active-tab');
-    $(tabgroup).children('div').hide();
+    others.removeClass('tab--active');
+    $this.addClass('tab--active');
+    $(tabs__panels).children('div').hide();
     $(target).show();
-  
+
 })
