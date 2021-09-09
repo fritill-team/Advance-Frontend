@@ -440,7 +440,7 @@ $('.grid').on('click', function () {
 
 var subnavs = $('#js-menu .sub-menu-item');
 var nav = $('.sidebar'),
-  wrapper = $('.wrapper'),
+  wrapper = $('.page-content'),
   sidemenu = $('.sidebar__menu'),
   sidebarIcon = $('.sidebar-with-icon'),
   menuItem = $('.sub-menu-item'),
@@ -449,7 +449,7 @@ var nav = $('.sidebar'),
 $(document)
   .on('click', '.toggle__menu', function () {
     nav.toggleClass('nav--opened vertical--minify')
-    wrapper.toggleClass('toggle-content wrapper--minify ');
+    wrapper.toggleClass('toggle-content page-content--minify ');
     sidebarIcon.toggleClass("open-side-nav");
     $('.sub-menu-item').each(function (i, item) {
       $(item).removeClass('menu--opened')
@@ -500,7 +500,7 @@ $('.sub-menu-item').click(function () {
 $(document)
   .on('click', '.sidebar-with-icon .sub-menu-item', function () {
     nav.addClass('nav--opened vertical--minify')
-    wrapper.addClass('toggle-content wrapper--minify ');
+    wrapper.addClass('toggle-content page-content--minify ');
     sidebarIcon.addClass("open-side-nav");
   })
 
@@ -525,20 +525,20 @@ $(".card__header--collapse").each(function () {
 
 var subnavs = $('#js-menu .sub-menu-item');
 var navPlayer = $('.sidebar__playlist'),
-  wrapper = $('.wrapper'),
+  wrapper = $('.page-content'),
   sidebarIcon = $('.sidebar-with-icon'),
   menuItem = $('.sub-menu-item'),
   menu = $("#js-menu")
 
 $(".header-player__course-name").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content wrapper--minify wrapper--video-player ");
+  wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
   // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
 });
 
 $(".playlist__close").click(function() {
   $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content wrapper--minify wrapper--video-player ");
+  wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
 });
 
 // checked box icon in video-list icon
@@ -551,7 +551,7 @@ $(".play-list--hide").click(function() {
 $(document)
 .on('click', 'content__item', function () {
   $(".content__item").toggleClass('nav--opened vertical--minify')
-  wrapper.toggleClass('toggle-content wrapper--minify ');
+  wrapper.toggleClass('toggle-content page-content--minify ');
   sidebarIcon.toggleClass("open-side-nav");
   // $('.sub-menu-item').each(function (i, item) {
   //   $(item).removeClass('menu--opened')

@@ -19,10 +19,10 @@
   }
 }
 
-
 @media (min-width: 992px) {
   .page-content {
     margin-left: 240px;
+
     &.page-content--video-player {
       margin-left: 285px;
     }
@@ -32,10 +32,11 @@
     margin-left: 60px;
   }
 }
+
 @media (max-width: 992px) {
-  .wrapper {
-    &.wrapper--video-player {
-      margin-left: 0 !important;
+  .page-content {
+    &.page-content--video-player {
+      margin-left: 0;
     }
   }
 }

@@ -21,7 +21,7 @@ html(lang='en' dir="ltr")
 			title Your project!
 
 	body
-		div
+		div.wrapper.wrapper--display
 			//- Menu
 			include ../components/header.pug
 				block category
@@ -34,7 +34,7 @@ html(lang='en' dir="ltr")
 			//- block content
 
 			block content
-				.wrapper.wrapper--display
+				.page-content
 					//- course viewe
 					//- course video
 					section.course-video

@@ -20,7 +20,7 @@ html(lang='en' dir="ltr" class="night-mode")
 			title Your project!
 
 	body
-		div
+		div.wrapper 
 			//- Menu
 			include ../components/header-player.pug
 			//- +menu('home')
@@ -29,7 +29,7 @@ html(lang='en' dir="ltr" class="night-mode")
 
 
 			//- block content
-			.wrapper.wrapper--video-player.wrapper--pt
+			.page-content.page-content--video-player.page-content--pt
 				block content
 				//- Footer
 
