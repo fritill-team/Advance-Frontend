@@ -1,19 +1,19 @@
-/* src/assets/styles/components/_button.scss  */
-
 a,
 button,
-input {
+input[type="button"] {
   &.btn {
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 5px;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 5px;
     text-transform: uppercase;
     display: inline-block;
     font-family: $quicksand, sans-serif;
+    font-size: 14px;
     cursor: pointer;
-    color: #fff;
+    color: $white;
     text-align: center;
+    font-weight: bold;
 
     &:hover {
       opacity: 0.8;
@@ -21,8 +21,9 @@ input {
     }
 
     &.btn--default {
-      background-color: $light-gray;
-      border-color: $light-gray;
+      color: $primary;
+      background-color: $default;
+      border-color: $default;
     }
 
     &.btn--primary {
@@ -31,13 +32,13 @@ input {
     }
 
     &.btn--secondary {
-      background-color: $black;
-      border-color: $black;
+      background-color: $secondary;
+      border-color: $secondary;
     }
 
     &.btn--success {
-      background-color: $gray;
-      border-color: $gray;
+      background-color: $success;
+      border-color: $success;
     }
 
     &.btn--info {
@@ -46,56 +47,25 @@ input {
     }
 
     &.btn--warning {
+
       background-color: $warning;
       border-color: $warning;
     }
 
     &.btn--danger {
-      background-color: $gold;
-      color: $light-gray;
-      border-color: $light-gray;
+      background-color: $danger;
+      border-color: $danger;
     }
 
     &.btn--rounded {
-      color: #fff;
       border-radius: 20px;
-
-      &.btn--default {
-        background-color: $light-gray;
-      }
-
-      &.btn--primary {
-        background-color: $primary;
-      }
-
-      &.btn--secondary {
-        background-color: $black;
-      }
-
-      &.btn--success {
-        background-color: $gray;
-      }
-
-      &.btn--info {
-        background-color: $info;
-      }
-
-      &.btn--warning {
-        background-color: $warning;
-      }
-
-      &.btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-      }
     }
 
     &.btn--outlined {
-
       background-color: transparent;
 
       &.btn--default {
-        color: $light-gray;
+        color: $default;
       }
 
       &.btn--primary {
@@ -103,11 +73,11 @@ input {
       }
 
       &.btn--secondary {
-        color: $black;
+        color: $secondary;
       }
 
       &.btn--success {
-        color: $gray;
+        color: $success;
       }
 
       &.btn--info {
@@ -119,8 +89,8 @@ input {
       }
 
       &.btn--danger {
-        border-color: $gold;
-        color: $gold;
+        border-color: $danger;
+        color: $danger;
       }
     }
 
@@ -131,7 +101,7 @@ input {
       transition: 0.3s ease all;
 
       &.btn--default {
-        color: $light-gray;
+        color: $primary;
       }
 
       &.btn--primary {
@@ -139,7 +109,7 @@ input {
       }
 
       &.btn--secondary {
-        color: $black;
+        color: $secondary;
       }
 
       &.btn--success {
@@ -159,7 +129,7 @@ input {
       }
     }
 
-    &.btn--hover {
+    /*&.btn--hover {
 
       &:hover {
         &.btn {
@@ -196,7 +166,7 @@ input {
           color: $light-gray;
         }
       }
-    }
+    }*/
 
     &.btn--icon {
       width: 35px;
@@ -399,19 +369,19 @@ input {
   }
 }
 
-button {
-  cursor: pointer;
-  display: block;
-
-  &.btn--text-basic {
-    background-color: transparent;
-    color: black;
-    font-size: 14px;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-  }
-}
+//button {
+//  cursor: pointer;
+//  display: block;
+//
+//  &.btn--text-basic {
+//    background-color: transparent;
+//    color: black;
+//    font-size: 14px;
+//    padding: 0px;
+//    margin: 0px;
+//    border: none;
+//  }
+//}
 
 a.btn {
   line-height: 18px;

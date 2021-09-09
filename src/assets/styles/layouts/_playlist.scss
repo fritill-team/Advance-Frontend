@@ -7,6 +7,12 @@
   overflow: hidden;
   width: 285px;
   z-index: 995;
+
+  &.playlist--opened {
+    left: 0;
+    box-shadow: -30px 0 30px 30px rgba(0, 0, 0, 0.2);
+  }
+
   .playlist__menu {
     position: absolute;
     top: 0;
@@ -17,12 +23,14 @@
     padding: 0;
     list-style-type: none;
   }
-  .playlist__header-section {
+
+  .playlist__header {
     background: $darkBlack;
     padding: 10px 5px;
     margin-bottom: 15px;
   }
 }
+
 .playlist__header {
   display: flex;
   justify-content: space-between;
@@ -34,15 +42,18 @@
     color: $white;
     font-size: 15px;
   }
+
   .playlist__close {
     background: #ddd;
     padding: 2px 6px;
     border-radius: 10px;
   }
+
   .playlist__close-icon {
     color: $darkBlack;
   }
 }
+
 @media (min-width: 992px) {
   .playlist {
     left: 0px;
@@ -50,8 +61,4 @@
   .vertical--minify {
     width: 0;
   }
-}
-.playlist--opened {
-  left: 0 !important;
-  box-shadow: rgba(0, 0, 0, 0.2)-30px 0 30px 30px;
 }

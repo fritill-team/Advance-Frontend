@@ -1,0 +1,59 @@
+extends ../layouts/master.pug
+
+
+block title
+  title Course
+
+block content
+  section(style="width:100%; background:  linear-gradient(90deg,rgba(255,0,0,0) -60%,#333)")
+    .container
+      .col-xl-4.col-lg-5.col-md-6
+        block course-video
+        include ../components/general-component/course-video.pug
+        include ../components/general-component/video-action.pug
+      .col-xl-8.col-lg-7.col-md-6
+        article.wrapper__header
+          h2.header__title The Web Developer Bootcamp
+          span.header__description
+            | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+        .wrapper__review-video
+          .review-video__review.mr-2
+            i.uil.uil-star.review__icon
+            | 4.5
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(81,665 ratings)
+        .wrapper__enrolled-text
+          | 114,521 students enrolled
+        .wrapper__language
+          .language__lang
+            span.lang__icons
+              i.uil.uil-comment.icons__fa
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;English
+          .language__more-lang
+            span.more-lang__icons
+              i.uil.uil-closed-captioning.icons__fa
+            span.more-lang__tooltip
+              | English, Dutch
+              span.tooltip--caption_tooltip
+                | 12 more
+                span.tooltip__caption-content
+                  span.caption-content__lang-item French
+                  span.caption-content__lang-item Hindi
+                  span.caption-content__lang-item German [Auto-generated]
+                  span.caption-content__lang-item Indonesian [Auto-generated]
+                  span.caption-content__lang-item Italian [Auto-generated]
+                  span.caption-content__lang-item Japanese [Auto-generated]
+                  span.caption-content__lang-item Korean
+                  span.caption-content__lang-item Polish
+                  span.caption-content__lang-item Portuguese [Auto-generated]
+                  span.caption-content__lang-item Spanish [Auto-generated]
+                  span.caption-content__lang-item Traditional Chinese
+                  span.caption-content__lang-item Turkish [Auto-generated]
+        .wrapper__last-update
+          | Last updated 1/2020
+        ul.wrapper__btn-list
+          li.btn-list__list-item
+            //+btn('list-item--btn-Enrole', 'Enroll')
+          //- li.btn-list__list-item
+          //-   button.list-item--btn-Enrole-childe Enrol Chiled
+        .wrapper__title-buy
+          | 30-Day Money-Back Guarantee
