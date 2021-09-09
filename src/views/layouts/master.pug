@@ -22,7 +22,7 @@ html(lang='en' dir="ltr")
 
 
   body
-    div
+    .wrapper
       // Menu
       include ../components/header.pug
 
@@ -31,7 +31,7 @@ html(lang='en' dir="ltr")
           include ../components/sidebar-content.pug
 
       // block content
-      .wrapper
+      .page-content
         block content
         include ../components/footer.pug
         //- Footer

@@ -1,0 +1,14 @@
+::-moz-selection {
+  /* Code for Firefox */
+  background-color: #cce2ff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+::selection {
+  background-color: #cce2ff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.wrapper {
+  height: 100%;
+}

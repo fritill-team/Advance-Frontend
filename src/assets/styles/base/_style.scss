@@ -91,7 +91,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin-top: 0px !important;
+  margin-top: 0 !important;
 }
 body {
   font-family: "Quicksand", sans-serif !important;
@@ -399,7 +399,7 @@ input[type="text"] {
 }
 /*--- Left Side Footer ---*/
 
-.alrt_dot {
+.alert_dot {
   position: absolute;
   right: 15px;
   font-size: 10px;
@@ -759,23 +759,7 @@ i.icon1 {
 
 /*--- Index Homepage ---*/
 
-.wrapper {
-  padding: 60px 0 0;
-  transition: all 0.3s ease-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  &.wrapper--display {
-    padding: 60px 0 0;
-  }
-  &.wrapper--display-2 {
-    margin-left: 0px;
-  }
-  &.wrapper--pt {
-    padding: 45px 0px;
-  }
-}
+
 
 .clearfix:after {
   content: "";

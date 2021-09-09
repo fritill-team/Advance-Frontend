@@ -1,12 +1,13 @@
-ul {
-  padding-left: 0 !important;
-}
+@import "layouts/_normalize";
 
 @import "./base/_fonts.scss";
 @import "./base/_variables.scss";
+
+@import "layouts/_base";
+@import "layouts/_page-content";
+
 @import "./custom/toastr";
-@import "./base/_style.scss";
-@import "./base/_rtl.scss";
+//@import "./base/_style.scss";
 @import "./custom/_auth-forms.scss";
 @import "./components/_header";
 @import "./components/_menu-responsive";
@@ -27,7 +28,7 @@ ul {
 @import "./components/_footer";
 @import "./components/_filter";
 @import "./components/_card";
-@import "./components/_btn-links";
+@import "components/buttons";
 @import "./components/_card-collapse";
 @import "./components/_media-card";
 @import "./components/_thread";
@@ -56,3 +57,6 @@ ul {
 @import "components/sidebar";
 @import "./base/night-mode.css";
 @import "components/_list.scss";
+
+/* TODO DELETE */
+@import "./base/_rtl.scss";
