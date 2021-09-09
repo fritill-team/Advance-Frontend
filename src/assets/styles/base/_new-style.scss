@@ -99,22 +99,6 @@
 .terms-link a {
   color: #ed2a26;
 }
-.sign_footer {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  font-family: $quicksand;
-  color: #333;
-  padding: 50px 0;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-.sign_footer img {
-  margin-right: 10px;
-  vertical-align: middle;
-}
 
 .sgntrm145 a {
   color: #ed2a26;
@@ -172,7 +156,7 @@
     color: #aaaaaa;
     appearance: none;
   }
-  .field-wrapper__message {
+  .field-wrapper__icon {
     position: absolute;
     font-size: 18px;
     padding: 12px;
@@ -928,7 +912,7 @@ input[type="tel"] {
   border: 1px solid #e5e5e5 !important;
 }
 
-.alert {
+.field-wrapper--alert {
   margin-top: 5px;
 }
 
