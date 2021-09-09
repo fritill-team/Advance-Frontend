@@ -9,8 +9,8 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -353,3 +353,6 @@ template {
 }
 
 
+ul {
+  padding: 0;
+}

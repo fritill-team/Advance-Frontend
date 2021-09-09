@@ -6,8 +6,11 @@
 
 import "./custom.js";
 import "./night-mode.js";
+
 import "./login.js"
 
 
 
 import "./toaster"
+
+import "./tabs.js"
