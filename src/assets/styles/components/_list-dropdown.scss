@@ -1,6 +1,7 @@
 .more-dropdown {
   display: inline-block;
   position: relative;
+
   .more-dropdown__link {
     font-size: 20px;
     color: #afafaf !important;
@@ -43,6 +44,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
     .more-dropdown__content {
       top: 38px;
     }

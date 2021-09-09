@@ -604,7 +604,15 @@ $(".convert").on("click" ,function(e){
   console.log(form)
 });
 
+// Drop zone
+ $("div#myId").dropzone({ url: "/file/post" });
  
+//venobox
+$(document).ready(function(){
+  $('.venobox').venobox(); 
+});
+
+
 // toaster js
 
 // $("#toastr").on('click',function(){
@@ -629,4 +637,4 @@ $(".convert").on("click" ,function(e){
 //   // }
 // })
 
-
+ 
