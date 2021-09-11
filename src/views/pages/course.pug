@@ -16,6 +16,7 @@ block content
 					include ../components/general-component/video-action.pug
 					//End video action
 				.col-xl-8.col-lg-7.col-md-6
+					//start video content
 					.video-content
 						h2.video-content__title The Web Developer Bootcamp
 						span.video-contentr__description
@@ -63,14 +64,15 @@ block content
 							//-   button.list-item--btn-Enrole-childe Enrol Chiled
 						.video-content__title-buy
 							| 30-Day Money-Back Guarantee
-	section
+					//End video content
+	section.card
 		.container
 			.row
 				.col-lg-8
 					.tabs
 						a(href="#tab1" class="tab tab--active ") About
-						a(href="#tab2" class="tab ") content
-						a(href="#tab3" class="tab ") review
+						a(href="#tab2" class="tab") content
+						a(href="#tab3" class="tab") review
 
 					.tabs-panels
 						#tab1.tab-panel.tab-panel--active
