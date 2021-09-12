@@ -58,6 +58,7 @@
   background-color: $white;
   border-radius: 10px;
   margin: 15px 0;
+  // display: flex;
 
   .card__title {
     //display: none;
@@ -66,7 +67,7 @@
   }
 
   .card__content {
-    //display: flex;
+    // display: flex;
     // flex-direction: column;
     padding: 20px;
 
@@ -231,6 +232,7 @@
       flex-direction: column-reverse;
     }
   }
+
   &.card--horizontal {
     .card__content {
       display: flex;
@@ -326,7 +328,7 @@
   }
 
   &.card--live-stream {
-    .card__content {
+    .card__content { 
       .user-image {
         margin-bottom: 25px;
       }
@@ -460,7 +462,8 @@
     .card__content {
       background: rgba(#e5e0e5, 0.06);
       box-shadow: 0 6px 25px #00000021;
-      padding: 15px 20px;
+      padding: 10px 0 0 0;
+      width: 100%;  
     }
 
     .user-data {

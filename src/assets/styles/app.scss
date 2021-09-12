@@ -1,4 +1,4 @@
-@import "layouts/_normalize";
+@import "layouts/_normalize.scss";
 
 @import "./base/_fonts.scss";
 @import "./base/_variables.scss";
@@ -15,6 +15,7 @@
 // @import "./base/_style.scss";
 @import "./components/_tabs.scss";
 @import "./custom/_auth-forms.scss";
+@import "./custom/_owl-slider.scss";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
 @import "./components/_about-list";

@@ -38,6 +38,7 @@
 .notification__list {
   display: flex;
   align-items: center;
+  margin-top: 0;
   .list__list-item {
     display: inline-block !important;
     vertical-align: middle;
@@ -155,6 +156,7 @@
       border-bottom: 1px solid $light-white !important;
       .item__profile-link {
         display: flex;
+        align-items: center;
         .profile-link__img {
           width: 40px;
           height: 40px;
@@ -174,6 +176,7 @@
             color: $darkBlack;
             text-align: left;
             position: relative;
+            margin-top: 0;
           }
           .content__details {
             font-size: 13px;
@@ -453,6 +456,8 @@
         // width: 0;
         // height: 0;
         // transition: opacity .1s ease;
+        max-height: 250px;
+        overflow-y: scroll;
 
         .menu--item {
           margin: 0;
