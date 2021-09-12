@@ -589,7 +589,7 @@ $(document)
 
 $(".convert").on("click" ,function(e){
   e.preventDefault();
-  let card = $(this).closest(".ad-card--convertible"),
+  let card = $(this).closest(".card--convertible"),
       form = card.children(".convertible__form"),
       data = card.children(".convertible__data");
   form.toggleClass("d-block");
@@ -644,4 +644,8 @@ $(document).ready(function(){
   $(".my-rating").starRating({
     initialRating: 0,
     starSize: 25,
+    totalStars: 5,
+    starShape: '',
+    emptyColor: 'lightgray',
+    hoverColor: '#f2b01e',
 });

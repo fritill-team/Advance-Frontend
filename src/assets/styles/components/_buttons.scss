@@ -15,7 +15,6 @@ input[type="button"] {
     text-align: center;
     text-transform: uppercase;
 
-
     &:hover {
       opacity: 0.8;
       transition: 0.3s ease all;
@@ -60,9 +59,9 @@ input[type="button"] {
       background-color: $warning;
       border-color: $warning;
     }
-		&.btn--white {
-      background-color: #FFF;
-      border-color: #FFF;
+    &.btn--white {
+      background-color: #fff;
+      border-color: #fff;
     }
     &.btn--danger {
       background-color: $danger;
@@ -101,7 +100,9 @@ input[type="button"] {
         color: $danger;
       }
     }
-
+    &.btn--ml-auto {
+      margin-left: auto;
+    }
     &.btn--text {
       border: none;
       background-color: transparent;
@@ -302,8 +303,6 @@ input[type="button"] {
       margin: auto;
     }
 
-
-
     &.btn--lg {
       padding: 15px 25px;
       margin: 5px;
@@ -491,6 +490,14 @@ html[dir="rtl"] {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
+    }
+  }
+}
+html[dir="rtl"] {
+  .btn {
+    &.btn--ml-auto {
+      margin-right: auto;
+      margin-left: 0;
     }
   }
 }
