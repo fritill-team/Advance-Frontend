@@ -50,25 +50,19 @@
   width: 100%;
   z-index: 0;
   height: 100%;
-  &::before {
-    content: "";
-    background: url("/assets/images/sign.svg") no-repeat center;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    pointer-events: none;
-    background-size: cover;
-    opacity: 0.04;
-    z-index: -1;
-  }
-  .srch_explore {
-    background: $white !important;
-    border: 1px solid #e5e5e5 !important;
-    color: #333 !important;
-    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
-  }
+  // &::before {
+  //   content: "";
+  //   background: url("/assets/images/sign.svg") no-repeat center;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   position: absolute;
+  //   pointer-events: none;
+  //   background-size: cover;
+  //   opacity: 0.04;
+  //   z-index: -1;
+  // }
 }
 
 // input field
@@ -310,17 +304,16 @@
     display: block;
   }
   // input type checkbox
-  .check-field-group{
-    
+  .check-field-group {
   }
-  .check-field{
+  .check-field {
     position: relative;
     width: 200px;
     padding: 5px;
-    .check-field__input{
+    .check-field__input {
       display: none;
     }
-    .check-field__label{
+    .check-field__label {
       position: relative;
       font-size: 14px;
       font-weight: 400;
@@ -352,7 +345,7 @@
   //   font-size: 16px;
   //   left: 5px;
   // }
-  .check-field input[type="checkbox"]:checked + .check-field__label::after{
+  .check-field input[type="checkbox"]:checked + .check-field__label::after {
     font-family: "FontAwesome";
     content: "\f00c";
     position: absolute;

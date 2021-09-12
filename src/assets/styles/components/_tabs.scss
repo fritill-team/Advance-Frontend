@@ -2,6 +2,10 @@
   display: flex;
   font-weight: bold;
   font-size: 14px;
+  &.tabs--center {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 .tab {
@@ -43,6 +47,7 @@
     border-radius: 0;
     font-weight: 600;
     line-height: 1;
+    color: #ed2a26;
 
     &::before {
       position: absolute;
@@ -54,6 +59,7 @@
       background-color: $darkBlack;
       transition: 0.3s ease all;
       width: 100%;
+      border-bottom: 1px solid #ed2a26;
     }
   }
 
@@ -61,7 +67,6 @@
     color: #000;
   }
 }
-
 
 .tab-panel {
   display: none;

@@ -4,14 +4,14 @@ extends ../layouts/auth.pug
 block title
 	title forget
 block content
-	h2.title-h6.semi-bold  Request a Password Reset
+	h2.title-h4.semi-bold Request a Password Reset
 	form.form
 		.field-wrapper
 			label.text-field__label Course Title
 				abbr(title="required") *
 			.text-field__content
 				input(
-          class="text-field__input text-field--icon"
+		  class="text-field__input text-field--icon"
 					type='email'
 					placeholder='Email Address'
 					name='email address'
@@ -22,7 +22,7 @@ block content
 			ul.messages
 				li Please provide a valid city.
 		.d-flex.justify-content-around
-			button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Reset Password
+			button(class="btn btn--danger btn--rounded btn--xl" type="submit")  Reset Password
 	p.title-2 Go Back
 		a(href="login.html" class="text-3 btn--link-text btn--secondary btn") Sign In
 
