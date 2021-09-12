@@ -477,13 +477,6 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 
 // select2
-$(document).ready(function() {
-  $('.js-example-basic-single').select2({
-    tags: "true",
-    placeholder: "Select an option",
-    allowClear: true
-  });
-});
 
 
 // active class in collapsed sidebar
@@ -600,16 +593,16 @@ $(".convert").on("click" ,function(e){
       form = card.children(".convertible__form"),
       data = card.children(".convertible__data");
   form.toggleClass("d-block");
-  data.toggleClass("d-none"); 
+  data.toggleClass("d-none");
   console.log(form)
 });
 
 // Drop zone
  $("div#myId").dropzone({ url: "/file/post" });
- 
+
 //venobox
 $(document).ready(function(){
-  $('.venobox').venobox(); 
+  $('.venobox').venobox();
 });
 
 
@@ -640,15 +633,15 @@ $(document).ready(function(){
 // start star
 // $(function(){                   // Start when document ready
 // 	$('#star-rating').rating(); // Call the rating plugin
-// }); 
+// });
  //- #star-rating
 	//- 	input(type="radio" name="example" class="rating" value="1")
 	//- 	input(type="radio" name="example" class="rating" value="2")
 	//- 	input(type="radio" name="example" class="rating" value="3")
 	//- 	input(type="radio" name="example" class="rating" value="4")
-	//- 	input(type="radio" name="example" class="rating" value="5") 
+	//- 	input(type="radio" name="example" class="rating" value="5")
 
   $(".my-rating").starRating({
     initialRating: 0,
-    starSize: 25, 
+    starSize: 25,
 });

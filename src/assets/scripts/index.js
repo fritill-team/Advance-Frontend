@@ -14,3 +14,4 @@ import "./login.js"
 import "./toaster"
 
 import "./tabs.js"
+import "./select2"
