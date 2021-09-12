@@ -6,7 +6,7 @@
 
 .tab {
   border-radius: 0;
-  padding: 18px 25px;
+  margin: 14px 25px;
   line-height: 1;
   white-space: nowrap;
   text-decoration: none;
@@ -39,7 +39,7 @@
   &.tab--active {
     position: relative;
     transition: 0.3s ease all;
-    padding-bottom: 10px !important;
+    padding-bottom: 14px;
     border-radius: 0;
     font-weight: 600;
     line-height: 1;

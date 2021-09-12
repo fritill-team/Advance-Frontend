@@ -637,4 +637,13 @@ $(document).ready(function(){
 //   // }
 // })
 
- 
+// start star
+// $(function(){                   // Start when document ready
+// 	$('#star-rating').rating(); // Call the rating plugin
+// }); 
+ //- #star-rating
+	//- 	input(type="radio" name="example" class="rating" value="1")
+	//- 	input(type="radio" name="example" class="rating" value="2")
+	//- 	input(type="radio" name="example" class="rating" value="3")
+	//- 	input(type="radio" name="example" class="rating" value="4")
+	//- 	input(type="radio" name="example" class="rating" value="5") 

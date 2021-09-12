@@ -57,11 +57,13 @@ input[type="button"] {
     }
 
     &.btn--warning {
-
       background-color: $warning;
       border-color: $warning;
     }
-
+		&.btn--white {
+      background-color: #FFF;
+      border-color: #FFF;
+    }
     &.btn--danger {
       background-color: $danger;
       border-color: $danger;

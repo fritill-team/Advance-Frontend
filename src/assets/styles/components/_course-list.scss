@@ -3,14 +3,14 @@
   font-weight: 500;
   font-family: $quicksand;
   text-align: left;
-  margin-bottom: 15px;
-  color: #333;
+   color: #333;
   float: left;
 }
 .course-content__details {
   float: right;
   padding-top: 3px;
   .details__list {
+		margin-top: 0;
     .list__list-item {
       display: inline-block;
       margin-right: 30px;
