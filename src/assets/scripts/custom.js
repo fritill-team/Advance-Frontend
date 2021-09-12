@@ -647,3 +647,8 @@ $(document).ready(function(){
 	//- 	input(type="radio" name="example" class="rating" value="3")
 	//- 	input(type="radio" name="example" class="rating" value="4")
 	//- 	input(type="radio" name="example" class="rating" value="5") 
+
+  $(".my-rating").starRating({
+    initialRating: 0,
+    starSize: 25, 
+});
