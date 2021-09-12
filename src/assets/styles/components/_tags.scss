@@ -32,4 +32,9 @@
       }
     }
   }
+  &.tags--no-mb {
+    .tags__item {
+      margin: 0 5px;
+    }
+  }
 }

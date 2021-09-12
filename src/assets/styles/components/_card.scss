@@ -201,7 +201,14 @@
       color: $twitter;
     }
   }
-
+  &.card--question {
+    .card__body {
+      flex-direction: column-reverse;
+      h2 {
+        margin: 0;
+      }
+    }
+  }
   &.card--trusted {
     border: 2px solid $gold;
     background-color: rgba($gold, 0.1);
@@ -328,7 +335,7 @@
   }
 
   &.card--live-stream {
-    .card__content { 
+    .card__content {
       .user-image {
         margin-bottom: 25px;
       }
@@ -463,7 +470,7 @@
       background: rgba(#e5e0e5, 0.06);
       box-shadow: 0 6px 25px #00000021;
       padding: 10px 0 0 0;
-      width: 100%;  
+      width: 100%;
     }
 
     .user-data {
@@ -746,7 +753,7 @@ html[dir="rtl"] {
       align-items: flex-start;
     }
     .card__content--details {
-      p{
+      p {
         text-align: right;
       }
     }
