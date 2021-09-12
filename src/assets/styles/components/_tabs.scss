@@ -2,11 +2,14 @@
   display: flex;
   font-weight: bold;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .tab {
+  font-size: 18px;
   border-radius: 0;
-  margin: 14px 25px;
+  // margin: 14px 25px;
+  margin: 14px 25px 14px 15px;
   line-height: 1;
   white-space: nowrap;
   text-decoration: none;
@@ -16,6 +19,9 @@
   display: inline-block;
   font-family: $quicksand;
   position: relative;
+  &:first-of-type{
+    // margin: 14px 25px 14px 15px;
+  }
 
   &:before {
     position: absolute;
@@ -23,11 +29,11 @@
     width: 0;
     height: 1px;
     left: 0;
-    bottom: 3px;
+    bottom: -3px;
     background-color: $primary;
-    transition: 0.3s ease all;
+    transition: 0.3s ease-in;
   }
-
+  
   &:hover {
     color: $darkBlack;
 
@@ -39,21 +45,32 @@
   &.tab--active {
     position: relative;
     transition: 0.3s ease all;
-    padding-bottom: 14px;
     border-radius: 0;
     font-weight: 600;
     line-height: 1;
+    color: #fff;
 
     &::before {
       position: absolute;
       content: "";
-      width: 0;
       height: 1px;
       left: 0;
       bottom: 3px;
       background-color: $darkBlack;
       transition: 0.3s ease all;
-      width: 100%;
+      width: 0;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      width: 180%;
+      height: 180%;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $primary;
+      z-index: -1;
     }
   }
 

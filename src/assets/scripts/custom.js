@@ -650,5 +650,9 @@ $(document).ready(function(){
 
   $(".my-rating").starRating({
     initialRating: 0,
-    starSize: 25, 
+    starSize: 25,
+    totalStars: 5,
+    starShape: '',
+    emptyColor: 'lightgray',
+    hoverColor: '#f2b01e',
 });
