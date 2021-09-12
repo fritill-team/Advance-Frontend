@@ -596,7 +596,7 @@ $(document)
 
 $(".convert").on("click" ,function(e){
   e.preventDefault();
-  let card = $(this).closest(".ad-card--convertible"),
+  let card = $(this).closest(".card--convertible"),
       form = card.children(".convertible__form"),
       data = card.children(".convertible__data");
   form.toggleClass("d-block");
