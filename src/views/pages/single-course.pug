@@ -7,8 +7,8 @@ block category
 block btn-link
 	include ../components/general-component/btn.pug
 	+btn-link('btn btn--primary btn--rounded', 'Create New Course' , '#create_new_course.html')
-block sidebar
-	include ../components/sidebar-content.pug
+//- block sidebar
+//- 	include ../components/sidebar-content.pug
 block courseVideo
 	.col-xl-4.col-lg-5.col-md-6
 		block course-video
@@ -88,7 +88,51 @@ block tabs
 			.course_tab_content
 				#nav-tabContent.tab-content
 					#nav-about.tab-pane.fade.show.active(role='tabpanel')
-						include ../components/about.pug
+						.d-flex.justify-content-between.align-items-center.w-100
+							h3.course-content__title.mb-0 Thread Chapter content
+							button.btn.btn--primary.btn--rounded create thread
+						.row
+							.col-lg-12
+								.card.card--horizontal
+									.card__title
+										h4.title-h4 card title
+									.card__content
+										.user-image
+											img(src="../../assets/images/hd_dp.jpg" alt="")
+											i.uil.uil-check-circle
+										.card__body
+											.card__content-header
+												.user-data
+													a.btn.btn--secondary.btn--link-text.text-2(href="#") Jose Portilla
+													time.text-3.gray Jan 15 '18 at 13:56
+												.more-dropdown
+													button.btn.btn--hover-dropdown
+														i.fas.fa-ellipsis-v.more-dropdown__icon
+													.more-dropdown__content
+														a(href="#" class="content__item convert")
+															i.item__icon.uil.uil-comment-alt-edit
+															| Edit
+														a(href="#" class="content__item")
+															i.item__icon.uil.uil-trash-alt
+															| Delete
+											.card__content--details
+												p.text-1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta blanditiis quam eos alias. Illo dicta expedita culpa unde repellendus iste dolores quae, eos, cumque facilis maxime, voluptatem natus esse!
+												.tags
+													.tags__item #Development
+													.tags__item #Development
+								.card
+									.card__content 
+										.card__body
+											.card__content-header
+												.user-data
+													h3.title-h2 Lorem ipsum dolor
+													.tags
+														.tags__item #Development
+														.tags__item #Development
+											.card__content--details
+												a(class="text-1 btn btn--secondary btn--link-text " href="#") Jose Portilla
+												time.text-3.gray Jan 15 '18 at 13:56
+ 
 					#nav-courses.tab-pane.fade(role='tabpanel')
 							//- start course list component
 							include ../components/course.pug
