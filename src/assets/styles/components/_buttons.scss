@@ -2,28 +2,38 @@ a,
 button,
 input[type="button"] {
   &.btn {
+    display: inline-block;
+    margin: 0 5px 5px 0;
     padding: 5px 20px;
-    margin: 5px;
+    font-family: $quicksand, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
     border: 1px solid;
     border-radius: 5px;
-    text-transform: uppercase;
-    display: inline-block;
-    font-family: $quicksand, sans-serif;
-    font-size: 14px;
     cursor: pointer;
     color: $white;
     text-align: center;
-    font-weight: bold;
+    text-transform: uppercase;
+
 
     &:hover {
       opacity: 0.8;
       transition: 0.3s ease all;
     }
 
+    &.btn--disabled,
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.6;
+      background-color: $gray;
+      border-color: $gray;
+      color: $black;
+    }
+
     &.btn--default {
       color: $primary;
-      background-color: $default;
       border-color: $default;
+      background-color: $default;
     }
 
     &.btn--primary {
@@ -63,10 +73,6 @@ input[type="button"] {
 
     &.btn--outlined {
       background-color: transparent;
-
-      &.btn--default {
-        color: $default;
-      }
 
       &.btn--primary {
         color: $primary;
@@ -294,10 +300,7 @@ input[type="button"] {
       margin: auto;
     }
 
-    &.btn--disabled {
-      pointer-events: none;
-      opacity: 0.6;
-    }
+
 
     &.btn--lg {
       padding: 15px 25px;
@@ -384,9 +387,6 @@ input[type="button"] {
 //}
 
 a.btn {
-  line-height: 18px;
-  padding-top: 12px;
-
   &.btn--text {
     text-decoration: none;
   }

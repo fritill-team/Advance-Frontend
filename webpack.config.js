@@ -10,7 +10,10 @@ module.exports = env => ({
   entry: ['./app.js'],
   devtool: "source-map",
   output: {path: path.resolve(__dirname, "dist"), filename: "assets/js/[name].bundle.js"},
-  devServer: {contentBase: path.resolve(__dirname, "src/views")},
+  devServer: {
+    contentBase: path.resolve(__dirname, "src/views"),
+    hot: true
+  },
   resolve: {
     extensions: [".js"],
     alias: {

@@ -7,24 +7,34 @@ block sidebar
 block content
   .container
     .row
-      //- ad-card default
+      // default card start
+      .col-md-6
+        .card
+          .card__title
+            h3 This is a card title
+
+          .card__content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt, distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
+      // default card end
+
+      //- card default
       .col-lg-12
         h2.title-2.my-3 Default card
         p.text-2.mb-1
           | we use
-          code .ad-card
+          code .card
       .col-lg-12
-        .ad-card
-          // start card-title ( .ad-card__title contains h4.title-h4 card title
-            .ad-card__title
+        .card
+          // start card-title ( .card__title contains h4.title-h4 card title
+            .card__title
               h4.title-h4 card title
           // end of card-title
-          .ad-card__content
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   p.text-3.gray Jose Portilla Jose Portilla Jose
@@ -32,7 +42,7 @@ block content
                 // start of list
                   include ../../../components/list-dropdown.pug
                 // end of list
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
               // start tags
                 .tags
@@ -47,21 +57,21 @@ block content
         h2.title-2.my-3 Thread card questions
         //p.text-2.mb-1
           | we use
-          code .ad-card
+          code .card
       .col-lg-12
-        .ad-card
-          .ad-card__content
+        .card
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   time.text-3.gray Jan 15 '18 at 13:56
                   //- a.text-3.gray(href="#") Jose Portilla
                 include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 .rich-textarea
                   h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -85,22 +95,21 @@ block content
         h2.title-2.my-3 Thread card questions
         //p.text-2.mb-1
           | we use
-          code .ad-card
+          code .card
       .col-lg-12
-        .ad-card.ad-card--with-actions
-
-          .ad-card__content
+        .card.card--with-actions
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   time.text-3.gray Jan 15 '18 at 13:56
                   //- a.text-3.gray(href="#") Jose Portilla
                 include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 .rich-textarea
                   h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -117,55 +126,55 @@ block content
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   i mostafa
 
-      //- ad-card comments
+      //- card comments
       .col-lg-12
         h2.title-2.my-3 Default card comments
         p.text-2.mb-1
           | we use
-          code .ad-card .ad-card--transparent
+          code .card .card--transparent
       .col-lg-12
         .comments-list
           //- component 1 add class transparent (no-background)
-          .ad-card.ad-card--transparent
-            .ad-card__content
+          .card.card--transparent
+            .card__content
               .user-image
                 img(src="../../assets/images/hd_dp.jpg" alt="")
                 i.uil.uil-check-circle
-              .ad-card__body
-                .ad-card__content-header
+              .card__body
+                .card__content-header
                   .user-data
                     a.text-2(href="#") Jose Portilla
                     time.text-3.gray Jan 15 '18 at 13:56
                   include ../../../components/list-dropdown.pug
-                .ad-card__content--details
+                .card__content--details
                   p.text-1 lorem ipsum dolor sit amet
           //- comment 2
-          .ad-card.ad-card--transparent
-            .ad-card__content
+          .card.card--transparent
+            .card__content
               .user-image
                 img(src="../../assets/images/hd_dp.jpg" alt="")
                 i.uil.uil-check-circle
-              .ad-card__body
-                .ad-card__content-header
+              .card__body
+                .card__content-header
                   .user-data
                     a.text-2(href="#") Jose Portilla
                     time.text-3.gray Jan 15 '18 at 13:56
                   include ../../../components/list-dropdown.pug
-                .ad-card__content--details
+                .card__content--details
                   p.text-1 lorem ipsum dolor sit amet
           //- comment 3
-          .ad-card.ad-card--transparent
-            .ad-card__content
+          .card.card--transparent
+            .card__content
               .user-image
                 img(src="../../assets/images/hd_dp.jpg" alt="")
                 i.uil.uil-check-circle
-              .ad-card__body
-                .ad-card__content-header
+              .card__body
+                .card__content-header
                   .user-data
                     a.text-2(href="#") Jose Portilla
                     time.text-3.gray Jan 15 '18 at 13:56
                   include ../../../components/list-dropdown.pug
-                .ad-card__content--details
+                .card__content--details
                   p.text-1 lorem ipsum dolor sit amet
           .create-comment
             .create-comment__content
@@ -173,201 +182,201 @@ block content
                 img.user-img__img(src=" ../../assets/images/hd_dp.jpg")
             form.form__action(action="")
               input.group__textarea.textarea--thread(placeholder="Add a public comment")
-      //- .ad-card--with-title
+      //- .card--with-title
       .col-lg-12
         h2.title-2.my-3 Card with title with centered components
         p.text-2.mb-1
           | we use
-          code .ad-card--with-title .ad-card--centered
+          code .card--with-title .card--centered
       .col-lg-3
-        .ad-card.ad-card--with-title.ad-card--centered
-          .ad-card__title.mb-2
+        .card.card--with-title.card--centered
+          .card__title.mb-2
             h5.title-h5 Live Streaming
-          .ad-card__content
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   p.text-3.gray Jose Portilla Jose Portilla Jose
                   a.text-3.gray(href="#") Jose Portilla
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
-      //- .ad-card--with-title live Streaming
+      //- .card--with-title live Streaming
       .col-lg-12
         h2.title-2.my-3 Card with title with centered components
         p.text-2.mb-1
           | we use
-          code .ad-card--with-title .ad-card--centered .ad-card--live-stream
+          code .card--with-title .card--centered .card--live-stream
       .col-lg-3
-        .ad-card.ad-card--with-title.ad-card--centered.ad-card--live-stream
-          .ad-card__title.mb-2
+        .card.card--with-title.card--centered.card--live-stream
+          .card__title.mb-2
             h5.title-h6.semi-bold Live Streaming
-          .ad-card__content
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   p.text-3.gray Set up your channel and stream live to your students
-                  .ad-card__btn
+                  .card__btn
                     a(href="#").btn.btn--primary.btn--rounded.my-2  Get Started
-              .ad-card__content--details
+              .card__content--details
                 p.text-2.gray Info : This feature only for 'Instructors'.
-      //- .ad-card--with-title .ad-card--top-category
+      //- .card--with-title .card--top-category
       .col-lg-12
         h2.title-2.my-3 Card with title with  category
         p.text-2.mb-1
           | we use
-          code .ad-card--with-title .ad-card--top-category
+          code .card--with-title .card--top-category
       .col-lg-3
-        .ad-card.ad-card--with-title.ad-card--top-category
-          .ad-card__title.mb-2
+        .card.card--with-title.card--top-category
+          .card__title.mb-2
             h5.title-h6.semi-bold Top Categories
-          .ad-card__content
-            .ad-card__body
-              .ad-card__content--details
-                ul.ad-card__list
-                  li.ad-card__list-item
-                    a.ad-card__item-link(href="#")
+          .card__content
+            .card__body
+              .card__content--details
+                ul.card__list
+                  li.card__list-item
+                    a.card__item-link(href="#")
                       i.uil.uil-arrow
                       | Development
-                  li.ad-card__list-item
-                    a.ad-card__item-link(href="#")
+                  li.card__list-item
+                    a.card__item-link(href="#")
                       i.uil.uil-graph-bar
                       | Business
-                  li.ad-card__list-item
-                    a.ad-card__item-link(href="#")
+                  li.card__list-item
+                    a.card__item-link(href="#")
                       i.uil.uil-graph-bar
                       | IT and Software
-                  li.ad-card__list-item
-                    a.ad-card__item-link(href="#")
+                  li.card__list-item
+                    a.card__item-link(href="#")
                       i.uil-ruler
                       | Design
-      //- .ad-card--with-btn
+      //- .card--with-btn
       .col-lg-12
         h2.title-2.my-3 Card with title with centered components no img
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--no-bg
+          code .card--centered .card--no-bg
       .col-lg-3
-        .ad-card.ad-card--centered.ad-card--no-bg
-          .ad-card__content
-            .ad-card__body
-              .ad-card__content-header
+        .card.card--centered.card--no-bg
+          .card__content
+            .card__body
+              .card__content-header
                 .user-data
                   h2.text-2 Become an Instructor
                   p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
-                  .ad-card__btn
+                  .card__btn
                     a(href="#").btn.btn--primary.btn--rounded.my-2 Start Teaching
-      //- .ad-card--with-bg
+      //- .card--with-bg
       .col-lg-12
         h2.title-2.my-3 Card with title with centered components no img
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--bg
+          code .card--centered .card--bg
       .col-lg-3
-        .ad-card.ad-card--bg
+        .card.card--bg
           img(src="../../assets/images/get_img.jpg", alt="")
-          .ad-card__content
-            .ad-card__body
-              .ad-card__content-header
+          .card__content
+            .card__body
+              .card__content-header
                 .user-data
                   h2.text-2 Become an Instructor
                   p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
-                  .ad-card__btn
+                  .card__btn
                     a(href="#").btn.btn--primary.btn--rounded.my-2  Get Started
-      //- .ad-card--live-section
+      //- .card--live-section
       .col-lg-12
         h2.title-2.my-3 Card with centered components
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--live-section
+          code .card--centered .card--live-section
       .col-lg-3
-        .ad-card.ad-card--centered.ad-card--live-section
-          .ad-card__content
+        .card.card--centered.card--live-section
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-3.semi-bold(href="#") Jose Portilla
                   p.text-3.gray
                     span
                     | Live
-      //- .ad-card--centered .ad-card--icon
+      //- .card--centered .card--icon
       .col-lg-12
         h2.title-2.my-3 Card with centered components and toggle img to icon
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--icon
+          code .card--centered .card--icon
       .col-lg-6
-        .ad-card.ad-card--centered.ad-card--icon
-          .ad-card__content
+        .card.card--centered.card--icon
+          .card__content
             .user-image
-              i.uil.uil-history.ad-card--user-icon
-            .ad-card__body
-              .ad-card__content-header
+              i.uil.uil-history.card--user-icon
+            .card__body
+              .card__content-header
                 .user-data
                   p.title-h6.semi-bold 100,000 online courses
-              .ad-card__content--details
+              .card__content--details
                 p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
-      //- ad-card testimonial
+      //- card testimonial
       .col-lg-12
         h2.title-2.my-3 Default card
         p.text-2.mb-1
           | we use
-          code .ad-card .ad-card__testimonial
+          code .card .card__testimonial
       .col-lg-6
-        .ad-card.ad-card__testimonial
-          .ad-card__title
+        .card.card__testimonial
+          .card__title
             p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
-          .ad-card__content
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   h2.title-h6.semi-bold Jose Portilla
-      //- .ad-card--centered
+      //- .card--centered
       .col-lg-12
         h2.title-2.my-3 Card with centered components
         p.text-2.mb-1
           | we use
-          code .ad-card--centered
+          code .card--centered
       .col-lg-3
-        .ad-card.ad-card--centered
-          .ad-card__content
+        .card.card--centered
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   p.text-3.gray Jose Portilla Jose Portilla Jose
                   a.text-3.gray(href="#") Jose Portilla
                 //include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
-      //- .ad-card--centered
+      //- .card--centered
       .col-lg-12
         h2.title-2.my-3 Card with centered components user
         p.text-2.mb-1
           | we use
-          code .ad-card--centered .ad-card--user
+          code .card--centered .card--user
       .col-lg-3
-        .ad-card.ad-card--centered.ad-card--user
-          .ad-card__content
+        .card.card--centered.card--user
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-1.semi-bold(href="#") Jose Portilla
                     i.uil.uil-check-circle
@@ -391,74 +400,74 @@ block content
                   a.text-2.medium.mt-3(href="#") Go To Profile
                 //include ../../../components/list-dropdown.pug
                 //- p.text-1 lorem ipsum dolor sit amet
-      //- ad-card--interactive
+      //- card--interactive
       .col-lg-12
         h2.title-2.my-3 Trusted answer
         p.text-2.mb-1
           | we use
-          code .ad-card--trusted
+          code .card--trusted
       .col-lg-12
-        .ad-card.ad-card--trusted
-          .ad-card__content
+        .card.card--trusted
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   p.text-3.gray Jose Portilla Jose Portilla Jose
                   a.text-3.gray(href="#") Jose Portilla
                 //include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
       .col-lg-12
         h2.title-2.my-3 Reverced Card
         p.text-2.mb-1
           | we use
-          code .ad-card--reversed
+          code .card--reversed
       .col-lg-12
-        .ad-card.ad-card--reversed
-          .ad-card__content
+        .card.card--reversed
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   p.text-3.gray Jose Portilla Jose Portilla Jose
                   a.text-3.gray(href="#") Jose Portilla
                 //include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
-      //- ad-card--with-actions
+      //- card--with-actions
 
-      //- ad-card--shows-on-hover
+      //- card--shows-on-hover
       .col-lg-12
         h2.title-2.my-3 This card shows up when any user account hovered
         p.text-2.mb-1
           | we use
-          code .ad-card--horizontal
+          code .card--horizontal
       .col-lg-6
-        .ad-card.ad-card--horizontal
-          .ad-card__content
+        .card.card--horizontal
+          .card__content
             .user-image
               img(src="../../assets/images/hd_dp.jpg" alt="")
               i.uil.uil-check-circle
-            .ad-card__body
-              .ad-card__content-header
+            .card__body
+              .card__content-header
                 .user-data
                   a.text-2(href="#") Jose Portilla
                   a.text-3.gray test@test.com
                   a.text-3.gray(href="#") Bio test test
                 //include ../../../components/list-dropdown.pug
-              .ad-card__content--details
+              .card__content--details
                 p.text-1 lorem ipsum dolor sit amet
 
 
       .col-lg-12
         pre
           code.language-html
-            <div class="ad-card ad-card--horizontal"><div class="ad-card__title"><h4 class="title-h4">card title</h4></div><div class="ad-card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="ad-card__body"><div class="ad-card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="ad-card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
+            <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
 

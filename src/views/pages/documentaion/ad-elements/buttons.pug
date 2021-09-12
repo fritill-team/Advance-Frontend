@@ -8,201 +8,243 @@ block content
   .container
     .row
       .col-lg-12
-        h3 Default
-        p default buttons
-        button.btn.btn--default default
-        button.btn.btn--primary primary
-        button.btn.btn--secondary secondary
-        button.btn.btn--success success
-        button.btn.btn--info info
-        button.btn.btn--warning warning
-        button.btn.btn--danger danger
+        .card
+          .card__title
+            h3 Default
+          .card__content
+            p.text-2 Buttons
+            button.btn.btn--default default
+            button.btn.btn--primary primary
+            button.btn.btn--secondary secondary
+            button.btn.btn--success success
+            button.btn.btn--info info
+            button.btn.btn--warning warning
+            button.btn.btn--danger danger
+            button(class="btn" disabled="disabled") disabled
+            p Links
+            a(href="#" class="btn btn--default") default
+            a(href="#" class="btn btn--primary") primary
+            a(href="#" class="btn btn--secondary") secondary
+            a(href="#" class="btn btn--success") success
+            a(href="#" class="btn btn--info") info
+            a(href="#" class="btn btn--warning") warning
+            a(href="#" class="btn btn--danger") danger
+            a(href="#" class="btn btn--disabled") disabled
 
-        h3 Rounded
-        p rounded buttons
-        button.btn.btn--default.btn--rounded default
-        button.btn.btn--primary.btn--rounded primary
-        button.btn.btn--secondary.btn--rounded secondary
-        button.btn.btn--success.btn--rounded success
-        button.btn.btn--info.btn--rounded info
-        button.btn.btn--warning.btn--rounded warning
-        button.btn.btn--danger.btn--rounded danger
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 Rounded
+          .card__content
+            p buttons
+            button.btn.btn--default.btn--rounded default
+            button.btn.btn--primary.btn--rounded primary
+            button.btn.btn--secondary.btn--rounded secondary
+            button.btn.btn--success.btn--rounded success
+            button.btn.btn--info.btn--rounded info
+            button.btn.btn--warning.btn--rounded warning
+            button.btn.btn--danger.btn--rounded danger
+            button(class="btn btn--rounded" disabled="disabled") disabled
+            p links
+            a(href="#" class="btn btn--default btn--rounded") default
+            a(href="#" class="btn btn--primary btn--rounded") primary
+            a(href="#" class="btn btn--secondary btn--rounded") secondary
+            a(href="#" class="btn btn--success btn--rounded") success
+            a(href="#" class="btn btn--info btn--rounded") info
+            a(href="#" class="btn btn--warning btn--rounded") warning
+            a(href="#" class="btn btn--danger btn--rounded") danger
+            a(href="#" class="btn btn--disabled btn--rounded") disabled
 
-        h3 Outlined
-        p outlined buttons
-        button.btn.btn--default.btn--outlined default
-        button.btn.btn--primary.btn--outlined primary
-        button.btn.btn--secondary.btn--outlined secondary
-        button.btn.btn--success.btn--outlined success
-        button.btn.btn--info.btn--outlined info
-        button.btn.btn--warning.btn--outlined warning
-        button.btn.btn--danger.btn--outlined danger
 
-        h3 Text
-        p text buttons
-        button.btn.btn--default.btn--text default
-        button.btn.btn--primary.btn--text primary
-        button.btn.btn--secondary.btn--text secondary
-        button.btn.btn--success.btn--text success
-        button.btn.btn--info.btn--text info
-        button.btn.btn--warning.btn--text warning
-        button.btn.btn--danger.btn--text danger
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 Outlined
+          .card__content
+            p Buttons
+            button.btn.btn--primary.btn--outlined primary
+            button.btn.btn--secondary.btn--outlined secondary
+            button.btn.btn--success.btn--outlined success
+            button.btn.btn--info.btn--outlined info
+            button.btn.btn--warning.btn--outlined warning
+            button.btn.btn--danger.btn--outlined danger
+            p links
+            a(href="#" class="btn btn--primary btn--outlined") primary
+            a(href="#" class="btn btn--secondary btn--outlined") secondary
+            a(href="#" class="btn btn--success btn--outlined") success
+            a(href="#" class="btn btn--info btn--outlined") info
+            a(href="#" class="btn btn--warning btn--outlined") warning
+            a(href="#" class="btn btn--danger btn--outlined") danger
+            p variations
+            button.btn.btn--primary.btn--outlined.btn--rounded primary
 
-        h3 Icon
-        p icon buttons
-        button.btn.btn--default.btn--icon
-          i.fas.fa-info
-        button.btn.btn--primary.btn--icon
-          i.fas.fa-info
-        button.btn.btn--secondary.btn--icon
-          i.fas.fa-info
-        button.btn.btn--success.btn--icon
-          i.fas.fa-info
-        button.btn.btn--info.btn--icon
-          i.fas.fa-info
-        button.btn.btn--warning.btn--icon
-          i.fas.fa-info
-        button.btn.btn--danger.btn--icon
-          i.fas.fa-info
+    h3 Text
+    p text buttons
+    button.btn.btn--default.btn--text default
+    button.btn.btn--primary.btn--text primary
+    button.btn.btn--secondary.btn--text secondary
+    button.btn.btn--success.btn--text success
+    button.btn.btn--info.btn--text info
+    button.btn.btn--warning.btn--text warning
+    button.btn.btn--danger.btn--text danger
 
-        h3 With-icon
-        p with-icon buttons
-        button.btn.btn--default.btn--with-icon
-          i.fa.fa-dashboard
-          | default
-        button.btn.btn--primary.btn--with-icon
-          i.fa.fa-dashboard
-          | primary
-        button.btn.btn--secondary.btn--with-icon
-          i.fa.fa-dashboard
-          | secondary
-        button.btn.btn--success.btn--with-icon
-          i.fa.fa-dashboard
-          | success
-        button.btn.btn--info.btn--with-icon
-          i.fa.fa-dashboard
-          | info
-        button.btn.btn--warning.btn--with-icon
-          i.fa.fa-dashboard
-          | warning
-        button.btn.btn--danger.btn--with-icon
-          i.fa.fa-dashboard
-          | danger
-        hr
-        h3 Default
-        p default links
-        a.btn.btn--default default-link
-        a.btn.btn--primary primary-link
-        a.btn.btn--secondary secondary-link
-        a.btn.btn--success success-link
-        a.btn.btn--info info-link
-        a.btn.btn--warning warning-link
-        a.btn.btn--danger danger-link
+    h3 Icon
+    p icon buttons
+    button.btn.btn--default.btn--icon
+      i.fas.fa-info
+    button.btn.btn--primary.btn--icon
+      i.fas.fa-info
+    button.btn.btn--secondary.btn--icon
+      i.fas.fa-info
+    button.btn.btn--success.btn--icon
+      i.fas.fa-info
+    button.btn.btn--info.btn--icon
+      i.fas.fa-info
+    button.btn.btn--warning.btn--icon
+      i.fas.fa-info
+    button.btn.btn--danger.btn--icon
+      i.fas.fa-info
 
-        h3 Rounded
-        p rounded links
-        a.btn.btn--default.btn--rounded default-link
-        a.btn.btn--primary.btn--rounded primary-link
-        a.btn.btn--secondary.btn--rounded secondary-link
-        a.btn.btn--success.btn--rounded success-link
-        a.btn.btn--info.btn--rounded info-link
-        a.btn.btn--warning.btn--rounded gold-link
-        a.btn.btn--danger.btn--rounded danger-link
+    h3 With-icon
+    p with-icon buttons
+    button.btn.btn--default.btn--with-icon
+      i.fa.fa-dashboard
+      | default
+    button.btn.btn--primary.btn--with-icon
+      i.fa.fa-dashboard
+      | primary
+    button.btn.btn--secondary.btn--with-icon
+      i.fa.fa-dashboard
+      | secondary
+    button.btn.btn--success.btn--with-icon
+      i.fa.fa-dashboard
+      | success
+    button.btn.btn--info.btn--with-icon
+      i.fa.fa-dashboard
+      | info
+    button.btn.btn--warning.btn--with-icon
+      i.fa.fa-dashboard
+      | warning
+    button.btn.btn--danger.btn--with-icon
+      i.fa.fa-dashboard
+      | danger
+    hr
+    h3 Default
+    p default links
+    a.btn.btn--default default-link
+    a.btn.btn--primary primary-link
+    a.btn.btn--secondary secondary-link
+    a.btn.btn--success success-link
+    a.btn.btn--info info-link
+    a.btn.btn--warning warning-link
+    a.btn.btn--danger danger-link
 
-        h3 Outlined
-        p outlined links
-        a.btn.btn--default.btn--outlined default-link
-        a.btn.btn--primary.btn--outlined primary-link
-        a.btn.btn--secondary.btn--outlined secondary-link
-        a.btn.btn--success.btn--outlined success-link
-        a.btn.btn--info.btn--outlined info-link
-        a.btn.btn--warning.btn--outlined warning-link
-        a.btn.btn--danger.btn--outlined danger-link
+    h3 Rounded
+    p rounded links
+    a.btn.btn--default.btn--rounded default-link
+    a.btn.btn--primary.btn--rounded primary-link
+    a.btn.btn--secondary.btn--rounded secondary-link
+    a.btn.btn--success.btn--rounded success-link
+    a.btn.btn--info.btn--rounded info-link
+    a.btn.btn--warning.btn--rounded gold-link
+    a.btn.btn--danger.btn--rounded danger-link
 
-        h3 Text
-        p text links
-        a.btn.btn--default.btn--text default-link
-        a.btn.btn--primary.btn--text primary-link
-        a.btn.btn--secondary.btn--text secondary-link
-        a.btn.btn--success.btn--text success-link
-        a.btn.btn--info.btn--text info-link
-        a.btn.btn--warning.btn--text warning-link
-        a.btn.btn--danger.btn--text danger-link
+    h3 Outlined
+    p outlined links
+    a.btn.btn--default.btn--outlined default-link
+    a.btn.btn--primary.btn--outlined primary-link
+    a.btn.btn--secondary.btn--outlined secondary-link
+    a.btn.btn--success.btn--outlined success-link
+    a.btn.btn--info.btn--outlined info-link
+    a.btn.btn--warning.btn--outlined warning-link
+    a.btn.btn--danger.btn--outlined danger-link
 
-        h3 Icon
-        p icon links
-        a.btn.btn--default.btn--icon
-          i.fas.fa-info
-        a.btn.btn--primary.btn--icon
-          i.fas.fa-info
-        a.btn.btn--secondary.btn--icon
-          i.fas.fa-info
-        a.btn.btn--success.btn--icon
-          i.fas.fa-info
-        a.btn.btn--info.btn--icon
-          i.fas.fa-info
-        a.btn.btn--warning.btn--icon
-          i.fas.fa-info
-        a.btn.btn--danger.btn--icon
-          i.fas.fa-info
+    h3 Text
+    p text links
+    a.btn.btn--default.btn--text default-link
+    a.btn.btn--primary.btn--text primary-link
+    a.btn.btn--secondary.btn--text secondary-link
+    a.btn.btn--success.btn--text success-link
+    a.btn.btn--info.btn--text info-link
+    a.btn.btn--warning.btn--text warning-link
+    a.btn.btn--danger.btn--text danger-link
 
-        h3 With-icon
-        p with-icon
-        a.btn.btn--default.btn--with-icon
-          i.fa.fa-info
-          | default-link
-        a.btn.btn--primary.btn--with-icon
-          i.fa.fa-info
-          | primary-link
-        a.btn.btn--secondary.btn--with-icon
-          i.fa.fa-info
-          | secondary-link
-        a.btn.btn--success.btn--with-icon
-          i.fa.fa-info
-          | success-link
-        a.btn.btn--info.btn--with-icon
-          i.fa.fa-info
-          | info-link
-        a.btn.btn--warning.btn--with-icon
-          i.fa.fa-info
-          | warning-link
-        a.btn.btn--danger.btn--with-icon
-          i.fa.fa-info
-          | danger-link
-        hr
-        h3 Rounded
-        p rounded inputs
-        input.btn.btn--default.btn--rounded(type='submit' value='submit')
-        h3 Outlined
-        p outlined inputs
-        input.btn.btn--primary.btn--outlined(type='submit' value='submit')
-        h3 Text
-        p text inputs
-        input.btn.btn--secondary.btn--text(type='submit' value='submit')
+    h3 Icon
+    p icon links
+    a.btn.btn--default.btn--icon
+      i.fas.fa-info
+    a.btn.btn--primary.btn--icon
+      i.fas.fa-info
+    a.btn.btn--secondary.btn--icon
+      i.fas.fa-info
+    a.btn.btn--success.btn--icon
+      i.fas.fa-info
+    a.btn.btn--info.btn--icon
+      i.fas.fa-info
+    a.btn.btn--warning.btn--icon
+      i.fas.fa-info
+    a.btn.btn--danger.btn--icon
+      i.fas.fa-info
 
-        hr
-        .btn-group
-          button.btn.btn--default default
-          button.btn.btn--primary primary
-          button.btn.btn--secondary secondary
-        .btn-group
-          button.btn.btn--default.btn--rounded default
-          button.btn.btn--primary.btn--rounded primary
-          button.btn.btn--secondary.btn--rounded secondary
-        .btn-group
-          button.btn.btn--default.btn--outlined default
-          button.btn.btn--primary.btn--outlined primary
-          button.btn.btn--secondary.btn--outlined secondary
+    h3 With-icon
+    p with-icon
+    a.btn.btn--default.btn--with-icon
+      i.fa.fa-info
+      | default-link
+    a.btn.btn--primary.btn--with-icon
+      i.fa.fa-info
+      | primary-link
+    a.btn.btn--secondary.btn--with-icon
+      i.fa.fa-info
+      | secondary-link
+    a.btn.btn--success.btn--with-icon
+      i.fa.fa-info
+      | success-link
+    a.btn.btn--info.btn--with-icon
+      i.fa.fa-info
+      | info-link
+    a.btn.btn--warning.btn--with-icon
+      i.fa.fa-info
+      | warning-link
+    a.btn.btn--danger.btn--with-icon
+      i.fa.fa-info
+      | danger-link
+    hr
+    h3 Rounded
+    p rounded inputs
+    input.btn.btn--default.btn--rounded(type='submit' value='submit')
+    h3 Outlined
+    p outlined inputs
+    input.btn.btn--primary.btn--outlined(type='submit' value='submit')
+    h3 Text
+    p text inputs
+    input.btn.btn--secondary.btn--text(type='submit' value='submit')
 
-        h3 Default
-        p default buttons
-        button.btn.btn--secondary.btn--rounded.btn--ripple default
-        button.btn.btn--primary.btn--rounded.btn--ripple primary
+    hr
+    .btn-group
+      button.btn.btn--default default
+      button.btn.btn--primary primary
+      button.btn.btn--secondary secondary
+    .btn-group
+      button.btn.btn--default.btn--rounded default
+      button.btn.btn--primary.btn--rounded primary
+      button.btn.btn--secondary.btn--rounded secondary
+    .btn-group
+      button.btn.btn--default.btn--outlined default
+      button.btn.btn--primary.btn--outlined primary
+      button.btn.btn--secondary.btn--outlined secondary
 
-        h3 Default
-        p default buttons
-        button.btn.btn--default.btn--lg large button
-        button.btn.btn--secondary.btn--sm small button
-        button.btn.btn--primary.btn--rounded.btn--disabled disabled button
-        button.btn.btn--link-text link-text
-        button.btn--text-basic text-basic
+    h3 Default
+    p default buttons
+    button.btn.btn--secondary.btn--rounded.btn--ripple default
+    button.btn.btn--primary.btn--rounded.btn--ripple primary
+
+    h3 Default
+    p default buttons
+    button.btn.btn--default.btn--lg large button
+    button.btn.btn--secondary.btn--sm small button
+    button.btn.btn--primary.btn--rounded.btn--disabled disabled button
+    button.btn.btn--link-text link-text
+    button.btn--text-basic text-basic
