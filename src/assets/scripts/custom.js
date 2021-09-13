@@ -477,13 +477,6 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 
 // select2
-$(document).ready(function() {
-  $('.js-example-basic-single').select2({
-    tags: "true",
-    placeholder: "Select an option",
-    allowClear: true
-  });
-});
 
 
 // active class in collapsed sidebar
@@ -594,22 +587,14 @@ $(document)
 
 // edit threads
 
-$(".convert").on("click" ,function(e){
-  e.preventDefault();
-  let card = $(this).closest(".ad-card--convertible"),
-      form = card.children(".convertible__form"),
-      data = card.children(".convertible__data");
-  form.toggleClass("d-block");
-  data.toggleClass("d-none"); 
-  console.log(form)
-});
+
 
 // Drop zone
  $("div#myId").dropzone({ url: "/file/post" });
- 
+
 //venobox
 $(document).ready(function(){
-  $('.venobox').venobox(); 
+  $('.venobox').venobox();
 });
 
 
@@ -638,10 +623,19 @@ $(document).ready(function(){
 // })
 
  //rating
+// start star
+// $(function(){                   // Start when document ready
+// 	$('#star-rating').rating(); // Call the rating plugin
+// });
+
 
   $(".my-rating").starRating({
     initialRating: 0,
-    starSize: 25, 
+    starSize: 25,
+    totalStars: 5,
+    starShape: '',
+    emptyColor: 'lightgray',
+    hoverColor: '#f2b01e',
 });
 
 window.onload = function() {

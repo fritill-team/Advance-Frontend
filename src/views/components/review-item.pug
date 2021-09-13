@@ -1,120 +1,69 @@
-.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
-  .ad-card__content
-    .user-image
-      img(src="../../assets/images/hd_dp.jpg" alt="")
-      i.uil.uil-check-circle
-    .ad-card__body
-      .ad-card__content-header
-        .user-data
-          a.btn.btn--secondary.btn--link-text(href="#") Jose Portilla
-          time.text-1.gray Jan 15 '18 at 13:56
-        .more-dropdown
-          button.btn.btn--hover-dropdown
-            i.fas.fa-ellipsis-v
-          .more-dropdown__content
-            span.content__item.convert
-              i.item__icon.uil.uil-comment-alt-edit
-              | Edit
-            span.content__item
-              i.item__icon.uil.uil-trash-alt
-              | Delete
-      .item__rating-box
-        include ../components/general-component/rating.pug
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--half-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      //start Content
-      .ad-card__content--details
-        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
-.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
-  .ad-card__content
-    .user-image
-      img(src="../../assets/images/hd_dp.jpg" alt="")
-      i.uil.uil-check-circle
-    .ad-card__body
-      .ad-card__content-header
-        .user-data
-          a.btn.btn--secondary.btn--link-text(href="#") Jose Portilla
-          time.text-1.gray Jan 15 '18 at 13:56
-        .more-dropdown
-          button.btn.btn--hover-dropdown
-            i.fas.fa-ellipsis-v
-          .more-dropdown__content
-            span.content__item.convert
-              i.item__icon.uil.uil-comment-alt-edit
-              | Edit
-            span.content__item
-              i.item__icon.uil.uil-trash-alt
-              | Delete
-      .item__rating-box
-        include ../components/general-component/rating.pug
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--half-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      //start Content
-      .ad-card__content--details
-        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
-.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
-  .ad-card__content
-    .user-image
-      img(src="../../assets/images/hd_dp.jpg" alt="")
-      i.uil.uil-check-circle
-    .ad-card__body
-      .ad-card__content-header
-        .user-data
-          a.btn.btn--secondary.btn--link-text(href="#") Jose Portilla
-          time.text-1.gray Jan 15 '18 at 13:56
-        .more-dropdown
-          button.btn.btn--hover-dropdown
-            i.fas.fa-ellipsis-v
-          .more-dropdown__content
-            span.content__item.convert
-              i.item__icon.uil.uil-comment-alt-edit
-              | Edit
-            span.content__item
-              i.item__icon.uil.uil-trash-alt
-              | Delete
-      .item__rating-box
-        include ../components/general-component/rating.pug
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--half-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      //start Content
-      .ad-card__content--details
-        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
-.ad-card.ad-card--transparent.ad-card--with-actions.ad-card--sm#comment
-  .ad-card__content
-    .user-image
-      img(src="../../assets/images/hd_dp.jpg" alt="")
-      i.uil.uil-check-circle
-    .ad-card__body
-      .ad-card__content-header
-        .user-data
-          a.btn.btn--secondary.btn--link-text(href="#") Jose Portilla
-          time.text-1.gray Jan 15 '18 at 13:56
-        .more-dropdown
-          button.btn.btn--hover-dropdown
-            i.fas.fa-ellipsis-v
-          .more-dropdown__content
-            span.content__item.convert
-              i.item__icon.uil.uil-comment-alt-edit
-              | Edit
-            span.content__item
-              i.item__icon.uil.uil-trash-alt
-              | Delete
-      .item__rating-box
-        include ../components/general-component/rating.pug
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--half-star')
-        +rating( 'rating-box--empty-star')
-        +rating( 'rating-box--empty-star')
-      //start Content
-      .ad-card__content--details
-        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
+.card.card--side-col.card--transparent
+  .card__side-col
+    img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
+  .card__content
+    .card__header
+      .card__header-multiline
+        a(href="#")
+          | Jose Portilla
+          i.fa.fa-check-circle.ml-1
+        time.text-1.gray Jan 15 '18 at 13:56
+        .item__rating-box
+          include ../components/general-component/rating.pug
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--half-star')
+          +rating( 'rating-box--empty-star')
+          +rating( 'rating-box--empty-star')
+      .card__tools
+        include list-dropdown.pug
+    p
+      | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+      | sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
+
+
+.card.card--side-col.card--transparent
+  .card__side-col
+    img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
+  .card__content
+    .card__header
+      .card__header-multiline
+        a(href="#")
+          | Jose Portilla
+          i.fa.fa-check-circle.ml-1
+        time.text-1.gray Jan 15 '18 at 13:56
+        .item__rating-box
+          include ../components/general-component/rating.pug
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--half-star')
+          +rating( 'rating-box--empty-star')
+          +rating( 'rating-box--empty-star')
+      .card__tools
+        include list-dropdown.pug
+    p
+      | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+      | sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
+
+.card.card--side-col.card--transparent
+  .card__side-col
+    img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
+  .card__content
+    .card__header
+      .card__header-multiline
+        a(href="#")
+          | Jose Portilla
+          i.fa.fa-check-circle.ml-1
+        time.text-1.gray Jan 15 '18 at 13:56
+        .item__rating-box
+          include ../components/general-component/rating.pug
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--full-star')
+          +rating( 'rating-box--half-star')
+          +rating( 'rating-box--empty-star')
+          +rating( 'rating-box--empty-star')
+      .card__tools
+        include list-dropdown.pug
+    p
+      | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+      | sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
