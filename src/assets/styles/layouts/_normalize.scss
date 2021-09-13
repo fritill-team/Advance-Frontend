@@ -8,9 +8,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+html {
+  //line-height: 1.15; /* 1 */
+  //-webkit-text-size-adjust: 100%; /* 2 */
+  font-family: unquote("Quicksand"), 'Roboto', 'sans-serif';
 }
 
 /* Sections
@@ -37,26 +38,6 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-h2 {
-
-}
-
-h3 {
-  margin: 0.5em 0 1em ;
-}
-
-h4 {
-
-}
-
-h5 {}
-
-h6 {}
 
 /* Grouping content
    ========================================================================== */
@@ -363,3 +344,9 @@ template {
 [hidden] {
   display: none;
 }
+
+
+ul {
+  padding: 0;
+}
+

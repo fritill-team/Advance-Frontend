@@ -8,6 +8,10 @@ block content
       // default card start
       .col-md-6
         section.px-3.py-3
+          h2.title-2.my-3 Default Card
+            p.text-2.mb-1
+              | we use
+              code .card
           .card
             .card__header
               h3.title-h3 This is a card title
@@ -20,105 +24,60 @@ block content
 
       .col-md-6
         section.px-3.py-3
+          h2.title-2.my-3 Side Column Card
+            p.text-2.mb-1
+              | we use
+              code .card.card--side-col>.card__side-col+.card__content>.card__header
           .card.card--side-col
-            .user-image
-              img(src="../../assets/images/hd_dp.jpg" alt="")
+            .card__side-col
+              img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
             .card__content
               .card__header
-                h3.title-h3 This is a card title
+                p.text-1 This is a card title
                 .card__tools
                   button.btn.btn--primary.btn--icon
                     i.fa.fa-check
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt, distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
-      //.col-md-6
-      //  section.px-3.py-3
-      //    .card.card--side-col
-      //      .user-image
-      //        img(src="../../assets/images/hd_dp.jpg" alt="")
-      //      .card__header
-      //        h3.title-h3 This is a card title
-      //        .card__tools
-      //          button.btn.btn--primary.btn--icon
-      //            i.fa.fa-check
-      //
-      //      .card__content
-      //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt, distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
-      // default card end
 
       //- card default
-      //.col-lg-12
-      //  h2.title-2.my-3 Default card
-      //  p.text-2.mb-1
-      //    | we use
-      //    code .card
-      //.col-lg-12
-      //  .card.card--user
-      //    // start card-title ( .card__title contains h4.title-h4 card title
-      //      .card__title
-      //        h4.title-h4 card title
-      //    // end of card-title
-      //    .card__content
-      //      .user-image
-      //        img(src="../../assets/images/hd_dp.jpg" alt="")
-      //        i.uil.uil-check-circle
-      //      .card__body
-      //        .card__content-header
-      //          .user-data
-      //            a.text-2(href="#") Jose Portilla
-      //            p.text-3.gray Jose Portilla Jose Portilla Jose
-      //            a.text-3.gray(href="#") Jose Portilla
-      //          // start of list
-      //            include ../../../components/list-dropdown.pug
-      //          // end of list
-      //        .card__content--details
-      //          p.text-1 lorem ipsum dolor sit amet
-      //        // start tags
-      //          .tags
-      //            a(href='#').tags__item #Development
-      //            a(href='#').tags__item #Development
-      //        // end of tags
-      //    // end of whatever
-      ////-Thread questions
-      //
-      //
-      //.col-lg-12
-      //  h2.title-2.my-3 Thread card questions
-      //  //p.text-2.mb-1
-      //    | we use
-      //    code .card
-      //.col-lg-12
-      //  .card.card--side-col
-      //    .user-image
-      //      img(src="../../assets/images/hd_dp.jpg" alt="")
-      //    .card__content
-      //      .card__body
-      //        .card__content-header
-      //          .user-data
-      //            a.text-3(href="#")
-      //              | Jose Portilla
-      //              i.fa.fa-check-circle.ml-1
-      //            time.text-3.gray Jan 15 '18 at 13:56
-      //            //- a.text-3.gray(href="#") Jose Portilla
-      //          include ../../../components/list-dropdown.pug
-      //        .card__content--details
-      //          .rich-textarea
-      //            h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      //            h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      //            h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      //            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      //            span  Lorem ipsum dolor
-      //            ul
-      //              li Lorem ipsum dolor
-      //              li Lorem ipsum dolor
-      //              li Lorem ipsum dolor
-      //              li Lorem ipsum dolor
-      //            q Lorem ipsum dolor
-      //            a(href="#") mostafa
-      //            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      //            i mostafa
-      //          .tags
-      //            .tags__item #Development
-      //            .tags__item #Development
+      .col-md-8
+        section.px-3.py-
+          h2.title-2.my-3 Thread card questions
+            p.text-2.mb-1
+              | we use
+              code .card
+        .card.card--side-col
+          .card__side-col
+            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
+          .card__content
+            .card__header
+              .card__header-multiline
+                a.text-3(href="#")
+                  | Jose Portilla
+                  i.fa.fa-check-circle.ml-1
+                time.text-3.gray Jan 15 '18 at 13:56
+              .card__tools
+                include ../../../components/list-dropdown.pug
+            div
+              h1
+                strong Five things I wish I knew before I switched to the Apple Ecosystem.
+              p
+                | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
+                | year. There are definitely many positives in the switch, but there are some things I wish I had known.
+              p Photo by Tianyi Ma on Unsplash
+              h2
+                em 1. Not all devices play as nicely together.
+              p
+                | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
+                | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
+                | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
+                | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
+                | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
+                | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
+                | issues, but a few just handle things differently.
+            .tags
+              .tags__item #Development
+              .tags__item #Development
       ////-Thread answer
       //.col-lg-12
       //  h2.title-2.my-3 Thread card questions

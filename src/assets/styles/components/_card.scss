@@ -59,35 +59,25 @@
   border-radius: 10px;
   margin-bottom: 15px;
   padding: 20px;
-  // display: flex;
 
   .card__header {
-    //display: none;
-    //padding: 15px 20px;
-    //border-bottom: 1px solid rgba($darkBlack, 0.1);
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
+    //padding: 0 10px;
+  }
+
+  .card__header-multiline {
+    flex-direction: column;
+    display: flex;
   }
 
   .card__tools {
     margin-left: auto;
-
   }
 
   .card__content {
-    // display: flex;
-    // flex-direction: column;
-    //
-
-
-    //margin-bottom: 0;
-    // &.card--with-small-vertical-padding{
-    // 	padding: 10px 20px;
-    // }
-    // &.card--with-small-horizontal-padding{
-    // 	padding: 20px 10px;
-    // }
+    padding-left: 10px;
   }
 
   &.card--side-col {
@@ -99,9 +89,8 @@
     }
   }
 
-  &.card--user {
-
-
+  .card__side-col {
+    padding-right: 10px;
   }
 
 
