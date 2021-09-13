@@ -65,8 +65,8 @@ input[type="button"] {
       border-color: #fff;
     }
     &.btn--danger {
-      background-color: $danger;
-      border-color: $danger;
+      background-color: #ed2a26;
+      // border-color: #ed2a26;
     }
 
     &.btn--rounded {
@@ -112,6 +112,9 @@ input[type="button"] {
 
       &.btn--default {
         color: $primary;
+      }
+      &.btn--danger {
+        color: #ed2a26;
       }
 
       &.btn--primary {
@@ -297,6 +300,9 @@ input[type="button"] {
       border: none;
       text-align: left;
       color: black;
+      &.btn--danger {
+        color: #ed2a26;
+      }
     }
 
     &.btn--center {

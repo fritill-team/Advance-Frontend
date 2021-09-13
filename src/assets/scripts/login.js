@@ -49,8 +49,8 @@ if ("intlTelInput" in window) {
   });
 
 
-  const info = document.querySelector(".btn--success");
-  const error = document.querySelector(".btn--error");
+  const info = document.querySelector(".messages");
+  const error = document.querySelector(".messages");
 
   phoneInputField.addEventListener("input", function process(event) {
     event.preventDefault();
@@ -75,4 +75,4 @@ if ("intlTelInput" in window) {
     }
   })
 }
-
+ 
