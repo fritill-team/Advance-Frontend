@@ -57,30 +57,44 @@
 .card {
   background-color: $white;
   border-radius: 10px;
-  margin: 15px 0;
-  // display: flex;
+  margin-bottom: 15px;
+  padding: 20px;
 
-  .card__title {
-    //display: none;
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba($darkBlack, 0.1);
+  .card__header {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    //padding: 0 10px;
+  }
+
+  .card__header-multiline {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .card__tools {
+    margin-left: auto;
   }
 
   .card__content {
-    // display: flex;
-    // flex-direction: column;
-    padding: 20px;
-
-    //margin-bottom: 0;
-    // &.card--with-small-vertical-padding{
-    // 	padding: 10px 20px;
-    // }
-    // &.card--with-small-horizontal-padding{
-    // 	padding: 20px 10px;
-    // }
+    padding-left: 10px;
   }
 
-  .card__body {
+  &.card--side-col {
+    display: flex;
+
+    .card__header,
+    .card__content {
+      width: 100%;
+    }
+  }
+
+  .card__side-col {
+    padding-right: 10px;
+  }
+
+
+  /*.card__body {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -560,35 +574,35 @@
         font-size: 14px;
       }
     }
-  }
+  }*/
 
-  &.card--user {
-    .card--centered {
-      .card--centered {
-        font-size: 18px;
-      }
-    }
-
-    .user-image {
-      margin-bottom: 20px;
-    }
-
-    .user-data {
-      .text-1 {
-        &:hover {
-          color: $darkBlack2;
-        }
-      }
-
-      .text-2 {
-        font-weight: 500;
-
-        &:hover {
-          color: $primaryLight;
-        }
-      }
-    }
-  }
+  //&.card--user {
+  //  .card--centered {
+  //    .card--centered {
+  //      font-size: 18px;
+  //    }
+  //  }
+  //
+  //  .user-image {
+  //    margin-bottom: 20px;
+  //  }
+  //
+  //  .user-data {
+  //    .text-1 {
+  //      &:hover {
+  //        color: $darkBlack2;
+  //      }
+  //    }
+  //
+  //    .text-2 {
+  //      font-weight: 500;
+  //
+  //      &:hover {
+  //        color: $primaryLight;
+  //      }
+  //    }
+  //  }
+  //}
 
   &.card--card-file {
     position: relative;
@@ -662,6 +676,7 @@
     //   transition: all 0.3s ease;
     // }
   }
+
   // &.card--questions {
   //   .card__content {
   //     display: flex;
@@ -782,11 +797,13 @@ html[dir="rtl"] {
     .card__content-header {
       align-items: flex-start;
     }
+
     .card__content--details {
       p {
         text-align: right;
       }
     }
+
     .user-image {
       margin-left: 10px;
       flex-direction: column;

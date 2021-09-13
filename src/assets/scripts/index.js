@@ -14,3 +14,5 @@ import "./night-mode.js";
 import "./toaster"
 
 import "./tabs.js"
+import "./select2"
+import "./convertable"

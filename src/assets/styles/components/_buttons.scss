@@ -6,7 +6,7 @@ input[type="button"] {
     margin: 0 5px 5px 0;
     padding: 5px 20px;
     font-family: $quicksand, sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     border: 1px solid;
     border-radius: 5px;
@@ -14,6 +14,7 @@ input[type="button"] {
     color: $white;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1.25px;
 
     &:hover {
       opacity: 0.8;
@@ -64,8 +65,8 @@ input[type="button"] {
       border-color: #fff;
     }
     &.btn--danger {
-      background-color: $danger;
-      border-color: $danger;
+      background-color: #ed2a26;
+      // border-color: #ed2a26;
     }
 
     &.btn--rounded {
@@ -111,6 +112,9 @@ input[type="button"] {
 
       &.btn--default {
         color: $primary;
+      }
+      &.btn--danger {
+        color: #ed2a26;
       }
 
       &.btn--primary {
@@ -296,6 +300,9 @@ input[type="button"] {
       border: none;
       text-align: left;
       color: black;
+      &.btn--danger {
+        color: #ed2a26;
+      }
     }
 
     &.btn--center {

@@ -11,28 +11,7 @@ input:focus {
   outline: 0;
 }
 // start auth style
-.auth-form {
-  background: #f7f7f7 !important;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  height: 100%;
-  z-index: 0;
-  &::before {
-    content: "";
-    background: url("/assets/images/sign.svg") no-repeat center;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    pointer-events: none;
-    background-size: cover;
-    opacity: 0.04;
-    z-index: -1;
-  }
-}
-.auth-form__title {
+.header-title {
   float: none;
   width: 135px;
   text-align: center;
@@ -40,7 +19,7 @@ input:focus {
   padding: 50px 0;
   z-index: 1;
 }
-.auth-form__content {
+.wrapper-content {
   background: #fff;
   border-radius: 10px;
   padding: 50px 50px 30px;
@@ -50,108 +29,28 @@ input:focus {
   width: 100%;
   margin-top: 0;
   h2 {
-    font-size: 24px;
-    font-weight: 600;
     font-family: Quicksand, sans-serif;
-    color: #333;
     text-align: center;
     margin-bottom: 40px;
   }
   p {
-    font-size: 14px;
-    font-weight: 400;
     font-family: Quicksand, sans-serif;
-    color: #686f7a;
     text-align: center;
-    line-height: 26px;
+    margin: 15px 0px;
   }
 }
-.auth-form__footer {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  font-family: $quicksand;
-  color: #333;
-  padding: 50px 0;
-  display: block;
-  float: left;
-  width: 100%;
-  .auth-form__footer img {
-    margin-right: 10px;
-    vertical-align: middle;
+.middle-or {
+  align-items: center;
+  justify-content: center;
+  hr {
+    width: 40%;
+    color: #e1e1e1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
   }
 }
-// End auth style
-// start tabs
-.tabs {
-  .tabs__header {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
-}
-.tabs__tab {
-  padding: 5px 20px;
-  .tab__link {
-    padding-bottom: 10px !important;
-    border-radius: 0;
-    padding: 8px 0px 8px 0px;
-    margin: 8px 6px 2px 0;
-    line-height: 1;
-    white-space: nowrap;
-    text-decoration: none;
-    text-align: center;
-    color: $darkBlack;
-    background: transparent;
-    display: inline-block;
-    font-family: $quicksand;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 1px;
-      left: 0;
-      bottom: 3px;
-      background-color: $darkBlack;
-      transition: 0.3s ease all;
-    }
-    &:hover {
-      color: $darkBlack;
-      &::before {
-        width: 100%;
-      }
-    }
-  }
-  .tab--active {
-    transition: 0.3 ease all;
-    padding-bottom: 10px !important;
-    border-radius: 0;
-    padding: 8px 0px 8px 0px;
-    margin: 8px 6px 2px 0;
-    line-height: 1;
-    white-space: nowrap;
-    text-decoration: none;
-    text-align: center;
-    color: $darkBlack;
-    background: transparent;
-    display: inline-block;
-    position: relative;
-    font-weight: 600;
-    &::before {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 1px;
-      left: 0;
-      bottom: 3px;
-      background-color: $darkBlack;
-      transition: 0.3s ease all;
-      width: 100%;
-    }
-  }
-}
-// End tabs
 // input field
 .field-wrapper {
   width: 100%;
@@ -192,7 +91,7 @@ input:focus {
     padding-left: 14px;
     color: #aaaaaa;
     font-size: 18px;
-    bottom: -14px;
+    bottom: -12px;
   }
   // general message styling
   .messages {
@@ -352,7 +251,6 @@ input:focus {
       }
     }
   }
-
   // input type select
   &.field-wrapper__select-input {
     .text-field__content {
@@ -483,18 +381,20 @@ input:focus {
   }
 }
 /*  reset password    */
-.auth-form__content .verification .vcode-input {
-  outline: none;
-  display: block;
-  height: 50px;
-  margin-right: 0.5rem;
-  text-align: center;
-  font-size: 1.25rem;
-  min-width: 0;
-  background: #fff !important;
-  border: 1px solid #e5e5e5 !important;
-  color: #333 !important;
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+.verification {
+  .verification__input {
+    outline: none;
+    display: block;
+    height: 50px;
+    margin-right: 0.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    min-width: 0;
+    background: #fff !important;
+    border: 1px solid #e5e5e5 !important;
+    color: #333 !important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  }
 }
 html[dir="rtl"] {
   //start rtl auth
@@ -558,10 +458,6 @@ html[dir="rtl"] {
       text-align: right;
     }
     // textarea
-
-    // .text-field__error{
-
-    // }
     .text-field__label {
       text-align: right;
     }
@@ -636,7 +532,7 @@ html[dir="rtl"] {
   //login
   // auth login
   .field-wrapper {
-    .key-number {
+    .key-number { 
       padding-right: 14px;
     }
     .field-wrapper__icon {

@@ -9,8 +9,9 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  //line-height: 1.15; /* 1 */
+  //-webkit-text-size-adjust: 100%; /* 2 */
+  font-family: unquote("Quicksand"), 'Roboto', 'sans-serif';
 }
 
 /* Sections
@@ -37,32 +38,6 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-span {
-  line-height: 8px;
-}
 /* Grouping content
    ========================================================================== */
 
@@ -370,3 +345,9 @@ template {
 [hidden] {
   display: none;
 }
+
+
+ul {
+  padding: 0;
+}
+
