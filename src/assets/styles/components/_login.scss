@@ -91,7 +91,7 @@ input:focus {
     padding-left: 14px;
     color: #aaaaaa;
     font-size: 18px;
-    bottom: -14px;
+    bottom: -12px;
   }
   // general message styling
   .messages {
@@ -532,7 +532,7 @@ html[dir="rtl"] {
   //login
   // auth login
   .field-wrapper {
-    .key-number {
+    .key-number { 
       padding-right: 14px;
     }
     .field-wrapper__icon {
