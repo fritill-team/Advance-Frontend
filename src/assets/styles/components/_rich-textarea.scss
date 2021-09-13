@@ -7,33 +7,41 @@ $pColor: #686f7a;
   background-repeat: no-repeat;
 }
 .rich-textarea {
+  font-size: 16px;
   h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 1.25;
+    letter-spacing: -2px;
+    margin: .25em 0 .5em 0;
   }
   h2 {
-    font-size: 1.625em;
-    line-height: 1.15384615;
+    font-size: 2em;
+    // line-height: 1.15384615;
+    margin: .25em 0 .5em 0;
   }
   h3 {
-    font-size: 1.375em;
-    line-height: 1.13636364;
+    font-size: 1.8em;
+    // line-height: 1.13636364;
+    margin: .25em 0 .5em 0;
   }
   h4 {
-    font-size: 1.125em;
-    line-height: 1.11111111;
+    font-size: 1.6em;
+    // line-height: 1.11111111;
+    margin: .25em 0 .5em 0;
   }
   h5 {
-    font-size: 1.1em;
-    line-height: 1.1;
+    font-size: 1.4em;
+    // line-height: 1.1;
+    margin: .25em 0 .5em 0;
   }
   h6 {
-    font-size: 1em;
-    line-height: 1.05;
+    font-size: 1.2em;
+    // line-height: 1.05;
+    margin: .25em 0 .5em 0;
   }
   p {
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 0.9em;
+    // line-height: 26px;
     color: $pColor;
   }
   strong {
@@ -42,7 +50,7 @@ $pColor: #686f7a;
   i {
     font-style: italic;
   }
-  u {
+  ul {
     text-decoration: underline;
   }
   .line-through {
@@ -61,7 +69,7 @@ $pColor: #686f7a;
     font-size: 1.5em;
     line-height: 1.45833333;
     p {
-      padding: 15px;
+      padding: 0.9em;
       background: #eee;
       border-radius: 5px;
       &::before {
@@ -96,9 +104,9 @@ $pColor: #686f7a;
   li {
     display: inline-block;
   }
-  img {
-    @include bg-property("");
-  }
+  // img {
+  //   @include bg-property("");
+  // }
 }
 html[dir="rtl"] {
   .rich-textarea {

@@ -1,10 +1,15 @@
 .more-dropdown {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: end;
   position: relative;
+  width: 20px;
+  height: 20px;
+
 
   .more-dropdown__link {
     font-size: 20px;
     color: #afafaf !important;
+    margin-left: auto;
   }
   .more-dropdown__content {
     display: none;
@@ -15,7 +20,7 @@
     border: 1px solid rgba(34, 36, 38, 0.15);
     z-index: 1;
     right: 0;
-    top: 35px;
+    top: 25px;
     border-radius: 5px;
 
     .content__item {
