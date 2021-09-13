@@ -587,15 +587,7 @@ $(document)
 
 // edit threads
 
-$(".convert").on("click" ,function(e){
-  e.preventDefault();
-  let card = $(this).closest(".card--convertible"),
-      form = card.children(".convertible__form"),
-      data = card.children(".convertible__data");
-  form.toggleClass("d-block");
-  data.toggleClass("d-none");
-  console.log(form)
-});
+
 
 // Drop zone
  $("div#myId").dropzone({ url: "/file/post" });
