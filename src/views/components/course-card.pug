@@ -2,51 +2,49 @@ mixin course-card(className)
 	.course-card(class= className)
 		.course-card__card-media
 			a.card-media__card-img(href='course_detail_view.html')
-				img(src='../assets/images/courses/img-1.jpg' alt='')
+				img(src='../assets/images/get_img.jpg' alt='')
 				.card-img__card-overlay
 					.card-overlay__badge-seller Bestseller
 					.card-overlay__crd-reviews
-						i.uil.uil-star
+						i.far.fa-star 
 						| 4.5
 					span.card-overlay__play_btn1
-						i.uil.uil-play
+						i.fas.fa-play
 					.card-overlay__crd-timer
 						| 25 hours
 			//-  start card-content part2
 			.card-media__card-content
 				.course-card__details
-					.eps_dots.more_dropdown
-						a(href='#')
-							i.uil.uil-ellipsis-v
-						.dropdown-content
-							span
-								i.uil.uil-share-alt
-								| Share
-							span
-								i.uil.uil-heart
-								| Save
-							span
-								i.uil.uil-ban
-								| Not Interested
-							span
-								i.uil.uil-windsock
-								| Report
-					.card-content__card-details
-						span.card-details__card-view 109k views
-						span.card-details__card-view 15 days ago
-					a.card-content__card-discription(href='course_detail_view.html')
+					.d-flex.justify-content-between.align-items-center
+						.card-content__card-details
+							span.card-details__card-view 109k views
+							span.card-details__card-view 15 days ago
+						.more-dropdown
+							button.btn.btn--hover-dropdown
+								i.fas.fa-ellipsis-v.more-dropdown__icon
+							.more-dropdown__content
+								a(href="#" class="content__item convert")
+									i.item__icon.fas.fa-share-alt
+									| Share
+								a(href="#" class="content__item")
+									i.item__icon.fas.fa-ban
+									| Save
+								a(href="#" class="content__item convert")
+									i.item__icon.fas.fa-heart
+									| Not Interested  
+					a(class="title-link text-2 semi-bold " href='course_detail_view.html')
 						| Complete Python Bootcamp: Go from zero to hero
 						| in Python 3
 					a(href='#' class="card-content__card-title") Web Development | Python
 					p.card-auther__name-auth
-						| By
-						a(href='#') John Doe
+						| By 
+						a(href='#' class="title-link text-2 bold") John Doe
 				.card-auther__price
 					.course-card__actions
-						a(href="#" class="btn btn--primary btn--outlined" title='Enroll')
+						a(href="#" class="btn btn--danger btn--outlined" title='Enroll')
 							|Enroll
-						a(href="#" class="btn-wishlist")
+						a(href="#" class="btn-wishlist btn--danger")
 							i.fas.fa-heart
-						a(href="#" class="btn-wishlist")
+						a(href="#" class="btn-wishlist btn--danger")
 							i.far.fa-heart
 					p $10
