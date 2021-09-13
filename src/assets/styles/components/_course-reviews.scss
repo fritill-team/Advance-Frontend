@@ -17,6 +17,7 @@
 .w-1 {
   width: 0% !important;
 }
+
 @mixin rating-star {
   font-size: 1.3rem;
   width: 1.3rem;
@@ -26,6 +27,7 @@
   float: left;
   margin-right: 7px;
 }
+
 @mixin full-star-before {
   color: $yellow;
   content: "\f005";
@@ -34,6 +36,7 @@
   font-weight: 900;
   left: 0;
 }
+
 @mixin hulf-star-before {
   color: $yellow;
   content: "\f005";
@@ -44,6 +47,7 @@
   left: 0;
   overflow: hidden;
 }
+
 @mixin hulf-star-after {
   content: "\f005";
   font-family: "Font Awesome 5 Free";
@@ -52,6 +56,7 @@
   width: 60%;
   text-indent: -1.5rem;
 }
+
 @mixin empty-star {
   font-size: 1.3rem;
   width: 1.3rem;
@@ -61,6 +66,7 @@
   float: left;
   margin-right: 7px;
 }
+
 @mixin empty-star-before {
   content: "\f005";
   position: absolute;
@@ -69,6 +75,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
+
 .all-reviews__title {
   font-size: 20px;
   font-weight: 500;
@@ -77,6 +84,7 @@
   margin-bottom: 20px;
   color: $darkBlack;
 }
+
 .rating__progress {
   flex-basis: 50%;
   margin-right: 20px;
@@ -86,6 +94,7 @@
   font-size: 0.75rem;
   background-color: $light-white;
   border-radius: 0.25rem;
+
   .progress--progress-bar {
     background-color: $primaryLight !important;
     flex-direction: column;
@@ -96,9 +105,11 @@
     transition: width 0.6s ease;
     // width: 60%;
   }
+
   &.progress--height {
     height: 7px !important;
   }
+
   &.progress--video {
     width: 100%;
     position: absolute;
@@ -118,6 +129,7 @@
   border: 1px solid $light-white;
   padding: 10px 20px;
   border-radius: 20px;
+
   .total-rating__number {
     font-size: 16px;
     font-weight: 500;
@@ -128,33 +140,41 @@
     margin-right: 10px;
     line-height: 22px;
   }
+
   .total-rating__rating-box {
     color: #dedfe0;
     display: flex;
     flex-basis: 30%;
+
     .rating-box__rating-star {
       @include rating-star;
     }
+
     .rating-box--full-star {
       &::before {
         @include full-star-before;
       }
     }
+
     .rating-box--half-star {
       &::before {
         @include hulf-star-before;
       }
+
       &::after {
         @include hulf-star-after;
       }
     }
+
     .rating-box--empty-star {
       @include empty-star;
+
       &:before {
         @include empty-star-before;
       }
     }
   }
+
   .total-rating__title {
     font-size: 13px;
     font-weight: 500;
@@ -166,33 +186,41 @@
     line-height: 22px;
   }
 }
+
 .rating__rating-box {
   color: $light-white;
   display: flex;
   flex-basis: 30%;
+
   .rating-box__rating-star {
     @include rating-star;
   }
+
   .rating-box--full-star {
     &::before {
       @include full-star-before;
     }
   }
+
   .rating-box--half-star {
     &::before {
       @include hulf-star-before;
     }
+
     &::after {
       @include hulf-star-after;
     }
   }
+
   .rating-box--empty-star {
     @include empty-star;
+
     &:before {
       @include empty-star-before;
     }
   }
 }
+
 .rating--total {
   font-size: 13px;
   font-weight: 500;
@@ -203,13 +231,16 @@
   margin-left: 10px;
   line-height: 22px;
 }
+
 .review__header {
   float: left;
   width: 100%;
+
   .header__header-content {
     float: left;
     width: 100%;
     margin-bottom: 30px;
+
     .header-content__title {
       font-size: 20px;
       font-weight: 500;
@@ -219,10 +250,12 @@
       color: $darkBlack;
       float: left;
     }
+
     .header-content__search {
       float: right;
       width: 180px;
       position: relative;
+
       .search__input {
         color: $darkBlack !important;
         height: 30px;
@@ -235,6 +268,7 @@
         border: 1px solid $light-white;
         border-radius: 20px;
       }
+
       .search__btn {
         position: absolute;
         right: 3px;
@@ -250,34 +284,42 @@
     }
   }
 }
+
 .item__rating-box {
   color: $white;
   display: flex;
   flex-basis: 30%;
   margin: 10px 0px;
+
   .rating-box__rating-star {
     @include rating-star;
   }
+
   .rating-box--full-star {
     &::before {
       @include full-star-before;
     }
   }
+
   .rating-box--half-star {
     &::before {
       @include hulf-star-before;
     }
+
     &::after {
       @include hulf-star-after;
     }
   }
+
   .rating-box--empty-star {
     @include empty-star;
+
     &:before {
       @include empty-star-before;
     }
   }
 }
+
 .item__comment {
   font-size: 14px;
   margin-top: 17px;
@@ -287,11 +329,13 @@
   font-family: $quicksand;
   color: $darkGray;
 }
+
 .reviews {
   float: left;
   width: 100%;
   // margin-top: 30px;
   margin-bottom: 20px;
+
   .reviews__all-reviews {
     float: left;
     width: 100%;
@@ -299,6 +343,7 @@
     padding: 20px 30px 30px;
     border: 1px solid $light-white;
     border-radius: 10px;
+
     .all-reviews__details-rate {
       .details-rate__rating {
         cursor: pointer;
@@ -315,13 +360,16 @@
     width: 100%;
     background: $white;
     border-radius: 10px;
-		padding: 15px;
+    padding: 15px;
+
     .all-reviews__item {
       padding: 20px;
       border-bottom: 1px solid $light-white;
+
       .item__helpful {
         display: flex;
         align-items: baseline;
+
         .helpful__ask {
           font-size: 14px;
           font-weight: 400;
@@ -330,16 +378,20 @@
           line-height: 24px;
           margin-right: 10px;
         }
+
         .helpful__radio-group {
           padding: 5px 8px 0;
           border-radius: 6px;
+
           .radio-group__item {
             display: inline-block;
             margin-right: 10px;
+
             .item--input {
               position: absolute;
               opacity: 0;
             }
+
             .item__radio-label {
               font-weight: 400;
               font-family: $quicksand;
@@ -348,6 +400,7 @@
               line-height: 12px;
               margin-bottom: 0;
               cursor: pointer;
+
               &::before {
                 content: "";
                 background: $light-white;
@@ -365,12 +418,14 @@
                 transition: all 0.25s ease;
               }
             }
+
             input[type="radio"]:checked + .item__radio-label:before {
               background-color: $primaryLight;
               box-shadow: inset 0 0 0 2px $light-white;
             }
           }
         }
+
         .helpful__text {
           font-size: 13px;
           line-height: 24px;
@@ -382,13 +437,16 @@
       }
     }
   }
-  .my-rating{
+
+  .my-rating {
     margin-left: 60px;
   }
 }
+
 .all-reviews__review-item {
   padding: 20px;
   border-bottom: 1px solid $light-white;
+
   .review-item__more-reviews {
     display: block;
     text-align: center;
@@ -398,6 +456,7 @@
     color: $darkBlack;
   }
 }
+
 @media (min-width: 576px) and (max-width: 767.98px) {
   .reviews {
     .reviews__all-reviews {

@@ -48,6 +48,7 @@ p {
   font-weight: 400;
   line-height: 1.5;
   color: $black;
+  margin: 0.25em 0 0.75em 0;
 }
 
 .body-2 {
@@ -55,6 +56,7 @@ p {
   letter-spacing: 0.15px;
   font-weight: 500;
   line-height: 1.5;
+  margin: 0.25em 0 0.75em 0;
 }
 
 .subtitle-1 {
@@ -84,6 +86,35 @@ p {
   text-transform: uppercase;
   margin: 0;
 }
+
+.primary {
+  color: $primary;
+}
+
+.secondary {
+  color: $secondary
+}
+
+.accent {
+  color: $accent
+}
+
+.success {
+  color: $success
+}
+
+.info {
+  color: $info
+}
+
+.warning {
+  color: $warning
+}
+
+.danger {
+  color: $danger
+}
+
 
 // typo
 .title-h1 {
@@ -186,13 +217,28 @@ p {
   border: none;
   text-align: left;
   color: black;
+
   &:hover {
     color: $darkBlack2;
   }
 }
 
-a{
-  &:hover{
-    color: hover;
+a {
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $black;
+  margin: 0.25em 0 0.75em 0;
+
+  &:link,
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  &:visited,
+  &:active {
+
   }
 }

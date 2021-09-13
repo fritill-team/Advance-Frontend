@@ -629,15 +629,7 @@ $(document).ready(function(){
 // });
 
 
-  $(".my-rating").starRating({
-    initialRating: 0,
-    starSize: 25,
-    totalStars: 5,
-    starShape: '',
-    emptyColor: 'lightgray',
-    hoverColor: '#f2b01e',
-});
 
 window.onload = function() {
-  document.getElementById("vcode1").focus(); 
-};  
+  document.getElementById("vcode1").focus();
+};
