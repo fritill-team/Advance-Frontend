@@ -667,7 +667,19 @@
   //     display: flex;
   //   }
   // }
-
+  &.card--qs {
+    .card__content-header {
+      margin-bottom: 10px;
+    }
+    .user-data {
+      time {
+        margin-bottom: 10px;
+      }
+      .btn--link-text {
+        margin-bottom: 10px;
+      }
+    }
+  }
   &.card--transparent {
     background-color: transparent;
     border: 0;
