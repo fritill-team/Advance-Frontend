@@ -3,7 +3,6 @@ h1 {
   letter-spacing: -3.5px;
   font-weight: 300;
   margin: 0.25em 0 0.75em 0;
-
 }
 
 h2 {
@@ -74,7 +73,6 @@ p {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.4px;
-
 }
 
 .overline {
@@ -152,8 +150,6 @@ p {
   line-height: 1.3;
 }
 
-
-
 .gray {
   color: $darkGray;
 }
@@ -183,6 +179,10 @@ p {
 }
 
 .title-link {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  color: black;
   &:hover {
     color: $darkBlack2;
   }
