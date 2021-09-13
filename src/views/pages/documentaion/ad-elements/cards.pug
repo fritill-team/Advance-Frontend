@@ -19,6 +19,144 @@ block content
                 button.btn.btn--primary.btn--icon
                   i.fa.fa-check
 
+          .card__content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt, distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
+      // default card end
+
+      //- card default
+      .col-lg-12
+        h2.title-2.my-3 Default card
+        p.text-2.mb-1
+          | we use
+          code .card
+      .col-lg-12
+        .card
+          // start card-title ( .card__title contains h4.title-h4 card title
+            .card__title
+              h4.title-h4 card title
+          // end of card-title
+          .card__content
+            .user-image
+              img(src="../../assets/images/hd_dp.jpg" alt="")
+              i.uil.uil-check-circle
+            .card__body
+              .card__content-header
+                .user-data
+                  a.text-2(href="#") Jose Portilla
+                  p.text-3.gray Jose Portilla Jose Portilla Jose
+                  a.text-3.gray(href="#") Jose Portilla
+                // start of list
+                  include ../../../components/list-dropdown.pug
+                // end of list
+              .card__content--details
+                p.text-1 lorem ipsum dolor sit amet
+              // start tags
+                .tags
+                  a(href='#').tags__item #Development
+                  a(href='#').tags__item #Development
+              // end of tags
+          // end of whatever
+      //-Thread questions
+
+
+      .col-lg-12
+        h2.title-2.my-3 Thread card questions
+        //p.text-2.mb-1
+          | we use
+          code .card
+      .col-lg-12
+        .card.card--horizontal
+          .card__content
+            .user-image
+              img(src="../../assets/images/hd_dp.jpg" alt="")
+              i.uil.uil-check-circle
+            .card__body
+              .card__content-header
+                .user-data
+                  a.text-2(href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56
+                  //- a.text-3.gray(href="#") Jose Portilla
+                include ../../../components/list-dropdown.pug
+              .card__content--details
+                .rich-textarea
+                  h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  span  Lorem ipsum dolor
+                  ul
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                  q Lorem ipsum dolor
+                  a(href="#") mostafa
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  i mostafa
+                .tags
+                  .tags__item #Development
+                  .tags__item #Development
+      //-Thread answer
+      .col-lg-12
+        h2.title-2.my-3 Thread card questions
+        //p.text-2.mb-1
+          | we use
+          code .card
+      .col-lg-12
+        .card.card--with-actions
+          .card__content
+            .user-image
+              img(src="../../assets/images/hd_dp.jpg" alt="")
+              i.uil.uil-check-circle
+            .card__body
+              .card__content-header
+                .user-data
+                  a.text-2(href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56
+                  //- a.text-3.gray(href="#") Jose Portilla
+                include ../../../components/list-dropdown.pug
+              .card__content--details
+                .rich-textarea
+                  h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  span  Lorem ipsum dolor
+                  ul
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                    li Lorem ipsum dolor
+                  q Lorem ipsum dolor
+                  a(href="#") mostafa
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  i mostafa
+
+      //- card comments
+      .col-lg-12
+        h2.title-2.my-3 Default card comments
+        p.text-2.mb-1
+          | we use
+          code .card .card--transparent
+      .col-lg-12
+        .comments-list
+          //- component 1 add class transparent (no-background)
+          .card.card--transparent
+            .card__content
+              .user-image
+                img(src="../../assets/images/hd_dp.jpg" alt="")
+                i.uil.uil-check-circle
+              .card__body
+                .card__content-header
+                  .user-data
+                    a.text-2(href="#") Jose Portilla
+                    time.text-3.gray Jan 15 '18 at 13:56
+                  include ../../../components/list-dropdown.pug
+                .card__content--details
+                  p.text-1 lorem ipsum dolor sit amet
+          //- comment 2
+          .card.card--transparent
+
             .card__content
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt, distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
 
@@ -459,3 +597,84 @@ block content
       //    code.language-html
       //      <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
       //
+
+            .user-image
+              img(src="../../assets/images/hd_dp.jpg" alt="")
+              i.uil.uil-check-circle
+            .card__body
+              .card__content-header
+                .user-data
+                  a.text-2(href="#") Jose Portilla
+                  a.text-3.gray test@test.com
+                  a.text-3.gray(href="#") Bio test test
+                //include ../../../components/list-dropdown.pug
+              .card__content--details
+                p.text-1 lorem ipsum dolor sit amet
+      .col-lg-12
+        .card
+          .card__content 
+            .card__body
+              .card__content--details
+                a(class="text-1 btn btn--secondary btn--link-text " href="#") Jose Portilla
+                time.text-3.gray Jan 15 '18 at 13:56
+              .card__content-header
+                .user-data
+                  h3.title-h2 Lorem ipsum dolor
+                  .tags.tags--no-my
+                    .tags__item #Development
+                    .tags__item #Development
+      .col-lg-12
+        .card.card--qs
+          .card__content 
+            .card__body
+              .card__content-header
+                h3.title-h4.semi-bold
+                  a(class="btn btn--link-text" href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet alias similique cumque aperiam? Fugit facilis autem harum quasi deserunt ex corrupti atque temporibus omnis sapiente 
+              .user-data
+                .tags.tags--no-my
+                  .tags__item #Development
+                  .tags__item #Development 
+                .card__content--details 
+                  a(class="text-1 btn btn--secondary btn--link-text" href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56  
+          .card__content 
+            .card__body
+              .card__content-header
+                h3.title-h4.semi-bold
+                  a(class="btn btn--link-text" href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet alias similique cumque aperiam? Fugit facilis autem harum quasi deserunt ex corrupti atque temporibus omnis sapiente 
+              .user-data
+                .tags.tags--no-my
+                  .tags__item #Development
+                  .tags__item #Development 
+                .card__content--details 
+                  a(class="text-1 btn btn--secondary btn--link-text" href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56  
+          .card__content 
+            .card__body
+              .card__content-header
+                h3.title-h4.semi-bold
+                  a(class="btn btn--link-text" href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet alias similique cumque aperiam? Fugit facilis autem harum quasi deserunt ex corrupti atque temporibus omnis sapiente 
+              .user-data
+                .tags.tags--no-my
+                  .tags__item #Development
+                  .tags__item #Development 
+                .card__content--details 
+                  a(class="text-1 btn btn--secondary btn--link-text" href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56  
+          .card__content 
+            .card__body
+              .card__content-header
+                h3.title-h4.semi-bold
+                  a(class="btn btn--link-text" href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet alias similique cumque aperiam? Fugit facilis autem harum quasi deserunt ex corrupti atque temporibus omnis sapiente 
+              .user-data
+                .tags.tags--no-my
+                  .tags__item #Development
+                  .tags__item #Development 
+                .card__content--details 
+                  a(class="text-1 btn btn--secondary btn--link-text" href="#") Jose Portilla
+                  time.text-3.gray Jan 15 '18 at 13:56  
+      .col-lg-12
+        pre
+          code.language-html
+            <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
+

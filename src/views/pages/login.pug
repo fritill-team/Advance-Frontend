@@ -1,107 +1,101 @@
 extends ../layouts/auth.pug
-
-
 block title
-
 	title login
-
 block content
-
-	h2.title-h6.semi-bold  Welcome Back
-	//- p Log In to Your Edututs+ Account!
-	.tabs
-		ul(class="tabs__header")
-			li.tab.tab--active
-					a(href="#tab1" class="tab__link") Login With Email
-			li.tab
-					a(href="#tab2" class="tab__link") Login With Phone
-		.tabs-panels
-			#tab1.tab-panel
-				form
-					.field-wrapper
-						label.text-field__label Course Title
-							abbr(title="required") *
-						.text-field__content
-							input(
-                class="text-field__input text-field--icon"
-								type='email'
-								placeholder='Email Address'
-								name='email address'
-								maxlength=''
-								value=''
-								)
-							i.far.fa-envelope.field-wrapper__icon
-						ul.messages
-							li Please provide a valid city.
-					.field-wrapper
-						label.text-field__label Course Title
-							abbr(title="required") *
-						.text-field__content
-							input(
-                class="text-field__input text-field--icon"
-								type='Password'
-								placeholder='Password'
-								name='Password'
-								maxlength=''
-								required
-								)
-							i.fas.fa-key.field-wrapper__icon
-						ul.messages
-							li Please provide a valid city.
-					.field-wrapper
-						.ui.checkbox.icon
-							input(
-                id="remember"
-                class="hidden"
-								type="checkbox"
-								tabindex="0" )
-							label(for="remember") Remember Me
-					.d-flex.justify-content-around
-						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
-			#tab2.tab-panel
-				form
-					.field-wrapper
-						label.text-field__label Course Title
-							abbr(title="required") *
-						.text-field__content.w-100
-							input(
-                id="phone"
-                class="text-field__input text-field__input--border-none"
-								type="tel"
-								name="phone"
-								)
-					.field-wrapper
-						label.text-field__label
-							|	Course Title
-							abbr(title="required") *
-						.text-field__content
-							input(
-                class ="text-field__input text-field--icon"
-								type='Password'
-								placeholder='Password'
-								name='Password'
-								maxlength=''
-								required
-								)
-							i.fas.fa-key.field-wrapper__icon
-						ul.messages
-							li Please provide a valid city.
-					.field-wrapper
-						.ui.checkbox.icon
-							input(
-                class="hidden"
-                id="remember2"
-								type="checkbox"
-								tabindex="0" )
-							label(for="remember2") Remember Me
-					.d-flex.justify-content-around
-						button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
+	h2.title-h4.semi-bold  Welcome Back
+	//- p Log In to Your Edututs+ Account! 
+	.tabs.tabs--center
+		a(href="#tab1" class="tab tab--active ") Login With Email
+		a(href="#tab2" class="tab") Login With Phone 
+	.tabs-panels
+		#tab1.tab-panel.tab-panel--active
+			form
+				.field-wrapper
+					label.text-field__label Course Title
+						abbr(title="required") *
+					.text-field__content
+						input(
+							class="text-field__input text-field--icon"
+							type='email'
+							placeholder='Email Address'
+							name='email address'
+							maxlength=''
+							value=''
+							)
+						i.far.fa-envelope.field-wrapper__icon
+					ul.messages
+						li Please provide a valid city.
+				.field-wrapper
+					label.text-field__label Course Title
+						abbr(title="required") *
+					.text-field__content
+						input(
+							class="text-field__input text-field--icon"
+							type='Password'
+							placeholder='Password'
+							name='Password'
+							maxlength=''
+							required
+							)
+						i.fas.fa-key.field-wrapper__icon
+					ul.messages
+						li Please provide a valid city.
+				.field-wrapper
+					.ui.checkbox.icon
+						input(
+							id="remember"
+							class="hidden"
+							type="checkbox"	
+							tabindex="0" )
+						label(for="remember") Remember Me
+				.d-flex.justify-content-around
+					button(class="btn btn--danger btn--rounded btn--xl" type="submit")  Sign Up
+		#tab2.tab-panel
+			form
+				.field-wrapper
+					label.text-field__label Course Title
+						abbr(title="required") *
+					.text-field__content.w-100
+						input(
+							id="phone"
+							class="text-field__input text-field__input--border-none"
+							type="tel"
+							name="phone"
+							)
+					ul.messages
+						li Invalid phone number. 
+				.field-wrapper
+					label.text-field__label
+						|	Course Title
+						abbr(title="required") *
+					.text-field__content
+						input(
+							class ="text-field__input text-field--icon"
+							type='Password'
+							placeholder='Password'
+							name='Password'
+							maxlength=''
+							required
+							)
+						i.fas.fa-key.field-wrapper__icon
+					ul.messages
+						li Please provide a valid city.
+				.field-wrapper
+					.ui.checkbox.icon
+						input(
+							class="hidden"
+							id="remember2"
+							type="checkbox"
+							tabindex="0" )
+						label(for="remember2") Remember Me
+				.d-flex.justify-content-around
+					button(class="btn btn--danger btn--rounded btn--xl" type="submit")  Sign Up
 
 	p.title-2
-		a(href="forget.html" class="title-2 btn btn--primary btn--text")  Forgot Password
+		a(href="forget.html" class="text-2 btn--link-text btn")  Forgot Password
 	.middle-or.d-flex
 		hr
-		p.mb-0  Or
+		p.text-2  Or
 		hr
 	.socialMedia.d-flex.justify-content-center
 		a(href="#" class="social-icon__link social-icon--fa-bg social-icon--ml")
@@ -110,5 +104,5 @@ block content
 			i.fab.fa-twitter
 		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
 			i.fab.fa-google
-	p.title-2 Don't have an account?
+	p.title-2 Don't have an account ? 
 		a(href="signup.html" class="text-3 btn--link-text btn--secondary btn")  Sign Up
