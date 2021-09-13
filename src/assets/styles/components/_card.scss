@@ -215,7 +215,14 @@
       color: $twitter;
     }
   }
-
+  &.card--question {
+    .card__body {
+      flex-direction: column-reverse;
+      h2 {
+        margin: 0;
+      }
+    }
+  }
   &.card--trusted {
     border: 2px solid $gold;
     background-color: rgba($gold, 0.1);
@@ -675,7 +682,37 @@
   //     display: flex;
   //   }
   // }
-
+  &.card--qs {
+    .card__content-header {
+      margin-bottom: 0px;
+    }
+    .user-data {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+    .card__content--details {
+      background: #f1edee;
+      padding: 8px 14px;
+      border-radius: 5px;
+      margin-bottom: 0;
+    }
+    .card__content {
+      border-bottom: 1px solid #ddd;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    // .user-data {
+    //   // time {
+    //   //   margin-bottom: 10px;
+    //   // }
+    //   .btn--link-text {
+    //     margin-bottom: 10px;
+    //   }
+    // }
+  }
   &.card--transparent {
     background-color: transparent;
     border: 0;

@@ -535,9 +535,9 @@ $(".playlist__close").click(function() {
 });
 
 // checked box icon in video-list icon
-$(".play-list--hide").click(function() {
-  $(".play-list--hide").toggleClass("play-list__check--show");
-});
+// $(".play-list--hide").click(function() {
+//   $(".play-list--hide").toggleClass("play-list__check--show");
+// });
 
 // edit thread
 
@@ -622,16 +622,12 @@ $(document).ready(function(){
 //   // }
 // })
 
+ //rating
 // start star
 // $(function(){                   // Start when document ready
 // 	$('#star-rating').rating(); // Call the rating plugin
 // });
- //- #star-rating
-	//- 	input(type="radio" name="example" class="rating" value="1")
-	//- 	input(type="radio" name="example" class="rating" value="2")
-	//- 	input(type="radio" name="example" class="rating" value="3")
-	//- 	input(type="radio" name="example" class="rating" value="4")
-	//- 	input(type="radio" name="example" class="rating" value="5")
+
 
   $(".my-rating").starRating({
     initialRating: 0,
@@ -641,3 +637,7 @@ $(document).ready(function(){
     emptyColor: 'lightgray',
     hoverColor: '#f2b01e',
 });
+
+window.onload = function() {
+  document.getElementById("vcode1").focus(); 
+};  

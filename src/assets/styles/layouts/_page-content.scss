@@ -6,16 +6,35 @@
   // justify-content: space-between;
   height: 100%;
 
-  &.page-content--display {
-    padding: 60px 0 0;
-  }
-
+	&.page-content--video-player{
+		padding: 45px 0 0;
+	}
+	&.page-content--padding{
+		padding: 45px 0 0;
+	}
   &.page-content--display-2 {
     margin-left: 0;
   }
+ 
 
   &.page-content-pt {
     padding: 45px 0;
+  }
+  &.page-content--auth {
+    padding: 0;
+    img {
+      background: rgba(#fff, 0.3) !important;
+      position: absolute;
+      z-index: 0;
+      z-index: 0;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-size: cover;
+      object-fit: cover;
+      opacity: 0.04;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
