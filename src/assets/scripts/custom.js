@@ -542,9 +542,9 @@ $(".playlist__close").click(function() {
 });
 
 // checked box icon in video-list icon
-$(".play-list--hide").click(function() {
-  $(".play-list--hide").toggleClass("play-list__check--show");
-});
+// $(".play-list--hide").click(function() {
+//   $(".play-list--hide").toggleClass("play-list__check--show");
+// });
 
 // edit thread
 
@@ -656,3 +656,4 @@ $(document).ready(function(){
     emptyColor: 'lightgray',
     hoverColor: '#f2b01e',
 });
+ 
