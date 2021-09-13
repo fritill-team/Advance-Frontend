@@ -1,6 +1,12 @@
 a,
 button,
 input[type="button"] {
+  &.btn-tool{
+    color: #adb5bd;
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 10px;
+  }
   &.btn {
     display: inline-block;
     margin: 0 5px 5px 0;
@@ -15,12 +21,11 @@ input[type="button"] {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.25px;
-
+  
     &:hover {
       opacity: 0.8;
       transition: 0.3s ease all;
     }
-
     &.btn--disabled,
     &:disabled {
       pointer-events: none;
@@ -40,6 +45,8 @@ input[type="button"] {
       background-color: $primary;
       border-color: $primary;
     }
+
+
 
     &.btn--secondary {
       background-color: $secondary;
@@ -499,8 +506,6 @@ html[dir="rtl"] {
       }
     }
   }
-}
-html[dir="rtl"] {
   .btn {
     &.btn--ml-auto {
       margin-right: auto;
@@ -508,3 +513,4 @@ html[dir="rtl"] {
     }
   }
 }
+
