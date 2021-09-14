@@ -633,3 +633,11 @@ $(document).ready(function(){
 window.onload = function() {
   document.getElementById("vcode1").focus();
 };
+
+// dropdown-menu
+$('.more-dropdown').each(function(){
+  $(this).on('click', function(){
+    if($(this).classList())
+    $(this).toggleClass('active')
+  })
+})

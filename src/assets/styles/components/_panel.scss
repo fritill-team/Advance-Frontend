@@ -13,5 +13,11 @@
     }
   }
 
+  .card{
+    &:last-of-type{
+      border-bottom: 0;
+    }
+  }
+
 
 }

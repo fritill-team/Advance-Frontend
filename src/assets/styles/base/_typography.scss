@@ -41,6 +41,10 @@ h6 {
   margin: 0.25em 0 0.75em 0;
 }
 
+strong{
+  font-weight: 500;
+}
+
 .body-1,
 p {
   font-size: 16px;
@@ -164,9 +168,6 @@ p {
   font-weight: 400;
   color: $darkBlack;
   line-height: 1.3;
-  // &:hover{
-  // 	color: $darkBlack;
-  // }
 }
 
 .text-2 {
@@ -223,6 +224,7 @@ p {
   }
 }
 
+
 a {
   font-size: 16px;
   letter-spacing: 0.15px;
@@ -241,4 +243,97 @@ a {
   &:active {
 
   }
+}
+
+.card-text{
+  font-size: 14px;
+  *{
+    line-height: 1.1;
+  }
+  h1 {
+    font-size: 28px;
+    letter-spacing: -2.5px;
+    margin: .25em 0 .5em 0;
+  }
+  h2 {
+    font-size: 24px;
+    margin: .25em 0 .5em 0;
+  }
+  h3 {
+    font-size: 22px;
+    margin: .25em 0 .5em 0;
+  }
+  h4 {
+    font-size: 20px;
+    margin: .25em 0 .5em 0;
+  }
+  h5 {
+    font-size: 18px;
+    margin: .25em 0 .5em 0;
+  }
+  h6 {
+    font-size: 16px;
+    margin: .25em 0 .5em 0;
+  }
+  p {
+    font-size: 14px;
+    color: $pColor;
+  }
+ 
+  i {
+    font-style: italic;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: $linkColor;
+    font-weight: 500;
+    &:hover {
+      color: $linkColor !important;
+      text-decoration: underline !important;
+    }
+  }
+  blockquote {
+    margin: 0;
+    font-size: 1;
+    line-height: 1.45833333;
+    p {
+      padding: 0.9em;
+      background: #eee;
+      border-radius: 5px;
+      &::before {
+        content: "\201C";
+      }
+      &::after {
+        content: "\201D";
+      }
+    }
+  }
+  q {
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-style: italic;
+  }
+  span {
+    color: #f00;
+  }
+
+  code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+  }
+  ol {
+    margin-bottom: 1px !important;
+  }
+  ul {
+    margin-bottom: 1px !important;
+  }
+  li {
+    display: inline-block;
+  }
+
 }
