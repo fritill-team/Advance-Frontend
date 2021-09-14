@@ -635,9 +635,19 @@ window.onload = function() {
 };
 
 // dropdown-menu
-$('.more-dropdown').each(function(){
+$('.more-dropdown__link').each(function(){
   $(this).on('click', function(){
-    if($(this).classList())
-    $(this).toggleClass('active')
+    $('.more-dropdown').removeClass('active')
+    $(this).parent().addClass('active')
+    event.stopPropagation();
   })
+})
+
+$('.content__item').each(function(){
+  $(this).on('click', function() {
+    $('.more-dropdown').removeClass('active')
+  })
+})
+$(document).on('click', function(){
+  $('.more-dropdown').removeClass('active')
 })
