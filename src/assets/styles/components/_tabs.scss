@@ -30,22 +30,22 @@
     // margin: 14px 25px 14px 15px;
   }
 
-  &:before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 1px;
-    left: 0;
-    bottom: -3px;
-    background-color: $primary;
-    transition: 0.3s ease-in;
-  }
+  // &:before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 0;
+  //   height: 1px;
+  //   left: 0;
+  //   bottom: -3px;
+  //   background-color: $primary;
+  //   transition: 0.3s ease-in;
+  // }
 
   &:hover {
-    color: $darkBlack;
+    color: $primary;
 
     &::before {
-      width: 100%;
+      // width: 100%;
     }
   }
 
@@ -57,16 +57,16 @@
     line-height: 1;
     color: #fff;
 
-    &::before {
-      position: absolute;
-      content: "";
-      height: 1px;
-      left: 0;
-      bottom: 3px;
-      background-color: $darkBlack;
-      transition: 0.3s ease all;
-      width: 0;
-    }
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   height: 1px;
+    //   left: 0;
+    //   bottom: 3px;
+    //   background-color: $darkBlack;
+    //   transition: 0.3s ease all;
+    //   width: 0;
+    // }
 
     &::after {
       position: absolute;

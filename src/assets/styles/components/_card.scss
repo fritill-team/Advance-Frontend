@@ -74,7 +74,8 @@
     border-bottom: 1px solid #efefef;
     border-radius: 0;
 
-    &:last-child {
+    &:last-of-type {
+      // background-color: red;
       border-bottom: none;
     }
   }
@@ -121,6 +122,15 @@
   }
 
   .card__side-col {
+    // display: flex;
+  }
+  .card__content-header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-data{
+    display: flex;
+    flex-direction: column;
   }
 
 

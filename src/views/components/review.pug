@@ -1,63 +1,39 @@
 .reviews__all-reviews
-  h3.all-reviews__title Student Feedback
-  .all-reviews__total-rating
-    .total-rating__number 4.6
-    .total-rating__rating-box
-      include ../components/general-component/rating.pug
-      +rating( 'rating-box--full-star')
-      +rating( 'rating-box--full-star')
-      +rating( 'rating-box--full-star')
-      +rating( 'rating-box--empty-star')
-      +rating( 'rating-box--empty-star')
-    .total-rating__title Course Rating
-  .all-reviews__details-rate
-    .details-rate__rating
-      .rating__progress
-        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
-      .rating__rating-box
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 70%
-    .details-rate__rating
-      .rating__progress
-        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
-      .rating__rating-box
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 70%
-    .details-rate__rating
-      .rating__progress
-        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
-      .rating__rating-box
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 70%
-    .details-rate__rating
-      .rating__progress
-        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
-      .rating__rating-box
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 70%
-    .details-rate__rating
-      .rating__progress
-        .progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
-      .rating__rating-box
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--full-star')
-        +rating( 'rating-box--empty-star')
-      .rating--total 70%
+	h3.all-reviews__title Student Feedback
+	.all-reviews__total-rating
+		.total-rating__number 4.6
+		.total-rating__rating-box
+			.rate-display(data-rate="5")
+			//- include ../components/general-component/rating.pug
+			//- +rating( 'rating-box--full-star')
+			//- +rating( 'rating-box--full-star')
+			//- +rating( 'rating-box--full-star')
+			//- +rating( 'rating-box--empty-star')
+			//- +rating( 'rating-box--empty-star')
+		.total-rating__title Course Rating
+	.all-reviews__details-rate
+		.details-rate__rating
+			.rating__progress
+				.progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
+			.rate-display(data-rate="3")
+			.rating--total 70%
+		.details-rate__rating
+			.rating__progress
+				.progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
+			.rate-display(data-rate="3")
+			.rating--total 70%
+		.details-rate__rating
+			.rating__progress
+				.progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
+			.rate-display(data-rate="3")
+			.rating--total 70%
+		.details-rate__rating
+			.rating__progress
+				.progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
+			.rate-display(data-rate="3")
+			.rating--total 70%
+		.details-rate__rating
+			.rating__progress
+				.progress--progress-bar( style="width: 50%" role='progressbar' aria-valuenow="70" aria-valuemin="0" aria-valuemax="100")
+			.rate-display(data-rate="3")
+			.rating--total 70%
