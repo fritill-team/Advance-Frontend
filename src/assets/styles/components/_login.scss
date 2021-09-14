@@ -124,8 +124,7 @@ input:focus {
       background: $primaryLight;
       color: $white;
       font-weight: 500;
-      font-family: $quicksand;
-      position: absolute;
+        position: absolute;
       right: 3px;
       border-radius: 100%;
       height: 35px;
@@ -152,8 +151,7 @@ input:focus {
       height: 40px;
       font-size: 14px;
       font-weight: 400;
-      font-family: $quicksand;
-    }
+      }
     &.text-field--icon {
       padding-left: 3em !important;
     }
@@ -203,8 +201,7 @@ input:focus {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       border: 0;
       padding: 0;
-      font-family: $quicksand;
-      color: #333;
+        color: #333;
       font-weight: 400;
       position: relative;
       text-align: left;
@@ -284,7 +281,7 @@ input:focus {
 
   .ui.checkbox.icon .box,
   .ui.checkbox.icon label {
-    font-family: $quicksand !important;
+    font-family:  !important;
     color: #333;
     line-height: 20px;
     // width: 18px !important;
@@ -316,8 +313,7 @@ input:focus {
       label.radio-label-1 {
         font-size: 14px;
         font-weight: 400;
-        font-family: $quicksand;
-        line-height: 17px;
+            line-height: 17px;
         padding: 5px;
         cursor: pointer;
         &::before {
@@ -532,7 +528,7 @@ html[dir="rtl"] {
   //login
   // auth login
   .field-wrapper {
-    .key-number { 
+    .key-number {
       padding-right: 14px;
     }
     .field-wrapper__icon {

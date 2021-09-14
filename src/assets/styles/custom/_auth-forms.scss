@@ -25,7 +25,6 @@
   color: #ff0303;
   transition: 0.5s;
   margin: 15px 0;
-  font-family: montserrat;
   font-size: 16px;
   font-weight: lighter;
   &.auth-forms__alert-invalid {
@@ -126,8 +125,7 @@
       background: $primaryLight;
       color: $white;
       font-weight: 500;
-      font-family: $quicksand;
-      position: absolute;
+        position: absolute;
       right: 3px;
       border-radius: 100%;
       height: 35px;
@@ -154,8 +152,7 @@
       height: 40px;
       font-size: 14px;
       font-weight: 400;
-      font-family: $quicksand;
-    }
+      }
     &.text-field--icon {
       padding-left: 3em !important;
     }
@@ -213,8 +210,7 @@
       // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       border: 0;
       padding: 0;
-      font-family: $quicksand;
-      color: #333;
+        color: #333;
       font-weight: 400;
       position: relative;
       text-align: left;
@@ -295,7 +291,6 @@
 
   .ui.checkbox.icon .box,
   .ui.checkbox.icon label {
-    font-family: $quicksand !important;
     color: #333;
     line-height: 20px;
     // width: 18px !important;
@@ -316,8 +311,7 @@
       position: relative;
       font-size: 14px;
       font-weight: 400;
-      font-family: $quicksand;
-      line-height: 17px;
+        line-height: 17px;
       cursor: pointer;
       &::before {
         font-family: "FontAwesome";
@@ -361,8 +355,7 @@
       label.radio-label-1 {
         font-size: 14px;
         font-weight: 400;
-        font-family: $quicksand;
-        line-height: 17px;
+            line-height: 17px;
         padding: 5px;
         cursor: pointer;
         &::before {
@@ -736,8 +729,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-      font-family: $quicksand;
-      border-style: solid;
+        border-style: solid;
       position: relative;
       &::before {
         position: absolute;
@@ -757,7 +749,7 @@ html[dir="rtl"] {
       }
     }
     .tab--active {
-      transition: 0.3 ease all;
+      transition: 0.3s ease all;
       padding-bottom: 10px !important;
       border-radius: 0;
       padding: 8px 0px 8px 0px;
@@ -769,8 +761,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-      font-family: $quicksand;
-      border-style: solid;
+        border-style: solid;
       position: relative;
       &::before {
         position: absolute;

@@ -232,8 +232,7 @@
       .text-3 {
         font-size: 14px;
         font-weight: 500;
-        font-family: $quicksand;
-        color: $darkBlack;
+            color: $darkBlack;
 
         &:hover {
           color: $primaryLight !important;
@@ -243,8 +242,7 @@
       .text-2 {
         font-size: 12px;
         font-weight: 500;
-        font-family: $quicksand;
-      }
+          }
     }
 
     .uil-check-circle {
@@ -417,8 +415,7 @@
             width: 100%;
             padding: 10px 20px;
             font-size: 16px;
-            font-family: $quicksand;
-            color: #686f7a;
+                    color: #686f7a;
             text-align: left;
 
             i {
@@ -448,16 +445,14 @@
         font-size: 18px;
         color: $darkBlack;
         font-weight: 600;
-        font-family: $quicksand;
-        margin-bottom: 13px;
+            margin-bottom: 13px;
       }
 
       .text-3 {
         font-size: 14px;
         color: #686f7a;
         font-weight: 400;
-        font-family: $quicksand;
-        line-height: 26px;
+            line-height: 26px;
       }
     }
 
@@ -483,16 +478,14 @@
         font-size: 18px;
         color: $darkBlack;
         font-weight: 600;
-        font-family: $quicksand;
-        margin-bottom: 13px;
+            margin-bottom: 13px;
       }
 
       .text-3 {
         font-size: 14px;
         color: #686f7a;
         font-weight: 400;
-        font-family: $quicksand;
-        line-height: 26px;
+            line-height: 26px;
       }
 
       .card__btn {
@@ -803,7 +796,6 @@
   margin-top: 20px;
   font-weight: 400;
   display: block;
-  font-family: $quicksand;
   color: #686f7a;
   text-align: center;
 

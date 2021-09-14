@@ -1,3 +1,4 @@
+
 $(document)
   .on("click", ".replacer", function (e) {
     e.preventDefault()
@@ -11,8 +12,8 @@ $(document)
     swap = $('<div>')
   })
 
-const reviewUpdateForm = function (item, url) {
-    return `
+export var reviewUpdateForm = function (item, url) {
+  return `
     <div class="card__header">
       <a class="primary bold" href="#">
         ${item.user.fullname} ${item.user.is_verified ? '<i class="fa fa-check-circle ml-1"></i>' : ''}
@@ -37,9 +38,9 @@ const reviewUpdateForm = function (item, url) {
         <button class=" btn btn--primary btn--rounded" type="submit">Add Review</button>
     </form>
   </div>`
-  },
-  rednerReview = function (item) {
-    return `<div class="card card--side-col card--transparent">
+}
+export var rednerReview = function (item) {
+  return `<div class="card card--side-col card--transparent">
       <div class="card__side-col">
         <img class="image image--rounded image--profile"
              src="../../assets/images/hd_dp.jpg" alt="">
@@ -72,26 +73,35 @@ const reviewUpdateForm = function (item, url) {
           <p class="text-2">${item.content}</p>
         </div>
     </div>`
-  },
-  renderReviewList = function ($target, items) {
-    let target = $(target),
-      temp = $('<div>')
-
+}
+export var renderReviewList = function (target, items) {
+    let temp = $('<div>')
     temp.html($(target.html()))
     for (let item of items)
       temp.append($(rednerReview(item)))
     target.empty().append(temp)
-  },
-  toggleLoading = function ($target, loading = false) {
+  }
+window.toggleLoading = function ($target, loading = false) {
     let target = $($target)
     target.toggleClass('panel__loader-loading')
     if (loading)
       target.empty().text('loading...')
     else
       target.empty().text('See More Reviews')
-  },
-  hideLoading = function ($target) {
+  }
+export var hideLoading = function ($target) {
     $($target).remove()
   }
 
+export class ListLoader {
+  constructor(target) {
+    this.target = $(target)
+  }
 
+  renderList() {
+    console.log("lorem")
+  }
+
+
+
+}
