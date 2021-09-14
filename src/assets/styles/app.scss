@@ -1,7 +1,5 @@
-//@import "./base/_fonts.scss";
 @import "./base/_variables.scss";
 @import "layouts/_normalize.scss";
-
 
 @import "layouts/_base";
 @import "layouts/_page-content";
@@ -14,8 +12,8 @@
 @import "./custom/toastr";
 // @import "./base/_style.scss";
 @import "./components/_tabs.scss";
-@import "./custom/_auth-forms.scss";
-@import "./custom/_owl-slider.scss";
+//@import "./custom/_auth-forms.scss";
+//@import "./custom/_owl-slider.scss";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
 @import "./components/_about-list";
@@ -32,7 +30,7 @@
 @import "./components/_description-enroll";
 @import "./components/_filter";
 @import "./components/_card";
-@import "components/buttons";
+@import "./components/_buttons";
 @import "./components/_card-collapse";
 @import "./components/_media-card";
 @import "./components/_thread";

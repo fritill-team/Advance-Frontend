@@ -447,7 +447,7 @@ var nav = $('.sidebar'),
   menu = $("#js-menu")
 
 $(document)
-  .on('click', '.toggle__menu', function () {
+  .on('click', '.toggle-menu', function () {
     nav.toggleClass('nav--opened vertical--minify')
     wrapper.toggleClass('toggle-content page-content--minify ');
     sidebarIcon.toggleClass("open-side-nav");
@@ -495,7 +495,7 @@ $(document)
     nav.addClass('nav--opened vertical--minify')
     wrapper.addClass('toggle-content page-content--minify ');
     sidebarIcon.addClass("open-side-nav");
-  })
+   })
 
 // scrolling
 // $(function() {
@@ -635,9 +635,19 @@ window.onload = function() {
 };
 
 // dropdown-menu
-$('.more-dropdown').each(function(){
+$('.more-dropdown__link').each(function(){
   $(this).on('click', function(){
-    if($(this).classList())
-    $(this).toggleClass('active')
+    $('.more-dropdown').removeClass('active')
+    $(this).parent().addClass('active')
+    event.stopPropagation();
   })
+})
+
+$('.content__item').each(function(){
+  $(this).on('click', function() {
+    $('.more-dropdown').removeClass('active')
+  })
+})
+$(document).on('click', function(){
+  $('.more-dropdown').removeClass('active')
 })

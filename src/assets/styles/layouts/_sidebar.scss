@@ -22,6 +22,35 @@
       border-bottom: 1px solid #e5e5e5;
       padding: 0px 3px 0px 5px;
     }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+}
+.toggle-menu {
+  width: 60px;
+  text-align: center;
+  display: block;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  background: #1597bb;
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  cursor: pointer;
+  float: left;
+  &:hover {
+    color: #fff;
+    background: #1597bb;
+  }
+  .toggle-menu__icon {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
   }
 }
 .list__sidebar {
@@ -209,6 +238,11 @@
   background: #ffecec;
   color: $primaryLight !important;
 }
+body {
+  &.open-side-nav {
+    position: fixed;
+  }
+}
 @media (min-width: 992px) {
   body {
     &.sidebar-with-icon {
@@ -240,6 +274,7 @@
       }
     }
     &.open-side-nav {
+      position: fixed;
       .page-content {
         //margin-left: 240px;
       }
@@ -263,14 +298,15 @@
       }
     }
   }
-  .toggle__menu {
+
+  .toggle-menu {
     width: 60px;
     text-align: center;
     display: block;
     height: 60px;
     padding: 0;
     border: 0;
-    background: #ed2a26;
+    background: #1597bb;
     color: #fff;
     font-size: 30px;
     margin: 0;
@@ -278,15 +314,15 @@
     float: left;
     &:hover {
       color: #fff;
-      background: #af1f24;
+      background: #1597bb;
     }
-    .menu__icon {
+    .toggle-menu__icon {
       display: block;
       float: left;
       width: 60px;
       height: 60px;
       line-height: 60px;
-      font-size: 22px;
+      font-size: 28px;
     }
   }
 }
@@ -324,25 +360,36 @@
   margin-left: 0px;
 }
 @media (max-width: 992px) {
-  .toggle__menu {
-    width: 60px;
-    height: 60px;
-    color: #fff;
-    margin: 0;
-    cursor: pointer;
+  .toggle-menu {
     display: block;
     float: left;
-    padding: 0;
-    border: 0;
-    text-align: center;
     line-height: 57px;
+    padding: 0;
     background: 0 0;
-    font-size: 22px;
-    .menu__icon {
-      width: 60px;
-      background: #fff;
+    border: 0;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    .toggle-menu__icon {
+      width: 50px;
+      text-align: center;
+      display: block;
+      padding: 0;
+      border: 0;
+      background: $white;
       color: #737373;
+      font-size: 28px;
       margin: 0;
+      cursor: pointer;
+      float: left;
+    }
+    &:hover {
+      color: transparent;
+      background-color: transparent;
     }
   }
+}
+.hide {
+  overflow: hidden;
+  height: 100vh;
 }

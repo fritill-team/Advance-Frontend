@@ -1,7 +1,7 @@
 /* src/assets/styles/components/_footer.scss  */
 .footer {
   margin-top: 30px;
-  background: $darkBlack;
+  background: darken($secondary, 5%);
   width: 100%;
   padding: 0;
   // .item_f1
@@ -12,7 +12,7 @@
     a.footer-content__link {
       font-size: 14px;
       font-weight: 400;
-        display: block;
+      display: block;
       padding-bottom: 10px;
       color: $white;
       padding-right: 20px;
@@ -26,33 +26,38 @@
   // .item_f3
   .footer__footer-buttons {
     padding-top: 50px;
+    display: flex;
+    flex-direction: column;
     //  .btn1542
     .footer-buttons__link {
       height: 40px;
       padding: 10px 15px;
       border: 0;
       border-radius: 20px;
+      margin-left: auto;
       color: #fff;
-        background: #ed2a26;
+      background: $primary;
       font-size: 14px;
       font-weight: 500;
       display: inline-block;
+
       &:hover {
         color: #fff !important;
-        background: #c72127;
+        background: $accent;
       }
     }
 
     // .lng_btn
     .footer-buttons__btn-language {
       margin-top: 20px;
+
       .btn-language__link {
         height: 40px;
         padding: 10px 15px;
         border: 1px solid $white;
         border-radius: 20px;
         color: $white;
-            background: transparent;
+        background: transparent;
         font-size: 14px;
         font-weight: 500;
         display: inline-block;
@@ -63,6 +68,7 @@
       }
     }
   }
+
   &.footer--auth {
     font-size: 14px;
     font-weight: 400;
@@ -81,7 +87,7 @@
 .footer-line {
   margin-top: 50px;
   padding: 20px 0;
-  border-top: 1px solid #454545;
+  border-top: 1px solid $accent;
 }
 
 // .fotb_left
@@ -102,13 +108,15 @@
         }
       }
     }
+
     p.list__paragraph {
       font-size: 14px;
       font-weight: 400;
-        color: #f7f7f7;
+      color: #f7f7f7;
       text-align: left;
       line-height: 24px;
       padding-top: 10px;
+
       strong {
         font-weight: bold;
       }
@@ -146,6 +154,7 @@
     padding-left: 0px !important;
   }
 }
+
 @media (min-width: 0px) and (max-width: 768px) {
   .social-links {
     text-align: left !important;
@@ -158,6 +167,7 @@ html[dir="rtl"] {
     padding: 0;
     float: right;
     bottom: 0;
+
     .footer__footer-content {
       a.footer-content__link {
         padding-left: 20px;
@@ -177,6 +187,7 @@ html[dir="rtl"] {
         }
       }
     }
+
     &.footer--auth {
       padding: 50px 0;
     }
@@ -205,6 +216,7 @@ html[dir="rtl"] {
 
   .social-links {
     text-align: left;
+
     .social-links__link {
       padding-top: 10px;
     }
@@ -279,7 +291,7 @@ html[dir="rtl"] {
       p.list__paragraph {
         font-size: 14px;
         font-weight: 400;
-            color: #f7f7f7;
+        color: #f7f7f7;
         text-align: left;
         line-height: 24px;
 
