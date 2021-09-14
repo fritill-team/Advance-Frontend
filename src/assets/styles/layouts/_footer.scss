@@ -1,7 +1,7 @@
 /* src/assets/styles/components/_footer.scss  */
 .footer {
   margin-top: 30px;
-  background: $darkBlack;
+  background: darken( $secondary, 5% );
   width: 100%;
   padding: 0;
   // .item_f1
@@ -27,21 +27,24 @@
   // .item_f3
   .footer__footer-buttons {
     padding-top: 50px;
+    display: flex;
+    flex-direction: column;
     //  .btn1542
     .footer-buttons__link {
       height: 40px;
       padding: 10px 15px;
       border: 0;
       border-radius: 20px;
+      margin-left: auto;
       color: #fff;
       font-family: $quicksand;
-      background: #ed2a26;
+      background: $primary;
       font-size: 14px;
       font-weight: 500;
       display: inline-block;
       &:hover {
         color: #fff !important;
-        background: #c72127;
+        background: $accent;
       }
     }
 
@@ -85,7 +88,7 @@
 .footer-line {
   margin-top: 50px;
   padding: 20px 0;
-  border-top: 1px solid #454545;
+  border-top: 1px solid $accent;
 }
 
 // .fotb_left

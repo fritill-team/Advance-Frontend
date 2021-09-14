@@ -12,7 +12,10 @@ body {
 * {
   box-sizing: border-box;
 }
-
+.rate-display{
+  display: flex;
+  flex-wrap: nowrap;
+}
 .rating-box {
   color: $star-default-color;
   text-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
