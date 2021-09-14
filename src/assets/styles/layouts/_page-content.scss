@@ -6,16 +6,18 @@
   // justify-content: space-between;
   height: 100%;
 
-	&.page-content--video-player{
-		padding: 45px 0 0;
-	}
-	&.page-content--padding{
-		padding: 45px 0 0;
-	}
+  &.page-content--video-player {
+    padding: 45px 0 0;
+  }
+  &.page-content--margin-left {
+    margin-left: 60px;
+  }
+  &.page-content--padding {
+    padding: 45px 0 0;
+  }
   &.page-content--display-2 {
     margin-left: 0;
   }
- 
 
   &.page-content-pt {
     padding: 45px 0;
@@ -56,6 +58,9 @@
   .page-content {
     &.page-content--video-player {
       margin-left: 0;
+    }
+    &.page-content--margin-left {
+      margin-left: 0px;
     }
   }
 }

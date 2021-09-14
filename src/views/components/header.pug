@@ -1,54 +1,20 @@
 header.header
-	//- button#toggleMenu.toggle_menu(type='button')
-	//-   i.uil.uil-bars
-	//button#collapse_menu.toggle__menu
-	//  i.fas.fa-bars.menu__icon
-	//  span.collapse_menu--label
-	#logo.header--main-logo
-		a.main-logo--img(href='index.html')
+	block button-collapsed
+	.header__logo
+		a.header__img(href='index.html')
 			img(src='../../assets/images/logo.svg' alt='')
-		a.img--logo-inverse(href='index.html')
+		a.header__img-small(href='index.html')
 			img(src='../../assets/images/ct_logo.svg' alt='')
-	block category
-		//- include ../components/header-blocks/selectCategory.pug
 	//- block category
+		//- include ../components/header-blocks/selectCategory.pug 
 	.header__search
 		.search__wrapper
 			.wrapper__inputs-form
 				input.inputs-form--input(type='text' placeholder='Search for Tuts Videos, Tutors, Tests and more..')
 				i.uil-search-alt.inputs-form--icon
 	.header__notification
-		ul.notification__list
-			li.list__list-item
-				block btn-link
-
-			//- li.list__list-item
-			//-   a.list-item--opencard(href='shopping_cart.html' title='cart')
-			//-     i.opencard__icon.uil-shopping-cart-alt
-			//-     span.opencard__count-num 2
-			li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
-				a.massege__opencard(href='#' title='Messages')
-					|My Cources
-				.menu.dropdown_mn.massege__menu.dropdown
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								p.text-1.content__name Rock William
-								
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								p.text-1.content__name Rock William
-								
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								p.text-1.content__name Rock William
-								
-
+		ul.notification__list 
+			block my-courses 
 			li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
 				a.massege__opencard(href='#' title='Messages')
 					i.opencard__icon.far.fa-envelope
@@ -136,10 +102,10 @@ header.header
 							img.profile__img(src='../../assets/images/hd_dp.jpg' alt='')
 							.profile__content
 								.content__header
-									a.btn.btn--secondary.btn--link-text Joginder Singh
+									a.content__user.title-link Joginder Singh
 									.header__wrapper-icon(title='Verify')
 										i.far.fa-check-circle.pl-1.wrapper-icon__icon
-								span.content__email gambol943@gmail.com
+								span.content__email.title-link gambol943@gmail.com
 						a.channel-item--view(href='my_instructor_profile_view.html') View Instructor Profile
 					.night_mode_switch__btn.menu__night-mode
 						a#night-mode.btn-night-mode.night-mode--btn-mode(href='#')
