@@ -7,7 +7,7 @@
   overflow: hidden;
   width: 285px;
   z-index: 995;
-	transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   &.playlist--opened {
     left: 0;
@@ -23,13 +23,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-		transition: all 0.4s ease;
-  } 
+    transition: all 0.4s ease;
+  }
 }
-.playlist__header-section{
-	background: #333;
-	padding: 10px 5px;
-	margin-bottom: 15px;
+.playlist__header-section {
+  background: #333;
+  padding: 10px 5px;
+  margin-bottom: 15px;
 }
 .playlist__header {
   display: flex;
@@ -41,12 +41,12 @@
   .playlist__title {
     color: $white;
     font-size: 15px;
-		margin: 0;
+    margin: 0;
   }
 
   .playlist__close {
     background: #ddd;
-    padding: 2px 6px;
+    padding: 0px 6px;
     border-radius: 10px;
   }
 
