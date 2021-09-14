@@ -447,7 +447,7 @@ var nav = $('.sidebar'),
   menu = $("#js-menu")
 
 $(document)
-  .on('click', '.toggle__menu', function () {
+  .on('click', '.toggle-menu', function () {
     nav.toggleClass('nav--opened vertical--minify')
     wrapper.toggleClass('toggle-content page-content--minify ');
     sidebarIcon.toggleClass("open-side-nav");
@@ -495,7 +495,7 @@ $(document)
     nav.addClass('nav--opened vertical--minify')
     wrapper.addClass('toggle-content page-content--minify ');
     sidebarIcon.addClass("open-side-nav");
-  })
+   })
 
 // scrolling
 // $(function() {

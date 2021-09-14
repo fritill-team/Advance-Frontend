@@ -66,7 +66,6 @@
     width: 100%;
   }
 
-
   &.card--transparent {
     background-color: transparent;
     border: 0;
@@ -79,7 +78,6 @@
       border-bottom: none;
     }
   }
-
 
   .card__header-multiline {
     flex-direction: column;
@@ -132,7 +130,6 @@
     display: flex;
     flex-direction: column;
   }
-
 
   /*.card__body {
     display: flex;
@@ -758,6 +755,42 @@
     //   }
     // }
   }
+  &.card--data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .card__header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .card__content {
+      padding-left: 0;
+      .description {
+        display: flex;
+        padding: 5px 0px;
+      }
+      .description__name {
+        margin-right: 8px;
+        max-width: 16%;
+        width: 100%;
+        display: flex;
+        font-size: 16px;
+        word-break: break-all;
+        margin-top: 5px;
+        strong {
+          margin-left: 4px;
+        }
+      }
+      .description__details {
+        margin: 0;
+        font-size: 16px;
+        position: relative;
+        padding: 0 10px;
+      }
+    }
+  }
 
   &.card--primary {
     background-color: rgba($primary, 0.1);
@@ -831,6 +864,43 @@
     padding-left: 0px;
   }
 }
+@media (max-width: 992px) {
+  .card {
+    &.card--data {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .card__content {
+        padding-left: 0;
+        .description {
+          display: flex;
+          padding: 5px 0px;
+          flex-direction: column;
+        }
+        .description__name {
+          margin-right: 8px;
+          max-width: 100%;
+          width: 100%;
+          display: flex;
+          font-size: 16px;
+          word-break: break-all;
+          margin-top: 5px;
+          strong {
+            margin-left: 4px;
+          }
+        }
+        .description__details {
+          margin: 0;
+          font-size: 16px;
+          position: relative;
+          padding: 0 0px;
+        }
+      }
+    }
+  }
+}
 
 // dir en to ar
 html[dir="rtl"] {
@@ -866,6 +936,18 @@ html[dir="rtl"] {
 
       .text-1 {
         margin-right: 5px;
+      }
+    }
+    &.card--data {
+      .card__content {
+        padding-right: 0;
+        .description__name {
+          margin-left: 8px;
+          margin-right: 0px;
+          strong {
+            margin-right: 4px;
+          }
+        }
       }
     }
   }

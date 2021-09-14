@@ -1,5 +1,7 @@
 /* src/assets/styles/components/_course-card.scss  */
-
+.course-hover {
+  position: relative;
+}
 .course-card {
   &.course-card--fixed-width {
     max-width: 24%;
