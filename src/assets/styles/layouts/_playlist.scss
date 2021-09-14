@@ -30,18 +30,25 @@
   background: #333;
   padding: 10px 5px;
   margin-bottom: 15px;
+  .playlist-name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
+
 .playlist__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5px;
+  padding: 5px;
   margin: 3px 0;
 
   .playlist__title {
     color: $white;
     font-size: 15px;
     margin: 0;
+    letter-spacing: 1px;
   }
 
   .playlist__close {

@@ -50,6 +50,16 @@
   .play-list__content {
     margin-left: 5px;
     display: grid;
+    .play-list__title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .playlist-info {
+      font-size: 12px;
+      line-height: 1px;
+      color: #686f7a;
+    }
   }
   .play-list__info {
     // display: flex;
@@ -110,6 +120,7 @@
     }
     &:hover .play-list__check {
       display: block;
+      opacity: 1;
     }
     &:hover .text-3 {
       color: #48a360 !important;
@@ -134,6 +145,7 @@ html[dir="rtl"] {
           position: absolute;
           top: 5px;
           right: 5px;
+          cursor: pointer;
         }
       }
     }
