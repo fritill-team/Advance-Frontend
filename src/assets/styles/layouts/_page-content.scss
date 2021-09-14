@@ -7,7 +7,7 @@
   height: 100%;
 
   &.page-content--video-player {
-    padding: 45px 0 0;
+    padding: 70px 0 0;
   }
   &.page-content--margin-left {
     margin-left: 60px;
@@ -67,7 +67,7 @@
 html[dir="rtl"] {
   .page-content {
     &.page-content--video-player {
-      padding: 45px 0 0;
+      padding: 70px 0 0;
     }
     &.page-content--margin-left {
       margin-right: 60px;
@@ -86,6 +86,7 @@ html[dir="rtl"] {
 
       &.page-content--video-player {
         margin-right: 285px;
+        margin-left: 0;
       }
     }
 
