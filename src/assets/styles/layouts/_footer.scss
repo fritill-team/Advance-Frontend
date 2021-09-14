@@ -3,12 +3,10 @@
   margin-top: 30px;
   background: darken( $secondary, 5% );
   width: 100%;
-  padding: 0;
+  padding-top: 50px;
   // .item_f1
 
   .footer__footer-content {
-    padding-top: 50px;
-
     a.footer-content__link {
       font-size: 14px;
       font-weight: 400;
@@ -26,7 +24,7 @@
 
   // .item_f3
   .footer__footer-buttons {
-    padding-top: 50px;
+    // padding-top: 50px;
     display: flex;
     flex-direction: column;
     //  .btn1542
@@ -35,7 +33,8 @@
       padding: 10px 15px;
       border: 0;
       border-radius: 20px;
-      margin-left: auto;
+      text-align: center;
+      // margin-left: auto;
       color: #fff;
       font-family: $quicksand;
       background: $primary;
@@ -89,12 +88,19 @@
   margin-top: 50px;
   padding: 20px 0;
   border-top: 1px solid $accent;
+  @media (max-width: 560px){
+    margin-top: 30px;
+  }
 }
 
 // .fotb_left
 .copy-right {
   margin-top: 0px;
-
+  @media (max-width: 560px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .copy-right__list {
     display: inline-block;
     vertical-align: middle;
@@ -116,7 +122,8 @@
       color: #f7f7f7;
       text-align: left;
       line-height: 24px;
-      padding-top: 10px;
+      // padding-top: 10px;
+      margin: 0;
       strong {
         font-weight: bold;
       }
@@ -127,7 +134,7 @@
 
 .social-links {
   text-align: right;
-  margin-left: -10px;
+  // margin-left: -10px;
 
   .social-links__link {
     padding-top: 10px;
@@ -136,7 +143,7 @@
     display: inline-block;
     color: #f7f7f7;
     transition: all 0.2s ease-in-out;
-
+    margin: 0;
     &:hover {
       color: #fff !important;
       transform: scale(1.1);
@@ -149,15 +156,15 @@
 */
 
 @media (min-width: 0px) and (max-width: 720px) {
-  .container {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-  }
+  // .container {
+    // padding-right: 0px !important;
+    // padding-left: 0px !important;
+  // }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .social-links {
-    text-align: left !important;
-    margin-top: 10px;
+    text-align: center;
+    // margin-top: 10px;
   }
 }
 
@@ -219,10 +226,10 @@ html[dir="rtl"] {
   }
 
   @media (min-width: 0px) and (max-width: 720px) {
-    .container {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
-    }
+    // .container {
+      // padding-left: 0px !important;
+      // padding-right: 0px !important;
+    // }
   }
   @media (min-width: 0px) and (max-width: 768px) {
     .social-links {
