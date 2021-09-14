@@ -64,3 +64,44 @@
     }
   }
 }
+html[dir="rtl"] {
+  .page-content {
+    &.page-content--video-player {
+      padding: 45px 0 0;
+    }
+    &.page-content--margin-left {
+      margin-right: 60px;
+    }
+    &.page-content--padding {
+      padding: 45px 0 0;
+    }
+    &.page-content--display-2 {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .page-content {
+      // margin-left: 240px;
+
+      &.page-content--video-player {
+        margin-right: 285px;
+      }
+    }
+
+    .page-content__minify-admin {
+      margin-right: 60px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .page-content {
+      &.page-content--video-player {
+        margin-right: 0;
+      }
+      &.page-content--margin-left {
+        margin-right: 0px;
+      }
+    }
+  }
+}
