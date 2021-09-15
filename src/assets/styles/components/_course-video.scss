@@ -198,9 +198,9 @@
   float: left;
   width: 100%;
   background-image: linear-gradient(
-      to right,
-      rgba(255, 0, 0, 0) -60%,
-      rgba($darkBlack, 1)
+    to right,
+    rgba(255, 0, 0, 0) -60%,
+    rgba($accent, 1)
   );
   padding: 100px 0;
   position: relative;
@@ -319,6 +319,12 @@
 
   .btn-list__list-item {
     display: inline-block;
+    display: inline-block;
+    a{
+      &:hover{
+        color: #fff;
+      }
+    }
   }
 }
 

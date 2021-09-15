@@ -5,7 +5,8 @@ block title
   title Course
 
 block content
-  section(class="course-video" style="width:100%; background:  linear-gradient(90deg,rgba(255,0,0,0) -60% , #333)")
+  section(class="course-video" style="width:100%; background:  linear-gradient(-90deg,rgba(255,0,0,0) -10% , #aaa)")
+    img(src="../../assets/images/get_img.jpg", alt="", srcset="")
     .container
       .row
         .col-md-7
@@ -18,24 +19,24 @@ block content
         .col-md-5
           //start video content
           .video-content
-            h2.video-content__title The Web Developer Bootcamp
-            span.video-contentr__description
+            h2.mt-0.white.mb-2 The Web Developer Bootcamp
+            span.white.text-2
               | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
             .video-content__review
               .video-content__wrapper-icon
                 i.far.fa-star.wrapper-icon__icon
                 | 4.5
               | (81,665 ratings)
-            p.video-content__enrolled
+            p.text-3.white.mt-0
               | 114,521 students enrolled
             .video-content__language
               .language__lang
-                span.lang__icons
-                  i.uil.uil-comment.icons__fa
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;English
+                span.white.mt-0
+                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mr-1
+                  | English
               .language__more-lang
-                span.more-lang__icons
-                  i.far.fa-closed-captioning.icons__fa
+                span.white.mt-0
+                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mr-1
                 span.more-lang__tooltip
                   | English, Dutch
                   span.tooltip__caption-tooltip
@@ -56,13 +57,13 @@ block content
             .video-content__last-update
               | Last updated 1/2020
             ul.video-content__btn-list
-              li.btn-list__list-item
+              li
                 include ../components/general-component/btn.pug
-                +btn-link('btn btn--danger btn--rounded', 'Enroll' , "#")
+                +btn-link('btn btn--primary btn--rounded white', 'Enroll' , "#")
                 +btn-link('btn btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
               //- li.btn-list__list-item
               //-   button.list-item--btn-Enrole-childe Enrol Chiled
-            .video-content__title-buy
+            p.text-3.white
               | 30-Day Money-Back Guarantee
           //End video content
   section
@@ -96,7 +97,7 @@ block content
                   img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
                 .card__content
                   .card__header
-                    a(href="#" class="bold") Lorem ipsum
+                    a(href="#" class="bold primary") Lorem ipsum
                   form
                     .field-wrapper.field-wrapper--no-label
                       label.text-field__label Course Title*

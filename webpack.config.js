@@ -12,8 +12,6 @@ module.exports = env => ({
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "assets/js/[name].bundle.js",
-    library: 'app',
-    libraryTarget: "window",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "src/views"),
