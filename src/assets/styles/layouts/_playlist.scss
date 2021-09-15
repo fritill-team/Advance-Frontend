@@ -1,9 +1,9 @@
 .playlist {
   position: absolute;
   left: -285px;
-  top: 52px;
+  top: 60px;
   bottom: 0;
-  background: #222;
+  background-color: lighten(#38444d, 5%);
   overflow: hidden;
   width: 285px;
   z-index: 995;
@@ -28,7 +28,7 @@
   }
 }
 .playlist__header-section {
-  background: #333;
+  background: #38444d;
   padding: 10px 5px;
   margin-bottom: 15px;
   .playlist-name {
