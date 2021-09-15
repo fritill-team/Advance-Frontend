@@ -19,4 +19,5 @@ import "./convertable"
 import "./rating"
 import './owl-carousel'
 import "./accordion"
+import "./playlist-video"
 import "./backend_scripts/panel-loader"

@@ -23,13 +23,10 @@ html(lang='en' dir="ltr" class="night-mode")
 		div.wrapper 
 			//- Menu
 			include ../components/header-player.pug
-			//- +menu('home')
-			include ../components/sidebar-play-list.pug
-				block playlist
-
-
-			//- block content
+				//- +menu('home')
 			.page-content.page-content--video-player
+				include ../components/sidebar-play-list.pug
+				block playlist
 				block content
 				//- Footer
 

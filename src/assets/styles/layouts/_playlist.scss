@@ -1,7 +1,7 @@
 .playlist {
-  position: absolute;
-  left: -285px;
-  top: 60px;
+  // position: absolute;
+  // left: -285px;
+  // top: 60px;
   bottom: 0;
   background-color: lighten(#38444d, 5%);
   overflow: hidden;
@@ -9,6 +9,9 @@
   z-index: 995;
   transition: all 0.3s ease;
   height: 100%;
+  margin-right: 0;
+  width: 100%;
+  flex: 1 1 35em;
   // height: 56px;
   &.playlist--opened {
     left: 0;
@@ -16,7 +19,7 @@
   }
 
   .playlist__menu {
-    position: absolute;
+    // position: absolute;
     top: 0;
     bottom: 0;
     overflow: hidden;
@@ -25,6 +28,9 @@
     padding: 0;
     list-style-type: none;
     transition: all 0.4s ease;
+  }
+  &.playlist--close {
+    flex: 1 1 0em;
   }
 }
 .playlist__header-section {
@@ -66,6 +72,7 @@
 @media (min-width: 992px) {
   .playlist {
     left: 0;
+    flex: 1 1 35em;
   }
   .vertical--minify {
     width: 0;
