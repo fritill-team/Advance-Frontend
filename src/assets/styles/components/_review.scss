@@ -106,6 +106,8 @@
       margin-top: 20px;
       border-radius: 0;
       display: flex;
+      justify-content: space-between;
+      width: 100%;
       .rating__progress {
         flex-basis: 50%;
         margin-right: 20px;
