@@ -293,23 +293,23 @@ $(".card__header--collapse").each(function () {
 
 //sidebar__playlist
 
-var subnavs = $('#js-menu .sub-menu-item');
-var navPlayer = $('.sidebar__playlist'),
-  wrapper = $('.page-content'),
-  sidebarIcon = $('.sidebar-with-icon'),
-  menuItem = $('.sub-menu-item'),
-  menu = $("#js-menu")
+// var subnavs = $('#js-menu .sub-menu-item');
+// var navPlayer = $('.sidebar__playlist'),
+//   wrapper = $('.page-content'),
+//   sidebarIcon = $('.sidebar-with-icon'),
+//   menuItem = $('.sub-menu-item'),
+//   menu = $("#js-menu")
 
-$(".header-player__course-name").click(function() {
-  $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
-  // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
-});
+// $(".header-player__course-name").click(function() {
+//   $(".playlist").toggleClass("playlist--opened vertical--minify");
+//   wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
+//   // $(".sidebar__playlist").removeClass("sidebar--opened vertical--minify");
+// });
 
-$(".playlist__close").click(function() {
-  $(".playlist").toggleClass("playlist--opened vertical--minify");
-  wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
-});
+// $(".playlist__close").click(function() {
+//   $(".playlist").toggleClass("playlist--opened vertical--minify");
+//   wrapper.toggleClass("toggle-content page-content--minify page-content--video-player ");
+// });
 
 // checked box icon in video-list icon
 // $(".play-list--hide").click(function() {

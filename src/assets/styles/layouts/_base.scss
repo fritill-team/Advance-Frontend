@@ -1,5 +1,3 @@
-
-
 body {
   position: relative;
   margin: 0;
@@ -19,18 +17,17 @@ body {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.wrapper{
+.wrapper {
   position: relative;
   min-height: 100%;
-  height: 100%;
+  // height: 100%;
   //height: 100%;
   //display: flex;
   //flex-flow: column nowrap;
   //justify-content: space-between;
-
 }
 
-.rate-display{
+.rate-display {
   display: flex;
   flex-wrap: nowrap;
 }

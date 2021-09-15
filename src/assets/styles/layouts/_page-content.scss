@@ -3,12 +3,13 @@
   transition: all 0.3s ease-out;
   display: flex;
   flex-direction: column;
+  // height: calc(100vh - 60px);
   // justify-content: space-between;
-  height: 100%;
 
   &.page-content--video-player {
     padding: 0;
     flex-direction: row;
+    height: calc(100vh - 60px);
   }
   &.page-content--margin-left {
     margin-left: 60px;
