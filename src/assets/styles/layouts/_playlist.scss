@@ -1,6 +1,6 @@
 .playlist {
   background-color: lighten(#38444d, 5%);
-  overflow: hidden;
+  overflow-y: auto;
   z-index: 995;
   transition: all 0.3s ease;
   height: 100%;

@@ -76,6 +76,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
     &:hover {
       // background-color: #fab01c;
       color: $white;
