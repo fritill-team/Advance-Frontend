@@ -95,7 +95,7 @@
   border-radius: 0.25rem;
 
   .progress--progress-bar {
-    background-color: $primaryLight !important;
+    background-color: $accent;
     flex-direction: column;
     justify-content: center;
     color: $white;
@@ -240,7 +240,7 @@
     .header-content__title {
       font-size: 20px;
       font-weight: 500;
-        text-align: left;
+      text-align: left;
       margin-bottom: 0;
       color: $darkBlack;
       float: left;
@@ -256,7 +256,7 @@
         height: 30px;
         font-size: 12px;
         font-weight: 400;
-            padding-left: 15px;
+        padding-left: 15px;
         padding-right: 40px;
         width: 100%;
         border: 1px solid $light-white;
@@ -368,7 +368,7 @@
         .helpful__ask {
           font-size: 14px;
           font-weight: 400;
-                color: $darkBlack;
+          color: $darkBlack;
           line-height: 24px;
           margin-right: 10px;
         }
@@ -388,7 +388,7 @@
 
             .item__radio-label {
               font-weight: 400;
-                        color: $darkBlack;
+              color: $darkBlack;
               font-size: 14px;
               line-height: 12px;
               margin-bottom: 0;
@@ -424,7 +424,7 @@
           line-height: 24px;
           margin-left: 5px;
           font-weight: 400;
-                color: $darkBlack;
+          color: $darkBlack;
         }
       }
     }

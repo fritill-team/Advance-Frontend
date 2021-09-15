@@ -4,7 +4,7 @@
 
 // import "../scripts/login";
 
-// import "./custom.js";
+import "./custom.js";
 import "./night-mode.js";
 
 // import "./login.js"
@@ -19,4 +19,5 @@ import "./convertable"
 import "./rating"
 import './owl-carousel'
 import "./accordion"
+import "./playlist-video"
 import "./backend_scripts/panel-loader"
