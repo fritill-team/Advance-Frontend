@@ -10,8 +10,105 @@
   align-items: center;
   background-color: darken($primary, 7);
   // box-shadow: 0 0.05208in 11.25pt -9px rgb(0 0 0 / 10%);
-}
+  &.header--player {
+    background: rgb(56, 68, 77);
+    position: relative;
+    display: flex;
+    padding: 4px 8px;
+    justify-content: flex-start;
+    // box-shadow: -10px 0 10px 2px $accent;
+    height: 60px;
+  }
+  .header-player__logo {
+    display: block;
+    margin: 0;
+    line-height: 1;
+    height: fit-content;
+    padding: 8px 8px 2px 4px;
+    .logo__img {
+      height: 28px;
+    }
+  }
+  .header-player__img-small {
+    display: none;
+    margin: 0;
+    line-height: 1;
+    height: fit-content;
+    padding: 6px 10px 5px 4px;
+    .logo__img {
+      width: 30px;
+    }
+  }
 
+  .header-player__courses {
+    // background: #1597bb;
+    margin: 0;
+    line-height: 2;
+    height: 40px;
+    padding: 2px 10px;
+
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover {
+      color: #fff;
+    }
+    //  display: grid;
+
+    .courses__name {
+      font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 10px 0px;
+    }
+  }
+  .header-player__course-name {
+    margin: 0;
+    line-height: 2;
+    height: 40px;
+    padding: 2px 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover {
+      // background-color: #fab01c;
+      color: $white;
+    }
+    .course-name__title {
+      font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 767px) {
+    .header-player__logo {
+      width: 80px;
+    }
+    .header-player__logo {
+      display: none;
+    }
+    .header-player__img-small {
+      display: block;
+    }
+  }
+  html[dir="rtl"] {
+    .header-player__logo {
+      padding: 6px 4px 5px 10px;
+    }
+  }
+}
+html.night-mode {
+  body {
+    background-color: rgb(56, 68, 77);
+  }
+}
 .header__logo {
   float: left;
   width: 135px;
@@ -465,7 +562,7 @@
             bottom: -1px;
             border-radius: 50%;
             transition-property: transform, box-shadow, -webkit-transform,
-            -webkit-box-shadow;
+              -webkit-box-shadow;
           }
         }
       }
@@ -491,7 +588,6 @@
     }
   }
 }
-
 
 .header__top-category {
   .top-category--menu-dropdown {

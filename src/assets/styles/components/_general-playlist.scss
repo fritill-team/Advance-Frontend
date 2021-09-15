@@ -17,7 +17,7 @@
       & + .item__label {
         .play-list__check {
           opacity: 1;
-          background: #1597bb;
+          background: $primary;
           color: #fff;
           font-size: 14px;
         }
@@ -58,11 +58,12 @@
       font-size: 14px;
       font-weight: 400;
       color: #fff;
+      max-height: 10px;
     }
     .playlist-info {
       font-size: 12px;
       line-height: 1px;
-      color: #686f7a;
+      color: #fff;
     }
   }
   .play-list__info {
@@ -114,7 +115,7 @@
   &.play-list__with-icon-hover {
     .play-list__video-img {
       .play-list__check {
-        opacity: 0;
+        opacity: 0.4;
         &.play-list__check--show {
           display: block;
           color: #fff;
