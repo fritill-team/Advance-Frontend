@@ -17,7 +17,7 @@
       & + .item__label {
         .play-list__check {
           opacity: 1;
-          background: $primary;
+          background: $accent;
           color: #fff;
           font-size: 14px;
           width: 22px;
@@ -63,6 +63,9 @@
       font-weight: 400;
       color: #fff;
       max-height: 10px;
+      &:hover {
+        color: $accent;
+      }
     }
     .playlist-info {
       font-size: 12px;
