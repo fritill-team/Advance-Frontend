@@ -187,7 +187,7 @@
   background-image: linear-gradient(
     to right,
     rgba(255, 0, 0, 0) -60%,
-    rgba($darkBlack, 1)
+    rgba($accent, 1)
   );
   padding: 100px 0;
   position: relative;
@@ -294,6 +294,11 @@
   width: 100%; 
   .btn-list__list-item {
     display: inline-block; 
+    a{
+      &:hover{
+        color: #fff;
+      }
+    }
   }
 }
 .list-item--btn-Enrole { 
