@@ -11,15 +11,14 @@ input[type="button"] {
     display: inline-block;
     margin: 0 5px 5px 0;
     padding: 5px 20px;
-    font-weight: 500;
     font-size: 14px;
     border: 1px solid;
     border-radius: 5px;
     cursor: pointer;
     color: $white;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.25px;
+    line-height: 1.5;
 
     &:hover {
       opacity: 0.8;
@@ -31,48 +30,45 @@ input[type="button"] {
       opacity: 0.6;
       background-color: $gray;
       border-color: $gray;
-      color: $black;
+      color: black;
     }
 
     &.btn--default {
       color: $primary;
       border-color: $default;
       background-color: $default;
+      &:hover{
+        color: $primary;
+      }
     }
-
     &.btn--primary {
       background-color: $primary;
       border-color: $primary;
     }
-
-
-
     &.btn--secondary {
       background-color: $secondary;
       border-color: $secondary;
     }
-
     &.btn--success {
       background-color: $success;
       border-color: $success;
     }
-
     &.btn--info {
       background-color: $info;
       border-color: $info;
     }
-
     &.btn--warning {
       background-color: $warning;
       border-color: $warning;
     }
+    &.btn--danger {
+      background-color: $primaryLight;
+      border-color: $primaryLight;
+    }
+  
     &.btn--white {
       background-color: #fff;
       border-color: #fff;
-    }
-    &.btn--danger {
-      background-color: #ed2a26;
-      // border-color: #ed2a26;
     }
 
     &.btn--rounded {
@@ -81,6 +77,7 @@ input[type="button"] {
 
     &.btn--outlined {
       background-color: transparent;
+
 
       &.btn--primary {
         color: $primary;
@@ -103,8 +100,7 @@ input[type="button"] {
       }
 
       &.btn--danger {
-        border-color: $danger;
-        color: $danger;
+        color: $primaryLight;
       }
     }
     &.btn--ml-auto {
@@ -119,92 +115,71 @@ input[type="button"] {
       &.btn--default {
         color: $primary;
       }
-      &.btn--danger {
-        color: #ed2a26;
-      }
-
       &.btn--primary {
         color: $primary;
       }
-
       &.btn--secondary {
         color: $secondary;
       }
-
       &.btn--success {
-        color: $gray;
+        color: $success;
       }
-
       &.btn--info {
         color: $info;
       }
-
       &.btn--warning {
         color: $warning;
       }
-
       &.btn--danger {
-        color: $gold;
+        color: $primaryLight;
       }
     }
-
-    /*&.btn--hover {
-
+    &.btn--hover{
       &:hover {
-        &.btn {
-          color: #fff;
-          transition: 0.3s ease all;
-        }
-
+        transition: 0.3s ease all;
+        color: #fff;
         &.btn--default {
-          background-color: $light-gray;
+          background-color: $default;
+          color:$primary ;
         }
-
         &.btn--primary {
           background-color: $primary;
         }
-
         &.btn--secondary {
-          background-color: $black;
+          background-color: $secondary;
         }
-
         &.btn--success {
-          background-color: $gray;
+          background-color: $success;
         }
-
         &.btn--info {
           background-color: $info;
         }
-
         &.btn--warning {
           background-color: $warning;
         }
-
         &.btn--danger {
-          background-color: $gold;
-          color: $light-gray;
+          background-color: $primaryLight;
         }
       }
-    }*/
-
+    }
     &.btn--icon {
       width: 35px;
       height: 35px;
       border-radius: 100%;
-      color: #fff;
-      padding: 8px 0;
+      padding: 5px 0px 4px 1px;
       text-align: center;
       font-size: 14px;
       transition: all 0.3s ease;
-
       svg,
       i {
-        color: #fff;
-        display: inline-block;
+        padding: 5px 0px 4px 1px;
       }
-
       &.btn--default {
-        background-color: $light-gray;
+        background-color: $default;
+        svg,
+        i {
+        color: $primary;
+        }
       }
 
       &.btn--primary {
@@ -212,11 +187,11 @@ input[type="button"] {
       }
 
       &.btn--secondary {
-        background-color: $black;
+        background-color: $secondary;
       }
 
       &.btn--success {
-        background-color: $gray;
+        background-color: $success;
       }
 
       &.btn--info {
@@ -228,16 +203,67 @@ input[type="button"] {
       }
 
       &.btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-
-        svg,
-        i {
+        background-color: $primaryLight;
+      }
+    }
+    &.btn--icon-basic{
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      padding: 5px 0px 4px 1px;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      border: 0px;
+      &.icon--hover{
+        &.btn--default {
           color: $light-gray;
+        }
+        &.btn--primary {
+          color: $primary;
+        }
+        &.btn--secondary {
+          color: $secondary;
+        }
+        &.btn--success {
+          color: $success;
+        }
+        &.btn--info {
+          color: $info;
+        }
+        &.btn--warning {
+          color: $warning;
+        }
+        &.btn--danger {
+          color: $primaryLight;
+        }
+        &:hover{ 
+          color: white;
+          &.btn--default {
+            background-color: $light-gray;
+          }
+          &.btn--primary {
+            background-color: $primary;
+          }
+          &.btn--secondary {
+            background-color: $secondary;
+          }
+          &.btn--success {
+            background-color: $success;
+          }
+          &.btn--info {
+            background-color: $info;
+          }
+          &.btn--warning {
+            background-color: $warning;
+          }
+          &.btn--danger {
+            background-color: $primaryLight;
+          }
         }
       }
     }
-
     &.btn--with-icon {
       svg,
       i {
@@ -247,7 +273,11 @@ input[type="button"] {
       }
 
       &.btn--default {
-        background-color: $light-gray;
+        background-color: $default;
+        svg,
+        i {
+        color: $primary;
+        }
       }
 
       &.btn--primary {
@@ -255,11 +285,11 @@ input[type="button"] {
       }
 
       &.btn--secondary {
-        background-color: $black;
+        background-color: $secondary;
       }
 
       &.btn--success {
-        background-color: $gray;
+        background-color: $success;
       }
 
       &.btn--info {
@@ -271,13 +301,7 @@ input[type="button"] {
       }
 
       &.btn--danger {
-        background-color: $gold;
-        color: $light-gray;
-
-        svg,
-        i {
-          color: $light-gray;
-        }
+        background-color: $primaryLight;
       }
     }
 
@@ -305,10 +329,6 @@ input[type="button"] {
       margin: 0px;
       border: none;
       text-align: left;
-      color: black;
-      &.btn--danger {
-        color: #ed2a26;
-      }
     }
 
     &.btn--center {
@@ -331,7 +351,6 @@ input[type="button"] {
     }
 
     &.btn--ripple {
-      box-shadow: 0 0 4px rgb(104, 102, 102);
       outline: none;
       background-position: center;
       transition: background 0.3s;
@@ -372,7 +391,7 @@ input[type="button"] {
         }
 
         &.btn--danger {
-          background-color: $gold;
+          background-color: $primaryLight;
           color: $light-gray;
         }
       }
@@ -385,7 +404,6 @@ input[type="button"] {
     }
   }
 }
-
 //button {
 //  cursor: pointer;
 //  display: block;
@@ -404,7 +422,10 @@ a.btn {
   &.btn--text {
     text-decoration: none;
   }
-
+  &:link,
+  &:hover{
+    color: white;
+  }
   &:active {
     opacity: 1.8;
   }
@@ -423,22 +444,10 @@ a.btn {
     border: unset;
 
     &.btn.btn--outlined {
-      border: 2px solid;
+      border: 1px solid $light-gray;
 
       &:hover {
         transition: 0.3s ease all;
-
-        &.btn--default {
-          border-color: $light-gray;
-        }
-
-        &.btn--primary {
-          border-color: $primary;
-        }
-
-        &.btn--secondary {
-          border-color: $black;
-        }
       }
     }
 
@@ -450,8 +459,6 @@ a.btn {
 
     &:nth-child(2) {
       border-radius: 0;
-      border-right: 0px;
-      border-left: 0px;
       margin-left: -1px;
       margin-right: -1px;
     }
@@ -462,7 +469,7 @@ a.btn {
     }
   }
 }
-
+// rtl
 html[dir="rtl"] {
   .btn--with-icon {
     padding-right: 12px;
@@ -488,17 +495,12 @@ html[dir="rtl"] {
       &:first-of-type {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        margin-right: -1;
       }
-
       &:nth-child(2) {
         border-radius: 0;
         border-right: 0px;
-        border-left: 0px;
-        margin-left: -1px;
-        margin-right: -1px;
+        border-left: 0px ;
       }
-
       &:last-of-type {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -513,3 +515,41 @@ html[dir="rtl"] {
   }
 }
 
+/*&.btn--hover {
+
+      &:hover {
+        &.btn {
+          color: #fff;
+          transition: 0.3s ease all;
+        }
+
+        &.btn--default {
+          background-color: $light-gray;
+        }
+
+        &.btn--primary {
+          background-color: $primary;
+        }
+
+        &.btn--secondary {
+          background-color: $black;
+        }
+
+        &.btn--success {
+          background-color: $gray;
+        }
+
+        &.btn--info {
+          background-color: $info;
+        }
+
+        &.btn--warning {
+          background-color: $warning;
+        }
+
+        &.btn--danger {
+          background-color: $primaryLight;
+          color: $light-gray;
+        }
+      }
+    }*/
