@@ -53,13 +53,13 @@
   }
 
   .playlist__close {
-    background: #ddd;
+    background: $accent;
     padding: 0px 6px;
     border-radius: 10px;
   }
 
   .playlist__close-icon {
-    color: $darkBlack;
+    color: #fff;
   }
 }
 
