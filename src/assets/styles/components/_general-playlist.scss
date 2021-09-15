@@ -17,6 +17,9 @@
       & + .item__label {
         .play-list__check {
           opacity: 1;
+          background: #1597bb;
+          color: #fff;
+          font-size: 14px;
         }
       }
     }
@@ -54,6 +57,7 @@
       margin: 0;
       font-size: 14px;
       font-weight: 400;
+      color: #fff;
     }
     .playlist-info {
       font-size: 12px;
@@ -96,13 +100,13 @@
       }
       .play-list__check {
         position: absolute;
-        top: 5px;
+        top: 2px;
         left: 5px;
         background: rgba($darkBlack2, 0.1);
         color: #fff;
         padding: 4px;
         border-radius: 15px;
-        width: 20px;
+        width: 22px;
         height: 20px;
       }
     }
