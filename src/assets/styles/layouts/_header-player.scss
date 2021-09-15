@@ -1,5 +1,5 @@
 .header-player {
-  background: #222222;
+  background: rgb(56, 68, 77);;
   position: relative;
   display: flex;
   padding: 4px 8px;
@@ -88,7 +88,7 @@
 }
 html.night-mode {
   body {
-    background-color: #333333;
+    background-color: rgb(56, 68, 77);
   }
 }
 html[dir="rtl"] {
