@@ -1,9 +1,10 @@
 //- src/views/components/footer.pug
 
 footer.footer
+  img(src="../../../assets/images/sign.svg", alt="", srcset="")
   .container
     .row
-      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+      .col-lg-3.col-md-6.col-sm-6
         .footer__footer-content 
           //- a(href='about.pug') About
           a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
@@ -11,19 +12,19 @@ footer.footer
           //- a(href='our_blog.html') Blog
           a.footer-content__link(href='career.html') Careers
           a.footer-content__link(href='press.html') Press
-      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+      .col-lg-3.col-md-6.col-sm-6
         .footer__footer-content
           a.footer-content__link(href='help.html') Help
           a.footer-content__link(href='coming_soon.html') Advertise
           a.footer-content__link(href='coming_soon.html') Developers
           a.footer-content__link(href='contact_us.html') Contact Us
-      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+      .col-lg-3.col-md-6.col-sm-6
         .footer__footer-content
           a.footer-content__link(href='terms_of_use.html') Copyright Policy
           a.footer-content__link(href='terms_of_use.html') Terms
           a.footer-content__link(href='terms_of_use.html') Privacy Policy
           a.footer-content__link(href='sitemap.html') Sitemap
-      .col-lg-3.col-md-6.col-sm-6.col-xs-6
+      .col-lg-3.col-md-6.col-sm-6
         .footer__footer-buttons
           a.footer-buttons__link.primary(href='terms_of_use.html') Teach on Etqadem
           //- .footer-buttons__btn-language

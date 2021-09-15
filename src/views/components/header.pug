@@ -1,122 +1,124 @@
 header.header
 	block button-collapsed
-	.header__logo
-		a.header__img(href='index.html')
-			img(src='../../assets/images/Etqadem_Logo.svg' alt='')
-		a.header__img-small(href='index.html')
-			img(src='../../assets/images/Etqadem_Icon_Yellow.svg' alt='')
-	//- block category
-		//- include ../components/header-blocks/selectCategory.pug 
-	.header__search
-		.search__wrapper
-			.wrapper__inputs-form
-				input.inputs-form--input(type='text' placeholder='Search for Tuts Videos, Tutors, Tests and more..')
-				i.uil-search-alt.inputs-form--icon
-	.header__notification
-		ul.notification__list 
-			block my-courses 
-			li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
-				a.massege__opencard(href='#' title='Messages')
-					i.opencard__icon.far.fa-envelope
-					span.opencard__count-num 3
-				.menu.dropdown_mn.massege__menu.dropdown
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item__view-all(href='instructor_notifications.html')
-						| View All
-						i.fas.fa-arrow-right.pl-1
-			//- icon 2
-			li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
-				a.massege__opencard(href='#' title='Messages')
-					i.far.fa-bell.opencard__icon
-					span.opencard__count-num 3
-				.menu.dropdown_mn.massege__menu.dropdown
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item.menu--item(href='#')
-						.item__profile-link
-							img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-							.profile-link__content
-								h6.content__name Rock William
-								p.content__details
-									| Like Your Comment On Video
-									strong How to create sidebar menu
-									| .
-								span.content__num-time 2 min ago
-					a.item__view-all(href='instructor_notifications.html')
-						| View All
-						i.fas.fa-arrow-right.pl-0.pl-1
-			//- icon 3
-			li.ui.dropdown.list__profile(data-toggle="dropdown")
-				a.opts_account.profile__account(href='#' title='Account')
-					img.accoutn__img(src='../../assets/images/hd_dp.jpg' alt='')
-				.menu.profile__menu
-					.menu__channel-item
-						.channel-item__profile
-							img.profile__img(src='../../assets/images/hd_dp.jpg' alt='')
-							.profile__content
-								.content__header
-									a.content__user.title-link Joginder Singh
-									.header__wrapper-icon(title='Verify')
-										i.far.fa-check-circle.pl-1.wrapper-icon__icon
-								span.content__email.title-link gambol943@gmail.com
-						a.channel-item--view(href='my_instructor_profile_view.html') View Instructor Profile
-					.night_mode_switch__btn.menu__night-mode
-						a#night-mode.btn-night-mode.night-mode--btn-mode(href='#')
-							i.far.fa-moon.btn-mode__icon
-							|  Night mode
-							span.btn-night-mode-switch.btn-mode--switch-mode
-								span.uk-switch-button.switch-mode--switch-btn
-					a.item.channel-item--item(href='instructor_dashboard.html') Cursus dashboard
-					a.item.channel-item--item(href='membership.html') Paid Memberships
-					a.item.channel-item--item(href='setting.html') Setting
-					a.item.channel-item--item(href='help.html') Help
-					a.item.channel-item--item(href='feedback.html') Send Feedback
-					a.item.channel-item--item(href='sign_in.html') Sign Out
+	.container
+		.d-flex.align-items-center
+			.header__logo
+				a.header__img(href='index.html')
+					img(src='../../assets/images/Etqadem_Logo.svg' alt='')
+				a.header__img-small(href='index.html')
+					img(src='../../assets/images/Etqadem_Icon_Yellow.svg' alt='')
+			//- block category
+				//- include ../components/header-blocks/selectCategory.pug 
+			.header__search
+				.search__wrapper
+					.wrapper__inputs-form
+						input.inputs-form--input(type='text' placeholder='Search for Tuts Videos, Tutors, Tests and more..')
+						i.uil-search-alt.inputs-form--icon
+			.header__notification
+				ul.notification__list 
+					block my-courses 
+					li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
+						a.massege__opencard(href='#' title='Messages')
+							i.opencard__icon.far.fa-envelope
+							span.opencard__count-num 3
+						.menu.dropdown_mn.massege__menu.dropdown
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item__view-all(href='instructor_notifications.html')
+								| View All
+								i.fas.fa-arrow-right.pl-1
+					//- icon 2
+					li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
+						a.massege__opencard(href='#' title='Messages')
+							i.far.fa-bell.opencard__icon
+							span.opencard__count-num 3
+						.menu.dropdown_mn.massege__menu.dropdown
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item.menu--item(href='#')
+								.item__profile-link
+									img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
+									.profile-link__content
+										h6.content__name Rock William
+										p.content__details
+											| Like Your Comment On Video
+											strong How to create sidebar menu
+											| .
+										span.content__num-time 2 min ago
+							a.item__view-all(href='instructor_notifications.html')
+								| View All
+								i.fas.fa-arrow-right.pl-0.pl-1
+					//- icon 3
+					li.ui.dropdown.list__profile(data-toggle="dropdown")
+						a.opts_account.profile__account(href='#' title='Account')
+							img.accoutn__img(src='../../assets/images/hd_dp.jpg' alt='')
+						.menu.profile__menu
+							.menu__channel-item
+								.channel-item__profile
+									img.profile__img(src='../../assets/images/hd_dp.jpg' alt='')
+									.profile__content
+										.content__header
+											a.content__user.title-link Joginder Singh
+											.header__wrapper-icon(title='Verify')
+												i.far.fa-check-circle.pl-1.wrapper-icon__icon
+										span.content__email.title-link gambol943@gmail.com
+								a.channel-item--view(href='my_instructor_profile_view.html') View Instructor Profile
+							.night_mode_switch__btn.menu__night-mode
+								a#night-mode.btn-night-mode.night-mode--btn-mode(href='#')
+									i.far.fa-moon.btn-mode__icon
+									|  Night mode
+									span.btn-night-mode-switch.btn-mode--switch-mode
+										span.uk-switch-button.switch-mode--switch-btn
+							a.item.channel-item--item(href='instructor_dashboard.html') Cursus dashboard
+							a.item.channel-item--item(href='membership.html') Paid Memberships
+							a.item.channel-item--item(href='setting.html') Setting
+							a.item.channel-item--item(href='help.html') Help
+							a.item.channel-item--item(href='feedback.html') Send Feedback
+							a.item.channel-item--item(href='sign_in.html') Sign Out
 
