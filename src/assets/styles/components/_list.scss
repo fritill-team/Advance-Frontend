@@ -39,6 +39,13 @@
 //   }
 // }
 
+form{
+  .list{
+    max-height: 350px;
+    // overflow-y: scroll;
+  }
+}
+
 .list {
   display: flex;
   flex-flow: column nowrap;
