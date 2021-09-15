@@ -7,7 +7,7 @@
   height: 100%;
 
   &.page-content--video-player {
-    padding: 70px 0 0;
+    padding: 0;
   }
   &.page-content--margin-left {
     margin-left: 60px;
@@ -18,7 +18,10 @@
   &.page-content--display-2 {
     margin-left: 0;
   }
-
+  &.page-content--minify {
+    margin-left: 0px;
+    padding-top: 0;
+  }
   &.page-content-pt {
     padding: 45px 0;
   }
@@ -67,7 +70,7 @@
 html[dir="rtl"] {
   .page-content {
     &.page-content--video-player {
-      padding: 70px 0 0;
+      padding: 0px;
     }
     &.page-content--margin-left {
       margin-right: 60px;
