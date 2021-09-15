@@ -32,7 +32,6 @@
 .title__name {
   font-size: 20px;
   font-weight: 500;
-  font-family: $quicksand;
   text-align: left;
   margin-bottom: 0;
   color: $black;
@@ -60,8 +59,7 @@
     .group__textarea {
       height: 40px;
       font-size: 14px;
-      font-family: $quicksand;
-      margin-left: 20px;
+          margin-left: 20px;
       border: 1px solid $light-white;
       width: 100%;
       overflow: hidden;
@@ -106,7 +104,6 @@
   line-height: 26px;
   text-align: left;
   font-weight: 400;
-  font-family: $quicksand;
   color: $darkGray;
 }
 .item__actions {
@@ -114,8 +111,7 @@
   .action__report {
     font-size: 14px;
     font-weight: 400;
-    font-family: $quicksand;
-    color: $black;
+      color: $black;
     line-height: 24px;
     margin-left: 5px;
     cursor: pointer;
@@ -157,7 +153,6 @@
 .group__textarea {
   height: 40px;
   font-size: 14px;
-  font-family: $quicksand;
   border: 1px solid $light-white;
   width: 100%;
   overflow: hidden;

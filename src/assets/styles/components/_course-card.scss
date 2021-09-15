@@ -179,8 +179,7 @@
           background: #fa8305;
           border: none;
           color: $white;
-          font-family: $quicksand;
-          font-weight: 600;
+                font-weight: 600;
           line-height: 1.5;
           right: 0;
           text-align: center;
@@ -216,8 +215,7 @@
           border-radius: 20px;
           font-size: 14px;
           font-weight: 500;
-          font-family: $quicksand;
-          position: absolute;
+                position: absolute;
           left: 10px;
           .crd-reviews i {
             margin-right: 2px;
@@ -291,8 +289,7 @@
           border-radius: 20px;
           font-size: 12px;
           font-weight: 500;
-          font-family: $quicksand;
-        }
+              }
       }
     }
     // start card-content part2
@@ -310,8 +307,7 @@
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
-        font-family: $quicksand;
-        color: $darkGray;
+            color: $darkGray;
         text-align: left;
         display: block;
         span.card-details__card-view {
@@ -331,16 +327,14 @@
         display: block;
         font-size: 16px;
         font-weight: 600;
-        font-family: $quicksand;
-        color: $black;
+            color: $black;
         text-align: left;
         // margin-bottom: 7px;
         line-height: 24px;
       }
       a.card-content__card-title {
         display: block;
-        font-family: $quicksand;
-        text-align: left;
+            text-align: left;
         font-size: 13px;
         font-weight: 400;
         color: $darkGray;
@@ -352,8 +346,7 @@
         margin: 0 10px 5px 0;
         float: left;
         font-size: 14px;
-        font-family: $quicksand;
-        color: $darkGray;
+            color: $darkGray;
         text-align: left;
         line-height: 24px;
         a {
@@ -383,8 +376,7 @@
         p {
           line-height: 1;
           color: $black;
-          font-family: $quicksand;
-          font-weight: 500;
+                font-weight: 500;
           font-size: 18px;
         }
         .course-card__actions {
@@ -434,7 +426,6 @@
   transition: 0.3s ease all;
   border-radius: 20px;
   color: $primary;
-  font-family: $quicksand;
   font-size: 16px;
   font-weight: 500;
   &:hover {

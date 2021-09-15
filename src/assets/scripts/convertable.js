@@ -6,3 +6,4 @@ $(".convert").on("click", function (e) {
   form.toggleClass("d-block")
   data.toggleClass("d-none")
 })
+

@@ -38,7 +38,6 @@
   .about-required__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: $quicksand;
     text-align: left;
     margin-bottom: 15px;
     color: $black;
@@ -47,7 +46,6 @@
 .description__title {
   font-size: 20px;
   font-weight: 500;
-  font-family: $quicksand;
   text-align: left;
   margin-bottom: 15px;
   color: $black;
@@ -121,10 +119,9 @@
     }
   }
 
-} 
+}
 
 .description__name {
-  font-family: $quicksand;
   text-align: left;
   display: block;
   font-size: 16px;
@@ -168,8 +165,7 @@
     .about-course__title {
       font-size: 20px;
       font-weight: 500;
-      font-family: $quicksand;
-      text-align: left;
+        text-align: left;
       margin-bottom: 15px;
       color: $black;
     }
@@ -183,7 +179,6 @@
   .about-learn__title {
     font-size: 20px;
     font-weight: 500;
-    font-family: $quicksand;
     text-align: left;
     margin-bottom: 15px;
     color: $black;

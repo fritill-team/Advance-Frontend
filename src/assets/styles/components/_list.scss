@@ -55,7 +55,7 @@
 	&:last-of-type{
 		padding-bottom: 0;
 	}
-	
+
   &.list-item--border-bottom {
     border-bottom: 1px solid rgba($darkBlack, 0.1);
   }
@@ -113,8 +113,7 @@
       position: relative;
       font-size: 14px;
       font-weight: 400;
-      font-family: $quicksand;
-      line-height: 17px;
+        line-height: 17px;
       cursor: pointer;
       &::before {
         font-family: "FontAwesome";
