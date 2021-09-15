@@ -43,6 +43,9 @@ input[type="button"] {
     &.btn--primary {
       background-color: $primary;
       border-color: $primary;
+      &:hover{
+        color: inherit;
+      }
     }
 
 

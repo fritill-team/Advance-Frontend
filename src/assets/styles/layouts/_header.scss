@@ -8,7 +8,7 @@
   display: -ms-flexbox !important;
   display: flex !important;
   align-items: center;
-  background-color: $primary;
+  background-color: darken($primary, 7);
   // box-shadow: 0 0.05208in 11.25pt -9px rgb(0 0 0 / 10%);
   &.header--player {
     background: rgb(56, 68, 77);
