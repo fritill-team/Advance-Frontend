@@ -1,6 +1,45 @@
 /* src/assets/styles/components/_course-card.scss  */
 .course-hover {
   position: relative;
+  height: 464px;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  .course-card__card-media {
+    transition: all 0.5s ease-in-out;
+  }
+  .card-media__card-img {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      .course-card__card-media {
+        transform: scale(1.4);
+        transition: all 0.5s ease-in-out;
+      }
+      img {
+        transform: scale(1.4);
+        transition: all 0.5s ease-in-out;
+      }
+      // .card-media__card-img {
+      //   margin-bottom: 0;
+      // }
+      // .course-card__card-media {
+      //   transform: scale(1.4);
+      //   transition: all 0.5s ease-in-out;
+      // }
+      // .card-media__card-content {
+      //   .course-card__details {
+      //     height: 0;
+      //     max-height: 0;
+      //     transition: all 0.5s ease-in-out;
+      //     overflow: hidden;
+      //   }
+      // }
+    }
+    .card-auther__price {
+      padding: 0;
+    }
+  }
 }
 .course-card {
   &.course-card--fixed-width {
@@ -259,6 +298,10 @@
       float: left;
       width: 100%;
       position: relative;
+      .course-card__details {
+        height: 140px;
+        max-height: 140px;
+      }
       .card-content__card-details {
         margin-bottom: 10px;
         font-size: 12px;
