@@ -341,7 +341,7 @@ body {
   .page-content {
     //margin-left: 240px;
     &.page-content--video-player {
-      margin-left: 285px;
+      // margin-left: 285px;
     }
   }
 
@@ -353,6 +353,7 @@ body {
   .page-content {
     &.page-content--video-player {
       margin-left: 0px !important;
+      flex-direction: column-reverse;
     }
   }
 }
