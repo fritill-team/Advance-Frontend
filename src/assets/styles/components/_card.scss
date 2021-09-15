@@ -118,6 +118,17 @@
       width: 100%;
     }
   }
+  &.card--centered {
+    .card__content-header{
+      flex-direction: column;
+    }
+    .card__content {
+      justify-content: center;
+      padding-left: 0;
+      //flex-direction: column;
+      //align-items: center;
+    }
+  }
 
   .card__side-col {
     // display: flex;

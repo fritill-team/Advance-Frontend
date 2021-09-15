@@ -13,9 +13,9 @@
 // $(".menu .item").tab();
 
 // === checkbox Toggle === //
-$('.ui.checkbox')
-  .checkbox()
-  ;
+// $('.ui.checkbox')
+//   .checkbox()
+//   ;
 
 // === Toggle === //
 $(".enable.button").on("click", function () {
