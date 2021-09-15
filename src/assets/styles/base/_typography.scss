@@ -41,7 +41,7 @@ h6 {
   margin: 0.25em 0 0.75em 0;
 }
 
-strong{
+strong {
   font-weight: 500;
 }
 
@@ -234,7 +234,6 @@ p {
   }
 }
 
-
 a {
   font-size: 16px;
   letter-spacing: 0.15px;
@@ -254,48 +253,48 @@ a {
   }
 }
 
-.card-text{
+.card-text {
   font-size: 14px;
-  *{
+  * {
     line-height: 1.1;
   }
   h1 {
     font-size: 28px;
     letter-spacing: -2.5px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   h2 {
     font-size: 24px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   h3 {
     font-size: 22px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   h4 {
     font-size: 20px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   h5 {
     font-size: 18px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   h6 {
     font-size: 16px;
-    margin: .25em 0 .5em 0;
+    margin: 0.25em 0 0.5em 0;
   }
   p {
     font-size: 14px;
     color: $pColor;
   }
- 
+
   i {
     font-style: italic;
   }
   ul {
     list-style: none;
   }
-  
+
   a {
     color: $linkColor;
     font-weight: 500;
@@ -344,5 +343,35 @@ a {
   li {
     display: inline-block;
   }
-
+}
+.line-hover {
+  padding: 0 0 8px 0;
+  // margin: 8px 6px 2px 0;
+  // line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  color: $darkBlack;
+  background: transparent;
+  display: inline-block;
+  border-radius: 20px;
+  font-weight: 500;
+  position: relative;
+  margin: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 3px;
+    background-color: $darkBlack;
+    transition: 0.3s ease all;
+  }
+  &:hover {
+    color: $darkBlack;
+    &::before {
+      width: 100%;
+    }
+  }
 }
