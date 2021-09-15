@@ -394,8 +394,7 @@ html[dir="rtl"] {
               padding-left: 10px;
               color: $black;
               font-weight: 500;
-              font-family: $quicksand;
-            }
+                      }
           }
         }
         .header__header-details {
@@ -1165,26 +1164,25 @@ html[dir="rtl"] {
   //header-player
 
   .header-player__logo {
-    float: right;
     margin-right: 10px;
   }
-  .header-player__courses {
-    float: right;
-    padding: 10px 10px 10px 5px;
-    margin-left: 10px;
-    &::after {
-      border-right: 10px solid rgba(#7fc8a9, 0.1);
-      border-left: 0;
-      left: -10px;
-    }
-  }
-  .header-player__course-name {
-    float: right;
-    padding: 10px 10px 10px 5px;
-  }
+  // .header-player__courses {
+  //   float: right;
+  //   padding: 10px 10px 10px 5px;
+  //   margin-left: 10px;
+  //   &::after {
+  //     border-right: 10px solid rgba(#7fc8a9, 0.1);
+  //     border-left: 0;
+  //     left: -10px;
+  //   }
+  // }
+  // .header-player__course-name {
+  //   float: right;
+  //   padding: 10px 10px 10px 5px;
+  // }
   //sidebar playlist
   .playlist {
-    right: -240px;
+    right: -285px;
   }
   @media (min-width: 992px) {
     .playlist {

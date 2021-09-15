@@ -1,41 +1,34 @@
 .header-player {
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 45px;
   background: #222222;
-  display: flex !important;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  position: relative;
+  display: flex;
+  padding: 8px;
+  justify-content: flex-start;
 }
 .header-player__logo {
-  float: left;
-  height: 100%;
-  width: 75px;
-  margin-left: 10px;
-  .logo__link {
-    width: 50px;
-    .logo__img {
-      width: 100%;
-      height: 100%;
-      padding: 12px 10px 8px;
-    }
+  display: block;
+  margin: 0;
+  line-height: 1;
+  height: fit-content;
+  padding: 6px 10px 5px 4px;
+  .logo__img {
+    width: 38px;
   }
 }
 
 .header-player__courses {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  width: 50%;
-  background: $accent;
-  color: $primary;
-  font-size: 18px;
-  padding: 10px;
+  background: #1597bb;
+  margin: 0;
+  line-height: 1;
+  height: 56px;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 7px;
-
+  color: $white;
+  font-size: 18px;
+  font-weight: 400;
+  &:hover {
+    color: #fff;
+  }
   //  display: grid;
 
   .courses__name {
@@ -43,32 +36,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: 10px 0px;
   }
-  // &::after {
-  //   border: 23px solid transparent;
-  //   border-left: 10px solid rgba(#7fc8a9, 0.1);
-  //   border-right: 0;
-  //   content: "";
-  //   height: 0;
-  //   left: 100%;
-  //   position: absolute;
-  //   top: 0;
-  //   width: 0;
-  //   z-index: 1;
-  // }
 }
 .header-player__course-name {
-  width: auto;
+  margin: 0;
+  line-height: 1;
+  height: 56px;
+  padding: 20px;
   text-align: center;
-  display: block;
-  border: 0;
-  cursor: pointer;
-  background: #242424;
-  color: $white !important;
+  color: $white;
   font-size: 18px;
-  padding: 10px;
-  margin-bottom: 7px;
-
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   &:hover {
     background-color: #fab01c;
     color: $white;
@@ -87,4 +69,12 @@
 }
 
 html.night-mode {
+  body {
+    background-color: #333333;
+  }
+}
+html[dir="rtl"] {
+  .header-player__logo {
+    padding: 6px 4px 5px 10px;
+  }
 }

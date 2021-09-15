@@ -21,14 +21,12 @@
             font-size: 16px;
             font-weight: 500;
             color: $darkBlack;
-            font-family: $quicksand;
-            padding: 15px 0 18px;
+                    padding: 15px 0 18px;
             display: block;
             line-height: 26px;
             &::before {
               float: right !important;
-              font-family: $quicksand;
-              content: "\-";
+                        content: "\-";
               padding-right: 0px;
               margin-left: 200px;
               font-size: 18px;
@@ -37,8 +35,7 @@
             &.collapsed {
               &::before {
                 float: right !important;
-                font-family: $quicksand;
-                content: "\+";
+                            content: "\+";
                 padding-right: 0px;
                 margin-left: 200px;
                 font-size: 18px;
@@ -54,8 +51,7 @@
         .filter-heading__filter-body {
           font-size: 14px;
           font-weight: 400;
-          font-family: $quicksand;
-          color: $darkGray;
+                color: $darkGray;
           line-height: 26px;
           padding-bottom: 20px;
           text-align: left;

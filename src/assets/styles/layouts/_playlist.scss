@@ -1,13 +1,14 @@
 .playlist {
-  position: fixed;
+  position: absolute;
   left: -285px;
-  top: 45px;
+  top: 70px;
   bottom: 0;
   background: #222;
   overflow: hidden;
   width: 285px;
   z-index: 995;
   transition: all 0.3s ease;
+  height: 100%;
 
   &.playlist--opened {
     left: 0;

@@ -42,8 +42,7 @@
       font-size: 13px;
       color: $darkGray;
       margin-top: 10px;
-      font-family: $quicksand;
-      font-weight: 400;
+        font-weight: 400;
       margin-bottom: 17px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -87,8 +86,7 @@
       font-size: 12px;
       margin-top: 20px;
       font-weight: 400;
-      font-family: $quicksand;
-      color: $darkGray;
+        color: $darkGray;
       text-align: center;
       display: block;
       span.details__view {
@@ -108,8 +106,7 @@
       margin-top: 15px;
       font-size: 14px;
       font-weight: 500;
-      font-family: $quicksand;
-      color: $darkBlack;
+        color: $darkBlack;
     }
   }
 }

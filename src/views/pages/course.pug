@@ -102,7 +102,7 @@ block content
                     .field-wrapper.field-wrapper--no-label
                       label.text-field__label Course Title*
                       .text-field__content
-                        input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required='')
+                        input.text-field__input(type='text' placeholder='Insert your course title.' name='title')
                         .text-field__limit 60
                       ul.messages
                         li Please provide a valid city.
@@ -117,20 +117,31 @@ block content
                     button.btn.btn--primary.btn--rounded Add Review
 
               .panel
+                #update-review-form.d-none
+                  .card__header
+                    a(href="#" class="bold") Lorem ipsum
+                  form
+                    .field-wrapper.field-wrapper--no-label
+                      label.text-field__label Course Title*
+                      .text-field__content
+                        input.text-field__input(type='text' placeholder='Insert your course title.' name='title')
+                        .text-field__limit 60
+                      ul.messages
+                        li Please provide a valid city.
+
+                    .field-wrapper.field-wrapper--no-label
+                      label.text-field__label Course Title*
+                      .text-field__content
+                        .rate-input
+                      ul.messages
+                        li Please provide a valid city.
+
+                    button(type="reset" class="btn btn--primary btn--text replacer" data-target="#update-review-form") Cancel
+                    button(type="submit" class=" btn btn--primary btn--rounded") Add Review
+
                 include ../components/review-item.pug
                 .panel__loader
                   a(href='javascript:void(0);' class="gray bold") See More Reviews
-              //- start reviews
-              //.reviews
-              //	form.comments__add-comment
-              //		.add-comment__group
-              //			.group__img-wrapper
-              //				img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
-              //			textarea.group__textarea(placeholder="Add a public comment")
-              //		a(class="btn btn--danger btn--rounded" href="#") Add review
-              //		.my-rating
-              //	.review__all-reviews.mt-3
-              //		include ../components/review-item.pug
 
         .col-lg-4
           include ../components/review.pug

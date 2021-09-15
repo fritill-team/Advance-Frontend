@@ -383,8 +383,9 @@ block content
 								time.text-3.gray Jan 15 '18 at 13:56
 		.row
 			.col-lg-4   
-				include ../../../components/course-card.pug
-				+course-card
+				.course-hover
+					include ../../../components/course-card.pug
+					+course-card
 		.col-lg-12
 			pre
 				code.language-html
@@ -593,7 +594,7 @@ block content
 		//  h2.title-2.my-3 Card with centered components
 		//  p.text-2.mb-1
 		//    | we use
-		//    code .card--centered .card--live-section
+		//    code .card--centered .card--live-seindexction
 		//.col-lg-3
 		//  .card.card--centered.card--live-section
 		//    .card__content

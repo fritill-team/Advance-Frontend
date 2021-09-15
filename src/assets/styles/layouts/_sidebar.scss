@@ -69,7 +69,6 @@
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
-  font-family: $quicksand;
   display: block;
   .item__icon {
     display: block;
@@ -99,7 +98,6 @@
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
-  font-family: $quicksand;
   .menu__icon {
     display: block;
     float: left;
@@ -139,7 +137,6 @@
     padding-left: 50px;
     padding-right: 16px;
     font-size: 14px;
-    font-family: $quicksand;
     font-weight: 400;
     color: $darkBlack;
     text-decoration: none;
@@ -361,6 +358,7 @@ body {
 }
 .page-content--minify {
   margin-left: 0px;
+  padding-top: 0;
 }
 @media (max-width: 992px) {
   .toggle-menu {
