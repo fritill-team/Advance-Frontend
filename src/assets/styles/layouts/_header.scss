@@ -14,7 +14,7 @@
     background: rgb(56, 68, 77);
     position: relative;
     display: flex;
-    padding: 4px 8px;
+    // padding: 4px 8px;
     justify-content: flex-start;
     // box-shadow: -10px 0 10px 2px $accent;
     height: 60px;
@@ -22,11 +22,26 @@
   .header-player__logo {
     display: block;
     margin: 0;
-    line-height: 1;
-    height: fit-content;
-    padding: 8px 8px 2px 4px;
+    line-height: 3.2;
+    background: $primary;
+    height: 100%;
+    // height: fit-content;
+    padding: 14px 30px 2px 30px;
+    position: relative;
     .logo__img {
       height: 28px;
+    }
+    &:after {
+      border: 30px solid transparent;
+      border-left: 15px solid #0d758e;
+      border-right: 0;
+      content: "";
+      height: 0;
+      left: 100%;
+      position: absolute;
+      top: 0;
+      width: 0;
+      z-index: 1;
     }
   }
   .header-player__img-small {
@@ -41,16 +56,17 @@
   }
 
   .header-player__courses {
-    // background: #1597bb;
     margin: 0;
-    line-height: 2;
+    line-height: 3.2;
     height: 40px;
-    padding: 2px 10px;
-
+    padding: 0 25px 0 30px;
+    background: $secondary;
+    height: 100%;
     text-align: center;
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+    position: relative;
     &:hover {
       color: #fff;
     }
@@ -61,14 +77,25 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      margin: 10px 0px;
+    }
+    &:after {
+      border: 30px solid transparent;
+      border-left: 15px solid #1597bb;
+      border-right: 0;
+      content: "";
+      height: 0;
+      left: 100%;
+      position: absolute;
+      top: 0;
+      width: 0;
+      z-index: 1;
     }
   }
   .header-player__course-name {
     margin: 0;
-    line-height: 2;
+    line-height: 2.1;
     height: 40px;
-    padding: 2px 10px;
+    padding: 0 25px;
     text-align: center;
     color: #fff;
     font-size: 18px;
@@ -97,6 +124,9 @@
     }
     .header-player__img-small {
       display: block;
+      height: 100%;
+      background: #0d758e;
+      line-height: 4.6;
     }
   }
   html[dir="rtl"] {
@@ -161,7 +191,7 @@ html.night-mode {
   }
   .header__logo {
     float: left;
-    width: 135px;
+    width: 50px;
     margin-left: 0;
 
     .header__img {
