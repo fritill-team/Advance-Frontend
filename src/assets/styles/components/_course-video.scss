@@ -195,9 +195,15 @@
 }
 
 .course-video {
+  &.course-video--fill{
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    background: linear-gradient(-90deg,rgba(255,0,0,0) -90% , #aaa);
+  }
   float: left;
   width: 100%;
-  height: calc(100vh - 60px);
   // background-image: linear-gradient(
   //   to left,
   //   rgba(255, 0, 0, 0) -180%,
@@ -206,9 +212,7 @@
   background: linear-gradient(-90deg,rgba(255,0,0,0) -10% , #aaa);
   padding: 100px 0;
   position: relative;
-  // margin-bottom: 70px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 70px;
   &.course-video--small-padding {
     padding: 30px;
     margin-bottom: 20px;
