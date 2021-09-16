@@ -1,7 +1,7 @@
 ol,
 ul {
   list-style: none;
-  margin-bottom: 0 !important;
+  margin-bottom: 0 ;
 }
 a:hover {
   // color: inherit !important;
@@ -281,7 +281,7 @@ input:focus {
 
   .ui.checkbox.icon .box,
   .ui.checkbox.icon label {
-    font-family:  !important;
+    // font-family:  !important;
     color: #333;
     line-height: 20px;
     // width: 18px !important;

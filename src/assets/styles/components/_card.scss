@@ -123,10 +123,12 @@
       flex-direction: column;
     }
     .card__content {
+			display: flex;
+			flex-direction: column;
       justify-content: center;
       padding-left: 0;
-      //flex-direction: column;
-      //align-items: center;
+      align-items: center;
+			text-align: center;
     }
   }
 
@@ -557,41 +559,21 @@
     }
   }
 
-
+	*/
 
   &.card__testimonial {
-    padding: 15px;
-
-    .user-image {
-      img {
-        border: 3px solid $white;
-        background-color: $light-white;
-        box-shadow: 0 2px 2px 0 $light-white;
-      }
-    }
-
-    .card__title {
-      .text-2 {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 26px;
-        color: #686f7a;
-        text-align: left;
-      }
-    }
-
-    .card__content {
-      align-items: flex-end;
-    }
-
-    .user-image {
-      align-items: flex-start;
-    }
-
-    .card__title {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
+		// align-items: flex-end;
+		.image--profile{
+			min-width: 60px;
+			max-width: 60px;
+			min-height: 60px;
+			max-height: 60px;
+		}
+		.card__header{
+			margin-top: 10px;
+			margin-bottom: 15px;
+		}
+		
   }
 
   &.card--icon {
@@ -601,8 +583,8 @@
         left: 8px;
         bottom: -30px;
         display: block;
-        color: $darkBlack;
-        background: #ffecec;
+        color: $primary;
+        background: rgba($secondary, $alpha: .2);
         border-radius: 10px;
         padding: 10px 14px;
         height: 100%;
@@ -621,35 +603,44 @@
         font-size: 14px;
       }
     }
-  }*/
+  }
 
-  //&.card--user {
-  //  .card--centered {
-  //    .card--centered {
-  //      font-size: 18px;
-  //    }
-  //  }
-  //
-  //  .user-image {
-  //    margin-bottom: 20px;
-  //  }
-  //
-  //  .user-data {
-  //    .text-1 {
-  //      &:hover {
-  //        color: $darkBlack2;
-  //      }
-  //    }
-  //
-  //    .text-2 {
-  //      font-weight: 500;
-  //
-  //      &:hover {
-  //        color: $primaryLight;
-  //      }
-  //    }
-  //  }
-  //}
+  &.card--user {
+		.details{
+			margin-top: 0;
+		}
+   .card--centered {
+     .card--centered {
+       font-size: 18px;
+     }
+   }
+	 .card__content{
+		 justify-content: center;
+	 }
+  
+   .user-image {
+    //  margin-bottom: 20px;
+   }
+  
+   .user-data {
+     .text-1 {
+       &:hover {
+        //  color: $darkBlack2;
+       }
+     }
+  
+     .text-2 {
+       font-weight: 500;
+  
+       &:hover {
+        //  color: $primaryLight;
+       }
+     }
+   }
+	 .social-icon{
+		 margin-bottom: 10px;
+	 }
+  }
 
   &.card--card-file {
     position: relative;
