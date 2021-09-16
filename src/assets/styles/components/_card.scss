@@ -142,6 +142,57 @@
     flex-direction: column;
   }
 
+	&.card--live-section {
+    .user-image {
+			display: flex;
+			justify-content: center;
+      img {
+        max-width: 60px;
+        min-width: 60px;
+        max-height: 60px;
+        min-height: 60px;
+        border: 3px solid $white;
+        background-color: $light-white;
+				border-radius: 50%;
+				margin: 0 auto 5px auto;
+				display: inline-block;
+      }
+    }
+
+    background: rgba($primary, 0.7);
+    padding: 15px;
+
+    .card__content {
+      background: rgba(#e5e0e5, 0.06);
+      box-shadow: 0 6px 25px #00000021;
+      padding: 10px 0 0 0;
+      width: 100%;
+    }
+
+    .user-data {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0 5px;
+      .text-3 {
+        position: relative;
+				color: #fff;
+        span {
+          width: 6px;
+          height: 6px;
+          background: $primaryLight;
+          position: absolute;
+          border-radius: 100%;
+          top: 2px;
+          right: -10px;
+        }
+      }
+    }
+  }
+
   /*.card__body {
     display: flex;
     flex-direction: column;
@@ -506,52 +557,7 @@
     }
   }
 
-  &.card--live-section {
-    .user-image {
-      img {
-        max-width: 60px;
-        min-width: 60px;
-        max-height: 60px;
-        min-height: 60px;
-        border: 3px solid $white;
-        background-color: $light-white;
-      }
-    }
 
-    background: rgba(51, 1, 51, 0.1);
-    padding: 15px;
-
-    .card__content {
-      background: rgba(#e5e0e5, 0.06);
-      box-shadow: 0 6px 25px #00000021;
-      padding: 10px 0 0 0;
-      width: 100%;
-    }
-
-    .user-data {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-
-      .text-3 {
-        position: relative;
-
-        span {
-          width: 6px;
-          height: 6px;
-          background: $primaryLight;
-          position: absolute;
-          border-radius: 100%;
-          top: 2px;
-          right: 14px;
-        }
-
-        &:hover {
-          color: $darkBlack2;
-        }
-      }
-    }
-  }
 
   &.card__testimonial {
     padding: 15px;

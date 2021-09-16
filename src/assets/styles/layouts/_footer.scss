@@ -164,9 +164,9 @@
 */
 
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .social-links {
-    text-align: center;
+    justify-content: center;
   }
 }
 
