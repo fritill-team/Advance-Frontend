@@ -45,7 +45,7 @@ input[type="button"] {
       background-color: $primary;
       border-color: $primary;
       &:hover{
-        color: inherit;
+        color: white;
       }
     }
     &.btn--secondary {
@@ -140,6 +140,35 @@ input[type="button"] {
     &.btn--hover{
       &:hover {
         transition: 0.3s ease all;
+        color: #fff;
+        &.btn--default {
+          background-color: $default;
+          color:$primary ;
+        }
+        &.btn--primary {
+          background-color: $primary;
+        }
+        &.btn--secondary {
+          background-color: $secondary;
+        }
+        &.btn--success {
+          background-color: $success;
+        }
+        &.btn--info {
+          background-color: $info;
+        }
+        &.btn--warning {
+          background-color: $warning;
+        }
+        &.btn--danger {
+          background-color: $primaryLight;
+        }
+      }
+    }
+    &.btn--hover-rounded{
+      border-radius: 20px;
+      &:hover {
+        transition: 0.2s ease all;
         color: #fff;
         &.btn--default {
           background-color: $default;
