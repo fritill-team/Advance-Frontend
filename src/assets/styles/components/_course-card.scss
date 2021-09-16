@@ -95,7 +95,7 @@
       .btn-wishlist {
         // display: inline-block !important;
         // margin: 0 10px;
-        color: #eb6060;
+        color: $accent;
         i {
           display: block;
           margin: 0 10px;
@@ -387,7 +387,7 @@
         .btn-wishlist {
           display: inline-block !important;
           margin: 0 10px;
-          color: #eb6060;
+          color: $accent;
           font-size: 20px;
 
           // i{

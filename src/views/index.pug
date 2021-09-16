@@ -157,12 +157,12 @@ block content
 													p.text-3.white
 														span
 														| Live
-				section.section-index
+				section.section-index.section-index--pt.pt-0
 					.d-flex.flex-column.my-2
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.title-h6.title-h6--bolder.semi-bold Newest Courses
-							a(href="#").text-3.text-3--bolder.gray.mt-0 See all
-					.section-index.section-index--pt
+							a(href="#").text-3--bolder.gray See all
+					.section-index
 						block content
 							include ./components/course-wrapper.pug
 								block category-header
@@ -521,47 +521,47 @@ block content
 						.col-xl-6.col-lg-12.col-md-6
 							.card.card--centered.card--icon
 								.card__content
-									.user-image
+									.user-image.mb-2
 										i.fas.fa-history.card--user-icon
 									.card__body
 										.card__content-header
 											.user-data
-												p.title-h6.semi-bold 100,000 online courses
+												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
-											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
 							.card.card--centered.card--icon
 								.card__content
-									.user-image
+									.user-image.mb-2
 										i.fas.fa-user-check.card--user-icon
 									.card__body
 										.card__content-header
 											.user-data
-												p.title-h6.semi-bold 100,000 online courses
+												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
-											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
 							.card.card--centered.card--icon
 								.card__content
-									.user-image
+									.user-image.mb-2
 										i.fas.fa-video.card--user-icon
 									.card__body
 										.card__content-header
 											.user-data
-												p.title-h6.semi-bold 100,000 online courses
+												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
-											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 						.col-xl-6.col-lg-12.col-md-6
 							.card.card--centered.card--icon
 								.card__content
-									.user-image
+									.user-image.mb-2
 										i.far.fa-play-circle.card--user-icon
 									.card__body
 										.card__content-header
 											.user-data
-												p.title-h6.semi-bold 100,000 online courses
+												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
-											p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 				section.section-index.section-index--pt
 					.d-flex.justify-content-between.align-items-center.w-100
 						h3.title-h6.semi-bold.mb-0  Popular Instructors
@@ -573,229 +573,166 @@ block content
 									.card__content
 										.user-image
 											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
 										.card__body
 											.card__content-header
 												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+													a.text-3.semi-bold(href="#") Jose Portilla
 														i.far.fa-check-circle.pl-1
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													p.text-3.gray Web Developer, Designer, and Teacher Jose
 													ul.social-icon
 														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
+															a.social-icon__link.social-icon--fa-bg.mb-0(href="#")
 																i.fab.fa-facebook-f
 														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
+															a.social-icon__link.social-icon--tw-bg.mb-0(href="#")
 																i.fab.fa-twitter
 														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
+															a.social-icon__link.social-icon--li-bg.mb-0(href="#")
 																i.fab.fa-linkedin-in
 														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
+															a.social-icon__link.social-icon--yu-bg.mb-0(href="#")
 																i.fab.fa-youtube
 													.details
 														span.total-students 615K Students
 														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
+													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
 							.item
 								.card.card--centered.card--user
 									.card__content
 										.user-image
 											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
 										.card__body
 											.card__content-header
 												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+													a.text-3.semi-bold(href="#") Jose Portilla
 														i.far.fa-check-circle.pl-1
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													p.text-3.gray Web Developer, Designer, and Teacher Jose
 													ul.social-icon
 														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
+															a.social-icon__link.social-icon--fa-bg.mb-0(href="#")
 																i.fab.fa-facebook-f
 														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
+															a.social-icon__link.social-icon--tw-bg.mb-0(href="#")
 																i.fab.fa-twitter
 														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
+															a.social-icon__link.social-icon--li-bg.mb-0(href="#")
 																i.fab.fa-linkedin-in
 														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
+															a.social-icon__link.social-icon--yu-bg.mb-0(href="#")
 																i.fab.fa-youtube
 													.details
 														span.total-students 615K Students
 														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
+													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
 							.item
 								.card.card--centered.card--user
 									.card__content
 										.user-image
 											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
 										.card__body
 											.card__content-header
 												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+													a.text-3.semi-bold(href="#") Jose Portilla
 														i.far.fa-check-circle.pl-1
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													p.text-3.gray Web Developer, Designer, and Teacher Jose
 													ul.social-icon
 														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
+															a.social-icon__link.social-icon--fa-bg.mb-0(href="#")
 																i.fab.fa-facebook-f
 														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
+															a.social-icon__link.social-icon--tw-bg.mb-0(href="#")
 																i.fab.fa-twitter
 														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
+															a.social-icon__link.social-icon--li-bg.mb-0(href="#")
 																i.fab.fa-linkedin-in
 														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
+															a.social-icon__link.social-icon--yu-bg.mb-0(href="#")
 																i.fab.fa-youtube
 													.details
 														span.total-students 615K Students
 														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
+													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
 							.item
 								.card.card--centered.card--user
 									.card__content
 										.user-image
 											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
 										.card__body
 											.card__content-header
 												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+													a.text-3.semi-bold(href="#") Jose Portilla
 														i.far.fa-check-circle.pl-1
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													p.text-3.gray Web Developer, Designer, and Teacher Jose
 													ul.social-icon
 														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
+															a.social-icon__link.social-icon--fa-bg.mb-0(href="#")
 																i.fab.fa-facebook-f
 														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
+															a.social-icon__link.social-icon--tw-bg.mb-0(href="#")
 																i.fab.fa-twitter
 														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
+															a.social-icon__link.social-icon--li-bg.mb-0(href="#")
 																i.fab.fa-linkedin-in
 														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
+															a.social-icon__link.social-icon--yu-bg.mb-0(href="#")
 																i.fab.fa-youtube
 													.details
 														span.total-students 615K Students
 														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
+													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
 							.item
 								.card.card--centered.card--user
 									.card__content
 										.user-image
 											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.uil.uil-check-circle
 										.card__body
 											.card__content-header
 												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
-														i.uil.uil-check-circle
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+													a.text-3.semi-bold(href="#") Jose Portilla
+														i.far.fa-check-circle.pl-1
+													p.text-3.gray Web Developer, Designer, and Teacher Jose
 													ul.social-icon
 														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
+															a.social-icon__link.social-icon--fa-bg.mb-0(href="#")
 																i.fab.fa-facebook-f
 														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
+															a.social-icon__link.social-icon--tw-bg.mb-0(href="#")
 																i.fab.fa-twitter
 														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
+															a.social-icon__link.social-icon--li-bg.mb-0(href="#")
 																i.fab.fa-linkedin-in
 														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
+															a.social-icon__link.social-icon--yu-bg.mb-0(href="#")
 																i.fab.fa-youtube
 													.details
 														span.total-students 615K Students
 														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
-							.item
-								.card.card--centered.card--user
-									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.uil.uil-check-circle
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
-														i.uil.uil-check-circle
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
-													ul.social-icon
-														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
-																i.fab.fa-facebook-f
-														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
-																i.fab.fa-twitter
-														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
-																i.fab.fa-linkedin-in
-														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
-																i.fab.fa-youtube
-													.details
-														span.total-students 615K Students
-														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
-							.item
-								.card.card--centered.card--user
-									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.uil.uil-check-circle
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
-														i.uil.uil-check-circle
-													p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
-													ul.social-icon
-														li.social-icon__list
-															a.social-icon__link.social-icon--fa-bg(href="#")
-																i.fab.fa-facebook-f
-														li.social-icon__list
-															a.social-icon__link.social-icon--tw-bg(href="#")
-																i.fab.fa-twitter
-														li.social-icon__list
-															a.social-icon__link.social-icon--li-bg(href="#")
-																i.fab.fa-linkedin-in
-														li.social-icon__list
-															a.social-icon__link.social-icon--yu-bg(href="#")
-																i.fab.fa-youtube
-													.details
-														span.total-students 615K Students
-														span.total-course 12 Courses
-													a.text-2.profile.mt-3(href="#") Go To Profile
+													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
+
 			.col-xl-3.col-lg-4
 				aside.right_side
 					.card.card--centered.card--user
 						.card__content
 							.user-image
 								img(src="../../assets/images/hd_dp.jpg" alt="")
-								i.far.fa-check-circle.pl-1
 							.card__body
 								.card__content-header
 									.user-data
-										a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										a.text-3.semi-bold(href="#") Jose Portilla
 											i.far.fa-check-circle.pl-1
-										p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+										p.text-3.gray Web Developer, Designer, and Teacher Jose
 										ul.social-icon
 											li.social-icon__list
-												a.social-icon__link.social-icon--fa-bg(href="#")
+												a.social-icon__link.social-icon--fa-bg.my-0(href="#")
 													i.fab.fa-facebook-f
 											li.social-icon__list
-												a.social-icon__link.social-icon--tw-bg(href="#")
+												a.social-icon__link.social-icon--tw-bg.my-0(href="#")
 													i.fab.fa-twitter
 											li.social-icon__list
-												a.social-icon__link.social-icon--li-bg(href="#")
+												a.social-icon__link.social-icon--li-bg.my-0(href="#")
 													i.fab.fa-linkedin-in
 											li.social-icon__list
-												a.social-icon__link.social-icon--yu-bg(href="#")
+												a.social-icon__link.social-icon--yu-bg.my-0(href="#")
 													i.fab.fa-youtube
 										.details
 											span.total-students 615K Students
@@ -807,7 +744,7 @@ block content
 						.card__content
 							.user-image
 								img(src="../../assets/images/hd_dp.jpg" alt="")
-								i.far.fa-check-circle.pl-1
+								//- i.far.fa-check-circle.pl-1
 							.card__body
 								.card__content-header
 									.user-data
@@ -815,7 +752,7 @@ block content
 										.card__btn
 											button.btn.btn--primary.btn--rounded.semi-bold.my-2  Get Started
 								.card__content--details
-									p.text-2.gray Info : This feature only for 'Instructors'.
+									p.text-3.gray.my-0 Info : This feature only for 'Instructors'.
 					//- section.get1452
 					//- 	img(src="../assets/images/get_img.jpg", alt="", srcset="")
 					//- 	h4 Get personalized recommendations
@@ -849,10 +786,10 @@ block content
 							.card__body
 								.card__content-header
 									.user-data
-										h2.text-2 Become an Instructor
-										p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
+										h4.text-2 Become an Instructor
+										p.text-3.gray.py-0 Set up your channel and stream live to your students Set up your channel and stream live to your students
 										.card__btn
-											button(type="submit").btn.btn--primary.btn--rounded.semi-bold.my-2  Get Started
+											button(type="submit").btn.btn--primary.btn--rounded.semi-bold.mt-2  Get Started
 			.col-xl-12.col-lg-12
 				section.section-index
 					.d-flex.flex-column.my-2
@@ -861,62 +798,93 @@ block content
 					.la5lo1
 						.owl-carousel.Student_says.owl-theme
 							.item
-								.card.card__testimonial
-									.card__title
-										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+								.card.card--side-col.card__testimonial
+									.card__side-col
+										img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
 									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										.card__header
+											.card__header-multiline
+												a(href='#' class="bold")
+													| Jose Portilla
+													i.fa.fa-check-circle.ml-1
+												time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+												//- .rate-display(data-rate="5")
+											//- .card__tools
+											//- 	+dropdown
+											//- 		i.fas.fa-ellipsis-h
+										p.text-3.mb-0
+											| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+											| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
 							.item
-								.card.card__testimonial
-									.card__title
-										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+								.card.card--side-col.card__testimonial
+									.card__side-col
+										img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
 									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										.card__header
+											.card__header-multiline
+												a(href='#' class="bold")
+													| Jose Portilla
+													i.fa.fa-check-circle.ml-1
+												time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+												//- .rate-display(data-rate="5")
+											//- .card__tools
+											//- 	+dropdown
+											//- 		i.fas.fa-ellipsis-h
+										p.text-3.mb-0
+											| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+											| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
 							.item
-								.card.card__testimonial
-									.card__title
-										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+								.card.card--side-col.card__testimonial
+									.card__side-col
+										img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
 									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										.card__header
+											.card__header-multiline
+												a(href='#' class="bold")
+													| Jose Portilla
+													i.fa.fa-check-circle.ml-1
+												time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+												//- .rate-display(data-rate="5")
+											//- .card__tools
+											//- 	+dropdown
+											//- 		i.fas.fa-ellipsis-h
+										p.text-3.mb-0
+											| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+											| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
 							.item
-								.card.card__testimonial
-									.card__title
-										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+								.card.card--side-col.card__testimonial
+									.card__side-col
+										img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
 									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										.card__header
+											.card__header-multiline
+												a(href='#' class="bold")
+													| Jose Portilla
+													i.fa.fa-check-circle.ml-1
+												time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+												//- .rate-display(data-rate="5")
+											//- .card__tools
+											//- 	+dropdown
+											//- 		i.fas.fa-ellipsis-h
+										p.text-3.mb-0
+											| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+											| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
 							.item
-								.card.card__testimonial
-									.card__title
-										p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+								.card.card--side-col.card__testimonial
+									.card__side-col
+										img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
 									.card__content
-										.user-image
-											img(src="../../assets/images/hd_dp.jpg" alt="")
-											i.far.fa-check-circle.pl-1
-										.card__body
-											.card__content-header
-												.user-data
-													a.btn.btn--secondary.btn--link-text.text-4.semi-bold(href="#") Jose Portilla
+										.card__header
+											.card__header-multiline
+												a(href='#' class="bold")
+													| Jose Portilla
+													i.fa.fa-check-circle.ml-1
+												time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+												//- .rate-display(data-rate="5")
+											//- .card__tools
+											//- 	+dropdown
+											//- 		i.fas.fa-ellipsis-h
+										p.text-3.mb-0
+											| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+											| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
+							
