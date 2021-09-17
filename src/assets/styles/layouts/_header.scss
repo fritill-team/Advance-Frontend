@@ -1,9 +1,8 @@
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 5;
   width: 100%;
   height: 60px;
-  background: $white;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -405,7 +404,7 @@ html.night-mode {
       border-bottom: 1px solid $light-white !important;
     }
 
-  
+
 
   .list__profile {
     cursor: pointer;

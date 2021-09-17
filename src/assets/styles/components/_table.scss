@@ -1,0 +1,54 @@
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.table {
+  width: 100%;
+
+  th {
+    background-color: #1dbae626;
+    font-weight: 600;
+    color: $primary;
+  }
+
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+
+    .main-cell {
+      text-align: left;
+    }
+
+    * {
+      font-size: 14px;
+    }
+  }
+
+  tbody {
+    background: $white;
+  }
+
+  i[class*="fa-"] {
+    color: $primary;
+    font-size: 14px;
+    padding: 4px;
+  }
+}
+
+html[dir="rtl"] {
+  .table {
+    th, td {
+      .main-cell {
+        text-align: right;
+      }
+    }
+  }
+}
