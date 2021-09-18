@@ -20,9 +20,16 @@ input[type="button"] {
     letter-spacing: 1.25px;
     line-height: 1.5;
 
-    &:hover {
-      opacity: 0.8;
-      transition: 0.3s ease all;
+    &.hover {
+      &:hover {
+        opacity: 0.8;
+        transition: 0.3s ease all;
+      }
+    }
+    &.darken-hover{
+      &:hover{
+        color: darken($color: #000, $amount: 2);
+      }
     }
     &.btn--disabled,
     &:disabled {
@@ -362,6 +369,13 @@ input[type="button"] {
       border: none;
       text-align: left;
     }
+    
+    &.without-line{
+      &:hover{
+        text-decoration: none;
+        transition: 0.3s ease all;
+      }
+    }
 
     &.btn--center {
       display: block;
@@ -454,12 +468,16 @@ a.btn {
   &.btn--text {
     text-decoration: none;
   }
-  &:link,
   &:hover{
     color: white;
   }
   &:active {
     opacity: 1.8;
+  }
+  &.btn--hover-line{
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 
