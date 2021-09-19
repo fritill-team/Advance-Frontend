@@ -16,6 +16,17 @@
     color: $primary;
   }
 
+  th.sortable {
+
+    .sortable--up {
+
+    }
+
+    .sortable--down {
+
+    }
+  }
+
 
   th, td {
     padding: 10px;
