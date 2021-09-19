@@ -1,0 +1,39 @@
+extends ../layouts/master.pug
+
+
+block title
+	title Category-course
+
+block content
+	.container 
+		.row 
+			.col-lg-12 
+				section.category-results.mt-3.mb-6
+					.filter__selector
+						.ui.inline.dropdown.selector--dropdown
+							.selector__text Sort
+							i.dropdown.icon.selector__icon
+							.menu.selector--menu
+								.item.selector__item Most Relevant
+								.item.selector__item Most Reviewed
+								.item.selector__item Highest Rated
+								.item.selector__item Newest
+								.item.selector__item Lowest Price
+								.item.selector__item Highest Price
+					.display
+						span.list <i class="fas fa-stream"></i>
+						span.grid.active <i class="fas fa-th"></i>
+		.row 
+			.col-lg-4
+					include ../components/course-card.pug
+					+course-card('course-card--grid-view')
+			.col-lg-4
+				+course-card('course-card--grid-view')
+			.col-lg-4
+				+course-card('course-card--grid-view')
+			.col-lg-4
+				+course-card('course-card--grid-view')
+			.col-lg-4
+				+course-card('course-card--grid-view')
+			.col-lg-4
+				+course-card('course-card--grid-view')

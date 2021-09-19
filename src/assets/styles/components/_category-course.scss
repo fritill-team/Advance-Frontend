@@ -58,8 +58,8 @@
     border-radius: 5px;
     transition: 0.3s ease all;
     &:hover {
-      background-color: rgba($color: $primaryLight, $alpha: 0.2);
-      color: $primaryLight;
+      background-color: rgba($color: $primary, $alpha: 0.2);
+      color: $primary;
     }
     &.active {
       // background-color: rgba($color: $primaryLight, $alpha: 0.4);

@@ -117,12 +117,14 @@ $('.toggle-filter').on('click', function () {
 })
 
 $('.list').on('click', function () {
-  $('.course-card--fixed-width').removeClass('course-card--fixed-width').addClass('course-card--list-view')
+  $('.course-card--grid-view').removeClass('course-card--grid-view').addClass('course-card--list-view')
   $(this).addClass('active').siblings().removeClass('active')
+  $('.course-card--list-view').parent().removeClass('col-lg-4').addClass('col-lg-12');
 })
 $('.grid').on('click', function () {
-  $('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--fixed-width')
+  $('.course-card--list-view').removeClass('course-card--list-view').addClass('course-card--grid-view')
   $(this).addClass('active').siblings().removeClass('active')
+  $('.course-card--grid-view').parent().removeClass('col-lg-12').addClass('col-lg-4');
 })
 
 // $(".menu--item .menu--link").each(function() {

@@ -47,30 +47,30 @@
 	} 
 }
 .course-card {
-  &.course-card--fixed-width {
-    max-width: 24%;
-    margin: 0 5px;
+  &.course-card--grid-view {
+    // max-width: 24%;
+    // margin: 0 5px;
     animation: grid;
     animation-duration: 0.3s;
-    @media (max-width: 1440.98px) {
-      max-width: 32%;
-    }
-    @media (max-width: 1024.98px) {
-      max-width: 31%;
-      margin: 0 7px;
-    }
-    @media (max-width: 890.98px) {
-      max-width: 49%;
-      margin: 0;
-    }
-    @media (max-width: 768.98px) {
-      max-width: 49%;
-      margin: 0;
-    }
-    @media (max-width: 450.98px) {
-      max-width: 99%;
-      margin: auto;
-    }
+    // @media (max-width: 1440.98px) {
+    //   max-width: 32%;
+    // }
+    // @media (max-width: 1024.98px) {
+    //   max-width: 31%;
+    //   margin: 0 7px;
+    // }
+    // @media (max-width: 890.98px) {
+    //   max-width: 49%;
+    //   margin: 0;
+    // }
+    // @media (max-width: 768.98px) {
+    //   max-width: 49%;
+    //   margin: 0;
+    // }
+    // @media (max-width: 450.98px) {
+    //   max-width: 99%;
+    //   margin: auto;
+    // }
   }
   &.course-card--list-view {
     max-width: 100%;
@@ -356,12 +356,12 @@
         text-align: left;
         line-height: 24px;
         a {
-          color: $black;
+          // color: $black;
           font-weight: 500;
-          &:hover {
-            color: $black !important;
-            text-decoration: underline !important;
-          }
+          // &:hover {
+            // color: $black !important;
+            // text-decoration: underline !important;
+          // }
         }
       }
       // .card-content__card-auther {
