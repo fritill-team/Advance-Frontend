@@ -19,10 +19,13 @@ input[type="button"] {
     text-transform: uppercase;
     letter-spacing: 1.25px;
     line-height: 1.5;
-
-    &:hover {
-      opacity: 0.8;
-      transition: 0.3s ease all;
+    text-align: center;
+    white-space: nowrap;
+    &.hover {
+      &:hover {
+        opacity: 0.8;
+        transition: 0.3s ease all;
+      }
     }
     &.btn--disabled,
     &:disabled {
@@ -45,7 +48,7 @@ input[type="button"] {
       background-color: $primary;
       border-color: $primary;
       &:hover{
-        color: inherit;
+        color: white;
       }
     }
     &.btn--secondary {
@@ -112,7 +115,6 @@ input[type="button"] {
     &.btn--text {
       border: none;
       background-color: transparent;
-      text-decoration: underline;
       transition: 0.3s ease all;
 
       &.btn--default {
@@ -165,6 +167,35 @@ input[type="button"] {
         }
       }
     }
+    &.btn--hover-rounded{
+      border-radius: 20px;
+      &:hover {
+        transition: 0.2s ease all;
+        color: #fff;
+        &.btn--default {
+          background-color: $default;
+          color:$primary ;
+        }
+        &.btn--primary {
+          background-color: $primary;
+        }
+        &.btn--secondary {
+          background-color: $secondary;
+        }
+        &.btn--success {
+          background-color: $success;
+        }
+        &.btn--info {
+          background-color: $info;
+        }
+        &.btn--warning {
+          background-color: $warning;
+        }
+        &.btn--danger {
+          background-color: $primaryLight;
+        }
+      }
+    }
     &.btn--icon {
       width: 35px;
       height: 35px;
@@ -173,9 +204,14 @@ input[type="button"] {
       text-align: center;
       font-size: 14px;
       transition: all 0.3s ease;
+      position: relative;
       svg,
       i {
-        padding: 5px 0px 4px 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 1px;
       }
       &.btn--default {
         background-color: $default;
@@ -214,11 +250,18 @@ input[type="button"] {
       height: 35px;
       border-radius: 100%;
       padding: 5px 0px 4px 1px;
-      text-align: center;
       font-size: 14px;
-      transition: all 0.3s ease;
       background-color: transparent;
+      position: relative;
       border: 0px;
+      svg,
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 1px;
+      }
       &.icon--hover{
         &.btn--default {
           color: $light-gray;
@@ -333,6 +376,13 @@ input[type="button"] {
       border: none;
       text-align: left;
     }
+    
+    &.without-line{
+      &:hover{
+        text-decoration: none;
+        transition: 0.3s ease all;
+      }
+    }
 
     &.btn--center {
       display: block;
@@ -344,6 +394,7 @@ input[type="button"] {
       margin: 5px;
       font-size: 18px;
       font-weight: 600;
+      border-radius: 30px;
     }
 
     &.btn--sm {
@@ -359,9 +410,35 @@ input[type="button"] {
       transition: background 0.3s;
 
       &:hover {
-        background-image: radial-gradient(circle, transparent 1%, #999 1%);
+        
         background-position: center;
         background-size: 15000%;
+        &.btn--default {
+          background-image: radial-gradient(circle, transparent 1%, rgb(197, 194, 194) 1%);
+        }
+        &.btn--primary {
+          background-image: radial-gradient(circle, transparent 1%, #9cb9c0 1%);
+        }
+
+        &.btn--secondary {
+          background-image: radial-gradient(circle, transparent 1%, rgb(75, 125, 139) 1%);
+        }
+
+        &.btn--success {
+          background-image: radial-gradient(circle, transparent 1%, #699673 1%);
+        }
+
+        &.btn--info {
+          background-image: radial-gradient(circle, transparent 1%, #7498b1 1%);
+        }
+
+        &.btn--warning {
+          background-image: radial-gradient(circle, transparent 1%, #8b5c3f 1%);
+        }
+
+        &.btn--danger {
+          background-image: radial-gradient(circle, transparent 1%, #924343 1%);
+        }
       }
 
       &:active {
@@ -369,7 +446,7 @@ input[type="button"] {
         background-size: 100%;
 
         &.btn--default {
-          background-color: $light-gray;
+          background-color: $default;
         }
 
         &.btn--primary {
@@ -377,12 +454,11 @@ input[type="button"] {
         }
 
         &.btn--secondary {
-          background-color: $black;
+          background-color: $secondary;
         }
 
         &.btn--success {
           background-color: $success;
-          border-color: $success;
         }
 
         &.btn--info {
@@ -425,12 +501,26 @@ a.btn {
   &.btn--text {
     text-decoration: none;
   }
-  &:link,
   &:hover{
     color: white;
   }
   &:active {
     opacity: 1.8;
+  }
+  &.btn--hover-line{
+    &:after{
+      content: '';
+      display: block;
+      margin: auto;
+      height: 1px;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background:$light-gray;
+    }
   }
 }
 
