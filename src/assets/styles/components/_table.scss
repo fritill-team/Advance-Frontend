@@ -34,7 +34,7 @@
     line-height: 1.5;
     text-align: center;
 
-    .main-cell {
+    &.main-cell {
       text-align: left;
     }
 
@@ -57,7 +57,7 @@
 html[dir="rtl"] {
   .table {
     th, td {
-      .main-cell {
+      &.main-cell {
         text-align: right;
       }
     }

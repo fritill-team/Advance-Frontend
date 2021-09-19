@@ -18,6 +18,7 @@
     // box-shadow: -10px 0 10px 2px $accent;
     height: 60px;
   }
+
   .header-player__logo {
     display: block;
     margin: 0;
@@ -27,9 +28,11 @@
     // height: fit-content;
     padding: 14px 30px 2px 30px;
     position: relative;
+
     .logo__img {
       height: 28px;
     }
+
     &:after {
       border: 30px solid transparent;
       border-left: 15px solid #0d758e;
@@ -43,12 +46,14 @@
       z-index: 1;
     }
   }
+
   .header-player__img-small {
     display: none;
     margin: 0;
     line-height: 1;
     height: fit-content;
     padding: 6px 10px 5px 4px;
+
     .logo__img {
       width: 30px;
     }
@@ -66,9 +71,11 @@
     font-size: 18px;
     font-weight: 400;
     position: relative;
+
     &:hover {
       color: #fff;
     }
+
     //  display: grid;
 
     .courses__name {
@@ -77,6 +84,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
     &:after {
       border: 30px solid transparent;
       border-left: 15px solid #1597bb;
@@ -90,6 +98,7 @@
       z-index: 1;
     }
   }
+
   .header-player__course-name {
     margin: 0;
     line-height: 2.1;
@@ -103,10 +112,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+
     &:hover {
       // background-color: #fab01c;
       color: $white;
     }
+
     .course-name__title {
       font-size: 18px;
       overflow: hidden;
@@ -114,6 +125,7 @@
       white-space: nowrap;
     }
   }
+
   @media (max-width: 767px) {
     .header-player__logo {
       width: 80px;
@@ -128,17 +140,20 @@
       line-height: 4.6;
     }
   }
+
   html[dir="rtl"] {
     .header-player__logo {
       padding: 6px 4px 5px 10px;
     }
   }
 }
+
 html.night-mode {
   body {
     background-color: rgb(56, 68, 77);
   }
 }
+
 .header__logo {
   float: left;
   width: 135px;
@@ -149,6 +164,7 @@ html.night-mode {
     display: block;
     margin: 0;
     height: 35px;
+
     img {
       width: 100%;
       height: 100%;
@@ -285,6 +301,7 @@ html.night-mode {
     transition: box-shadow 0.1s ease, width 0.1s ease;
 
   }
+
   .massege__opencard {
     padding: 18px 8px;
     font-size: 20px;
@@ -363,47 +380,46 @@ html.night-mode {
   }
 }
 
-  .massege__menu {
-    cursor: auto;
-    position: absolute;
-    display: none;
-    outline: none;
-    top: 100%;
-    // min-width: max-content;
-    margin-top: 6px !important;
-    padding: 0;
-    background: $white;
-    font-size: 1em;
-    text-shadow: none;
+.massege__menu {
+  cursor: auto;
+  position: absolute;
+  display: none;
+  outline: none;
+  top: 100%;
+  // min-width: max-content;
+  margin-top: 6px !important;
+  padding: 0;
+  background: $white;
+  font-size: 1em;
+  text-shadow: none;
+  text-align: left;
+  left: auto !important;
+  right: 0 !important;
+  // box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
+  border: 1px solid rgba(34, 36, 38, 0.15) !important;
+  border-radius: 0.28571429rem;
+  transition: opacity 0.1s ease;
+  z-index: 11;
+  will-change: transform, opacity;
+  min-width: 300px !important;
+
+  .menu--item {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border: none;
+    height: auto;
     text-align: left;
-    left: auto !important;
-    right: 0 !important;
-    // box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
-    border: 1px solid rgba(34, 36, 38, 0.15) !important;
-    border-radius: 0.28571429rem;
-    transition: opacity 0.1s ease;
-    z-index: 11;
-    will-change: transform, opacity;
-    min-width: 300px !important;
-
-    .menu--item {
-      position: relative;
-      cursor: pointer;
-      display: block;
-      border: none;
-      height: auto;
-      text-align: left;
-      border-top: none;
-      line-height: 1em;
-      color: rgba(0, 0, 0, 0.87);
-      padding: 0.78571429rem 1.14285714rem !important;
-      font-size: 1rem;
-      text-transform: none;
-      font-weight: 400;
-      box-shadow: none;
-      border-bottom: 1px solid $light-white !important;
-    }
-
+    border-top: none;
+    line-height: 1em;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 0.78571429rem 1.14285714rem !important;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+    box-shadow: none;
+    border-bottom: 1px solid $light-white !important;
+  }
 
 
   .list__profile {
@@ -419,6 +435,7 @@ html.night-mode {
 
   }
 }
+
 .item__view-all {
   width: 100%;
   text-align: center;
@@ -429,6 +446,7 @@ html.night-mode {
   color: $darkBlack !important;
   font-weight: 500;
 }
+
 .profile__account {
   padding: 0;
   float: right;
@@ -593,7 +611,7 @@ html.night-mode {
             bottom: -1px;
             border-radius: 50%;
             transition-property: transform, box-shadow, -webkit-transform,
-              -webkit-box-shadow;
+            -webkit-box-shadow;
           }
         }
       }
