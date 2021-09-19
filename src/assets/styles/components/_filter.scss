@@ -29,7 +29,7 @@
 .filter__selector {
   float: right;
   font-size: 14px;
-  color: $darkBlack;
+  color: $primary;
   font-weight: 400;
   .selector--dropdown {
     cursor: pointer;
@@ -41,7 +41,8 @@
     text-align: left;
     .selector__text {
       font-weight: 500 !important;
-        display: contents;
+      display: contents;
+
     }
     .selector__icon {
       margin: 0 0.21428571em;
