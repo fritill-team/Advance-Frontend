@@ -15,7 +15,7 @@
     a.course-list__header(href='javascript:void(0)')
       .header__header-title
         span.header-title__title
-          i.uil.uil-presentation-play.title__icon
+          i.fas.fa-layer-group.title__icon
           span.title__title-text Introduction fgdfg to this Course
       .header__header-details
         span.header-details__num-item 4 / 8 lectures
@@ -23,18 +23,21 @@
     .course-list__list-content
       .list-content__content-item
         .content-item__content-name
-          i.uil.uil-file.content-name__icon
+          i.fas.fa-file-alt.content-name__icon
           .content-name__top-title
             .top-title__title A Note On Asking For Help
         .content-item__details
-          span.details__content-summary 00:12
+          a.details--preview-text(href='#') Preview
+          //- span.details__content-summary 00:12
       .list-content__content-item
         .content-item__content-name
-          i.uil.uil-play-circle.content-name__icon
+          i.far.fa-play-circle.content-name__icon
           .content-name__top-title
             .top-title__title Why This Course?
         .content-item__details
-          a.details--preview-text(href='#') Preview
+          a.d-flex.align-self-center.my-0.mx-4
+            i.far.fa-check-circle
+          span.text-1 70%
           span.details__content-summary 07:48
       .list-content__content-item
         .content-item__content-name
