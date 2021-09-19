@@ -5,17 +5,28 @@
 
   &.tabs--center {
     justify-content: center;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
-
   margin-bottom: 20px;
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba($color: #000000, $alpha: .2);
+  }
 }
 
 .tab {
   font-size: 18px;
   border-radius: 0;
   // margin: 14px 25px;
-  margin: 14px 25px 14px 15px;
+  padding: 14px 15px;
+  margin: 0 15px 0 0;
   line-height: 1;
   white-space: nowrap;
   text-decoration: none;
@@ -24,7 +35,22 @@
   background: transparent;
   display: inline-block;
   position: relative;
-
+  transition: .3s ease all;
+  &:last-of-type{
+    margin-right: 0;
+  }
+  &:hover{
+    background-color: rgba($color: #000000, $alpha: .07);
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $primary;
+    left: 0;
+    bottom: 0;
+  }
   &:first-of-type {
     // margin: 14px 25px 14px 15px;
   }
@@ -50,12 +76,12 @@
 
   &.tab--active {
     position: relative;
-    transition: 0.3s ease all;
     border-radius: 0;
-    font-weight: 600;
+    // font-weight: 600;
     line-height: 1;
-    color: #fff;
-
+    background-color: rgba($color: #000000, $alpha: .07);
+    color: $primary;
+    transition: .3s ease all;
     // &::before {
     //   position: absolute;
     //   content: "";
@@ -67,16 +93,25 @@
     //   width: 0;
     // }
 
-    &::after {
+    &:after {
       position: absolute;
       content: '';
-      width: 180%;
-      height: 180%;
+      width: 100%;
+      // width: 180%;
+      // height: 180%;
       border-radius: 5px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
       background-color: $primary;
+      z-index: -1;
+    }
+    &:before{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
       z-index: -1;
     }
   }
