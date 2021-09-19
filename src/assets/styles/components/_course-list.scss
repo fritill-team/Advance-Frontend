@@ -168,10 +168,11 @@
   .details--preview-text {
     font-size: 14px;
     font-weight: 400;
-    color: #333;
-    &:hover {
-      color: #ed2a26 !important;
-    }
+    margin: 0;
+    // color: #333;
+    // &:hover {
+    //   color: #ed2a26 !important;
+    // }
   }
   .details__content-summary {
     color: #686f7a;
