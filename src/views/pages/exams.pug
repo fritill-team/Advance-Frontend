@@ -1,11 +1,30 @@
-extends ../layouts/admin.pug
+extends ../layouts/master.pug
 
 
 block title
 	title exam page
 
 block content
-	.container-fluid
-		.row
-			.col-lg-12
-				#vue-app
+	.mt-5
+		.container
+			.row
+				.col-lg-12
+					.card
+						.card__header 
+							.field-wrapper
+								label.text-field__label Insert you question *
+								.text-field__content
+									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								ul.messages
+									li.gray
+										| hint message for question.
+							//- select.js-example-basic-single.select2(name='state')
+								option(value='eg') Egypt
+								option(value='AL') Alabama
+								option(value='WY') Wyoming
+							select.question__type
+								option(value='one') First
+								option(value='two' disabled='disabled') Second (disabled)
+								option(value='three') Third
+
+

@@ -114,3 +114,9 @@
 	}
 
 }
+
+.question__type{
+  & + span.select2{
+    
+  }
+}

@@ -61,7 +61,7 @@
       margin: 0;
       font-size: 14px;
       font-weight: 400;
-      color: #fff;
+      color: $primary;
       max-height: 10px;
       &:hover {
         color: $accent;
@@ -70,7 +70,7 @@
     .playlist-info {
       font-size: 12px;
       line-height: 1px;
-      color: #fff;
+      color: $primary;
     }
   }
   .play-list__info {

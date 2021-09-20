@@ -1,5 +1,6 @@
 .playlist {
-  background-color: lighten(#38444d, 5%);
+  // background-color: lighten(#38444d, 5%);
+  background-color: #fff;
   overflow-y: auto;
   z-index: 995;
   transition: all 0.3s ease;
@@ -28,7 +29,7 @@
 }
 
 .playlist__header-section {
-  background: #38444d;
+  background: $primary;
   padding: 10px 5px;
   margin-bottom: 15px;
   .playlist-name {
@@ -46,7 +47,7 @@
   margin: 3px 0;
 
   .playlist__title {
-    color: $white;
+    color: $primary;
     font-size: 15px;
     margin: 0;
     letter-spacing: 1px;
