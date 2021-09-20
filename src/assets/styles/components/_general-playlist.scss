@@ -163,3 +163,16 @@ html[dir="rtl"] {
     }
   }
 }
+
+.night-mode{
+  .play-list{
+    .play-list__content{
+      .play-list__title{
+        color: $white;
+      }
+      .playlist-info{
+        color: $white;
+      }
+    }
+  }
+}

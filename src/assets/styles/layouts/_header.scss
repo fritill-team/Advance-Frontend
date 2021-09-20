@@ -789,3 +789,11 @@ html.night-mode {
     }
   }
 }
+
+.night-mode{
+  .header{
+    &.header--player{
+      background: $primary-darkmode;
+    }
+  }
+}
