@@ -413,20 +413,4 @@ window.onload = function() {
   document.getElementById("vcode1").focus();
 };
 
-// dropdown-menu
-$('.more-dropdown__link').each(function(){
-  $(this).on('click', function(){
-    $('.more-dropdown').removeClass('active')
-    $(this).parent().addClass('active')
-    event.stopPropagation();
-  })
-})
 
-$('.content__item').each(function(){
-  $(this).on('click', function() {
-    $('.more-dropdown').removeClass('active')
-  })
-})
-$(document).on('click', function(){
-  $('.more-dropdown').removeClass('active')
-})
