@@ -8,23 +8,34 @@ block content
 	.mt-5
 		.container
 			.row
-				.col-lg-12
-					.card
+				.col-lg-8.offset-2
+					.card.card--exam
 						.card__header 
 							.field-wrapper
-								label.text-field__label Insert you question *
+								//- label.text-field__label Insert you question *
 								.text-field__content
 									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 								ul.messages
 									li.gray
 										| hint message for question.
-							//- select.js-example-basic-single.select2(name='state')
-								option(value='eg') Egypt
-								option(value='AL') Alabama
-								option(value='WY') Wyoming
 							select.question__type
 								option(value='one') First
 								option(value='two' disabled='disabled') Second (disabled)
 								option(value='three') Third
+						.field-wrapper
+							//- label.text-field__label Course Description*
+							.text-field__content
+								textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+							ul.messages
+								li
+									| Please provide a valid city.
+							//- select.js-example-basic-single.select2(name='state')
+								option(value='eg') Egypt
+								option(value='AL') Alabama
+								option(value='WY') Wyoming
+
+
+							
+							
 
 
