@@ -1,6 +1,6 @@
 header.header
 	block button-collapsed
-	.container
+	.container-fluid
 		.d-flex.align-items-center
 			.header__logo
 				a.header__img(href='index.html')
@@ -16,8 +16,9 @@ header.header
 						i.fas.fa-search.inputs-form--icon
 			.header__notification
 				ul.notification__list
-					block my-courses
-					a.text-2.my-0.white.bold(href='#') login
+					li.list__list-item
+						block my-courses
+						a.text-2.my-0.white.bold(href='#') login
 					//- .more-dropdown.btn--tool.header__sub-menu
 						.more-dropdown__link
 							a.massege__opencard(href='#' title='Messages')
