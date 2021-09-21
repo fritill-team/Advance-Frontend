@@ -8,9 +8,11 @@ block content
 	.mt-5
 		.container
 			.row
-				.col-lg-8.offset-2
+				.col-lg-8.offset-lg-2
 					.card.card--exam
-						.card__header 
+						.card--drag-vertical 
+							i.fas.fa-grip-horizontal
+						.card__content 
 							.field-wrapper
 								//- label.text-field__label Insert you question *
 								.text-field__content
@@ -29,7 +31,32 @@ block content
 							ul.messages
 								li
 									| Please provide a valid city.
-							//- select.js-example-basic-single.select2(name='state')
+						
+						.field-wrapper.text-field__input--text
+								//- label.text-field__label Insert you question *
+								.text-field__content
+									//- .drag-vertical
+									i.fas.fa-grip-vertical.exam__icon
+									input(type="checkbox", name="" id="checkbox-mcq")
+									label.checkbox-mcq(for="checkbox-mcq")
+										i.fas.fa-check
+									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input(type="file", name="" id="file-input")
+									label.file-input(for="file-input") 
+										i.far.fa-image
+								ul.messages
+									li.gray
+										| hint message for question.
+						.field-wrapper.text-field__input--text
+								//- label.text-field__label Insert you question *
+								.text-field__content
+									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									i.fas.fa-grip-vertical.exam__icon
+								ul.messages
+									li.gray
+										| hint message for question.
+										
+					//- select.js-example-basic-single.select2(name='state')
 								option(value='eg') Egypt
 								option(value='AL') Alabama
 								option(value='WY') Wyoming

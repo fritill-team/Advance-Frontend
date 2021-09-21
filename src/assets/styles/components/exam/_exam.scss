@@ -114,18 +114,90 @@
 	}
 
 }
-.card{
-  &.card--exam{
-    .card__header{
-      align-items: flex-start;
+// .card{
+  .card--exam{
+    padding: 14px;
+    .card--drag-vertical{
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      color: $primary;
       margin-bottom: 10px;
+    }
+    .card__content{
+      padding-left: 0;
+      display: flex;
+      // align-items: flex-start;
+      // margin-bottom: 10px;
+    }
+    .field-wrapper{
+      
     }
     // .select2{
     //   margin-top: 30px !important;
     // }
-    // .text-field__input{
-    //   width: 75%;
-    // }
+    .field-wrapper{
+      &.text-field__input--text{
+        .text-field__content{
+          display: flex;
+          align-items: center;
+          
+        }
+        .text-field__input{
+          box-shadow: none;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid rgba(#333, .2);
+          position: relative;
+          transition: .3s ease all;
+          width: 50%;
+          // padding-left: 0;
+          margin: 0 10px;          
+        }
+        input[type='checkbox']{
+          display: none;
+          &:checked{
+            & + .checkbox-mcq{
+              i{
+                opacity: 1;
+              }
+            }
+          }
+        }
+        input[type='file']{
+          display: none;
+        }
+        .file-input{
+          
+        }
+        .checkbox-mcq{
+          width: 18px;
+          height: 18px;
+          position: relative;
+          border-radius: 3px;
+          border: 1px solid $primary;
+          transition: .3s ease all;
+          cursor: pointer;
+          i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12px;
+            color: $primary;
+            opacity: 0;
+          }
+        }
+      }
+      .exam__icon{
+        display: inline-block;
+        margin-right: 10px;
+        color: $primary;
+        transition: .3s ease all;
+        font-size: 18px;
+      }
+
+    }
     .question__type{
       & + .select2{
         width: 23% !important;
@@ -147,6 +219,13 @@
         }
       }
     }
-
+    @media (max-width: 768px){
+      .card__content{
+        flex-wrap: wrap;
+      }
+      .field-wrapper{
+        width: 100%;
+      }
+    }
   }
-}
+// }
