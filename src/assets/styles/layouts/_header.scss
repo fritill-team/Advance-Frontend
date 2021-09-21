@@ -158,13 +158,12 @@ html.night-mode {
   float: left;
   width: 135px;
   // margin-left: 20px;
-  height: 100%;
-
+  height: 100%; 
   .header__img {
     display: block;
     margin: 0;
-    height: 35px;
-
+    height: 26px;
+    
     img {
       width: 100%;
       height: 100%;
@@ -173,8 +172,7 @@ html.night-mode {
   }
 
   .header__img-small {
-    display: none;
-
+    display: none; 
     img {
       width: 100%;
       height: 100%;
@@ -183,10 +181,10 @@ html.night-mode {
   }
   &.logo--sidebar{
     .header__img{
-      padding-right: 5px;
+      margin-left: 15px;
     }
     .header__img-small {
-      padding-right: 5px;
+      margin-left: 10px;
     }
   }
 }
@@ -240,10 +238,10 @@ html.night-mode {
     }
     &.logo--sidebar{
       .header__img{
-        padding-right: 5px;
+        margin-left: 15px;
       }
       .header__img-small {
-        padding-right: 5px;
+        margin-left: 10px;
       }
     }
   }
