@@ -228,9 +228,13 @@ button.btn{
     cursor: pointer;
     border: 1px solid $accent;
   }
+  .form-group__label[type="radio"]:checked +label{
+    border: 1px solid $accent;
+    color: $accent;
+  }
 }
 .question-form{
-  display: flex;
+  display: flex; 
   flex-direction: column;
   flex: 2 ;
   // justify-content: center;
