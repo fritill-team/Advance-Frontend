@@ -1,0 +1,28 @@
+.category {
+  position: relative;
+}
+.dropdown__menu {
+  .menu__link {
+    margin: 0;
+    .menu__icon {
+      color: #fff;
+    }
+  }
+}
+.menu__list {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  .list--item {
+  }
+}
+
+@media (max-width: 922px) {
+  .category {
+    display: none;
+  }
+}
+.active--menu {
+  display: block;
+}
