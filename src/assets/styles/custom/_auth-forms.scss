@@ -179,7 +179,13 @@
   }
   // this class adds styling of error message
   &.field-wrapper--error {
-    .text-field__label {
+    .check-field__label {
+      color: #dc3545;
+    }
+    .radio-field__label {
+      color: #dc3545;
+    }
+    .check-field__label {
       color: #dc3545;
     }
     .messages {
