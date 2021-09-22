@@ -1,93 +1,113 @@
-.check-field {
-  position: relative;
-  width: 200px;
-  padding: 5px;
-  input[type="checkbox"] {
-    display: none;
-    &:checked {
-      & + .check-field__label {
-        &:after {
-          display: block;
+.check-group {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  &.check-group--horizontal {
+    flex-direction: row;
+  }
+  .check-field {
+    position: relative;
+    width: 200px;
+    padding: 0 5px 5px 0;
+    input {
+      display: none;
+      &:checked {
+        & + .check-field__label {
+          &:after {
+            display: block;
+          }
+        }
+        & + .radio-field__label {
+          &:after {
+            display: block;
+          }
         }
       }
     }
-  }
-  .check-field__label {
-    position: relative;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    margin-bottom: 0;
-    &:before {
-      content: "";
-      color: $primary;
-      border: 1px solid $primary;
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      top: 0px;
-      margin-right: 8px;
-      border-radius: 3px;
-      transform: translateY(25%);
-    }
-    &:after {
-      position: absolute;
-      left: 5px;
-      content: "";
-      background-color: transparent;
-      height: 11px;
-      width: 9px;
-      border-bottom: 3px solid #0d758e;
-      border-right: 3px solid #0d758e;
-      display: none;
-      transform: translateY(-50%) rotate(35deg);
-      top: 50%;
+    .check-field__label {
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      margin-bottom: 0;
+      &:before {
+        content: "";
+        color: $primary;
+        border: 1px solid $primary;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        top: 0px;
+        margin-right: 8px;
+        border-radius: 3px;
+        transform: translateY(25%);
+      }
+      &:after {
+        position: absolute;
+        left: 4px;
+        content: "";
+        background-color: transparent;
+        height: 12px;
+        width: 10px;
+        border-bottom: 3px solid #0d758e;
+        border-right: 3px solid #0d758e;
+        display: none;
+        transform: translateY(-50%) rotate(35deg);
+        top: 50%;
+        padding: 0;
+      }
+      &.radio-field__label {
+        &:before {
+          content: "";
+          color: $primary;
+          border: 1px solid $primary;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          top: 0px;
+          margin-right: 8px;
+          border-radius: 20px;
+          transform: translate(4%, 18%);
+        }
+        &:after {
+          position: absolute;
+          left: 3px;
+          content: "";
+          width: 11px;
+          height: 11px;
+          background-color: #0d758e;
+          border-radius: 20px;
+          transform: translateY(-50%);
+          top: 50%;
+          border: 0;
+          display: none;
+        }
+      }
     }
   }
 }
-.radio-field {
-  position: relative;
-  width: 200px;
-  padding: 5px;
-  input[type="radio"] {
-    display: none;
-    &:checked {
-      & + .radio-field__label {
+html[dir="rtl"] {
+  .check-group {
+    .check-field {
+      padding: 0 0 5px 5px;
+      .check-field__label {
+        &:before {
+          margin-left: 8px;
+          margin-right: 0;
+        }
         &:after {
-          display: block;
+          right: 4px;
+        }
+        &.radio-field__label {
+          &:before {
+            margin-left: 8px;
+            margin-right: 0;
+          }
+          &:after {
+            right: 2px;
+          }
         }
       }
-    }
-  }
-  .radio-field__label {
-    position: relative;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    margin-bottom: 0;
-    &:before {
-      content: "";
-      color: $primary;
-      border: 1px solid $primary;
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      top: 0px;
-      margin-right: 8px;
-      border-radius: 20px;
-      transform: translate(4%, 18%);
-    }
-    &:after {
-      position: absolute;
-      left: 4px;
-      content: "";
-      width: 9px;
-      height: 9px;
-      background-color: #0d758e;
-      border-radius: 20px;
-      transform: translateY(-50%);
-      top: 50%;
-      display: none;
     }
   }
 }
