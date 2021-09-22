@@ -12,45 +12,46 @@ block content
 					.card.card--exam.mb-4
 						.card--drag-vertical 
 							i.fas.fa-grip-horizontal
-						.card__content 
+						.card__content
+							.d-flex.align-items-center.justify-content-between
+								.field-wrapper
+									//- label.text-field__label Insert you question *
+									.text-field__content
+										input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									ul.messages
+										li.gray
+											| hint message for question.
+								select.question__type
+									option(value='one') First
+									option(value='two' disabled='disabled') Second (disabled)
+									option(value='three') Third
 							.field-wrapper
-								//- label.text-field__label Insert you question *
+								//- label.text-field__label Course Description*
 								.text-field__content
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 								ul.messages
-									li.gray
-										| hint message for question.
-							select.question__type
-								option(value='one') First
-								option(value='two' disabled='disabled') Second (disabled)
-								option(value='three') Third
-						.field-wrapper
-							//- label.text-field__label Course Description*
-							.text-field__content
-								textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
-							ul.messages
-								li
-									| Please provide a valid city.
-						
-						.field-wrapper.text-field__input--text
-								//- label.text-field__label Insert you question *
-								.text-field__content
-									//- .drag-vertical
-									i.fas.fa-grip-vertical.exam__icon
-									//- input(type="checkbox", name="" id="checkbox-mcq")
-									.checkbox-mcq(for="checkbox-mcq")
-										i.fas.fa-check
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-									input(type="file", name="" id="file-input")
-									label.file-input(for="file-input") 
-										i.far.fa-image.exam__icon
-								ul.messages
-									li.gray
-										| hint message for question.
-								.preview
-									img(src="../../assets/images/sign.svg", alt="")
-						
-						.field-wrapper.text-field__input--text
+									li
+										| Please provide a valid city.
+							
+							.field-wrapper.text-field__input--text
+									//- label.text-field__label Insert you question *
+									.text-field__content
+										//- .drag-vertical
+										i.fas.fa-grip-vertical.exam__icon
+										//- input(type="checkbox", name="" id="checkbox-mcq")
+										.checkbox-mcq(for="checkbox-mcq")
+											i.fas.fa-check
+										input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+										input(type="file", name="" id="file-input")
+										label.file-input(for="file-input") 
+											i.far.fa-image.exam__icon
+									ul.messages
+										li.gray
+											| hint message for question.
+									.preview
+										img(src="../../assets/images/sign.svg", alt="")
+							
+							.field-wrapper.text-field__input--text
 								//- label.text-field__label Insert you question *
 								.text-field__content
 									//- .drag-vertical
@@ -69,7 +70,16 @@ block content
 									img(src="../../assets/images/sign.svg", alt="")
 
 						.card__footer
-							
+							div lorem
+							.card__footer-actions
+								button.btn.btn--text.btn--primary.icon--hover.mb-0
+									i.far.fa-trash-alt
+								button.btn.btn--text.btn--primary.icon--hover.mb-0
+									i.far.fa-clone
+								.switch
+									input#switch(type="checkbox", name="")
+									label(for="switch") Is required
+
 
 				.col-lg-8.offset-lg-2
 					.card.card--exam.mb-4
