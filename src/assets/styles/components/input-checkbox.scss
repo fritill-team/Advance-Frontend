@@ -1,0 +1,114 @@
+// input type checkbox
+.check-field-group {
+}
+.check-field {
+  position: relative;
+  width: 200px;
+  padding: 5px;
+  input[type="checkbox"] {
+    display: none;
+    &:checked {
+      & + .check-field__label {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  .check-field__label {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    cursor: pointer;
+    margin-bottom: 0;
+    &:before {
+      content: "";
+      font-family: "FontAwesome";
+      color: $primary;
+      background: #f7f7f7;
+      border: 1px solid $primary;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      top: 0px;
+      position: relative;
+      margin-right: 8px;
+      vertical-align: top;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      border-radius: 3px;
+      //   vertical-align: middle;
+    }
+    &:after {
+      position: absolute;
+      left: 4px;
+      top: 2px;
+      content: "";
+      background-color: transparent;
+      transform: rotate(37deg);
+      height: 10px;
+      width: 8px;
+      border-bottom: 4px solid $primary;
+      border-right: 4px solid $primary;
+      display: none;
+    }
+  }
+}
+
+.radio-field-group {
+}
+.radio-field {
+  position: relative;
+  width: 200px;
+  padding: 5px;
+  input[type="radio"] {
+    display: none;
+    &:checked {
+      & + .radio-field__label {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  .radio-field__label {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    cursor: pointer;
+    margin-bottom: 0;
+    &:before {
+      content: "";
+      font-family: "FontAwesome";
+      color: $primary;
+      background: #f7f7f7;
+      border: 1px solid $primary;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      top: 0px;
+      position: relative;
+      margin-right: 8px;
+      vertical-align: top;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      border-radius: 20px;
+      padding: 7px;
+    }
+    &:after {
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #0d758e;
+      border-radius: 20px;
+      display: none;
+    }
+  }
+}
