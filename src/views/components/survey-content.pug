@@ -1,13 +1,22 @@
 .content
   form.form-question
-    .question-form 
-      h2 Lorem ipsum dolor
-    .form-group.danger 	
-      input.form-group__input(type="radio")
-      label.form-group__label(for="") lorem
-    .form-group.warning 	
-      input.form-group__input(type="radio")
-      label.form-group__label(for="") lorem
-    .form-group.success 	
-      input.form-group__input(type="radio")
-      label.form-group__label(for="") lorem
+    .wrap
+      .form-group
+        input.form-group__input(type="radio")
+        label.form-group__label(for="") lorem
+      .form-group
+        input.form-group__input(type="radio")
+        label.form-group__label(for="") lorem
+      .form-group
+        input.form-group__input(type="radio")
+        label.form-group__label(for="") lorem
+    .question-form
+      h2.white Lorem ipsum dolor
+      p.text-3.white amet consectetur adipisicing elit.
+    .direction-form
+      button.btn.btn--primary.btn--with-icon.btn--ripple.hover.btn-left
+        i.fas.fa-arrow-left
+        | primary
+      button.btn.btn--primary.btn--with-icon.btn--ripple.hover.btn-right
+        i.fas.fa-arrow-right
+        | primary
