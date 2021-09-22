@@ -9,22 +9,27 @@ block content
 		.container
 			.row
 				.col-lg-8.offset-lg-2
-					.card.card--exam.mb-4
+					.card.card--exam.mb-4.card--exam-dragabl
 						.card--drag-vertical 
 							i.fas.fa-grip-horizontal
-						.card__content
-							.d-flex.align-items-center.justify-content-between
-								.field-wrapper
-									//- label.text-field__label Insert you question *
-									.text-field__content
-										input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-									ul.messages
-										li.gray
-											| hint message for question.
+						.card__header
+							.field-wrapper
+								//- label.text-field__label Insert you question *
+								.text-field__content
+									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								ul.messages
+									li.gray
+										| hint message for question.
+							.upload-input
+								input(type="file", name="" id="file-input")
+								label.file-input(for="file-input") 
+									i.far.fa-image.exam__icon
+							.field-wrapper
 								select.question__type
 									option(value='one') First
 									option(value='two' disabled='disabled') Second (disabled)
 									option(value='three') Third
+						.card__content
 							.field-wrapper
 								//- label.text-field__label Course Description*
 								.text-field__content
@@ -34,22 +39,22 @@ block content
 										| Please provide a valid city.
 							
 							.field-wrapper.text-field__input--text
-									//- label.text-field__label Insert you question *
-									.text-field__content
-										//- .drag-vertical
-										i.fas.fa-grip-vertical.exam__icon
-										//- input(type="checkbox", name="" id="checkbox-mcq")
-										.checkbox-mcq(for="checkbox-mcq")
-											i.fas.fa-check
-										input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-										input(type="file", name="" id="file-input")
-										label.file-input(for="file-input") 
-											i.far.fa-image.exam__icon
-									ul.messages
-										li.gray
-											| hint message for question.
-									.preview
-										img(src="../../assets/images/sign.svg", alt="")
+								//- label.text-field__label Insert you question *
+								.text-field__content
+									//- .drag-vertical
+									i.fas.fa-grip-vertical.exam__icon
+									//- input(type="checkbox", name="" id="checkbox-mcq")
+									.checkbox-mcq(for="checkbox-mcq")
+										i.fas.fa-check
+									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input(type="file", name="" id="file-input")
+									label.file-input(for="file-input") 
+										i.far.fa-image.exam__icon
+								ul.messages
+									li.gray
+										| hint message for question.
+								.preview
+									img(src="../../assets/images/sign.svg", alt="")
 							
 							.field-wrapper.text-field__input--text
 								//- label.text-field__label Insert you question *
@@ -68,7 +73,8 @@ block content
 										| hint message for question.
 								.preview
 									img(src="../../assets/images/sign.svg", alt="")
-
+						div.dragable-placeholder
+							i.fas.fa-ellipsis-h
 						.card__footer
 							div lorem
 							.card__footer-actions
