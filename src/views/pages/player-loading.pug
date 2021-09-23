@@ -1,0 +1,11 @@
+extends ../layouts/player-course.pug
+
+block title
+	title video-player
+block listVideo
+	include ../components/video-item-loader.pug
+block content
+	.loader-wrapper.loader-wrapper--fill
+		.loader
+	//- .video-player 
+		iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")
