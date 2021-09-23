@@ -4,16 +4,13 @@
   top: 0;
   bottom: 0;
   background: #fff;
-  overflow: hidden;
   width: 240px;
   z-index: 1;
   transition: all 0.3s ease-in;
-
   .sidebar__menu {
     position: absolute;
     top: 0;
     bottom: 0;
-    overflow: scroll;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -21,9 +18,6 @@
     .menu__section {
       border-bottom: 1px solid #e5e5e5;
       // padding: 0 5px 0 0;
-    }
-    &::-webkit-scrollbar {
-      width: 1px;
     }
   }
 }
@@ -69,15 +63,19 @@
   }
 }
 .list__sidebar {
-  border-bottom: 1px solid #e5e5e5;
+  overflow: scroll;
+  height: 100vh;
   .list__item {
     position: relative;
     min-height: 42px;
     line-height: 42px;
   }
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
 }
 .item__link {
-  overflow: hidden;
   font-size: 14px;
   text-decoration: none;
   font-weight: 500;
@@ -107,7 +105,6 @@
 }
 .menu__link {
   display: block;
-  overflow: hidden;
   font-size: 14px;
   text-decoration: none;
   color: $darkBlack;
@@ -140,7 +137,6 @@
 }
 .sub-menu {
   display: none;
-  overflow: hidden;
   list-style: none;
   .sub-menu__link {
     display: block;

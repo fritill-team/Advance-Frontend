@@ -1,8 +1,8 @@
-.menu--scrollbar {
-  &:hover {
-    overflow-y: auto !important;
-  }
-}
+// .menu--scrollbar {
+//   &:hover {
+//     overflow-y: auto;
+//   }
+// }
 .sub__menu {
   padding: 10px 0px;
   .menu__list {
@@ -19,7 +19,7 @@
         // padding-left: 50px;
         padding-right: 16px;
         font-size: 14px;
-            font-weight: 400;
+        font-weight: 400;
         color: $black;
         text-decoration: none;
         padding-left: 0 !important;
