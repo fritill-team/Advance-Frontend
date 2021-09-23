@@ -1,4 +1,4 @@
-var courseHover = document.getElementsByClassName('card-media__card-img');
+var courseHover = document.getElementsByClassName('course-hover');
 $(courseHover).on('mouseover' ,function () {
   $(".course-card").addClass("course-card--hover");
 });
