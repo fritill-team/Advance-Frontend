@@ -7,20 +7,8 @@ header.header
 					img(src='../../assets/images/Etqadem_Logo.svg' alt='')
 				a.header__img-small(href='index.html')
 					img(src='../../assets/images/Etqadem_Icon_Yellow.png' alt='')
-			.category
-				.category__dropdown
-					.dropdown__menu
-						a(class="menu__link" href='#' title='categories')
-							i.fas.fa-border-all.fab.menu__icon
-						ul.menu__list
-							li
-								a.list--item(href='#') Development
-							li
-								a.list--item(href='#') Office Productivity
-							li
-								a.list--item(href='#') Personal Development
-							li
-								a.list--item(href='#') Photography 
+			block category 
+			include ./list-category.pug
 			//- block category
 			//- 	include ../components/header-blocks/selectCategory.pug
 			.header__search

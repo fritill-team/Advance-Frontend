@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $(".category").on("click",function(){
-      $(".menu__list").toggleClass("active--menu");
+      $(".category__wrapper").toggleClass("active--category");
       $("body").toggleClass("overlay"); 
     }); 
-    // $(".category").on("click",function(event){ 
+    // $("body").on("click",function(){ 
     //   event.stopPropagation()
     // }); 
   });
