@@ -129,13 +129,13 @@
       }
     }
   }
-  .card--exam{
+  .question{
     padding: 14px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &.card--exam-dragable{
+    &.question-dragable{
       min-height: 200px;
       .dragable-placeholder{
         display: flex;
@@ -211,16 +211,7 @@
           // padding-left: 0;
           margin: 0 10px;          
         }
-        .preview{
-          width: 200px;
-          height: 150px;
-          margin: 16px 16px 16px 0;
-          img{
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-          }
-        }
+        
         input[type='checkbox']{
           display: none;
           &:checked{
