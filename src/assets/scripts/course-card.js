@@ -1,4 +1,6 @@
 var courseHover = document.getElementsByClassName('course-hover');
+$( courseHover ).find(".card-media__card-img"); 
+// $( courseHover  + ".card-media__card-img" );
 $(courseHover).on('mouseover' ,function () {
   $(".course-card").addClass("course-card--hover");
 });
