@@ -2,9 +2,9 @@ extends ../layouts/player-course.pug
 
 block title
 	title video-player
-block listVideo
-	include ../components/video-item-loader.pug
 block content
+	block listVideo
+		include ../components/video-item-loader.pug
 	.loader-wrapper.loader-wrapper--fill
 		.loader
 	//- .video-player 
