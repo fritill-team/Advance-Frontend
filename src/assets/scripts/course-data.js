@@ -13,7 +13,8 @@ const courseTemplate = function(course){
 											</div>
                       <a class="title-link text-2 semi-bold " href="course_detail_view.html">Complete Python Bootcamp: Go from zero to hero
 													in Python 3</a>
-                          <a class="card-content__card-title" href="#">Web Development | Python</a> 
+                          <a class="card-content__card-title" href="#">Web Development | Python</a>
+											<p class="card-auth__name-auth">By<a class="my-0 text-2 bold" href="#"> John Doe</a></p>
 									</div>
 									<div class="card-auth__price">
 											<div class="course-card__actions">
