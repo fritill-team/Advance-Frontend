@@ -39,8 +39,8 @@
 //   }
 // }
 
-form{
-  .list{
+form {
+  .list {
     max-height: 350px;
     // overflow-y: scroll;
   }
@@ -49,30 +49,30 @@ form{
 .list {
   display: flex;
   flex-flow: column nowrap;
-	width: 100%;
+  width: 100%;
 }
 
 .list-item {
   display: flex;
   align-items: center;
   padding: 10px 0;
-	&:first-of-type{
-		padding-top: 0;
-	}
-	&:last-of-type{
-		padding-bottom: 0;
-	}
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 
   &.list-item--border-bottom {
     border-bottom: 1px solid rgba($darkBlack, 0.1);
   }
 
   &:last-child.list-item--border-bottom {
-    border-bottom: none
+    border-bottom: none;
   }
   .list-item__avatar {
     width: 50px;
-    height:  50px;
+    height: 50px;
     border-radius: 50%;
 
     img {
@@ -90,7 +90,7 @@ form{
     border-radius: 50%;
     background-color: white;
     border: 2px solid #efefef;
-    i{
+    i {
       position: absolute;
       height: 100%;
       width: 100%;
@@ -101,7 +101,6 @@ form{
   }
   .list-item__content {
     padding: 0 10px;
-
   }
   .list-item__action {
     display: flex;
@@ -109,18 +108,19 @@ form{
     margin-left: auto;
     padding: 5px;
   }
-  .check-field{
+  .check-field {
     position: relative;
     width: 200px;
     padding: 5px;
-    .check-field__input{
+    .check-field__input {
       display: none;
     }
-    .check-field__label{
+    .check-field__label {
       position: relative;
       font-size: 14px;
       font-weight: 400;
-        line-height: 17px;
+      line-height: 17px;
+      color: $primary;
       cursor: pointer;
       &::before {
         font-family: "FontAwesome";
@@ -147,7 +147,7 @@ form{
   //   font-size: 16px;
   //   left: 5px;
   // }
-  .check-field input[type="checkbox"]:checked + .check-field__label::after{
+  .check-field input[type="checkbox"]:checked + .check-field__label::after {
     font-family: "FontAwesome";
     content: "\f00c";
     position: absolute;
@@ -156,14 +156,14 @@ form{
     font-size: 20px;
   }
 }
-a.list-item-link{
+a.list-item-link {
   display: flex;
   justify-content: center;
   padding: 10px 0;
   cursor: pointer;
   .list-item-link__avatar {
     width: 50px;
-    height:  50px;
+    height: 50px;
     border-radius: 50%;
     img {
       height: 100%;

@@ -30,13 +30,14 @@
       font-weight: 400;
       cursor: pointer;
       margin-bottom: 0;
+      color: $primary;
       &:before {
         content: "";
         color: $primary;
         border: 1px solid $primary;
         display: inline-block;
         width: 18px;
-        height: 18px;
+        height: 17px;
         top: 0px;
         margin-right: 8px;
         border-radius: 3px;
@@ -44,15 +45,15 @@
       }
       &:after {
         position: absolute;
-        left: 4px;
+        left: 6px;
         content: "";
         background-color: transparent;
         height: 12px;
-        width: 10px;
+        width: 8px;
         border-bottom: 3px solid #0d758e;
         border-right: 3px solid #0d758e;
         display: none;
-        transform: translateY(-50%) rotate(35deg);
+        transform: translateY(-50%) rotate(37deg);
         top: 50%;
         padding: 0;
       }
@@ -67,7 +68,7 @@
           top: 0px;
           margin-right: 8px;
           border-radius: 20px;
-          transform: translate(4%, 18%);
+          transform: translate(2%, 18%);
         }
         &:after {
           position: absolute;

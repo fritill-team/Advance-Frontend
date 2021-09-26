@@ -78,6 +78,11 @@
       }
     }
   }
+  .field-wrapper__label {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 16px;
+  }
   &.field-wrapper--no-label {
     .field-wrapper__label {
       display: none;
@@ -104,6 +109,7 @@
       font-weight: 600;
       padding: 0.5em 1.3333333333333333em;
       display: none;
+      color: $primary;
     }
   }
   // general text input details styling
@@ -179,6 +185,14 @@
   }
   // this class adds styling of error message
   &.field-wrapper--error {
+    input::placeholder {
+      color: #dc3545;
+      opacity: 1; /* Firefox */
+    }
+    textarea::placeholder {
+      color: #dc3545;
+      opacity: 1; /* Firefox */
+    }
     .check-field__label {
       color: #dc3545;
     }
@@ -189,9 +203,10 @@
       color: #dc3545;
     }
     .messages {
-      color: $primaryLight;
+      color: #dc3545;
       li {
         display: block;
+        color: #dc3545;
       }
     }
     .field-wrapper__content {
@@ -257,7 +272,7 @@
         line-height: 0;
         color: $white;
         content: "Upload File";
-        background-color: $primaryLight;
+        background-color: $primary;
         border-left: inherit;
         border-radius: 0 10rem 10rem 0;
       }
