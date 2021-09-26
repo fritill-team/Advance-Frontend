@@ -76,10 +76,6 @@ html[dir="rtl"] {
           text-align: right;
         }
         .card-content__card-auth {
-          p.card-auth__name-auth {
-            float: right;
-            text-align: right;
-          }
           .card-auth__price {
             float: left;
             text-align: left;
@@ -394,7 +390,7 @@ html[dir="rtl"] {
               padding-left: 10px;
               color: $black;
               font-weight: 500;
-                      }
+            }
           }
         }
         .header__header-details {
