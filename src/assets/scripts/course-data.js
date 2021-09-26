@@ -25,13 +25,16 @@ const courseTemplate = function(course){
 					</div>
     `
   }
-  
-  $(".course-hover").each(function(i, item) {
-    let course = $(item),
-        data = course.data("data"),
-        player;
-    
-    course.html(courseTemplate(data))
+  $(document).ready(function(){
+
+    $(".course-hover").each(function(i, item) {
+      let course = $(item),
+          data = course.data("data"),
+          player;
+      
+      course.html($(courseTemplate(data)))
+      console.log(data);
+  })
   //   console.log(course.find('.youtube-course-player')[0])
   //   function onYouTubeIframeAPIReady() {
   //     new YT.Player(course.find('.youtube-course-player')[0], {

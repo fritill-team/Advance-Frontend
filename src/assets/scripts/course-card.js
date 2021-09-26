@@ -1,12 +1,17 @@
-var courseHover = document.getElementsByClassName('course-hover');
-$( courseHover ).find(".card-media__card-img"); 
+// var courseHover = document.getElementsByClassName('course-hover');
+// var x = $(courseHover).find(".card-media__card-img");
+// console.log(x); 
 // $( courseHover  + ".card-media__card-img" );
-$(courseHover).on('mouseover' ,function () {
+// $(courseHover).on('mouseover' ,function () {
+//   $(".course-card").addClass("course-card--hover");
+// });
+// $(courseHover).on('mouseout' ,function () {
+//   $(".course-card").removeClass("course-card--hover");
+// });
+$(document)
+.on('mouseover', '.card-media__card-img', function () {
   $(".course-card").addClass("course-card--hover");
-});
-$(courseHover).on('mouseout' ,function () {
-  $(".course-card").removeClass("course-card--hover");
-});
+})
 // $(".course-hover .card-media__card-img").mouseover(function () {
 //   $(".course-card").addClass("course-card--hover");
 // });

@@ -409,9 +409,9 @@ $(document).ready(function(){
 
 
 
-window.onload = function() {
-  document.getElementById("vcode1").focus();
-};
+// window.onload = function() {
+//   document.getElementById("vcode1").focus();
+// };
 
 // dropdown-menu
 $('.more-dropdown__link').each(function(){
