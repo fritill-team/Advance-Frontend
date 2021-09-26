@@ -9,14 +9,14 @@ const courseTemplate = function(course){
 									<div class="course-card__details">
 											<div class="d-flex justify-content-between align-items-center">
 													<div class="card-content__card-details"><span class="card-details__card-view">109k views</span><span class="card-details__card-view">15 days ago</span></div>
-													<div class="card-overlay__crd-reviews"><i class="far fa-star"></i>4.5</div>
+													<div class="card-overlay__reviews"><i class="far fa-star"></i>4.5</div>
 											</div>
                       <a class="title-link text-2 semi-bold " href="course_detail_view.html">Complete Python Bootcamp: Go from zero to hero
 													in Python 3</a>
                           <a class="card-content__card-title" href="#">Web Development | Python</a>
-											<p class="card-auther__name-auth">By<a class="my-0 text-2 bold" href="#">John Doe</a></p>
+											<p class="card-auth__name-auth">By<a class="my-0 text-2 bold" href="#">John Doe</a></p>
 									</div>
-									<div class="card-auther__price">
+									<div class="card-auth__price">
 											<div class="course-card__actions"><a class="btn btn--primary btn--outlined mb-0" href="#" title="Enroll">Enroll</a><a class="btn-wishlist accent" href="#"><i class="fas fa-heart"></i></a></div>
 											<p class="my-0">$10</p>
 									</div>

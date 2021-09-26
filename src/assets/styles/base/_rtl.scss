@@ -18,7 +18,7 @@ html[dir="rtl"] {
               top: 2px;
             }
           }
-          .card-overlay__crd-reviews {
+          .card-overlay__reviews {
             left: unset;
             right: 10px;
             text-align: center;
@@ -75,12 +75,12 @@ html[dir="rtl"] {
         a.card-content__card-title {
           text-align: right;
         }
-        .card-content__card-auther {
-          p.card-auther__name-auth {
+        .card-content__card-auth {
+          p.card-auth__name-auth {
             float: right;
             text-align: right;
           }
-          .card-auther__price {
+          .card-auth__price {
             float: left;
             text-align: left;
           }
