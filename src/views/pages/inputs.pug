@@ -9,24 +9,24 @@ block content
 	form
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
-				label.text-field__label Course Title*
-				.text-field__content
-					input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+				label.field-wrapper__label Course Title*
+				.field-wrapper__content
+					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Course Title*
-				.text-field__content
-					input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+				label.field-wrapper__label Course Title*
+				.field-wrapper__content
+					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 				ul.messages
 					li
 						| Please provide a valid city.
 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper__file-input.field-wrapper--error
-				label.text-field__label File*
+				label.field-wrapper__label File*
 				.input-group
 					.file-input
 						input#inputGroupFile06.custom-file-input(type='file')
@@ -38,8 +38,8 @@ block content
 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper__select-input
-				label.text-field__label Language*
-				.text-field__content
+				label.field-wrapper__label Language*
+				.field-wrapper__content
 					select.ui.hj145.dropdown.cntry152.prompt.srch_explore.select-menu
 						option(value='') Select Language
 						option(value='1') English
@@ -63,7 +63,7 @@ block content
 		// input checkbox 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
-				label.text-field__label Course checkbox*
+				label.field-wrapper__label Course checkbox*
 				.check-group
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
@@ -94,7 +94,7 @@ block content
 		// input radio
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
-				label.text-field__label Course checkbox*
+				label.field-wrapper__label Course checkbox*
 				.check-group
 					.check-field
 						input.check-field__input(type="radio" id="radio-1" name="radioName")
@@ -108,8 +108,8 @@ block content
 		// 	textarea
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper
-				label.text-field__label Course Description*
-				.text-field__content
+				label.field-wrapper__label Course Description*
+				.field-wrapper__content
 					textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 				ul.messages
 					li
@@ -117,81 +117,81 @@ block content
 		// input__date
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label(for='start Date') start Date :
-				.text-field__content
-					input.text-field__input(type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
+				label.field-wrapper__label(for='start Date') start Date :
+				.field-wrapper__content
+					input.field-wrapper__input(type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__time
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Time :
-				.text-field__content
-					input.text-field__input(type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+				label.field-wrapper__label start Time :
+				.field-wrapper__content
+					input.field-wrapper__input(type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__datetime-local
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start Date and Time :
-				.text-field__content
-					input.text-field__input(type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
+				label.field-wrapper__label start Date and Time :
+				.field-wrapper__content
+					input.field-wrapper__input(type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__password
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label start password :
-				.text-field__content
-					input.text-field__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+				label.field-wrapper__label start password :
+				.field-wrapper__content
+					input.field-wrapper__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__number
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label(for='number').text-field__label Start Number :
-				.text-field__content
-					input.text-field__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
+				label(for='number').field-wrapper__label Start Number :
+				.field-wrapper__content
+					input.field-wrapper__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__email
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Start Email :
-				.text-field__content
-					input.text-field__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
+				label.field-wrapper__label Start Email :
+				.field-wrapper__content
+					input.field-wrapper__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__tel
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Start Telephone :
-				.text-field__content
-					input.text-field__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
+				label.field-wrapper__label Start Telephone :
+				.field-wrapper__content
+					input.field-wrapper__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 			// input__url
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Start Url :
-				.text-field__content
-					input.text-field__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
+				label.field-wrapper__label Start Url :
+				.field-wrapper__content
+					input.field-wrapper__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
 		// input__select
 		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
-				label.text-field__label Start Select :
-				.text-field__content
-					select.ui.dropdown.text-field__input
+				label.field-wrapper__label Start Select :
+				.field-wrapper__content
+					select.ui.dropdown.field-wrapper__input
 						option(value='') Select option
 						option(value='1') option 1
 						option(value='2') option 2
@@ -217,24 +217,24 @@ block content
 		.row
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper--error
-					label.text-field__label Course Title*
-					.text-field__content
-						input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-						.text-field__limit 60
+					label.field-wrapper__label Course Title*
+					.field-wrapper__content
+						input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+						.field-wrapper__limit 60
 					ul.messages
 						li
 							| Please provide a valid city.
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper--no-message
-					label.text-field__label Course Title*
-					.text-field__content
-						input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+					label.field-wrapper__label Course Title*
+					.field-wrapper__content
+						input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 					ul.messages
 						li
 							| Please provide a valid city.
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper__file-input.field-wrapper--error
-					label.text-field__label File*
+					label.field-wrapper__label File*
 					.input-group
 						.file-input
 							input#inputGroupFile06.custom-file-input(type='file')
@@ -244,8 +244,8 @@ block content
 							| Please provide a valid city.
 			.col-lg-12.col-md-12.col-sm-12
 				.field-wrapper
-					label.text-field__label Course Radio Button*
-					.text-field__content
+					label.field-wrapper__label Course Radio Button*
+					.field-wrapper__content
 						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 					ul.messages
 						li

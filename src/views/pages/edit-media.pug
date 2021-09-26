@@ -19,11 +19,11 @@ block content
 							input(name="file" type="file" multiple) 
 					form(action="")
 						.field-wrapper
-							label.text-field__label File Name
+							label.field-wrapper__label File Name
 								abbr(title="required") *
-							.text-field__content
+							.field-wrapper__content
 								input(
-									class="text-field__input"
+									class="field-wrapper__input"
 									type='text'
 									placeholder='Name'
 									name='name'
@@ -33,9 +33,9 @@ block content
 							ul.messages
 								li Please provide a valid city.
 						.field-wrapper
-							label.text-field__label Insert your course description
+							label.field-wrapper__label Insert your course description
 								abbr(title="required") *
-							.text-field__content
+							.field-wrapper__content
 								textarea(
 									class="textarea mb-2" 
 									name="description"
