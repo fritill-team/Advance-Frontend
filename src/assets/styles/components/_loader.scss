@@ -46,6 +46,16 @@
       border: .5em solid $white;
     }
   }
+  .video-item-loader{
+    .img{
+      background-color: darken(#fff, 2);
+    }
+    .details{
+      span{
+        background-color: darken(#fff, 2);
+      }
+    }
+  }
 }
 
 .video-item-loader {
@@ -61,7 +71,7 @@
   .img {
     width: 80px;
     height: 60px;
-    background: darken( #fff, 2);
+    background: darken( #fff, 10%);
     position: relative;
     overflow: hidden;
   }
@@ -70,7 +80,7 @@
     margin-left: 10px;
     span {
       display: block;
-      background: darken( #fff, 2);
+      background: darken( #fff, 10%);
       // border-radius: 10px;
       overflow: hidden;
       position: relative;
