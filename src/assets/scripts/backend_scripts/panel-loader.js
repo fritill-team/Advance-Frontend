@@ -21,15 +21,15 @@ export var reviewUpdateForm = function (item, url) {
     </div>
     <form action="${url}" method="post">
       <div class="field-wrapper field-wrapper--no-label">
-        <label class="text-field__label">Review</label>
-        <div class="text-field__content">
-            <input class="text-field__input" type="text" placeholder="Insert your course title." name="title">
+        <label class="field-wrapper__label">Review</label>
+        <div class="field-wrapper__content">
+            <input class="field-wrapper__input" type="text" placeholder="Insert your course title." name="title">
         </div>
         <ul class="messages"></ul>
       </div>
       <div class="field-wrapper field-wrapper--no-label">
-        <label class="text-field__label"></label>
-        <div class="text-field__content">
+        <label class="field-wrapper__label"></label>
+        <div class="field-wrapper__content">
             <div class="rate-input"></div>
         </div>
         <ul class="messages"></ul>
