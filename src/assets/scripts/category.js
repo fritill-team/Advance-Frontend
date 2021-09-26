@@ -10,15 +10,28 @@ $(document).ready(function(){
       $("body").toggleClass("overlay"); 
     }); 
   });
-  $(document).ready(function(){
-    $(".sub-menu--item").on("mouseenter",function(){
-      $(".category__date").addClass("date--open");
-    });
-    $(".sub-menu--item").on("mousemove",function(){
-      $(".category__date").removeClass("date--open");
-    });
-    
+  // $(document).ready(function(){
+  //   $(".sub-menu--item").on("mouseenter",function(){
+  //     $(".category__date").toggleClass("date--open");
+  //   }); 
+  // });
+  // $(document).ready(function(){  
+  //   $(".sub-menu--item").each(function(){  
+  //     $(this).on("mouseenter",function(){
+  //       $(".category__date").toggleClass("date--open"); 
+  //     }); 
+  //    });  
+  // });  
+  $(".menu__list").each(function(){  
+  $(this).on("mouseenter" ,function () {
+    if ($(this).hasClass('sub-menu--item')) {
+      $('.category__date').addClass('date--open');
+    }else {
+      $('.category__date').removeClass('date--open');
+    }
   });
+});  
+
   
   // open category details
 
