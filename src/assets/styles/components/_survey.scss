@@ -1,31 +1,25 @@
-// body{
-//   overflow: scroll;
-//   &::-webkit-scrollbar {
-//     width: 1px;
-//   }
-// }
 .playlist{
-  padding: 10px 5px;
-  color: #efefef;
-  &.playlist--opened {
-    box-shadow: -30px 0 30px 30px rgba(0, 0, 0, 0.2);
-  }
   &.playlist--size{
-    display: flex;
-    width: 50%;
-    position: fixed;
+    // display: flex;
+    // width: 30%;
+    // position: fixed;
+    // z-index: 5px;
+    // overflow-y: hidden;
+    @media (min-width: 0px) and (max-width: 992px) {
+      position: fixed;
+      top: 60px;
+      width:35% ;
+      left: -100px;
+      transition: all 0.3s ease-in;
+      bottom: 0;
+      .collapsible{
+
+      }
+    }  
   }
-  .playlist__menu {
-    // overflow: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    transition: all 0.4s ease;
-    object-fit: cover;
-  }
-  &.playlist--close {
-    flex: 1 1 0em;
+  &.playlist--survey{
+    padding: 10px 15px;
+    color: #efefef;
   }
   .playlist__header-section{
     padding: 10px 15px;
@@ -44,64 +38,6 @@
   display: flex;
   justify-content: center;
 }
-.playlist__menu{
-  // background-color: lighten(#38444d, 5%);
-  padding: 15px 10px;
-  .playlist-name {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-.playlist__header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  margin: 3px 0;
-
-  .playlist__title {
-    color: $white;
-    font-size: 15px;
-    margin: 0;
-    letter-spacing: 1px;
-  }
-
-  .playlist__close {
-    background: $accent;
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 1.3;
-  }
-
-  .playlist__close-icon {
-    color: #fff;
-  }
-}
-.header {
-  z-index: 5;
-  width: 100%;
-  height: 60px;
-  display: flex ;
-  align-items: center;
-  .logo{
-    padding: 14px 30px 2px 30px;
-    position: relative;
-    img{
-      padding-left: 10px;
-    }
-    p{
-      font-size: 16px;
-      letter-spacing: .15px;
-      font-weight: 400;
-      line-height: 1.5;
-      position: absolute;
-      right: 0;
-    }
-  }
-}
 
 button.btn{
   margin: auto;
@@ -109,9 +45,6 @@ button.btn{
   display: flex;
   margin-top: 10px;
   padding: 12px 30px;
-  i{
-    color: $accent;
-  }
 }
 
 .list-item {
@@ -144,8 +77,25 @@ button.btn{
     border-bottom: 1px solid rgba($darkBlack, 0.1);
     padding: 25px;
   }
-  
 }
+.canvas-wrap {
+  position: relative;
+  width: 200px;
+}
+span#procent {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  color: $accent;
+  &::after {
+    content: '%';
+  }
+}
+
+// survey-content
 .content{
   display: flex;
   flex-wrap: wrap;
@@ -160,102 +110,76 @@ button.btn{
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.question-form{
-  display: flex; 
-  flex-direction: column;
-  // justify-content: center;
-  h2{
-    margin: 0;
+  .form-question__question-form{
+    display: flex; 
+    flex-direction: column;
+    // justify-content: center;
+    h2{
+      margin: 0;
+    }
   }
-}
-
-.wrap{
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  .wrap__form-group{
+  
+  .form-question__wrap{
     display: flex;
     flex-direction: row;
-    .form-group__input{
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    .wrap__form-group{
       display: flex;
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-      &:checked + .form-group__label{
-        color: $accent;
-        border: 1px solid $accent;
+      flex-direction: row;
+      .form-group__input{
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked + .form-group__label{
+          color: $accent;
+          border: 1px solid $accent;
+        }
+      }
+      input[type=checkbox] + .form-group__label{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.1em;
+        font-weight: 300;
+        color: $white;
+        margin: 1em;
+        border: 1px solid $white;
+        width: 5em;
+        height: 5em;
+        border-radius: 100%;
+        &:hover{
+          color: $accent;
+          cursor: pointer;
+          border: 1px solid $accent;
+        }
       }
     }
-    input[type=checkbox] + .form-group__label{
+    @media (min-width: 0px) and (max-width: 650px) {
+      display: flex;
+    }  
+  }
+  .form-question__direction-form{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    .btn{
       padding: 10px 15px;
-      // width: 9em;
+    }
+    .btn-right{
       display: flex;
-      // cursor: pointer;
-      justify-content: center;
-      align-items: center;
-      font-size: 2.1em;
-      font-weight: 300;
-      color: $white;
-      margin: 1em;
-      border: 1px solid $white;
-      width: 5em;
-      height: 5em;
-      border-radius: 100%;
-      &:hover{
-        color: $accent;
-        cursor: pointer;
-        border: 1px solid $accent;
+      flex-direction: row-reverse;
+      i{
+        padding-left: 10px;
+      }
+    }
+    .btn-left{
+      i{
+        padding-right: 10px;
       }
     }
   }
-  @media (min-width: 0px) and (max-width: 650px) {
-    display: flex;
-    flex-direction: column;
-  }  
-}
-
-.direction-form{
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  .btn{
-    padding: 10px 15px;
-  }
-  .btn-right{
-    display: flex;
-    flex-direction: row-reverse;
-    i{
-      padding-left: 10px;
-    }
-  }
-  .btn-left{
-    i{
-      padding-right: 10px;
-    }
-  }
-}
-span#procent {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: 50px;
-  transform: translate(-50%, -50%);
-  color: $accent;
-}
-
-span#procent{
-  &::after {
-    content: '%';
-  }
-}
-
-.canvas-wrap {
-  position: relative;
-  width: 200px;
-  height: 200px;
 }
