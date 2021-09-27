@@ -140,7 +140,7 @@ span#procent {
           border: 1px solid $accent;
         }
       }
-      input[type=checkbox] + .form-group__label{
+      input:is([type=checkbox], [type="radio"]) + .form-group__label{
         padding: 10px 15px;
         display: flex;
         justify-content: center;
@@ -153,6 +153,7 @@ span#procent {
         width: 5em;
         height: 5em;
         border-radius: 100%;
+        position: relative;
         &:hover{
           color: $accent;
           cursor: pointer;
@@ -160,6 +161,24 @@ span#procent {
         }
       }
     }
+    // .click-me{
+    //   &::after{
+    //     position: absolute;
+    //     font-size: 100px;
+    //     content: "😃"
+    //   }
+    // } 
+    input.control [type="checkbox"] + label.click-me:after{
+      position: absolute;
+      font-size: 100px;
+      width: 50%;
+      height: 50%;
+      content: "😃"
+    } 
+    input[type="radio"]:checked + label.click-me:after{
+      content: "😩";
+    } 
+
     @media (min-width: 0px) and (max-width: 650px) {
       display: flex;
     }  
@@ -227,6 +246,29 @@ span#procent {
             border: 1px solid $accent;
           }
         }
+      }
+    }
+  }
+}
+.table-responsive{
+  .table-survey{
+    width: 100%;
+    border-spacing: 5px 10px;
+    th, td {
+      padding: 4px 8px;
+      font-size: 14px;
+      line-height: 1;
+      text-align: center;
+    }
+    .th-survey{
+      background-color: $white;
+      font-weight: 600;
+      color: $primary;
+    }
+    .td-survey{
+      &:hover{
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        cursor: pointer;
       }
     }
   }
