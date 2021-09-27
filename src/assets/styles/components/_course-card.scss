@@ -3,6 +3,7 @@
   position: relative;
   height: 415px;
   width: 100%;
+
   transition: all 0.4s ease-in-out;
   .course-card {
     transition: all 0.4s ease-in-out;
@@ -129,7 +130,7 @@
   }
   .course-card__card-media {
     background: $white;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
     float: left;
     padding: 10px;

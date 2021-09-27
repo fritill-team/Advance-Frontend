@@ -78,8 +78,13 @@
       }
     }
   }
+  .field-wrapper__label {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 16px;
+  }
   &.field-wrapper--no-label {
-    .text-field__label {
+    .field-wrapper__label {
       display: none;
     }
   }
@@ -87,7 +92,7 @@
   &.field-wrapper--no-margin {
     margin-top: 0;
   }
-  .text-field__label {
+  .field-wrapper__label {
     font-size: 14px;
     font-weight: 600;
     padding: 4px 16px;
@@ -104,10 +109,11 @@
       font-weight: 600;
       padding: 0.5em 1.3333333333333333em;
       display: none;
+      color: $primary;
     }
   }
   // general text input details styling
-  .text-field__content {
+  .field-wrapper__content {
     position: relative;
     font-weight: 400;
     font-style: normal;
@@ -121,11 +127,11 @@
     &::placeholder {
       transition: 0.3s ease all;
     }
-    .text-field__limit {
+    .field-wrapper__limit {
       background: $primaryLight;
       color: $white;
       font-weight: 500;
-        position: absolute;
+      position: absolute;
       right: 3px;
       border-radius: 100%;
       height: 35px;
@@ -136,24 +142,24 @@
       display: none;
     }
   }
-  .text-field__input {
+  .field-wrapper__input {
     font-size: 14px !important;
     width: 100%;
     border-radius: 10px;
     padding: 12px 1em;
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-    border: 1px solid #e5e5e5 !important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
     // padding: 10px;
-    &.text-field__input--rounded {
+    &.field-wrapper__input--rounded {
       border-radius: 20px !important;
     }
-    &.text-field--left {
+    &.field-wrapper--left {
       padding: 0 1em !important;
       height: 40px;
       font-size: 14px;
       font-weight: 400;
-      }
-    &.text-field--icon {
+    }
+    &.field-wrapper--icon {
       padding-left: 3em !important;
     }
 
@@ -164,44 +170,52 @@
       // border: 1px solid #333 !important;
       // box-shadow: none !important;
     }
-    &.text-field__input--border-none {
+    &.field-wrapper__input--border-none {
       border: none;
       padding: 12px 14px 12px 50px;
     }
   }
   // this class adds badge
   &.field-wrapper--limit {
-    .text-field__content {
-      .text-field__limit {
+    .field-wrapper__content {
+      .field-wrapper__limit {
         display: block;
       }
     }
   }
   // this class adds styling of error message
   &.field-wrapper--error {
-    .text-field__label {
+    input::placeholder {
+      color: #dc3545;
+      opacity: 1; /* Firefox */
+    }
+    textarea::placeholder {
+      color: #dc3545;
+      opacity: 1; /* Firefox */
+    }
+    .check-field__label {
+      color: #dc3545;
+    }
+    .radio-field__label {
+      color: #dc3545;
+    }
+    .check-field__label {
       color: #dc3545;
     }
     .messages {
-      color: $primaryLight;
+      color: #dc3545;
       li {
         display: block;
+        color: #dc3545;
       }
     }
-    .text-field__content {
-      .text-field__input {
+    .field-wrapper__content {
+      .field-wrapper__input {
         box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
         border: 1px solid #dc3545 !important;
       }
     }
   }
-
-  // this class hides messages
-  // &.field-wrapper--no-message{
-  //   .field-wrapper__message{
-  //     display: none;
-  //   }
-  // }
 
   // input type file
   &.field-wrapper__file-input {
@@ -210,7 +224,7 @@
       // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       border: 0;
       padding: 0;
-        color: #333;
+      color: #333;
       font-weight: 400;
       position: relative;
       text-align: left;
@@ -251,7 +265,7 @@
         line-height: 0;
         color: $white;
         content: "Upload File";
-        background-color: $primaryLight;
+        background-color: $primary;
         border-left: inherit;
         border-radius: 0 10rem 10rem 0;
       }
@@ -260,7 +274,7 @@
 
   // input type select
   &.field-wrapper__select-input {
-    .text-field__content {
+    .field-wrapper__content {
       height: 40px;
     }
     .select-menu {
@@ -297,41 +311,7 @@
     // height: 18px !important;
     display: block;
   }
-  // input type checkbox
-  .check-field-group {
-  }
-  .check-field {
-    position: relative;
-    width: 200px;
-    padding: 5px;
-    .check-field__input {
-      display: none;
-    }
-    .check-field__label {
-      position: relative;
-      font-size: 14px;
-      font-weight: 400;
-        line-height: 17px;
-      cursor: pointer;
-      &::before {
-        font-family: "FontAwesome";
-        color: red;
-        content: "";
-        // content: "";
-        background: #f7f7f7;
-        border: 1px solid #b4b4b4;
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        top: 0px;
-        position: relative;
-        margin-right: 10px;
-        vertical-align: top;
-        cursor: pointer;
-        text-align: center;
-      }
-    }
-  }
+
   // i.icon {
   //   color: red;
   //   position: absolute;
@@ -355,7 +335,7 @@
       label.radio-label-1 {
         font-size: 14px;
         font-weight: 400;
-            line-height: 17px;
+        line-height: 17px;
         padding: 5px;
         cursor: pointer;
         &::before {
@@ -401,7 +381,7 @@
     }
   }
 
-  // .text-field__error{
+  // .field-wrapper__error{
 
   // }
   ul.radio--group-inline {
@@ -422,7 +402,7 @@
       border-radius: 25px;
     }
   }
-  .select2-selection__rendered{
+  .select2-selection__rendered {
     margin-top: 0 !important;
   }
   .select2-selection {
@@ -500,7 +480,7 @@
     color: #aaaaaa;
     appearance: none;
     font-size: 18px;
-    bottom: -12px;
+    // bottom: -12px;
   }
 }
 .hide {
@@ -528,7 +508,7 @@
 .iti input,
 .iti input[type="text"],
 .iti input[type="tel"] {
-  border: none;
+  // border: none;
   padding: 12px 14px 12px 50px;
 }
 
@@ -561,17 +541,17 @@ html[dir="rtl"] {
   .field-wrapper {
     // general message styling
     // general text input details styling
-    .text-field__content {
-      .text-field__limit {
+    .field-wrapper__content {
+      .field-wrapper__limit {
         left: 3px;
         padding: 9px 11px;
       }
     }
-    .text-field__input {
-      &.text-field--icon {
+    .field-wrapper__input {
+      &.field-wrapper--icon {
         padding-right: 3em !important;
       }
-      &.text-field__input--border-none {
+      &.field-wrapper__input--border-none {
         padding: 12px 50px 12px 14px;
       }
     }
@@ -617,10 +597,10 @@ html[dir="rtl"] {
     }
     // textarea
 
-    // .text-field__error{
+    // .field-wrapper__error{
 
     // }
-    .text-field__label {
+    .field-wrapper__label {
       text-align: right;
     }
     .messages {
@@ -729,7 +709,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-        border-style: solid;
+      border-style: solid;
       position: relative;
       &::before {
         position: absolute;
@@ -761,7 +741,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-        border-style: solid;
+      border-style: solid;
       position: relative;
       &::before {
         position: absolute;

@@ -42,7 +42,7 @@
 @import "./components/_general-wrapper";
 @import "./components/_table";
 @import "./components/_rich-textarea";
-
+@import "./components/input-checkbox.scss";
 @import "./components/_general-playlist";
 @import "./components/_colleps";
 
@@ -56,6 +56,7 @@
 // @import "./base/night-mode.css";
 @import "./components/_list.scss";
 @import "./components/_panel.scss";
-
+@import "./components/_survey.scss";
+@import "./components/loader";
 /* TODO DELETE */
 @import "./base/_rtl.scss";

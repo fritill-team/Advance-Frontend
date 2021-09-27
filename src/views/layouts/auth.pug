@@ -1,7 +1,7 @@
 //- Master layout
 
 doctype html
-html(lang='en' dir="")
+html(lang='en' dir="" class="night-mode")
 	head
 		//- Stylesheets
 		link(href='../assets/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
@@ -33,14 +33,14 @@ html(lang='en' dir="")
 	body
 		div.wrapper
 			.page-content.page-content--auth
-				img(src="assets/images/auth/sign.svg", alt="")
+				img.auth__bg(src="../../assets/images/sign.svg", alt="")
 				div.container
 					div.row.justify-content-lg-center.justify-content-md-center
 						.col-lg-12
 							div.header-title
-								h2.title-h3 Advance
-								//- a(href='index.html')
-								//-   img(src='../../assets/images/sign_logo.png' alt='')
+								a.my-0(href='index.html')
+									img(src='../../assets/images/Etqadem_Icon_Yellow.png' alt='')
+								h1.title-1 Itqadem 
 								//- a(href='index.html')
 								//-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
 						div.col-lg-6.col-md-12

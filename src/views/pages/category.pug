@@ -7,10 +7,17 @@ block title
 block content
 	.container 
 		.row 
+			.col-xl-12.col-lg-12
+				section.category-item
+					h2.item_title Category Item
+						
 			.col-lg-12 
 				section.category-results.mt-3.mb-6
 					.filter__selector
-						.ui.inline.dropdown.selector--dropdown
+						.selector__text
+							p.item__result.primary results (
+								span.num-result 15)
+						//- .ui.inline.dropdown.selector--dropdown
 							.selector__text Sort
 							i.dropdown.icon.selector__icon
 							.menu.selector--menu

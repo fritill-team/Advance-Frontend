@@ -9,7 +9,7 @@ input[type="button"] {
   }
   &.btn {
     display: inline-block;
-    margin: 0 1em 1em 0;
+    margin: 0 5px 5px 0;
     padding: 5px 20px;
     font-size: 14px;
     border: 1px solid;
@@ -116,7 +116,6 @@ input[type="button"] {
       border: none;
       background-color: transparent;
       transition: 0.3s ease all;
-
       &.btn--default {
         color: $primary;
       }
@@ -137,6 +136,48 @@ input[type="button"] {
       }
       &.btn--danger {
         color: $primaryLight;
+      }
+      &.icon--hover{
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        padding: 5px 0px 4px 1px;
+        font-size: 14px;
+        background-color: transparent;
+        position: relative;
+        border: 0px;
+        svg,
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding-left: 1px;
+        }
+        &:hover{ 
+          color: white;
+          &.btn--default {
+            background-color: $light-gray;
+          }
+          &.btn--primary {
+            background-color: $primary;
+          }
+          &.btn--secondary {
+            background-color: $secondary;
+          }
+          &.btn--success {
+            background-color: $success;
+          }
+          &.btn--info {
+            background-color: $info;
+          }
+          &.btn--warning {
+            background-color: $warning;
+          }
+          &.btn--danger {
+            background-color: $primaryLight;
+          }
+        }
       }
     }
     &.btn--hover{
@@ -245,71 +286,6 @@ input[type="button"] {
         background-color: $primaryLight;
       }
     }
-    &.btn--icon-basic{
-      width: 35px;
-      height: 35px;
-      border-radius: 100%;
-      padding: 5px 0px 4px 1px;
-      font-size: 14px;
-      background-color: transparent;
-      position: relative;
-      border: 0px;
-      svg,
-      i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding-left: 1px;
-      }
-      &.icon--hover{
-        &.btn--default {
-          color: $light-gray;
-        }
-        &.btn--primary {
-          color: $primary;
-        }
-        &.btn--secondary {
-          color: $secondary;
-        }
-        &.btn--success {
-          color: $success;
-        }
-        &.btn--info {
-          color: $info;
-        }
-        &.btn--warning {
-          color: $warning;
-        }
-        &.btn--danger {
-          color: $primaryLight;
-        }
-        &:hover{ 
-          color: white;
-          &.btn--default {
-            background-color: $light-gray;
-          }
-          &.btn--primary {
-            background-color: $primary;
-          }
-          &.btn--secondary {
-            background-color: $secondary;
-          }
-          &.btn--success {
-            background-color: $success;
-          }
-          &.btn--info {
-            background-color: $info;
-          }
-          &.btn--warning {
-            background-color: $warning;
-          }
-          &.btn--danger {
-            background-color: $primaryLight;
-          }
-        }
-      }
-    }
     &.btn--with-icon {
       svg,
       i {
@@ -410,7 +386,7 @@ input[type="button"] {
       transition: background 0.3s;
 
       &:hover {
-        
+
         background-position: center;
         background-size: 15000%;
         &.btn--default {

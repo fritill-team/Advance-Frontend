@@ -29,9 +29,9 @@
 
 
   th, td {
-    padding: 10px;
+    padding: 4px 8px;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1;
     text-align: center;
 
     &.main-cell {
@@ -42,7 +42,14 @@
       font-size: 14px;
     }
   }
-
+  th{
+    text-transform: capitalize;
+  }
+  td{
+    &.td--nowrap{
+      white-space: nowrap;
+    }
+  }
   tbody {
     background: $white;
   }

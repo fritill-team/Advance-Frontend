@@ -61,8 +61,8 @@
       margin: 0;
       font-size: 14px;
       font-weight: 400;
-      color: #fff;
-      max-height: 10px;
+      color: $primary;
+      // max-height: 10px;
       &:hover {
         color: $accent;
       }
@@ -70,7 +70,7 @@
     .playlist-info {
       font-size: 12px;
       line-height: 1px;
-      color: #fff;
+      color: $primary;
     }
   }
   .play-list__info {
@@ -159,6 +159,19 @@ html[dir="rtl"] {
           right: 5px;
           cursor: pointer;
         }
+      }
+    }
+  }
+}
+
+.night-mode{
+  .play-list{
+    .play-list__content{
+      .play-list__title{
+        color: $white;
+      }
+      .playlist-info{
+        color: $white;
       }
     }
   }

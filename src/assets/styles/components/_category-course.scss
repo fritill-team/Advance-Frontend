@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 0;
+  margin: 40px 0 10px 0;
   .item_title {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 30px;
   }
 }
@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 3px rgba($color: $darkBlack2, $alpha: 0.05);
