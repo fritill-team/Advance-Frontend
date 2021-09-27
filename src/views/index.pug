@@ -41,7 +41,7 @@ block content
 		.row
 			.col-xl-9.col-lg-8
 				section.section-index.section-index--pt
-					.d-flex.flex-column.my-2
+					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.title-h6.title-h6--bolder.semi-bold Live Streams
 							a(href="#").text-3--bolder.gray See all
@@ -158,7 +158,7 @@ block content
 														span
 														| Live
 				section.section-index.section-index--pt.pt-0
-					.d-flex.flex-column.my-2
+					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.title-h6.title-h6--bolder.semi-bold Newest Courses
 							a(href="#").text-3--bolder.gray See all
@@ -167,11 +167,27 @@ block content
 							include ./components/course-wrapper.pug
 								block category-header
 								block content
-									.owl-carousel.featured_courses.owl-theme
+									.row
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+										.col-lg-4 
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+									
+									
+									//- .owl-carousel.featured_courses.owl-theme
+										.item
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+											//- +course-card
 										.item
 											include ./components/course-card.pug
-											+course-card
-										.item
 											+course-card
 										.item
 											+course-card
