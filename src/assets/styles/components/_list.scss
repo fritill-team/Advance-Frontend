@@ -126,7 +126,6 @@ form {
         font-family: "FontAwesome";
         color: red;
         content: "";
-        // content: "";
         background: #f7f7f7;
         border: 1px solid #b4b4b4;
         display: inline-block;
@@ -141,12 +140,6 @@ form {
       }
     }
   }
-  // i.icon {
-  //   color: red;
-  //   position: absolute;
-  //   font-size: 16px;
-  //   left: 5px;
-  // }
   .check-field input[type="checkbox"]:checked + .check-field__label::after {
     font-family: "FontAwesome";
     content: "\f00c";
@@ -173,3 +166,28 @@ a.list-item-link {
     }
   }
 }
+// //night mood
+// .night-mode {
+//   .list-item {
+//     &.list-item--border-bottom {
+//       border-bottom: 1px solid rgba($darkBlack, 0.1);
+//     }
+//     .list-item__icon {
+//       background-color: white;
+//       border: 2px solid #efefef;
+//     }
+//     .check-field {
+//       .check-field__label {
+//         color: $primary-night-mode;
+//         &::before {
+//           color: red;
+//           background: #f7f7f7;
+//           border: 1px solid #b4b4b4;
+//         }
+//       }
+//     }
+//     .check-field input[type="checkbox"]:checked + .check-field__label::after {
+//       background-color: red;
+//     }
+//   }
+// }

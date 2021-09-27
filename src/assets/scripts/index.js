@@ -13,7 +13,7 @@ import "./login.js"
 
 import "./toaster"
 
-import "./tabs.js"
+ import "./tabs.js"
 import "./select2"
 import "./convertable"
 import "./rating"
