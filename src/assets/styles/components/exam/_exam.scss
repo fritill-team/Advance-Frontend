@@ -143,89 +143,125 @@
     .card__content {
       display: none;
     }
-  }
-  .card__header {
-    align-items: center;
-    margin-bottom: 16px;
-    .field-wrapper {
-      margin-bottom: 0;
+    .file-input{
+      margin: 4px 10px 0 10px;
+      display: block;
+      i{
+        color: $primary;
+        font-size: 32px;
+        cursor: pointer;
+      }
     }
   }
-  .dragable-placeholder {
-    display: none;
-    justify-content: center;
-    i {
-      color: $primary;
-      font-size: 18px;
-    }
-  }
-  .card--drag-vertical {
+  .select-group{
     display: flex;
-    justify-content: center;
-    font-size: 16px;
-    color: $primary;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    .question__type{
+      & + .select2{
+        margin: 0 10px 10px 0;
+      }
+    }
   }
-  .card__content {
-    padding-left: 0;
+  .question{
+    padding: 14px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: flex-start;
-    // margin-bottom: 10px;
-  }
-  .field-wrapper {
-  }
-  .card__footer {
-    border-top: 1px solid rgba(#333, 0.2);
-    padding: 10px 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .card__footer-actions {
-    display: flex;
-    align-items: center;
-    i {
-      font-size: 18px;
-    }
-  }
-  // .select2{
-  //   margin-top: 30px !important;
-  // }
-  .field-wrapper {
-    &.field-wrapper__input--text {
-      .field-wrapper__content {
+    &.question-dragable{
+      min-height: 200px;
+      .dragable-placeholder{
         display: flex;
-        align-items: center;
       }
-      .field-wrapper__input {
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(#333, 0.2);
-        position: relative;
-        transition: 0.3s ease all;
-        width: 50%;
-        // padding-left: 0;
-        margin: 0 10px;
-      }
-      .preview {
-        width: 200px;
-        height: 150px;
-        margin: 16px 16px 16px 0;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: fill;
-        }
-      }
-      input[type="checkbox"] {
+      .card__content{
         display: none;
-        &:checked {
-          & + .checkbox-mcq {
-            i {
-              opacity: 1;
+      }
+    }
+    .card__header{
+      align-items: flex-start;
+      margin-bottom: 16px;
+      .field-wrapper{
+        margin-bottom: 0;
+      }
+    }
+    .question__type{
+      & + .select2{
+        width: 180px !important;
+      }
+    }
+    .dragable-placeholder{
+      display: none;
+      justify-content: center;
+      i{
+        color: $primary;
+        font-size: 18px;
+      }
+    }
+    .card--drag-vertical{
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      color: $primary;
+      margin-bottom: 10px;
+    }
+    .card__content{
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // align-items: flex-start;
+      // margin-bottom: 10px;
+    }
+    .field-wrapper{
+      
+    }
+    .card__footer{
+      border-top: 1px solid rgba(#333, .2);
+      padding: 10px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .btn{
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+    .card__footer-actions{
+      display: flex;
+      align-items: center;
+      i{
+       font-size: 18px; 
+      }
+    }
+    // .select2{
+    //   margin-top: 30px !important;
+    // }
+    .field-wrapper{
+      &.text-field__input--text{
+        .text-field__content{
+          display: flex;
+          align-items: center;
+        }
+        .text-field__input{
+          box-shadow: none;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid rgba(#333, .2);
+          position: relative;
+          transition: .3s ease all;
+          width: 50%;
+          // padding-left: 0;
+          margin: 0 10px;          
+        }
+        
+        input[type='checkbox']{
+          display: none;
+          &:checked{
+            & + .checkbox-mcq{
+              i{
+                opacity: 1;
+              }
             }
           }
         }
@@ -276,29 +312,19 @@
           }
         }
       }
-    }
-    .exam__icon {
-      display: inline-block;
-      margin-right: 10px;
-      color: $primary;
-      transition: 0.3s ease all;
-      font-size: 18px;
-    }
-  }
-  .question__type {
-    & + .select2 {
-      // width: 23% !important;
-      height: fit-content;
-      // margin: 0 0 8px 20px;
+      .exam__icon{
+        display: inline-block;
+        margin: auto 10px auto 0;
+        color: $primary;
+        transition: .3s ease all;
+        font-size: 18px;
+      }
 
-      .select2-selection {
-        height: 40px;
-        box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1) !important;
-        border: 1px solid #e5e5e5 !important;
-        border-radius: 10px;
-      } //select2-selection--single
-      .select2-selection__rendered {
-        line-height: 38px;
+    }
+    
+    @media (max-width: 768px){
+      .card__content{
+        flex-wrap: wrap;
       }
       .select2-selection__arrow {
         top: 50%;
@@ -316,6 +342,34 @@
   }
 }
 // }
+.question__type{
+  & + .select2{
+    // width: 23% !important;
+    height: fit-content;
+    // width: 100% !important;
+    // margin: 0 0 8px 20px;
+    // .select2-search select2-search--dropdown
+    .select2-search{
+      &.select2-search--dropdown{
+        display: none !important;
+      }
+    }
+    
+    .select2-selection{
+      height: 40px;
+      box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1)!important;
+      border: 1px solid #e5e5e5!important;
+      border-radius: 10px;
+    } //select2-selection--single
+    .select2-selection__rendered{
+      line-height: 38px;
+    }
+    .select2-selection__arrow{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
 
 .switch {
   input[type="checkbox"] {
