@@ -6,10 +6,11 @@ block title
 
 block content
   section(class="course-video" style="width:100%; background:  linear-gradient(-90deg,rgba(255,0,0,0) -10% , #aaa)")
-    img.course-video__bg(src="../../assets/images/get_img.jpg", alt="", srcset="")
+    .course-video__bg
+      img(src="../../assets/images/get_img.jpg", alt="", srcset="")
     .container
       .row
-        .col-md-7
+        //- .col-md-7
           //start video player
           include ../components/general-component/course-video.pug
           //End video player

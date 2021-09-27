@@ -4,5 +4,5 @@ $(document).ready(function () {
     placeholder: "Select an option",
     allowClear: true
   });
-  $('.question__type').select2()
+  // $('.question__type').select2()
 });

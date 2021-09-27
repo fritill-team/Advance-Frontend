@@ -159,6 +159,7 @@
     text-align: left;
     line-height: normal;
     margin-bottom: 15px;
+    z-index: 5;
   }
 
   .video-contentr__description {
@@ -226,6 +227,10 @@
     top: 0;
     left: 0;
     z-index: -1;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .course-video__wrapper {
