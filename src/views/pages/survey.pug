@@ -3,8 +3,9 @@ extends ../layouts/player-course.pug
 block title
 	title survey
 
-block listVideo
-	include ../components/survey-sidebar.pug
 block content
+	include ../components/sidebar-play-list.pug
+	+playlist
+		include ../components/survey-sidebar.pug
 	.video-player
 		include ../components/survey-content.pug
