@@ -2,10 +2,11 @@ extends ../layouts/player-course.pug
 
 block title
 	title video-player
-//- block listVideo
 block content
 	include ../components/sidebar-play-list.pug
 	+playlist
-		include ../components/list-video.pug
-	.video-player 
+		include ../components/video-item-loader.pug
+	.loader-wrapper.loader-wrapper--fill
+		.loader
+	//- .video-player 
 		iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")

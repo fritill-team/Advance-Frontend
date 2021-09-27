@@ -9,9 +9,8 @@ html(lang='en' dir="ltr")
 		link(rel='preconnect' href='https://fonts.googleapis.com')
 		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
 		link(href='https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap' rel='stylesheet')
-		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
 
-		//- link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+		link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
 		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
 		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
 		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
@@ -29,7 +28,7 @@ html(lang='en' dir="ltr")
 	body
 		.wrapper
 			// Menu
-			include ../components/header.pug
+			include ../components/exams-header.pug
 
 			//include ../components/sidebar.pug
 				block sidebar
@@ -38,8 +37,6 @@ html(lang='en' dir="ltr")
 			// block content
 			.page-content
 				block content
-			include ../components/footer.pug
-				//- Footer
 
 				//- block scripts
 		block scripts

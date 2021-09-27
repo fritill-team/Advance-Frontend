@@ -125,7 +125,7 @@
       background: $primaryLight;
       color: $white;
       font-weight: 500;
-        position: absolute;
+      position: absolute;
       right: 3px;
       border-radius: 100%;
       height: 35px;
@@ -141,8 +141,8 @@
     width: 100%;
     border-radius: 10px;
     padding: 12px 1em;
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-    border: 1px solid #e5e5e5 !important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
     // padding: 10px;
     &.text-field__input--rounded {
       border-radius: 20px !important;
@@ -152,7 +152,7 @@
       height: 40px;
       font-size: 14px;
       font-weight: 400;
-      }
+    }
     &.text-field--icon {
       padding-left: 3em !important;
     }
@@ -179,7 +179,13 @@
   }
   // this class adds styling of error message
   &.field-wrapper--error {
-    .text-field__label {
+    .check-field__label {
+      color: #dc3545;
+    }
+    .radio-field__label {
+      color: #dc3545;
+    }
+    .check-field__label {
       color: #dc3545;
     }
     .messages {
@@ -210,7 +216,7 @@
       // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       border: 0;
       padding: 0;
-        color: #333;
+      color: #333;
       font-weight: 400;
       position: relative;
       text-align: left;
@@ -297,41 +303,7 @@
     // height: 18px !important;
     display: block;
   }
-  // input type checkbox
-  .check-field-group {
-  }
-  .check-field {
-    position: relative;
-    width: 200px;
-    padding: 5px;
-    .check-field__input {
-      display: none;
-    }
-    .check-field__label {
-      position: relative;
-      font-size: 14px;
-      font-weight: 400;
-        line-height: 17px;
-      cursor: pointer;
-      &::before {
-        font-family: "FontAwesome";
-        color: red;
-        content: "";
-        // content: "";
-        background: #f7f7f7;
-        border: 1px solid #b4b4b4;
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        top: 0px;
-        position: relative;
-        margin-right: 10px;
-        vertical-align: top;
-        cursor: pointer;
-        text-align: center;
-      }
-    }
-  }
+
   // i.icon {
   //   color: red;
   //   position: absolute;
@@ -355,7 +327,7 @@
       label.radio-label-1 {
         font-size: 14px;
         font-weight: 400;
-            line-height: 17px;
+        line-height: 17px;
         padding: 5px;
         cursor: pointer;
         &::before {
@@ -422,7 +394,7 @@
       border-radius: 25px;
     }
   }
-  .select2-selection__rendered{
+  .select2-selection__rendered {
     margin-top: 0 !important;
   }
   .select2-selection {
@@ -729,7 +701,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-        border-style: solid;
+      border-style: solid;
       position: relative;
       &::before {
         position: absolute;
@@ -761,7 +733,7 @@ html[dir="rtl"] {
       color: $darkBlack;
       background: transparent;
       display: inline-block;
-        border-style: solid;
+      border-style: solid;
       position: relative;
       &::before {
         position: absolute;

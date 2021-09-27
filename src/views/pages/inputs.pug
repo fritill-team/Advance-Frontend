@@ -11,9 +11,7 @@ block content
 			.field-wrapper.field-wrapper--error
 				label.text-field__label Course Title*
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-					.text-field__limit 60
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -61,53 +59,53 @@ block content
 						option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
 				ul.messages
 					li
-						| Please provide a valid city.
-
-
-		.col-lg-12.mb-4
-			h4.item__title General card
-			include ../components/card.pug
-		.col-lg-12
-			h4.item__title collaps card
-			include ../components/card.pug
-
-		button.btn.btn--primary.btn--rounded.btn--ripple submit
-
+						| Please provide a valid city.  
+		// input checkbox 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
 				label.text-field__label Course checkbox*
-				.check-field-group
+				.check-group
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
 						label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor.
+					.messages
+						ul 
+							li Please provide a valid city.
 						//- i.fas.fa-check.icon
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-2" name="checkboxName")
 						label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor.
+					.messages
+						ul 
+							li Please provide a valid city.
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-3" name="checkboxName")
 						label.check-field__label(for="checkbox-3" ) Lorem ipsum dolor.
+					.messages
+						ul 
+							li Please provide a valid city.
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-4" name="checkboxName")
 						label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
 				.messages
 					ul 
+          
 						li Please provide a valid city.
-
+		// input radio
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper.field-wrapper--error
-				label.text-field__label Course Radio Button*
-				ul.field-wrapper__radio-group
-					li.radio-item_1
-						input.radio-input-1#radio-1(value="radio-1" name="paymentmethod" type="radio" data-minimum="50.0")
-						label.radio-label-1(for="radio-1")  Radio
-					li.radio-item_1
-						input.radio-input-1#radio-2(value="radio-2" name="paymentmethod" type="radio" data-minimum="50.0")
-						label.radio-label-1(for="radio-2")  Radio
-				ul.messages
-					li
-						| Please provide a valid city.
-
+				label.text-field__label Course checkbox*
+				.check-group
+					.check-field
+						input.check-field__input(type="radio" id="radio-1" name="radioName")
+						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
+					.check-field
+						input.check-field__input(type="radio" id="radio-2" name="radioName")
+						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+				.messages
+					ul 
+						li Please provide a valid city. 
+		// 	textarea
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper
 				label.text-field__label Course Description*
@@ -116,8 +114,8 @@ block content
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__date
-		.col-md-6.col-sm-6
+		// input__date
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label(for='start Date') start Date :
 				.text-field__content
@@ -125,8 +123,8 @@ block content
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__time
-		.col-md-6.col-sm-6
+		// input__time
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label start Time :
 				.text-field__content
@@ -134,8 +132,8 @@ block content
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__datetime-local
-		.col-md-6.col-sm-6
+		// input__datetime-local
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label start Date and Time :
 				.text-field__content
@@ -143,58 +141,53 @@ block content
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__password
-		.col-md-6.col-sm-6
+		// input__password
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label start password :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__number
-		.col-md-6.col-sm-6
+		// input__number
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label(for='number').text-field__label Start Number :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__email
-		.col-md-6.col-sm-6
+		// input__email
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label Start Email :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__tel
-		.col-md-6.col-sm-6
+		// input__tel
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label Start Telephone :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
-			//- input__url
-		.col-md-6.col-sm-6
+			// input__url
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label Start Url :
 				.text-field__content
-					//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 					input.text-field__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__select
-		.col-md-6.col-sm-6
+		// input__select
+		.col-md-12.col-sm-6
 			.field-wrapper.field-wrapper--no-message
 				label.text-field__label Start Select :
 				.text-field__content
@@ -208,9 +201,7 @@ block content
 				ul.messages
 					li
 						| Please provide a valid city.
-		//- input__select
-
-
+		// input__select 
 		.col-lg-12
 			.filter_selector
 				.ui.inline.dropdown.ftl145
@@ -223,21 +214,16 @@ block content
 						.item item 4
 						.item item 5
 						.item item 6
-
-
 		.row
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper--error
 					label.text-field__label Course Title*
 					.text-field__content
-						//- input.prompt.srch_explore.form-control.is-invalid(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 						input.text-field__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 						.text-field__limit 60
 					ul.messages
 						li
 							| Please provide a valid city.
-
-
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper--no-message
 					label.text-field__label Course Title*
@@ -246,7 +232,6 @@ block content
 					ul.messages
 						li
 							| Please provide a valid city.
-
 			.col-lg-12.col-md-6.col-sm-12
 				.field-wrapper.field-wrapper__file-input.field-wrapper--error
 					label.text-field__label File*
@@ -257,39 +242,6 @@ block content
 					ul.messages
 						li
 							| Please provide a valid city.
-
-
-
-			.col-lg-12.col-md-12.col-sm-12
-				.field-wrapper.field-wrapper--error
-					label.text-field__label Course checkbox*
-					.ui.form.checkbox_sign
-						.inline.field
-							.ui.checkbox.mncheck
-								input(type="checkbox" tabindex="0" class="hidden" id="remembr-signup")
-								label(for="remembr-signup") checkbox
-						.inline.field
-							.ui.checkbox.mncheck
-								input(type="checkbox" tabindex="0" class="hidden" id="remembr-signin")
-								label(for="remembr-signin") checkbox
-					ul.messages
-						li
-							| Please provide a valid city.
-
-			.col-lg-12.col-md-12.col-sm-12
-				.field-wrapper.field-wrapper--error
-					label.text-field__label Course Radio Button*
-					ul.radio--group-inline
-						li.radio-item_1
-							input#radio-1(value="radio-1" name="paymentmethod" type="radio" data-minimum="50.0")
-							label.radio-label-1(for="radio-1")  Radio
-						li.radio-item_1
-							input#radio-2(value="radio-2" name="paymentmethod" type="radio" data-minimum="50.0")
-							label.radio-label-1(for="radio-2")  Radio
-					ul.messages
-						li
-							| Please provide a valid city.
-
 			.col-lg-12.col-md-12.col-sm-12
 				.field-wrapper
 					label.text-field__label Course Radio Button*
@@ -297,14 +249,7 @@ block content
 						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 					ul.messages
 						li
-							| Please provide a valid city.
-			.col-lg-12.mb-4
-				h4.item__title General card
-				include ../components/card.pug
-			.col-lg-12
-				h4.item__title collaps card
-				include ../components/card.pug
-
+							| Please provide a valid city.  
 			.col-lg-12
 				.filter_selector
 					.ui.inline.dropdown.ftl145
@@ -323,62 +268,3 @@ block content
 					option(value='eg') Egypt
 					option(value='AL') Alabama
 					option(value='WY') Wyoming
-
-
-
-		//- .col-lg-12.col-md-6.col-sm-12
-		//-   .ui.search.focus.mt-30.lbel25
-		//-     label Volume*
-		//-     .ui.left.icon.input.swdh19.swdh95
-		//-       input.prompt.srch_explore(type='number' min='0' name='size' required='' placeholder='0')
-		//-       .badge_mb MB
-
-		//- .col-lg-12.col-md-6.col-sm-12
-		//-   .ui.form.mt-30.checkbox_sign
-		//-     .inline.field
-		//-       .ui.checkbox.mncheck
-		//-         input(
-		//-           type="checkbox"
-		//-           tabindex="0"
-		//-           class="hidden"
-		//-           id="remembr-signup"
-		//-           )
-		//-         label(for="remembr-signup") checkbox
-
-
-		//- .col-lg-12
-		//-   .course_des_textarea.mt-30.lbel25
-		//-     label Course Description*
-		//-     .course_des_bg
-		//-       ul.course_des_ttle
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-bold
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-italic
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-list-ul
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-left-to-right-text-direction
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-right-to-left-text-direction
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-list-ui-alt
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-link
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-text-size
-		//-         li
-		//-           a(href='#')
-		//-             i.uil.uil-text
-		//-       .textarea_dt
-		//-         .ui.form.swdh339
-		//-           .field
-		//-             textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')

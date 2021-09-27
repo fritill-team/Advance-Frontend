@@ -409,8 +409,6 @@ $(document).ready(function(){
 
 
 
-window.onload = function() {
-  document.getElementById("vcode1").focus();
-};
-
-
+// window.onload = function() {
+//   document.getElementById("vcode1").focus();
+// };
