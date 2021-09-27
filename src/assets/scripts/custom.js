@@ -413,6 +413,24 @@ $(document).ready(function(){
 //   document.getElementById("vcode1").focus();
 // };
 
+// dropdown-menu
+$('.more-dropdown__link').each(function(){
+  $(this).on('click', function(){
+    $('.more-dropdown').removeClass('active')
+    $(this).parent().addClass('active')
+    event.stopPropagation();
+  })
+})
+
+$('.content__item').each(function(){
+  $(this).on('click', function() {
+    $('.more-dropdown').removeClass('active')
+  })
+})
+$(document).on('click', function(){
+  $('.more-dropdown').removeClass('active')
+})
+
 // start custom select
 
 var x, i, j, l, ll, selElmnt, a, b, c;
@@ -494,4 +512,4 @@ function closeAllSelect(elmnt) {
 }
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
-document.addEventListener("click", closeAllSelect);
+
