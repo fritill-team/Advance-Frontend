@@ -1,0 +1,66 @@
+extends ../../../layouts/admin.pug
+block title
+  title survey-inputs
+block sidebar
+  include ../../../components/sidebar-content.pug
+
+block content
+  .container
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 checkbox
+          .card__content
+            .content
+              form.form-question
+                .form-question__question-form
+                  h2.white Lorem ipsum dolor
+                  p.text-3.white amet consectetur adipisicing elit.
+                .form-question__wrap
+                  .wrap__form-group
+                    input.form-group__input(id="survey-1" value="radio-1" type="checkbox" name="survey")
+                    label.form-group__label(for="survey-1") lorem
+                  .wrap__form-group
+                    input.form-group__input(id="survey-2" value="radio-2" type="checkbox" name="survey")
+                    label.form-group__label(for="survey-2") lorem
+                  .wrap__form-group
+                    input.form-group__input(id="survey-3" value="radio-3" type="checkbox" name="survey")
+                    label.form-group__label(for="survey-3") lorem
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 radio button
+          .card__content
+            .content
+              form.form-question
+                .form-question__question-form
+                  h2.white Lorem ipsum dolor
+                  p.text-3.white amet consectetur adipisicing elit.
+                .form-question__wrap
+                  .wrap__form-group
+                    input.form-group__input(id="survey-1" value="radio-1" type="radio" name="survey")
+                    label.form-group__label(for="survey-1") lorem
+                  .wrap__form-group
+                    input.form-group__input(id="survey-2" value="radio-2" type="radio" name="survey")
+                    label.form-group__label(for="survey-2") lorem
+                  .wrap__form-group
+                    input.form-group__input(id="survey-3" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="survey-3") lorem
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 Rounded
+          .card__content
+            h4.text-2 Buttons
+            p with click event
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 Rounded
+          .card__content
+            h4.text-2 Buttons
+            p with click event
