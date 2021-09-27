@@ -121,11 +121,22 @@
       display: none;
     }
     .file-input{
-      margin: 0 10px;
+      margin: 4px 10px 0 10px;
+      display: block;
       i{
         color: $primary;
         font-size: 32px;
         cursor: pointer;
+      }
+    }
+  }
+  .select-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .question__type{
+      & + .select2{
+        margin: 0 10px 10px 0;
       }
     }
   }
@@ -145,7 +156,7 @@
       }
     }
     .card__header{
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 16px;
       .field-wrapper{
         margin-bottom: 0;
@@ -188,6 +199,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      .btn{
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
     .card__footer-actions{
       display: flex;
@@ -276,7 +291,7 @@
       }
       .exam__icon{
         display: inline-block;
-        margin-right: 10px;
+        margin: auto 10px auto 0;
         color: $primary;
         transition: .3s ease all;
         font-size: 18px;
@@ -298,12 +313,15 @@
   & + .select2{
     // width: 23% !important;
     height: fit-content;
-    width: 100% !important;
+    // width: 100% !important;
     // margin: 0 0 8px 20px;
     // .select2-search select2-search--dropdown
-    .select2-search--dropdown{
-      display: none !important;
+    .select2-search{
+      &.select2-search--dropdown{
+        display: none !important;
+      }
     }
+    
     .select2-selection{
       height: 40px;
       box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1)!important;
