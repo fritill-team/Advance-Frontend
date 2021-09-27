@@ -12,7 +12,7 @@
       left: -100px;
       transition: all 0.3s ease-in;
       bottom: 0;
-    }  
+    }
   }
   &.playlist--survey{
     padding: 10px 15px;
@@ -34,14 +34,6 @@
 .playlist-canvas{
   display: flex;
   justify-content: center;
-}
-
-button.btn{
-  margin: auto;
-  align-items: center;
-  display: flex;
-  margin-top: 10px;
-  padding: 12px 30px;
 }
 
 .list-item {
@@ -109,7 +101,7 @@ span#procent {
   flex-direction: column;
   justify-content: center;
   .form-question__question-form{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     // justify-content: center;
     h2{
@@ -120,7 +112,7 @@ span#procent {
       color: $info;
     }
   }
-  
+
   .form-question__wrap{
     display: flex;
     flex-direction: row;
@@ -162,7 +154,7 @@ span#procent {
     }
     @media (min-width: 0px) and (max-width: 650px) {
       display: flex;
-    }  
+    }
   }
   .form-question__direction-form{
     padding-bottom: 30px;
