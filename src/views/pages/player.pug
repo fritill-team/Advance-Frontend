@@ -5,7 +5,7 @@ block title
 //- block listVideo
 block content
 	include ../components/sidebar-play-list.pug
-	block listVideo
-		//- include ../components/list-video.pug
+	+playlist
+		include ../components/list-video.pug
 	.video-player 
 		iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")

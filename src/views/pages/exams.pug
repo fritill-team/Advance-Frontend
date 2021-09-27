@@ -6,9 +6,29 @@ block title
 
 block content
 	.exam
-		.container
+		.container-fluid
 			.row
-				.col-lg-8.offset-lg-2
+				.col-lg-4 
+					.card
+						.field-wrapper
+							//- label.text-field__label Insert you question *
+							.text-field__content
+								input.text-field__input(type='text' placeholder='Exam title' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+							ul.messages
+								li.gray
+									| hint message for question.
+						.field-wrapper
+							//- label.text-field__label Insert you question *
+							.text-field__content
+								input.text-field__input(type='text' placeholder='Exam description' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+							ul.messages
+								li.gray
+									| hint message for question.
+						select.question__type
+							option(value='one') First
+							option(value='two' disabled='disabled') Second (disabled)
+							option(value='three') Third
+				.col-lg-8
 					.card.question.mb-4.question-dragabl
 						.card--drag-vertical
 							//- i.fas.fa-braille
@@ -92,7 +112,7 @@ block content
 									input#switch(type="checkbox", name="")
 									label(for="switch") Is required
 
-				.col-lg-8.offset-lg-2
+				
 					.card.question.mb-4.question-dragable
 						.card--drag-vertical 
 							i.fas.fa-grip-horizontal
@@ -175,7 +195,6 @@ block content
 									label(for="switch") Is required
 
 
-				.col-lg-8.offset-lg-2
 					.card.question.mb-4
 						.card--drag-vertical.mb-0
 							i.fas.fa-grip-horizontal
@@ -213,7 +232,6 @@ block content
 							i.fas.fa-ellipsis-h
 
 
-				.col-lg-8.offset-lg-2
 					.card.question.mb-4
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-horizontal
@@ -232,7 +250,7 @@ block content
 									ul 
 										li Please provide a valid city.
 
-				.col-lg-8.offset-lg-2
+				
 					.card.question.mb-4.question-dragable
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-horizontal
