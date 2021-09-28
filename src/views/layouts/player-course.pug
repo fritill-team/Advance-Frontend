@@ -1,5 +1,3 @@
-//- Master layout
-
 doctype html
 
 html(lang='en' dir="ltr" class="night-mode")
@@ -24,7 +22,8 @@ html(lang='en' dir="ltr" class="night-mode")
 			//- Menu
 			include ../components/header-player.pug
 				//- +menu('home')
-			.page-content.page-content--video-player
+			mixin layoutPlayer(classContent)
+				.page-content(classContent)
 
 				//- include ../components/sidebar-play-list.pug
 				//- block playlist

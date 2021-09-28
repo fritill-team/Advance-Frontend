@@ -9,6 +9,7 @@
     position: relative;
     width: 200px;
     padding: 0 5px 5px 0;
+    width: 100%;
     input {
       display: none;
       &:checked {
@@ -31,7 +32,8 @@
       cursor: pointer;
       margin-bottom: 0;
       color: $primary;
-      padding-left: 25px;
+      padding-left: 30px;
+      display: flex;
       &:before {
         content: "";
         color: $primary;
@@ -61,6 +63,7 @@
         padding: 0;
       }
       &.radio-field__label {
+        padding-left: 25px;
         &:before {
           content: "";
           color: #0d758e;
