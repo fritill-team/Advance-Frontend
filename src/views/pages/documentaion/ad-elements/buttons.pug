@@ -13,35 +13,20 @@ block content
             h3 Default
           .card__content
             h4.text-2 Buttons
-            p with click event
+            p with hover background-color and click event
             button.btn.btn--default.btn--ripple default
             button.btn.btn--primary.btn--ripple primary
             button.btn.btn--success.btn--ripple success
             button.btn.btn--info.btn--ripple info
             button.btn.btn--warning.btn--ripple warning
-            button(class="btn" disabled="disabled") disabled
-            h4.text-2 Buttons
-            p.text-2 with hover background-color
-            button.btn.btn--default.hover.btn--ripple default
-            button.btn.btn--primary.hover.btn--ripple primary
-            button.btn.btn--success.hover.btn--ripple success
-            button.btn.btn--info.hover.btn--ripple info
             button.btn.btn--danger.hover.btn--ripple danger
-            button.btn.btn--secondary.hover.btn--ripple secondary                        
+            button.btn.btn--secondary.hover.btn--ripple secondary 
+            button(class="btn" disabled="disabled") disabled
+                           
             hr
             
             h4.text-2 Links
-            p with click event
-            a(href="#" class="btn btn--secondary btn--ripple") secondary
-            a(href="#" class="btn btn--success btn--ripple") success
-            a(href="#" class="btn btn--info btn--ripple") info
-            a(href="#" class="btn btn--default btn--ripple") default
-            a(href="#" class="btn btn--primary btn--ripple") primary
-            a(href="#" class="btn btn--warning btn--ripple") warning
-            a(href="#" class="btn btn--danger btn--ripple") danger
-            a(href="#" class="btn btn--disabled btn--ripple") disabled
-            h4.text-2 Links
-            p with hover background-color
+            p with hover background-color and click event
             a(href="#" class="btn btn--secondary hover btn--ripple") secondary
             a(href="#" class="btn btn--success hover btn--ripple") success
             a(href="#" class="btn btn--info hover btn--ripple") info
@@ -64,27 +49,21 @@ block content
             button.btn.btn--info.btn--rounded.btn--ripple info
             button.btn.btn--default.btn--rounded.btn--ripple default
             button.btn.btn--primary.btn--rounded.btn--ripple primary
+            button.btn.btn--warning.btn--rounded.hover.btn--ripple warning
+            button.btn.btn--danger.btn--rounded.hover.btn--ripple danger
             button(class="btn btn--rounded" disabled="disabled") disabled
-            h4.text-2 Buttons
-            p with hover background-color
-            button.btn.btn--warning.btn--rounded.hover warning
-            button.btn.btn--danger.btn--rounded.hover danger
+            br
             hr
-
             h4.text-2 Links
-            p with click event
+            p with click event and hover
             a(href="#" class="btn btn--secondary btn--rounded btn--ripple") secondary
             a(href="#" class="btn btn--success btn--rounded btn--ripple") success
             a(href="#" class="btn btn--info btn--rounded btn--ripple") info
             a(href="#" class="btn btn--default btn--rounded btn--ripple") default
             a(href="#" class="btn btn--primary btn--rounded btn--ripple") primary
+            a(href="#" class="btn btn--warning btn--rounded btn--ripple") warning
+            a(href="#" class="btn btn--danger btn--rounded btn--ripple") danger
             a(href="#" class="btn btn--disabled btn--rounded btn--ripple") disabled
-            h4.text-2 Links
-            p with hover background-color
-            a(href="#" class="btn btn--warning btn--rounded hover btn--ripple") warning
-            a(href="#" class="btn btn--danger btn--rounded hover btn--ripple") danger
-
-
 
     .row
       .col-lg-12
@@ -93,34 +72,27 @@ block content
             h3 Outlined
           .card__content
             h4.text-2 Buttons
-            p without any thing
+            p with hover
             button.btn.btn--default.btn--outlined.btn--ripple default
             button.btn.btn--primary.btn--outlined.btn--ripple primary
             button.btn.btn--secondary.btn--outlined.btn--ripple secondary
-            h4.text-2 Buttons
-            p with hover
-            button.btn.btn--success.btn--outlined.btn--hover.btn--ripple success
-            button.btn.btn--info.btn--outlined.btn--hover.btn--ripple info
-            button.btn.btn--warning.btn--outlined.btn--hover.btn--ripple warning
-            button.btn.btn--danger.btn--outlined.btn--hover.btn--ripple danger
+            button.btn.btn--success.btn--outlined.btn--ripple success
+            button.btn.btn--info.btn--outlined.btn--ripple info
+            button.btn.btn--warning.btn--outlined.btn--ripple warning
+            button.btn.btn--danger.btn--outlined.btn--ripple danger
+            br
             hr
             h4.text-2 links
-            p without any thing
+            p with hover
             a(href="#" class="btn btn--default btn--outlined btn--ripple") default
             a(href="#" class="btn btn--primary btn--outlined btn--ripple") primary
             a(href="#" class="btn btn--secondary btn--outlined btn--ripple") secondary
             a(href="#" class="btn btn--success btn--outlined btn--ripple") success
-            h4.text-2 links
-            p with hover
             a(href="#" class="btn btn--info btn--outlined btn--hover btn--ripple") info
             a(href="#" class="btn btn--warning btn--outlined btn--hover btn--ripple") warning
             a(href="#" class="btn btn--danger btn--outlined btn--hover btn--ripple") danger
-            p variations
-            p without hover
-            button.btn.btn--primary.btn--outlined.btn--rounded.btn--ripple outlined-rounded
             p with hover
             button.btn.btn--primary.btn--outlined.btn--rounded.btn--ripple outlined-rounded
-
 
     .row
       .col-lg-12
@@ -128,32 +100,27 @@ block content
           .card__title
             h3 Text
           .card__content
-            p Buttons
+            h4.text-2 Buttons
             p with hover
             button.btn.btn--default.btn--text.btn--hover.btn--ripple default
             button.btn.btn--primary.btn--text.btn--hover.btn--ripple primary
             button.btn.btn--secondary.btn--text.btn--hover.btn--ripple secondary
             button.btn.btn--success.btn--text.btn--hover.btn--ripple success
-            p link with hover-rounded
+            p with hover-rounded
             button.btn.btn--success.btn--text.btn--hover-rounded.btn--ripple success
             button.btn.btn--info.btn--text.btn--hover-rounded.btn--ripple info
             button.btn.btn--warning.btn--text.btn--hover-rounded.btn--ripple warning
             button.btn.btn--danger.btn--text.btn--hover-rounded.btn--ripple danger
-            p link with line-hover
+            p with line-hover
             button.btn.btn--primary.btn--text.btn--hover-line success
             button.btn.btn--default.btn--text.btn--hover-line success
             //- p with hover
             //- button.btn.btn--info.btn--text.without-line info
             //- button.btn.btn--warning.btn--text.without-line warning
             //- button.btn.btn--danger.btn--text.without-line danger
-            p links
-            a(href="#" class="btn btn--default btn--text") default
-            a(href="#" class="btn btn--primary btn--text") primary
-            a(href="#" class="btn btn--secondary btn--text") secondary
-            a(href="#" class="btn btn--success btn--text") success
-            a(href="#" class="btn btn--info btn--text") info
-            a(href="#" class="btn btn--warning btn--text") warning
-            a(href="#" class="btn btn--danger btn--text") danger
+            br
+            hr
+            h4.text-2 links
             p link with hover
             a(href="#" class="btn btn--default btn--text btn--hover btn--ripple") default
             a(href="#" class="btn btn--primary btn--text btn--hover btn--ripple") primary
@@ -278,16 +245,16 @@ block content
           .card__title
             h4 Rounded input
           .card__content
-            input.btn.btn--default.btn--rounded(type='button' value='button')
+            input.btn.btn--default.btn--rounded.btn--ripple(type='button' value='button')
           .card__title
             h4 Outlined input
           .card__content
-            input.btn.btn--primary.btn--outlined(type='button' value='button')
+            input.btn.btn--primary.btn--outlined.btn--ripple(type='button' value='button')
           .card__title
             h4 Text input
           .card__content
-            input.btn.btn--secondary.btn--text(type='button' value='button')
-
+            input.btn.btn--secondary.btn--text.btn--hover.btn--ripple(type='button' value='button')
+            input.btn.btn--secondary.btn--text.btn--hover-rounded.btn--ripple(type='button' value='button')
     .row
       .col-lg-12
         .card
