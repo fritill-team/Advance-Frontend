@@ -216,16 +216,14 @@
     right: 30px;
     z-index: 3;
   }
-	&.course-video--hover{
+	&.course-video--playing{
 		min-height: 582px;
-		&:hover{
-			.course-video__bg{
-				opacity: 0;
-			}
-			.video-content__details{
-				max-height: 0;
-			}
-		}
+    .course-video__bg{
+      opacity: 0;
+    }
+    .video-content__details{
+      max-height: 0;
+    }
 	}
 	.video-content__details{
 		transition: .9s ease all;
