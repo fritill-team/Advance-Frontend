@@ -23,5 +23,6 @@ import './owl-carousel'
 import "./accordion"
 import "./playlist-video"
 import "./course-card"
+import "./course-content"
 import "./course-data"
 import "./backend_scripts/panel-loader"
