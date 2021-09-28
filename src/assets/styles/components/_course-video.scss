@@ -210,16 +210,29 @@
       opacity: .2;
     }
   }
-	&.course-video--hover{
+  .course-video__action {
+    // position: absolute;
+    // bottom: 30px;
+    // right: 30px;
+    // z-index: 3;
+    
+    button{
+      display: inline-block;
+      margin: 0 10px;
+      &.btn--icon{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+	&.course-video--playing{
 		min-height: 582px;
-		&:hover{
-			.course-video__bg{
-				opacity: 0;
-			}
-			.video-content__details{
-				max-height: 0;
-			}
-		}
+    .course-video__bg{
+      opacity: 0;
+    }
+    .video-content__details{
+      max-height: 0;
+    }
 	}
 	.video-content__details{
 		transition: .9s ease all;
@@ -373,6 +386,8 @@
 
 .video-content__btn-list {
 	width: 100%;
+  display: flex;
+  align-items: center;
 
 	.btn-list__list-item {
 		display: inline-block;
