@@ -104,8 +104,8 @@ const courseTemplate = function (course) {
         <a class="title-link text-2 semi-bold" href="${course.url}">${course.title}</a>
         <p class="text-3 gray">${course.category}</p>
         <div class="course-card__footer">
-           <button class="btn btn--outlined btn--primary">Enroll</button>
-           <button class="btn btn--text btn--danger icon--hover"><i class="${course.is_favorite ? 'fas' : 'far'} fa-heart"></i></button>
+           <a href="${course.actions.url}" class="btn btn--outlined btn--primary">${course.actions.action}</a>
+           <a href="javascript:void(0)" class="btn btn--text btn--danger icon--hover"><i class="${course.is_favorite ? 'fas' : 'far'} fa-heart"></i></a>
         </div>
       </div>
     </div>`
