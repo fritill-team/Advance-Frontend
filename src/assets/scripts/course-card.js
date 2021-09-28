@@ -3,23 +3,32 @@ const breakpoints = {
   'md': 768,
   'lg': 992,
   'xl': 1200,
-  'xxl': 1400
 }
-const getBreakpoint = function () {
-  var docWidth = $(document).width()
-  if (docWidth < breakpoints.sm)
-    return 'xs'
-  else if (docWidth >= breakpoints.sm && docWidth < breakpoints.md)
-    return 'sm'
-  else if (docWidth >= breakpoints.md && docWidth < breakpoints.lg)
-    return 'md'
-  else if (docWidth >= breakpoints.lg && docWidth < breakpoints.xl)
-    return 'lg'
-  else if (docWidth >= breakpoints.xl && docWidth < breakpoints.xxl)
-    return 'xl'
-  else
-    return 'xxl'
-}
+const getBreakpoint = () => {
+    let docWidth = $(document).width()
+    if (docWidth < breakpoints.sm)
+      return 'xs'
+    else if (docWidth >= breakpoints.sm && docWidth < breakpoints.md)
+      return 'sm'
+    else if (docWidth >= breakpoints.md && docWidth < breakpoints.lg)
+      return 'md'
+    else if (docWidth >= breakpoints.lg && docWidth < breakpoints.xl)
+      return 'lg'
+    else
+      return 'xl'
+  },
+  getBreakpointClass = (colClasses) => {
+    let colClass = colClasses.find(className => className.indexOf(getBreakpoint()) !== -1)
+    return colClass ? colClass
+      : colClasses.find(className => className.indexOf(
+        colClasses.map(
+          colClass => colClass.split('-')[1]).reduce((a, b) => breakpoints[a] < breakpoints[b] ? a : b)
+      ) !== -1)
+  }
+
+let NoOfCols = 0,
+  Position = 0
+
 
 $(document)
   .on("mouseenter", '.course-card-container .course-card__preview', function () {
@@ -28,16 +37,17 @@ $(document)
       count = Number(container.data('count')),
       col = container.closest("[class^='col-']"),
       currentBreakpoint = getBreakpoint(),
-      activeClass = col.attr('class')
-        .split(' ')
-        .filter(className => className.indexOf('col-') !== -1)
-        .find(className => className.indexOf(currentBreakpoint) !== -1),
-      colWidth = Number(activeClass.split('-')[2]),
-      noOfColumns = 12 / colWidth,
-      positionNo = count % noOfColumns,
-      position = positionNo !== 0 ? positionNo : noOfColumns,
-      toHideBefore = position - 1,
-      toHideAfter = noOfColumns - position
+      activeClasses = col.attr('class').split(' ')
+        .filter(className => className.indexOf('col-') !== -1),
+      activeClass = getBreakpointClass(activeClasses),
+      colWidth = Number(activeClass.split('-')[2])
+
+    NoOfCols = 12 / colWidth
+    let positionNo = count % NoOfCols
+    Position = positionNo !== 0 ? positionNo : NoOfCols
+    let toHideBefore = Position - 1,
+      toHideAfter = NoOfCols - Position
+
     let toHide = col
     for (let i = 0; i <= toHideAfter; i++) {
       toHide = toHide.next()
@@ -54,19 +64,11 @@ $(document)
   .on("mouseleave", '.course-card-container .course-card__preview', function () {
     let parent = $(this).closest('.course-card'),
       container = $(this).closest('.course-card-container'),
-      count = Number(container.data('count')),
       col = container.closest("[class^='col-']"),
       currentBreakpoint = getBreakpoint(),
-      activeClass = col.attr('class')
-        .split(' ')
-        .filter(className => className.indexOf('col-') !== -1)
-        .find(className => className.indexOf(currentBreakpoint) !== -1),
-      colWidth = Number(activeClass.split('-')[2]),
-      noOfColumns = 12 / colWidth,
-      positionNo = count % noOfColumns,
-      position = positionNo !== 0 ? positionNo : noOfColumns,
-      toShowBefore = position - 1,
-      toShowAfter = noOfColumns - position;
+      toShowBefore = Position - 1,
+      toShowAfter = NoOfCols - Position;
+
     let toShow = col
     for (let i = 0; i <= toShowAfter; i++) {
       toShow = toShow.next()
@@ -85,7 +87,7 @@ const courseTemplate = function (course) {
   return `
     <div class="course-card">
       <a href="${course.url}" class="course-card__preview youtube-activator">
-        <img src="../../assets/images/get_img.jpg" alt="${course.title}" class="course-card__preview-cover">
+        <img src="${course.cover}" alt="${course.title}" class="course-card__preview-cover">
         <div class="course-card__preview-video youtube-player"
              id="course-${course.id}"
              data-video-id="${course.video_id}"></div>
