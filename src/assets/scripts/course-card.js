@@ -16,12 +16,16 @@ const courseTemplate = function (course) {
         <div class="course-card__preview-overlay"></div>
       </a>
       <div class="course-card__content">
+        <div class="course-card__rate rate-display" data-rate="4">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
         <div class="course-card__meta">
           <span class="body-2">${course.subscribers}</span>
           <span class="body-2">${course.duration}</span>
-          <p class="body-2 course-card__rate">
-            <i class="fa fa-star"></i>${course.total_rate}
-          </p>
         </div>
         <a class="title-link text-2 semi-bold" href="${course.url}">${course.title}</a>
         <p class="text-3 gray">${course.category}</p>
