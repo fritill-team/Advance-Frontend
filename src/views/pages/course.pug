@@ -5,7 +5,7 @@ block title
 	title Course
 
 block content
-	section(class="course-video course-video--playing")
+	section(class="course-video ")
 		.video__wrapper
 			.video--youtube
 				iframe(width='560' height='315' src='https://www.youtube.com/embed/f54g9F05ld8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
@@ -63,10 +63,9 @@ block content
 								include ../components/general-component/btn.pug
 								+btn-link('btn btn--lg btn--primary btn--rounded white', 'Enroll' , "#")
 								+btn-link('btn btn--lg btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
-					//End video content
-		.course-video__action 
-			button.btn.btn--primary.btn--icon.btn--ripple
-				i.fas.fa-info
+							.course-video__action 
+								button.btn.btn--primary.btn--icon.btn--ripple
+									i.fas.fa-info
 	section
 		.container
 			.row
