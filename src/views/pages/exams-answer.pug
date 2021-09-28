@@ -5,8 +5,10 @@ block title
 	title exam Answer page
 
 block content
-	.exam
-		.container
+	include ../components/sidebar-play-list.pug
+	+playlist
+	.exam.video-player
+		.container-fluid
 			.row
 				.col-lg-12
 					.card.answer 
@@ -39,11 +41,7 @@ block content
 										label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
 								.messages
 									ul 
-										li Please provide a valid city.
-					.d-flex
-						.card__footer-actions  
-							a(href="#" class="btn btn--primary hover btn--ripple") Next
-							a(href="#" class="btn btn--default hover btn--ripple") Previous
+										li Please provide a valid city. 
 				.col-lg-12
 					.card.answer 
 						.card__header 
@@ -65,11 +63,7 @@ block content
 										label.check-field__label.radio-field__label(for="radio-4" ) Lorem ipsum dolor. 
 								.messages
 									ul 
-										li Please provide a valid city.
-						.card__footer 
-							.card__footer-actions  
-								a(href="#" class="btn btn--primary hover btn--ripple") Next
-								a(href="#" class="btn btn--default hover btn--ripple") Previous			
+										li Please provide a valid city. 		
 				.col-lg-12
 					.card.answer 
 						.card__header  
@@ -93,11 +87,7 @@ block content
 										label.check-field__label.radio-field__label(for="radio-8" ) Lorem ipsum dolor Lorem ipsum dolor. 
 								.messages
 									ul 
-										li Please provide a valid city.
-						.card__footer 
-							.card__footer-actions  
-								a(href="#" class="btn btn--primary hover btn--ripple") Next
-								a(href="#" class="btn btn--default hover btn--ripple") Previous			
+										li Please provide a valid city. 		
 				.col-lg-12
 					.card.answer 
 						.card__header  
@@ -130,8 +120,8 @@ block content
 								.check-group 	
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-14" name="checkboxName")
-										label.check-field__label(for="checkbox-14" name="checkboxName") Lorem ipsum dolor.
-						.card__footer 
-							.card__footer-actions  
-								a(href="#" class="btn btn--primary hover btn--ripple") Next
-								a(href="#" class="btn btn--default hover btn--ripple") Previous
+										label.check-field__label(for="checkbox-14" name="checkboxName") Lorem ipsum dolor. 
+					.exam__footer
+						.card__footer-actions  
+							a(href="#" class="btn btn--primary hover btn--ripple") Next
+							a(href="#" class="btn btn--default hover btn--ripple") Previous

@@ -1011,3 +1011,14 @@ html[dir="rtl"] {
     padding-right: 0px;
   }
 }
+.night-mode {
+  .card {
+    background-color: #37464f;
+    box-shadow: 0 0 5px -1px #fff;
+    .card__header {
+      .header__title {
+        color: #fff;
+      }
+    }
+  }
+}

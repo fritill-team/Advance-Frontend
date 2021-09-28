@@ -1,5 +1,11 @@
 .exam {
   padding-top: 50px;
+  .exam__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    margin: 10px 0;
+  }
 }
 
 // .answer-wrapper{
@@ -410,6 +416,12 @@
   .card__content {
     display: flex;
     flex-direction: row;
+    .answer__item {
+      width: 50%;
+    }
+  }
+  .check-group {
+    flex-direction: row;
   }
   .card__footer {
     display: flex;
@@ -421,7 +433,19 @@
   @media (max-width: 992px) {
     .card__content {
       display: flex;
+      flex-flow: wrap;
+    }
+    .check-group {
       flex-direction: column;
+    }
+  }
+  @media (max-width: 767px) {
+    .card__content {
+      display: flex;
+      flex-flow: column;
+      .answer__item {
+        width: 100%;
+      }
     }
   }
   // .answer__item {
