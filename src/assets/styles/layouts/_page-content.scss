@@ -12,7 +12,9 @@
     flex-direction: row;
     height: calc(100vh - 60px);
   }
-
+  .page-content--answers {
+    flex-direction: column;
+  }
   &.page-content--margin-left {
     margin-left: 60px;
   }

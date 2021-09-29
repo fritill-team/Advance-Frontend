@@ -228,7 +228,7 @@ textarea::placeholder {
     .field-wrapper__label {
       color: #dc3545;
     }
-    .check-group {
+    .check-field-group {
       .check-field__label {
         color: #dc3545;
         &:before {
@@ -568,18 +568,18 @@ input[type="tel"] {
 //   }
 // }
 
-section{
-  &.section-index{
+section {
+  &.section-index {
     width: 100%;
     margin-bottom: 50px;
-    &.section-index--pt{
+    &.section-index--pt {
       padding-top: 20px;
     }
-    h3{
+    h3 {
       margin-bottom: 10px;
     }
   }
-  .section-index{
+  .section-index {
     // margin-top: 20px;
     width: 100%;
   }
@@ -976,7 +976,7 @@ html[dir="rtl"] {
       .field-wrapper__label {
         color: #dc3545;
       }
-      .check-group {
+      .check-field-group {
         .check-field__label {
           color: #dc3545;
           &:before {
