@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     width: 100%;
   }
 
@@ -36,6 +36,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    a{
+      font-size: inherit;
+    }
 
     * {
       margin: 0;
@@ -44,10 +47,25 @@
 
   .content-list-item__progress {
     background-color: rgba($primary, .4);
-    margin-right: 0;
+    position: relative;
+    border-radius: 2px;
     max-height: 5px !important;
     min-height: 5px;
     width: 100%;
+
+    span{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      max-width: 0;
+      width: 100%;
+      transition: .9s ease all;
+      height: 100%;
+      background-color: $accent;
+      border-radius: 2px;
+      z-index: 2;
+    }
   }
 }
 

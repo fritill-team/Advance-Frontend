@@ -12,14 +12,14 @@ const contentTemplate = item => `
     <div class="content-list-item__content-description body-2">
       ${item.description}
     </div>
-    ${item.type === 'video' && item.enabled ? `<div class="content-list-item__progress" style= "width: ${item.progress}"></div>` : ''}
+    ${item.type === 'video' && item.enabled ? `<div class="content-list-item__progress"><span style= "max-width: ${item.progress}"></span></div>` : ''}
   </div>`
 
 const chapterTemplate = item => `
   <h3 class="chapter-item__title">${item.title}</h3>
   <div class="chapter-item__details">
-    <span class="text-3">${item.progress}</span>
-    <span class="text-3">${item.duration}</span>
+    <span class="title-5">${item.progress}</span>
+    <span class="title-5">${item.duration}</span>
   </div>`
 
 $(".content-list-item").each(function (i, item) {
