@@ -10,7 +10,7 @@ input[type="button"] {
   &.btn {
     display: inline-block;
     margin: 0 5px 5px 0;
-    padding: 6px 20px;
+    padding: 4px 16px;
     font-size: 14px;
     border: 1px solid;
     border-radius: 5px;
@@ -18,14 +18,12 @@ input[type="button"] {
     color: $white;
     text-transform: uppercase;
     letter-spacing: 1.25px;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: center;
     white-space: nowrap;
-    
     &:hover {
-      opacity: 0.8;
+    //   color: white;
       transition: 0.3s ease all;
-      color: white;
     }
     
     &.btn--disabled,
@@ -43,34 +41,63 @@ input[type="button"] {
       background-color: $default;
       &:hover{
         color: $primary;
+        border-color: #B7B5B3;
+        background-color: #B7B5B3;
       }
     }
     &.btn--primary {
-      background-color: $primary;
+      background-color: $primary; //#0d758e // #3D5467
       border-color: $primary;
       &:hover{
         color: white;
+        background-color: #0385a5;
+        border-color:#0385a5;
       }
     }
     &.btn--secondary {
       background-color: $secondary;
       border-color: $secondary;
+      &:hover{
+        color: white;
+        background-color: #09aad6;//#1597BB
+        border-color: #09aad6;
+      }
     }
     &.btn--success {
       background-color: $success;
       border-color: $success;
+      &:hover{
+        color: white;
+        background-color: #45dd69 ;
+        border-color: #45dd69;
+      }
     }
     &.btn--info {
-      background-color: $info;
+      background-color: $info; //#5382a1
       border-color: $info;
+      &:hover{
+        color: white;
+        background-color: #196ba1 ;
+        border-color:  #196ba1;
+      }
     }
     &.btn--warning {
       background-color: $warning;
       border-color: $warning;
+      &:hover{
+        color: white;
+        background-color: #e26415 ;
+        border-color: #e26415;
+      }
     }
     &.btn--danger {
       background-color: $primaryLight;
       border-color: $primaryLight;
+      &:hover{
+        color: white;
+        background-color: #f1130f ;
+        border-color: #f1130f;
+      }
     }
   
     &.btn--white {
@@ -79,32 +106,13 @@ input[type="button"] {
     }
 
     &.btn--rounded {
+      color: white;
       border-radius: 20px;
-      &:hover {
-        transition: 0.3s ease all;
-        color: #fff;
-        &.btn--default {
-          background-color: $default;
-          color:$primary ;
-        }
-        &.btn--primary {
-          background-color: $primary;
-        }
-        &.btn--secondary {
-          background-color: $secondary;
-        }
-        &.btn--success {
-          background-color: $success;
-        }
-        &.btn--info {
-          background-color: $info;
-        }
-        &.btn--warning {
-          background-color: $warning;
-        }
-        &.btn--danger {
-          background-color: $primaryLight;
-        }
+      &.btn--default {
+        color: $primary;
+      }
+      &.btn--lg{
+        border-radius: 40px;
       }
     }
 
@@ -134,30 +142,29 @@ input[type="button"] {
         color: $primaryLight;
       }
       &:hover {
-        transition: 0.3s ease all;
         color: #fff;
-        &.btn--default {
-          background-color: $default;
-          color:$primary ;
-        }
-        &.btn--primary {
-          background-color: $primary;
-        }
-        &.btn--secondary {
-          background-color: $secondary;
-        }
-        &.btn--success {
-          background-color: $success;
-        }
-        &.btn--info {
-          background-color: $info;
-        }
-        &.btn--warning {
-          background-color: $warning;
-        }
-        &.btn--danger {
-          background-color: $primaryLight;
-        }
+      //   &.btn--default {
+      //     background-color: $default;
+      //     color:$primary ;
+      //   }
+      //   &.btn--primary {
+      //     background-color: $primary;
+      //   }
+      //   &.btn--secondary {
+      //     background-color: $secondary;
+      //   }
+      //   &.btn--success {
+      //     background-color: $success;
+      //   }
+      //   &.btn--info {
+      //     background-color: $info;
+      //   }
+      //   &.btn--warning {
+      //     background-color: $warning;
+      //   }
+      //   &.btn--danger {
+      //     background-color: $primaryLight;
+      //   }
       }
     }
     &.btn--ml-auto {
@@ -188,47 +195,91 @@ input[type="button"] {
       &.btn--danger {
         color: $primaryLight;
       }
-      &.icon--hover{
-        width: 35px;
-        height: 35px;
+      &:hover{
+        color: white;
+      }
+    }
+    &.link-color{
+      &:hover{
+        background-color: unset;
+        transition: 0.3s ease all;
+        &.btn--default {
+          color: #B7B5B3;
+        }
+        &.btn--primary {
+          color: #0385a5;
+        }
+        &.btn--secondary {
+          color: #09aad6;
+        }
+        &.btn--success {
+          color: #45dd69;
+        }
+        &.btn--info {
+          color: #196ba1;
+        }
+        &.btn--warning {
+          color: #e26415;
+        }
+        &.btn--danger {
+          color: #f1130f;
+        }
+      }
+    }
+    &.icon--hover{
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      // padding: 5px 0px 4px 1px;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      position: relative;
+      background-color: transparent;
+      border: 0px;
+      &.btn--lg{
+        padding: 0;
+        width: 40px;
+        height: 40px;
         border-radius: 100%;
-        padding: 5px 0px 4px 1px;
-        font-size: 14px;
-        background-color: transparent;
-        position: relative;
-        border: 0px;
-        svg,
-        i {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          padding-left: 1px;
+      }
+      svg,
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 2px;
+      }
+      &:hover{ 
+        color: white;
+        &.btn--lg{
+          padding: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
         }
-        &:hover{ 
-          color: white;
-          &.btn--default {
-            background-color: $light-gray;
-          }
-          &.btn--primary {
-            background-color: $primary;
-          }
-          &.btn--secondary {
-            background-color: $secondary;
-          }
-          &.btn--success {
-            background-color: $success;
-          }
-          &.btn--info {
-            background-color: $info;
-          }
-          &.btn--warning {
-            background-color: $warning;
-          }
-          &.btn--danger {
-            background-color: $primaryLight;
-          }
-        }
+      //   &.btn--default {
+      //     background-color: $light-gray;
+      //   }
+      //   &.btn--primary {
+      //     background-color: $primary;
+      //   }
+      //   &.btn--secondary {
+      //     background-color: $secondary;
+      //   }
+      //   &.btn--success {
+      //     background-color: $success;
+      //   }
+      //   &.btn--info {
+      //     background-color: $info;
+      //   }
+      //   &.btn--warning {
+      //     background-color: $warning;
+      //   }
+      //   &.btn--danger {
+      //     background-color: $primaryLight;
+      //   }
       }
     }
     &.btn--hover{
@@ -292,7 +343,7 @@ input[type="button"] {
       width: 35px;
       height: 35px;
       border-radius: 100%;
-      padding: 5px 0px 4px 1px;
+      // padding: 5px 0px 4px 1px;
       text-align: center;
       font-size: 14px;
       transition: all 0.3s ease;
@@ -303,37 +354,13 @@ input[type="button"] {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding-left: 1px;
+        padding-left: 2px;
       }
-      &.btn--default {
-        background-color: $default;
-        svg,
-        i {
-        color: $primary;
-        }
-      }
-      &.btn--primary {
-        background-color: $primary;
-      }
-
-      &.btn--secondary {
-        background-color: $secondary;
-      }
-
-      &.btn--success {
-        background-color: $success;
-      }
-
-      &.btn--info {
-        background-color: $info;
-      }
-
-      &.btn--warning {
-        background-color: $warning;
-      }
-
-      &.btn--danger {
-        background-color: $primaryLight;
+      &.btn--lg{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        padding: 0;
       }
     }
     &.btn--with-icon {
@@ -345,36 +372,35 @@ input[type="button"] {
       }
 
       &.btn--default {
-        background-color: $default;
         svg,
         i {
         color: $primary;
         }
       }
 
-      &.btn--primary {
-        background-color: $primary;
-      }
+      // &.btn--primary {
+      //   background-color: $primary;
+      // }
 
-      &.btn--secondary {
-        background-color: $secondary;
-      }
+      // &.btn--secondary {
+      //   background-color: $secondary;
+      // }
 
-      &.btn--success {
-        background-color: $success;
-      }
+      // &.btn--success {
+      //   background-color: $success;
+      // }
 
-      &.btn--info {
-        background-color: $info;
-      }
+      // &.btn--info {
+      //   background-color: $info;
+      // }
 
-      &.btn--warning {
-        background-color: $warning;
-      }
+      // &.btn--warning {
+      //   background-color: $warning;
+      // }
 
-      &.btn--danger {
-        background-color: $primaryLight;
-      }
+      // &.btn--danger {
+      //   background-color: $primaryLight;
+      // }
     }
 
     &.btn--hover-dropdown {
@@ -388,7 +414,6 @@ input[type="button"] {
       color: #686f7a;
       border: 0;
       line-height: 20px;
-
       &:hover {
         background-color: #828a91;
         color: #fff !important;
@@ -403,13 +428,6 @@ input[type="button"] {
       text-align: left;
     }
     
-    &.without-line{
-      &:hover{
-        text-decoration: none;
-        transition: 0.3s ease all;
-      }
-    }
-
     &.btn--center {
       display: block;
       margin: auto;
@@ -420,12 +438,12 @@ input[type="button"] {
       margin: 5px;
       font-size: 18px;
       font-weight: 600;
-      border-radius: 30px;
+      // border-radius: 30px;
       line-height: 1.3;
     }
 
     &.btn--sm {
-      padding: 9px 15px;
+      padding: 7px 14px;
       margin: 5px;
       font-size: 12px;
       font-weight: 300;
@@ -439,32 +457,33 @@ input[type="button"] {
       &:hover {
         background-position: center;
         background-size: 15000%;
-        &.btn--default {
-          background-image: radial-gradient(circle, transparent 1%, rgb(197, 194, 194) 1%);
-        }
-        &.btn--primary {
-          background-image: radial-gradient(circle, transparent 1%, #9cb9c0 1%);
-        }
+        background-image: radial-gradient(circle, transparent 1%, rgb(197, 194, 194) 1%);
+        //   &.btn--default {
+        //     background-image: radial-gradient(circle, transparent 1%, rgb(197, 194, 194) 1%);
+        //   }
+        //   &.btn--primary {
+        //     background-image: radial-gradient(circle, transparent 1%, #9cb9c0 1%);
+        //   }
 
-        &.btn--secondary {
-          background-image: radial-gradient(circle, transparent 1%, rgb(75, 125, 139) 1%);
-        }
+        //   &.btn--secondary {
+        //     background-image: radial-gradient(circle, transparent 1%, rgb(75, 125, 139) 1%);
+        //   }
 
-        &.btn--success {
-          background-image: radial-gradient(circle, transparent 1%, #699673 1%);
-        }
+        //   &.btn--success {
+        //     background-image: radial-gradient(circle, transparent 1%, #699673 1%);
+        //   }
 
-        &.btn--info {
-          background-image: radial-gradient(circle, transparent 1%, #7498b1 1%);
-        }
+        //   &.btn--info {
+        //     background-image: radial-gradient(circle, transparent 1%, #7498b1 1%);
+        //   }
 
-        &.btn--warning {
-          background-image: radial-gradient(circle, transparent 1%, #8b5c3f 1%);
-        }
+        //   &.btn--warning {
+        //     background-image: radial-gradient(circle, transparent 1%, #8b5c3f 1%);
+        //   }
 
-        &.btn--danger {
-          background-image: radial-gradient(circle, transparent 1%, #924343 1%);
-        }
+        //   &.btn--danger {
+        //     background-image: radial-gradient(circle, transparent 1%, #924343 1%);
+        //   }
       }
 
       &:active {
@@ -501,7 +520,32 @@ input[type="button"] {
         }
       }
     }
-
+    &.ripple-effect{
+      position: relative;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      overflow: hidden;
+      cursor: pointer;
+      &::after{
+        content: "";
+        background: rgb(197, 194, 194);
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px!important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s 
+      }
+      &:active::after{
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+      }
+    
+    }
     &.btn--error {
       color: #721c24;
       background-color: #f8d7da;
@@ -517,11 +561,24 @@ input[type="button"] {
         background: transparent;
         transition: width .5s ease, background-color .5s ease;
       }
+      &:hover{
+        color: unset;
+        background-color: unset;
+      }
       &:hover:after {
         width: 100%;
         background:$light-gray;
       }
     }
+  }
+  a.btn {
+    // // line-height: 1.7;
+    // &.btn--text {
+    //   text-decoration: none;
+    // }
+    // &:hover{
+    //   color: white ;
+    // }
   }
 }
 //button {
@@ -538,17 +595,17 @@ input[type="button"] {
 //  }
 //}
 
-a.btn {
-  // line-height: 1.7;
-  &.btn--text {
-    text-decoration: none;
-  }
-  &:hover{
-    color: white;
-  }
-  &:active {
-    opacity: 1.8;
-  }
+// a.btn {
+//   // line-height: 1.7;
+//   &.btn--text {
+//     text-decoration: none;
+//   }
+//   &:hover{
+//     color: white !important;
+//   }
+//   &:active {
+//     opacity: 1.8;
+//   }
   // &.btn--hover-line{
   //   &:after{
   //     content: '';
@@ -564,7 +621,7 @@ a.btn {
   //     background:$light-gray;
   //   }
   // }
-}
+// }
 
 .btn-group {
   margin: 5px;
