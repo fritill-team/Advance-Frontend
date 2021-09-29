@@ -678,3 +678,10 @@ html[dir="rtl"] {
         }
       }
     }
+
+    @media (max-width: 768.98px){
+      .btn--player{
+        margin-top: 16px !important;
+        margin-right: auto !important;
+      }
+    }

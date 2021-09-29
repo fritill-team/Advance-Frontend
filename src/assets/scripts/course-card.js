@@ -58,7 +58,7 @@ $(document)
       toHide = toHide.prev()
       toHide.hide()
     }
-    parent.addClass("course-card--hover")
+    parent.addClass("course-card--hover animation")
     col.addClass(`col-${currentBreakpoint}-12`)
   })
   .on("mouseleave", '.course-card-container .course-card__preview', function () {
@@ -79,7 +79,7 @@ $(document)
       toShow = toShow.prev()
       toShow.show()
     }
-    parent.removeClass("course-card--hover")
+    parent.removeClass("course-card--hover animation")
     col.removeClass(`col-${currentBreakpoint}-12`)
   })
 

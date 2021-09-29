@@ -9,22 +9,25 @@
   //position: absolute;
   //top: 0;
   //left: 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
   background: $white;
   padding: 10px;
   border-radius: 10px;
   height: 100%;
   overflow: hidden;
   width: 100%;
-
-
+  &:hover{
+    // opacity: 0;
+  }
+  
   &.course-card--hover {
     padding: 0;
     //transform: scaleX(1.5)  ;
+    // opacity: 1;
     z-index: 10;
     box-shadow: 0 0 50px 0 rgba($primary, 0.5);
-
-
+    animation-delay: .3s;
+    // opacity: 0;
     //@media (max-width: 1200.98px) {
     //  transform: scale(0);
     //}
@@ -55,6 +58,11 @@
     }
   }
 
+  &.animation{
+    animation: cousreFading .6s;
+    // opacity: 1;
+  }
+
   .course-card__preview {
     width: 100%;
     max-height: 200px;
@@ -78,7 +86,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $primary;
+    background-color: rgba(darken($primary, 5%), 0.5);
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -96,6 +104,9 @@
 
   .course-card__content {
     padding: 10px 5px 0 5px;
+    @media (max-width: 1199.98px) and (min-width: 992px) {
+      padding: 0;
+    }
   }
 
   .course-card__rate {
@@ -114,6 +125,20 @@
 
     :nth-child(1) {
       margin-right: 4px;
+    }
+    @media (max-width: 1199.98px) and (min-width: 992px){
+      flex-wrap: wrap;
+      .course-card__rate{
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+      :nth-child(1) {
+        margin-right: 10px;
+      }
+      span{
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -166,6 +191,11 @@
     //  flex-direction: row-reverse;
     //}
   }
+}
+
+@keyframes cousreFading {
+  0% {opacity: 0;}
+  100% {opacity: 1}
 }
 
 //dir rtl
