@@ -62,43 +62,45 @@ block content
 						| Please provide a valid city.  
 		// input checkbox 
 		.col-lg-12.col-md-12.col-sm-12
-			.field-wrapper
-				label.field-wrapper__label Course checkbox*
-				.check-group
+			.field-wrapper 
+				.check-field-group
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
-						label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor.
-					ul.messages 
-						li Please provide a valid city.
-						//- i.fas.fa-check.icon
+						label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-2" name="checkboxName")
-						label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor.
-					ul.messages 
-						li Please provide a valid city.
+						label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor. 
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-3" name="checkboxName")
-						label.check-field__label(for="checkbox-3" ) Lorem ipsum dolor.
-					ul.messages 
-						li Please provide a valid city.
+						label.check-field__label(for="checkbox-3" ) Lorem ipsum dolor. 
 					.check-field
 						input.check-field__input(type="checkbox" id="checkbox-4" name="checkboxName")
 						label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
-					ul.messages 
-						li Please provide a valid city.
+					.check-field.check-field--no-label
+						input.check-field__input(type="checkbox"  id="checkbox-5" value="checkbox")
+						label.check-field__label(for="checkbox-5")  
+				ul.messages 
+					li Please provide a valid city.
 		// input radio
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper
 				label.field-wrapper__label Course checkbox*
-				.check-group
+				.check-field-group
 					.check-field
 						input.check-field__input(type="radio" id="radio-1" name="radioName")
 						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
 					.check-field
 						input.check-field__input(type="radio" id="radio-2" name="radioName")
 						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+					.check-field.check-field--no-label
+						input.check-field__input(type="radio" id="radio-5" name="radioName")
+						label.check-field__label.radio-field__label(for="radio-5" )
 				ul.messages 
 					li Please provide a valid city.  
+			//check-field out wrapper
+			.check-field
+				input.check-field__input(type="radio" id="radio-55" name="radioName")
+				label.check-field__label.radio-field__label(for="radio-55" name="radioName") Lorem ipsum dolor.			
 		// input__date
 		.col-md-12.col-sm-6
 			.field-wrapper

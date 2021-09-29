@@ -5,24 +5,33 @@ block title
 	title exam Answer page
 
 block content
-	include ../components/sidebar-play-list.pug
-	+playlist
-	.exam.video-player
-		.container-fluid
+	//- include ../components/sidebar-play-list.pug
+	//- +playlist
+	.exams-questions.video-player
+		.container 
+			section.questions-header
+				.questions-header__title
+					h1.title-h1 Exams Development
+					.questions-header__info
+						p.text-2  The only course you need to learn web development
+						p.text-2  The only course you need
+				.questions-header__description 
+					p.text-2 Lorem ipsum dolor sit,Lorem ipsum dolor sit,Lorem ipsum dolor sit  
 			.row
 				.col-lg-12
-					.card.answer 
-						.card__header 
-							h3.header__title.title-h3  the flowchart has one output variable
-						.card__info
-							span.info__description he flowchart has one output variable
-						.card__header__content
+					.question-title
+						h3.title-h3 Exams Difficile
+						.question-title__info
+							p.text-3  Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor  
+					.question-card 
+						.question-card__title
+							h3.title-h3  the flowchart has one output variable
+						.question-card__content
 							.field-wrapper
-								.check-group
+								.check-field-group
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
-										label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor.
-										//- i.fas.fa-check.icon
+										label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-2" name="checkboxName")
 										label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor.
@@ -32,15 +41,15 @@ block content
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-4" name="checkboxName")
 										label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
+								ul.messages 
+									li Please provide a valid city.
 				.col-lg-12
-					.card.answer 
-						.card__header 
-							h3.header__title.title-h3  the flowchart has one output variable
-						.card__info
-							span.info__description he flowchart has one output variable
-						.card__content
+					.question-card 
+						.question-card__title 
+							h3.title-h3  the flowchart has one output variable
+						.question-card__content
 							.field-wrapper
-								.check-group
+								.check-field-group
 									.check-field
 										input.check-field__input(type="radio" id="radio-1" name="radioName")
 										label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
@@ -57,16 +66,15 @@ block content
 									ul 
 										li Please provide a valid city. 		
 				.col-lg-12
-					.card.answer 
-						.card__header 
-							h3.header__title.title-h3  the flowchart has one output variable
-						.card__info
-							span.info__description he flowchart has one output variable
-						.image.preview
-							img(src="../../assets/images/sign.svg", alt="")
-						.card__content
+					.question-card 
+						.question-card__title 
+							h3.title-h3  the flowchart has one output variable
+						.question-card__item
+							.image-wrapper
+								img(src="../../assets/images/sign.svg", alt="")
+						.question-card__content
 							.field-wrapper
-								.check-group
+								.check-field-group
 									.check-field
 										input.check-field__input(type="radio" id="radio-5" name="radioName")
 										label.check-field__label.radio-field__label(for="radio-5" name="radioName") Lorem ipsum dolor.Lorem ipsum dolor.
@@ -83,59 +91,58 @@ block content
 									ul 
 										li Please provide a valid city. 		
 				.col-lg-12
-					.card.answer 
-						.card__header 
-							h3.header__title.title-h3  the flowchart has one output variable
-						.card__info
-							span.info__description he flowchart has one output variable 
-						.card__content 
-							.answer__item
-								.image.preview
+					.question-card 
+						.question-card__title 
+							h3.title-h3  the flowchart has one output variable
+						.question-card__content 
+							.question-card__item
+								.image-wrapper
 									img(src="../../assets/images/sign.svg", alt="")
-								.check-group 	
+								.check-field-group 	
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-11" name="checkboxName")
 										label.check-field__label(for="checkbox-11" name="checkboxName") Lorem ipsum dolor.
-							.answer__item  
-								.image.preview
+							.question-card__item  
+								.image-wrapper
 									img(src="../../assets/images/sign.svg", alt="")
-								.check-group 	
+								.check-field-group 	
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-12" name="checkboxName")
 										label.check-field__label(for="checkbox-12" name="checkboxName") Lorem ipsum dolor.
-							.answer__item  
-								.image.preview
+							.question-card__item  
+								.image-wrapper
 									img(src="../../assets/images/sign.svg", alt="")
-								.check-group 	
+								.check-field-group 	
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-13" name="checkboxName")
 										label.check-field__label(for="checkbox-13" name="checkboxName") Lorem ipsum dolor.
-							.answer__item  
-								.image.preview
+							.question-card__item  
+								.image-wrapper
 									img(src="../../assets/images/sign.svg", alt="")
-								.check-group 	
+								.check-field-group 	
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-14" name="checkboxName")
 										label.check-field__label(for="checkbox-14" name="checkboxName") Lorem ipsum dolor. 
+				.col-lg-12
 					.exam__footer
 						.card__footer-actions  
 							a(href="#" class="btn btn--primary hover btn--ripple") Next
 							a(href="#" class="btn btn--default hover btn--ripple") Previous
-				.col-lg-12
-					.card.answer 
-						.card__header 
-							h3.header__title.title-h3  the flowchart has one output variable
-						.card__info
-							span.info__description he flowchart has one output variable
-						.card__content
-							.field-wrapper
-								.check-group
-									.check-field
-										input.check-field__input(type="radio" id="radio-1" name="radioName")
-										label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
-									.check-field
-										input.check-field__input(type="radio" id="radio-2" name="radioName")
-										label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
-									.check-field
-										input.check-field__input(type="radio" id="radio-3" name="radioName")
-										label.check-field__label.radio-field__label(for="radio-3" ) Lorem ipsum dolor. 
+				//- .col-lg-12
+				//- 	.card.answer 
+				//- 		.card__header 
+				//- 			h3.header__title.title-h3  the flowchart has one output variable
+				//- 		.card__info
+				//- 			span.info__description he flowchart has one output variable
+				//- 		.card__content
+				//- 			.field-wrapper
+				//- 				.check-field-group
+				//- 					.check-field
+				//- 						input.check-field__input(type="radio" id="radio-1" name="radioName")
+				//- 						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
+				//- 					.check-field
+				//- 						input.check-field__input(type="radio" id="radio-2" name="radioName")
+				//- 						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+				//- 					.check-field
+				//- 						input.check-field__input(type="radio" id="radio-3" name="radioName")
+				//- 						label.check-field__label.radio-field__label(for="radio-3" ) Lorem ipsum dolor. 
