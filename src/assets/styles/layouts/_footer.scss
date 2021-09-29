@@ -102,11 +102,29 @@
     margin-top: 30px;
   }
 }
+.fritill{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .fritill-logo{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  @media(max-width: 768px){
+    justify-content: center;
+  }
+  @media(max-width: 370px){
+    .list__paragraph{
+      font-size: 13px;
+    }
+  }
+}
 
 // .fotb_left
 .copy-right {
   margin-top: 0px;
-  @media (max-width: 560px) {
+  @media (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,32 +133,33 @@
   .copy-right__list {
     display: inline-block;
     vertical-align: middle;
-
-    a.list__link {
-      .footer-logo {
-        img {
-          width: 30px;
-          margin-right: 20px;
-          line-height: 24px;
-          padding-top: 10px;
-        }
-      }
-    }
-
-    p.list__paragraph {
-      font-size: 14px;
-      font-weight: 400;
-      color: #f7f7f7;
-      text-align: left;
-      line-height: 24px;
-      // padding-top: 10px;
-      margin: 0;
-
-      strong {
-        font-weight: bold;
+  }
+  a.list__link {
+    .footer-logo {
+      img {
+        width: 30px;
+        margin-right: 20px;
+        line-height: 24px;
+        padding-top: 10px;
       }
     }
   }
+
+  p.list__paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    color: #f7f7f7;
+    text-align: left;
+    line-height: 24px;
+    margin: 0;
+    @media(max-width: 370px){
+      font-size: 13px;
+    }
+    strong {
+      font-weight: bold;
+    }
+  }
+  
 }
 
 
@@ -149,7 +168,7 @@
   display: flex;
   height: 100%;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   .social-links__link {
     // padding-top: 10px;
     padding-left: 15px;
