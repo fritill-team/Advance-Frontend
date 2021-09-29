@@ -18,7 +18,7 @@ const contentTemplate = item => `
 const chapterTemplate = item => `
   <h3 class="chapter-item__title">${item.title}</h3>
   <div class="chapter-item__details">
-    <span class="title-5">${item.progress}</span>
+    <span class="title-5">${item.progress}<span>lectures</span></span>
     <span class="title-5">${item.duration}</span>
   </div>`
 
