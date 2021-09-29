@@ -165,17 +165,32 @@ span#procent {
     //     content: "😃"
     //   }
     // } 
-    input.control [type="checkbox"] + label.click-me:after{
+    // input.control [type="checkbox"] + label.click-me:after{
+    //   position: absolute;
+    //   font-size: 100px;
+    //   width: 50%;
+    //   height: 50%;
+    //   content: "😃"
+    // } 
+    // input[type="radio"]:checked + label.click-me:after{
+    //   content: "😩";
+    // } 
+    [type=radio] { 
       position: absolute;
-      font-size: 100px;
-      width: 50%;
-      height: 50%;
-      content: "😃"
-    } 
-    input[type="radio"]:checked + label.click-me:after{
-      content: "😩";
-    } 
-
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    /* IMAGE STYLES */
+    [type=radio] + img {
+      cursor: pointer;
+    }
+    
+    /* CHECKED STYLES */
+    [type=radio]:checked + img {
+      outline: 2px solid #f00;
+    }
     @media (min-width: 0px) and (max-width: 650px) {
       display: flex;
     }  
