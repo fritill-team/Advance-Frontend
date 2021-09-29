@@ -905,6 +905,7 @@
 // dir en to ar
 html[dir="rtl"] {
   .card {
+
     .card__content-header {
       align-items: flex-start;
     }
@@ -951,7 +952,11 @@ html[dir="rtl"] {
       }
     }
   }
-
+  &.card--side-col{
+    .card__content{
+      padding-left: 0;
+    }
+  }
   &.card--reversed {
     .card__content {
       align-items: flex-end;

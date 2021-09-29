@@ -93,3 +93,12 @@
   }
 
 }
+
+html[dir="rtl"]{
+  .content-list{
+    .content-list-item__image{
+      margin-right: 0;
+      margin-left: 18px;
+    }
+  }
+}

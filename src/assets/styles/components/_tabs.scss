@@ -130,3 +130,8 @@
 }
 
 // End tabs
+html[dir="rtl"]{
+  .tab{
+    margin: 0 0 0 15px;
+  }
+}

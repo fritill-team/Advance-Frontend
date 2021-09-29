@@ -562,3 +562,12 @@ html[dir="rtl"] {
 		text-align: right;
 	}
 }
+
+html[dir="rtl"]{
+  .video-content__language{
+    margin-right: 0;
+  }
+  .language__lang{
+    margin-right: 0;
+  }
+}
