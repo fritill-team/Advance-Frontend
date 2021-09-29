@@ -1,15 +1,15 @@
 
 const itemTemplate = function (artical) {
   return `
-  <div class="content-list__item">
-    <div class="item__image">
+  <div class="content-list-item">
+    <div class="content-list-item__image">
       <img src="../../assets/images/artical.png" alt=""/>
     </div>
-    <div class="item__content">
-      <div class="item__content-header"> 
+    <div class="content-list-item__content">
+      <div class="content-list-item__content-header"> 
         <h5 class="title-5">${artical.title}</h5>
       </div>
-      <p class="item__content-description body-2 my-0">
+      <p class="content-list-item__content-description body-2 my-0">
         ${artical.desc}
       </p>
     </div>

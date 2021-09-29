@@ -233,11 +233,11 @@
     align-items: center;
     justify-content: space-between;
   }
-  .content-list__item{
+  .content-list-item{
     display: flex;
     margin-bottom: 20px;
   }
-  .item__image{
+  .content-list-item__image{
     width: 130px;
     height: 80px;
     margin-right: 18px;
@@ -248,7 +248,7 @@
       object-fit: cover;
     }
   }
-  .item__content{
+  .content-list-item__content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -256,7 +256,7 @@
     width: 100%;
     // padding: 5px 0;
   }
-  .item__content-header{
+  .content-list-item__content-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
