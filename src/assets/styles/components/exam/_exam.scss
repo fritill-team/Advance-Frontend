@@ -411,11 +411,20 @@
 .answer {
   .card__header {
     align-items: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
+    .header__title {
+      padding-bottom: 4px;
+    }
+  }
+  .card__info {
+    margin-bottom: 25px;
+    .info__description {
+      color: #fff;
+    }
   }
   .card__content {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     .answer__item {
       width: 50%;
     }
@@ -430,7 +439,21 @@
     padding-top: 10px;
     margin-top: 10px;
   }
-  @media (max-width: 992px) {
+  .field-wrapper {
+    .check-group {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-flow: wrap;
+      .check-field {
+        width: 50%;
+        padding: 5px 5px 10px 0;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .answer {
     .card__content {
       display: flex;
       flex-flow: wrap;
@@ -439,147 +462,32 @@
       flex-direction: column;
     }
   }
-  @media (max-width: 767px) {
+}
+@media (max-width: 767px) {
+  .answer {
     .card__content {
       display: flex;
       flex-flow: column;
+      padding-left: 0;
       .answer__item {
         width: 100%;
       }
     }
+    .card__header {
+      .header__title {
+        font-size: 22px;
+      }
+    }
+    .field-wrapper {
+      .check-group {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-flow: column;
+        .check-field {
+          width: 100%;
+        }
+      }
+    }
   }
-  // .answer__item {
-  //   display: flex;
-  //   flex-direction: row;
-  //   width: 100%;
-  //   margin-bottom: 15px;
-  //   cursor: pointer;
-  //   height: 100%;
-  //   // align-items: center;
-  // }
-  // .item__label {
-  //   display: flex;
-  //   height: 100%;
-  // }
-  // input {
-  //   &:checked {
-  //     & + .item__label {
-  //       .play-list__check {
-  //         opacity: 1;
-  //         background: $accent;
-  //         color: #fff;
-  //         font-size: 14px;
-  //         width: 22px;
-  //         height: 22px;
-  //         text-align: center;
-  //         line-height: 1.2;
-  //       }
-  //     }
-  //   }
-  //   &:disabled {
-  //     & + .item__label {
-  //       cursor: not-allowed;
-  //       .play-list__check {
-  //         opacity: 1;
-  //       }
-  //     }
-  //   }
-  // }
-  // .answer__img-wrapper {
-  //   margin-left: 5px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   position: relative;
-  //   height: 100%;
-  //   .answer__img {
-  //     min-width: 80px;
-  //     max-width: 80px;
-  //     max-height: 60px;
-  //     min-height: 60px;
-  //     background-color: #aaa;
-  //     width: 100%;
-  //     height: 100%;
-  //     object-fit: cover;
-  //   }
-  //   .play-list__check {
-  //     position: absolute;
-  //     top: 2px;
-  //     left: 5px;
-  //     background: rgba($darkBlack2, 0.1);
-  //     color: #fff;
-  //     padding: 4px;
-  //     border-radius: 15px;
-  //     width: 22px;
-  //     height: 20px;
-  //   }
-  // }
-  // .play-list__content {
-  //   margin-left: 5px;
-  //   display: grid;
-  //   .play-list__title {
-  //     margin: 0;
-  //     font-size: 14px;
-  //     font-weight: 400;
-  //     color: $primary;
-  //     // max-height: 10px;
-  //     &:hover {
-  //       color: $accent;
-  //     }
-  //   }
-  //   .playlist-info {
-  //     font-size: 12px;
-  //     line-height: 1px;
-  //     color: $primary;
-  //   }
-  // }
-  // &.play-list__with-icon {
-  //   .answer__img-wrapper {
-  //     margin-left: 5px;
-  //     // display: flex;
-  //     // flex-direction: column;
-  //     align-items: center;
-  //     position: relative;
-  //     .answer__img {
-  //       min-width: 80px;
-  //       max-width: 80px;
-  //       max-height: 60px;
-  //       min-height: 60px;
-  //       background-color: #aaa;
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //     .play-list__check {
-  //       position: absolute;
-  //       top: 2px;
-  //       left: 5px;
-  //       background: rgba($darkBlack2, 0.1);
-  //       color: #fff;
-  //       padding: 4px;
-  //       border-radius: 15px;
-  //       width: 22px;
-  //       height: 20px;
-  //     }
-  //   }
-  // }
-  // &.play-list__with-icon-hover {
-  //   .answer__img-wrapper {
-  //     .play-list__check {
-  //       opacity: 0.4;
-  //       &.play-list__check--show {
-  //         display: block;
-  //         color: #fff;
-  //         background: #333;
-  //       }
-  //     }
-  //   }
-  //   &:hover .play-list__check {
-  //     display: block;
-  //     opacity: 1;
-  //   }
-  //   &:hover .text-3 {
-  //     color: #48a360 !important;
-  //   }
-  // }
 }

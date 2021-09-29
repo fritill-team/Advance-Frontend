@@ -64,11 +64,6 @@
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    .header__title {
-      // border-bottom: 1px solid rgba($primary, 0.4);
-      padding-bottom: 6px;
-      margin-bottom: 0;
-    }
   }
 
   &.card--transparent {

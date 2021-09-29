@@ -2,7 +2,7 @@
   // background-color: lighten(#38444d, 5%);
   background-color: #fff;
   overflow-y: auto;
-  z-index: 995;
+  z-index: 9;
   transition: all 0.3s ease;
   height: 100%;
   width: 100%;
@@ -41,8 +41,8 @@
     font-weight: 500;
   }
 }
-.night-mode{
-  .playlist__header-section{
+.night-mode {
+  .playlist__header-section {
     background-color: $primary-darkmode;
   }
 }
@@ -83,12 +83,12 @@
   }
 }
 
-.night-mode{
-  .playlist{
+.night-mode {
+  .playlist {
     background-color: lighten($primary-darkmode, 5);
   }
-  .playlist__header{
-    .playlist__title{
+  .playlist__header {
+    .playlist__title {
       color: $white;
     }
   }
