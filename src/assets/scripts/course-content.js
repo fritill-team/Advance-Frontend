@@ -1,34 +1,34 @@
 const contentTemplate = item => `
-  <a href="${item.url}" class="item__image">
+  <a href="${item.url}" class="content-list-item__image">
     <img src="${item.thumb}" alt=""/>
   </a>
-  <div class="item__content">
-    <div class="item__content-header">
-      <h5 class="title-5"><a href="${item.url}">${item.title}</a></h5>
-      ${item.type === 'video' ? `<span class="title-5">${item.duration}</span>` : item.type === 'exam' ? `<span class="title-5">${item.progress}</span>` : ''}
+  <div class="content-list-item__content">
+    <div class="content-list-item__content-header">
+      <h5 class="title-5">
+        ${item.enabled ? `<a class="title-5" href="${item.url}">${item.title}</a>` : item.title}
+      </h5>
+      ${item.type === 'video' ? `<span class="title-5">${item.duration}</span>` : item.type === 'exam' && item.enabled? `<span class="title-5">${item.progress}</span>` : ''}
     </div>
-    <div class="item__content-description body-2">
+    <div class="content-list-item__content-description body-2">
       ${item.description}
     </div>
-    ${item.type === 'video' ? `<div class="rating__progress">
-    <div class="progress--progress-bar" style= "width: ${item.progress}"></div>
-    </div>` : ''}
+    ${item.type === 'video' && item.enabled ? `<div class="content-list-item__progress" style= "width: ${item.progress}"></div>` : ''}
   </div>`
 
-const chapterTemplate = item =>  `
-  <h3 class="content-list__title">${item.title}</h3>
-  <div class="content-list__details">
+const chapterTemplate = item => `
+  <h3 class="chapter-item__title">${item.title}</h3>
+  <div class="chapter-item__details">
     <span class="text-3">${item.progress}</span>
     <span class="text-3">${item.duration}</span>
   </div>`
 
-$(".content-list__item").each(function (i, item) {
+$(".content-list-item").each(function (i, item) {
   item = $(item)
   let data = item.data("data")
   item.html($(contentTemplate(data)))
 })
 
-$(".content-list__header").each(function (i, item) {
+$(".chapter-item").each(function (i, item) {
   item = $(item)
   let data = item.data("data")
   item.html($(chapterTemplate(data)))
