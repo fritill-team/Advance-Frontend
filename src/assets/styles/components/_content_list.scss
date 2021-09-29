@@ -100,5 +100,30 @@ html[dir="rtl"]{
       margin-right: 0;
       margin-left: 18px;
     }
+    .content-list-item__progress{
+      span{
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+}
+
+.night-mode{
+  .chapter-item{
+    border-bottom: 1px solid #fff;
+    .chapter-item__details{
+      color: $accent;
+    }
+  }
+  .content-list{
+    .content-list-item__content-header{
+      span{
+        color: $accent;
+      }
+    }
+  }
+  .content-list-item__content-description{
+    color: $white;
   }
 }
