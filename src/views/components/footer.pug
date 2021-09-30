@@ -1,59 +1,64 @@
 //- src/views/components/footer.pug
 
 footer.footer
-  img.footer__background(src="../../../assets/images/Pattern_4.svg", alt="", srcset="")
-  .container
-    .row
-      .col-lg-3.col-md-6.col-sm-6
-        .footer__footer-content 
-          //- a(href='about.pug') About
-          a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
-          a.footer-content__link(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
-          //- a(href='our_blog.html') Blog
-          a.footer-content__link(href='career.html') Careers
-          a.footer-content__link(href='press.html') Press
-      .col-lg-3.col-md-6.col-sm-6
-        .footer__footer-content
-          a.footer-content__link(href='help.html') Help
-          a.footer-content__link(href='coming_soon.html') Advertise
-          a.footer-content__link(href='coming_soon.html') Developers
-          a.footer-content__link(href='contact_us.html') Contact Us
-      .col-lg-3.col-md-6.col-sm-6
-        .footer__footer-content
-          a.footer-content__link(href='terms_of_use.html') Copyright Policy
-          a.footer-content__link(href='terms_of_use.html') Terms
-          a.footer-content__link(href='terms_of_use.html') Privacy Policy
-          a.footer-content__link(href='sitemap.html') Sitemap
-      .col-lg-3.col-md-6.col-sm-6
-        .footer__footer-buttons
-          a.footer-buttons__link.primary(href='terms_of_use.html') Teach on Etqadem
-      .col-lg-12
-        .footer-line
-          .row
-            .col-md-6.col-sm-12.col-xs-12
-              ul.copy-right
-                li.copy-right__list
-                  a.list__link(href='index.html')
-                    .footer-logo
-                      img(src='../../assets/images/Etqadem_Icon_Yellow.svg' alt='')
-                li.copy-right__list
-                  p.list__paragraph
-                    | &copy; 2020 
-                    strong Itqadem
-                    | . All Rights Reserved.
-            .col-md-6.col-sm-12.col-xs-12
-              .social-links
-                a.social-links__link(href='#')
-                  i.fab.fa-facebook-f
-                a.social-links__link(href='#')
-                  i.fab.fa-twitter
-                a.social-links__link(href='#')
-                  i.fab.fa-google-plus-g
-                a.social-links__link(href='#')
-                  i.fab.fa-linkedin-in
-                a.social-links__link(href='#')
-                  i.fab.fa-instagram
-                a.social-links__link(href='#')
-                  i.fab.fa-youtube
-                a.social-links__link(href='#')
-                  i.fab.fa-pinterest-p
+	img.footer__background(src="../../../assets/images/Pattern_4.svg", alt="", srcset="")
+	.container
+		.row
+			.col-lg-3.col-md-6.col-sm-6
+				.footer__footer-content 
+					//- a(href='about.pug') About
+					a.footer-content__link(href='/about', class=currentPage === 'about' ? 'active' : '') About
+					a.footer-content__link(href='/blog', class=currentPage === 'about' ? 'active' : '') Blog
+					//- a(href='our_blog.html') Blog
+					a.footer-content__link(href='career.html') Careers
+					a.footer-content__link(href='press.html') Press
+			.col-lg-3.col-md-6.col-sm-6
+				.footer__footer-content
+					a.footer-content__link(href='help.html') Help
+					a.footer-content__link(href='coming_soon.html') Advertise
+					a.footer-content__link(href='coming_soon.html') Developers
+					a.footer-content__link(href='contact_us.html') Contact Us
+			.col-lg-3.col-md-6.col-sm-6
+				.footer__footer-content
+					a.footer-content__link(href='terms_of_use.html') Copyright Policy
+					a.footer-content__link(href='terms_of_use.html') Terms
+					a.footer-content__link(href='terms_of_use.html') Privacy Policy
+					a.footer-content__link(href='sitemap.html') Sitemap
+			.col-lg-3.col-md-6.col-sm-6
+				.footer__footer-buttons
+					a.footer-buttons__link.primary(href='terms_of_use.html') Teach on Etqadem
+				.social-links
+					a.social-links__link(href='#')
+						i.fab.fa-facebook-f
+					a.social-links__link(href='#')
+						i.fab.fa-twitter
+					a.social-links__link(href='#')
+						i.fab.fa-google-plus-g
+					a.social-links__link(href='#')
+						i.fab.fa-linkedin-in
+					a.social-links__link(href='#')
+						i.fab.fa-instagram
+					a.social-links__link(href='#')
+						i.fab.fa-youtube
+					a.social-links__link(href='#')
+						i.fab.fa-pinterest-p
+			.col-lg-12
+				.footer-line
+					.row.align-items-center
+						.col-md-6.col-sm-12.col-xs-12
+							ul.copy-right
+								li.copy-right__list
+									a.list__link(href='index.html')
+										.footer-logo
+											img(src='../../assets/images/Etqadem_Icon_Yellow.svg' alt='')
+								li.copy-right__list
+									p.list__paragraph
+										| &copy; 2020 
+										strong Itqadem
+										| . All Rights Reserved.
+							
+						.col-md-6 
+							.fritill
+								p.list__paragraph.white.my-0.text-3 Developed and designed by 
+								a.my-0(style="height: 40px" href="https://fritill.com/") 
+									img(class="fritill-logo" src="../../assets/images/fritill-logo.svg", alt="")

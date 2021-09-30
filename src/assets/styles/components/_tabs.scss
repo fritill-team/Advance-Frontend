@@ -130,3 +130,29 @@
 }
 
 // End tabs
+html[dir="rtl"]{
+  .tab{
+    margin: 0 0 0 15px;
+  }
+}
+
+.night-mode{
+  .tabs{
+    &::after{
+      background-color: rgba($color: #fff, $alpha: .5);
+    }
+  }
+  .tab{
+    color: $white;
+    &:hover{
+      background-color: rgba($color: #fff, $alpha: .07);
+    }
+    &.tab--active{
+      background-color: rgba($color: #fff, $alpha: .07);
+      &::after{
+        background-color: $accent;
+      }
+    }
+  }
+
+}

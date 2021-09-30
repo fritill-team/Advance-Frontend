@@ -8,36 +8,105 @@ block content
 	.exam
 		.container-fluid
 			.row
-				.col-lg-4 
-					.card
-						.field-wrapper
-							//- label.text-field__label Insert you question *
-							.text-field__content
-								input.text-field__input(type='text' placeholder='Exam title' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-							ul.messages
-								li.gray
-									| hint message for question.
-						.field-wrapper
-							//- label.text-field__label Insert you question *
-							.text-field__content
-								input.text-field__input(type='text' placeholder='Exam description' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-							ul.messages
-								li.gray
-									| hint message for question.
-						select.question__type
-							option(value='one') First
-							option(value='two' disabled='disabled') Second (disabled)
-							option(value='three') Third
-				.col-lg-8
+				.col-lg-6
+					.card.question
+						.card__header.align-items-start
+							.field-wrapper.mr-3
+								label.field-wrapper__label Insert exam *
+								.field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Exam title' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								ul.messages
+									li.gray
+										| hint message for question.
+							.field-wrapper.mr-3
+								label.field-wrapper__label type *
+								.field-wrapper__content
+									select.question__type
+										option(value='Exam') Exam
+										option(value='Survey') Survey
+								ul.messages
+									li.gray
+										| hint message for question.
+						.card__content
+							.field-wrapper
+								//- label.text-field__label Insert you question *
+								.field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Exam description' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								ul.messages
+									li.gray
+										| hint message for question.
+							.select-group
+								.field-wrapper.mr-3
+									label.field-wrapper__label Language *
+									.field-wrapper__content
+										select.question__type
+											option(value='English') English
+											option(value='Arabic') Arabic
+									ul.messages
+										li.gray
+											| hint message for question.
+								.field-wrapper.mr-3
+									label.field-wrapper__label Status *
+									.field-wrapper__content
+										select.question__type
+											option(value='Status1') Status1
+											option(value='Status2') Status2
+									ul.messages
+										li.gray
+											| hint message for question.
+								.field-wrapper.mr-3
+									label.field-wrapper__label Evaluation *
+									.field-wrapper__content
+										select.question__type
+											option(value='Evaluation1') Evaluation1
+											option(value='Evaluation2') Evaluation2
+									ul.messages
+										li.gray
+											| hint message for question.
+								.field-wrapper.mr-3
+									label.field-wrapper__label Tags *
+									.field-wrapper__content
+										select.question__type
+											option(value='Tag1') Tag1
+											option(value='Tag2') Tag2
+									ul.messages
+										li.gray
+											| hint message for question.
+								.field-wrapper.mr-3
+									label.field-wrapper__label Category *
+									.field-wrapper__content
+										select.question__type
+											option(value='Category1') Category1
+											option(value='Category2') Category2
+									ul.messages
+										li.gray
+											| hint message for question.
+
+						.card__footer
+							div lorem
+							.card__footer-actions
+								button.btn.btn--text.btn--primary.icon--hover.mb-0
+									i.far.fa-trash-alt
+								button.btn.btn--text.btn--primary.icon--hover.mb-0
+									i.far.fa-clone
+								.switch
+									input#switch(type="checkbox", name="")
+									label(for="switch") Is required	
+					.card.question--section
+						.card__header
+							i.fas.fa-grip-vertical.exam__icon
+							h3.title-h3.mt-0.mb-1 Question title
+
+				.col-lg-6
 					.card.question.mb-4.question-dragabl
 						.card--drag-vertical
 							//- i.fas.fa-braille
 							i.fas.fa-grip-horizontal
 						.card__header
 							.field-wrapper
-								//- label.text-field__label Insert you question *
-								.text-field__content
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 								ul.messages
 									li.gray
 										| hint message for question.
@@ -52,23 +121,23 @@ block content
 								option(value='three') Third
 						.card__content
 							.field-wrapper
-								//- label.text-field__label Course Description*
-								.text-field__content
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								//- label.field-wrapper__label Course Description*
+								.field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 									//- textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 								ul.messages
 									li
 										| Please provide a valid city.
 							
-							.field-wrapper.text-field__input--text
-								//- label.text-field__label Insert you question *
-								.text-field__content
+							.field-wrapper.field-wrapper__input--text
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
 									//- .drag-vertical
 									i.fas.fa-grip-vertical.exam__icon
 									//- input(type="checkbox", name="" id="checkbox-mcq")
 									.checkbox-mcq(for="checkbox-mcq")
 										i.fas.fa-check
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 									.upload-input
 										input(type="file", name="" id="file-input")
 										label.file-input(for="file-input")
@@ -80,15 +149,15 @@ block content
 								.image.preview
 									img(src="../../assets/images/sign.svg", alt="")
 							
-							.field-wrapper.text-field__input--text
-								//- label.text-field__label Insert you question *
-								.text-field__content
+							.field-wrapper.field-wrapper__input--text
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
 									//- .drag-vertical
 									i.fas.fa-grip-vertical.exam__icon
 									//- input(type="checkbox", name="" id="checkbox-mcq")
 									.checkbox-mcq.checkbox-mcq--radio(for="checkbox-mcq")
 										//- i.fas.fa-check
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 									//- input(type="radio", name="" id="file-input")
 									.upload-input
 										input(type="file", name="" id="file-input")
@@ -118,9 +187,9 @@ block content
 							i.fas.fa-grip-horizontal
 						.card__header
 							.field-wrapper
-								//- label.text-field__label Insert you question *
-								.text-field__content
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 								ul.messages
 									li.gray
 										| hint message for question.
@@ -135,22 +204,22 @@ block content
 								option(value='three') Third
 						.card__content
 							.field-wrapper
-								//- label.text-field__label Course Description*
-								.text-field__content
+								//- label.field-wrapper__label Course Description*
+								.field-wrapper__content
 									textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 								ul.messages
 									li
 										| Please provide a valid city.
 							
-							.field-wrapper.text-field__input--text
-								//- label.text-field__label Insert you question *
-								.text-field__content
+							.field-wrapper.field-wrapper__input--text
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
 									//- .drag-vertical
 									i.fas.fa-grip-vertical.exam__icon
 									//- input(type="checkbox", name="" id="checkbox-mcq")
 									.checkbox-mcq(for="checkbox-mcq")
 										i.fas.fa-check
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 									.upload-input
 										input(type="file", name="" id="file-input")
 										label.file-input(for="file-input")
@@ -162,15 +231,15 @@ block content
 								.preview
 									img(src="../../assets/images/sign.svg", alt="")
 							
-							.field-wrapper.text-field__input--text
-								//- label.text-field__label Insert you question *
-								.text-field__content
+							.field-wrapper.field-wrapper__input--text
+								//- label.field-wrapper__label Insert you question *
+								.field-wrapper__content
 									//- .drag-vertical
 									i.fas.fa-grip-vertical.exam__icon
 									//- input(type="checkbox", name="" id="checkbox-mcq")
 									.checkbox-mcq.checkbox-mcq--radio(for="checkbox-mcq")
 										//- i.fas.fa-check
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 									//- input(type="radio", name="" id="file-input")
 									.upload-input
 										input(type="file", name="" id="file-input")
@@ -199,10 +268,10 @@ block content
 						.card--drag-vertical.mb-0
 							i.fas.fa-grip-horizontal
 						.card__header 
-							h3.title-3.mt-0.mb-1 Question title
+							h3.title-h3.mt-0.mb-1 Question title
 						.card__content
 							.field-wrapper
-								.check-group
+								.check-field-group
 									.check-field
 										input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
 										label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor.
@@ -236,10 +305,10 @@ block content
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-horizontal
 						.card__header 
-							h3.title-3.mt-0.mb-2 Question title
+							h3.title-h3.mt-0.mb-2 Question title
 						.card__content
 							.field-wrapper
-								.check-group
+								.check-field-group
 									.check-field
 										input.check-field__input(type="radio" id="radio-1" name="radioName")
 										label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
@@ -255,14 +324,14 @@ block content
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-horizontal
 						.card__header 
-							h3.title-3.mt-0.mb-2 Question title
+							h3.title-h3.mt-0.mb-2 Question title
 						
 						div.dragable-placeholder
 							i.fas.fa-ellipsis-h
 							//- .field-wrapper
-								//- label.text-field__label Insert you question *
-								//- .text-field__content
-									input.text-field__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								//- label.field-wrapper__label Insert you question *
+								//- .field-wrapper__content
+									input.field-wrapper__input(type='text' placeholder='Insert your question here.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 								//- ul.messages
 									li.gray
 										| hint message for question.
@@ -271,8 +340,8 @@ block content
 								option(value='two' disabled='disabled') Second (disabled)
 								option(value='three') Third
 						//- .field-wrapper
-							//- label.text-field__label Course Description*
-							.text-field__content
+							//- label.field-wrapper__label Course Description*
+							.field-wrapper__content
 								textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 							ul.messages
 								li

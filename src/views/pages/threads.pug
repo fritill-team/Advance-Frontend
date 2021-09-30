@@ -43,7 +43,7 @@ block content
             .card__content-details
               form(action="post" class="convertible__form d-none")
                 .field-wrapper
-                  textarea(class="text-field__input" rows='5' name='description' placeholder='Edit post')
+                  textarea(class="field-wrapper__input" rows='5' name='description' placeholder='Edit post')
                 .field-wrapper
                   select.js-example-basic-single.select2(name='state' multiple='multiple')
                     option(value='eg') Egypt
@@ -197,7 +197,7 @@ block content
                         time.text-1.gray Jan 15 '18 at 13:56
                     form.form__action.mb-3(action="")
                       .field-wrapper#editCommentForm.m-0
-                        input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
+                        input.field-wrapper__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
                         .d-flex.my-3
                           include ../components/general-component/btn.pug
                           a(class="btn btn--secondary btn--ml-auto btn--text convert text-2 bold" href="#") cancel
@@ -243,7 +243,7 @@ block content
               h3.course-content__title.my-3 Your Answer
           form.form__action.mb-3(action="")
             .field-wrapper
-              input.text-field__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='title' value='' required)
+              input.field-wrapper__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='title' value='' required)
               textarea.textarea#card.mb-2(rows='5' name='description' placeholder='Insert your course description')
               select.js-example-basic-single.select2(name='state' multiple='multiple')
                 option(value='eg') Egypt

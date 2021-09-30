@@ -13,6 +13,7 @@ import "./login.js"
 
 import "./toaster"
 
+
 import "./tabs.js"
 import "./survey.js"
 import "./select2"
@@ -22,4 +23,5 @@ import './owl-carousel'
 import "./accordion"
 import "./playlist-video"
 import "./course-card"
+import "./course-content"
 import "./backend_scripts/panel-loader"

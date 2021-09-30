@@ -1,8 +1,13 @@
+$default: #f1edee;
+$primary: #0d758e; // #3D5467;
+$accent: #fab01c; //#EFCFE3;
+$secondary: rgb(21, 151, 187); //#1597BB ;
 
-$default: #F1EDEE;
-$primary: #0D758E;// #3D5467;
-$accent: #FAB01C;//#EFCFE3;
-$secondary: rgb( 21 ,151, 187);//#1597BB ;
+$default-night-mode: #f1edee;
+$primary-night-mode: #c8cdce; // #3D5467;
+$accent-night-mode: #bb7d00; //#EFCFE3;
+$secondary-night-mode: rgb(21, 151, 187); //#1597BB ;
+
 // default colors
 $white: #fff;
 $gray: #39444f;
@@ -19,7 +24,6 @@ $disabled: #a8a8a8;
 $primary-darkmode: #38454d;
 $secondary-darkmode: #43515c;
 $primary-light-darkmode: #38454d;
-
 
 // TODO DELETE
 $primaryLight: #ed2a26;
