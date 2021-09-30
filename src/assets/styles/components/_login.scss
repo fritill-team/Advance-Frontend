@@ -366,8 +366,8 @@ select:focus-visible {
       box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
       &::after {
         position: absolute;
-        top: -2px;
-        right: 0;
+        top: -1px;
+        right: -1px;
         bottom: 0;
         z-index: 3;
         display: block;
