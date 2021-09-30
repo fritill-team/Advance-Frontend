@@ -9,6 +9,11 @@ a:hover {
 }
 input:focus {
   outline: 0;
+  box-shadow: 0 1px 4px 3px rgba($primary, 0.5);
+}
+textarea:focus {
+  outline: 0;
+  box-shadow: 0 1px 4px 3px rgba($primary, 0.5);
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
@@ -87,13 +92,31 @@ select:focus-visible {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-right: 5px;
+  margin-bottom: 5px;
   .field-wrapper__label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     padding: 4px 16px;
     color: $primary;
     margin-bottom: 10px;
+  }
+  &.field-wrapper--sm {
+    .field-wrapper__label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .field-wrapper__content {
+      .field-wrapper__input {
+        font-size: 12px;
+        padding: 8px 1em;
+      }
+    }
+    .messages {
+      li {
+        font-size: 10px;
+      }
+    }
   }
   &:focus-within {
     .messages {
@@ -149,6 +172,7 @@ select:focus-visible {
   }
 
   // general text input details styling
+
   .text-field__content {
     position: relative;
     font-weight: 400;
@@ -179,25 +203,26 @@ select:focus-visible {
     }
   }
   .field-wrapper__input {
-    font-size: 14px !important;
+    font-size: 14px;
     width: 100%;
     border-radius: 10px;
     padding: 12px 1em;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e5e5;
+    background: #fff;
     color: $primary;
     // padding: 10px;
     &.field-wrapper__input--rounded {
-      border-radius: 20px !important;
+      border-radius: 20px;
     }
     &.field-wrapper--left {
-      padding: 0 1em !important;
+      padding: 0 1em;
       height: 40px;
       font-size: 14px;
       font-weight: 400;
     }
     &.field-wrapper--icon {
-      padding-left: 3em !important;
+      padding-left: 3em;
     }
 
     &:focus {
@@ -210,6 +235,10 @@ select:focus-visible {
     &.field-wrapper__input--border-none {
       border: none;
       padding: 12px 14px 12px 50px;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 1px 4px 3px rgba($primary, 0.2);
     }
   }
   // this class adds badge
@@ -229,6 +258,9 @@ select:focus-visible {
     textarea::placeholder {
       color: #dc3545;
       opacity: 1; /* Firefox */
+    }
+    .field-wrapper__input {
+      color: #dc3545;
     }
     .field-wrapper__label {
       color: #dc3545;
@@ -267,7 +299,7 @@ select:focus-visible {
       .field-wrapper__input {
         box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
         border: 1px solid #dc3545 !important;
-        color: $primary;
+        color: #dc3545;
       }
     }
     &.field-wrapper__file-input {
@@ -486,8 +518,6 @@ select:focus-visible {
     border: none;
     resize: none;
     box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
     &:focus {
       color: rgba(0, 0, 0, 0.95);
     }
@@ -508,6 +538,21 @@ select:focus-visible {
     padding: 0.75rem 1.25rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
+  }
+  // input class border none
+  .field-input-text {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 0 10px;
+  }
+  &:last-of-type {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 /*  reset password    */
@@ -724,6 +769,7 @@ html[dir="rtl"] {
   .field-wrapper {
     // general message styling
     // general text input details styling
+    margin-right: 0;
     .field-wrapper__label {
       text-align: right;
     }
@@ -914,9 +960,6 @@ html[dir="rtl"] {
     .field-wrapper__label {
       color: #fff;
     }
-    .textarea {
-      background-color: #fff;
-    }
     .field-wrapper__content {
       .field-wrapper__input {
         color: $primary-night-mode;
@@ -1023,8 +1066,8 @@ html[dir="rtl"] {
         .field-wrapper__input {
           box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
           border: 1px solid #dc3545;
-          color: $primary-night-mode;
-          background-color: $default-night-mode;
+          color: #dc3545;
+          background-color: #38444d;
         }
       }
       &.field-wrapper__file-input {

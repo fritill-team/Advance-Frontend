@@ -1,0 +1,23 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &.dropdown--active .dropdown__content {
+    display: block;
+    transform: perspective(400px) rotateX(0deg);
+  }
+
+  .dropdown__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+    min-width: 160px;
+    border-radius: 5px;
+    transform-origin: top;
+    background-color: $white;
+    transition: all 100ms ease;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: perspective(400px) rotateX(-90deg);
+  }
+}

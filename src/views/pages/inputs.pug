@@ -11,7 +11,7 @@ block content
 			.field-wrapper.field-wrapper--error
 				label.field-wrapper__label Course Title*
 				.field-wrapper__content
-					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -19,7 +19,15 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Course Title*
 				.field-wrapper__content
-					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+					input(class="field-wrapper__input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+				ul.messages
+					li
+						| Please provide a valid city.
+		.col-lg-12.col-md-12.col-sm-12
+			.field-wrapper
+				label.field-wrapper__label Course Title*
+				.field-wrapper__content
+					input(class="field-wrapper__input field-input-text" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -29,56 +37,30 @@ block content
 				label.field-wrapper__label File*
 				.input-group
 					.file-input
-						input#inputGroupFile06.custom-file-input(type='file')
-						label.file-input__label(for='inputGroupFile06') No Choose file - (Pdf, Video)
+						input(id="inputGroupFile06" class="custom-file-input" type='file')
+						label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
 				ul.messages
 					li
 						| Please provide a valid city.
-
-
-		.col-lg-12.col-md-12.col-sm-12
-			.field-wrapper.field-wrapper__select-input
-				label.field-wrapper__label Language*
-				.field-wrapper__content
-					select.ui.hj145.dropdown.cntry152.prompt.srch_explore.select-menu
-						option(value='') Select Language
-						option(value='1') English
-						option(value='2') Espa&ntilde;ol
-						option(value='3') Portugu&ecirc;s
-						option(value='4') &#x65E5;&#x672C;&#x8A9E;
-						option(value='5') Deutsch
-						option(value='6') Fran&ccedil;ais
-						option(value='7') T&uuml;rk&ccedil;e
-						option(value='8') &#x939;&#x93F;&#x928;&#x94D;&#x926;&#x940;
-						option(value='9') Italiano
-						option(value='10') Polski
-						option(value='11') &#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;
-						option(value='12') Rom&acirc;n&abreve;
-						option(value='13') Telugu
-						option(value='14') &#x92E;&#x930;&#x93E;&#x920;&#x940;
-						option(value='15') &#xA2A;&#xA70;&#xA1C;&#xA3E;&#xA2C;&#xA40;
-				ul.messages
-					li
-						| Please provide a valid city.  
 		// input checkbox 
 		.col-lg-12.col-md-12.col-sm-12
 			.field-wrapper 
 				.check-field-group
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
-						label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-1" name="checkboxName")
+						label(class="check-field__label" for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-2" name="checkboxName")
-						label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-2" name="checkboxName")
+						label(class="check-field__label" for="checkbox-2" ) Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-3" name="checkboxName")
-						label.check-field__label(for="checkbox-3" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-3" name="checkboxName")
+						label(class="check-field__label" for="checkbox-3" ) Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-4" name="checkboxName")
-						label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
+						input(class="check-field__input" type="checkbox" id="checkbox-4" name="checkboxName")
+						label(class="check-field__label" for="checkbox-4" ) Lorem ipsum dolor.
 					.check-field.check-field--no-label
-						input.check-field__input(type="checkbox"  id="checkbox-5" value="checkbox")
-						label.check-field__label(for="checkbox-5")  
+						input(class="check-field__input" type="checkbox"  id="checkbox-5" value="checkbox")
+						label(class="check-field__label" for="checkbox-5")  
 				ul.messages 
 					li Please provide a valid city.
 		// input radio
@@ -87,26 +69,26 @@ block content
 				label.field-wrapper__label Course checkbox*
 				.check-field-group
 					.check-field
-						input.check-field__input(type="radio" id="radio-1" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
+						input(class="check-field__input" type="radio" id="radio-1" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-1" name="radioName") Lorem ipsum dolor.
 					.check-field
-						input.check-field__input(type="radio" id="radio-2" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="radio" id="radio-2" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-2" ) Lorem ipsum dolor. 
 					.check-field.check-field--no-label
-						input.check-field__input(type="radio" id="radio-5" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-5" )
+						input(class="check-field__input" type="radio" id="radio-5" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-5" )
 				ul.messages 
 					li Please provide a valid city.  
 			//check-field out wrapper
 			.check-field
-				input.check-field__input(type="radio" id="radio-55" name="radioName")
-				label.check-field__label.radio-field__label(for="radio-55" name="radioName") Lorem ipsum dolor.			
+				input(class="check-field__input" type="radio" id="radio-55" name="radioName")
+				label(class="check-field__label radio-field__label" for="radio-55" name="radioName") Lorem ipsum dolor.			
 		// input__date
 		.col-md-12.col-sm-6
 			.field-wrapper
 				label.field-wrapper__label(for='start Date') start Date :
 				.field-wrapper__content
-					input.field-wrapper__input(type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
+					input(class="field-wrapper__input" type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -115,7 +97,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start Time :
 				.field-wrapper__content
-					input.field-wrapper__input(type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -124,7 +106,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start Date and Time :
 				.field-wrapper__content
-					input.field-wrapper__input(type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
+					input(class="field-wrapper__input" type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -133,7 +115,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start password :
 				.field-wrapper__content
-					input.field-wrapper__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -142,7 +124,7 @@ block content
 			.field-wrapper
 				label(for='number').field-wrapper__label Start Number :
 				.field-wrapper__content
-					input.field-wrapper__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
+					input(class="field-wrapper__input" type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -151,7 +133,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Email :
 				.field-wrapper__content
-					input.field-wrapper__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
+					input(class="field-wrapper__input" type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -160,7 +142,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Telephone :
 				.field-wrapper__content
-					input.field-wrapper__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
+					input(class="field-wrapper__input" type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -169,7 +151,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Url :
 				.field-wrapper__content
-					input.field-wrapper__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
+					input(class="field-wrapper__input" type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -206,7 +188,7 @@ block content
 				.field-wrapper
 					label.field-wrapper__label Course Radio Button*
 					.field-wrapper__content
-						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+						textarea( id="id_course_description" class="textarea" rows='5' name='description' placeholder='Insert your course description')
 					ul.messages
 						li
 							| Please provide a valid city.  
@@ -222,28 +204,3 @@ block content
 							.item item 4
 							.item item 5
 							.item item 6
-			.col-lg-12
-				.field-wrapper
-						label.field-wrapper__label Course Radio Button*
-						.field-wrapper__content
-							.field-wrapper__select
-								select
-									option(value='0') Select Car:
-									option(value='1') Audi
-									option(value='2') BMW
-									option(value='3') Citroen
-									option(value='4') Ford
-									option(value='5') Honda
-									option(value='6') Jaguar
-									option(value='7') Land Rover
-									option(value='8') Mercedes
-									option(value='9') Mini
-									option(value='10') Nissan
-									option(value='11') Toyota
-									option(value='12') Volvo
-
-			//- .col-lg-12
-			//- 	select.js-example-basic-single.select2(name='state' multiple='multiple')
-			//- 		option(value='eg') Egypt
-			//- 		option(value='AL') Alabama
-			//- 		option(value='WY') Wyoming
