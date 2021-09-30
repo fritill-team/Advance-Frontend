@@ -23,6 +23,10 @@ textarea::placeholder {
   color: $primary;
   opacity: 1; /* Firefox */
 }
+select:focus-visible {
+  border: none;
+  outline: none;
+}
 // start auth style
 .header-title {
   display: flex;
@@ -885,18 +889,19 @@ html[dir="rtl"] {
     }
   }
 }
-// night-mode
+////////// night-mode
+
 .night-mode {
   input:focus::-webkit-input-placeholder,
   textarea:focus::-webkit-input-placeholder {
-    color: $primary-night-mode !important;
+    color: #fff !important;
   }
   input::placeholder {
-    color: $primary-night-mode;
+    color: #fff;
     opacity: 1; /* Firefox */
   }
   textarea::placeholder {
-    color: $primary-night-mode;
+    color: #fff;
     opacity: 1; /* Firefox */
   }
   .wrapper-content {
@@ -906,16 +911,17 @@ html[dir="rtl"] {
   // input field
   .field-wrapper {
     .field-wrapper__label {
-      color: $primary-night-mode;
+      color: #fff;
     }
     .textarea {
-      background-color: #333;
+      background-color: #fff;
     }
     .field-wrapper__content {
       .field-wrapper__input {
         color: $primary-night-mode;
-        background-color: #333;
-        border: 1px solid #333;
+        background-color: #43525c;
+        border: 1px solid #43525c;
+        box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       }
     }
     .field-wrapper__input {
@@ -952,14 +958,21 @@ html[dir="rtl"] {
     // input type file
     &.field-wrapper__file-input {
       .file-input {
-        color: #333;
+        color: #fff;
+        // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
       }
       .file-input__label {
-        color: $darkGray;
-        background-color: $white;
+        color: #fff;
+        background-color: #43525c;
+        border: 1px solid #43525c;
+        box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
         &::after {
           color: $white;
-          background-color: $primary-night-mode;
+          background-color: #43525c;
+          border: 1px solid #43525c;
+          box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -1007,20 +1020,20 @@ html[dir="rtl"] {
       }
       .field-wrapper__content {
         .field-wrapper__input {
-          box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-          border: 1px solid #dc3545 !important;
+          box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+          border: 1px solid #dc3545;
           color: $primary-night-mode;
           background-color: $default-night-mode;
         }
       }
       &.field-wrapper__file-input {
         .file-input {
-          color: #333;
+          color: #fff;
         }
         .file-input__label {
           color: #dc3545;
           background-color: $white;
-          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
           &::after {
             color: $white;
             background-color: #dc3545;
@@ -1029,20 +1042,20 @@ html[dir="rtl"] {
       }
       input:focus::-webkit-input-placeholder,
       textarea:focus::-webkit-input-placeholder {
-        color: #dc3545 !important;
+        color: #dc3545;
       }
     }
     // input type select
     // ------New Checkbox------
     // textarea
     .textarea {
-      background: #333;
-      color: rgba(0, 0, 0, 0.87);
+      background: #43525c;
+      color: #fff;
       box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       -webkit-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       &:focus {
-        color: rgba(0, 0, 0, 0.95);
+        color: #fff;
       }
     }
 
@@ -1056,9 +1069,9 @@ html[dir="rtl"] {
   }
 
   .select-selected {
-    background-color: #333;
+    background-color: #43525c;
     border-radius: 10px 10px 0px 0px;
-    color: $primary-night-mode;
+    color: #fff;
     &:after {
       position: absolute;
       content: "";
@@ -1096,7 +1109,7 @@ html[dir="rtl"] {
     height: 110px;
     overflow-y: auto;
     position: absolute;
-    background-color: #333;
+    background-color: #43525c;
     top: 100%;
     left: 0;
     right: 0;

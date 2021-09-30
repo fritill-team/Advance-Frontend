@@ -415,7 +415,7 @@
     justify-content: space-between;
     padding: 15px;
     background: #fff;
-    margin: 30px 0 0 0;
+    margin-bottom: 10px;
     border-radius: 6px;
     padding: 60px 20px;
     .questions-header__title {
@@ -441,6 +441,11 @@
         color: $primary;
       }
     }
+  }
+  .questions-name {
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 25px;
   }
   .exam__footer {
     display: flex;
@@ -513,7 +518,7 @@
 //   }
 // }
 // Question card
-.question-card {
+.question {
   padding: 20px;
   position: relative;
   display: flex;
@@ -522,7 +527,7 @@
   margin-bottom: 1em;
   background-color: #fff;
   border-radius: 10px;
-  .question-card__title {
+  .question__title {
     align-items: flex-start;
     margin: 5px 0 10px 0;
     display: flex;
@@ -535,12 +540,13 @@
   .check-field-group {
     flex-direction: row;
   }
-  .question-card__content {
+  .question__content {
     display: flex;
     padding-left: 10px;
     flex-flow: wrap;
+    margin: 10px 0 0 0;
   }
-  .question-card__item {
+  .question__item {
     width: 50%;
     .image-wrapper {
       // height: 150px;
@@ -551,6 +557,46 @@
         width: 100%;
         height: 100%;
         object-fit: fill;
+      }
+    }
+    &.question__item--full-width {
+      width: 100%;
+      position: relative;
+      .image-wrapper {
+        width: auto;
+        width: auto;
+        height: 300px;
+        max-width: -webkit-fill-available;
+
+        img {
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-size: cover;
+          -o-object-fit: cover;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &.question__item--horizontal {
+      width: 50%;
+      position: relative;
+      .image-wrapper {
+        width: auto;
+        width: auto;
+        height: 300px;
+        max-width: -webkit-fill-available;
+
+        img {
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-size: cover;
+          -o-object-fit: cover;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -575,7 +621,7 @@
   }
 }
 @media (max-width: 992px) {
-  .question-card {
+  .question {
     .card__content {
       display: flex;
       flex-flow: wrap;
@@ -586,13 +632,67 @@
   }
 }
 @media (max-width: 767px) {
-  .question-card {
-    .question-card__content {
+  .question {
+    .question__content {
       display: flex;
       flex-flow: column;
       padding-left: 0;
     }
-    .question-card__item {
+    .question__item {
+      width: 100%;
+      .image-wrapper {
+        // height: 150px;
+        margin: 16px 16px 12px 0;
+        max-width: 300px;
+        width: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      }
+      &.question__item--full-width {
+        width: 100%;
+        position: relative;
+        .image-wrapper {
+          width: auto;
+          width: auto;
+          height: 300px;
+          max-width: -webkit-fill-available;
+
+          img {
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-size: cover;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &.question__item--horizontal {
+        width: 100%;
+        position: relative;
+        .image-wrapper {
+          width: auto;
+          width: auto;
+          height: 300px;
+          max-width: -webkit-fill-available;
+
+          img {
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-size: cover;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .question__item {
       width: 100%;
     }
     .card__header {
@@ -627,11 +727,11 @@
 }
 .night-mode {
   // Question card
-  .question-card {
+  .question {
     background-color: #43525c;
     box-shadow: 0 0 5px -1px #fff;
 
-    .question-card__title {
+    .question__title {
       h3 {
         color: #fff;
       }
@@ -659,6 +759,9 @@
           color: #cdd4dc;
         }
       }
+    }
+    .questions-name {
+      background: rgba(#43525c, 0.5);
     }
   }
   .question-title {
