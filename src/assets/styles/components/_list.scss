@@ -59,6 +59,11 @@ form {
     padding: 5px;
     margin-bottom: 5px;
   }
+  &.list--condensed{
+    &.list--menu {
+      padding: 2px;
+    }
+  }
 }
 
 .list-item {
@@ -168,6 +173,22 @@ form {
     background-color: red;
     left: 0;
     font-size: 20px;
+  }
+  &.list-item--condensed{
+    &.list-item {
+      // padding-bottom: 5px;
+      padding: 2px;
+    }
+    .list-item__content {
+      // padding-bottom: 0 10px;
+      padding: 0 2px;
+    }
+    .list-item__action {
+      padding: 2px;
+    }
+    .check-field {
+      padding: 2px;
+    }
   }
 }
 a.list-item-link {
