@@ -571,15 +571,15 @@ input[type="button"] {
       }
     }
   }
-  a.btn {
-    // // line-height: 1.7;
-    // &.btn--text {
-    //   text-decoration: none;
-    // }
-    // &:hover{
-    //   color: white ;
-    // }
-  }
+  // a.btn {
+  //   // // line-height: 1.7;
+  //   // &.btn--text {
+  //   //   text-decoration: none;
+  //   // }
+  //   // &:hover{
+  //   //   color: white ;
+  //   // }
+  // }
 }
 //button {
 //  cursor: pointer;
@@ -802,3 +802,34 @@ html[dir="rtl"] {
         margin-right: auto !important;
       }
     }
+
+.night-mode{
+  .btn{
+    &.btn--outlined{
+      &.btn--default {
+        color: $default;
+      }
+    } 
+    &.btn--text{
+      &.btn--default {
+        color: $default;
+      }
+    }
+  }
+  a.btn{
+    color: white;
+    &.btn--default {
+      color: $primary;
+    }
+    &.btn--outlined{
+      &.btn--default {
+        color: $default;
+      }
+    }
+    &.btn--text{
+      &.btn--default {
+        color: $default;
+      }
+    }
+  }
+}
