@@ -41,11 +41,11 @@
   align-items: center;
   font-size: 2.2rem;
   .list-item__content{
-    padding: 0px 10px 5px;
+    // padding: 0px 10px 5px;
     .content__link{
       color: $primary;
-      padding-top: 10px;
-      padding-left: 3px;
+      // padding-top: 10px;
+      // padding-left: 3px;
     }
     .content__paragraph{
       color: $info;
@@ -56,16 +56,16 @@
     cursor: pointer;
     color: $accent;
   }
-	&:first-of-type{
-		padding-top: 0;
-	}
-	&:last-of-type{
-		padding-bottom: 0;
-	}
+	// &:first-of-type{
+	// 	padding-top: 0;
+	// }
+	// &:last-of-type{
+	// 	padding-bottom: 0;
+	// }
 
   &.list-item--border-bottom {
     border-bottom: 1px solid rgba($darkBlack, 0.1);
-    padding: 25px;
+    // padding: 25px;
   }
 }
 .canvas-wrap {
