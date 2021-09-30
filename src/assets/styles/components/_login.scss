@@ -87,9 +87,8 @@ select:focus-visible {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
   .field-wrapper__label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     padding: 4px 16px;
     color: $primary;
@@ -186,6 +185,7 @@ select:focus-visible {
     padding: 12px 1em;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e5e5;
+    background: #fff;
     color: $primary;
     // padding: 10px;
     &.field-wrapper__input--rounded {
@@ -231,6 +231,9 @@ select:focus-visible {
       color: #dc3545;
       opacity: 1; /* Firefox */
     }
+    .field-wrapper__input {
+      color: #dc3545;
+    }
     .field-wrapper__label {
       color: #dc3545;
     }
@@ -268,7 +271,7 @@ select:focus-visible {
       .field-wrapper__input {
         box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
         border: 1px solid #dc3545 !important;
-        color: $primary;
+        color: #dc3545;
       }
     }
     &.field-wrapper__file-input {
