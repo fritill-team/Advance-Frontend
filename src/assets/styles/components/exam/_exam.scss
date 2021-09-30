@@ -7,120 +7,6 @@
     margin: 10px 0;
   }
 }
-
-// .answer-wrapper{
-//   display: flex;
-//   margin-bottom: 15px;
-// }
-
-// .question-wrapper{
-//   padding: 16px;
-//   width: 100%;
-//   height: auto;
-//   border-radius: 10px;
-//   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
-//   background-color: #fff;
-//   display: flex;
-//   flex-direction: column;
-//   .question-header{
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-end;
-//     margin-bottom: 30px;
-//     .field-wrapper{
-//       .field-wrapper__label{
-//         font-size: 2.4rem !important;
-//         padding: 0;
-//       }
-//     }
-//   }
-//   .question-type{
-//     max-width: 250px;
-//     border-radius: 25px;
-//   }
-//   .field-wrapper{
-//     max-width: 75%;
-//   }
-// }
-// .question{
-//   font-size: 30px;
-//   margin: 0 0 15px 0;
-//   color: #333;
-// }
-// .hints{
-//   list-style: none;
-//   li{
-//     font-size: 16px;
-//     margin: 0;
-//     color: #686f7a;
-//   }
-// }
-
-// // answer component
-
-// .answer-wrapper{
-//   display: flex;
-//   padding: 20px 0;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-// .mcq-wrapper{
-//   padding-left: 30px;
-//   position: relative;
-//   input[type='checkbox']{
-// 		display: none;
-// 		&:checked{
-// 			& + .mcq-card{
-// 				&::after{
-// 					background-color: #ed2a26;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.mcq-card{
-// 		display: flex;
-// 		flex-direction: column;
-// 		border: 1px solid rgba(#333, .2);
-// 		cursor: pointer;
-// 		&:hover{
-// 			&::after{
-// 				background-color: #ed2a26;
-// 			}
-// 		}
-// 		&::before{
-// 			position: absolute;
-// 			content: '';
-// 			top: 18px;
-// 			width: 16px;
-// 			height: 16px;
-// 			border-radius: 50%;
-// 			left: 0;
-// 			border: 1px solid rgba(#333, .2);
-// 			background-color: transparent
-// 		}
-// 		&::after{
-// 			position: absolute;
-// 			content: '';
-// 			top: 21px;
-// 			width: 10px;
-// 			height: 10px;
-// 			border-radius: 50%;
-// 			background-color: transparent;
-// 			left: 3px;
-// 			transition: .3s ease all;
-// 		}
-// 		p{
-// 			padding: 16px;
-// 			text-transform: capitalize;
-// 		}
-// 		img{
-// 			width: 100%;
-// 			height: 200px;
-// 			background-color: #aaa;
-// 		}
-// 	}
-
-// }
 // .card{
 .upload-input {
   input[type="file"] {
@@ -202,8 +88,6 @@
     justify-content: space-between;
     // align-items: flex-start;
     // margin-bottom: 10px;
-  }
-  .field-wrapper {
   }
   .card__footer {
     border-top: 1px solid rgba(#333, 0.2);
@@ -334,11 +218,7 @@
   }
 
   & + .select2 {
-    // width: 23% !important;
     height: fit-content;
-    // width: 100% !important;
-    // margin: 0 0 8px 20px;
-    // .select2-search select2-search--dropdown
     .select2-search {
       &.select2-search--dropdown {
         display: none !important;
@@ -350,7 +230,8 @@
       box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1) !important;
       border: 1px solid #e5e5e5 !important;
       border-radius: 10px;
-    } //select2-selection--single
+    }
+    //select2-selection--single
     .select2-selection__rendered {
       line-height: 38px;
     }
@@ -415,7 +296,6 @@
     justify-content: space-between;
     padding: 15px;
     background: #fff;
-    border-radius: 6px;
     padding: 60px 20px;
     .questions-header__title {
       width: 50%;
@@ -472,50 +352,6 @@
     }
   }
 }
-// .answer {
-//   .card__header {
-//     align-items: flex-start;
-//     margin-bottom: 4px;
-//     .header__title {
-//       padding-bottom: 4px;
-//     }
-//   }
-//   .card__info {
-//     margin-bottom: 25px;
-//     .info__description {
-//       color: #fff;
-//     }
-//   }
-//   .card__content {
-//     display: flex;
-//     flex-flow: row;
-//     .answer__item {
-//       width: 50%;
-//     }
-//   }
-//   .check-field-group {
-//     flex-direction: row;
-//   }
-//   .card__footer {
-//     display: flex;
-//     justify-content: flex-end;
-//     border-top: 1px solid rgba($primary, 0.4);
-//     padding-top: 10px;
-//     margin-top: 10px;
-//   }
-//   .field-wrapper {
-//     .check-field-group {
-//       display: flex;
-//       width: 100%;
-//       flex-direction: row;
-//       flex-flow: wrap;
-//       .check-field {
-//         width: 50%;
-//         padding: 5px 5px 10px 0;
-//       }
-//     }
-//   }
-// }
 // Question card
 .question {
   padding: 20px;
@@ -548,7 +384,6 @@
   .question__item {
     width: 50%;
     .image-wrapper {
-      // height: 150px;
       margin: 16px 16px 12px 0;
       max-width: 300px;
       width: 300px;
@@ -563,11 +398,7 @@
       position: relative;
       .image-wrapper {
         width: auto;
-        width: auto;
-        height: 300px;
-        max-width: -webkit-fill-available;
-
-        img {
+        height: 300px img {
           background-repeat: no-repeat;
           background-position-y: center;
           background-size: cover;
@@ -583,10 +414,7 @@
       .image-wrapper {
         width: auto;
         width: auto;
-        height: 300px;
-        max-width: -webkit-fill-available;
-
-        img {
+        height: 300px img {
           background-repeat: no-repeat;
           background-position-y: center;
           background-size: cover;
@@ -654,9 +482,7 @@
         position: relative;
         .image-wrapper {
           width: auto;
-          width: auto;
           height: 300px;
-          max-width: -webkit-fill-available;
 
           img {
             background-repeat: no-repeat;
@@ -674,9 +500,7 @@
         position: relative;
         .image-wrapper {
           width: auto;
-          width: auto;
           height: 300px;
-          max-width: -webkit-fill-available;
 
           img {
             background-repeat: no-repeat;
@@ -726,12 +550,10 @@
 .night-mode {
   // Question card
   .question {
-    // background-color: #43525c;
     background-color: transparent;
     box-shadow: none;
     border-bottom: 1px solid #576874;
     border-radius: 0;
-    // box-shadow: 0 0 5px -1px #fff;
     .question__title {
       h3 {
         color: #fff;
