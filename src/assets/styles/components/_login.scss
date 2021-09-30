@@ -149,6 +149,7 @@ select:focus-visible {
   }
 
   // general text input details styling
+
   .text-field__content {
     position: relative;
     font-weight: 400;
@@ -508,6 +509,17 @@ select:focus-visible {
     padding: 0.75rem 1.25rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
+  }
+  // input class border none
+  .field-input-text {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 0 10px;
   }
 }
 /*  reset password    */

@@ -11,7 +11,7 @@ block content
 			.field-wrapper.field-wrapper--error
 				label.field-wrapper__label Course Title*
 				.field-wrapper__content
-					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -19,7 +19,15 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Course Title*
 				.field-wrapper__content
-					input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+					input(class="field-wrapper__input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+				ul.messages
+					li
+						| Please provide a valid city.
+		.col-lg-12.col-md-12.col-sm-12
+			.field-wrapper
+				label.field-wrapper__label Course Title*
+				.field-wrapper__content
+					input.class="field-wrapper__input" field-input-text(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -30,7 +38,7 @@ block content
 				.input-group
 					.file-input
 						input#inputGroupFile06.custom-file-input(type='file')
-						label.file-input__label(for='inputGroupFile06') No Choose file - (Pdf, Video)
+						label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -65,20 +73,20 @@ block content
 			.field-wrapper 
 				.check-field-group
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-1" name="checkboxName")
-						label.check-field__label(for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-1" name="checkboxName")
+						label(class="check-field__label" for="checkbox-1" name="checkboxName") Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-2" name="checkboxName")
-						label.check-field__label(for="checkbox-2" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-2" name="checkboxName")
+						label(class="check-field__label" for="checkbox-2" ) Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-3" name="checkboxName")
-						label.check-field__label(for="checkbox-3" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="checkbox" id="checkbox-3" name="checkboxName")
+						label(class="check-field__label" for="checkbox-3" ) Lorem ipsum dolor. 
 					.check-field
-						input.check-field__input(type="checkbox" id="checkbox-4" name="checkboxName")
-						label.check-field__label(for="checkbox-4" ) Lorem ipsum dolor.
+						input(class="check-field__input" type="checkbox" id="checkbox-4" name="checkboxName")
+						label(class="check-field__label" for="checkbox-4" ) Lorem ipsum dolor.
 					.check-field.check-field--no-label
-						input.check-field__input(type="checkbox"  id="checkbox-5" value="checkbox")
-						label.check-field__label(for="checkbox-5")  
+						input(class="check-field__input" type="checkbox"  id="checkbox-5" value="checkbox")
+						label(class="check-field__label" for="checkbox-5")  
 				ul.messages 
 					li Please provide a valid city.
 		// input radio
@@ -87,26 +95,26 @@ block content
 				label.field-wrapper__label Course checkbox*
 				.check-field-group
 					.check-field
-						input.check-field__input(type="radio" id="radio-1" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
+						input(class="check-field__input" type="radio" id="radio-1" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-1" name="radioName") Lorem ipsum dolor.
 					.check-field
-						input.check-field__input(type="radio" id="radio-2" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+						input(class="check-field__input" type="radio" id="radio-2" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-2" ) Lorem ipsum dolor. 
 					.check-field.check-field--no-label
-						input.check-field__input(type="radio" id="radio-5" name="radioName")
-						label.check-field__label.radio-field__label(for="radio-5" )
+						input(class="check-field__input" type="radio" id="radio-5" name="radioName")
+						label(class="check-field__label radio-field__label" for="radio-5" )
 				ul.messages 
 					li Please provide a valid city.  
 			//check-field out wrapper
 			.check-field
-				input.check-field__input(type="radio" id="radio-55" name="radioName")
-				label.check-field__label.radio-field__label(for="radio-55" name="radioName") Lorem ipsum dolor.			
+				input(class="check-field__input" type="radio" id="radio-55" name="radioName")
+				label(class="check-field__label radio-field__label" for="radio-55" name="radioName") Lorem ipsum dolor.			
 		// input__date
 		.col-md-12.col-sm-6
 			.field-wrapper
 				label.field-wrapper__label(for='start Date') start Date :
 				.field-wrapper__content
-					input.field-wrapper__input(type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
+					input(class="field-wrapper__input" type='date' name='start Date' data-purpose='edit-start-date' maxlength='60' id='start Date' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -115,7 +123,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start Time :
 				.field-wrapper__content
-					input.field-wrapper__input(type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='time' placeholder='Insert your content.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -124,7 +132,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start Date and Time :
 				.field-wrapper__content
-					input.field-wrapper__input(type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
+					input(class="field-wrapper__input" type="datetime-local" id="meeting-time" name="meeting-time" value="2021-08-15T03:30PM" min="2000-06-07T00:00" max="2030-06-14T00:00" required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -133,7 +141,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label start password :
 				.field-wrapper__content
-					input.field-wrapper__input(type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+					input(class="field-wrapper__input" type='password' placeholder='Insert Your Password.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -142,7 +150,7 @@ block content
 			.field-wrapper
 				label(for='number').field-wrapper__label Start Number :
 				.field-wrapper__content
-					input.field-wrapper__input(type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
+					input(class="field-wrapper__input" type='number' placeholder='Insert Your Num.' name='number' data-purpose='edit-course-number' maxlength='60' id='main[number]' value='' min="0" max="100" required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -151,7 +159,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Email :
 				.field-wrapper__content
-					input.field-wrapper__input(type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
+					input(class="field-wrapper__input" type='email' placeholder='Insert Your Email.' name='e-mail' data-purpose='edit-email' maxlength='60' id='main[email]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -160,7 +168,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Telephone :
 				.field-wrapper__content
-					input.field-wrapper__input(type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
+					input(class="field-wrapper__input" type='tel' placeholder='Insert Your Telephone.' name='telephone' data-purpose='edit-telephone' maxlength='60' id='main[tel]' value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -169,7 +177,7 @@ block content
 			.field-wrapper
 				label.field-wrapper__label Start Url :
 				.field-wrapper__content
-					input.field-wrapper__input(type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
+					input(class="field-wrapper__input" type='url' placeholder="https://example.com" name='link' data-purpose='edit-course-link' maxlength='60' id='main[link]' pattern="https://.*" value='' required)
 				ul.messages
 					li
 						| Please provide a valid city.
@@ -206,7 +214,7 @@ block content
 				.field-wrapper
 					label.field-wrapper__label Course Radio Button*
 					.field-wrapper__content
-						textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
+						textarea#id_course_description(class="textarea" rows='5' name='description' placeholder='Insert your course description')
 					ul.messages
 						li
 							| Please provide a valid city.  
