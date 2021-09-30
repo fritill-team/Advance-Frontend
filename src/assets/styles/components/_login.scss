@@ -487,8 +487,6 @@ select:focus-visible {
     border: none;
     resize: none;
     box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
     &:focus {
       color: rgba(0, 0, 0, 0.95);
     }
@@ -925,9 +923,6 @@ html[dir="rtl"] {
   .field-wrapper {
     .field-wrapper__label {
       color: #fff;
-    }
-    .textarea {
-      background-color: #fff;
     }
     .field-wrapper__content {
       .field-wrapper__input {

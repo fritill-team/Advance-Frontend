@@ -1,6 +1,5 @@
 .exam {
   padding-top: 50px;
-
   .exam__footer {
     display: flex;
     justify-content: flex-end;
@@ -8,18 +7,14 @@
     margin: 10px 0;
   }
 }
-
 // .card{
 .upload-input {
   input[type="file"] {
     display: none;
   }
-
   .file-input {
     margin: 4px 10px 0 10px;
     display: block;
-
-
     i {
       color: $primary;
       font-size: 32px;
@@ -27,18 +22,14 @@
     }
   }
 }
-
-
 .select-group {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 
-
   .field-wrapper {
     width: 28%;
   }
-
 
   .question__type {
     & + .select2 {
@@ -46,8 +37,6 @@
     }
   }
 }
-
-
 .question {
   padding: 14px;
   position: relative;
@@ -55,33 +44,22 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 1em;
-
-
   .question--section {
     color: $primary;
   }
-
-
   &.question-dragable {
     min-height: 200px;
-
 
     .dragable-placeholder {
       display: flex;
     }
-
-
     .card__content {
       display: none;
     }
   }
-
-
   .card__header {
     align-items: flex-start;
     margin-bottom: 16px;
-
-
     .field-wrapper {
       margin-bottom: 0;
     }
@@ -95,13 +73,11 @@
     display: none;
     justify-content: center;
 
-
     i {
       color: $primary;
       font-size: 18px;
     }
   }
-
 
   .card--drag-vertical {
     display: flex;
@@ -110,8 +86,6 @@
     color: $primary;
     margin-bottom: 10px;
   }
-
-
   .card__content {
     padding-left: 0;
     display: flex;
@@ -120,7 +94,6 @@
     // align-items: flex-start;
     // margin-bottom: 10px;
   }
-
   .card__footer {
     border-top: 1px solid rgba(#333, 0.2);
     padding: 10px 0 0 0;
@@ -128,28 +101,19 @@
     align-items: center;
     justify-content: space-between;
 
-
     .btn {
       margin-top: 0;
       padding-top: 0;
     }
   }
-
-
   .card__footer-actions {
     display: flex;
     align-items: center;
-
 
     i {
       font-size: 18px;
     }
   }
-
-
-  // .select2{
-  //   margin-top: 30px !important;
-  // }
   .field-wrapper {
     &.field-wrapper__input--text {
       .field-wrapper__content {
@@ -208,7 +172,6 @@
           color: $primary;
           // opacity: 0;
         }
-
         &.checkbox-mcq--radio {
           border-radius: 50%;
           width: 16px;
@@ -228,7 +191,6 @@
         }
       }
     }
-
     .exam__icon {
       display: inline-block;
       margin: auto 10px auto 0;
@@ -237,7 +199,6 @@
       font-size: 18px;
     }
   }
-
   @media (max-width: 768px) {
     .card__content {
       flex-wrap: wrap;
@@ -247,7 +208,6 @@
     }
   }
 }
-// }
 .question__type {
   height: 40px;
   box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1) !important;
@@ -293,7 +253,6 @@
         &:before {
           background-color: rgba($color: $secondary, $alpha: 0.3);
         }
-
 
         &:after {
           left: 16px;
@@ -398,7 +357,6 @@
 }
 // Question card
 .question {
-  padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -412,7 +370,6 @@
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-
 
     h3 {
       color: $primary;
@@ -489,7 +446,6 @@
       width: 100%;
       flex-direction: row;
       flex-flow: wrap;
-
 
       .check-field {
         width: 50%;
@@ -587,11 +543,9 @@
     .questions-header {
       flex-direction: column;
 
-
       .questions-header__title {
         width: 100%;
       }
-
 
       .questions-header__description {
         width: 100%;
@@ -600,7 +554,6 @@
     }
   }
 }
-
 
 .night-mode {
   // Question card
@@ -616,25 +569,19 @@
       }
     }
 
-
     .card__footer {
       border-top: 1px solid rgba($primary, 0.4);
     }
   }
-
-
   .exams-questions {
     .questions-header {
       background: #43525c;
-
 
       .questions-header__title {
         h1 {
           color: #fff;
         }
       }
-
-
       .questions-header__info {
         p {
           color: #cdd4dc;
@@ -642,27 +589,20 @@
         }
       }
 
-
       .questions-header__description {
         p {
           color: #cdd4dc;
         }
       }
     }
-
-
     .questions-name {
       background: rgba(#43525c, 0.5);
     }
   }
-
-
   .question-title {
     h3 {
       color: #fff;
     }
-
-
     .question-title__info {
       p {
         color: #cdd4dc;
