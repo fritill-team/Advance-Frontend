@@ -28,7 +28,7 @@
   }
   .check-field__label {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     margin-bottom: 0;
@@ -61,7 +61,7 @@
       border-right: 2px solid rgba(#0d758e, 0.9);
       display: none;
       transform: translateY(-52%) rotate(37deg);
-      top: 50%;
+      top: 45%;
       padding: 0;
     }
     &.radio-field__label {
@@ -84,8 +84,8 @@
         position: absolute;
         left: 3px;
         content: "";
-        width: 14px;
-        height: 14px;
+        width: 15px;
+        height: 15px;
         background-color: #0d758e;
         border-radius: 20px;
         transform: translateY(-50%);
@@ -114,6 +114,7 @@ html[dir="rtl"] {
       }
       &:after {
         right: 14px;
+        top: 47%;
       }
       &.radio-field__label {
         &:before {

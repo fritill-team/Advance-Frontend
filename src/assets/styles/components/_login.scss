@@ -89,10 +89,11 @@ select:focus-visible {
   flex-direction: column;
   margin-bottom: 8px;
   .field-wrapper__label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     padding: 4px 16px;
     color: $primary;
+    margin-bottom: 10px;
   }
   &:focus-within {
     .messages {
@@ -365,7 +366,7 @@ select:focus-visible {
       box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
       &::after {
         position: absolute;
-        top: 0;
+        top: -2px;
         right: 0;
         bottom: 0;
         z-index: 3;
@@ -919,9 +920,9 @@ html[dir="rtl"] {
     .field-wrapper__content {
       .field-wrapper__input {
         color: $primary-night-mode;
-        background-color: #43525c;
-        border: 1px solid #43525c;
-        box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+        background-color: #576874;
+        border: 1px solid #576874;
+        // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       }
     }
     .field-wrapper__input {
@@ -965,14 +966,14 @@ html[dir="rtl"] {
       }
       .file-input__label {
         color: #fff;
-        background-color: #43525c;
-        border: 1px solid #43525c;
-        box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+        background-color: #576874;
+        border: 1px solid #576874;
+        // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
         &::after {
           color: $white;
-          background-color: #43525c;
-          border: 1px solid #43525c;
-          box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+          background-color: #38444d;
+          border: 1px solid #38444d;
+          // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -1049,11 +1050,9 @@ html[dir="rtl"] {
     // ------New Checkbox------
     // textarea
     .textarea {
-      background: #43525c;
+      background: #576874;
       color: #fff;
-      box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-      -webkit-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
+      // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
       &:focus {
         color: #fff;
       }
