@@ -1159,24 +1159,9 @@ html[dir="rtl"] {
   }
   //header-player
 
-  .header-player__logo {
-    margin-right: 10px;
-  }
-  // .header-player__courses {
-  //   float: right;
-  //   padding: 10px 10px 10px 5px;
-  //   margin-left: 10px;
-  //   &::after {
-  //     border-right: 10px solid rgba(#7fc8a9, 0.1);
-  //     border-left: 0;
-  //     left: -10px;
-  //   }
-  // }
-  // .header-player__course-name {
-  //   float: right;
-  //   padding: 10px 10px 10px 5px;
-  // }
-  //sidebar playlist
+  // .header-player__logo {
+  //   margin-right: 10px;
+  // } 
   .playlist {
     right: -285px;
   }

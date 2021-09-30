@@ -1,18 +1,19 @@
+/*
 window.onload = function() {
   var can = document.getElementById('canvas'),
       spanProcent = document.getElementById('procent'),
        c = can.getContext('2d');
- 
+
   var posX = can.width / 2,
       posY = can.height / 2,
       fps = 1000 / 200,
       procent = 0,
       oneProcent = 360 / 100,
       result = oneProcent * 64;
-  
+
   c.lineCap = 'round';
   arcMove();
-  
+
   function arcMove(){
     var deegres = 0;
     var acrInterval = setInterval (function() {
@@ -35,8 +36,8 @@ window.onload = function() {
       c.stroke();
       if( deegres >= result ) clearInterval(acrInterval);
     }, fps);
-    
+
   }
-  
-  
-}
+
+
+}*/

@@ -81,7 +81,7 @@
   font-weight: 500;
   text-align: left;
   margin-bottom: 20px;
-  color: $darkBlack;
+  color: $primary;
 }
 
 .rating__progress {
@@ -333,7 +333,7 @@
     float: left;
     width: 100%;
     background: $white;
-    padding: 20px 30px 30px;
+    padding: 20px;
     border: 1px solid $light-white;
     border-radius: 10px;
 
@@ -453,5 +453,11 @@
     .reviews__all-reviews {
       margin-bottom: 50px;
     }
+  }
+}
+
+html[dir="rtl"]{
+  .all-reviews__title{
+    text-align: right;
   }
 }

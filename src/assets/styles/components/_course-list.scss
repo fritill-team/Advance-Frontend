@@ -116,6 +116,9 @@
   letter-spacing: 0.3px;
   line-height: 1.33;
   font-weight: 400;
+  .play-list__item{
+    margin-bottom: 0;
+  }
   .content-item__content-name {
     display: flex;
     align-items: flex-start;
@@ -203,3 +206,4 @@
     display: block;
   }
 }
+

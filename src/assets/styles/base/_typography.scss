@@ -237,6 +237,7 @@ p {
   text-align: left;
   outline: none;
   max-height: 40px;
+  min-height: 40px;
   height: 100%;
   overflow: hidden;
   display: block;
@@ -412,4 +413,28 @@ a {
     }
   }
 
+}
+
+.night-mode{
+  h1{
+    color: $white;
+  }
+  h2{
+    color: $white;
+  }
+  h3{
+    color: $white;
+  }
+  h4{
+    color: $white;
+  }
+  h5{
+    color: $white;
+  }
+  h6{
+    color: $white;
+  }
+  a{
+    color: $accent;
+  }
 }

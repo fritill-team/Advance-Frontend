@@ -5,68 +5,69 @@ block title
   title Course
 
 block content
-  section(class="course-video" style="width:100%; background:  linear-gradient(-90deg,rgba(255,0,0,0) -10% , #aaa)")
-    img.course-video__bg(src="../../assets/images/get_img.jpg", alt="", srcset="")
+  section(class="course-video ")
+    .video__wrapper
+      .video--youtube
+        iframe(width='560' height='315' src='https://www.youtube.com/embed/f54g9F05ld8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      .course-video__bg
+        img(src="../../assets/images/get_img.jpg", alt="", srcset="")
     .container
       .row
-        .col-md-7
-          //start video player
-          include ../components/general-component/course-video.pug
-          //End video player
-          //start video action
-          //- include ../components/general-component/video-action.pug
-          //End video action
-        .col-md-5
+        .col-md-6
           //start video content
           .video-content
             h2.mt-0.white.mb-2 The Web Developer Bootcamp
-            span.white.text-2
-              | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
-            .video-content__review
-              .video-content__wrapper-icon
-                i.far.fa-star.wrapper-icon__icon
-                | 4.5
-              | (81,665 ratings)
-            p.text-3.white.mt-0
-              | 114,521 students enrolled
-            .video-content__language
-              .language__lang
-                span.white.mt-0
-                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mr-1
-                  | English
-              .language__more-lang
-                span.white.mt-0
-                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mr-1
-                span.more-lang__tooltip
-                  | English, Dutch
-                  span.tooltip__caption-tooltip
-                    | 12 more
-                    span.tooltip__caption-content
-                      span.caption-content__lang-item French
-                      span.caption-content__lang-item Hindi
-                      span.caption-content__lang-item German [Auto-generated]
-                      span.caption-content__lang-item Indonesian [Auto-generated]
-                      span.caption-content__lang-item Italian [Auto-generated]
-                      span.caption-content__lang-item Japanese [Auto-generated]
-                      span.caption-content__lang-item Korean
-                      span.caption-content__lang-item Polish
-                      span.caption-content__lang-item Portuguese [Auto-generated]
-                      span.caption-content__lang-item Spanish [Auto-generated]
-                      span.caption-content__lang-item Traditional Chinese
-                      span.caption-content__lang-item Turkish [Auto-generated]
-            .video-content__last-update
-              | Last updated 1/2020
+            .video-content__details
+              span.white.text-2
+                | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+              .video-content__review
+                .video-content__wrapper-icon
+                  i.far.fa-star.wrapper-icon__icon
+                  | 4.5
+                | (81,665 ratings)
+              p.text-3.white.mt-0
+                | 114,521 students enrolled
+              .video-content__language
+                .language__lang
+                  span.white.mt-0
+                    i.far.fa-closed-captioning.icons__fa.d-inline-block.mx-1
+                    | English
+                .language__more-lang
+                  span.white.mt-0
+                    i.far.fa-closed-captioning.icons__fa.d-inline-block.mx-1
+                  span.more-lang__tooltip
+                    | English, Dutch
+                    span.tooltip__caption-tooltip
+                      | 12 more
+                      span.tooltip__caption-content
+                        span.caption-content__lang-item French
+                        span.caption-content__lang-item Hindi
+                        span.caption-content__lang-item German [Auto-generated]
+                        span.caption-content__lang-item Indonesian [Auto-generated]
+                        span.caption-content__lang-item Italian [Auto-generated]
+                        span.caption-content__lang-item Japanese [Auto-generated]
+                        span.caption-content__lang-item Korean
+                        span.caption-content__lang-item Polish
+                        span.caption-content__lang-item Portuguese [Auto-generated]
+                        span.caption-content__lang-item Spanish [Auto-generated]
+                        span.caption-content__lang-item Traditional Chinese
+                        span.caption-content__lang-item Turkish [Auto-generated]
+              .video-content__last-update
+                | Last updated 1/2020
+              //- li.btn-list__list-item
+              //-   button.list-item--btn-Enrole-childe Enrol Chiled
+              p.text-3.white
+                | 30-Day Money-Back Guarantee
             ul.video-content__btn-list
               li
                 include ../components/general-component/btn.pug
-                +btn-link('btn btn--primary btn--rounded white', 'Enroll' , "#")
-                +btn-link('btn btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
-              //- li.btn-list__list-item
-              //-   button.list-item--btn-Enrole-childe Enrol Chiled
-            p.text-3.white
-              | 30-Day Money-Back Guarantee
-          //End video content
-  
+                +btn-link('btn btn--lg btn--primary btn--rounded white', 'Enroll' , "#")
+                +btn-link('btn btn--lg btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
+              
+        .col-md-6.d-flex.align-items-end.justify-content-end
+          button(type="button" class="btn btn--player btn--l")
+            img(src="../../assets/images/replay.svg" alt="player toggle")
+            //- i.fas.fa-play
   section
     .container
       .row
@@ -101,18 +102,17 @@ block content
                     a(href="#" class="bold primary") Lorem ipsum
                   form
                     .field-wrapper.field-wrapper--no-label
-                      label.field-wrapper__label Course Title*
+                      //- label.field-wrapper__label Course Title*
                       .field-wrapper__content
                         input.field-wrapper__input(type='text' placeholder='Insert your course title.' name='title')
-                        .field-wrapper__limit 60
                       ul.messages
                         li Please provide a valid city.
 
                     .field-wrapper.field-wrapper--no-label
-                      label.field-wrapper__label Course Title*
+                      //- label.field-wrapper__label Course Title*
                       .field-wrapper__content
                         .rate-input
-                      ul.messages
+                      //- ul.messages
                         li Please provide a valid city.
 
                     button.btn.btn--primary.btn--rounded Add Review
@@ -146,8 +146,6 @@ block content
 
         .col-lg-4
           include ../components/review.pug
-          h3.text-h3 Related courses
-          include ../components/related-courses.pug
 
 
 

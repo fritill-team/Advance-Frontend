@@ -39,9 +39,9 @@ block content
 		//- Desktop page
 	.container
 		.row
-			.col-xl-9.col-lg-8
+			.col-xl-9.col-lg-9
 				section.section-index.section-index--pt
-					.d-flex.flex-column.my-2
+					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.title-h6.title-h6--bolder.semi-bold Live Streams
 							a(href="#").text-3--bolder.gray See all
@@ -158,7 +158,7 @@ block content
 														span
 														| Live
 				section.section-index.section-index--pt.pt-0
-					.d-flex.flex-column.my-2
+					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
 							h3.title-h6.title-h6--bolder.semi-bold Newest Courses
 							a(href="#").text-3--bolder.gray See all
@@ -167,11 +167,27 @@ block content
 							include ./components/course-wrapper.pug
 								block category-header
 								block content
-									.owl-carousel.featured_courses.owl-theme
+									.row
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+										.col-sm-12.col-md-6.col-lg-4
+											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+									
+									
+									//- .owl-carousel.featured_courses.owl-theme
+										.item
+											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
+											//- +course-card
 										.item
 											include ./components/course-card.pug
-											+course-card
-										.item
 											+course-card
 										.item
 											+course-card
@@ -564,7 +580,25 @@ block content
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 				section.section-index.section-index--pt
 					.d-flex.justify-content-between.align-items-center.w-100
-						h3.title-h6.semi-bold.mb-0  Popular Instructors
+						h3.title-h6.semi-bold  Popular surveys
+						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+					.row 
+						.col-lg-6.col-md-12
+							.card 
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-12
+							.card 
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-12
+							.card 
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-12
+							.card 
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+
+				section.section-index.section-index--pt
+					.d-flex.justify-content-between.align-items-center.w-100
+						h3.title-h6.semi-bold  Popular Instructors
 						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
 					.section-index.section-index--pt
 						.owl-carousel.top_instrutors.owl-theme
@@ -709,7 +743,7 @@ block content
 														span.total-course 12 Courses
 													a.text-2.profile.mt-1.mb-0(href="#") Go To Profile
 
-			.col-xl-3.col-lg-4
+			.col-xl-3.col-lg-3
 				aside.right_side
 					.card.card--centered.card--user
 						.card__content
