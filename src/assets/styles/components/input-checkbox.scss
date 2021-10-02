@@ -52,16 +52,16 @@
     }
     &:after {
       position: absolute;
-      left: 7px;
+      left: 6px;
       content: "";
       background-color: transparent;
-      height: 11px;
-      width: 6px;
-      border-bottom: 2px solid rgba(#0d758e, 0.9);
-      border-right: 2px solid rgba(#0d758e, 0.9);
+      height: 12px;
+      width: 7px;
+      border-bottom: 2.5px solid rgba(#0d758e, 0.9);
+      border-right: 2.5px solid rgba(#0d758e, 0.9);
       display: none;
       transform: translateY(-52%) rotate(37deg);
-      top: 45%;
+      top: 44%;
       padding: 0;
     }
     &.radio-field__label {
@@ -82,10 +82,10 @@
       }
       &:after {
         position: absolute;
-        left: 2px;
+        left: 3px;
         content: "";
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         background-color: #0d758e;
         border-radius: 20px;
         transform: translateY(-50%);
@@ -137,8 +137,8 @@ html[dir="rtl"] {
         border: 1px solid $primary-night-mode;
       }
       &:after {
-        border-bottom: 2px solid rgba($primary-night-mode, 0.9);
-        border-right: 2px solid rgba($primary-night-mode, 0.9);
+        border-bottom: 2.5px solid rgba($primary-night-mode, 0.9);
+        border-right: 2.5px solid rgba($primary-night-mode, 0.9);
       }
       &.radio-field__label {
         &:before {

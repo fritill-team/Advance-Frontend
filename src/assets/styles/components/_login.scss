@@ -95,7 +95,7 @@ select:focus-visible {
   margin-right: 5px;
   margin-bottom: 5px;
   .field-wrapper__label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     padding: 4px 16px;
     color: $primary;
@@ -163,9 +163,9 @@ select:focus-visible {
     font-weight: 500;
     color: inherit;
     li {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
-      padding: 0.5em 1.3333333333333333em;
+      padding: 0.5em 1.22222222222em;
       display: none;
       color: $primary;
     }
@@ -549,6 +549,9 @@ select:focus-visible {
     transition: all 0.3s ease;
     width: 100%;
     margin: 0 10px;
+    &:focus{
+      box-shadow: none;
+    }
   }
   &:last-of-type {
     margin-right: 0;
