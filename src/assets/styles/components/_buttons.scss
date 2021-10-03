@@ -832,4 +832,7 @@ html[dir="rtl"] {
       }
     }
   }
+  &:focus-visible{
+    outline: transparent;
+  }
 }
