@@ -216,62 +216,6 @@
       }
     }
   }
-
-  // input type file
-  // &.field-wrapper__file-input {
-  //   .file-input {
-  //     // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  //     // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  //     border: 0;
-  //     padding: 0;
-  //     color: #333;
-  //     font-weight: 400;
-  //     position: relative;
-  //     text-align: left;
-  //     -webkit-transition: all 0.3s ease 0s;
-  //     transition: all 0.2s ease 0s;
-  //     width: 100%;
-  //     height: 40px;
-  //     input {
-  //       display: none;
-  //     }
-  //   }
-  //   .file-input__label {
-  //     position: absolute;
-  //     cursor: pointer;
-  //     top: 0;
-  //     right: 0;
-  //     left: 0;
-  //     z-index: 1;
-  //     height: calc(1.5em + 0.75rem + 2px);
-  //     padding: 1.3rem 1rem;
-  //     font-weight: 400;
-  //     line-height: 0;
-  //     color: $darkGray;
-  //     background-color: $white;
-  //     border: 1px solid #efefef;
-  //     border-radius: 10rem;
-  //     margin-bottom: 0;
-  //     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;
-  //     &::after {
-  //       position: absolute;
-  //       top: 0;
-  //       right: 0;
-  //       bottom: 0;
-  //       z-index: 3;
-  //       display: block;
-  //       height: calc(1.5em + 0.75rem);
-  //       padding: 1.3rem 2rem;
-  //       line-height: 0;
-  //       color: $white;
-  //       content: "Upload File";
-  //       background-color: $primary;
-  //       border-left: inherit;
-  //       border-radius: 0 10rem 10rem 0;
-  //     }
-  //   }
-  // }
-
   // input type select
   &.field-wrapper__select-input {
     .field-wrapper__content {
@@ -557,16 +501,16 @@ html[dir="rtl"] {
     }
 
     // input type file
-    &.field-wrapper__file-input {
-      .file-input {
-        text-align: right;
-      }
-      .file-input__label {
-        &::after {
-          border-right: inherit;
-        }
-      }
-    }
+    // &.field-wrapper__file-input {
+    //   .file-input {
+    //     text-align: right;
+    //   }
+    //   .file-input__label {
+    //     &::after {
+    //       border-right: inherit;
+    //     }
+    //   }
+    // }
 
     // input type select
     &.field-wrapper__select-input {
