@@ -2,10 +2,13 @@ extends ./layouts/master.pug
 
 block title
 	title My Page - Home
+block button-collapsed 
+	button(class="toggle-menu toggle-menu--mobile toggle" id="toggleMenu" type='button')
+		i.fas.fa-bars.toggle__icon
 //- block button-collapsed 
 //- 	include ./components/general-component/toggle-menu.pug
-	//- block category
-	//- 	include ./components/header-blocks/selectCategory.pug
+	block category
+		include ./components/header-blocks/selectCategory.pug
 block my-courses
 	li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
 		a.massege__opencard(href='#' title='Messages')

@@ -63,7 +63,7 @@
             font-weight: 500;
             white-space: nowrap;
             cursor: pointer;
-                    margin-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
             display: block;
 
             .menu--icon {
@@ -118,7 +118,7 @@
                 padding-left: 50px;
                 padding-right: 16px;
                 font-size: 14px;
-                            font-weight: 400;
+                font-weight: 400;
                 color: #333;
                 text-decoration: none;
                 &:hover {
@@ -142,7 +142,7 @@
         padding: 20px 17px 10px;
         font-size: 12px;
         font-weight: 500;
-            color: #afafaf;
+        color: #afafaf;
         text-align: left;
         margin-bottom: 0;
       }
@@ -163,7 +163,7 @@
               font-weight: 500;
               white-space: nowrap;
               cursor: pointer;
-                      }
+            }
           }
         }
       }
@@ -176,7 +176,7 @@
           .item-link {
             font-size: 13px;
             font-weight: 500;
-                    text-align: left;
+            text-align: left;
             line-height: 24px;
             padding: 0 3px;
             color: #333;
@@ -191,7 +191,7 @@
         p {
           font-size: 12px;
           font-weight: 400;
-                color: #afafaf;
+          color: #afafaf;
           text-align: left;
           line-height: 24px;
         }
@@ -202,10 +202,7 @@
 .vertical_nav__closed {
   left: -240px !important;
 }
-.nav--opened {
-  left: 0 !important;
-  box-shadow: -30px 0 30px 30px rgba(0, 0, 0, 0.2);
-}
+
 .collapse_menu {
   display: none;
 }

@@ -23,7 +23,8 @@ $(document).ready(function(){
   //    });  
   // });  
   $(".menu__list").each(function(){  
-  $(this).on("mouseenter" ,function () {
+  $(this).on("mouseenter" ,function (event) {
+    event.preventDefault();
     if ($(this).hasClass('sub-menu--item')) {
       $('.category__date').addClass('date--open');
     }else {
@@ -31,7 +32,12 @@ $(document).ready(function(){
     }
   });
 });  
-
+// $(".menu__list").each(function(){ 
+//   $(this).on("click" ,function (event) {
+//     event.preventDefault();
+//     $('.category__date').toggleClass('date--open');
+//   });
+// });  
   
   // open category details
 

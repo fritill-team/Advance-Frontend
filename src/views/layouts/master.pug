@@ -32,9 +32,10 @@ html(lang='en' dir="ltr")
 			// Menu
 			include ../components/header.pug
 
-			//include ../components/sidebar.pug
-				block sidebar
-					include ../components/sidebar-content.pug
+			nav.sidebar.sidebar--mobile
+				#js-menu.sidebar__menu
+					.menu__section
+						//- include ../components/sidebar-content.pug
 
 			// block content
 			.page-content
