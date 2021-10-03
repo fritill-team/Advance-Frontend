@@ -44,6 +44,10 @@ input[type="button"] {
         border-color: #B7B5B3;
         background-color: #B7B5B3;
       }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($primary, 0.5);
+      }
     }
     &.btn--primary {
       background-color: $primary; //#0d758e // #3D5467
@@ -52,6 +56,10 @@ input[type="button"] {
         color: white;
         background-color: #0385a5;
         border-color:#0385a5;
+      }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($primary, 0.5);
       }
     }
     &.btn--secondary {
@@ -62,6 +70,10 @@ input[type="button"] {
         background-color: #09aad6;//#1597BB
         border-color: #09aad6;
       }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($secondary, 0.5);
+      }
     }
     &.btn--success {
       background-color: $success;
@@ -70,6 +82,10 @@ input[type="button"] {
         color: white;
         background-color: #45dd69 ;
         border-color: #45dd69;
+      }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($success, 0.5);
       }
     }
     &.btn--info {
@@ -80,6 +96,10 @@ input[type="button"] {
         background-color: #196ba1 ;
         border-color:  #196ba1;
       }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($info, 0.5);
+      }
     }
     &.btn--warning {
       background-color: $warning;
@@ -89,6 +109,10 @@ input[type="button"] {
         background-color: #e26415 ;
         border-color: #e26415;
       }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($warning, 0.5);
+      }
     }
     &.btn--danger {
       background-color: $primaryLight;
@@ -97,6 +121,10 @@ input[type="button"] {
         color: white;
         background-color: #f1130f ;
         border-color: #f1130f;
+      }
+      &:focus{
+        outline: 0;
+        box-shadow: 0 1px 4px 3px rgba($danger, 0.5);
       }
     }
   

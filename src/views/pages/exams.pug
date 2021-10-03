@@ -9,7 +9,10 @@ block content
 		.container-fluid
 			.row
 				.col-lg-6
-					.card.question
+					.card.question.question-dragabl
+						.card--drag-vertical
+							//- i.fas.fa-braille
+							i.fas.fa-grip-vertical
 						.card__header.align-items-start
 							.field-wrapper.mr-3
 								label.field-wrapper__label Insert exam *
@@ -98,7 +101,7 @@ block content
 							h3.title-h3.mt-0.mb-1 Question title
 
 				.col-lg-6
-					.card.question.mb-4.question-dragabl
+					.card.question.question-dragabl
 						.card--drag-vertical
 							//- i.fas.fa-braille
 							i.fas.fa-grip-vertical
@@ -168,7 +171,7 @@ block content
 										| hint message for question.
 								.image.preview
 									img(src="../../assets/images/sign.svg", alt="")
-						div.dragable-placeholder
+						div.dragging-placeholder
 							i.fas.fa-ellipsis-h
 						.card__footer
 							div lorem
@@ -182,7 +185,7 @@ block content
 									label(for="switch") Is required
 
 				
-					.card.question.mb-4.question-dragable
+					.card.question.question-dragging
 						.card--drag-vertical 
 							i.fas.fa-grip-vertical
 						.card__header
@@ -250,7 +253,7 @@ block content
 										| hint message for question.
 								.preview
 									img(src="../../assets/images/sign.svg", alt="")
-						div.dragable-placeholder
+						div.dragging-placeholder
 							i.fas.fa-ellipsis-h
 						.card__footer
 							div lorem
@@ -264,7 +267,7 @@ block content
 									label(for="switch") Is required
 
 
-					.card.question.mb-4
+					.card.question
 						.card--drag-vertical.mb-0
 							i.fas.fa-grip-vertical
 						.card__header 
@@ -297,11 +300,11 @@ block content
 								.messages
 									ul 
 										li Please provide a valid city.
-						div.dragable-placeholder
+						div.dragging-placeholder
 							i.fas.fa-ellipsis-h
 
 
-					.card.question.mb-4
+					.card.question
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-vertical
 						.card__header 
@@ -320,13 +323,13 @@ block content
 										li Please provide a valid city.
 
 				
-					.card.question.mb-4.question-dragable-placeholder
+					.card.question.question-dragging-placeholder
 						.card--drag-vertical.mb-0 
 							i.fas.fa-grip-vertical
 						.card__header 
 							h3.title-h3.mt-0.mb-2 Question title
 						
-						div.dragable-placeholder
+						div.dragging-placeholder
 							i.fas.fa-ellipsis-h
 							//- .field-wrapper
 								//- label.field-wrapper__label Insert you question *

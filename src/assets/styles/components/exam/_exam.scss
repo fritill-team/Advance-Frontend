@@ -49,22 +49,22 @@
   .question--section {
     color: $primary;
   }
-  &.question-dragable {
+  &.question-dragging {
     min-height: 200px;
     // padding-left:45px ;
-    .dragable-placeholder {
+    .dragging-placeholder {
       display: flex;
     }
     .card__content {
       display: none;
     }
   }
-  &.question-dragable-placeholder {
+  &.question-dragging-placeholder {
     min-height: 100px;
     padding-bottom: 35px;
     // padding-left:45px ;
 
-    .dragable-placeholder {
+    .dragging-placeholder {
       display: flex;
     }
     .card__content {
@@ -83,7 +83,7 @@
       width: 180px !important;
     }
   }
-  .dragable-placeholder {
+  .dragging-placeholder {
     display: none;
     justify-content: center;
 
@@ -92,7 +92,6 @@
       font-size: 18px;
     }
   }
-
   .card--drag-vertical {
     position: absolute;
     top: 0px;
@@ -100,11 +99,17 @@
     display: flex;
     justify-content: center;
     font-size: 14px;
-    color: $accent;
+    color: $primary;
     height: 100%;
     width: 20px;
-    background-color: $info;
+    background-color: darken($color:  $default, $amount: 8);
     align-items: center;
+  }
+  &.question--active{
+    .card--drag-vertical {
+      color: $accent;
+      background-color: $info;
+    }
   }
   .card__content {
     padding-left: 0;
