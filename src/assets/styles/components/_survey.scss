@@ -68,41 +68,6 @@
   display: flex;
   justify-content: center;
 }
-
-
-// .list-item {
-//   display: flex;
-//   align-items: center;
-//   font-size: 2.2rem;
-//   .list-item__content{
-//     // padding: 0px 10px 5px;
-//     .content__link{
-//       color: $primary;
-//       // padding-top: 10px;
-//       // padding-left: 3px;
-//     }
-//     .content__paragraph{
-//       color: $info;
-//       margin: -0.75em 2px 0.75em;
-//     }
-//   }
-//   &:hover{
-//     cursor: pointer;
-//     color: $accent;
-//   }
-// 	// &:first-of-type{
-// 	// 	padding-top: 0;
-// 	// }
-// 	// &:last-of-type{
-// 	// 	padding-bottom: 0;
-// 	// }
-
-//   &.list-item--border-bottom {
-//     border-bottom: 1px solid rgba($darkBlack, 0.1);
-//     // padding: 25px;
-//   }
-// }
-
 .canvas-wrap {
   position: relative;
   width: 200px;
@@ -303,47 +268,6 @@ span#procent {
     }
   }
 }
-
-.table-responsive-survey{
-  display: tabla;
-  width: 50%;
-  margin: auto;
-  overflow-x: auto;
-  border: 1px solid #efefef;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  
-  .table-survey{
-    width: 100%;  
-    thead {
-      font-weight: 600;
-      color: $primary;
-      border-collapse: separate;
-    }
-    th, td {
-      padding: 8px 8px;
-      font-size: 14px;
-      line-height: 1;
-      text-align: center;
-    }
-    colgroup{
-      &:first-child{
-        opacity: 0;
-      }
-    } 
-      
-    // .th-survey{
-    //   background-color: $white;
-    //   font-weight: 600;
-    //   color: $primary;
-    // }
-    .td-survey{
-      color: $primary;
-      font-weight: 600;
-      border-collapse: separate;
-    }
-  }
-}
 .form-control{
   textarea {
     border: 1px solid #777;
@@ -359,43 +283,6 @@ span#procent {
     margin-bottom: 10px;
   }
 }
-
-// .dropbtn {
-//   background-color: $primary;
-//   color: white;
-//   padding: 16px;
-//   font-size: 16px;
-//   border: none;
-// }
-// .dropdown-content {
-//   position: absolute;
-//   background-color: #f1f1f1;
-//   min-width: 160px;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//   z-index: 1;
-//   transform-origin: top;
-//   transform: perspective(400px) rotateX(-90deg);
-//   transition: 0.5s ease all;
-// }
-// .dropdown {
-//   position: relative;
-//   display: inline-block;
-//   &.active{
-//     .dropdown-content{
-//       display: block;
-//       transform: perspective(400px) rotateX(0deg);
-//     } 
-//   }
-// }
-// .dropdown-content a {
-//   color: black;
-//   padding: 12px 16px;
-//   text-decoration: none;
-//   display: block;
-//   &:hover{
-//     background-color: #ddd;
-//   }
-// }
 
 
 
