@@ -63,15 +63,15 @@ block content
                   .wrap__form-group
                     input.form-group__input(id="toggle-1" value="radio-1" type="checkbox" name="survey")  
                     label.form-group__label(for="toggle-1") lorem     
-                      img(src="../../assets/images/hd_dp.")               
+                      img(src="../../assets/images/get_img.jpg")               
                   .wrap__form-group
                     input.form-group__input(id="toggle-2" value="radio-2" type="checkbox" name="survey")
                     label.form-group__label(for="toggle-2") lorem
-                      img(src="../../assets/images/get_img.")
+                      img(src="../../assets/images/get_img.jpg")
                   .wrap__form-group
                     input.form-group__input(id="toggle-3" value="radio-3" type="checkbox" name="survey")
                     label.form-group__label(for="toggle-3") lorem
-                      img(src="../../assets/images/get_img")
+                      img(src="../../assets/images/get_img.jpg")
     .row
       .col-lg-12
         .card
@@ -85,17 +85,17 @@ block content
                   p.text-3.white amet consectetur adipisicing elit.
                 .form-question__wrap
                   .wrap__form-group
-                    input.form-group__input(id="radio-1" value="radio-1" type="radio" name="survey")
-                    label.form-group__label(for="radio-1") lorem
-                      img(src="../../assets/images/hd_dp.")
+                    input.form-group__input(id="radio-21" value="radio-1" type="radio" name="survey")
+                    label.form-group__label(for="radio-21") lorem
+                      img(src="../../assets/images/get_img.jpg")
                   .wrap__form-group
-                    input.form-group__input(id="radio-2" value="radio-2" type="radio" name="survey")
-                    label.form-group__label(for="radio-2") lorem
-                      img(src="../../assets/images/hd_dp.")
+                    input.form-group__input(id="radio-22" value="radio-2" type="radio" name="survey")
+                    label.form-group__label(for="radio-22") lorem
+                      img(src="../../assets/images/get_img.jpg")
                   .wrap__form-group
-                    input.form-group__input(id="radio-3" value="radio-3" type="radio" name="survey")
+                    input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
                     label.form-group__label(for="radio-3") lorem
-                      img(src="../../assets/images/hd_dp.")
+                      img(src="../../assets/images/get_img.jpg")
     .row
       .col-lg-12
         .card
@@ -357,7 +357,7 @@ block content
           .card__content     
             .col-md-6.col-sm-6
               .field-wrapper
-                label.field-wrapper__label Short Answer*
+                label.field-wrapper__label.short Short Answer*
                 .field-wrapper__content
                   input(class="field-wrapper__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
                 ul.messages
@@ -371,10 +371,25 @@ block content
           .card__content     
             .col-md-6.col-sm-6
               .field-wrapper
-                label.field-wrapper__label long Answer*
+                label.field-wrapper__label.short long Answer*
                 .field-wrapper__content
-                  textarea( id="long-answer" class="field-wrapper__input-answer" rows='5' name='description' placeholder='long answer text')
+                  textarea( id="long-answer" class="field-wrapper__input-answer" name='description' placeholder='long answer text')
                   //- input(class="field-wrapper__input-answer" type='text' placeholder='long answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
                 ul.messages
                   li
                     | Please provide a valid city.
+    .row
+      .col-lg-12
+        .card
+          .card__content     
+            .circular
+              .inner
+              .number 100%
+              .circle
+                .bar left
+                  .progress
+                .bar right
+                  .progress
+
+
+

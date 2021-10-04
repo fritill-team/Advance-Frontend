@@ -81,12 +81,12 @@
   font: 40px Arial, sans-serif;
   .semi-circle{
     position: absolute;
-    border-radius: 100%;
-    width: 150px;
+    border-radius:100%;
     height: 150px;
+    width: 150px;
     border: 10px solid #fff;
-    border-bottom: 0;
-    border-left: 0;
+    border-left: transparent;
+    border-bottom: transparent;
     left: -10px;
     top: -10px;
   }
@@ -160,11 +160,19 @@ span#percentage {
         font-weight: 300;
         color: $primary;
         margin: 1em;
-        border: 1px solid $primary;
+        border: 2px solid $primary;
         width: 5em;
         height: 5em;
         border-radius: 100%;
         position: relative;
+        overflow: hidden;
+        z-index: 2;
+        img{
+          width: 5em;
+          height: 5em;
+          z-index: -1;
+          position: absolute;
+        }
         &:hover{
           color: $accent;
           cursor: pointer;
@@ -174,43 +182,11 @@ span#percentage {
           border-color: $primary;
           background-color: $info;
         }
+        @media (min-width: 0px) and (max-width: 650px) {
+          width: 4em;
+          height: 4em;
+        }
       }
-    }
-    // .click-me{
-    //   &::after{
-    //     position: absolute;
-    //     font-size: 100px;
-    //     content: "😃"
-    //   }
-    // } 
-    // input.control [type="checkbox"] + label.click-me:after{
-    //   position: absolute;
-    //   font-size: 100px;
-    //   width: 50%;
-    //   height: 50%;
-    //   content: "😃"
-    // } 
-    // input[type="radio"]:checked + label.click-me:after{
-    //   content: "😩";
-    // } 
-    [type=radio] { 
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    /* IMAGE STYLES */
-    [type=radio] + img {
-      cursor: pointer;
-    }
-    
-    /* CHECKED STYLES */
-    [type=radio]:checked + img {
-      outline: 2px solid #f00;
-    }
-    @media (min-width: 0px) and (max-width: 650px) {
-      display: flex;
     }
   }
   .form-question__direction-form{
@@ -246,7 +222,7 @@ span#percentage {
     border: 1px solid #777;
     border-radius: 2px;
     font-family: inherit;
-    padding: 10px;
+    padding: 4px 0px;
     display: block;
     width: 50%;
     resize: none;
@@ -256,22 +232,98 @@ span#percentage {
     margin-bottom: 10px;
   }
 }
+.field-wrapper{
+  .short{
+    padding: 4px 0px;
+  }
+}
 .field-wrapper__content{
   .field-wrapper__input-answer{
     font-size: 14px;
     width: 100%;
     border: transparent;
     border-bottom: 1px dotted rgba(0,0,0,0.38);
-    height: 40px;
+    height: 30px;
     margin: 0 5px 0 0;
     resize: none;
+    background-color: transparent;
     &:focus{
       outline: unset;
       box-shadow:unset;
+      border-bottom:2px solid rgba($primary,0.38); 
     }
     &.input-answer--short{
       width: 50%;
     }
+  }
+}
+.circular{
+  height:100px;
+  width: 100px;
+  position: relative;
+  top: 0;
+  transform:scale(2);
+  margin-top: 40px;
+}
+.circular .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #dde6f0;
+  border-radius: 100%;
+ 
+}
+.circular .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:18px;
+  font-weight:500;
+  color:$accent;
+}
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $primary;
+  border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+.circle .left .progress{
+  z-index:1;
+  animation: left 4s linear both;
+}
+@keyframes left{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index:3;
+ 
+}
+.circle .right .progress{
+  animation: right 4s linear both;
+  animation-delay:4s;
+}
+@keyframes right{
+  100%{
+    transform: rotate(180deg);
   }
 }
 .night-mode{
