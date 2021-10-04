@@ -1,7 +1,7 @@
-.category__menu 
-  .category__title 
-    p.text-2.bold Goals
-  ul.dropdown__menu
+.menu__content
+  .menu__title 
+    h6.title-h6.bold Goals
+  ul.menu__dropdown
     li.menu__list.sub-menu--item
       a.menu__item(href='#') Development
     li.menu__list
@@ -10,9 +10,9 @@
       a.menu__item(href='#') Personal Development
     li.menu__list
       a.menu__item(href='#') Photography  
-  .category__title 
-    p.text-2.bold category
-  ul.dropdown__menu
+  .menu__title 
+    h6.title-h6.bold category
+  ul.menu__dropdown
     li.menu__list.sub-menu--item
       a.menu__item(href='#') Development
     li.menu__list
@@ -21,12 +21,11 @@
       a.menu__item(href='#') Personal Development
     li.menu__list
       a.menu__item(href='#') Photography 
-  a(class="btn btn--primary" href="#") Enter
-.category__date
-  ul.dropdown__menu
+  //- a(class="btn btn--primary" href="#") Enter
+.menu__date
+  ul.menu__dropdown
     li.menu__list.sub-menu--item.close
-      a(href="#").menu__item Back
-    
+      a(href="#").menu__item Back 
   .img-wrapper
     img(src="../assets/images/get_img.jpg", alt="")
   p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, deleniti! Earum cum mollitia rerum, neque ullam aliquam, sit hic ex minima animi provident? Dolores numquam libero fuga, magnam necessitatibus corporis?
