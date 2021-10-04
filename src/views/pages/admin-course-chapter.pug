@@ -10,6 +10,7 @@ block content
 			.col-lg-12
 				.d-flex.justify-content-between.align-items-center
 					h3.bold.title-h3 Course name is here 
+					
 			.col-lg-12 
 				.card.card--data
 					.card__header
@@ -48,6 +49,7 @@ block content
 			.col-lg-12
 				.tabs
 					a(class="tab tab--active" href='#nav-content') Content
+					a(class="tab" href="#nav-details") Details
 					a(class="tab" href='#nav-comment') Discussion
 					a(class="tab" href='#nav-thread') Thread
 					a(class="tab" href='#nav-media') Media
@@ -59,6 +61,7 @@ block content
 					//- include ../components/course.pug
 
 					#nav-content.tab-panel.tab-panel--active
+						
 						//- h2 Transcript
 						.course-content.mt-0
 							h3.course-content__title Chapter content
@@ -390,6 +393,19 @@ block content
 													a.details--preview-text(href='#') Preview
 													span.details__content-summary 07:48
 									//-End-List
+
+					#nav-details.tab-panel 
+						.tabs.tabs--nested
+							a(class="tab tab--active" href='#title') title
+							a(class="tab" href='#description') description
+							a(class="tab" href='#shortDescription') short description
+						.tabs-panels 
+							#title.tab-panel.tab-panel--active
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ratione natus, dolores, quaerat assumenda dignissimos, facere nihil accusantium delectus excepturi ducimus atque iste est sequi quidem molestiae minus officiis deserunt!
+							#description
+								p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, non suscipit quo illo accusantium officiis eum sapiente ab maxime hic odio ullam reiciendis quaerat a eius porro repellendus voluptatibus asperiores.
+							#shortDescription
+								p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab dolores, ex explicabo laborum magnam assumenda eaque, itaque nisi cumque iste quidem ducimus provident deserunt labore. Dolorum error officiis commodi exercitationem.
 
 					#nav-tranScript.tab-panel
 
