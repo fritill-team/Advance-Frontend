@@ -24,4 +24,5 @@ import "./accordion"
 import "./playlist-video"
 import "./course-card"
 import "./course-content"
+import './dropdown'
 import "./backend_scripts/panel-loader"
