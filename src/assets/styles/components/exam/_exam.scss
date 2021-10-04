@@ -118,6 +118,8 @@
     width: 20px;
     background-color: darken($color: $default, $amount: 8);
     align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   &.question--active {
