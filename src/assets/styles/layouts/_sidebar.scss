@@ -15,11 +15,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    .menu__section {
-      border-bottom: 1px solid #e5e5e5;
-      // padding: 0 5px 0 0;
-    }
-  }
+   }
   &.sidebar--mobile {
     display: block;
     z-index: 9;
@@ -441,11 +437,7 @@ body {
       width: 100%;
       margin: 0;
       padding: 0;
-      list-style-type: none;
-      .menu__section {
-        border-bottom: 1px solid #e5e5e5;
-        // padding: 0 5px 0 0;
-      }
+      list-style-type: none; 
     }
     &.sidebar--mobile {
       left: -60%;

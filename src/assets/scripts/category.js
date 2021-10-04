@@ -9,36 +9,20 @@ $(document).ready(function(){
       $(".category__wrapper").toggleClass("active--category");
       $("body").toggleClass("overlay"); 
     }); 
-  });
-  // $(document).ready(function(){
-  //   $(".sub-menu--item").on("mouseenter",function(){
-  //     $(".category__date").toggleClass("date--open");
-  //   }); 
-  // });
-  // $(document).ready(function(){  
-  //   $(".sub-menu--item").each(function(){  
-  //     $(this).on("mouseenter",function(){
-  //       $(".category__date").toggleClass("date--open"); 
-  //     }); 
-  //    });  
-  // });  
-  $(".menu__list").each(function(){  
-  $(this).on("mouseenter" ,function (event) {
-    event.preventDefault();
-    if ($(this).hasClass('sub-menu--item')) {
-      $('.category__date').addClass('date--open');
-    }else {
-      $('.category__date').removeClass('date--open');
-    }
-  });
-});  
-// $(".menu__list").each(function(){ 
-//   $(this).on("click" ,function (event) {
-//     event.preventDefault();
-//     $('.category__date').toggleClass('date--open');
-//   });
-// });  
+  }); 
+
+
+
+$(".menu__list").each(function() {
+  $(".sub-menu--item").on("click",function(event){
+    $(".category__menu").addClass("active-date"); 
+    $('.category__date').addClass('active');  
+  }); 
+  $(".close").on("click",function(event){
+    $(".category__date").removeClass("active");  
+    $(".category__menu").removeClass("active-date");
+  }); 
+});
+
+
   
-  // open category details
-
-
