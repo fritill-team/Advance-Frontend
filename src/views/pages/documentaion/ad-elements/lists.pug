@@ -7,43 +7,43 @@ block sidebar
 block content
 	.container
 		.row
-			//- .ad-card--with-title .ad-card--top-category
+			//- .card--with-title .card--top-category
 			.col-lg-12
 				h2.title-2.my-3 Card with title with  category
 				p.text-2.mb-1
 					| we use
-					code .ad-card--with-title .ad-card--top-category
+					code .card--with-title .card--top-category
 			.col-lg-3
-				.ad-card.ad-card--with-title.ad-card--top-category
-					.ad-card__title.mb-2
+				.card.card--with-title.card--top-category
+					.card__title.mb-2
 						h5.title-h6 Top Categories
-					.ad-card__content
-						.ad-card__body
-							.ad-card__content--details
-								ul.ad-card__list
-									li.ad-card__list-item
-										a.ad-card__item-link(href="#")
+					.card__content
+						.card__body
+							.card__content--details
+								ul.card__list
+									li.card__list-item
+										a.card__item-link(href="#")
 											i.uil.uil-arrow
 											| Development
-									li.ad-card__list-item
-										a.ad-card__item-link(href="#")
+									li.card__list-item
+										a.card__item-link(href="#")
 											i.uil.uil-graph-bar
 											| Business
-									li.ad-card__list-item
-										a.ad-card__item-link(href="#")
+									li.card__list-item
+										a.card__item-link(href="#")
 											i.uil.uil-graph-bar
 											| IT and Software
-									li.ad-card__list-item
-										a.ad-card__item-link(href="#")
+									li.card__list-item
+										a.card__item-link(href="#")
 											i.uil-ruler
 											| Design
 
 		.row 
 			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+				.card.condensed
+					.card__content
 						.list 
-							.list-item.list-item--border-bottom
+							.list-item.list-item--space
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
@@ -54,7 +54,7 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--border-bottom
+							.list-item.list-item--space
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
@@ -65,7 +65,7 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--border-bottom
+							.list-item.list-item--space
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
@@ -76,7 +76,7 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--border-bottom
+							.list-item
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
@@ -89,13 +89,13 @@ block content
 											label(for="remember2")
 
 			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+				.card.condensed
+					.card__content
 						.list 
-							.list-item.list-item--two-lines.list-item--border-bottom
+							.list-item.list-item--space
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-1
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -104,10 +104,10 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--two-lines.list-item--border-bottom 
+							.list-item.list-item--space 
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-1
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -116,10 +116,10 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--two-lines.list-item--border-bottom 
+							.list-item.list-item--space 
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-1
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -128,10 +128,10 @@ block content
 											input.hidden#remember2(
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
-							.list-item.list-item--two-lines.list-item--border-bottom
+							.list-item
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-1
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -141,13 +141,13 @@ block content
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
 			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+				.card.condensed
+					.card__content
 						.list 
 							.list-item.list-item--border-bottom
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -160,7 +160,7 @@ block content
 							.list-item.list-item--border-bottom
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -173,7 +173,7 @@ block content
 							.list-item.list-item--border-bottom
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -186,7 +186,7 @@ block content
 							.list-item.list-item--border-bottom
 								.list-item__avatar
 									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -198,13 +198,13 @@ block content
 											label(for="remember2")
 
 			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+				.card.condensed
+					.card__content
 						.list 
 							.list-item.list-item--border-bottom
-								.list-item__icon 
+								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -215,9 +215,9 @@ block content
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
 							.list-item.list-item--border-bottom
-								.list-item__icon 
+								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -228,9 +228,9 @@ block content
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
 							.list-item.list-item--border-bottom
-								.list-item__icon 
+								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -241,9 +241,9 @@ block content
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
 							.list-item.list-item--border-bottom
-								.list-item__icon
+								.list-item__icon.mb-1
 									i.fas.fa-user
-								.list-item__content
+								.list-item__content.pt-2
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -254,16 +254,10 @@ block content
 												type="checkbox" tabindex="0" )
 											label(for="remember2")
 			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+				.card.condensed
+					.card__content
 						.list 
 							.list-item.list-item--border-bottom
-								a.list-item__link
-									.link__avatar(href="#")
-										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-									.link__content
-										a(href="#" class="text-2 bold") Jose Portilla
-							.list-item.list-item--border-bottom
 								a.list-item__link(href="#")
 									.list-item__avatar
 										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
@@ -281,9 +275,15 @@ block content
 										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
 									.list-item__content
 										a(href="#" class="text-2 bold") Jose Portilla
-			.col-lg-4 
-				.ad-card.ad-card--centered
-					.ad-card__content
+							.list-item.list-item--border-bottom
+								a.list-item__link(href="#")
+									.list-item__avatar
+										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
+									.list-item__content
+										a(href="#" class="text-2 bold") Jose Portilla
+			.col-lg-3
+				.card-list
+					.card__content
 						.list.list--menu.list--condensed 
 							.list-item.list-item--hover.list-item--condensed
 								.list-item__icon 
@@ -300,7 +300,7 @@ block content
 									i.fas.fa-link
 								.list-item__content
 									a.content__link(href="#" class="text-2") Lorem ipsum
-							.list-item.list-item--border-bottom.list-item--hover.list-item--condensed
+							.list-item.list-item--space.list-item--hover.list-item--condensed
 								.list-item__icon 
 									i.fas.fa-print
 								.list-item__content
@@ -310,7 +310,7 @@ block content
 									i.fas.fa-user-plus
 								.list-item__content
 									a.content__link(href="#" class="text-2") Lorem ipsum
-							.list-item.list-item--border-bottom.list-item--hover.list-item--condensed
+							.list-item.list-item--space.list-item--hover.list-item--condensed
 								.list-item__icon
 									i.fas.fa-code
 								.list-item__content

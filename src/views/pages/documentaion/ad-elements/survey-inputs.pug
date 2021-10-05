@@ -86,8 +86,9 @@ block content
                 .form-question__wrap
                   .wrap__form-group
                     input.form-group__input(id="radio-21" value="radio-1" type="radio" name="survey")
-                    label.form-group__label(for="radio-21") lorem
-                      img(src="../../assets/images/get_img.jpg")
+                    label.form-group__label(for="radio-21") 
+                      img(src="../../assets/images/get_img.jpg") 
+                      |lorem
                   .wrap__form-group
                     input.form-group__input(id="radio-22" value="radio-2" type="radio" name="survey")
                     label.form-group__label(for="radio-22") lorem
@@ -96,6 +97,59 @@ block content
                     input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
                     label.form-group__label(for="radio-3") lorem
                       img(src="../../assets/images/get_img.jpg")
+                  .wrap__form-group
+                    input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-3") 
+                      img(src="../../assets/images/get_img.jpg")
+                      |lorem
+    .row 
+      .col-lg-12 
+        .card 
+          .card__title 
+            h3 radio button 
+          .card__content 
+            .question.question--no-line
+              .question__item.question__item--cover
+                .image-wrapper
+                  img(src="../../assets/images/get_img.jpg", alt="")
+                .field-wrapper.field-wrapper--size
+                  .check-field-group.check-field-group--horizontal
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-4" name="checkname")
+                      label(for="checkbox-4") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-5" name="checkname")
+                      label(for="checkbox-5") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-6" name="checkname")
+                      label(for="checkbox-6") Lorem ipsum dolor.
+                  .messages
+                    ul 
+                      li Please provide a valid city. 
+    .row 
+      .col-lg-12 
+        .card 
+          .card__title 
+            h3 radio button 
+          .card__content 
+            .question.question--no-line
+              .question__item.question__item--cover
+                .image-wrapper
+                  img(src="../../assets/images/get_img.jpg", alt="")
+                .field-wrapper.field-wrapper--size
+                  .check-field-group.check-field-group--horizontal
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-4" name="radioName")
+                      label(for="radio-4") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-5" name="radioName")
+                      label(for="radio-5") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-6" name="radioName")
+                      label(for="radio-6") Lorem ipsum dolor.
+                  .messages
+                    ul 
+                      li Please provide a valid city.                   
     .row
       .col-lg-12
         .card
@@ -336,6 +390,9 @@ block content
                 .field-wrapper
                   .field-wrapper__content
                     textarea( id="id_course_description" class="textarea" rows='5' name='description' placeholder='Insert your course description')
+                  ul.messages
+                    li
+                      | Please provide a valid city.
     .row
       .col-lg-12
         .card
@@ -382,14 +439,5 @@ block content
       .col-lg-12
         .card
           .card__content     
-            .circular
-              .inner
-              .number 100%
-              .circle
-                .bar left
-                  .progress
-                .bar right
-                  .progress
-
 
 

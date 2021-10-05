@@ -1,15 +1,15 @@
 .playlist{
   &.playlist--size{
-    // display: flex;
-    // width: 30%;
+    display: flex;
+    width: 25%;
     // position: fixed;
     // z-index: 5px;
-    // overflow-y: hidden;
+    overflow-y: hidden;
     @media (min-width: 0px) and (max-width: 992px) {
       position: fixed;
+      z-index: 5px;
       top: 60px;
-      width:35% ;
-      left: -100px;
+      width:25% ;
       transition: all 0.3s ease-in;
       bottom: 0;
     }
@@ -17,6 +17,12 @@
   &.playlist--survey{
     padding: 10px 15px;
     color: $primary;
+    .list{
+      padding: 5px;
+    }
+  }
+  .list{
+    padding: 5px;
   }
   .playlist__header-section{
     padding: 10px 15px;
@@ -60,6 +66,9 @@
     &.list-item--border-bottom {
       border-bottom: 1px solid rgba($darkBlack, 0.1);
       padding: 25px;
+      i{
+        color: $primary;
+      }
     }
   }
 }
@@ -105,6 +114,7 @@ span#percentage {
 }
 
 // survey-content
+
 .content{
   display: flex;
   flex-wrap: wrap;
@@ -113,6 +123,15 @@ span#percentage {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  width: 75%;
+  @media (min-width: 0px) and (max-width: 992px){
+    position: fixed;
+    z-index: 4px;
+    top: 0;
+    width:75% ;
+    transition: all 0.3s ease-in;
+    bottom: 0;
+  }
 }
 .form-question{
   height: 80%;
@@ -233,6 +252,9 @@ span#percentage {
   }
 }
 .field-wrapper{
+  &.field-wrapper--size{
+    width: 95%;
+  }
   .short{
     padding: 4px 0px;
   }
@@ -257,75 +279,6 @@ span#percentage {
     }
   }
 }
-.circular{
-  height:100px;
-  width: 100px;
-  position: relative;
-  top: 0;
-  transform:scale(2);
-  margin-top: 40px;
-}
-.circular .inner{
-  position: absolute;
-  z-index: 6;
-  top: 50%;
-  left: 50%;
-  height: 80px;
-  width: 80px;
-  margin: -40px 0 0 -40px;
-  background: #dde6f0;
-  border-radius: 100%;
- 
-}
-.circular .number{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  z-index:10;
-  font-size:18px;
-  font-weight:500;
-  color:$accent;
-}
-.circular .bar{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: $primary;
-  border-radius: 100%;
-  clip: rect(0px, 100px, 100px, 50px);
-}
-.circle .bar .progress{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  clip: rect(0px, 50px, 100px, 0px);
-  background: #4158d0;
-}
-.circle .left .progress{
-  z-index:1;
-  animation: left 4s linear both;
-}
-@keyframes left{
-  100%{
-    transform: rotate(180deg);
-  }
-}
-.circle .right {
-  transform: rotate(180deg);
-  z-index:3;
- 
-}
-.circle .right .progress{
-  animation: right 4s linear both;
-  animation-delay:4s;
-}
-@keyframes right{
-  100%{
-    transform: rotate(180deg);
-  }
-}
 .night-mode{
   .playlist{
     .playlist--survey{
@@ -338,6 +291,11 @@ span#percentage {
         color: $white;
       }
       .content__paragraph{
+        color: $white;
+      }
+    }
+    &.list-item--border-bottom {
+      i{
         color: $white;
       }
     }
