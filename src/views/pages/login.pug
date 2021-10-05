@@ -15,7 +15,7 @@ block content
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
-							class="field-wrapper__input field-wrapper--icon"
+							class="field field--with-icon"
 							type='email'
 							placeholder='Email Address'
 							name='email address'
@@ -23,14 +23,14 @@ block content
 							value=''
 							)
 						i.far.fa-envelope.field-wrapper__icon
-					ul.messages
+					ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper
 					label.field-wrapper__label Course Title
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
-							class="field-wrapper__input field-wrapper--icon"
+							class="field field--with-icon"
 							type='Password'
 							placeholder='Password'
 							name='Password'
@@ -38,18 +38,16 @@ block content
 							required
 							)
 						i.fas.fa-key.field-wrapper__icon
-					ul.messages
+					ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper
-					.ui.checkbox.icon
-						input(
-							id="remember"
-							class="hidden"
-							type="checkbox"	
-							tabindex="0" )
-						label(for="remember") Remember Me
+					div
+						input(class="field" type="checkbox" id="checkbox-1" name="checkname")
+						label(for="checkbox-1") Lorem ipsum dolor.
+				ul.field-wrapper__messages
+					li Please provide a valid city.
 				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--rounded btn--xl" type="submit")  Sign Up
+					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
 		#tab2.tab-panel
 			form
 				.field-wrapper
@@ -58,11 +56,11 @@ block content
 					.field-wrapper__content.w-100
 						input(
 							id="phone"
-							class="field-wrapper__input"
+							class="field field--with-icon"
 							type="tel"
 							name="phone"
 							)
-					ul.messages
+					ul.field-wrapper__messages
 						li Invalid phone number. 
 				.field-wrapper
 					label.field-wrapper__label
@@ -70,7 +68,7 @@ block content
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
-							class ="field-wrapper__input field-wrapper--icon"
+							class ="field field--with-icon"
 							type='Password'
 							placeholder='Password'
 							name='Password'
@@ -78,18 +76,16 @@ block content
 							required
 							)
 						i.fas.fa-key.field-wrapper__icon
-					ul.messages
+					ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper
-					.ui.checkbox.icon
-						input(
-							class="hidden"
-							id="remember2"
-							type="checkbox"
-							tabindex="0" )
-						label(for="remember2") Remember Me
+					div
+						input(class="field" type="checkbox" id="checkbox-2" name="checkname")
+						label(for="checkbox-2") Lorem ipsum dolor.
+				ul.field-wrapper__messages
+					li Remember Me
 				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--rounded btn--xl mr-0" type="submit")  Sign Up
+					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
 
 	p.title-2
 		a(href="forget.html" class="text-2")  Forgot Password
