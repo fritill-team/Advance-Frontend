@@ -522,3 +522,10 @@ $('.course-list__item').each(function(){
     // $(this).next().css({"display": "none"})
   })
 })
+
+$( function() {
+  $( "#sortable" ).sortable({
+    handle: ".handle"
+  });
+  $( "#sortable" ).disableSelection();
+} );

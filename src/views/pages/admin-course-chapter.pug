@@ -47,7 +47,7 @@ block content
 						.col-lg-4
 							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi culpa tenetur autem qui adipisci cumque. Similique at a rem? Excepturi necessitatibus laudantium doloribus et eaque corporis. Voluptatibus, nobis natus?
 			.col-lg-12
-				.card.card--data
+				.card.card--data.flex-column
 					.tabs
 						a(class="tab tab--active" href='#nav-content') Content
 						a(class="tab" href="#nav-details") Details
@@ -64,337 +64,329 @@ block content
 						#nav-content.tab-panel.tab-panel--active
 
 							//- h2 Transcript
-							div(class="chapter course-content mt-0" data-data='{"courseName":"course name","descreiption":"Description","noOfLectures":"402 leactures","totalDuration":"47:06:29","chapter":[{"id":1,"title":"chapter title","actions":{"state":false,"add":"#","delete":"#","update":"#","move":"#"},"content":[{"type":"video","id":1,"title":"video title","duration":"22:06","description":"video description","actions":{"edit":"#","delete":"#","translate":"#","moveToChapter":"#"}},{"type":"exam","id":1,"title":"exam title","grad":"70%","description":"exam description"},{"type":"artical","id":1,"title":"artical title","description":"artical description"}]}]}')
-								//- h3.course-content__title Chapter content
-								//- .course-content__details
-									ul.details__list
-										li.list__list-item
-											span.list--expand-all Expand all
-										li.list__list-item
-											span.list--list-content-number  402 lectures
-										li.list__list-item
-											span.list--time-course 47:06:29
-								#accordion.course-content__course-list
-									#test
-										div(class="chapter course-list__item")
-										//- start list 1
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction fgdfg to this Course
-												.header__header-details
-													span.header-details__num-item 8 lectures
-													span.header-details__length-item 22:08
-											.course-list__list-content#content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-										//- start list 2
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction  to Front End Development
-												.header__header-details
-													span.header-details__num-item 6 lectures
-													span.header-details__length-item 27:261
-											.course-list__list-content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-										//- start list 3
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction  to Front End Development
-												.header__header-details
-													span.header-details__num-item 6 lectures
-													span.header-details__length-item 27:262
-											.course-list__list-content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-										//- list 4
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction  to Front End Development
-												.header__header-details
-													span.header-details__num-item 6 lectures
-													span.header-details__length-item 27:263
-											.course-list__list-content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-										//- list 5
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction  to Front End Development
-												.header__header-details
-													span.header-details__num-item 6 lectures
-													span.header-details__length-item 27:264
-											.course-list__list-content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-										//- list 6
-										div.course-list__item
-											a.course-list__header(href='javascript:void(0)')
-												.header__header-title
-													span.header-title__title
-														i.uil.uil-presentation-play.title__icon
-														span.title__title-text Introduction  to Front End Development
-												.header__header-details
-													span.header-details__num-item 6 lectures
-													span.header-details__length-item 27:265
-											.course-list__list-content
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Unit Objectives
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 01.40
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-file.content-name__icon
-														.content-name__top-title
-															.top-title__title A Note On Asking For Help
-													.content-item__details
-														span.details__content-summary 00:12
-												.list-content__content-item
-													.content-item__content-name
-														i.uil.uil-play-circle.content-name__icon
-														.content-name__top-title
-															.top-title__title Why This Course?
-													.content-item__details
-														a.details--preview-text(href='#') Preview
-														span.details__content-summary 07:48
-										//-End-List
+							div(class="chapter course-content mt-0" data-data='{"courseName":"course name","descreiption":"Description","noOfLectures":"402 leactures","totalDuration":"47:06:29","chapter":[{"id":1,"title":"chapter title","actions":{"edit":"#","delete":"#","update":"#","move":"#"},"content":[{"type":"video","id":1,"title":"video title","duration":"22:06","description":"video description","actions":{"edit":"#","delete":"#","translate":"#","moveToChapter":"#"}},{"type":"exam","id":1,"title":"exam title","grad":"70%","description":"exam description"},{"type":"artical","id":1,"title":"artical title","description":"artical description"}]},{"id":1,"title":"chapter title","actions":{"edit":"#","delete":"#","update":"#","move":"#"},"content":[{"type":"video","id":1,"title":"video title","duration":"22:06","description":"video description","actions":{"edit":"#","delete":"#","translate":"#","moveToChapter":"#"}},{"type":"exam","id":1,"title":"exam title","grad":"70%","description":"exam description"},{"type":"artical","id":1,"title":"artical title","description":"artical description"}]}]}')
+							
+							//- #accordion.course-content__course-list
+								#test
+									div(class="chapter course-list__item")
+									//- start list 1
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction fgdfg to this Course
+											.header__header-details
+												span.header-details__num-item 8 lectures
+												span.header-details__length-item 22:08
+										.course-list__list-content#content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+									//- start list 2
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction  to Front End Development
+											.header__header-details
+												span.header-details__num-item 6 lectures
+												span.header-details__length-item 27:261
+										.course-list__list-content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+									//- start list 3
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction  to Front End Development
+											.header__header-details
+												span.header-details__num-item 6 lectures
+												span.header-details__length-item 27:262
+										.course-list__list-content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+									//- list 4
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction  to Front End Development
+											.header__header-details
+												span.header-details__num-item 6 lectures
+												span.header-details__length-item 27:263
+										.course-list__list-content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+									//- list 5
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction  to Front End Development
+											.header__header-details
+												span.header-details__num-item 6 lectures
+												span.header-details__length-item 27:264
+										.course-list__list-content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+									//- list 6
+									div.course-list__item
+										a.course-list__header(href='javascript:void(0)')
+											.header__header-title
+												span.header-title__title
+													i.uil.uil-presentation-play.title__icon
+													span.title__title-text Introduction  to Front End Development
+											.header__header-details
+												span.header-details__num-item 6 lectures
+												span.header-details__length-item 27:265
+										.course-list__list-content
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Unit Objectives
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 01.40
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-file.content-name__icon
+													.content-name__top-title
+														.top-title__title A Note On Asking For Help
+												.content-item__details
+													span.details__content-summary 00:12
+											.list-content__content-item
+												.content-item__content-name
+													i.uil.uil-play-circle.content-name__icon
+													.content-name__top-title
+														.top-title__title Why This Course?
+												.content-item__details
+													a.details--preview-text(href='#') Preview
+													span.details__content-summary 07:48
+									//-End-List
 
 						#nav-details.tab-panel
 							.tabs.tabs--nested
