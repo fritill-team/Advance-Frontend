@@ -515,8 +515,10 @@ then close all select boxes:*/
 
 
 
-$('.course-list__header').each(function(){
+$('.course-list__item').each(function(){
   $(this).on('click', function(){
-    // $(this).sibling()
+    console.log('text');
+    $(this).children('course-list__list-content').css({"display": "none"})
+    // $(this).next().css({"display": "none"})
   })
 })
