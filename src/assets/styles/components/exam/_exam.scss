@@ -55,7 +55,7 @@
     color: $primary;
   }
 
-  &.question-dragging {
+  &.question--dragging {
     min-height: 200px;
     // padding-left:45px ;
     .dragging-placeholder {
