@@ -16,21 +16,35 @@ block content
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
                   input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                ul.messages
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
+              .field-wrapper.field-wrapper--sm
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
+              .field-wrapper.field-wrapper--lg
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
               .field-wrapper
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
                   input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.messages
+                ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
               .field-wrapper
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
-                  input(class="field-wrapper__input field-wrapper__input-underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.messages
+                  input(class="field field--underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
           .card.my-4
@@ -43,9 +57,9 @@ block content
                     label.field-wrapper__label File*
                     .input-group.field-field-group
                       .file-input
-                        input(id="inputGroupFile06" class="custom-file-input" type='file')
+                        input(id="inputGroupFile06" class="field" type='file')
                         label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
-                    ul.messages
+                    ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
                 .col-lg-6.col-md-12.col-sm-12
@@ -53,9 +67,9 @@ block content
                     label.field-wrapper__label File*
                     .input-group.field-field-group
                       .file-input
-                        input(id="inputGroupFile06" class="custom-file-input" type='file')
+                        input(id="inputGroupFile06" class="field" type='file')
                         label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
-                    ul.messages
+                    ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
         // input checkbox
@@ -67,7 +81,8 @@ block content
             .card__content
               .row
                 .col-lg-6.col-md-6.col-sm-6
-                  .field-wrapper
+                  .field-wrapper.field-wrapper--error
+                    label.field-wrapper__label checkbox *
                     .check-field-group.check-field-group--horizontal
                       div
                         input(class="field" type="checkbox" id="checkbox-1" name="checkname")
@@ -78,10 +93,11 @@ block content
                       div
                         input(class="field" type="checkbox" id="checkbox-3" name="checkname")
                         label(for="checkbox-3") Lorem ipsum dolor.
-                    ul.messages
+                    ul.field-wrapper__messages
                       li Please provide a valid city.
                 .col-lg-6.col-md-6.col-sm-6
                   .field-wrapper
+                    label.field-wrapper__label checkbox *
                     .check-field-group
                       div
                         input(class="field" type="checkbox" id="checkbox-4" name="checkname")
@@ -92,8 +108,15 @@ block content
                       div
                         input(class="field" type="checkbox" id="checkbox-6" name="checkname")
                         label(for="checkbox-6") Lorem ipsum dolor.
-                    ul.messages
+                    ul.field-wrapper__messages
                       li Please provide a valid city.
+                  .field-wrapper
+                    div
+                      input(class="field" type="checkbox" id="checkbox-42" name="checkname")
+                      label(for="checkbox-42")
+                    div
+                      input(class="field" type="checkbox" id="checkbox-433" name="checkname")
+                      label(for="checkbox-433")
       .row
         .col-12
           .card.my-4
@@ -115,7 +138,7 @@ block content
                       div
                         input(class="field" type="radio" id="radio-3" name="radioName")
                         label(for="radio-3") Lorem ipsum dolor.
-                    ul.messages
+                    ul.field-wrapper__messages
                       li Please provide a valid city.
                 .col-lg-6.col-md-6.col-sm-6
                   .field-wrapper
@@ -130,8 +153,15 @@ block content
                       div
                         input(class="field" type="radio" id="radio-6" name="radioName")
                         label(for="radio-6") Lorem ipsum dolor.
-                    ul.messages
+                    ul.field-wrapper__messages
                       li Please provide a valid city.
+                  .field-wrapper 
+                    div
+                      input(class="field" type="radio" id="radio-75" name="radioName")
+                      label(for="radio-75")
+                    div
+                      input(class="field" type="radio" id="radio-577" name="radioName")
+                      label(for="radio-577") 
                       //check-field out wrapper
       .row
         .col-12
@@ -145,22 +175,36 @@ block content
                   .field-wrapper
                     label.field-wrapper__label Start Select :
                     .field-wrapper__content
-                      select.field-wrapper__input
+                      select.field
                         option(value='') Select option
                         option(value='1') option 1
                         option(value='2') option 2
                         option(value='3') option 3
                         option(value='4') option 4
                         option(value='5') option 5
-                    ul.messages
+                    ul.field-wrapper__messages
+                      li
+                        | Please provide a valid city.
+                .col-md-6.col-sm-6
+                  .field-wrapper.field-wrapper--error
+                    label.field-wrapper__label Start Select :
+                    .field-wrapper__content
+                      select.field
+                        option(value='') Select option
+                        option(value='1') option 1
+                        option(value='2') option 2
+                        option(value='3') option 3
+                        option(value='4') option 4
+                        option(value='5') option 5
+                    ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
                 .col-md-6.col-sm-6
                   .field-wrapper
                     label.field-wrapper__label Course Title*
                     .field-wrapper__content
-                      input(class="field-wrapper__input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                    ul.messages
+                      input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                    ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
       .row
@@ -174,7 +218,7 @@ block content
                   .field-wrapper
                     label.field-wrapper__label Course Radio Button*
                     .field-wrapper__content
-                      textarea( id="id_course_description" class="textarea" rows='5' name='description' placeholder='Insert your course description')
-                    ul.messages
+                      textarea( id="id_course_description" class="textarea field" rows='5' name='description' placeholder='Insert your course description')
+                    ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
