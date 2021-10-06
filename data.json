@@ -1,88 +1,156 @@
-
 {
-  "courseName": "course name",
-  "descreiption": "Description",
-  "noOfLectures": "402 leactures",
-  "totalDuration": "47:06:29",
-  "chapter": [
+  "courses": [
     {
-      "id": 1,
-      "title": "chapter title",
-      "actions": 
-      {
-        "edit": "#",
-        "delete": "#",
-        "update": "#",
-        "move": "#"
-      },
-      "content":[
+      "course": "course name",
+      "descreiption": "Description",
+      "noOfLectures": "402 leactures",
+      "totalDuration": "47:06:29",
+      "chapter": [
         {
-          "type": "video",
           "id": 1,
-          "title": "video title",
-          "duration": "22:06",
-          "description": "video description",
-          "actions": {
+          "title": "chapter title",
+          "actions": 
+          {
             "edit": "#",
             "delete": "#",
-            "translate": "#",
-            "moveToChapter": "#"
-          }
+            "update": "#",
+            "move": "#"
+          },
+          "content":[
+            {
+              "type": "video",
+              "id": 1,
+              "title": "video title",
+              "duration": "22:06",
+              "description": "video description",
+              "actions": {
+                "edit": "#",
+                "delete": "#",
+                "translate": "#",
+                "moveToChapter": "#"
+              }
+            },
+            {
+              "type": "exam",
+              "id": 1,
+              "title": "exam title",
+              "grad": "70%",
+              "description": "exam description"
+            },
+            {
+              "type": "artical",
+              "id": 1,
+              "title": "artical title",
+              "description": "artical description"
+            }
+          ]
         },
         {
-          "type": "exam",
           "id": 1,
-          "title": "exam title",
-          "grad": "70%",
-          "description": "exam description"
+          "title": "chapter title",
+          "actions": 
+          {
+            "edit": "#",
+            "delete": "#",
+            "update": "#",
+            "move": "#"
+          },
+          "content":[
+            {
+              "type": "video",
+              "id": 1,
+              "title": "video title",
+              "duration": "22:06",
+              "description": "video description",
+              "actions": {
+                "edit": "#",
+                "delete": "#",
+                "translate": "#",
+                "moveToChapter": "#"
+              }
+            },
+            {
+              "type": "exam",
+              "id": 1,
+              "title": "exam title",
+              "grad": "70%",
+              "description": "exam description"
+            },
+            {
+              "type": "artical",
+              "id": 1,
+              "title": "artical title",
+              "description": "artical description"
+            }
+          ]
+        }
+      ]
+    }    
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "collectionId": 1,
+      "title": "recommendation title",
+      "description": "description",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "primary",
+          "link": "#"
         },
         {
-          "type": "artical",
-          "id": 1,
-          "title": "artical title",
-          "description": "artical description"
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "primary",
+          "link": "#"
         }
       ]
     },
     {
-      "id": 1,
-      "title": "chapter title",
-      "actions": 
-      {
-        "edit": "#",
-        "delete": "#",
-        "update": "#",
-        "move": "#"
-      },
-      "content":[
+      "id": 2,
+      "collectionId": 1,
+      "title": "recommendation title",
+      "description": "description",
+      "actions": [
         {
-          "type": "video",
-          "id": 1,
-          "title": "video title",
-          "duration": "22:06",
-          "description": "video description",
-          "actions": {
-            "edit": "#",
-            "delete": "#",
-            "translate": "#",
-            "moveToChapter": "#"
-          }
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "primary",
+          "link": "#"
         },
         {
-          "type": "exam",
-          "id": 1,
-          "title": "exam title",
-          "grad": "70%",
-          "description": "exam description"
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "primary",
+          "link": "#"
         },
         {
-          "type": "artical",
-          "id": 1,
-          "title": "artical title",
-          "description": "artical description"
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "primary",
+          "link": "#"
         }
       ]
     }
   ]
 }
-

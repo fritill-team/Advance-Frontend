@@ -17,12 +17,11 @@ $('.tabs__header .tabs__tab a').click(function(e){
 */
 
 $('.tabs').each(function (tabs) {
-  console.log(tabs)
   tabs = $(tabs)
   let panels = tabs.closest('.tab-panels')
 
   $('.tab').on('click', function(e) {
-    e.preventDefault()
+    // e.preventDefault()
     let tab = $(this),
       target = $(tab.attr('href'))
 
