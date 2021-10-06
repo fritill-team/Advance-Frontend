@@ -43,6 +43,9 @@ body {
   background-color: darken($primary,1);
   z-index: -1;
   opacity: 0;
+  &.overlay--modal{
+    z-index: 7;
+  }
 }
 
 .open-side-nav {

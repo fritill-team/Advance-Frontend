@@ -24,7 +24,19 @@ html(lang='en' dir="ltr")
 
 	body.sidebar-with-icon
 		.wrapper
-			.wrapper__overlay.toggle
+			.wrapper__overlay.toggle.overlay--modal
+			.dialog
+				.card
+					.card__header
+						p.subtitle-1 This is a card title
+						.card__tools
+							button.btn.btn--primary.btn--icon
+								i.fa.fa-check
+					.card__content
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
+							| distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
+		
 			//- Menu
 			include ../components/header.pug
 

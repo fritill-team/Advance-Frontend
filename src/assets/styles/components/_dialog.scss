@@ -1,0 +1,14 @@
+.dialog{
+  height: 100px;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  top: 100px;
+  left: 100px;
+  transform: translate(-50%, -50%); 
+}
+.open-overlay--full{
+  .dialog{
+    display: block;
+  }
+}
