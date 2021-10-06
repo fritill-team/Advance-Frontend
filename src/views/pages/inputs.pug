@@ -19,6 +19,20 @@ block content
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
+              .field-wrapper.field-wrapper--sm
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
+              .field-wrapper.field-wrapper--lg
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
               .field-wrapper
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
@@ -68,6 +82,7 @@ block content
               .row
                 .col-lg-6.col-md-6.col-sm-6
                   .field-wrapper.field-wrapper--error
+                    label.field-wrapper__label checkbox *
                     .check-field-group.check-field-group--horizontal
                       div
                         input(class="field" type="checkbox" id="checkbox-1" name="checkname")
@@ -82,6 +97,7 @@ block content
                       li Please provide a valid city.
                 .col-lg-6.col-md-6.col-sm-6
                   .field-wrapper
+                    label.field-wrapper__label checkbox *
                     .check-field-group
                       div
                         input(class="field" type="checkbox" id="checkbox-4" name="checkname")
@@ -143,6 +159,20 @@ block content
                 // input__select
                 .col-md-6.col-sm-6
                   .field-wrapper
+                    label.field-wrapper__label Start Select :
+                    .field-wrapper__content
+                      select.field
+                        option(value='') Select option
+                        option(value='1') option 1
+                        option(value='2') option 2
+                        option(value='3') option 3
+                        option(value='4') option 4
+                        option(value='5') option 5
+                    ul.field-wrapper__messages
+                      li
+                        | Please provide a valid city.
+                .col-md-6.col-sm-6
+                  .field-wrapper.field-wrapper--error
                     label.field-wrapper__label Start Select :
                     .field-wrapper__content
                       select.field
