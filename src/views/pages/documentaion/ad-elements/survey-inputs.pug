@@ -95,13 +95,24 @@ block content
                       img(src="../../assets/images/get_img.jpg")
                   .wrap__form-group
                     input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
-                    label.form-group__label(for="radio-3") lorem
+                    label.form-group__label(for="radio-23") lorem
                       img(src="../../assets/images/get_img.jpg")
+                .form-question__wrap
                   .wrap__form-group
-                    input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
-                    label.form-group__label(for="radio-3") 
+                    input.form-group__input(id="radio-24" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-24") 
                       img(src="../../assets/images/get_img.jpg")
-                      |lorem
+                    label.label-style lorem
+                  .wrap__form-group
+                    input.form-group__input(id="radio-25" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-25") 
+                      img(src="../../assets/images/get_img.jpg")
+                    label.label-style lorem
+                  .wrap__form-group
+                    input.form-group__input(id="radio-26" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-26") 
+                      img(src="../../assets/images/get_img.jpg")
+                    label.label-style lorem
     .row 
       .col-lg-12 
         .card 
@@ -370,15 +381,6 @@ block content
                       div
                         input(class="field-wrapper__input" type="radio" id="radio-20" name="radioName")
                         label(for="radio-20")
-    //- .row
-    //-   .col-lg-12
-    //-     .card
-    //-       .card__title
-    //-         h3 textarea 
-    //-       .card__content      
-    //-         div.form-control
-    //-           label(for="comment") Any comments or suggestions
-    //-           textarea(name="comment" id="comment" placeholder="Enter your comment here" rows="6" cols="50")
     .row
       .col-12
         .card.my-4
@@ -430,7 +432,7 @@ block content
               .field-wrapper
                 label.field-wrapper__label.short long Answer*
                 .field-wrapper__content
-                  textarea( id="long-answer" class="field-wrapper__input-answer" name='description' placeholder='long answer text')
+                  textarea( id="long-answer" class="field-wrapper__input-answer" name='description' type='text' placeholder='long answer text' value='' maxlength='60')
                   //- input(class="field-wrapper__input-answer" type='text' placeholder='long answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
                 ul.messages
                   li
