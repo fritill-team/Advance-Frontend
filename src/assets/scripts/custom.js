@@ -513,3 +513,19 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 
+
+
+$('.course-list__item').each(function(){
+  $(this).on('click', function(){
+    console.log('text');
+    $(this).children('course-list__list-content').css({"display": "none"})
+    // $(this).next().css({"display": "none"})
+  })
+})
+
+$( function() {
+  $( "#sortable" ).sortable({
+    handle: ".handle"
+  });
+  $( "#sortable" ).disableSelection();
+} );

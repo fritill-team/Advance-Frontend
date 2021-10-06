@@ -1,0 +1,88 @@
+
+{
+  "courseName": "course name",
+  "descreiption": "Description",
+  "noOfLectures": "402 leactures",
+  "totalDuration": "47:06:29",
+  "chapter": [
+    {
+      "id": 1,
+      "title": "chapter title",
+      "actions": 
+      {
+        "edit": "#",
+        "delete": "#",
+        "update": "#",
+        "move": "#"
+      },
+      "content":[
+        {
+          "type": "video",
+          "id": 1,
+          "title": "video title",
+          "duration": "22:06",
+          "description": "video description",
+          "actions": {
+            "edit": "#",
+            "delete": "#",
+            "translate": "#",
+            "moveToChapter": "#"
+          }
+        },
+        {
+          "type": "exam",
+          "id": 1,
+          "title": "exam title",
+          "grad": "70%",
+          "description": "exam description"
+        },
+        {
+          "type": "artical",
+          "id": 1,
+          "title": "artical title",
+          "description": "artical description"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "chapter title",
+      "actions": 
+      {
+        "edit": "#",
+        "delete": "#",
+        "update": "#",
+        "move": "#"
+      },
+      "content":[
+        {
+          "type": "video",
+          "id": 1,
+          "title": "video title",
+          "duration": "22:06",
+          "description": "video description",
+          "actions": {
+            "edit": "#",
+            "delete": "#",
+            "translate": "#",
+            "moveToChapter": "#"
+          }
+        },
+        {
+          "type": "exam",
+          "id": 1,
+          "title": "exam title",
+          "grad": "70%",
+          "description": "exam description"
+        },
+        {
+          "type": "artical",
+          "id": 1,
+          "title": "artical title",
+          "description": "artical description"
+        }
+      ]
+    }
+  ]
+}
+
