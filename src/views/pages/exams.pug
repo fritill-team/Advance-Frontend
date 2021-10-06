@@ -9,7 +9,7 @@ block content
 		.container-fluid
 			.row
 				.col-lg-6
-					.card.question.question-dragabl
+					.card.question.question--dragabl
 						.card--drag-vertical
 							//- i.fas.fa-braille
 							i.fas.fa-grip-vertical
@@ -83,8 +83,7 @@ block content
 											option(value='Category2') Category2
 									ul.messages
 										li.gray
-											| hint message for question.
-
+											| hint message for question. 
 						.card__footer
 							div lorem
 							.card__footer-actions
@@ -101,7 +100,8 @@ block content
 							h3.title-h3.mt-0.mb-1 Question title
 
 				.col-lg-6
-					.card.question.question-dragabl
+					include ../components/toolbar.pug
+					.card.question.question--dragabl
 						.card--drag-vertical
 							//- i.fas.fa-braille
 							i.fas.fa-grip-vertical

@@ -4,14 +4,12 @@ block title
 block button-collapsed
 	include ../components/general-component/toggle-menu.pug
 block content
-
+	
+	include ../components/bread-crumbs.pug 
 	.container-fluid
-		.row
-			.col-lg-12
-				.d-flex.justify-content-between.align-items-center
-					h3.bold.title-h3 Course name is here
+		.row 
+			.col-lg-12 details
 
-			//- .col-lg-12
 				.card.card--data
 					.card__header
 						h3(class="bold title-h6 ") General Card

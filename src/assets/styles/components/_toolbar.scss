@@ -1,0 +1,29 @@
+.toolbar{
+  background: #FFF;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  a{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+  } 
+  &.toolbar--horizontal{
+    flex-direction: row;
+    a{
+      padding: 10px;
+    }
+  }
+}
+.night-mode{
+  .toolbar{
+    background: #576874;
+    a{
+      color: #FFF;
+    }
+  }
+}
