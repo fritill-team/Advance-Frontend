@@ -4,12 +4,18 @@ block title
 block button-collapsed
 	include ../components/general-component/toggle-menu.pug
 block content
-	
+	// page title bread-crumbs
 	include ../components/bread-crumbs.pug 
+	+pageTitle("page-header--with-block")
+		.tabs.tabs--center.mb-0.mt-3
+			a(class="tab tab--active" href='#nav-content') Content
+			a(class="tab" href='#nav-comment') Discussion
+			a(class="tab" href='#nav-thread') Thread
+			a(class="tab" href='#nav-media') Media
+			a(class="tab" href='#nav-translates') Translations
 	.container-fluid
 		.row 
-			.col-lg-12 details
-        
+			.col-lg-12
 				.card.card--data
 					.card__header
 						h3(class="bold title-h6 ") General Card
