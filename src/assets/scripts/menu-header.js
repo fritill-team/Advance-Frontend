@@ -12,11 +12,19 @@ $(".wrapper__overlay").on("click",function(event){
 }); 
 // open data menu
 
-$(document)
-.on('click', '.sub-menu--item', function () {
+$(document).on('click', '.sub-menu--item', function () {
   if ($('.menu__date').hasClass('active')) { 
     $('.menu__date').removeClass('active');
   }else { 
     $('.menu__date').addClass('active');
   }
 })  
+// $('.sub-menu--item').each(function () { 
+//   $('.sub-menu--item').on("click" , function(){
+//     if ($('.menu__date').hasClass('active')) { 
+//       $('.menu__date').removeClass('active');
+//     }else { 
+//       $('.menu__date').addClass('active');
+//     }
+//   })
+// });
