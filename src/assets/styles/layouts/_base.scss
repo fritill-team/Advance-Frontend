@@ -53,3 +53,12 @@ ul{
     opacity: 0.3;
   }
 }
+.overlay { 
+  .wrapper__overlay {
+    z-index: 5;
+    opacity: 0.3;
+  }
+  .header {
+    z-index: 6;
+  } 
+}

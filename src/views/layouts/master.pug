@@ -28,12 +28,17 @@ html(lang='en' class="" dir="ltr")
 
 	body
 		.wrapper
+			.wrapper__overlay.toggle
 			// Menu
-			include ../components/header.pug
+			header.header
+				block button-collapsed
+				.container
+					include ../components/header.pug 
 
-			//include ../components/sidebar.pug
-				block sidebar
-					include ../components/sidebar-content.pug
+			nav.sidebar.sidebar--mobile
+				#js-menu.sidebar__menu.menu--scrollbar
+					.menu__section
+						include ../components/menu-content.pug
 
 			// block content
 			.page-content

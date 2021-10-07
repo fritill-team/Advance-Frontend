@@ -26,4 +26,5 @@ import "./course-card"
 import "./course-content"
 import './dropdown'
 import "./chapter-content"
+import "./menu-header"
 import "./backend_scripts/panel-loader"

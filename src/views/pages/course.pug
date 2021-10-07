@@ -3,7 +3,8 @@ extends ../layouts/master.pug
 
 block title
   title Course
-
+block menu-header
+  include ../components/menu-list.pug
 block content
   section(class="course-video ")
     .video__wrapper
