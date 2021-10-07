@@ -26,17 +26,16 @@ html(lang='en' dir="ltr")
 		.wrapper
 			.wrapper__overlay.toggle.overlay--modal
 			.dialog
-				.card
-					.card__header
-						p.subtitle-1 This is a card title
-						.card__tools
-							button.btn.btn--primary.btn--icon
-								i.fa.fa-check
-					.card__content
-						p
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
-							| distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
-		
+				.modal-content
+					.modal-header
+						h5.modal-title#exampleModalLabel Modal title
+						button.btn.btn--default.btn--text.btn--ripple
+							i.fas.fa-close
+					.modal-body
+					.modal-footer
+						button.btn.btn--primary Close
+						button.btn.btn--info.btn Save changes	
+
 			//- Menu
 			include ../components/header.pug
 

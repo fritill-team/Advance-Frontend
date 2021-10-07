@@ -1,14 +1,59 @@
 .dialog{
-  height: 100px;
   position: absolute;
-  display: block;
+  display: none;
   z-index: 10;
-  top: 100px;
-  left: 100px;
-  transform: translate(-50%, -50%); 
+  top: 450px;
+  left: 50px;
+  width: 600px;
+  margin-left: 350px;
+  .modal-content{
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border-radius: 6px;
+    .modal-header{
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .modal-body{
+      position: relative;
+      padding: 15px;
+    }
+    .modal-footer{
+      padding: 15px;
+      text-align: right;
+      border-top: 1px solid #e5e5e5;
+    }
+  }
 }
 .open-overlay--full{
+  // .dialog{
+  //   display: block;
+  // }
+}
+.open-side-nav {
+  .wrapper__overlay {
+    z-index: 5;
+    opacity: 0.3;
+  }
   .dialog{
     display: block;
   }
 }
+.modal{
+  .modal-open{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal-dialog{
+    z-index: 12px;
+    &.modal-lg{
+      width: 900px;
+    }
+  }
+  
+}
+
