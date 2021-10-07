@@ -2178,7 +2178,7 @@ html[dir="rtl"] .footer.footer--auth {
 }
 
 html[dir="rtl"] .footer.footer--admin {
-  margin-right: 60px;
+  margin-right: 0;
 }
 
 html[dir="rtl"] .footer-line {
@@ -9720,8 +9720,27 @@ html[dir="rtl"] .play-list.play-list__with-icon .play-list__video-img .play-list
   background-color: #43525c;
 }
 
+.night-mode .bread-crumbs__link {
+  color: #FFF;
+}
+
+.night-mode .page-header__info {
+  color: #FFF;
+}
+
+.night-mode .bread-crumbs i {
+  color: #FFF;
+}
+
 html[dir="rtl"] .page-header h1 {
   margin-right: 5px;
+}
+
+html[dir="rtl"] .bread-crumbs i {
+  -webkit-transform: rotate(177deg);
+          transform: rotate(177deg);
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .recommendations-list {

@@ -57,6 +57,17 @@
   .page-header{
     background-color: #43525c;  
   }
+  .bread-crumbs__link {
+    color: #FFF;
+  }
+  .page-header__info{
+    color: #FFF;
+  }
+  .bread-crumbs{
+    i{
+      color: #FFF;
+   }
+ }
 }
 html[dir="rtl"] {
   .page-header{   
@@ -64,4 +75,13 @@ html[dir="rtl"] {
       margin-right: 5px; 
     }
   }   
+  .bread-crumbs{
+    i{
+      transform: rotate(
+        177deg
+        );
+        margin-left: 10px;
+        margin-right: 0
+   }
+ }
 }
