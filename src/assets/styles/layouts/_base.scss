@@ -52,5 +52,8 @@ body {
   .wrapper__overlay {
     z-index: 5;
     opacity: 0.3;
+    &.overlay--modal{
+      z-index: 7;
+    }
   }
 }
