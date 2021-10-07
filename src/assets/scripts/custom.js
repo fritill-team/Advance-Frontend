@@ -557,6 +557,11 @@ $(document)
   .on('click', 'edit-recommendation', function(){
     $(this).closest('.recommendation-details')
   })
+  .on('click', '.edit-recommendation', function(e){
+    e.preventDefault()
+    let editable = $(this).closest('.recommendation-details').data('data')
+  })
+  
   // $(this).on('click', function(){
   //   $(this).siblings().hide();
   // })
