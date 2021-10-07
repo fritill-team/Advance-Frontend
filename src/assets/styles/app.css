@@ -9687,6 +9687,7 @@ html[dir="rtl"] .play-list.play-list__with-icon .play-list__video-img .play-list
 
 .bread-crumbs i {
   margin-right: 10px;
+  font-size: 16px;
 }
 
 .bread-crumbs a {
@@ -9762,8 +9763,8 @@ html[dir="rtl"] .page-header h1 {
 html[dir="rtl"] .bread-crumbs i {
   -webkit-transform: rotate(177deg);
           transform: rotate(177deg);
-  top: 35%;
-  left: 38%;
+  top: 25%;
+  left: 25%;
 }
 
 html[dir="rtl"] .bread-crumbs a {
@@ -9772,6 +9773,17 @@ html[dir="rtl"] .bread-crumbs a {
 
 html[dir="rtl"] .bread-crumbs a:first-of-type {
   margin-left: 15px;
+}
+
+html[dir="rtl"] .bread-crumbs__link {
+  margin-left: 10px;
+}
+
+html[dir="rtl"] .bread-crumbs__link:after {
+  display: inline-block;
+  padding-left: .5rem;
+  color: #6c757d;
+  content: "/";
 }
 
 .recommendations-list {

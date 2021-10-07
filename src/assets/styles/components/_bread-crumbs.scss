@@ -22,6 +22,7 @@
    i{
     // color: $primary;
     margin-right: 10px;
+    font-size: 16px;
   }
   a{
     margin: 0;
@@ -77,7 +78,7 @@
   }
   .bread-crumbs{
     i{
-      color: #FFF;
+      color: #FFF; 
    }
  }
 }
@@ -92,8 +93,8 @@ html[dir="rtl"] {
       transform: rotate(
         177deg
         );
-        top: 35%;
-        left: 38%;
+        top: 25%;
+        left: 25%;
    }
    a{
     margin: 0;
@@ -102,4 +103,13 @@ html[dir="rtl"] {
     }
   } 
  }
+ .bread-crumbs__link{ 
+  margin-left: 10px;
+  &:after{
+    display: inline-block;
+    padding-left: .5rem;
+    color: #6c757d;
+    content: "/";
+  }
+}
 }
