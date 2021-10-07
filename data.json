@@ -184,5 +184,118 @@
         }
       ]
     }
+  ],
+  "sideBar": [
+
+    {
+  
+      "title": "Categories",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Tags",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Courses",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Assessments and Surveys",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": true,
+  
+      "children": [
+  
+        {
+  
+          "title": "Assessments and Surveys",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": true
+  
+        }
+  
+      ]
+  
+    },
+  
+    {
+  
+      "title": "Users",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": false,
+  
+      "children": [
+  
+        {
+  
+          "title": "Users",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        },
+  
+        {
+  
+          "title": "Groups",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        }
+  
+      ]
+  
+    }
+  
   ]
 }
