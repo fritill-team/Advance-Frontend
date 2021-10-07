@@ -2258,8 +2258,6 @@ html[dir="rtl"] .social-links .social-links__link {
   display: flex;
   font-weight: bold;
   font-size: 14px;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
   margin-bottom: 20px;
   position: relative;
 }
@@ -2312,6 +2310,12 @@ html[dir="rtl"] .social-links .social-links__link {
   bottom: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  .tabs {
+    overflow-x: scroll;
+  }
 }
 
 .tab {
@@ -9651,12 +9655,6 @@ html[dir="rtl"] .play-list.play-list__with-icon .play-list__video-img .play-list
   margin-bottom: 20px;
 }
 
-.page-header h1 {
-  margin: 0;
-  margin-left: 0;
-  letter-spacing: -2px;
-}
-
 .page-header.page-header--with-block {
   padding: 20px 20px 0 20px;
 }
@@ -9678,23 +9676,44 @@ html[dir="rtl"] .play-list.play-list__with-icon .play-list__video-img .play-list
   color: #0d758e;
 }
 
+.bread-crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bread-crumbs i {
-  color: #0d758e;
   margin-right: 10px;
+}
+
+.bread-crumbs a {
+  margin: 0;
+}
+
+.bread-crumbs a:first-of-type {
+  margin-right: 15px;
 }
 
 .bread-crumbs__link {
   font-size: 18px;
+  margin-right: 10px;
 }
 
-.bread-crumbs__link:before {
+.bread-crumbs__link:after {
   display: inline-block;
   padding-right: .5rem;
   color: #6c757d;
   content: "/";
 }
 
-.bread-crumbs__link:first-of-type:before {
+.bread-crumbs__link:first-of-type:after {
+  display: none;
+}
+
+.bread-crumbs__link:last-of-type:after {
   display: none;
 }
 
@@ -9713,6 +9732,10 @@ html[dir="rtl"] .play-list.play-list__with-icon .play-list__video-img .play-list
   }
   .page-header__title a {
     width: 40px;
+  }
+  .bread-crumbs {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
   }
 }
 
@@ -9739,8 +9762,16 @@ html[dir="rtl"] .page-header h1 {
 html[dir="rtl"] .bread-crumbs i {
   -webkit-transform: rotate(177deg);
           transform: rotate(177deg);
-  margin-left: 10px;
-  margin-right: 0;
+  top: 35%;
+  left: 38%;
+}
+
+html[dir="rtl"] .bread-crumbs a {
+  margin: 0;
+}
+
+html[dir="rtl"] .bread-crumbs a:first-of-type {
+  margin-left: 15px;
 }
 
 .recommendations-list {

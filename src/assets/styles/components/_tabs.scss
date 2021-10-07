@@ -2,7 +2,6 @@
   display: flex;
   font-weight: bold;
   font-size: 14px;
-  flex-flow: wrap;
 
   &.tabs--center {
     justify-content: center;
@@ -45,7 +44,11 @@
     background-color: rgba($color: #000000, $alpha: .2);
   }
 }
-
+@media (max-width: 767px ) {
+  .tabs{
+    overflow-x: scroll;
+  }
+}
 .tab {
   font-size: 18px;
   border-radius: 0;
