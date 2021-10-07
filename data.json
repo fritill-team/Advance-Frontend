@@ -98,7 +98,7 @@
           "name": "edit",
           "icon": "far fa-edit",
           "class": "primary edit-recommendation",
-          "link": "#"
+          "link": "/"
         },
         {
           "name": "translate",
@@ -151,6 +151,151 @@
           "link": "#"
         }
       ]
+    },
+    {
+      "id": 3,
+      "collectionId": 1,
+      "title": "recommendation title 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "primary",
+          "link": "#"
+        }
+      ]
     }
+  ],
+  "sideBar": [
+
+    {
+  
+      "title": "Categories",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Tags",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Courses",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Assessments and Surveys",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": true,
+  
+      "children": [
+  
+        {
+  
+          "title": "Assessments and Surveys",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": true
+  
+        }
+  
+      ]
+  
+    },
+  
+    {
+  
+      "title": "Users",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": false,
+  
+      "children": [
+  
+        {
+  
+          "title": "Users",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        },
+  
+        {
+  
+          "title": "Groups",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        }
+  
+      ]
+  
+    }
+  
   ]
 }
