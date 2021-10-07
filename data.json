@@ -98,7 +98,7 @@
           "name": "edit",
           "icon": "far fa-edit",
           "class": "primary edit-recommendation",
-          "link": "#"
+          "link": "/"
         },
         {
           "name": "translate",
@@ -122,6 +122,38 @@
     },
     {
       "id": 2,
+      "collectionId": 1,
+      "title": "recommendation title 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "primary",
+          "link": "#"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "primary",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "collectionId": 1,
       "title": "recommendation title 2",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
