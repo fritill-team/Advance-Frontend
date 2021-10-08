@@ -1,4 +1,4 @@
 $(document)
-.on('click','.dropdown', function(){
-  $(".dropdown").toggleClass ('dropdown--active');
+.on('click', '.dropdown__activator', function () {
+  $(".dropdown").toggleClass('dropdown--active'); 
 })

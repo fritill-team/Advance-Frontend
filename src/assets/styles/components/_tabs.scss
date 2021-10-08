@@ -7,6 +7,30 @@
     justify-content: center;
     // margin-bottom: 20px;
   }
+  &.tabs--nested{
+    display: inline-flex;
+    &:after{
+      display: none;
+    }
+    .tab{
+      border-radius: 5px;
+      padding: 8px 16px;
+      &:hover{
+        background-color: $primary;
+        color: $white;
+      }
+      &.tab--active{
+        background-color: $primary;
+        color: $white;  
+        &::after{
+          display: none;
+        }
+      }
+      &::before{
+        display: none;
+      }
+    }
+  }
   margin-bottom: 20px;
   position: relative;
   &:after{
@@ -20,7 +44,11 @@
     background-color: rgba($color: #000000, $alpha: .2);
   }
 }
-
+@media (max-width: 767px ) {
+  .tabs{
+    overflow-x: scroll;
+  }
+}
 .tab {
   font-size: 18px;
   border-radius: 0;

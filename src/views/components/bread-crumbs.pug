@@ -1,0 +1,22 @@
+mixin pageTitle(className)
+  .page-header(class=className)  
+    .container
+      .bread-crumbs
+        a(href="#" class="btn btn--primary btn--icon btn--outlined btn--ripple")
+          i.fas.fa-arrow-left
+        a(href="#" class="bread-crumbs__link text-3") Home 
+        a(href="#" class="bread-crumbs__link text-3") Course Chapter 
+        a(href="#" class="bread-crumbs__link text-3") Course Chapter
+      .page-header__content 
+        h1 Course name is here   
+        .page-header__actions
+          .dropdown.dropdown__activator
+            button.btn.btn--primary.dropdown--btn.mb-0 Dropdown
+            .dropdown__content
+              a.content__link(href="#") lorem 1
+              a.content__link(href="#") lorem 2
+              a.content__link(href="#") lorem 3
+      .page-header__info 
+        span lorem
+        span lorem     
+      block

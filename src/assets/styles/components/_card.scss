@@ -776,16 +776,17 @@
         max-width: 16%;
         width: 100%;
         display: flex;
-        font-size: 16px;
+        font-size: 14px;
         word-break: break-all;
         margin-top: 5px;
+        white-space: nowrap;
         strong {
           margin-left: 4px;
         }
       }
       .description__details {
         margin: 0;
-        font-size: 16px;
+        font-size: 14px;
         position: relative;
         padding: 0 10px;
       }

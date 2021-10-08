@@ -274,7 +274,7 @@ $(document)
     nav.addClass('nav--opened vertical--minify')
     wrapper.addClass('toggle-content page-content--minify ');
     sidebarIcon.addClass("open-side-nav");
-   })
+  })
 
 // scrolling
 // $(function() {
@@ -321,14 +321,14 @@ $(".card__header--collapse").each(function () {
 // edit thread
 
 $(document)
-.on('click', 'content__item', function () {
-  $(".content__item").toggleClass('nav--opened vertical--minify')
-  wrapper.toggleClass('toggle-content page-content--minify ');
-  sidebarIcon.toggleClass("open-side-nav");
-  // $('.sub-menu-item').each(function (i, item) {
-  //   $(item).removeClass('menu--opened')
-  // })
-})
+  .on('click', 'content__item', function () {
+    $(".content__item").toggleClass('nav--opened vertical--minify')
+    wrapper.toggleClass('toggle-content page-content--minify ');
+    sidebarIcon.toggleClass("open-side-nav");
+    // $('.sub-menu-item').each(function (i, item) {
+    //   $(item).removeClass('menu--opened')
+    // })
+  })
 //  $( ".submit-post .submit__btn").click(function() {
 //   $(this).each(function(){
 //     $(".edit-post").css("display", "none");
@@ -369,10 +369,10 @@ $(document)
 
 
 // Drop zone
- $("div#myId").dropzone({ url: "/file/post" });
+$("div#myId").dropzone({ url: "/file/post" });
 
 //venobox
-$(document).ready(function(){
+$(document).ready(function () {
   $('.venobox').venobox();
 });
 
@@ -401,7 +401,7 @@ $(document).ready(function(){
 //   // }
 // })
 
- //rating
+//rating
 // start star
 // $(function(){                   // Start when document ready
 // 	$('#star-rating').rating(); // Call the rating plugin
@@ -414,20 +414,20 @@ $(document).ready(function(){
 // };
 
 // dropdown-menu
-$('.more-dropdown__link').each(function(){
-  $(this).on('click', function(){
+$('.more-dropdown__link').each(function () {
+  $(this).on('click', function () {
     $('.more-dropdown').removeClass('active')
     $(this).parent().addClass('active')
     event.stopPropagation();
   })
 })
 
-$('.content__item').each(function(){
-  $(this).on('click', function() {
+$('.content__item').each(function () {
+  $(this).on('click', function () {
     $('.more-dropdown').removeClass('active')
   })
 })
-$(document).on('click', function(){
+$(document).on('click', function () {
   $('.more-dropdown').removeClass('active')
 })
 
@@ -453,40 +453,40 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item:*/
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /*when an item is clicked, update the original select box,
-        and the selected item:*/
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
+    c.addEventListener("click", function (e) {
+      /*when an item is clicked, update the original select box,
+      and the selected item:*/
+      var y, i, k, s, h, sl, yl;
+      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      sl = s.length;
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < sl; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          y = this.parentNode.getElementsByClassName("same-as-selected");
+          yl = y.length;
+          for (k = 0; k < yl; k++) {
+            y[k].removeAttribute("class");
           }
+          this.setAttribute("class", "same-as-selected");
+          break;
         }
-        h.click();
+      }
+      h.click();
     });
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-      /*when the select box is clicked, close any other select boxes,
-      and open/close the current select box:*/
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
-      this.classList.toggle("select-selected-bottom-square");
-    });
+  a.addEventListener("click", function (e) {
+    /*when the select box is clicked, close any other select boxes,
+    and open/close the current select box:*/
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+    this.classList.toggle("select-selected-bottom-square");
+  });
 }
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
@@ -512,4 +512,80 @@ function closeAllSelect(elmnt) {
 }
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
+
+
+
+$('.course-list__item').each(function () {
+  $(this).on('click', function () {
+    console.log('text');
+    $(this).children('course-list__list-content').css({ "display": "none" })
+    // $(this).next().css({"display": "none"})
+  })
+})
+
+$(function () {
+  $("#sortable").sortable({
+    handle: ".handle"
+  });
+  $("#sortable").disableSelection();
+  $("#test").accordion();
+});
+
+
+// const renderRecomendations = async () => {
+//    let url = `http://localhost:3000/recommendations`;
+
+//    const res = fetch(url)
+//    const recommendations = res;
+//    console.log(recommendations);
+// }
+
+// window.addEventListener('DOMContentLoaded', () => renderRecomendations());
+$(function(){
+
+})
+// $(document)
+// 	.on('click', '.collapse_menu', function () {
+// 		console.log('dlkvdogn')
+// 		nav.toggleClass('nav--opened vertical_nav__minify')
+// 		wrapper.toggleClass('toggle-content wrapper__minify ');
+// 	})
+$(document)
+  .on('click', '.recommendation-details .card__header', function(){
+    $(this).next().toggleClass('d-none')
+  })
+  .on('click', 'edit-recommendation', function(){
+    $(this).closest('.recommendation-details')
+  })
+  .on('click', '.edit-recommendation', function(e){
+    e.preventDefault()
+    let editable = $(this).closest('.recommendation-details').data('data')
+  })
+  
+  // $(this).on('click', function(){
+  //   $(this).siblings().hide();
+  // })
+
+
+
+// $('.recommendations-list').each((i,item) => {
+//   let url = $(item).data('link')
+//   $.get(url)
+//     .then(res => console.log(res))
+//     .catch(e => console.log(e))
+
+
+// })
+
+
+// sidebar
+
+const sidebarTemplate = item => `
+  <li class="list__item">
+    <a class="item__link" href="typo.html" title="Explore">
+      <i class="fas fa-home item__icon"></i>
+      <span class="item__label">Typo</span>
+    </a>
+  </li>
+`
 
