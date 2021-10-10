@@ -270,12 +270,11 @@
     }
     & + label:before {
       border-radius: 2px;
-      top: 2px;
     }
 
     &:checked + label:after {
       left: 6px;
-      top: 3px;
+      top: 2px;
       width: 6px;
       border-bottom: 3px solid $primary;
       border-right: 3px solid $primary;
