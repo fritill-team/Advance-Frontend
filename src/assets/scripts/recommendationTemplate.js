@@ -17,7 +17,7 @@ const recommendationTemplate = item => `
     </div>
   `
 const recommendationForm = () => `
-<form class='card recommendation-form' data-data=''>
+<form class='card recommendation-form' data-data='data'>
   <div class="field-wrapper field-wrapper--sm">
     <label class="field-wrapper__label">Course Title*</label>
     <div class="field-wrapper__content">
@@ -50,19 +50,19 @@ $('.recommendations-list').each((i, container) => {
     
   // `))
   
-
   $.get(url)
-    .then(res => {
-      for (let item of res) {
-        // console.log(item)
-        $(list).append($(recommendationTemplate(item)))
-        // console.log(item);
-      }
-      $(form).append($(recommendationForm()))
-      $(row).append(form)
-      $(row).append(list)
-      $(container).append(row)
-    })
-    .catch(e => console.log(e))
-
+  .then(res => {
+    for (let item of res) {
+      // console.log(item)
+      $(list).append($(recommendationTemplate(item)))
+      // console.log(item);
+    }
+    $(form).append($(recommendationForm()))
+    $(row).append(form)
+    $(row).append(list)
+    $(container).append(row)
+  })
+  .catch(e => console.log(e))
+  console.log($('recommendation-details').data('data'));
+  // console.log($(this).attr().data('data'))
 })
