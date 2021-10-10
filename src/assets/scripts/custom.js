@@ -560,6 +560,7 @@ $(document)
   .on('click', '.edit-recommendation', function(e){
     e.preventDefault()
     let editable = $(this).closest('.recommendation-details').data('data')
+    $('.recommendation-form').data('data').append(editable)
   })
   
   // $(this).on('click', function(){

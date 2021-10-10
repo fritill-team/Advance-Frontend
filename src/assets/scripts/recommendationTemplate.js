@@ -17,7 +17,7 @@ const recommendationTemplate = item => `
     </div>
   `
 const recommendationForm = () => `
-<form class='card' data-data=''>
+<form class='card recommendation-form' data-data=''>
   <div class="field-wrapper field-wrapper--sm">
     <label class="field-wrapper__label">Course Title*</label>
     <div class="field-wrapper__content">
