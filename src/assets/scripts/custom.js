@@ -229,7 +229,7 @@ $(document)
   .on('click', '.toggle', function () {
     nav.toggleClass('nav--opened vertical--minify')
     wrapper.toggleClass('toggle-content page-content--minify ');
-    sidebarIcon.toggleClass("open-side-nav");
+    sidebarIcon.toggleClass("open-side-nav"); 
     $('.sub-menu-item').each(function (i, item) {
       $(item).removeClass('menu--opened');
     })

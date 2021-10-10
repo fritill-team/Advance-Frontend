@@ -39,7 +39,10 @@ html(lang='en' dir="ltr")
 			//- 			button.btn.btn--info.btn Save changes	
 
 			//- Menu
-			include ../components/header.pug
+			header.header
+				block button-collapsed
+				.container-fluid
+					include ../components/header.pug
 
 			include ../components/sidebar.pug
 				block sidebar
