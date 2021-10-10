@@ -101,6 +101,12 @@ html[dir="rtl"] {
         text-align: right;
       }
     }
+    &.table--survey{
+      thead{
+        position: relative;
+        left: 12px;        
+      }
+    }
   }
 }
 .night-mode{
