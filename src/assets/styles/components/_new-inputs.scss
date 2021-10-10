@@ -265,8 +265,12 @@
   }
 
   &[type="checkbox"] {
+    & + label {
+      padding-top: 2px;
+    }
     & + label:before {
       border-radius: 2px;
+      top: 2px;
     }
 
     &:checked + label:after {
