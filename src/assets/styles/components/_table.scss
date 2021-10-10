@@ -103,3 +103,23 @@ html[dir="rtl"] {
     }
   }
 }
+.night-mode{
+  .table{
+    &.table--survey{
+      tbody{
+        background: transparent;
+        tr{
+          &:nth-of-type(odd) {
+            background-color: rgba($color: $primary, $alpha: 0.2);
+          }
+        }
+      }  
+      th {
+        color: $white;
+      }
+      td{
+        color:$white ;
+      }
+    }
+  }
+}
