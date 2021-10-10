@@ -102,7 +102,7 @@
 .chapter-item {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   padding: 1em 0;
   border-bottom: 1px solid $primary;
   margin-bottom: 20px;
@@ -129,7 +129,7 @@
       }
     }
   }
-  
+
 }
 
 html[dir="rtl"]{
