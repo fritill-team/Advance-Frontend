@@ -17,6 +17,7 @@ import "./toaster"
 import "./tabs.js"
 import "./survey.js"
 import "./select2"
+import "./dropdown"
 import "./convertable"
 import "./rating"
 import './owl-carousel'
@@ -28,3 +29,4 @@ import './dropdown'
 import "./chapter-content"
 import "./menu-header"
 import "./backend_scripts/panel-loader"
+import "./recommendationTemplate"

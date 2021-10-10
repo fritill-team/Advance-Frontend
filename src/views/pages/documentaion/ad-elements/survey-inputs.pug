@@ -61,17 +61,106 @@ block content
                   p.text-3.white amet consectetur adipisicing elit.
                 .form-question__wrap
                   .wrap__form-group
-                    label.form-group__label.click-me(for="toggle-1") lorem
-                    input.form-group__input.control(id="toggle-1" value="radio-1" type="checkbox" name="survey")  
-                    .click-me
+                    input.form-group__input(id="toggle-1" value="radio-1" type="checkbox" name="survey")  
+                    label.form-group__label(for="toggle-1") lorem     
+                      img(src="../../assets/images/get_img.jpg")               
                   .wrap__form-group
-                    input.form-group__input.control(id="toggle-2" value="radio-2" type="checkbox" name="survey")
-                    label.form-group__label.click-me(for="toggle-2") lorem
-                    .click-me
+                    input.form-group__input(id="toggle-2" value="radio-2" type="checkbox" name="survey")
+                    label.form-group__label(for="toggle-2") lorem
+                      img(src="../../assets/images/get_img.jpg")
                   .wrap__form-group
-                    input.form-group__input.control(id="toggle-3" value="radio-3" type="radio" name="survey")
-                    label.form-group__label.click-me(for="toggle-3") lorem
-                      img(src="http://placehold.it/40x60/b0f/fff&text=B")
+                    input.form-group__input(id="toggle-3" value="radio-3" type="checkbox" name="survey")
+                    label.form-group__label(for="toggle-3") lorem
+                      img(src="../../assets/images/get_img.jpg")
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 radio button
+          .card__content
+            .content
+              form.form-question
+                .form-question__question-form
+                  h2.white Lorem ipsum dolor
+                  p.text-3.white amet consectetur adipisicing elit.
+                .form-question__wrap
+                  .wrap__form-group
+                    input.form-group__input(id="radio-21" value="radio-1" type="radio" name="survey")
+                    label.form-group__label(for="radio-21") 
+                      img(src="../../assets/images/get_img.jpg") 
+                      |lorem
+                  .wrap__form-group
+                    input.form-group__input(id="radio-22" value="radio-2" type="radio" name="survey")
+                    label.form-group__label(for="radio-22") lorem
+                      img(src="../../assets/images/get_img.jpg")
+                  .wrap__form-group
+                    input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-23") lorem
+                      img(src="../../assets/images/get_img.jpg")
+                .form-question__wrap
+                  .wrap__form-group
+                    input.form-group__input(id="radio-24" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-24") 
+                      img(src="../../assets/images/get_img.jpg")
+                    label.label-style lorem
+                  .wrap__form-group
+                    input.form-group__input(id="radio-25" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-25") 
+                      img(src="../../assets/images/get_img.jpg")
+                    label.label-style lorem
+                  .wrap__form-group
+                    input.form-group__input(id="radio-26" value="radio-3" type="radio" name="survey")
+                    label.form-group__label(for="radio-26") 
+                      img(src="../../assets/images/get_img.jpg")
+                    label.label-style lorem
+    .row 
+      .col-lg-12 
+        .card 
+          .card__title 
+            h3 radio button 
+          .card__content 
+            .question.question--no-line
+              .question__item.question__item--cover
+                .image-wrapper
+                  img(src="../../assets/images/get_img.jpg", alt="")
+                .field-wrapper.field-wrapper--size
+                  .check-field-group.check-field-group--horizontal
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-4" name="checkname")
+                      label(for="checkbox-4") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-5" name="checkname")
+                      label(for="checkbox-5") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="checkbox" id="checkbox-6" name="checkname")
+                      label(for="checkbox-6") Lorem ipsum dolor.
+                  .messages
+                    ul 
+                      li Please provide a valid city. 
+    .row 
+      .col-lg-12 
+        .card 
+          .card__title 
+            h3 radio button 
+          .card__content 
+            .question.question--no-line
+              .question__item.question__item--cover
+                .image-wrapper
+                  img(src="../../assets/images/get_img.jpg", alt="")
+                .field-wrapper.field-wrapper--size
+                  .check-field-group.check-field-group--horizontal
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-4" name="radioName")
+                      label(for="radio-4") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-5" name="radioName")
+                      label(for="radio-5") Lorem ipsum dolor.
+                    div
+                      input(class="field-wrapper__input" type="radio" id="radio-6" name="radioName")
+                      label(for="radio-6") Lorem ipsum dolor.
+                  .messages
+                    ul 
+                      li Please provide a valid city.                   
     .row
       .col-lg-12
         .card
@@ -92,97 +181,97 @@ block content
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-1" value="checkbox")
-                        label(class="check-field__label" for="checkbox-1")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-1" name="checkname")
+                        label(for="checkbox-1")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-2" value="checkbox")
-                        label(class="check-field__label" for="checkbox-2")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-2" name="checkname")
+                        label(for="checkbox-2")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-3" value="checkbox")
-                        label(class="check-field__label" for="checkbox-3")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-3" name="checkname")
+                        label(for="checkbox-3")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-4" value="checkbox")
-                        label(class="check-field__label" for="checkbox-4")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-4" name="checkname")
+                        label(for="checkbox-4")
                     
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-5" value="checkbox")
-                        label(class="check-field__label" for="checkbox-5")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-5" name="checkname")
+                        label(for="checkbox-5")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-6" value="checkbox")
-                        label(class="check-field__label" for="checkbox-6")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-6" name="checkname")
+                        label(for="checkbox-6")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-7" value="checkbox")
-                        label(class="check-field__label" for="checkbox-7")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-7" name="checkname")
+                        label(for="checkbox-7")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-8" value="checkbox")
-                        label(class="check-field__label" for="checkbox-8")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-8" name="checkname")
+                        label(for="checkbox-8")
                     
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-9" value="checkbox")
-                        label(class="check-field__label" for="checkbox-9")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-9" name="checkname")
+                        label(for="checkbox-9")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-10" value="checkbox")
-                        label(class="check-field__label" for="checkbox-10")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-10" name="checkname")
+                        label(for="checkbox-10")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-11" value="checkbox")
-                        label(class="check-field__label" for="checkbox-11")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-11" name="checkname")
+                        label(for="checkbox-11")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-12" value="checkbox")
-                        label(class="check-field__label" for="checkbox-12")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-12" name="checkname")
+                        label(for="checkbox-12")
                   
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-13" value="checkbox")
-                        label(class="check-field__label" for="checkbox-13")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-13" name="checkname")
+                        label(for="checkbox-13")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-14" value="checkbox")
-                        label(class="check-field__label" for="checkbox-14")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-14" name="checkname")
+                        label(for="checkbox-14")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-15" value="checkbox")
-                        label(class="check-field__label" for="checkbox-15")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-15" name="checkname")
+                        label(for="checkbox-15")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-16" value="checkbox")
-                        label(class="check-field__label" for="checkbox-16")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-16" name="checkname")
+                        label(for="checkbox-16")
                     
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-17" value="checkbox")
-                        label(class="check-field__label" for="checkbox-17")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-17" name="checkname")
+                        label(for="checkbox-17")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-18" value="checkbox")
-                        label(class="check-field__label" for="checkbox-18")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-18" name="checkname")
+                        label(for="checkbox-18")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-19" value="checkbox")
-                        label(class="check-field__label" for="checkbox-19")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-19" name="checkname")
+                        label(for="checkbox-19")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="checkbox"  id="checkbox-20" value="checkbox")
-                        label(class="check-field__label" for="checkbox-20")
+                      div
+                        input(class="field-wrapper__input" type="checkbox" id="checkbox-20" name="checkname")
+                        label(for="checkbox-20")
     .row
       .col-lg-12
         .card
@@ -201,111 +290,116 @@ block content
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-1" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-1" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-1" name="radioName")
+                        label(for="radio-1")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-2" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-2" )  
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-2" name="radioName")
+                        label(for="radio-2")  
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-3" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-3" )  
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-3" name="radioName")
+                        label(for="radio-3")  
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-4" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-4" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-4" name="radioName")
+                        label(for="radio-4")
                     
                   tr
                     td lorem
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-5" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-5" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-5" name="radioName")
+                        label(for="radio-5")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-6" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-6" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-6" name="radioName")
+                        label(for="radio-6")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-7" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-7" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-7" name="radioName")
+                        label(for="radio-7")
                     td 
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-8" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-8" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-8" name="radioName")
+                        label(for="radio-8")
                     
                   tr
                     td lorem
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-9" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-9" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-9" name="radioName")
+                        label(for="radio-9")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-10" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-10" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-10" name="radioName")
+                        label(for="radio-10")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-11" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-11" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-11" name="radioName")
+                        label(for="radio-11")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-12" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-12" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-12" name="radioName")
+                        label(for="radio-12")
                   
                   tr
                     td lorem
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-13" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-13" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-13" name="radioName")
+                        label( for="radio-13" )
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-14" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-14" )
+                      div 
+                        input(class="field-wrapper__input" type="radio" id="radio-14" name="radioName")
+                        label(for="radio-14")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-15" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-15" )
+                      div 
+                        input(class="field-wrapper__input" type="radio" id="radio-15" name="radioName")
+                        label(for="radio-15")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-16" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-16" )
+                      div 
+                        input(class="field-wrapper__input" type="radio" id="radio-16" name="radioName")
+                        label(for="radio-16")
                     
                   tr
                     td lorem
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-17" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-17" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-17" name="radioName")
+                        label(for="radio-17")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-18" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-18" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-18" name="radioName")
+                        label(for="radio-18")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-19" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-19" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-19" name="radioName")
+                        label(for="radio-19")
                     td
-                      .check-field.check-field--no-label
-                        input(class="check-field__input" type="radio" id="radio-20" name="radioName")
-                        label(class="check-field__label radio-field__label" for="radio-20" )
+                      div
+                        input(class="field-wrapper__input" type="radio" id="radio-20" name="radioName")
+                        label(for="radio-20")
+    .row
+      .col-12
+        .card.my-4
+          .card__title
+            h3 textarea
+          .card__content
+            .row
+              .col-lg-12.col-md-12.col-sm-12
+                .field-wrapper
+                  .field-wrapper__content
+                    textarea( id="id_course_description" class="textarea" rows='5' name='description' placeholder='Insert your course description')
+                  ul.messages
+                    li
+                      | Please provide a valid city.
     .row
       .col-lg-12
         .card
           .card__title
-            h3 textarea 
-          .card__content      
-            div.form-control
-              label(for="comment") Any comments or suggestions
-              textarea(name="comment" id="comment" placeholder="Enter your comment here" rows="6" cols="50")
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 textarea 
+            h3 dropdown menu  
           .card__content      
             div.form-control
               .dropdown
@@ -314,3 +408,38 @@ block content
                   a.content__link(href="#") lorem 1
                   a.content__link(href="#") lorem 2
                   a.content__link(href="#") lorem 3    
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 Short Answer   
+          .card__content     
+            .col-md-6.col-sm-6
+              .field-wrapper
+                label.field-wrapper__label.short Short Answer*
+                .field-wrapper__content
+                  input(class="field-wrapper__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                ul.messages
+                  li
+                    | Please provide a valid city.
+    .row
+      .col-lg-12
+        .card
+          .card__title
+            h3 long Answer   
+          .card__content     
+            .col-md-6.col-sm-6
+              .field-wrapper
+                label.field-wrapper__label.short long Answer*
+                .field-wrapper__content
+                  textarea( id="long-answer" class="field-wrapper__input-answer" name='description' type='text' placeholder='long answer text' value='' maxlength='60')
+                  //- input(class="field-wrapper__input-answer" type='text' placeholder='long answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                ul.messages
+                  li
+                    | Please provide a valid city.
+    .row
+      .col-lg-12
+        .card
+          .card__content     
+
+

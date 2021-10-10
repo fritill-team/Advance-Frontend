@@ -7,11 +7,12 @@ block content
 
 
 	include ../components/bread-crumbs.pug
-	.container-fluid
+	+pageTitle
+	.container
 			
 		.row
 			.col-lg-12
-				div(class='recommendations-list' data-link="http://localhost:3000/recommendations/")
+				//- div(class='recommendations-list' data-link="http://localhost:3000/recommendations/")
 			
 			//- .col-lg-12 
 				#test

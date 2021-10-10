@@ -557,70 +557,16 @@ $(document)
   .on('click', 'edit-recommendation', function(){
     $(this).closest('.recommendation-details')
   })
+  .on('click', '.edit-recommendation', function(e){
+    e.preventDefault()
+    let editable = $(this).closest('.recommendation-details').data('data')
+    $('.recommendation-form').data('data').append(editable)
+  })
+  
   // $(this).on('click', function(){
   //   $(this).siblings().hide();
   // })
 
-const recommendationTemplate = item => `
-  <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
-    <div class="card__header" >
-      <h4 class='title-4 my-0'>${item.title}</h4>
-      <div class="d-flex card__tools" >
-        ${item.actions.map(action => `
-          <button class="btn btn--text btn--icon btn--${action.class}"><i class="${action.icon}"></i></button>
-        `).join('')}
-      </div>
-    </div>
-    <div class="card__content">
-      <p>${item.description}</p>
-    </div>
-  </div>
-  
-  `
-
-$('.recommendations-list').each((i, container) => {
-  let url = $(container).data('link'),
-    row = $("<div class='row'>"),
-    list = $("<div class='col-lg-6'>")
-  row.append($(
-  `
-    <div class='col-lg-6'>
-      <form class='card'>
-        <div class="field-wrapper field-wrapper--sm">
-          <label class="field-wrapper__label">Course Title*</label>
-          <div class="field-wrapper__content">
-            <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="main[title1]" value="">
-          </div>
-          <ul class="field-wrapper__messages">
-            <li>Please provide a valid city.</li>
-          </ul>
-        </div>
-        <div class="field-wrapper">
-          <label class="field-wrapper__label">Course Radio Button*</label>
-          <div class="field-wrapper__content">
-            <textarea class="textarea field" id="id_course_description" rows="5" name="description" placeholder="Insert your course description"></textarea>
-          </div>
-          <ul class="field-wrapper__messages">
-            <li>Please provide a valid city.</li>
-          </ul>
-        </div>
-      </form>
-    </div>
-  `))
-  
-
-  $.get(url)
-    .then(res => {
-      for (let item of res) {
-        console.log(item)
-        $(list).append($(recommendationTemplate(item)))
-      }
-      $(row).append(list)
-      $(container).append(row)
-    })
-    .catch(e => console.log(e))
-
-})
 
 
 // $('.recommendations-list').each((i,item) => {
@@ -631,4 +577,16 @@ $('.recommendations-list').each((i, container) => {
 
 
 // })
+
+
+// sidebar
+
+const sidebarTemplate = item => `
+  <li class="list__item">
+    <a class="item__link" href="typo.html" title="Explore">
+      <i class="fas fa-home item__icon"></i>
+      <span class="item__label">Typo</span>
+    </a>
+  </li>
+`
 
