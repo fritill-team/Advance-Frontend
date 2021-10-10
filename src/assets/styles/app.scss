@@ -12,7 +12,6 @@
 @import "./custom/toastr";
 // @import "./base/_style.scss";
 @import "./components/_tabs.scss";
-//@import "./custom/_auth-forms.scss";
 @import "./custom/_owl-slider.scss";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
@@ -39,7 +38,8 @@
 @import "./components/_tags";
 @import "./components/_info";
 @import "./components/_video-player";
-@import "./components/inputs";
+@import "./components/authentication-layout";
+@import "./components/new-inputs";
 @import "./components/_general-wrapper";
 @import "./components/_table";
 @import "./components/_rich-textarea";
@@ -47,6 +47,9 @@
 @import "./components/_colleps";
 @import "./components/_dropdown.scss";
 @import "./components/dialog";
+@import "./components/toolbar";
+@import "./components/_bread-crumbs";
+@import "./components/_recommendation.scss";
 
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";

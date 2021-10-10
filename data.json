@@ -1,88 +1,301 @@
-
 {
-  "courseName": "course name",
-  "descreiption": "Description",
-  "noOfLectures": "402 leactures",
-  "totalDuration": "47:06:29",
-  "chapter": [
+  "courses": [
     {
-      "id": 1,
-      "title": "chapter title",
-      "actions": 
-      {
-        "edit": "#",
-        "delete": "#",
-        "update": "#",
-        "move": "#"
-      },
-      "content":[
+      "course": "course name",
+      "descreiption": "Description",
+      "noOfLectures": "402 leactures",
+      "totalDuration": "47:06:29",
+      "chapter": [
         {
-          "type": "video",
           "id": 1,
-          "title": "video title",
-          "duration": "22:06",
-          "description": "video description",
-          "actions": {
+          "title": "chapter title",
+          "actions": 
+          {
             "edit": "#",
             "delete": "#",
-            "translate": "#",
-            "moveToChapter": "#"
-          }
+            "update": "#",
+            "move": "#"
+          },
+          "content":[
+            {
+              "type": "video",
+              "id": 1,
+              "title": "video title",
+              "duration": "22:06",
+              "description": "video description",
+              "actions": {
+                "edit": "#",
+                "delete": "#",
+                "translate": "#",
+                "moveToChapter": "#"
+              }
+            },
+            {
+              "type": "exam",
+              "id": 1,
+              "title": "exam title",
+              "grad": "70%",
+              "description": "exam description"
+            },
+            {
+              "type": "artical",
+              "id": 1,
+              "title": "artical title",
+              "description": "artical description"
+            }
+          ]
         },
         {
-          "type": "exam",
           "id": 1,
-          "title": "exam title",
-          "grad": "70%",
-          "description": "exam description"
+          "title": "chapter title",
+          "actions": 
+          {
+            "edit": "#",
+            "delete": "#",
+            "update": "#",
+            "move": "#"
+          },
+          "content":[
+            {
+              "type": "video",
+              "id": 1,
+              "title": "video title",
+              "duration": "22:06",
+              "description": "video description",
+              "actions": {
+                "edit": "#",
+                "delete": "#",
+                "translate": "#",
+                "moveToChapter": "#"
+              }
+            },
+            {
+              "type": "exam",
+              "id": 1,
+              "title": "exam title",
+              "grad": "70%",
+              "description": "exam description"
+            },
+            {
+              "type": "artical",
+              "id": 1,
+              "title": "artical title",
+              "description": "artical description"
+            }
+          ]
+        }
+      ]
+    }    
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "collectionId": 1,
+      "title": "recommendation title 1",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/1/edit"
         },
         {
-          "type": "artical",
-          "id": 1,
-          "title": "artical title",
-          "description": "artical description"
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/1/translate"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/1/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/1/move"
         }
       ]
     },
     {
-      "id": 1,
-      "title": "chapter title",
-      "actions": 
-      {
-        "edit": "#",
-        "delete": "#",
-        "update": "#",
-        "move": "#"
-      },
-      "content":[
+      "id": 2,
+      "collectionId": 1,
+      "title": "recommendation title 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
         {
-          "type": "video",
-          "id": 1,
-          "title": "video title",
-          "duration": "22:06",
-          "description": "video description",
-          "actions": {
-            "edit": "#",
-            "delete": "#",
-            "translate": "#",
-            "moveToChapter": "#"
-          }
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/2/edit"
         },
         {
-          "type": "exam",
-          "id": 1,
-          "title": "exam title",
-          "grad": "70%",
-          "description": "exam description"
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/2/translate"
         },
         {
-          "type": "artical",
-          "id": 1,
-          "title": "artical title",
-          "description": "artical description"
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/2/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/2/move"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "collectionId": 1,
+      "title": "recommendation title 3",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/3/edit"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/3/translate"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/3/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/3/move"
         }
       ]
     }
+  ],
+  "sideBar": [
+
+    {
+  
+      "title": "Categories",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Tags",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Courses",
+  
+      "has_children": false,
+  
+      "icon": "fa fa-home",
+  
+      "url": "#",
+  
+      "is_active": false
+  
+    },
+  
+    {
+  
+      "title": "Assessments and Surveys",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": true,
+  
+      "children": [
+  
+        {
+  
+          "title": "Assessments and Surveys",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": true
+  
+        }
+  
+      ]
+  
+    },
+  
+    {
+  
+      "title": "Users",
+  
+      "has_children": true,
+  
+      "icon": "fa fa-layers",
+  
+      "is_active": false,
+  
+      "children": [
+  
+        {
+  
+          "title": "Users",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        },
+  
+        {
+  
+          "title": "Groups",
+  
+          "has_children": false,
+  
+          "url": "#",
+  
+          "is_active": false
+  
+        }
+  
+      ]
+  
+    }
+  
   ]
 }
-

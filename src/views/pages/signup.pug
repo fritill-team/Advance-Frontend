@@ -14,14 +14,14 @@ block content
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field-wrapper__input"
+          class="field"
 					type='text'
 					placeholder='fullName'
 					name='fullName'
 					maxlength=''
 					required
 					)
-			ul.messages
+			ul.field-wrapper__messages
 				li Please provide a valid city.
 		.field-wrapper
 			label.field-wrapper__label
@@ -29,14 +29,14 @@ block content
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field-wrapper__input"
+          class="field"
 					type='email'
 					placeholder='Email Address'
 					name='emailAddress'
 					maxlength=''
 					required
 					)
-			ul.messages
+			ul.field-wrapper__messages
 				li Please provide a valid city.
 		.field-wrapper
 			label.field-wrapper__label
@@ -44,28 +44,23 @@ block content
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field-wrapper__input"
+          class="field"
 					type='Password'
 					placeholder='Password'
 					name='Password'
 					maxlength=''
 					required
 					)
-			ul.messages
+			ul.field-wrapper__messages
 				li Please provide a valid city.
 		.field-wrapper
-			.ui.checkbox.icon
-				input(
-          class="hidden"
-					type="checkbox"
-					tabindex="0"
-					id="remember-signUp"
-					)
-				label(for="remember-signUp") I’m in for emails with exciting discounts and personalized recommendations
+			div
+				input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+				label(for="checkbox-11") I’m in for emails with exciting discounts and personalized recommendations 
 		.d-flex.justify-content-around
-			button(type="submit" class="btn btn--primary btn--rounded btn--xl")  Sign Up
+			button(type="submit" class="btn btn--primary btn--ripple btn--sm btn--rounded")  Sign Up
 	p.title-2.terms-link  By signing up, you agree to our
-		a(href="terms_of_use.html" class="text-3 btn btn--link-text btn--danger")    Terms of Use  and
-		a(href="terms_of_use.html" class="text-3  btn btn--link-text btn--danger")   Privacy Policy .
+		a(href="terms_of_use.html" class="text-3")    Terms of Use  and
+		a(href="terms_of_use.html" class="text-3")   Privacy Policy .
 	p  Already have an account?
-		a(href="login.html" class="text-3 btn--link-text btn--secondary btn")  Log In
+		a(href="login.html" class="text-3")  Log In
