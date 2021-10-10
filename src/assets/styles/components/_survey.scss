@@ -167,7 +167,7 @@ span#percentage {
         opacity: 0;
         &:checked + .form-group__label{
           color: $accent;
-          border: 1px solid $accent;
+          border: 2px solid $accent;
         }
       }
       input:is([type=checkbox], [type="radio"]) + .form-group__label{
@@ -195,7 +195,7 @@ span#percentage {
         &:hover{
           color: $accent;
           cursor: pointer;
-          border: 1px solid $accent;
+          border: 2px solid $accent;
         }
         &:focus{
           border-color: $primary;

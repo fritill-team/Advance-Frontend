@@ -391,8 +391,8 @@ block content
               .col-lg-12.col-md-12.col-sm-12
                 .field-wrapper
                   .field-wrapper__content
-                    textarea( id="id_course_description" class="textarea field" rows='5' name='description' placeholder='Insert your course description')
-                  ul.field-wrapper__messages
+                    textarea( id="id_course_description" class="textarea" rows='5' name='description' placeholder='Insert your course description')
+                  ul.messages
                     li
                       | Please provide a valid city.
     .row
@@ -418,7 +418,7 @@ block content
               .field-wrapper
                 label.field-wrapper__label.short Short Answer*
                 .field-wrapper__content
-                  input(class="field field-wrapper__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                  input(class="field-wrapper__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
                 ul.messages
                   li
                     | Please provide a valid city.
