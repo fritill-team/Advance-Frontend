@@ -310,8 +310,8 @@
       right: 0;
       left: 0;
       z-index: 1;
-      height: calc(1.5em + 0.75rem + 2px);
-      padding: 1.3rem 1rem;
+      height: calc(1.4em + 0.75rem + 2px);
+      padding: 1.2rem 1rem;
       font-weight: 400;
       line-height: 0;
       color: $primary;
@@ -326,8 +326,8 @@
         right: 0;
         z-index: 3;
         display: block;
-        height: calc(1.5em + 0.75rem);
-        padding: 1.3rem 2rem;
+        height: calc(1.4em + 0.75rem);
+        padding: 1.2rem 2rem;
         color: $white;
         content: "Upload File";
         background-color: $primary;
