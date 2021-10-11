@@ -1,11 +1,12 @@
-extends ../layouts/player-course.pug
+extends ../layouts/layout-darkMode.pug
 
 block title
 	title survey
 
 block content
-	include ../components/sidebar-play-list.pug
-	+playlist("playlist--size")
-		include ../components/survey-sidebar.pug
-	.video-player
-		include ../components/survey-content.pug
+	.page-content.page-content--horizontal
+		include ../components/sidebar-dark.pug
+		+sidebar-dark
+			include ../components/survey-sidebar.pug
+		.video-player
+			include ../components/survey-content.pug

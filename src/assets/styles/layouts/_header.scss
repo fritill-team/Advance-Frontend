@@ -9,14 +9,12 @@
   align-items: center;
   background-color: darken($primary, 7);
   // box-shadow: 0 0.05208in 11.25pt -9px rgb(0 0 0 / 10%);
-  &.header--player {
-    // background: $primary-darkmode;
+  &.header--dark {
     position: relative;
     display: flex;
-    // padding: 4px 8px;
     justify-content: flex-start;
-    // box-shadow: -10px 0 10px 2px $accent;
     height: 60px;
+
   }
   .header--exams {
     // width: 100%;
@@ -26,13 +24,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // align-items: center;
     button {
       margin: 0;
     }
   }
 
-  .header-player__logo {
+  .header-dark__logo {
     display: block;
     margin: 0;
     line-height: 3.2;
@@ -42,7 +39,7 @@
     padding: 14px 30px 2px 30px;
     position: relative;
 
-    .logo__img {
+    img {
       height: 28px;
     }
 
@@ -60,22 +57,21 @@
     }
   }
 
-  .header-player__img-small {
+  .header-dark__img-sm {
     display: none;
     margin: 0;
     line-height: 1;
     height: fit-content;
     padding: 6px 10px 5px 4px;
 
-    .logo__img {
+    img {
       width: 30px;
     }
   }
 
-  .header-player__courses {
+  .header-dark__courses {
     margin: 0;
     line-height: 3.2;
-    // height: 40px;
     padding: 0 25px 0 30px;
     background: $secondary;
     height: 100%;
@@ -112,7 +108,7 @@
     }
   }
 
-  .header-player__course-name {
+  .header-dark__course-name {
     margin: 0;
     line-height: 2.1;
     height: 40px;
@@ -140,13 +136,11 @@
   }
 
   @media (max-width: 767px) {
-    .header-player__logo {
+    .header-dark__logo {
       width: 80px;
-    }
-    .header-player__logo {
       display: none;
     }
-    .header-player__img-small {
+    .header-dark__img-sm {
       display: block;
       height: 100%;
       background: #0d758e;
@@ -155,7 +149,7 @@
   }
 }
 html[dir="rtl"] {
-  .header-player__logo {
+  .header-dark__logo {
     &:after {
       border: 30px solid transparent;
       border-right: 15px solid #0d758e;
@@ -163,10 +157,10 @@ html[dir="rtl"] {
       right: 100%;
     }
   }
-  .header-player__img-small {
+  .header-dark__img-sm {
     padding: 6px 4px 5px 10px;
   }
-  .header-player__courses {
+  .header-dark__courses {
     padding: 0 30px 0 25px;
     &:after {
       border: 30px solid transparent;
@@ -831,7 +825,7 @@ html.night-mode {
 
 .night-mode {
   .header {
-    &.header--player {
+    &.header--dark {
       background: $primary-darkmode;
     }
   }
