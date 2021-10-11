@@ -11,6 +11,13 @@ body {
       z-index: 6;
     }
   }
+  &.with--overlay{
+    .modal-overlay{
+      display: block;
+      position: fixed;
+      z-index: 5;
+    }
+  }
 }
 
 ::-moz-selection {
@@ -58,17 +65,17 @@ ul{
 // }
 
 .open-side-nav {
-  .wrapper__overlay {
-    z-index: 5;
-    opacity: 0.3;
-  }
-  &.with--overlay{
-    .modal-overlay{
-      display: block;
-      position: fixed;
-      z-index: 5;
-    }
-  }
+  // .wrapper__overlay {
+  //   z-index: 5;
+  //   opacity: 0.3;
+  // }
+  // &.with--overlay{
+  //   .modal-overlay{
+  //     display: block;
+  //     position: fixed;
+  //     z-index: 5;
+  //   }
+  // }
 }
 // .overlay { 
 //   .wrapper__overlay {
