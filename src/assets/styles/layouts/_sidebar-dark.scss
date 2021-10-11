@@ -25,9 +25,6 @@
     flex: 1 1 0em;
   }
 }
-
-.night-mode {
-}
 .sidebar-dark__header {
   display: flex;
   justify-content: space-between;
@@ -41,9 +38,6 @@
     margin: 0;
     letter-spacing: 1px;
   }
-  .playlist__close-icon {
-    color: $primary;
-  }
   &.sidebar-dark--no-title{
       justify-content: flex-end;
     .sidebar-dark__title {
@@ -51,7 +45,6 @@
     }
   }
 }
-
 @media (min-width: 992px) {
   .sidebar-dark {
     flex: 1 1 35em;

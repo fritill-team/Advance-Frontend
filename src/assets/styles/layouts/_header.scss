@@ -14,124 +14,110 @@
     display: flex;
     justify-content: flex-start;
     height: 60px;
-
+    .header-dark__logo {
+      display: block;
+      margin: 0;
+      line-height: 3.2;
+      background: $primary;
+      height: 100%;
+      padding: 14px 30px 2px 30px;
+      position: relative;
+  
+      img {
+        height: 28px;
+      }
+  
+      &:after {
+        border: 30px solid transparent;
+        border-left: 15px solid #0d758e;
+        border-right: 0;
+        content: "";
+        height: 0;
+        left: 100%;
+        position: absolute;
+        top: 0;
+        width: 0;
+        z-index: 1;
+      }
+    }
+    .header-dark__img-sm {
+      display: none;
+      margin: 0;
+      line-height: 1;
+      height: fit-content;
+      padding: 6px 10px 5px 4px;
+  
+      img {
+        width: 30px;
+      }
+    }
+    .header-dark__courses {
+      margin: 0;
+      line-height: 3.2;
+      padding: 0 25px 0 30px;
+      background: $secondary;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      position: relative;
+  
+      &:hover {
+        color: #fff;
+      }
+      .courses__name {
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+  
+      &:after {
+        border: 30px solid transparent;
+        border-left: 15px solid #1597bb;
+        border-right: 0;
+        content: "";
+        height: 0;
+        left: 100%;
+        position: absolute;
+        top: 0;
+        width: 0;
+        z-index: 1;
+      }
+    }
+    .header-dark__course-name {
+      margin: 0;
+      line-height: 2.1;
+      height: 40px;
+      padding: 0 25px;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+  
+      &:hover {
+        color: $white;
+      }
+  
+      .course-name__title {
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
   }
   .header--exams {
-    // width: 100%;
-    // height: 60px;
-    // display: flex;
-    // padding: ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     button {
       margin: 0;
-    }
-  }
-
-  .header-dark__logo {
-    display: block;
-    margin: 0;
-    line-height: 3.2;
-    background: $primary;
-    height: 100%;
-    // height: fit-content;
-    padding: 14px 30px 2px 30px;
-    position: relative;
-
-    img {
-      height: 28px;
-    }
-
-    &:after {
-      border: 30px solid transparent;
-      border-left: 15px solid #0d758e;
-      border-right: 0;
-      content: "";
-      height: 0;
-      left: 100%;
-      position: absolute;
-      top: 0;
-      width: 0;
-      z-index: 1;
-    }
-  }
-
-  .header-dark__img-sm {
-    display: none;
-    margin: 0;
-    line-height: 1;
-    height: fit-content;
-    padding: 6px 10px 5px 4px;
-
-    img {
-      width: 30px;
-    }
-  }
-
-  .header-dark__courses {
-    margin: 0;
-    line-height: 3.2;
-    padding: 0 25px 0 30px;
-    background: $secondary;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    position: relative;
-
-    &:hover {
-      color: #fff;
-    }
-
-    //  display: grid;
-
-    .courses__name {
-      font-size: 18px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    &:after {
-      border: 30px solid transparent;
-      border-left: 15px solid #1597bb;
-      border-right: 0;
-      content: "";
-      height: 0;
-      left: 100%;
-      position: absolute;
-      top: 0;
-      width: 0;
-      z-index: 1;
-    }
-  }
-
-  .header-dark__course-name {
-    margin: 0;
-    line-height: 2.1;
-    height: 40px;
-    padding: 0 25px;
-    text-align: center;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-
-    &:hover {
-      // background-color: #fab01c;
-      color: $white;
-    }
-
-    .course-name__title {
-      font-size: 18px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
@@ -755,7 +741,6 @@ html.night-mode {
     }
   }
 }
-
 .header__search {
   float: left;
   margin-left: 50px;
