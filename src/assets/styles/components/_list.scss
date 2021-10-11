@@ -105,9 +105,11 @@
       animation: rotateX 400ms ease-in-out forwards;
       transform-origin: top center;
     }
-    .arrow-icon{
-      transform: rotate(180deg);
-      transition: all 0.4s ease-in-out;
+    .list-item__action {
+      i{
+        transform: rotate(180deg);
+        transition: all 0.4s ease-in-out;
+      }
     }
   }
   &.list-item--active{
