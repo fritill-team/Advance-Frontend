@@ -24,7 +24,7 @@
     }
     .field-wrapper__messages {
       li {
-        display: block;
+        display: block; 
         color: #dc3545;
       }
     }
@@ -389,6 +389,41 @@
     }
   }
 }
+@media(max-width: 767px){
+  .check-field-group{
+    flex-wrap: wrap;
+  }
+}
+@media(max-width: 576px){
+  .field{
+    font-size: 14px;
+    .textarea{
+      font-size: 14px;
+    }
+  }
+  .field-wrapper__label{
+    font-size: 14px;
+   }
+  .field-wrapper__messages{
+    li {
+      font-size: 14px;
+    }
+  }
+  .field{
+  &[type='file']{
+    display: none;
+    & + label{
+      // height: calc(1.4em + 0.75rem + 2px);
+      padding: 1.2rem .8rem;
+      font-size: 14px;
+      &:after{
+        // height: calc(1.4em + 0.75rem);
+        padding: 1.2rem 1.8rem;
+      }
+    }
+  }
+}
+}
 //// start night-mode
 .night-mode{ 
   //start field
@@ -488,7 +523,7 @@
         &[type="checkbox"],
         &[type="radio"] {   
           & + label {
-            color: #dc3545;
+            color: #FFF;
           }
           & + label:before {    
             border: none;
@@ -502,7 +537,7 @@
             border-right: 3px solid #dc3545;
           } 
           & + label {
-            color: #dc3545;
+            color: #FFF;
           }
         }
       
