@@ -582,11 +582,59 @@ $(document)
 // sidebar
 
 const sidebarTemplate = item => `
-  <li class="list__item">
-    <a class="item__link" href="typo.html" title="Explore">
+  <li class="list__item ${item.has_children ? 'sub-menu-item': ''}" data-data='${JSON.stringify(item)}'>
+  
+    <a class="item__link" title="Categories">
       <i class="fas fa-home item__icon"></i>
-      <span class="item__label">Typo</span>
+      <span class="item__label">${item.title}</span>
     </a>
+    ${item.hasClass? `
+      ${item.children.map()}
+      <ul class="sub-menu">
+        <li class="sum-menu__item">
+          <a class="sub-menu__link" href="login.html">Login</a>
+        </li>
+        <li class="sum-menu__item">
+          <a class="sub-menu__link" href="signup.html">Sign up </a>
+        </li>
+        <li class="sum-menu__item">
+          <a class="sub-menu__link" href="forget.html">Forget </a>
+        </li>
+        <li class="sum-menu__item">
+          <a class="sub-menu__link" href="reset.html">Reset </a>
+        </li>
+      </ul>
+    `: ''}
   </li>
 `
+
+$('.list__sidebar').each((i, listContainer) => {
+  let url = $(listContainer).data('link')
+  
+  $.get(url)
+  .then(res => {
+    // let listItem = $(item),
+    // data = listItem.data("data")
+    // listItem.html($(sidebarTemplate(data)))
+    for (let item of res) {
+      // let course = $(item),
+      // data = course.data("data")
+      // course.html($(sidebarTemplate(data)))
+      $(listContainer).append($(sidebarTemplate(item)))
+      console.log(item);
+      // console.log(item);
+      // let listItem = $(),
+      // data = listItem.data("data")
+      // console.log(data);
+      // listItem.html($(sidebarTemplate(data)))
+    }
+    console.log(listContainer);
+    // let listContent = res,
+    
+    // data = $(item)
+    
+    // console.log(list);
+  })
+  .catch(e => console.log(e))
+})
 
