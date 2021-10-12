@@ -1,6 +1,13 @@
 .card-list{
   background-color: #fff;
   margin-bottom: 15px;
+  &.card-list--menu{
+    width: 300px;
+    margin-bottom: 0;
+    .list-item{
+      min-height: 42px;
+    }
+  }
 }
 .list {
   display: flex;
@@ -170,7 +177,7 @@
       }
     }
     .list-item__content{
-      .content__link{
+      span{
         color: #FFF;
       }
     }
@@ -185,7 +192,8 @@
   animation: rotateX 400ms ease-in-out forwards;
   transform-origin: top center;
   transition: all 0.4s ease-in-out;
-  .content__link{
+  span{
+    padding: 0 10px ;
     margin: 0;
   }
 }
@@ -266,8 +274,18 @@ html[dir="rtl"] {
   .list-item{
     padding-right: 5px; 
     .list-item__action {
-      left: 30px;
-      position: absolute;
+      margin-right: auto;
+      margin-left: inherit;
+      .arrow-right{
+        transform: rotate(180deg);
+      }
+    }
+    &.list-item--open{ 
+      .list-item__action {
+        .arrow-right{
+          transform: rotate(0deg); 
+        }
+      }
     }
   }
 }
