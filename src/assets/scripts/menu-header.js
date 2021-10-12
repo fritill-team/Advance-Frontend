@@ -1,21 +1,21 @@
 $(document)
 .on('click', '.header-menu', function () {
-  $(".menu").toggleClass('menu--open');
+  $(".menu").toggleClass('menu--show');
   $("body").toggleClass("overlay");
 })
 
 // close menu on click body
-$(".wrapper__overlay").on("click",function(event){ 
-  $(".menu").toggleClass("menu--open");
+$(".wrapper__overlay").on("click",function(event){
+  $(".menu").toggleClass("menu--show");
   $("body").toggleClass("overlay");
   event.stopPropagation();
-}); 
+});
 // open data menu
 
 $(document).on('click', '.list-item-date', function () {
-  if ($('.menu__date').hasClass('active')) { 
+  if ($('.menu__date').hasClass('active')) {
     $('.menu__date').removeClass('active');
-  }else { 
+  }else {
     $('.menu__date').addClass('active');
   }
-})  
+})

@@ -53,7 +53,7 @@ $('.recommendations-list').each((i, container) => {
   $.get(url)
   .then(res => {
     for (let item of res) {
-      // console.log(item)
+      // console.log(item.data)
       $(list).append($(recommendationTemplate(item)))
       // console.log(item);
     }
@@ -64,5 +64,5 @@ $('.recommendations-list').each((i, container) => {
   })
   .catch(e => console.log(e))
   console.log($('recommendation-details').data('data'));
-  // console.log($(this).attr().data('data'))
 })
+ 

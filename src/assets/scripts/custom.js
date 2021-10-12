@@ -256,7 +256,16 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 
 // select2
-
+$(document)
+  .on('click', '.sub-menu-item', function(){
+    $(this).toggleClass('menu--opened')
+    if($(this).siblings().hasClass('menu--opened')){
+      $(this).siblings().removeClass('menu--opened')
+    }else {
+      console.log(true);
+    } 
+    
+  })
 
 // active class in collapsed sidebar
 
@@ -498,12 +507,61 @@ $(document)
 
 // sidebar
 
-const sidebarTemplate = item => `
-  <li class="list__item">
-    <a class="item__link" href="typo.html" title="Explore">
-      <i class="fas fa-home item__icon"></i>
-      <span class="item__label">Typo</span>
-    </a>
-  </li>
-`
+const sidebarTemplate = function (listItem) {
+  
+  return `
+    ${listItem.map(item => `
+      <li class="list__item ${item.has_children ? 'sub-menu-item' : ''} ${item.is_active ? 'menu--opened': ''}">
+        <a class="item__link" title="Categories">
+          <i class="fas fa-home item__icon"></i>
+          <span class="item__label">${item.title}</span>
+        </a>
+        ${item.has_children ? `
+          <ul class="sub-menu ">
+            ${item.children.map(child => `
+              <li class="sum-menu__item">
+                <a class="sub-menu__link" href="${child.url}">${child.title}</a>
+              </li>
+            `).join('')}
+          </ul>
+        `: ''}
+      </li>
+    `  
+    ).join('')}
+  `
+}
+
+$('.list__sidebar').each(function(i, item) {
+  let listItem = $(item),
+    data = listItem.data("link")
+  listItem.html($(sidebarTemplate(data)))
+
+})
+  
+  // $.get(url)
+  // .then(res => {
+  //   // let listItem = $(item),
+  //   // data = listItem.data("data")
+  //   // listItem.html($(sidebarTemplate(data)))
+  //   for (let item of res) {
+  //     // let course = $(item),
+  //     // data = course.data("data")
+  //     // course.html($(sidebarTemplate(data)))
+  //     $(listContainer).append($(sidebarTemplate(item)))
+  //     console.log(item);
+  //     // console.log(item);
+  //     // let listItem = $(),
+  //     // data = listItem.data("data")
+  //     // console.log(data);
+  //     // listItem.html($(sidebarTemplate(data)))
+  //   }
+  //   console.log(listContainer);
+    // let listContent = res,
+    
+    // data = $(item)
+    
+    // console.log(list);
+//   })
+//   .catch(e => console.log(e))
+// })
 
