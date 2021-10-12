@@ -36,7 +36,7 @@
 }
 .list-item {
   display: flex;
-  // align-items: center;
+  align-items: center;
   // padding-bottom: 5px;
   padding: 0 10px;
   border-bottom: 1px solid #aaa;
@@ -85,7 +85,7 @@
     // a.content__link {
     //   color: rgba($color: #000000, $alpha: 0.7);
     // }
-    min-height: 50px;
+    // min-height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,7 +196,7 @@
     flex-direction: column;
     // margin-left: auto;
     margin: 10px 0 10px auto;
-    height: 60px;
+    // height: 60px;
     justify-content: center;
     span.switch{
       display: inline-block;
