@@ -458,13 +458,13 @@
     }
   }
 
-  .check-field-group {
-    flex-direction: row;
-    div{
-      width: 50%;
-      padding: 5px 5px 10px 0;
-    }
-  }
+  // .check-field-group {
+  //   flex-direction: row;
+  //   div{
+  //     width: 50%;
+  //     padding: 5px 5px 10px 0;
+  //   }
+  // }
 
   .question__content {
     display: flex;
@@ -538,19 +538,19 @@
     margin-top: 10px;
   }
 
-  .field-wrapper {
-    .check-field-group {
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      flex-flow: wrap;
+  // .field-wrapper {
+  //   .check-field-group {
+  //     display: flex;
+  //     width: 100%;
+  //     flex-direction: row;
+  //     flex-flow: wrap;
 
-      .check-field {
-        width: 50%;
-        padding: 5px 5px 10px 0;
-      }
-    }
-  }
+  //     .check-field {
+  //       width: 50%;
+  //       padding: 5px 5px 10px 0;
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 992px) {
@@ -560,9 +560,9 @@
       flex-flow: wrap;
     }
 
-    .check-field-group {
-      flex-direction: column;
-    }
+    // .check-field-group {
+    //   flex-direction: column;
+    // }
     
   }
 }
@@ -572,14 +572,14 @@
     .question__content{
       padding-left: 0;
     }
-    .check-field-group {
-      flex-direction: column;
-      padding-left: 0;
-      div{
-        width: 100%;
-        padding: 5px 5px 10px 0;
-      }
-    }
+    // .check-field-group {
+    //   flex-direction: column;
+    //   padding-left: 0;
+    //   div{
+    //     width: 100%;
+    //     padding: 5px 5px 10px 0;
+    //   }
+    // }
     .question__item {
       width: 100%;
 
@@ -646,18 +646,18 @@
       }
     }
 
-    .field-wrapper {
-      .check-field-group {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        flex-flow: column;
+    // .field-wrapper {
+    //   .check-field-group {
+    //     display: flex;
+    //     width: 100%;
+    //     flex-direction: row;
+    //     flex-flow: column;
 
-        .check-field {
-          width: 100%;
-        }
-      }
-    }
+    //     .check-field {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
   }
   .exams-questions {
     .questions-header {
