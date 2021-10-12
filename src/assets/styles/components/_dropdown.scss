@@ -14,9 +14,8 @@
   .dropdown__content {
     position: absolute;
     top: 100%;
-    left: 0;
-    z-index: 3;
-    width: 100%;
+    right: 0;
+    z-index: 3; 
     border-radius: 5px;
     transform-origin: top;
     background-color: $white;
@@ -35,6 +34,9 @@
       &:hover {
         background-color: rgba($primary, 0.2);
       }
+    }
+    &.dropdown-content-width{
+      width: max-content;
     }
   }
 }
