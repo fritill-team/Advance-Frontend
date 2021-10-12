@@ -24,6 +24,7 @@ import './owl-carousel'
 import "./accordion"
 import "./playlist-video"
 import "./course-card"
+import "./list-dropdown"
 import "./course-content"
 import './dropdown'
 import "./chapter-content"
