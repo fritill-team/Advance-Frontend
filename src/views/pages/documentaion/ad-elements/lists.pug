@@ -77,7 +77,8 @@ block content
 								h5.title-h6 List Title
 							.divider
 							.list-item.list-item--multible
-								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
 									span.overline 
 										|lorem lorem
@@ -89,8 +90,9 @@ block content
 										input(class="field" type="checkbox" id="checkbox-9" name="checkname")
 										label(for="checkbox-9")
 							//- .divider
-							.list-item.list-item--three-lines
-								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
 									span.overline 
 										|lorem lorem
@@ -102,7 +104,9 @@ block content
 										label(for="checkbox-10")
 							//- .divider
 							.list-item.list-item--two-lines
-								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
 									a(href="#" class="body-2 bold") Jose Portilla
 									p.subtitle-2.gray Jose_Portilla@test.com
@@ -111,8 +115,9 @@ block content
 										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
 										label(for="checkbox-11")
 							//- .divider
-							.list-item.list-item--one-line
-								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
 									a(href="#" class="body-2 bold") Jose Portilla
 								.list-item__action 

@@ -38,10 +38,30 @@
   display: flex;
   align-items: center;
   // padding-bottom: 5px;
-  padding: 0 10px;
-  border-bottom: 1px solid #aaa;
+  // padding: 0 10px;
+  &.list-item--with-border{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      background-color: #a9a9a9;
+      opacity: .3;
+    }
+  }
   .image{
-    margin: 10px 0;
+    // min-height: 50px;
+  }
+  .list-item__avatar{
+    padding: 10px ;
+    min-width: 70px;
+    display: flex;
+    justify-content: center;
+    i{
+      color: #43525c;
+    }
   }
   &.list-item--hover {
     &:hover {
@@ -80,7 +100,7 @@
   }
   
   .list-item__content {
-    padding: 10px;
+    padding: 16px 10px;
     width: 100%;
     // a.content__link {
     //   color: rgba($color: #000000, $alpha: 0.7);
@@ -104,6 +124,11 @@
   }
   &.list-item--one-line{
     align-items: center;
+    &.list-item--with-border{
+      &::after{
+        width: calc(100% - 76px);
+      }
+    }
     .image{
       margin: 4px 0;
     }
@@ -123,16 +148,19 @@
       // .subtitle-2{
       //   font-size: 10px;
       // }
-      &:last-child{
-        margin-bottom: 50px;
-        color: red
-      }
+      
     }
     .list-item__action{
       height: auto;
+      padding: 10px;
     }
   }
   &.list-item--two-lines{
+    &.list-item--with-border{
+      &::after{
+        width: calc(100% - 76px);
+      }
+    }
     .list-item__content{
       justify-content: center;
       // min-height: auto;
@@ -142,11 +170,17 @@
     }
     .list-item__action{
       height: auto;
+      padding: 10px;
     }
 
   }
   &.list-item--three-lines{
     align-items: center;
+    &.list-item--with-border{
+      &::after{
+        width: calc(100% - 76px);
+      }
+    }
     .list-item__content{
       .overline{
         margin-bottom: 4px;
@@ -165,11 +199,17 @@
     }
     .list-item__action{
       height: auto;
+      padding: 10px;
       // margin: 20px 0 0 auto;
     }
   }
   &.list-item--multible{
     align-items: flex-start;
+    &.list-item--with-border{
+      &::after{
+        width: calc(100% - 76px);
+      }
+    }
     .list-item__content{
       .overline{
         margin-bottom: 4px;
@@ -188,14 +228,16 @@
     }
     .list-item__action{
       height: auto;
-      margin: 16px 0 0 auto;
+      padding: 10px;
+      margin-top: 10px;
+      // margin: 16px 0 0 auto;
     }
   }
   .list-item__action {
     display: flex;
     flex-direction: column;
-    // margin-left: auto;
-    margin: 10px 0 10px auto;
+    margin-left: auto;
+    padding: 10px;
     // height: 60px;
     justify-content: center;
     span.switch{
