@@ -123,20 +123,17 @@ block content
               .question__item.question__item--cover
                 .image-wrapper
                   img(src="../../assets/images/get_img.jpg", alt="")
-                .field-wrapper.field-wrapper--size
-                  .check-field-group.check-field-group--horizontal
+                .field-wrapper
+                  .check-field-group
                     div
-                      input(class="field-wrapper__input" type="checkbox" id="checkbox-4" name="checkname")
-                      label(for="checkbox-4") Lorem ipsum dolor.
+                      input(class="field" type="checkbox" id="checkbox-1" name="checkname")
+                      label.field--label(for="checkbox-1") Lorem ipsum dolor.
                     div
-                      input(class="field-wrapper__input" type="checkbox" id="checkbox-5" name="checkname")
-                      label(for="checkbox-5") Lorem ipsum dolor.
+                      input(class="field" type="checkbox" id="checkbox-2" name="checkname")
+                      label.field--label(for="checkbox-2") Lorem ipsum dolor.
                     div
-                      input(class="field-wrapper__input" type="checkbox" id="checkbox-6" name="checkname")
-                      label(for="checkbox-6") Lorem ipsum dolor.
-                  .messages
-                    ul 
-                      li Please provide a valid city. 
+                      input(class="field" type="checkbox" id="checkbox-3" name="checkname")
+                      label.field--label(for="checkbox-3") Lorem ipsum dolor.
     .row 
       .col-lg-12 
         .card 
@@ -147,20 +144,17 @@ block content
               .question__item.question__item--cover
                 .image-wrapper
                   img(src="../../assets/images/get_img.jpg", alt="")
-                .field-wrapper.field-wrapper--size
+                .field-wrapper
                   .check-field-group.check-field-group--horizontal
                     div
-                      input(class="field-wrapper__input" type="radio" id="radio-4" name="radioName")
-                      label(for="radio-4") Lorem ipsum dolor.
+                      input(class="field" type="radio" id="radio-1" name="checkname")
+                      label.field--label(for="radio-1") Lorem ipsum dolor.
                     div
-                      input(class="field-wrapper__input" type="radio" id="radio-5" name="radioName")
-                      label(for="radio-5") Lorem ipsum dolor.
+                      input(class="field" type="radio" id="radio-2" name="checkname")
+                      label.field--label(for="radio-2") Lorem ipsum dolor.
                     div
-                      input(class="field-wrapper__input" type="radio" id="radio-6" name="radioName")
-                      label(for="radio-6") Lorem ipsum dolor.
-                  .messages
-                    ul 
-                      li Please provide a valid city.                   
+                      input(class="field" type="radio" id="radio-3" name="checkname")
+                      label.field--label(for="radio-3") Lorem ipsum dolor.                   
     .row
       .col-lg-12
         .card
@@ -401,13 +395,13 @@ block content
           .card__title
             h3 dropdown menu  
           .card__content      
-            div.form-control
-              .dropdown
-                button.btn.btn--primary.dropdown--btn Dropdown
-                .dropdown__content
-                  a.content__link(href="#") lorem 1
-                  a.content__link(href="#") lorem 2
-                  a.content__link(href="#") lorem 3    
+            .page-header__actions
+          .dropdown.dropdown__activator
+            button.btn.btn--primary.dropdown--btn.mb-0 Dropdown
+            .dropdown__content
+              a.content__link(href="#") lorem 1
+              a.content__link(href="#") lorem 2
+              a.content__link(href="#") lorem 3
     .row
       .col-lg-12
         .card
@@ -418,8 +412,8 @@ block content
               .field-wrapper
                 label.field-wrapper__label.short Short Answer*
                 .field-wrapper__content
-                  input(class="field field-wrapper__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                ul.messages
+                  input(class="content__input-answer input-answer--short" type='text' placeholder='short answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
     .row
@@ -432,9 +426,9 @@ block content
               .field-wrapper
                 label.field-wrapper__label.short long Answer*
                 .field-wrapper__content
-                  textarea( id="long-answer" class="field-wrapper__input-answer" name='description' type='text' placeholder='long answer text' value='' maxlength='60')
+                  textarea( id="long-answer" class="content__input-answer input-answer--long" name='description' type='text' placeholder='long answer text' value='' maxlength='60')
                   //- input(class="field-wrapper__input-answer" type='text' placeholder='long answer text' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                ul.messages
+                ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
     .row
