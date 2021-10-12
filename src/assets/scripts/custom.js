@@ -256,7 +256,16 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 
 // select2
-
+$(document)
+  .on('click', '.sub-menu-item', function(){
+    $(this).toggleClass('menu--opened')
+    if($(this).siblings().hasClass('menu--opened')){
+      $(this).siblings().removeClass('menu--opened')
+    }else {
+      console.log(true);
+    } 
+    
+  })
 
 // active class in collapsed sidebar
 
@@ -585,25 +594,18 @@ const sidebarTemplate = function (listItem) {
   
   return `
     ${listItem.map(item => `
-      <li class="list__item ${item.has_children ? 'sub-menu-item': ''}">
+      <li class="list__item ${item.has_children ? 'sub-menu-item' : ''} ${item.is_active ? 'menu--opened': ''}">
         <a class="item__link" title="Categories">
           <i class="fas fa-home item__icon"></i>
           <span class="item__label">${item.title}</span>
         </a>
         ${item.has_children ? `
-          <ul class="sub-menu">
-            <li class="sum-menu__item">
-              <a class="sub-menu__link" href="login.html">Login</a>
-            </li>
-            <li class="sum-menu__item">
-              <a class="sub-menu__link" href="signup.html">Sign up </a>
-            </li>
-            <li class="sum-menu__item">
-              <a class="sub-menu__link" href="forget.html">Forget </a>
-            </li>
-            <li class="sum-menu__item">
-              <a class="sub-menu__link" href="reset.html">Reset </a>
-            </li>
+          <ul class="sub-menu ">
+            ${item.children.map(child => `
+              <li class="sum-menu__item">
+                <a class="sub-menu__link" href="${child.url}">${child.title}</a>
+              </li>
+            `).join('')}
           </ul>
         `: ''}
       </li>
