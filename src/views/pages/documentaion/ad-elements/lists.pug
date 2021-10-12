@@ -34,7 +34,8 @@ block content
 					.card__content
 						.list 
 							.list-item
-								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
 									a(href="#" class="text-2 bold") Jose Portilla
 								.list-item__action 
@@ -78,7 +79,7 @@ block content
 							.divider
 							.list-item
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -88,7 +89,7 @@ block content
 							.divider
 							.list-item
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -98,7 +99,7 @@ block content
 							.divider
 							.list-item
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -108,7 +109,7 @@ block content
 							.divider
 							.list-item
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
 								.list-item__action 
@@ -121,7 +122,7 @@ block content
 						.list 
 							.list-item.list-item--border-bottom
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -131,7 +132,7 @@ block content
 										label(for="checkbox-13")
 							.list-item.list-item--border-bottom
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -141,7 +142,7 @@ block content
 										label(for="checkbox-14")
 							.list-item.list-item--border-bottom
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -151,7 +152,7 @@ block content
 										label(for="checkbox-15")
 							.list-item.list-item--border-bottom
 								img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -167,7 +168,7 @@ block content
 							.list-item.list-item--border-bottom.list-item--condensed
 								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -178,7 +179,7 @@ block content
 							.list-item.list-item--border-bottom.list-item--condensed
 								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -189,7 +190,7 @@ block content
 							.list-item.list-item--border-bottom.list-item--condensed
 								.list-item__icon.mb-1 
 									i.fas.fa-user
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -200,7 +201,7 @@ block content
 							.list-item.list-item--border-bottom.list-item--condensed
 								.list-item__icon.mb-1
 									i.fas.fa-user
-								.list-item__content.pt-2
+								.list-item__content
 									p.overline Lorem, ipsum dolor.
 									a(href="#" class="text-2 bold") Jose Portilla
 									p.text-3.gray Jose_Portilla@test.com
@@ -378,4 +379,45 @@ block content
 										i.fas.fa-print
 									.list-item__content
 										a.content__link(href="#" class="text-2") Lorem ipsum
-
+			.col-lg-4
+				.card-list.condensed
+					.card__content 
+						.list
+							.list__title
+								span.title-name List Title
+							.list-item
+								.list-item__avatar
+									.avatar__progress-list
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.progress-list__checkbox
+											input(class="field" type="checkbox" id="checkbox-140" name="checkname")
+											label(for="checkbox-140")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="text-2 bold") Jose Portilla
+									p.overline Lorem, ipsum dolor.
+							.list-item
+								.list-item__avatar
+									.avatar__progress-list
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.progress-list__checkbox
+											input(class="field" type="checkbox" id="checkbox-130" name="checkname")
+											label(for="checkbox-130")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="text-2 bold") Jose Portilla
+									p.overline Lorem, ipsum dolor.
+							.list-item
+								.list-item__avatar
+									.avatar__progress-list
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.progress-list__checkbox
+											input(class="field" type="checkbox" id="checkbox-120" name="checkname")
+											label(for="checkbox-120")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="text-2 bold") Jose Portilla
+									p.overline Lorem, ipsum dolor.
