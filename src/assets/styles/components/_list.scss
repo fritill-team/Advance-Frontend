@@ -87,7 +87,7 @@
       display: inline-block;
       height: 18px;
       width: 37px;
-      top: 27%;
+      top: 28%;
       right: 25px;
       position: absolute;
       span.switch-btn{
@@ -96,7 +96,7 @@
         top: 0;
         left: 0;
         right: 0;
-        // border-radius: 50%;
+        border-radius: 500px;
         bottom: 0;
         cursor: pointer;
         transition-property: background-color;
@@ -110,7 +110,7 @@
           height: 21px;
           left: 0px;
           bottom: -1px;
-          // border-radius: 50%;
+          border-radius: 50%;
           transition-property: transform, box-shadow;
           transition-duration: .2s;
         }
