@@ -39,5 +39,23 @@
     &.dropdown-content-width{
       width: max-content;
     }
+    &.dropdown-content--top{
+      top: 42px;
+    }
+  }
+}
+html[dir=rtl]{
+  .dropdown{
+    .dropdown__content{
+      right: unset;
+      left: -30px;
+    }
+  }
+}
+.night-mode{
+  .dropdown{
+    .dropdown__content{
+      background-color: #43525c;
+    }
   }
 }
