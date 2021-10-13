@@ -26,10 +26,11 @@ html(lang='en' dir="ltr")
 
 
 	body
+		include ../components/header-player.pug
 		.wrapper.drawers-container
-			block right
+			block left
 			// Menu
-			include ../components/exams-header.pug
+			//- include ../components/exams-header.pug
 			//include ../components/sidebar.pug
 				block sidebar
 					include ../components/sidebar-content.pug
@@ -38,6 +39,6 @@ html(lang='en' dir="ltr")
 			.page-content
 				block content
 
-			block left
+			block right
 				//- block scripts
 		block scripts

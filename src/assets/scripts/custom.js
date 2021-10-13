@@ -564,9 +564,12 @@ $('.list__sidebar').each(function(i, item) {
 //   })
 //   .catch(e => console.log(e))
 // })
-
+// drawers
 $(document)
   .on('click', '.left-open', function(){
+    $('.drawer--left').toggleClass('open')
+  })
+  .on('click', '.header-player__course-name', function(){
     $('.drawer--left').toggleClass('open')
   })
   .on('click', '.right-open', function(){
@@ -577,4 +580,8 @@ $(document)
   })
   .on('click', '.right-open-half', function(){
     $('.drawer--right').toggleClass('open--half')
+  })
+  .on('click', '.drawer .btn', function(){
+    $('.drawer').removeClass('open')
+    $('.drawer').removeClass('open--half')
   })
