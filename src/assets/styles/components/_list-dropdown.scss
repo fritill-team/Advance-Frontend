@@ -65,7 +65,8 @@
     border: 1px solid rgba(34, 36, 38, 0.15);
     z-index: 1;
     right: 0;
-    top: 25px;
+    bottom: 0;
+    top: unset;
     border-radius: 5px;
 
     .content__item {
@@ -101,9 +102,15 @@
     top: 0;
     right: 0;
     // display: none;
-    .more-dropdown__content {
-      top: 38px;
-    }
+    // .more-dropdown__content {
+    //   top: 38px;
+    // }
+  }
+  &.dropdown--header{
+    padding: 18px 8px;
+  }
+  &.dropdown--header-padding{
+    padding: 10px 8px;
   }
 }
 
