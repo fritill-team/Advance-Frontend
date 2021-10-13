@@ -468,7 +468,14 @@
 .night-mode {
   .card-list{
     background-color: #43525c;
-    box-shadow: 0 0 5px -1px #fff;
+    // box-shadow: 0 0 5px -1px #fff;
+    border: 1px solid rgba($color: #fff, $alpha: 0.3);
+  }
+  .list{
+    background-color: transparent;
+    .title-h5{
+      color: $white;
+    }
   }
   .list-item {
     &.list-item--space{
@@ -482,7 +489,15 @@
         background-color: rgba($color: $default, $alpha: 0.2);
       }
     } 
+    .list-item__avatar,.list-item__action{
+      i,svg{
+        color: $white;
+      }
+    }
     .list-item__content {
+      *{
+        color: $white;
+      }
       a.content__link {
         color: rgba($color:$white, $alpha: 0.7);
       }
@@ -495,7 +510,7 @@
     }
   }
   .divider{
-    border-bottom: 1px solid rgba($light-gray, 0.1);
+    border-bottom: 1px solid rgba($white, 0.1);
   }
 }
 // rtl
