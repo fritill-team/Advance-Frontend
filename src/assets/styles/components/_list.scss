@@ -13,7 +13,7 @@
   display: flex;
   background-color: $white;
   flex-flow: column nowrap;
-  padding: 14px 0;
+  // padding: 14px 0;
   .link{
     padding-left: 10px;
     font-weight: 500;
@@ -400,7 +400,7 @@
       transition: 0.3s ease all;
     }
     .list-item__content{
-      padding: 10px;
+      padding: 9px;
     }
     .list-item__action{
       margin-top: 0;
