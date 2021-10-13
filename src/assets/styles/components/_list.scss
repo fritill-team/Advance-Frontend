@@ -166,7 +166,8 @@
     justify-content: center;
     *{
       margin: 0;
-      line-height: 1;
+      transition: .3s ease all;
+      // line-height: 1;
     }
     .body-2{
       font-size: 14px;
