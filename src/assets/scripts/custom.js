@@ -572,3 +572,9 @@ $(document)
   .on('click', '.right-open', function(){
     $('.drawer--right').toggleClass('open')
   })
+  .on('click', '.left-open-half', function(){
+    $('.drawer--left').toggleClass('open--half')
+  })
+  .on('click', '.right-open-half', function(){
+    $('.drawer--right').toggleClass('open--half')
+  })
