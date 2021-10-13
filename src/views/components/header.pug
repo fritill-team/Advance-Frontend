@@ -34,6 +34,7 @@
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-1.gray Jose_Portilla@test.com
 											span.subtitle-2.gray.bold 12/3/1688
+										.list-item__action
 									//- .divider
 									.list-item.list-item--three-lines.list-item--with-border
 										.list-item__avatar
@@ -43,6 +44,7 @@
 												|lorem lorem
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-1.gray Jose_Portilla@test.com
+										.list-item__action
 									//- .divider
 									.list-item.list-item--two-lines.list-item--with-border
 										.list-item__avatar
@@ -51,12 +53,14 @@
 										.list-item__content
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-2.gray Jose_Portilla@test.com
+										.list-item__action
 									//- .divider
 									.list-item.list-item--one-line.list-item--with-border
 										.list-item__avatar
 											img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 										.list-item__content
 											a(href="#" class="body-2 bold") Jose Portilla
+										.list-item__action
 			li 
 				.dropdown.dropdown__activator 
 					a.message(href='#' title='Messages')
@@ -75,6 +79,7 @@
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-1.gray Jose_Portilla@test.com
 											span.subtitle-2.gray.bold 12/3/1688
+										.list-item__action
 									//- .divider
 									.list-item.list-item--three-lines.list-item--with-border
 										.list-item__avatar
@@ -84,6 +89,7 @@
 												|lorem lorem
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-1.gray Jose_Portilla@test.com
+										.list-item__action
 									//- .divider
 									.list-item.list-item--two-lines.list-item--with-border
 										.list-item__avatar
@@ -92,19 +98,59 @@
 										.list-item__content
 											a(href="#" class="body-2 bold") Jose Portilla
 											p.subtitle-2.gray Jose_Portilla@test.com
+										.list-item__action
 									//- .divider
 									.list-item.list-item--one-line.list-item--with-border
 										.list-item__avatar
 											img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 										.list-item__content
 											a(href="#" class="body-2 bold") Jose Portilla 
+										.list-item__action
 			li 	
 				.dropdown.dropdown__activator 
 					img.profile-link__img(src='../../assets/images/hd_dp.jpg' alt='')
 					.dropdown__content.dropdown-content--top
-						a(href="#" class="content__link") lorem 
-						a(href="#" class="content__link") lorem
-						a(href="#" class="content__link") 
+						.card-list
+							.card__content
+								.list 
+									.list-item.list-item--one-line
+										.list-item__avatar
+											img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+										.list-item__content
+											a(href="#" class="body-2 bold") Jose Portilla
+											p.subtitle-1.gray Jose_Portilla@test.com
+									//- a(href="#" class="link") Lorem ipsum dolor
+									.divider
+									.list-item.list-item--one-line
+										.list-item__avatar
+											i.fas.fa-link
+										.list-item__content
+											a(href="#" class="body-2 bold") Lorem ipsum
+										.list-item__action 
+											.action-switch
+												span.switch
+													span.switch-btn
+									.divider
+									.list-item.list-item--one-line.list-item--link
+										//- .list-item__avatar
+										//- 	i.fas.fa-link
+										.list-item__content
+											a(href="#" class="body-2 bold") Lorem ipsum
+									.list-item.list-item--one-line.list-item--link
+										//- .list-item__avatar
+										//- 	i.fas.fa-copy
+										.list-item__content
+											a(href="#" class="body-2 bold") Lorem ipsum
+									.list-item.list-item--one-line.list-item--link
+										//- .list-item__avatar
+										//- 	i.fas.fa-trash-alt
+										.list-item__content
+											a(href="#" class="body-2 bold") Lorem ipsum
+									.list-item.list-item--one-line.list-item--link
+										//- .list-item__avatar
+										//- 	i.fas.fa-print
+										.list-item__content
+											a(href="#" class="body-2 bold") Lorem ipsum
 			//- .more-dropdown.btn--tool.header__sub-menu
 				.more-dropdown__link
 					a.massege__opencard(href='#' title='Messages')
