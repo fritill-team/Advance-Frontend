@@ -565,3 +565,10 @@ $('.list__sidebar').each(function(i, item) {
 //   .catch(e => console.log(e))
 // })
 
+$(document)
+  .on('click', '.left-open', function(){
+    $('.drawer--left').toggleClass('open')
+  })
+  .on('click', '.right-open', function(){
+    $('.drawer--right').toggleClass('open')
+  })

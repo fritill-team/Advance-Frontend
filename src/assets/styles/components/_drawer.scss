@@ -15,6 +15,9 @@
   &.open{
     max-width: 280px;
   }
+  &.open--fluid{
+    max-width: 50vw;
+  }
 }
 .drawers-container{
   display: flex;
