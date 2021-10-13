@@ -468,7 +468,8 @@
     padding: 0;
   }
   .list-item__avatar{
-    padding: 4px 6px;
+    padding: 4px 6px 4px 12px;
+    min-width: auto;
   }
   .list-item__content{
     padding: 6px;
