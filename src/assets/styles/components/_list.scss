@@ -399,6 +399,9 @@
       background-color: rgba($color: $primary, $alpha: 0.2);
       transition: 0.3s ease all;
     }
+    .list-item__content{
+      padding: 10px;
+    }
     .list-item__action{
       margin-top: 0;
     }
