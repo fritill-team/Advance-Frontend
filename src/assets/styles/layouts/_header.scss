@@ -287,7 +287,8 @@ html.night-mode {
   align-items: center;
   margin-top: 0;
 
-  .list__list-item {
+  li{
+    padding: 0px 10px;
     display: inline-block !important;
     vertical-align: middle;
     // .list-item--upload-course {
@@ -348,22 +349,56 @@ html.night-mode {
     }
   }
 
-  .massege__opencard {
+  // .massege__opencard {
+  //   // padding: 18px 8px;
+  //   margin-right: 1em;
+  //   font-size: 16px;
+  //   color: #fff;
+  //   position: relative;
+
+  //   .opencard__icon {
+  //     font-size: 120%;
+  //   }
+
+  //   .opencard__count-num {
+  //     font-size: 11px;
+  //     position: absolute;
+  //     top: 10px;
+  //     right: 8px;
+  //     background: #fab01c;
+  //     color: $white;
+  //     width: 16px;
+  //     height: 16px;
+  //     text-align: center;
+  //     line-height: 1.5;
+  //     border-radius: 100%;
+  //     font-weight: 500;
+  //   }
+  // }
+  .profile-link__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid $white;
+    border-radius: 100%;
+    // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+  }
+  .message {
     // padding: 18px 8px;
-    margin-right: 1em;
+    // margin-right: 1em;
     font-size: 16px;
     color: #fff;
     position: relative;
 
-    .opencard__icon {
+    .message__icon {
       font-size: 120%;
     }
 
-    .opencard__count-num {
+    .message__count-num {
       font-size: 11px;
       position: absolute;
-      top: 10px;
-      right: 8px;
+      top: -8px;
+      right: -8px;
       background: #fab01c;
       color: $white;
       width: 16px;
@@ -378,14 +413,6 @@ html.night-mode {
   .item__profile-link {
     display: flex;
 
-    .profile-link__img {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      border: 2px solid $white;
-      border-radius: 100%;
-      // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
-    }
 
     .profile-link__content {
       width: 80%;

@@ -378,6 +378,7 @@
       i{
         transform: rotate(180deg);
         transition: all 0.4s ease-in-out;
+        color: #43525c;
       }
     }
   }
@@ -421,8 +422,8 @@
   transform-origin: top center;
   transition: all 0.4s ease-in-out;
   span{
-    padding: 0 10px ;
-    margin: 0;
+    // padding: 0 10px ;
+    // margin: 0;
   }
 }
 @keyframes rotateX {
@@ -466,6 +467,33 @@
 }
 //night mood
 .night-mode {
+  .list{
+    background-color: #43525c;
+  }
+  .list-item__avatar{ 
+    i{
+      color: $accent;
+    }
+  }
+  .list-item__content{
+    .body-2{
+      color: #FFF;
+    }
+  }
+.list-item__action{
+  i{
+    color: $accent;
+  }
+}
+.list-item{
+  &.list-item--open{ 
+    .list-item__action {
+     i{
+        color: $accent;
+      }
+    }
+  } 
+}
   .card-list{
     background-color: #43525c;
     // box-shadow: 0 0 5px -1px #fff;
