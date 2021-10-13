@@ -525,6 +525,14 @@
       &:hover {
         background-color: rgba($color: $default, $alpha: 0.2);
       }
+    }
+    &.list-item--link{
+      &:hover{
+        background-color: transparent;
+        .body-2{
+          color: $accent;
+        }
+      }
     } 
     .list-item__avatar,.list-item__action{
       i,svg{
