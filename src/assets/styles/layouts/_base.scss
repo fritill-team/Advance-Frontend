@@ -4,6 +4,20 @@ body {
   min-height: 100%;
   background-color: $default;
   // overflow-x: hidden;
+  &.with--overlay-full{
+    .modal-overlay{
+      display: block;
+      position: fixed;
+      z-index: 6;
+    }
+  }
+  &.with--overlay{
+    .modal-overlay{
+      display: block;
+      position: fixed;
+      z-index: 4;
+    }    
+  }
 }
 
 ::-moz-selection {
@@ -34,37 +48,41 @@ ul{
   flex-wrap: nowrap;
 }
 
-.wrapper__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: darken($primary,1);
-  z-index: -1;
-  opacity: 0;
-  &.overlay--modal{
-    z-index: 7;
-  }
-}
+// .wrapper__overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   height: 100%;
+//   width: 100%;
+//   background-color: darken($primary,1);
+//   z-index: -1;
+//   opacity: 0;
+//   &.overlay--modal{
+//     z-index: 7;
+//   }
+// }
 
 .open-side-nav {
-  .wrapper__overlay {
-    z-index: 5;
-    opacity: 0.3;
-    &.overlay--modal{
-      z-index: 7;
-    }
-  }
+  // .wrapper__overlay {
+  //   z-index: 5;
+  //   opacity: 0.3;
+  // }
+  // &.with--overlay{
+  //   .modal-overlay{
+  //     display: block;
+  //     position: fixed;
+  //     z-index: 5;
+  //   }
+  // }
 }
-.overlay { 
-  .wrapper__overlay {
-    z-index: 5;
-    opacity: 0.3;
-  }
-  .header {
-    z-index: 6;
-  } 
-}
+// .overlay { 
+//   .wrapper__overlay {
+//     z-index: 5;
+//     opacity: 0.3;
+//   }
+//   .header {
+//     z-index: 6;
+//   } 
+// }
