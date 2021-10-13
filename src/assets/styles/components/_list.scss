@@ -463,12 +463,21 @@
   border-bottom: 1px solid rgba($darkBlack, 0.1);
 }
 .condensed{
-  padding: 0;
-  .card__content{
-    padding-left: 0;
-  }
-  .list-item__action {
+  // padding: 0;
+  .list{
     padding: 0;
+  }
+  .list-item__avatar{
+    padding: 4px 6px;
+  }
+  .list-item__content{
+    padding: 6px;
+  }
+  // .card__content{
+  //   padding-left: 0;
+  // }
+  .list-item__action {
+    padding: 4px 6px;
   }
   @media (min-width: 0px) and (max-width: 400px) {
     overflow: scroll;
