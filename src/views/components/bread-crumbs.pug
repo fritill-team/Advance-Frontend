@@ -13,10 +13,20 @@ mixin pageTitle(className)
           .dropdown.dropdown__activator
             button.btn.btn--primary.dropdown--btn.mb-0 Dropdown
             .dropdown__content
-              a.content__link(href="#") lorem 1
-              a.content__link(href="#") lorem 2
-              a.content__link(href="#") lorem 3
+              .list.condensed
+                a(href="#" class="list-item list-item--one-line list-item--open") 
+                  .list-item__avatar
+                    i.far.fa-copy
+                  .list-item__content
+                    span.body-2.bold Edit  
+                  .list-item__action
+                a(href="#" class="list-item list-item--one-line list-item--open") 
+                  .list-item__avatar
+                    i.far.fa-copy
+                  .list-item__content
+                    span.body-2.bold Delete
+                  .list-item__action
       .page-header__info 
         span lorem
         span lorem     
-      block
+      block 

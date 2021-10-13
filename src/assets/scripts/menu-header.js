@@ -1,12 +1,12 @@
 $(document)
 .on('click', '.header-menu', function () {
-  $(".menu").toggleClass('menu--show');
+  $(".menu").toggleClass('menu--open');
   $("body").toggleClass("overlay");
 })
 
 // close menu on click body
 $(".wrapper__overlay").on("click",function(event){
-  $(".menu").toggleClass("menu--show");
+  $(".menu").toggleClass("menu--open");
   $("body").toggleClass("overlay");
   event.stopPropagation();
 });
