@@ -37,6 +37,9 @@ const recommendationForm = () => `
     </ul>
   </div>
 </form>
+<div id="recommendations">
+
+</div>
 
 `
 

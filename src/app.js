@@ -20,7 +20,7 @@ import "./assets/vendor/sortable.js";
 // js
 import "./assets/scripts/index";
 
-import {ListLoader} from "./assets/scripts/backend_scripts/panel-loader"
+import { ListLoader } from "./assets/scripts/backend_scripts/panel-loader"
 
 
 let up = $('.count-up'),
@@ -62,26 +62,23 @@ export default {
 
 
 class Resource {
-  listingURL = null
-  formURL = null
-  deleteURL = null
-
-  RESOURCE = {
-    // items
-    localItems: [],
-    get items() {
-      return this.localItems
-    },
-    set items(value) {
-      this.localItems = value
-      this.itemsListener(value)
-    },
-    itemsListener(v) {
-      countable.val(v)
-    },
-    // search
-    localSearch: '',
+  get items() {
+    return this.localItems
   }
+  set items(value) {
+    this.localItems = value
+    this.itemsListener(value)
+  }
+  itemsListener(v) {
+    countable.val(v)
+  }
+  // RESOURCE = {
+  //   // items
+  //   localItems: [],
+
+  //   // search
+  //   localSearch: '',
+  // }
 
   constructor($container, options) {
     this.prefix = options.prefix ? options.prefix : ''
@@ -89,15 +86,15 @@ class Resource {
     this.listingURL = options.listingURL
     this.formURL = options.formURL
     this.deleteURL = options.deleteURL
-    this.itemTemplate = options.itemTemplate
-    this.formTemplate = options.formTemplate
-    this.listingTemplate = options.listingTemplate
-    this.defaultStructure = options.defaultStructure ? options.defaultStructure : this.defaultStructure
+    for (let item in options)
+      if (Object.prototype.hasOwnProperty.call(item, options))
+        this[item] = options[item]
+    this.localItems = []
   }
 
   fetch(Q = null) {
-    $.get(this.listingURL, {q: Q})
-      .then(res => this.RESOURCE.items = res)
+    $.get(this.listingURL, { q: Q })
+      .then(res => {this.RESOURCE.items = res;})
       .catch(e => this.handleError(e))
 
   }
@@ -115,14 +112,14 @@ class Resource {
         </div>
         <div class="col-6">${this.formTemplate()}</div>
         </div>
-    </div>`)
-  }
+    </div>`)}
 
   async build() {
-    await this.fetch()
+    await this.fetch('http://localhost:3000/')
     this.$container.empty()
     this.$container.append(this.defaultStructure())
   }
+  
 }
 
 
@@ -134,6 +131,9 @@ let recommendations = new Resource($('#recommendations'), {
     return ''
   },
   formTemplate(item, url) {
+    return ''
+  },
+  searchForm(item){
     return ''
   },
   listingTemplate() {
