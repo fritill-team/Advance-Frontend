@@ -171,12 +171,12 @@
       &:checked {
         & + label {
           &:before {
-            background-color: rgba($color: #576874, $alpha: 0.3);
+            background-color: rgba($color: $primary, $alpha: 0.3);
           }
 
           &:after {
             left: 18px;
-            background-color: #FFF;
+            background-color: $primary;
           }
         }
       }
@@ -323,7 +323,7 @@
       font-size: 14px;
       line-height: 1;
       cursor: pointer;
-      color: $primary;
+      color: $gray;
       margin: 7px 0px;
       padding-left: 27px;
       &:hover:before{
@@ -343,7 +343,7 @@
       top: 0;
       width: 18px;
       height: 18px;
-      border: 1px solid $primary;
+      border: 1px solid $gray;
       background: #FFF;
       transition: all 275ms;
     }
@@ -484,7 +484,7 @@
     &[type="checkbox"],
     &[type="radio"] { 
       & + label {
-        opacity: 0.5;
+        opacity: 0.3;
         &:hover{
           opacity: 1;
         }
@@ -495,6 +495,14 @@
       &[type="radio"] { 
         & + label {
           opacity: 1; 
+          &:before{
+            background: $primary;
+            border: 1px solid $primary;
+          }
+          &:after{
+            border-bottom: 3px solid #FFF;
+            border-right: 3px solid #FFF;
+          }
         }  
       }
     }
