@@ -390,6 +390,7 @@ ul {
   input:focus,
   textarea:focus {
     outline: 0;
-    box-shadow: 0 0 4px 0 rgba(#FFF, 0.5);  
+    // box-shadow: 0 0 4px 0 rgba(#FFF, 0.5);  
+    border : 1px solid rgba(#FFF, 0.5);
   } 
 }
