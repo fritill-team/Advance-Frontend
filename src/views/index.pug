@@ -8,31 +8,9 @@ block button-collapsed
 block menu-header
   include ./components/menu-list.pug
 block my-courses
-  li(data-toggle="dropdown")
-    a.white.body-2(href='#' title='Messages')
-      | My Courses
-    //- .menu.dropdown_mn.massege__menu.dropdown
-      a.item.menu--item(href='#')
-        .item__profile-link
-          img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-          .profile-link__content
-            p.text-1.content__name Rock William
-
-      a.item.menu--item(href='#')
-        .item__profile-link
-          img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-          .profile-link__content
-            p.text-1.content__name Rock William
-
-      a.item.menu--item(href='#')
-        .item__profile-link
-          img.profile-link__img(src='../../assets/images/left-imgs/img-1.jpg' alt='')
-          .profile-link__content
-            p.text-1.content__name Rock William
-
-//- block btn-link
-
-  //- .nav//- include ./components/general-component/btn.pug //- +btn-link('btn btn--primary btn--rounded semi-bold', 'Create New Course' , '#create_new_course.html')
+	li
+		a.white.body-2.notification__item(href='#')
+			|My Courses
 block content
   .container
     .row
