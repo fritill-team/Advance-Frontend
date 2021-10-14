@@ -33,7 +33,6 @@
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
       border: 1px solid #dc3545;
       color: #dc3545;
-
       &[type="checkbox"],
       &[type="radio"] {
         & + label:before {
@@ -43,8 +42,17 @@
         & + label {
           color: #dc3545;
         }
+        & + label{
+          &:hover:before{
+            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.2);
+          }
+        }
+        & + label:active{
+          &:hover:before{
+            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.5);
+          }
+        }
       }
-
       &[type="checkbox"] {
         &:checked + label:after {
           border-bottom: 3px solid #dc3545;
@@ -99,8 +107,6 @@
         display: none;
         & + label{
           font-size: 14px;
-          // &:after{
-          // }
         }
       }
       &[type="checkbox"],
@@ -161,11 +167,12 @@
       &:checked {
         & + label {
           &:before {
-            background-color: rgba($color: #a9a9a9, $alpha: 0.3);
+            background-color: rgba($color: #576874, $alpha: 0.3);
           }
 
           &:after {
             left: 18px;
+            background-color: #FFF;
           }
         }
       }
@@ -238,7 +245,7 @@ select{
   list-style: none;
 
   li {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     padding: 6px 16px;
     color: $primary;
@@ -267,7 +274,6 @@ select{
   width: 100%;
   border-radius: 5px;
   padding: 8px 16px;
-  // box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e5e5;
   background: #fff;
   color: $input-color;
@@ -288,8 +294,16 @@ select{
       line-height: 1;
       cursor: pointer;
       color: $primary;
-      // display: inline-block;
-      margin: 5px 0px;
+      margin: 7px 0px;
+      padding-left: 27px;
+      &:hover:before{
+        box-shadow: 0px 0px 0px 8px rgba($primary, 0.2);
+      }
+    }
+    & + label:active{
+      &:hover:before{
+        box-shadow: 0px 0px 0px 8px rgba($primary, 0.5);
+      }
     }
 
     & + label:before {
@@ -325,7 +339,6 @@ select{
     & + label:before {
       border-radius: 2px;
     }
-
     &:checked + label:after {
       left: 6px;
       top: 2px;
@@ -333,18 +346,15 @@ select{
       border-bottom: 3px solid $primary;
       border-right: 3px solid $primary;
     }
-
   }
 
   &[type="radio"] {
     & + label:before {
       border-radius: 50%;
     }
-
     &:not(:checked) + label:after {
       opacity: 0;
     }
-
     &:checked + label:after {
       left: 3px;
       top: 3px;
@@ -352,7 +362,6 @@ select{
       border: 6px solid $primary;
       border-radius: 50%;
     }
-
   }
 
   &[type='file']{
@@ -365,7 +374,7 @@ select{
       left: 0;
       z-index: 1;
       height: calc(1.4em + 0.75rem + 2px);
-      padding: 1.2rem 1rem;
+      padding: 1.2rem 0.9rem;
       font-weight: 400;
       line-height: 0;
       color: $primary;
@@ -381,7 +390,7 @@ select{
         z-index: 3;
         display: block;
         height: calc(1.4em + 0.75rem);
-        padding: 1.2rem 2rem;
+        padding: 1.2rem 1rem;
         color: $white;
         content: "Upload File";
         background-color: $primary;
@@ -400,25 +409,9 @@ select{
     transition: all 0.3s ease;
     width: 100%;
     margin: 0 10px 0 0;
-    // padding: 8px 16px;
     position: relative;
-    // &::before{
-    //   position: absolute;
-    //   content: "";
-    //   bottom: 0;
-    //   left: 50%;
-    //   width: 100%;
-    //   height: 2px;
-    //   background-color: $primary;
-    //   transition: 0.4s;
-    // }
     &:focus {
       border-bottom: 1px solid rgba($primary, 0.5);
-      //    &::before{
-      //     transition: 0.4s;
-      //     width: 100%;
-      //     left: 0;
-      //  }
     }
   }
 
@@ -432,12 +425,9 @@ select{
     color: $input-color;
     border-radius: 10px;
     padding: 1em;
-    // border: none;
     resize: none;
-    // box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
     &:focus {
       color: $input-color;
-      // box-shadow: 0 0 4px 0 rgba($primary, 0.5);
     }
   }
   &.field--with-icon{
@@ -447,7 +437,15 @@ select{
     &[type="checkbox"] {
       & + label {
         padding-top: 2px;
+        &:hover:before{
+          box-shadow: 0px 0px 0px 8px rgba(#e5e5e5, 0.2);
+        }
       }
+      & + label:active{
+        &:hover:before{
+          box-shadow: 0px 0px 0px 8px rgba(#e5e5e5, 0.5);
+        }
+      } 
       & + label:before {
         border: none;
         background: #e5e5e5; 
@@ -467,16 +465,7 @@ select{
         padding-top: 2px;
       }
       & + label:before {
-        // border: none;
-        // background: #e5e5e5; 
         border-radius: 50%;
-      }
-      &:checked + label:after {
-        // left: 6px;
-        // top: 2px;
-        // width: 6px;
-        // border-bottom: 3px solid $primary;
-        // border-right: 3px solid $primary;
       }
     }
   }
@@ -484,11 +473,41 @@ select{
     &[type="checkbox"] { 
       & + label:before { 
         border: 1px solid $accent;
-        // background: #e5e5e5; 
       }
       &:checked + label:after { 
         border-bottom: 3px solid $accent;
         border-right: 3px solid $accent;
+      }
+      & + label{
+        &:hover:before{
+          box-shadow: 0px 0px 0px 8px rgba($accent, 0.2);
+        }
+      }
+      & + label:active{
+        &:hover:before{
+          box-shadow: 0px 0px 0px 8px rgba($accent, 0.5);
+        }
+      } 
+    }
+  }
+  // checked opacity
+  &.field--checked{
+    display: none; 
+    &[type="checkbox"],
+    &[type="radio"] { 
+      & + label {
+        opacity: 0.5;
+        &:hover{
+          opacity: 1;
+        }
+      }  
+    }
+    &:checked {
+      &[type="checkbox"],
+      &[type="radio"] { 
+        & + label {
+          opacity: 1; 
+        }  
       }
     }
   }
@@ -509,6 +528,9 @@ select{
 @media(max-width: 767px){
   .check-field-group{
     flex-wrap: wrap;
+    label {
+      width: 50%;
+    }
   }
 }
 @media(max-width: 576px){
@@ -533,10 +555,6 @@ select{
       // height: calc(1.4em + 0.75rem + 2px);
       padding: 1.2rem .8rem;
       font-size: 14px;
-      &:after{
-        // height: calc(1.4em + 0.75rem);
-        padding: 1.2rem 1.8rem;
-      }
     }
   }
 }
@@ -590,11 +608,10 @@ select{
     }
 
     &.field--underline{
-      background: transparent;
+      background: #43525c;
       box-shadow: none;
       border: 0;
-      border-bottom: 1px solid rgba(#57687451 ,.5);
-
+      border-bottom: 1px solid rgba(#57687451 ,.5); 
     }
     &.textarea {
       background: #576874;
@@ -674,27 +691,39 @@ select{
         &.field--underline{
           border-bottom: 1px solid rgba( #dc3545 , 1);
       }
-      }
+     }
     }
-    .switch {  
-      input[type="checkbox"],
-      input[type="radio"]{
-        display: none; 
-        &:checked {
-          & + label {
-            &:before {
-              background-color:  #576874;
-            } 
+    .field{
+      // accent color in night-mode
+      &.field--accent{
+        &[type="checkbox"] { 
+          & + label:before { 
+            border: 1px solid $accent;
+            // background: #e5e5e5; 
+          }
+          &:checked + label:after { 
+            border-bottom: 3px solid $accent;
+            border-right: 3px solid $accent;
           }
         }
       }
-      label { 
-        &:before { 
-          background-color:  #576874;
-          box-shadow: 0 0 3px #576874; 
-        } 
-        &:after { 
-          background-color: #FFF; 
+      // night-mode invert
+      &.field--invert{
+        &[type="checkbox"] {
+          & + label {
+            padding-top: 2px;
+          }
+          & + label:before {
+            border: none;
+            background: #e5e5e5; 
+          }
+          &:checked + label:after {
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            border-bottom: 3px solid $primary;
+            border-right: 3px solid $primary;
+          }
         }
       }
     }
@@ -715,7 +744,7 @@ select{
      li {
        color: #FFF;
      }
-   }
+   } 
 }
 
 html[dir="rtl"]{
