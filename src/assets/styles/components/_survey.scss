@@ -124,14 +124,14 @@ span#percentage {
   align-items: center;
   font-size: 16px;
   width: 100%;
-  @media (min-width: 0px) and (max-width: 992px){
-    position: fixed;
-    z-index: 4px;
-    top: 0;
-    width:75% ;
-    transition: all 0.3s ease-in;
-    bottom: 0;
-  }
+  // @media (min-width: 0px) and (max-width: 992px){
+    // position: fixed;
+    // z-index: 4px;
+    // top: 0;
+    // width:75% ;
+    // transition: all 0.3s ease-in;
+    // bottom: 0;
+  // }
 }
 .form-question{
   height: 80%;
@@ -150,7 +150,40 @@ span#percentage {
       color: $info;
     }
   }
-
+  
+  .form-group__label{
+    transition: .3s ease all;
+    border: 4px solid $primary;
+    border-radius: 50%;
+    overflow: hidden;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 102%;
+      height: 102%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      transition: inherit;
+      display: none;
+    }
+    &:hover{
+      border-color: $accent;
+      &::before{
+      }
+    }
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+  }
   .form-question__wrap{
     display: flex;
     flex-direction: row;
@@ -167,10 +200,13 @@ span#percentage {
         opacity: 0;
         &:checked + .form-group__label{
           color: $accent;
-          border: 2px solid $accent;
+          // border: 2px solid $accent;
+          border-color: $accent;
+          &::before{
+          }
         }
       }
-      input:is([type=checkbox], [type="radio"]) + .form-group__label{
+      input:is([type="checkbox"], [type="radio"]) + .form-group__label{
         padding: 10px 15px;
         display: flex;
         justify-content: center;
@@ -179,31 +215,40 @@ span#percentage {
         font-weight: 300;
         color: $primary;
         margin: 1em;
-        border: 2px solid $primary;
+        // border: 2px solid $primary;
         width: 5em;
         height: 5em;
         border-radius: 100%;
         position: relative;
         overflow: hidden;
         z-index: 2;
-        img{
-          width: 5em;
-          height: 5em;
-          z-index: -1;
-          position: absolute;
-        }
+        // img{
+        //   width: 100%;
+        //   height: 100%;
+        //   z-index: -1;
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   object-fit: cover;
+        // }
         &:hover{
           color: $accent;
           cursor: pointer;
-          border: 2px solid $accent;
+          // border: 2px solid $accent;
         }
         &:focus{
           border-color: $primary;
           background-color: $info;
         }
-        @media (min-width: 0px) and (max-width: 650px) {
-          width: 4em;
-          height: 4em;
+        @media (max-width: 992.98px) {
+          font-size: 1.8em;
+        }
+        @media (max-width: 560px) {
+          font-size: 1.5em;
+        }
+        @media (max-width: 375.98px) {
+          font-size: 1.3em;
         }
       }
       .label-style{

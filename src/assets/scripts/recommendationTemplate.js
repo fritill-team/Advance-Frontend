@@ -66,6 +66,6 @@ $('.recommendations-list').each((i, container) => {
     $(container).append(row)
   })
   .catch(e => console.log(e))
-  console.log($('recommendation-details').data('data'));
+  // console.log($('recommendation-details').data('data'));
 })
  

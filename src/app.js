@@ -89,6 +89,7 @@ class Resource {
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(item, options))
         this[item] = options[item]
+        console.log(item);
     this.localItems = []
   }
 
@@ -115,11 +116,11 @@ class Resource {
     </div>`)}
 
   async build() {
-    await this.fetch('http://localhost:3000/')
+    await this.fetch('http://localhost:3000/recommendations/')
     this.$container.empty()
     this.$container.append(this.defaultStructure())
   }
-  
+
 }
 
 
