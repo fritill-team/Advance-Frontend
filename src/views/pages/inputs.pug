@@ -23,6 +23,15 @@ block content
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
+              // input Default
+              p.body-2 1- inputs Default class=(field-wrapper)
+              .field-wrapper.field-wrapper--arrow
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
               // input smaller
               p.body-2 2- inputs field sm class=(field-wrapper--sm)
               .field-wrapper.field-wrapper--sm
@@ -59,6 +68,25 @@ block content
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
+              // input field-wrapper--error
+              p.body-2 5- inputs field error class=(field--arrow)
+              .field-wrapper
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
+              // input Default
+              p.body-2 1- inputs Default class=(field-wrapper)
+              .field-wrapper
+                label.field-wrapper__label Course Title*
+                .field-wrapper__content
+                  input(class="field" type='text' disabled="disabled"  placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                ul.field-wrapper__messages
+                  li
+                    | Please provide a valid city.
+              // input Default
           .card.my-4
             .card__title
               h3 input field file
@@ -160,12 +188,6 @@ block content
                       input(class="field" type="checkbox" id="checkbox-9" name="checkname")
                       label(for="checkbox-9")
                   // input checkbox type checkbox 
-                  p.body-2 5- input checkbox disabled add class=(field--invert) in input
-                  .field-wrapper
-                    div
-                      input(class="field field--invert" type="checkbox" id="checkbox-100" disabled name="checkname")
-                      label(for="checkbox-100")
-                  // input checkbox type checkbox 
                   p.body-2 6- input checkbox rounded add class=(field--rounded) in input
                   .field-wrapper
                     div
@@ -189,6 +211,12 @@ block content
                     div
                       input(class="field field--checked" type="checkbox" id="checked--200" checked  name="checkname")
                       label(for="checked--200")
+                  // input checkbox type checkbox 
+                  p.body-2 9- input checkbox readonly and checked
+                  .field-wrapper
+                    div
+                      input(class="field" type="checkbox" id="checked--210"  checked disabled="disabled" name="checkname")
+                      label(for="checked--210")
 
       .row
         .col-12
@@ -319,7 +347,7 @@ block content
                   .field-wrapper
                     label.field-wrapper__label Course Radio Button*
                     .field-wrapper__content
-                      textarea( id="id_course_description" class="textarea field" rows='5' name='description' placeholder='Insert your course description')
+                      textarea( id="id_course_description" rows='5' name='description' placeholder='Insert your course description')
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
