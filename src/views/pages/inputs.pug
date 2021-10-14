@@ -14,10 +14,10 @@ block content
             .card__title
               h3 inputs field
             .card__content
-              .field-wrapper.field-wrapper--error
+              .field-wrapper
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
@@ -38,14 +38,14 @@ block content
               .field-wrapper
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                  input(class="field field--underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
-              .field-wrapper
+              .field-wrapper.field-wrapper--error
                 label.field-wrapper__label Course Title*
                 .field-wrapper__content
-                  input(class="field field--underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
                 ul.field-wrapper__messages
                   li
                     | Please provide a valid city.
@@ -115,13 +115,22 @@ block content
                         label(for="checkbox-6") Lorem ipsum dolor.
                     ul.field-wrapper__messages
                       li Please provide a valid city.
-                  .field-wrapper
-                    div
-                      input(class="field" type="checkbox" id="checkbox-8" name="checkname")
-                      label(for="checkbox-8")
+                  .field-wrapper 
                     div
                       input(class="field" type="checkbox" id="checkbox-9" name="checkname")
                       label(for="checkbox-9")
+                    div
+                      input(class="field field--invert" type="checkbox" id="checkbox-100" name="checkname")
+                      label(for="checkbox-100")
+                    div
+                      input(class="field field--rounded" type="checkbox" id="checkbox-89" name="checkname")
+                      label(for="checkbox-89")
+                    div
+                      input(class="field field--accent" type="checkbox" id="checkbox-55" name="checkname")
+                      label(for="checkbox-55")
+                    div
+                      input(class="field field--accent field--rounded" type="checkbox" id="checkbox-45" name="checkname")
+                      label(for="checkbox-45")
       .row
         .col-12
           .card.my-4
@@ -171,9 +180,11 @@ block content
                       input(class="field" type="radio" id="radio-8" name="radioName")
                       label(for="radio-8")
                       //check-field out wrapper
-                  .switch
-                    input#switch(type="checkbox", name="")
-                    label(for="switch")
+                  .field-wrapper
+                    label.field-wrapper__label switch*
+                    .switch
+                      input#switch(type="checkbox", name="")
+                      label(for="switch")
       .row
         .col-12
           .card.my-4
@@ -182,7 +193,7 @@ block content
             .card__content
               .row
                 // input__select
-                .col-md-6.col-sm-6
+                .col-md-12.col-sm-12
                   .field-wrapper
                     label.field-wrapper__label Start Select :
                     .field-wrapper__content
@@ -209,7 +220,7 @@ block content
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
-                .col-md-6.col-sm-6
+                .col-md-12.col-sm-12
                   .field-wrapper.field-wrapper--error
                     label.field-wrapper__label Start Select :
                     .field-wrapper__content
@@ -222,15 +233,7 @@ block content
                         option(value='5') option 5
                     ul.field-wrapper__messages
                       li
-                        | Please provide a valid city.
-                .col-md-6.col-sm-6
-                  .field-wrapper
-                    label.field-wrapper__label Course Title*
-                    .field-wrapper__content
-                      input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                    ul.field-wrapper__messages
-                      li
-                        | Please provide a valid city.
+                        | Please provide a valid city. 
       .row
         .col-12
           .card.my-4
