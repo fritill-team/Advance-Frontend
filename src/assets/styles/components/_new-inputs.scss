@@ -47,12 +47,12 @@
         }
         & + label{
           &:hover:before{
-            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.2);
+            box-shadow: 0 0 6px 3px rgba(#dc3545, 0.2);
           }
         }
         & + label:active{
           &:hover:before{
-            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.5);
+            box-shadow: 0 0 6px 3px rgba(#dc3545, 0.5);
           }
         }
       }
@@ -164,7 +164,7 @@
   }
   }
   // start switch
-  .switch {  
+  .switch {
     input[type="checkbox"],
     input[type="radio"]{
       display: none;
@@ -221,28 +221,59 @@
     .field-wrapper__content{
       position: relative;
       &:after{
-        position: absolute; 
-        top: 43%;
+        position: absolute;
+        top: 35%;
         transform: translateY(44%);
         right: 20px;
         content: "";
-        border-right: 3px solid #686f7a; 
+        border-right: 3px solid #686f7a;
         border-bottom: 3px solid #686f7a;
         height: 10px;
         width: 10px;
-        transform: rotate(-136deg);  
+        transform: rotate(42deg);
         transition: all 0.3s ease-in-out ;
         display: block;
-      } 
+      }
       &:focus-within{
         &:after{
-          top: 38%;
+          top: 46%;
           transition: all 0.3s ease-in-out ;
-          transform: rotate(42deg);
+          transform: rotate(-136deg);
         }
       }
     }
   }
+  // &.field-wrapper--active{
+  //   position: relative;
+
+  //   & > div {
+  //     &:before{
+  //       position: absolute;
+  //       content: "";
+  //       display: block;
+  //       width: 18px;
+  //       height: 18px;
+  //       left: 0px;
+  //       top: 0px;
+  //       border-radius: 50%;
+  //       box-shadow: 0px 0px 0px 8px rgba($primary, 0.2);
+  //       background-color: primary ;
+  //     }
+  //     &:hover:before{
+  //       box-shadow: 0px 0px 0px 8px rgba($primary, 0.2);
+  //       }
+  //       & > label{
+  //         &::before{
+  //           // position: absolute;
+  //         }
+  //       }
+  //     }
+  //   & + div:active{
+  //     &:hover:before{
+  //       box-shadow: 0px 0px 0px 8px rgba($primary, 0.5);
+  //     }
+  //   }
+  // }
 }
 
 .field-wrapper__label{
@@ -319,7 +350,6 @@
 
     & + label {
       position: relative;
-      padding-left: 22px;
       font-size: 14px;
       line-height: 1;
       cursor: pointer;
@@ -327,14 +357,16 @@
       margin: 7px 0px;
       padding-left: 27px;
       &:hover:before{
-        box-shadow: 0px 0px 0px 8px rgba($primary, 0.2);
+        box-shadow: 0 0 6px 3px rgba($primary, 0.2);
+        // border-radius: 50%;
       }
     }
     & + label:active{
       &:hover:before{
-        box-shadow: 0px 0px 0px 8px rgba($primary, 0.5);
+        box-shadow: 0 0 6px 3px rgba($primary, 0.5);
+        // border-radius: 50%;
       }
-    } 
+    }
     & + label:before {
       content: '';
       display: block;
@@ -454,47 +486,53 @@
       }
       & + label:before {
         border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+      & + label:after {
+        left: 7px;
+        top: 3px;
       }
     }
   }
   &.field--accent{
-    &[type="checkbox"] { 
-      & + label:before { 
+    &[type="checkbox"] {
+      & + label:before {
         border: 1px solid $accent;
       }
-      &:checked + label:after { 
+      &:checked + label:after {
         border-bottom: 3px solid $accent;
         border-right: 3px solid $accent;
       }
       & + label{
         &:hover:before{
-          box-shadow: 0px 0px 0px 8px rgba($accent, 0.2);
+          box-shadow: 0 0 6px 3px rgba($accent, 0.2);
         }
       }
       & + label:active{
         &:hover:before{
-          box-shadow: 0px 0px 0px 8px rgba($accent, 0.5);
+          box-shadow: 0 0 6px 3px rgba($accent, 0.5);
         }
-      } 
+      }
     }
   }
   // checked opacity
   &.field--checked{
-    display: none; 
+    display: none;
     &[type="checkbox"],
-    &[type="radio"] { 
+    &[type="radio"] {
       & + label {
         opacity: 0.3;
         &:hover{
           opacity: 1;
         }
-      }  
+      }
     }
     &:checked {
       &[type="checkbox"],
-      &[type="radio"] { 
+      &[type="radio"] {
         & + label {
-          opacity: 1; 
+          opacity: 1;
           &:before{
             background: $primary;
             border: 1px solid $primary;
@@ -503,10 +541,10 @@
             border-bottom: 3px solid #FFF;
             border-right: 3px solid #FFF;
           }
-        }  
+        }
       }
     }
-  } 
+  }
 }
 .input-group {
   &.field-field-group {
@@ -576,7 +614,6 @@
     }
 
     &[type="checkbox"] {
-
       &:checked + label:after {
         border-bottom: 3px solid #576874;
         border-right: 3px solid #576874;
@@ -607,7 +644,30 @@
       background: #43525c;
       box-shadow: none;
       border: 0;
-      border-bottom: 1px solid rgba(#57687451 ,.5); 
+      border-bottom: 1px solid rgba(#57687451 ,.5);
+      &:focus{
+        border-bottom: 1px solid hsla(0,0%,100%,.5);
+
+      }
+    }
+    &.field--checked{
+      display: none;
+      &:checked {
+        &[type="checkbox"],
+        &[type="radio"] {
+          & + label {
+            opacity: 1;
+            &:before{
+              // background: $primary;
+              border: 1px solid $primary;
+            }
+            &:after{
+              border-bottom: 3px solid #FFF;
+              border-right: 3px solid #FFF;
+            }
+          }
+        }
+      }
     }
   }
   textarea {
@@ -692,12 +752,12 @@
     .field{
       // accent color in night-mode
       &.field--accent{
-        &[type="checkbox"] { 
-          & + label:before { 
+        &[type="checkbox"] {
+          & + label:before {
             border: 1px solid $accent;
-            // background: #e5e5e5; 
+            // background: #e5e5e5;
           }
-          &:checked + label:after { 
+          &:checked + label:after {
             border-bottom: 3px solid $accent;
             border-right: 3px solid $accent;
           }
@@ -711,7 +771,7 @@
           }
           & + label:before {
             border: none;
-            background: #e5e5e5; 
+            background: #e5e5e5;
           }
           &:checked + label:after {
             left: 6px;
@@ -724,11 +784,11 @@
       }
     }
     &.field-wrapper--arrow{
-      .field-wrapper__content{ 
+      .field-wrapper__content{
         &:after{
-          border-right: 3px solid #e5e5e5; 
+          border-right: 3px solid #e5e5e5;
           border-bottom: 3px solid #e5e5e5;
-        } 
+        }
       }
     }
   }
@@ -748,7 +808,7 @@
      li {
        color: #FFF;
      }
-   } 
+   }
 }
 textarea {
   width: 100%;
@@ -768,7 +828,7 @@ textarea {
 }
 .field[disabled="disabled"]{
   background-color: rgba(0,0,0,.06);
-  & + label{ 
+  & + label{
     &:before{
       background: rgba(0,0,0,.06);
       border: none;
@@ -783,7 +843,7 @@ html[dir="rtl"]{
         &:after{
           left: 20px;
           right: auto;
-        } 
+        }
       }
     }
   }
@@ -793,7 +853,7 @@ html[dir="rtl"]{
   &[type="radio"] {
     right: 0;
     & + label {
-      padding-right: 22px;
+      padding-right: 27px;
     }
 
     & + label:before {
@@ -815,5 +875,14 @@ html[dir="rtl"]{
   &.field--with-icon{
     padding-right: 3em;
   }
+  &.field--rounded{
+    &[type="checkbox"] {
+      & + label:after {
+        right: 7px;
+      }
+    }
+  }
   }
 }
+
+
