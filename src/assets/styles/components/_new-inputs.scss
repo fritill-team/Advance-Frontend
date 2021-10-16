@@ -145,7 +145,7 @@
       }
     }
     .field {
-      font-size: 16px;
+      font-size: 18px;
       height: 48px;
       &[type='file']{
         display: none;
@@ -272,6 +272,18 @@
   //     &:hover:before{
   //       box-shadow: 0px 0px 0px 8px rgba($primary, 0.5);
   //     }
+  //   }
+  // }
+  // .field-wrapper__checked-control{
+  //   width: 100%;
+  //   display: contents;
+  //   position: relative;
+  //   &:before{
+  //     box-shadow: 0 0 6px 3px rgba($primary, 0.2);
+  //     left: 0;
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
   //   }
   // }
 }
