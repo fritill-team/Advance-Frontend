@@ -98,14 +98,18 @@
   }
   &.field-wrapper--sm{
     .field-wrapper__label {
-      font-size: 14px;
+      font-size: 12px;
       margin-bottom: 4px;
-      padding: 4px 12px;
+      padding: 4px 10px;
     }
-
+    .input-group{
+      .file-input{
+        height: 34px;
+      }
+    }
     .field {
-      font-size: 14px;
-      padding: 4px 12px;
+      font-size: 12px;
+      padding: 4px 9px;
       height: 38px;
       &[type='file']{
         display: none;
@@ -144,15 +148,26 @@
         font-size: 16px;
       }
     }
+    .input-group{
+      .file-input{
+        height: 48px;
+      }
+    }
     .field {
       font-size: 18px;
       height: 48px;
       &[type='file']{
         display: none;
         & + label{
-          font-size: 16px;
-          // &:after{
-          // }
+          font-size: 18px;
+          padding: 1.4rem .9rem;
+          &:after{
+            padding: 1.4rem 0.9rem;
+            height: calc(1.4em + .75rem);
+          }
+          &:before{
+            font-size: 18px;
+          }
         }
       }
       &[type="checkbox"],
@@ -778,17 +793,10 @@
       // night-mode invert
       &.field--invert{
         &[type="checkbox"] {
-          & + label {
-            padding-top: 2px;
-          }
           & + label:before {
-            border: none;
             background: #e5e5e5;
           }
           &:checked + label:after {
-            left: 6px;
-            top: 2px;
-            width: 6px;
             border-bottom: 3px solid $primary;
             border-right: 3px solid $primary;
           }
@@ -821,6 +829,13 @@
        color: #FFF;
      }
    }
+   textarea {
+     color: #FFF;
+     border: none;
+    &:focus {
+      border: 1px solid #e5e5e5;
+    }
+  }
 }
 textarea {
   width: 100%;
@@ -831,11 +846,13 @@ textarea {
   background: $white;
   color: $input-color;
   border-radius: 10px;
-  border: 1px solid #e5e5e5;
   padding: 1em;
   resize: none;
+  border: 1px solid #e5e5e5;
+
   &:focus {
     color: $input-color;
+    border-bottom: 1px solid rgba($primary, 0.5);
   }
 }
 .field[disabled="disabled"]{
