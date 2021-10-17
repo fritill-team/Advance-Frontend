@@ -383,10 +383,27 @@
       color: $gray;
       margin: 7px 0px;
       padding-left: 27px;
-      &:hover:before{
+      span{
+        position: absolute;
+        background-color: $primary;
+        left: -8px;
+        // z-index: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: .3s ease all;
+      }
+      &:hover{
+        span{
+          opacity: .2;
+        }
+        &:before{
         box-shadow: 0 0 6px 3px rgba($primary, 0.2);
         // border-radius: 50%;
-      }
+      }}
     }
     & + label:active{
       &:hover:before{
@@ -405,6 +422,7 @@
       border: 1px solid $gray;
       background: #FFF;
       transition: all 275ms;
+      z-index: 1;
     }
 
     &:not(:checked) + label:after {
