@@ -1,0 +1,30 @@
+.action-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .actions-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+  }
+  .emoji {
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    font-size: 500px;
+    opacity: 0.02;
+    bottom: 0;
+  }
+  .card-content__card-description {
+    margin-bottom: 15px;
+  }
+}
+html[dir="rtl"]{
+  .action-wrapper {  
+    .emoji { 
+      left: 0;
+      right: auto; 
+    } 
+  }
+}
