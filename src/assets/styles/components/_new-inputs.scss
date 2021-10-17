@@ -387,9 +387,6 @@
         span{
           opacity: .2;
         }
-      //   &:before{
-        // box-shadow: 0 0 6px 3px rgba($primary, 0.2);
-      // }
      }
     } 
     & + label:before {
@@ -666,6 +663,9 @@
       }
       & + label {
         color: #FFF;
+        span{
+          background-color: #FFF;
+        }
       }
     }
 
@@ -793,6 +793,11 @@
         &[type="radio"] {
           &:checked + label:after {
              border: none;
+          }
+          & + label{
+            &:after{
+              background-color: #dc3545;
+            }
           }
         }
         &[type='file']{
