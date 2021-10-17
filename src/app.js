@@ -89,7 +89,6 @@ class Resource {
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(item, options))
         this[item] = options[item]
-        console.log(item);
     this.localItems = []
   }
 
@@ -104,22 +103,22 @@ class Resource {
     console.error(e)
   }
 
-  defaultStructure() {
-    return $(`<div class="container">
-        <div class="row">
-        <div class="col-6">
-          ${this.searchForm()}
-          ${this.listingTemplate()}
-        </div>
-        <div class="col-6">${this.formTemplate()}</div>
-        </div>
-    </div>`)}
+  // defaultStructure() {
+  //   return `<div class="container">
+  //       <div class="row">
+  //       <div class="col-6">
+  //         ${this.searchForm()}
+  //         ${this.listingTemplate()}
+  //       </div>
+  //       <div class="col-6">${this.formTemplate()}</div>
+  //       </div>
+  //   </div>`}
 
-  async build() {
-    await this.fetch('http://localhost:3000/recommendations/')
-    this.$container.empty()
-    this.$container.append(this.defaultStructure())
-  }
+  // async build() {
+  //   await this.fetch('http://localhost:3000/')
+  //   this.$container.empty()
+  //   this.$container.append(this.defaultStructure())
+  // }
 
 }
 
@@ -142,8 +141,51 @@ let recommendations = new Resource($('#recommendations'), {
   },
   defaultStructure() {
     return ''
+  },
+  itemsListener(){
+
   }
 })
 
-recommendations.build()
+// recommendations.build()
 
+// console.log(recommendations.options);
+
+class NewResoure {
+  constructor(container, options){
+    this.container = container
+    this.options = options
+    for (let item in options)
+      if (Object.prototype.hasOwnProperty.call(item, options))
+        this[item] = options[item]
+  }
+
+  defaultStructure(data) {
+    return `<div class="container">
+        <div class="row">
+        <div class="col-6">
+          text default structure
+          ${data}
+        </div>
+        <div class="col-6">form structure</div>
+        </div>
+    </div>`
+  }
+
+  build() {
+    $.ajax({
+      type: 'GET',
+      url: `http://localhost:3000/recommendations/`,
+      success: (data) => {
+        this.container.append(this.defaultStructure(data))
+        console.log(data);
+      }
+    })
+  }
+}
+
+let resourse1 = new NewResoure($('#recommendations'), {
+
+}) 
+
+resourse1.build()
