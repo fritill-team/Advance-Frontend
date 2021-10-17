@@ -20,7 +20,8 @@ import "./assets/vendor/sortable.js";
 // js
 import "./assets/scripts/index";
 
-import { ListLoader } from "./assets/scripts/backend_scripts/panel-loader"
+import {ListLoader} from "./assets/scripts/backend_scripts/panel-loader"
+import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
 
 
 let up = $('.count-up'),
@@ -65,13 +66,16 @@ class Resource {
   get items() {
     return this.localItems
   }
+
   set items(value) {
     this.localItems = value
     this.itemsListener(value)
   }
+
   itemsListener(v) {
     countable.val(v)
   }
+
   // RESOURCE = {
   //   // items
   //   localItems: [],
@@ -93,8 +97,10 @@ class Resource {
   }
 
   fetch(Q = null) {
-    $.get(this.listingURL, { q: Q })
-      .then(res => {this.RESOURCE.items = res;})
+    $.get(this.listingURL, {q: Q})
+      .then(res => {
+        this.RESOURCE.items = res;
+      })
       .catch(e => this.handleError(e))
 
   }
@@ -133,7 +139,7 @@ let recommendations = new Resource($('#recommendations'), {
   formTemplate(item, url) {
     return ''
   },
-  searchForm(item){
+  searchForm(item) {
     return ''
   },
   listingTemplate() {
@@ -142,7 +148,7 @@ let recommendations = new Resource($('#recommendations'), {
   defaultStructure() {
     return ''
   },
-  itemsListener(){
+  itemsListener() {
 
   }
 })
@@ -151,8 +157,8 @@ let recommendations = new Resource($('#recommendations'), {
 
 // console.log(recommendations.options);
 
-class NewResoure {
-  constructor(container, options){
+class NewResource {
+  constructor(container, options) {
     this.container = container
     this.options = options
     for (let item in options)
@@ -184,8 +190,17 @@ class NewResoure {
   }
 }
 
-let resourse1 = new NewResoure($('#recommendations'), {
-
-}) 
+let resourse1 = new NewResource($('#recommendations'), {})
 
 resourse1.build()
+
+// TODO Mohammed Ibrahim
+// to map validation errors to form
+// field messages must has id of `#${app}-${fieldErrors}-messages`
+const mapErrors = (app, $form, errors) => {
+  for (let fieldErrors in errors)
+    if (Object.prototype.hasOwnProperty.call(fieldErrors, errors)) {
+      let inputMessages = $form.find(`#${app}-${fieldErrors}-messages`)
+      inputMessages.empty().append($(fieldErrors.map(error => `<li>${error}</li>`).join('')))
+    }
+}
