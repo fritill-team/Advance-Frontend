@@ -30,18 +30,21 @@ block content
               .user-data
                 a(href="#" class="text-2 btn btn--primary btn--text") Jose Portilla
                 time( class="text-3 gray") Jan 15 '18 at 13:56
-              .card__tools
-                .more-dropdown
-                  button.btn.btn--hover-dropdown
-                    i.fas.fa-ellipsis-v.more-dropdown__icon
-                  .more-dropdown__content
-                    a(href="#" class="content__item convert")
-                      i.item__icon.uil.uil-comment-alt-edit
-                      | Edit
-                    a(href="#" class="content__item")
-                      i.item__icon.uil.uil-trash-alt
-                      | Delete
-
+              .dropdown.dropdown__activator
+                a(href="#" class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
+                  i.fas.fa-ellipsis-v
+                .dropdown__content.dropdown-content-width
+                  .list
+                    a(href="#" class="list-item list-item--link") 
+                      .list-item__icon
+                        i.far.fa-copy
+                      .list-item__content.convert
+                        span.text-2 Edit  
+                    a(href="#" class="list-item list-item--link") 
+                      .list-item__icon
+                        i.far.fa-copy
+                      .list-item__content
+                        span.text-2 Delete  
             .card__content-details
               form(action="post" class="convertible__form d-none")
                 .field-wrapper
@@ -77,43 +80,6 @@ block content
 
 
         // start question
-        //.d-flex.flex-column.w-100
-
-          //.card--convertible
-          //  // start convertible__form
-          //  .convertible__form
-          //    .card.card--horizontal
-          //      .card__content
-          //        .user-image
-          //          img(src="../../assets/images/hd_dp.jpg" alt="")
-          //          i.uil.uil-check-circle
-          //        .card__body
-          //          .card__content-header
-          //            .user-data
-          //              a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
-          //              time.text-3.gray Jan 15 '18 at 13:56
-          //          // start question form
-
-          //  // End question form
-          //  // start  convertible__date
-          //  .convertible__data
-          //    // start question
-          //    .card.card--horizontal
-          //      .card__content
-          //        .user-image
-          //          img(src="../../assets/images/hd_dp.jpg" alt="")
-          //          i.uil.uil-check-circle
-          //        .card__body
-          //          .card__content-header
-          //            .user-data
-          //              a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
-          //              time.text-3.gray Jan 15 '18 at 13:56
-          //
-          //          //start Content
-          //          .card__content--details
-
-          //    // End question
-          //  // End  convertible__date
         .d-flex
           .d-flex.justify-content-between.align-items-center.w-100
             h3.course-content__title.mb-0 1 Answer
@@ -153,16 +119,21 @@ block content
                       .user-data
                         a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
                         time.text-3.gray Jan 15 '18 at 13:56
-                      .more-dropdown
-                        button.btn.btn--hover-dropdown
-                          i.fas.fa-ellipsis-v.more-dropdown__icon
-                        .more-dropdown__content
-                          a(href="#" class="content__item convert")
-                            i.item__icon.uil.uil-comment-alt-edit
-                            | Edit
-                          a(href="#" class="content__item")
-                            i.item__icon.uil.uil-trash-alt
-                            | Delete
+                      .dropdown.dropdown__activator
+                        a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
+                          i.fas.fa-ellipsis-v
+                        .dropdown__content.dropdown-content-width
+                          .list
+                            a(href="#" class="list-item list-item--link") 
+                              .list-item__icon
+                                i.far.fa-copy
+                              .list-item__content.convert
+                                span.text-2 Edit  
+                            a(href="#" class="list-item list-item--link") 
+                              .list-item__icon
+                                i.far.fa-copy
+                              .list-item__content
+                                span.text-2 Delete  
                     //start Content
                     .card__content--details
                       .rich-textarea
@@ -216,16 +187,21 @@ block content
                       .user-data
                         a(href="#" class="btn btn--secondary btn--link-text text-2 bold") Jose Portilla
                         time.text-1.gray Jan 15 '18 at 13:56
-                      .more-dropdown
-                        button.btn.btn--hover-dropdown
-                          i.fas.fa-ellipsis-v.more-dropdown__icon
-                        .more-dropdown__content
-                          a(href="#" class="content__item convert")
-                            i.item__icon.uil.uil-comment-alt-edit
-                            | Edit
-                          a(href="#" class="content__item")
-                            i.item__icon.uil.uil-trash-alt
-                            | Delete
+                      .dropdown.dropdown__activator
+                        a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
+                          i.fas.fa-ellipsis-v
+                        .dropdown__content.dropdown-content-width
+                          .list
+                            a(href="#" class="list-item list-item--link") 
+                              .list-item__icon
+                                i.far.fa-copy
+                              .list-item__content.convert
+                                span.text-2 Edit  
+                            a(href="#" class="list-item list-item--link") 
+                              .list-item__icon
+                                i.far.fa-copy
+                              .list-item__content
+                                span.text-2 Delete 
                     .card__content--details
                       p.text-3 lorem ipsum dolor sit
                   // End comment-data

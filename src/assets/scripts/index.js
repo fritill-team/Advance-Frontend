@@ -16,6 +16,7 @@ import "./toaster"
 
 import "./tabs.js"
 import "./survey.js"
+import "./ripple.js"
 import "./select2"
 import "./dropdown"
 import "./convertable"
@@ -24,6 +25,7 @@ import './owl-carousel'
 import "./accordion"
 import "./playlist-video"
 import "./course-card"
+import "./list-dropdown"
 import "./course-content"
 import './dropdown'
 import "./chapter-content"

@@ -20,6 +20,11 @@
     &:hover .more-dropdown--absolute {
       display: block;
     }
+    .media-card__action{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   .media-card__caption {
     padding: 10px;
@@ -29,16 +34,6 @@
     .media-card__image {
       height: 450px;
     }
-    // .media-card__video {
-    //   height: 450px;
-    //   .video-player__iframe {
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    //   .iframe-parent-class {
-    //     height: 100% !important;
-    //   }
-    // }
   }
   &.media-card--height {
     .media-card__image {

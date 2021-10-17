@@ -37,6 +37,9 @@ const recommendationForm = () => `
     </ul>
   </div>
 </form>
+<div id="recommendations">
+
+</div>
 
 `
 
@@ -53,7 +56,7 @@ $('.recommendations-list').each((i, container) => {
   $.get(url)
   .then(res => {
     for (let item of res) {
-      console.log(item.data)
+      // console.log(item.data)
       $(list).append($(recommendationTemplate(item)))
       // console.log(item);
     }
@@ -63,6 +66,6 @@ $('.recommendations-list').each((i, container) => {
     $(container).append(row)
   })
   .catch(e => console.log(e))
-  console.log($('recommendation-details').data('data'));
+  // console.log($('recommendation-details').data('data'));
 })
  

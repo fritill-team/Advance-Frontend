@@ -6,15 +6,9 @@ block sidebar
 
 block content
 	.container
-		.row
-			//- .card--with-title .card--top-category
-			.col-lg-12
-				h2.title-2.my-3 Card with title with  category
-				p.text-2.mb-1
-					| we use
-					code .card--with-title .card--top-category
+		//- .row
 			.col-lg-3
-				.card.card--with-title.card--top-category
+				.card.card--with-title.card--top-category.mt-3
 					.card__title.mb-2
 						h5.title-h6 Top Categories
 					.card__content
@@ -23,233 +17,345 @@ block content
 								ul.card__list
 									li.card__list-item
 										a.card__item-link(href="#")
-											i.uil.uil-arrow
 											| Development
 									li.card__list-item
 										a.card__item-link(href="#")
-											i.uil.uil-graph-bar
 											| Business
 									li.card__list-item
 										a.card__item-link(href="#")
-											i.uil.uil-graph-bar
 											| IT and Software
 									li.card__list-item
 										a.card__item-link(href="#")
-											i.uil-ruler
 											| Design
 
-		.row 
+		//- .row 
 			.col-lg-4 
-				.card.condensed
+				.card-list.condensed
 					.card__content
 						.list 
-							.list-item.list-item--space
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
+							.list-item
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
-									a(href="#" class="text-2 bold") Jose Portilla
+									a(href="#" class="body-2 bold") Jose Portilla
 								.list-item__action 
 									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-5" name="checkname")
+										input(class="field" type="checkbox" id="checkbox-5" name="checkname")
 										label(for="checkbox-5")
-							.list-item.list-item--space
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
+							.list-item
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
-									a(href="#" class="text-2 bold") Jose Portilla
+									a(href="#" class="body-2 bold") Jose Portilla
 								.list-item__action 
 									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-6" name="checkname")
+										input(class="field" type="checkbox" id="checkbox-6" name="checkname")
 										label(for="checkbox-6")
-							.list-item.list-item--space
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
+							.list-item
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
-									a(href="#" class="text-2 bold") Jose Portilla
+									a(href="#" class="body-2 bold") Jose Portilla
 								.list-item__action 
 									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-7" name="checkname")
+										input(class="field" type="checkbox" id="checkbox-7" name="checkname")
 										label(for="checkbox-7")
 							.list-item
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
 								.list-item__content
-									a(href="#" class="text-2 bold") Jose Portilla
+									a(href="#" class="body-2 bold") Jose Portilla
 								.list-item__action 
 									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-8" name="checkname")
+										input(class="field" type="checkbox" id="checkbox-8" name="checkname")
 										label(for="checkbox-8")
-
-			.col-lg-4 
-				.card.condensed
-					.card__content
-						.list 
-							.list-item.list-item--space
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-1
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-9" name="checkname")
-										label(for="checkbox-9")
-							.list-item.list-item--space 
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-1
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-10" name="checkname")
-										label(for="checkbox-10")
-							.list-item.list-item--space 
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-1
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-11" name="checkname")
-										label(for="checkbox-11")
-							.list-item
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-1
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-12" name="checkname")
-										label(for="checkbox-12")
-			.col-lg-4 
-				.card.condensed
-					.card__content
-						.list 
-							.list-item.list-item--border-bottom
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-13" name="checkname")
-										label(for="checkbox-13")
-							.list-item.list-item--border-bottom
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-14" name="checkname")
-										label(for="checkbox-14")
-							.list-item.list-item--border-bottom
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-15" name="checkname")
-										label(for="checkbox-15")
-							.list-item.list-item--border-bottom
-								.list-item__avatar.image.image--small-profile.image--rounded
-									img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-16" name="checkname")
-										label(for="checkbox-16")
-
-			.col-lg-4 
-				.card.condensed
-					.card__content
-						.list 
-							.list-item.list-item--border-bottom
-								.list-item__icon.mb-1 
-									i.fas.fa-user
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-17" name="checkname")
-										label(for="checkbox-17")
-							.list-item.list-item--border-bottom
-								.list-item__icon.mb-1 
-									i.fas.fa-user
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-18" name="checkname")
-										label(for="checkbox-18")
-							.list-item.list-item--border-bottom
-								.list-item__icon.mb-1 
-									i.fas.fa-user
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action 
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-19" name="checkname")
-										label(for="checkbox-19")
-							.list-item.list-item--border-bottom
-								.list-item__icon.mb-1
-									i.fas.fa-user
-								.list-item__content.pt-2
-									p.overline Lorem, ipsum dolor.
-									a(href="#" class="text-2 bold") Jose Portilla
-									p.text-3.gray Jose_Portilla@test.com
-								.list-item__action
-									div
-										input(class="field-wrapper__input" type="checkbox" id="checkbox-20" name="checkname")
-										label(for="checkbox-20")
-			.col-lg-4 
-				.card.condensed
-					.card__content
-						.list 
-							.list-item.list-item--border-bottom
-								a.list-item__link(href="#")
-									.list-item__avatar.image.image--rounded.image--small-profile
-										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-									.list-item__content
-										a(href="#" class="text-2 bold") Jose Portilla
-							.list-item.list-item--border-bottom
-								a.list-item__link(href="#")
-									.list-item__avatar.image.image--small-profile.image--rounded
-										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-									.list-item__content
-										a(href="#" class="text-2 bold") Jose Portilla
-							.list-item.list-item--border-bottom
-								a.list-item__link(href="#")
-									.list-item__avatar.image.image--small-profile.image--rounded
-										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-									.list-item__content
-										a(href="#" class="text-2 bold") Jose Portilla
-							.list-item.list-item--border-bottom
-								a.list-item__link(href="#")
-									.list-item__avatar.image.image--small-profile.image--rounded
-										img(src="../../assets/images/hd_dp.jpg", alt="avatar")
-									.list-item__content
-										a(href="#" class="text-2 bold") Jose Portilla
 		.row
+			.col-lg-12 
+				p.body-2 list with title 
+			.col-lg-4 
+				.card-list
+					.card__content
+						.list 
+							h5.title-h5 List Title
+							.divider
+							.list-item.list-item--multible.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-9" name="checkname")
+										label(for="checkbox-9")
+							//- .divider
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-10" name="checkname")
+										label(for="checkbox-10")
+							//- .divider
+							.list-item.list-item--two-lines.list-item--with-border
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							//- .divider
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-12" name="checkname")
+										label(for="checkbox-12")
+		.row
+			.col-lg-12
+				p.body-2 list contains single line 
+				p.body-2 add class ( .list-item--with-border ) to show border bottom
+			.col-lg-4 
+				.card-list.condensed
+					.card__content
+						.list
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-12" name="checkname")
+										label(for="checkbox-12") 
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-12" name="checkname")
+										label(for="checkbox-12")
+							.list-item.list-item--one-line
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-12" name="checkname")
+										label(for="checkbox-12")
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-12" name="checkname")
+										label(for="checkbox-12")
+		.divider
+		.row
+			.col-lg-12
+				p.body-2 list item with icon use ( .list-item--one-line )
+			.col-lg-4 
+				.card-list
+					.card__content
+						.list 
+							.list-item.list-item--one-line
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									//- p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									//- p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							.list-item.list-item--one-line
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									//- p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							.list-item.list-item--one-line
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									//- p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+
+		.row
+			.col-lg-12 
+				p.body-2 use class ( .list-item--multible )
+			.col-lg-4 
+				.card-list
+					.card__content
+						.list 
+							.list-item.list-item--multible
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-9" name="checkname")
+										label(for="checkbox-9")
+							.list-item.list-item--multible
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-9" name="checkname")
+										label(for="checkbox-9")
+							.list-item.list-item--multible
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-9" name="checkname")
+										label(for="checkbox-9")
+		.row
+			.col-lg-12 
+				p.body-2 use class ( .list-item--three-lines )
+			.col-lg-4 
+				.card-list.condensed
+					.card__content
+						.list 
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-10" name="checkname")
+										label(for="checkbox-10")
+							.list-item.list-item--three-lines
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-10" name="checkname")
+										label(for="checkbox-10")
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline 
+										|lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-10" name="checkname")
+										label(for="checkbox-10")
+		.divider
+		.row
+			.col-lg-12 
+				p.body-2 use class ( .list-item--two-lines )
+			.col-lg-4 
+				.card-list.condensed
+					.card__content
+						.list 
+							.list-item.list-item--two-lines
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							.list-item.list-item--two-lines.list-item--with-border
+								.list-item__avatar
+									//- i.fas.fa-user
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+							.list-item.list-item--two-lines
+								.list-item__avatar
+									//- i.fas.fa-user
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-11" name="checkname")
+										label(for="checkbox-11")
+		//- .row
+			.col-lg-12 
+				p.body-2 condensed list
 			.col-lg-3
 				.card-list
 					.card__content
@@ -289,6 +395,51 @@ block content
 									i.fas.fa-puzzle-piece
 								.list-item__content
 									a.content__link(href="#" class="text-2") Lorem ipsum
+		.divider
+		.row
+			.col-lg-4
+				.card-list
+					.card__content 
+						.list
+							h5.title-h5 List title
+							.divider
+							.list-item.list-item--two-lines
+								.list-item__avatar.list-item--video-preview
+									.avatar__video-preview
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.video-preview__checkbox
+											input(class="field" type="checkbox" id="checkbox-120" name="checkname")
+											label(for="checkbox-120")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray lorem lorem lorem
+							.list-item.list-item--two-lines
+								.list-item__avatar.list-item--video-preview
+									.avatar__video-preview
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.video-preview__checkbox
+											input(class="field" type="checkbox" id="checkbox-120" name="checkname")
+											label(for="checkbox-120")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray lorem lorem lorem
+							.list-item.list-item--two-lines
+								.list-item__avatar.list-item--video-preview
+									.avatar__video-preview
+										img(class="image image--profile" src="../../assets/images/get_img.jpg")
+										div.video-preview__checkbox
+											input(class="field" type="checkbox" id="checkbox-120" name="checkname")
+											label(for="checkbox-120")
+										.progress 
+											.part-progress
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray lorem lorem lorem
+		//- .row
 			.col-lg-3
 				.card-list
 					.card__content
@@ -327,4 +478,145 @@ block content
 								.list-item__icon 
 									i.fas.fa-puzzle-piece
 								.list-item__content
-									a.content__link(href="#" class="text-2") Lorem ipsum						
+									a.content__link(href="#" class="text-2") Lorem ipsum				
+				// list sidebar
+		.divider
+		.row
+			.col-lg-4
+				.card-list
+					.card__content
+						.list
+							a(href="#" class="list-item list-item--one-line list-item--link") 
+								.list-item__avatar 
+									i.far.fa-copy
+								.list-item__content
+									span(class="body-2 btn--default btn--ripple") Lorem ipsum
+							a(href="#" class="list-item list-item--one-line list-item--link")
+								.list-item__avatar 
+									i.fas.fa-trash-alt
+								.list-item__content
+									span.body-2 Lorem ipsum
+							a(class="list-item list-item--one-line list-item--link")
+								.list-item__avatar 
+									i.fas.fa-link
+								.list-item__content
+									span.body-2 Lorem ipsum 
+								.list-item__action 
+									i.fas.fa-chevron-down
+							.list-item-group
+								a(href="#" class="list-item list-item--one-line list-item--link")
+									.list-item__avatar 
+									.list-item__content
+										span.body-2 Lorem ipsum
+								a(href="#" class="list-item list-item--one-line list-item--link")
+									.list-item__avatar 
+									.list-item__content
+										span.body-2 Lorem ipsum
+		//- .row
+			.col-lg-4
+				.card-list.condensed
+					.card__content
+						.list
+							.list-item
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content.pt-2
+									a(href="#" class="text-2 bold") Jose Portilla
+									p.text-3.gray Jose_Portilla@test.com
+								.list-item__action 
+									div
+										input(class="field" type="checkbox" id="checkbox-110" name="checkname")
+										label(for="checkbox-110")
+							.list-item
+								.list-item__icon.mb-1
+									i.fas.fa-user
+								.list-item__content.pt-2
+									a(href="#" class="text-2 bold") Jose Portilla
+									p.text-3.gray Jose_Portilla@test.com
+								.list-item__action
+									span.switch
+										span.switch-btn
+							.divider
+							.list__title
+								span.title-name List Title
+							.divider
+							.list.list--menu.list--condensed
+								.list-item.list-item--hover
+									.list-item__icon 
+										i.far.fa-copy
+									.list-item__content
+										a.content__link(href="#" class="text-2 btn--default btn--ripple") Lorem ipsum
+								.list-item.list-item--hover
+									.list-item__icon 
+										i.fas.fa-trash-alt
+									.list-item__content
+										a.content__link(href="#" class="text-2") Lorem ipsum 
+								.list-item.list-item--hover
+									.list-item__icon 
+										i.fas.fa-print
+									.list-item__content
+										a.content__link(href="#" class="text-2") Lorem ipsum
+		.divider
+		.row
+			.col-lg-4 
+				.card-list
+					.card__content
+						.list 
+							.list-item.list-item--one-line
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+							//- a(href="#" class="link") Lorem ipsum dolor
+							.divider
+							.list-item.list-item--one-line
+								.list-item__avatar
+									i.fas.fa-link
+								.list-item__content
+									a(href="#" class="body-2 bold") Lorem ipsum
+								.list-item__action 
+									.action-switch
+										span.switch
+											span.switch-btn
+							.divider
+							.list-item.list-item--one-line.list-item--link
+								.list-item__avatar
+									i.fas.fa-link
+								.list-item__content
+									a(href="#" class="body-2 bold") Lorem ipsum
+							.list-item.list-item--one-line.list-item--link
+								.list-item__avatar
+									i.fas.fa-copy
+								.list-item__content
+									a(href="#" class="body-2 bold") Lorem ipsum
+							.list-item.list-item--one-line.list-item--link
+								.list-item__avatar
+									i.fas.fa-trash-alt
+								.list-item__content
+									a(href="#" class="body-2 bold") Lorem ipsum
+							.list-item.list-item--one-line.list-item--link
+								.list-item__avatar
+									i.fas.fa-print
+								.list-item__content
+									a(href="#" class="body-2 bold") Lorem ipsum
+							//- a(href="#" class="list-item list-item--link") 
+							//- 	.list-item__icon 
+							//- 		i.far.fa-copy
+							//- 	.list-item__content
+							//- 		span.text-2(class="text-2 btn--default btn--ripple") Lorem ipsum
+							//- a(href="#" class="list-item list-item--link")
+							//- 	.list-item__icon 
+							//- 		i.fas.fa-trash-alt
+							//- 	.list-item__content
+							//- 		span.text-2 Lorem ipsum
+							//- a(class="list-item list-item--link")
+							//- 	.list-item__icon 
+							//- 		i.fas.fa-link
+							//- 	.list-item__content
+							//- 		span.text-2 Lorem ipsum 
+							//- a(class="list-item list-item--link")
+							//- 	.list-item__icon 
+							//- 		i.fas.fa-print
+							//- 	.list-item__content
+							//- 		span.text-2 Lorem ipsum 

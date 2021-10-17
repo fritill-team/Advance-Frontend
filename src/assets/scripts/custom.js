@@ -256,7 +256,16 @@ for (var i = 0; i < subnavs.length; i++) {
 };
 
 // select2
-
+$(document)
+  .on('click', '.sub-menu-item', function(){
+    $(this).toggleClass('menu--opened')
+    if($(this).siblings().hasClass('menu--opened')){
+      $(this).siblings().removeClass('menu--opened')
+    }else {
+      console.log(true);
+    } 
+    
+  })
 
 // active class in collapsed sidebar
 
@@ -431,89 +440,6 @@ $(document).on('click', function () {
   $('.more-dropdown').removeClass('active')
 })
 
-// start custom select
-
-var x, i, j, l, ll, selElmnt, a, b, c;
-/*look for any elements with the class "custom-selects":*/
-x = document.getElementsByClassName("field-wrapper__select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /*for each element, create a new DIV that will act as the selected item:*/
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected select-selected-bottom-rounded");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /*for each element, create a new DIV that will contain the option list:*/
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /*for each option in the original select element,
-    create a new DIV that will act as an option item:*/
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function (e) {
-      /*when an item is clicked, update the original select box,
-      and the selected item:*/
-      var y, i, k, s, h, sl, yl;
-      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-      sl = s.length;
-      h = this.parentNode.previousSibling;
-      for (i = 0; i < sl; i++) {
-        if (s.options[i].innerHTML == this.innerHTML) {
-          s.selectedIndex = i;
-          h.innerHTML = this.innerHTML;
-          y = this.parentNode.getElementsByClassName("same-as-selected");
-          yl = y.length;
-          for (k = 0; k < yl; k++) {
-            y[k].removeAttribute("class");
-          }
-          this.setAttribute("class", "same-as-selected");
-          break;
-        }
-      }
-      h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function (e) {
-    /*when the select box is clicked, close any other select boxes,
-    and open/close the current select box:*/
-    e.stopPropagation();
-    closeAllSelect(this);
-    this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
-    this.classList.toggle("select-selected-bottom-square");
-  });
-}
-function closeAllSelect(elmnt) {
-  /*a function that will close all select boxes in the document,
-  except the current select box:*/
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-      y[i].classList.remove("select-selected-bottom-square");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
-/*if the user clicks anywhere outside the select box,
-then close all select boxes:*/
-
-
 
 $('.course-list__item').each(function () {
   $(this).on('click', function () {
@@ -581,12 +507,81 @@ $(document)
 
 // sidebar
 
-const sidebarTemplate = item => `
-  <li class="list__item">
-    <a class="item__link" href="typo.html" title="Explore">
-      <i class="fas fa-home item__icon"></i>
-      <span class="item__label">Typo</span>
-    </a>
-  </li>
-`
+const sidebarTemplate = function (listItem) {
+  
+  return `
+    ${listItem.map(item => `
+      <li class="list__item ${item.has_children ? 'sub-menu-item' : ''} ${item.is_active ? 'menu--opened': ''}">
+        <a class="item__link" title="Categories">
+          <i class="fas fa-home item__icon"></i>
+          <span class="item__label">${item.title}</span>
+        </a>
+        ${item.has_children ? `
+          <ul class="sub-menu ">
+            ${item.children.map(child => `
+              <li class="sum-menu__item">
+                <a class="sub-menu__link" href="${child.url}">${child.title}</a>
+              </li>
+            `).join('')}
+          </ul>
+        `: ''}
+      </li>
+    `  
+    ).join('')}
+  `
+}
 
+$('.list__sidebar').each(function(i, item) {
+  let listItem = $(item),
+    data = listItem.data("link")
+  listItem.html($(sidebarTemplate(data)))
+
+})
+  
+  // $.get(url)
+  // .then(res => {
+  //   // let listItem = $(item),
+  //   // data = listItem.data("data")
+  //   // listItem.html($(sidebarTemplate(data)))
+  //   for (let item of res) {
+  //     // let course = $(item),
+  //     // data = course.data("data")
+  //     // course.html($(sidebarTemplate(data)))
+  //     $(listContainer).append($(sidebarTemplate(item)))
+  //     console.log(item);
+  //     // console.log(item);
+  //     // let listItem = $(),
+  //     // data = listItem.data("data")
+  //     // console.log(data);
+  //     // listItem.html($(sidebarTemplate(data)))
+  //   }
+  //   console.log(listContainer);
+    // let listContent = res,
+    
+    // data = $(item)
+    
+    // console.log(list);
+//   })
+//   .catch(e => console.log(e))
+// })
+// drawers
+$(document)
+  .on('click', '.left-open', function(){
+    $('.drawer--left').toggleClass('open')
+  })
+  .on('click', '.header-player__course-name', function(){
+    $('.drawer--left').toggleClass('open')
+  })
+  .on('click', '.right-open', function(){
+    $('.drawer--right').toggleClass('open')
+  })
+  .on('click', '.left-open-half', function(){
+    $('.drawer--left').toggleClass('open--half')
+  })
+  .on('click', '.right-open-half', function(){
+    $('.drawer--right').toggleClass('open--half')
+  })
+  .on('click', '.drawer .btn', function(){
+    $('.drawer').removeClass('open')
+    $('.drawer').removeClass('open--half')
+  })

@@ -1,0 +1,51 @@
+extends ../layouts/drawer.pug
+
+
+block title
+	title drawers page
+block left 
+	.drawer.drawer--left
+		.drawer__header
+			h5.title-h5 title
+			button.btn.btn--default.btn--icon.btn--ripple
+				i.fas.fa-times
+		include ../components/list-video.pug
+block right 
+	.drawer.drawer--right
+		.drawer__header
+			h5.title-h5 title
+			button.btn.btn--small.btn--icon.btn--primary
+				i.fas.fa-times
+		include ../components/list-video.pug
+block content
+	//- include ../components/modal-dialog.pug
+	//- .drawers-container
+	//- .video-player 
+		//- iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")
+	.video-player 
+		include ../components/survey-content.pug
+	.container
+		.row 
+			.col-lg-6 
+				p.body-1 open modal under header and sidebar 
+				button.btn.btn--primary open modal
+			.col-lg-6 
+				p.body-1 open modal above header and sidebar 
+				button.btn.btn--primary open modal
+		.row 
+			.col-lg-6 
+				p.body-1 open from left
+				button.btn.btn--primary.left-open open drawer left
+			.col-lg-6
+				p.body-1 open from right
+				button.btn.btn--primary.right-open open drawer right
+		.row 
+			.col-lg-6 
+				p.body-1 open from left half page
+				button.btn.btn--primary.left-open-half open drawer left
+			.col-lg-6
+				p.body-1 open from right half page
+				button.btn.btn--primary.right-open-half open drawer right
+
+	//- p Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus temporibus suscipit commodi sequi culpa ea maiores repellat quo quasi cupiditate. Aut facilis modi odio asperiores excepturi voluptatem. Laborum, omnis sint?
+
