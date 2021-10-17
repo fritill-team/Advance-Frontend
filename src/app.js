@@ -197,10 +197,12 @@ resourse1.build()
 // TODO Mohammed Ibrahim
 // to map validation errors to form
 // field messages must has id of `#${app}-${fieldErrors}-messages`
+// example app: recommendations
+//         field: title
 const mapErrors = (app, $form, errors) => {
-  for (let fieldErrors in errors)
-    if (Object.prototype.hasOwnProperty.call(fieldErrors, errors)) {
-      let inputMessages = $form.find(`#${app}-${fieldErrors}-messages`)
-      inputMessages.empty().append($(fieldErrors.map(error => `<li>${error}</li>`).join('')))
+  for (let field in errors)
+    if (Object.prototype.hasOwnProperty.call(field, errors)) {
+      let inputMessages = $form.find(`#${app}-${field}-messages`)
+      inputMessages.empty().append($(errors[field].map(error => `<li>${error}</li>`).join('')))
     }
 }
