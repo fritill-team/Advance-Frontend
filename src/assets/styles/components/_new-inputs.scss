@@ -447,7 +447,8 @@
       left: 3px;
       top: 3px;
       width: 12px;
-      border: 6px solid $primary;
+      background-color: $primary;
+      // border: 6px solid $primary;
       border-radius: 50%;
     }
   }
