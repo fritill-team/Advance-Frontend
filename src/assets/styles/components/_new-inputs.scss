@@ -191,17 +191,9 @@
       &[type="radio"] {
         & + label{
           span{
-            left: -9px;
-            top: 50%;
+            left: -11px;
+            top: 8px;
           }
-        //   &:hover{
-        //     span{
-        //       opacity: .2;
-        //     }
-        //     &:before{
-        //     box-shadow: 0 0 6px 3px rgba($primary, 0.2);
-        //   }
-        // }
         }
       }
   }
@@ -340,6 +332,16 @@
     justify-content: space-between;
     align-items: center;
   }
+  .field{
+    &[type="checkbox"],
+    &[type="radio"] { 
+    & + label {
+      span{
+        top: 50%;
+      }
+    } 
+  }
+}
 }
 
 .field{
@@ -367,16 +369,16 @@
       cursor: pointer;
       color: $gray;
       margin: 7px 0px;
-      padding-left: 27px;
+      padding-left: 30px;
       span{
         position: absolute;
         background-color: $primary;
-        left: -9px;
+        left: -11px;
         // z-index: 0;
-        top: 50%;
+        top: 8px;
         transform: translateY(-50%);
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         opacity: 0;
         transition: .3s ease all;
@@ -385,17 +387,11 @@
         span{
           opacity: .2;
         }
-        &:before{
+      //   &:before{
         // box-shadow: 0 0 6px 3px rgba($primary, 0.2);
-      }
-    }
-    }
-    // & + label:active{
-    //   &:hover:before{
-    //     box-shadow: 0 0 6px 3px rgba($primary, 0.5);
-    //     // border-radius: 50%;
-    //   }
-    // }
+      // }
+     }
+    } 
     & + label:before {
       content: '';
       display: block;
@@ -427,9 +423,21 @@
   &[type="checkbox"] {
     & + label {
       padding-top: 2px;
+      span{
+        left: -11px;
+        top: 9px;
+        width: 40px;
+        height: 40px;
+      }
+      &:hover{
+        span{
+          opacity:0.2;
+        }
+    }
     }
     & + label:before {
       border-radius: 2px;
+
     }
     &:checked + label:after {
       left: 6px;
@@ -443,16 +451,13 @@
   &[type="radio"] {
     & + label{
       span{
-        left: -9px;
-        top: 50%;
+        left: -11px;
+        top: 8px;
       }
       &:hover{
         span{
           opacity:0.2;
         }
-        &:before{ 
-          // box-shadow: 0 0 6px 3px rgba($primary, 1);
-      }
     }
     }
     & + label:before {
@@ -531,7 +536,7 @@
       & + label {
         padding-top: 2px;
         span{
-          left: -8px;
+          left: -10px;
           top: 50%;
         }
         &:hover{
@@ -909,11 +914,11 @@ html[dir="rtl"]{
   &[type="radio"] {
     right: 0;
     & + label {
-      padding-right: 27px;
+      padding-right: 30px;
       span{ 
-        right: -8px;
+        right: -11px;
         // z-index: 0;
-        top: 50%; 
+        top: 47%; 
       } 
   }
     & + label:before {
@@ -928,6 +933,12 @@ html[dir="rtl"]{
   }
 
   &[type="radio"] {
+    & + label{
+      span{
+        right: -11px;
+        top: 45%;
+      }
+    }
     &:checked + label:after {
       right: 3px;
     }
@@ -937,9 +948,26 @@ html[dir="rtl"]{
   }
   &.field--rounded{
     &[type="checkbox"] {
+      & + label{
+        span{
+          right: -10px;
+        }
+      }
       & + label:after {
         right: 7px;
       }
+    }
+  }
+  }
+  .check-field-group {
+    .field{
+      &[type="checkbox"],
+      &[type="radio"] { 
+      & + label {
+        span{
+          top: 8px;
+        }
+      } 
     }
   }
   }
