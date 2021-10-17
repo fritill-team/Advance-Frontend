@@ -1,6 +1,15 @@
 a,
 button,
 input[type="button"] {
+  &:disabled{
+    background-color: rgba(#000000, .12) !important;
+    color: rgba(#000000, .26) !important;
+    cursor: not-allowed !important;
+    border:  rgba(#000000, .12) !important;
+    &:hover{
+      background-color: transparent;
+    }
+  }
   &.btn-tool{
     color: #adb5bd;
     font-size: 20px;
@@ -13,7 +22,7 @@ input[type="button"] {
     align-items: center;
     // display: inline-block;
     margin: 0 5px 5px 0;
-    padding: 4px 16px;
+    padding: 0 16px;
     font-size: 14px;
     border: 1px solid;
     border-radius: 5px;
@@ -21,7 +30,8 @@ input[type="button"] {
     color: $white;
     text-transform: uppercase;
     letter-spacing: 1.25px;
-    line-height: 1.6;
+    line-height: 36px;
+    height: 36px;
     text-align: center;
     white-space: nowrap;
     &:hover {
@@ -31,13 +41,13 @@ input[type="button"] {
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
     &.btn--disabled,
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.6;
-      background-color: $gray;
-      border-color: $gray;
-      color: black;
-    }
+    // &:disabled {
+    //   pointer-events: none;
+    //   opacity: 0.6;
+    //   background-color: $gray;
+    //   border-color: $gray;
+    //   color: black;
+    // }
     &.x-small {
       height: 20px;
       min-width: 36px;
@@ -194,12 +204,12 @@ input[type="button"] {
       color: white;
       border-radius: 20px;
       &.btn--disabled,
-      &:disabled {
-        pointer-events: none;
-        opacity: 0.6;
-        border-color: $gray;
-        color: black;
-      }
+      // &:disabled {
+      //   pointer-events: none;
+      //   opacity: 0.6;
+      //   border-color: $gray;
+      //   color: black;
+      // }
       &.btn--default {
         color: $primary;
       }
@@ -619,43 +629,61 @@ input[type="button"] {
 
 .btn-group {
   margin: 5px;
-
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  display: inline-flex;
+  // &:first-child {
+  //   border-top-right-radius: 0;
+  //   border-bottom-right-radius: 0;
+  // }
+  border-radius: 5px;
+  overflow: hidden;
+  &.btn-group--outlined{
+    border: 1px solid $primary;
+    .btn{
+      border: none;
+      border-right: 1px solid;
+      &:last-of-type{
+        border-right: 0;
+        border-radius: inherit;
+      }
+    }
+  }
+  &.btn-group--rounded{
+    border-radius: 30px;
   }
 
   .btn {
     white-space: nowrap;
     display: inline;
     margin: 0;
-    border: unset;
+    // border: unset;
+    border-radius: 0 !important;
 
-    &.btn.btn--outlined {
-      border: 1px solid $light-gray;
+    // &.btn.btn--outlined {
+    //   border: 1px solid $light-gray;
 
-      &:hover {
-        transition: 0.3s ease all;
-      }
-    }
+    //   &:hover {
+    //     transition: 0.3s ease all;
+    //   }
+    // }
 
-    &:first-of-type {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      margin-right: -1;
-    }
-    &:not(:first-child):not(:last-child) {
-      border-radius: 0;
-      margin-left: -1px;
-      margin-right: -1px;
-      border-left: 0;
-    }  
-    &:last-of-type {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
+    // &:first-of-type {
+    //   border-top-right-radius: 0;
+    //   border-bottom-right-radius: 0;
+    //   margin-right: -1;
+    // }
+    // &:not(:first-child):not(:last-child) {
+    //   border-radius: 0;
+    //   margin-left: -1px;
+    //   margin-right: -1px;
+    //   border-left: 0;
+    // }  
+    // &:last-of-type {
+    //   border-top-left-radius: 0;
+    //   border-bottom-left-radius: 0;
+    // }
     
   }
+
 }
 // rtl
 html[dir="rtl"] {
@@ -777,13 +805,13 @@ html[dir="rtl"] {
     &:focus{
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
-    &.btn--disabled,
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.6;
-      border-color: $gray;
-      color: black;
-    }
+    // &.btn--disabled,
+    // &:disabled {
+    //   pointer-events: none;
+    //   opacity: 0.6;
+    //   border-color: $gray;
+    //   color: black;
+    // }
   }
   
   // &:focus-visible{
