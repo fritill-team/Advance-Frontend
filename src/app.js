@@ -201,8 +201,9 @@ resourse1.build()
 //         field: title
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)
-    if (Object.prototype.hasOwnProperty.call(field, errors)) {
-      let inputMessages = $form.find(`#${app}-${field}-messages`)
-      inputMessages.empty().append($(errors[field].map(error => `<li>${error}</li>`).join('')))
-    }
+    if (Object.prototype.hasOwnProperty.call(field, errors))
+      $form.find(`#${app}-${field}-messages`)
+        .empty()
+        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+
 }
