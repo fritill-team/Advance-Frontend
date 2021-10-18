@@ -45,16 +45,11 @@
         & + label {
           color: #dc3545;
         }
-        & + label{
-          &:hover:before{
-            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.2);
-          }
-        }
-        & + label:active{
-          &:hover:before{
-            box-shadow: 0px 0px 0px 8px rgba(#dc3545, 0.5);
-          }
-        }
+        // & + label{
+        //   &:hover:before{
+        //     box-shadow: 0 0 6px 3px rgba(#dc3545, 0.2);
+        //   }
+        // }
       }
       &[type="checkbox"] {
         &:checked + label:after {
@@ -63,6 +58,14 @@
         }
         & + label {
           color: #dc3545;
+          span{
+            background-color: #dc3545;
+          }
+          &:hover{
+            span{
+              opacity: .2;
+            }
+        }
         }
       }
 
@@ -78,7 +81,16 @@
         &:checked + label:after {
           border: 6px solid  #dc3545;
         }
-
+        & + label{
+          span{
+            background-color: #dc3545;
+          }
+          &:hover{
+            span{
+              opacity: .2;
+            }
+        }
+        }
       }
       &[type='file']{
         & + label{
@@ -98,14 +110,18 @@
   }
   &.field-wrapper--sm{
     .field-wrapper__label {
-      font-size: 14px;
+      font-size: 12px;
       margin-bottom: 4px;
-      padding: 4px 12px;
+      padding: 4px 10px;
     }
-
+    .input-group{
+      .file-input{
+        height: 34px;
+      }
+    }
     .field {
-      font-size: 14px;
-      padding: 4px 12px;
+      font-size: 12px;
+      padding: 4px 9px;
       height: 38px;
       &[type='file']{
         display: none;
@@ -144,15 +160,26 @@
         font-size: 16px;
       }
     }
+    .input-group{
+      .file-input{
+        height: 48px;
+      }
+    }
     .field {
-      font-size: 16px;
+      font-size: 18px;
       height: 48px;
       &[type='file']{
         display: none;
         & + label{
-          font-size: 16px;
-          // &:after{
-          // }
+          font-size: 18px;
+          padding: 1.4rem .9rem;
+          &:after{
+            padding: 1.4rem 0.9rem;
+            height: calc(1.4em + .75rem);
+          }
+          &:before{
+            font-size: 18px;
+          }
         }
       }
       &[type="checkbox"],
@@ -161,10 +188,18 @@
           font-size: 16px;
         }
       }
+      &[type="radio"] {
+        & + label{
+          span{
+            left: -11px;
+            top: 8px;
+          }
+        }
+      }
   }
   }
   // start switch
-  .switch {  
+  .switch {
     input[type="checkbox"],
     input[type="radio"]{
       display: none;
@@ -221,24 +256,24 @@
     .field-wrapper__content{
       position: relative;
       &:after{
-        position: absolute; 
-        top: 43%;
+        position: absolute;
+        top: 35%;
         transform: translateY(44%);
         right: 20px;
         content: "";
-        border-right: 3px solid #686f7a; 
+        border-right: 3px solid #686f7a;
         border-bottom: 3px solid #686f7a;
         height: 10px;
         width: 10px;
-        transform: rotate(-136deg);  
+        transform: rotate(42deg);
         transition: all 0.3s ease-in-out ;
         display: block;
-      } 
+      }
       &:focus-within{
         &:after{
-          top: 38%;
+          top: 46%;
           transition: all 0.3s ease-in-out ;
-          transform: rotate(42deg);
+          transform: rotate(-136deg);
         }
       }
     }
@@ -297,6 +332,16 @@
     justify-content: space-between;
     align-items: center;
   }
+  .field{
+    &[type="checkbox"],
+    &[type="radio"] { 
+    & + label {
+      span{
+        top: 50%;
+      }
+    } 
+  }
+}
 }
 
 .field{
@@ -319,21 +364,30 @@
 
     & + label {
       position: relative;
-      padding-left: 22px;
       font-size: 14px;
       line-height: 1;
       cursor: pointer;
       color: $gray;
       margin: 7px 0px;
-      padding-left: 27px;
-      &:hover:before{
-        box-shadow: 0px 0px 0px 8px rgba($primary, 0.2);
+      padding-left: 30px;
+      span{
+        position: absolute;
+        background-color: $primary;
+        left: -11px;
+        // z-index: 0;
+        top: 8px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: .3s ease all;
       }
-    }
-    & + label:active{
-      &:hover:before{
-        box-shadow: 0px 0px 0px 8px rgba($primary, 0.5);
-      }
+      &:hover{
+        span{
+          opacity: .2;
+        }
+     }
     } 
     & + label:before {
       content: '';
@@ -346,6 +400,7 @@
       border: 1px solid $gray;
       background: #FFF;
       transition: all 275ms;
+      z-index: 1;
     }
 
     &:not(:checked) + label:after {
@@ -358,15 +413,28 @@
       height: 12px;
       transform: rotate(45deg);
       opacity: 1;
+      z-index: 2;
     }
   }
 
   &[type="checkbox"] {
     & + label {
       padding-top: 2px;
+      span{
+        left: -11px;
+        top: 9px;
+        width: 40px;
+        height: 40px;
+      }
+      &:hover{
+        span{
+          opacity:0.2;
+        }
+    }
     }
     & + label:before {
       border-radius: 2px;
+
     }
     &:checked + label:after {
       left: 6px;
@@ -378,7 +446,20 @@
   }
 
   &[type="radio"] {
+    & + label{
+      span{
+        left: -11px;
+        top: 8px;
+      }
+      &:hover{
+        span{
+          opacity:0.2;
+        }
+    }
+    }
     & + label:before {
+      left: 0px;
+      top: -1px;
       border-radius: 50%;
     }
     &:not(:checked) + label:after {
@@ -386,9 +467,9 @@
     }
     &:checked + label:after {
       left: 3px;
-      top: 3px;
+      top: 2px;
       width: 12px;
-      border: 6px solid $primary;
+      background-color: $primary;
       border-radius: 50%;
     }
   }
@@ -451,50 +532,60 @@
     &[type="checkbox"] {
       & + label {
         padding-top: 2px;
+        span{
+          left: -10px;
+          top: 50%;
+        }
+        &:hover{
+          span{
+            opacity:0.2;
+          }
+      }
       }
       & + label:before {
         border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+      & + label:after {
+        left: 7px;
+        top: 3px;
       }
     }
   }
   &.field--accent{
-    &[type="checkbox"] { 
-      & + label:before { 
+    &[type="checkbox"] {
+      & + label:before {
         border: 1px solid $accent;
       }
-      &:checked + label:after { 
+      &:checked + label:after {
         border-bottom: 3px solid $accent;
         border-right: 3px solid $accent;
       }
-      & + label{
-        &:hover:before{
-          box-shadow: 0px 0px 0px 8px rgba($accent, 0.2);
-        }
-      }
-      & + label:active{
-        &:hover:before{
-          box-shadow: 0px 0px 0px 8px rgba($accent, 0.5);
+      & + label{ 
+        span{
+          background-color: $accent;
         }
       } 
     }
   }
   // checked opacity
   &.field--checked{
-    display: none; 
+    display: none;
     &[type="checkbox"],
-    &[type="radio"] { 
+    &[type="radio"] {
       & + label {
         opacity: 0.3;
         &:hover{
           opacity: 1;
         }
-      }  
+      }
     }
     &:checked {
       &[type="checkbox"],
-      &[type="radio"] { 
+      &[type="radio"] {
         & + label {
-          opacity: 1; 
+          opacity: 1;
           &:before{
             background: $primary;
             border: 1px solid $primary;
@@ -503,10 +594,10 @@
             border-bottom: 3px solid #FFF;
             border-right: 3px solid #FFF;
           }
-        }  
+        }
       }
     }
-  } 
+  }
 }
 .input-group {
   &.field-field-group {
@@ -572,11 +663,13 @@
       }
       & + label {
         color: #FFF;
+        span{
+          background-color: #FFF;
+        }
       }
     }
 
     &[type="checkbox"] {
-
       &:checked + label:after {
         border-bottom: 3px solid #576874;
         border-right: 3px solid #576874;
@@ -607,7 +700,30 @@
       background: #43525c;
       box-shadow: none;
       border: 0;
-      border-bottom: 1px solid rgba(#57687451 ,.5); 
+      border-bottom: 1px solid rgba(#57687451 ,.5);
+      &:focus{
+        border-bottom: 1px solid hsla(0,0%,100%,.5);
+
+      }
+    }
+    &.field--checked{
+      display: none;
+      &:checked {
+        &[type="checkbox"],
+        &[type="radio"] {
+          & + label {
+            opacity: 1;
+            &:before{
+              // background: $primary;
+              border: 1px solid $primary;
+            }
+            &:after{
+              border-bottom: 3px solid #FFF;
+              border-right: 3px solid #FFF;
+            }
+          }
+        }
+      }
     }
   }
   textarea {
@@ -618,6 +734,9 @@
       color: #FFF;
       box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
     }
+  }
+  .upload-input{
+    display: inline-block;
   }
   .field-wrapper{
     &.field-wrapper--error{
@@ -675,6 +794,11 @@
           &:checked + label:after {
              border: none;
           }
+          & + label{
+            &:after{
+              background-color: #dc3545;
+            }
+          }
         }
         &[type='file']{
           & + label{
@@ -692,12 +816,12 @@
     .field{
       // accent color in night-mode
       &.field--accent{
-        &[type="checkbox"] { 
-          & + label:before { 
+        &[type="checkbox"] {
+          & + label:before {
             border: 1px solid $accent;
-            // background: #e5e5e5; 
+            // background: #e5e5e5;
           }
-          &:checked + label:after { 
+          &:checked + label:after {
             border-bottom: 3px solid $accent;
             border-right: 3px solid $accent;
           }
@@ -706,17 +830,10 @@
       // night-mode invert
       &.field--invert{
         &[type="checkbox"] {
-          & + label {
-            padding-top: 2px;
-          }
           & + label:before {
-            border: none;
-            background: #e5e5e5; 
+            background: #e5e5e5;
           }
           &:checked + label:after {
-            left: 6px;
-            top: 2px;
-            width: 6px;
             border-bottom: 3px solid $primary;
             border-right: 3px solid $primary;
           }
@@ -724,11 +841,11 @@
       }
     }
     &.field-wrapper--arrow{
-      .field-wrapper__content{ 
+      .field-wrapper__content{
         &:after{
-          border-right: 3px solid #e5e5e5; 
+          border-right: 3px solid #e5e5e5;
           border-bottom: 3px solid #e5e5e5;
-        } 
+        }
       }
     }
   }
@@ -748,7 +865,14 @@
      li {
        color: #FFF;
      }
-   } 
+   }
+   textarea {
+     color: #FFF;
+     border: none;
+    &:focus {
+      border: 1px solid #e5e5e5;
+    }
+  }
 }
 textarea {
   width: 100%;
@@ -759,16 +883,18 @@ textarea {
   background: $white;
   color: $input-color;
   border-radius: 10px;
-  border: 1px solid #e5e5e5;
   padding: 1em;
   resize: none;
+  border: 1px solid #e5e5e5;
+
   &:focus {
     color: $input-color;
+    border-bottom: 1px solid rgba($primary, 0.5);
   }
 }
 .field[disabled="disabled"]{
   background-color: rgba(0,0,0,.06);
-  & + label{ 
+  & + label{
     &:before{
       background: rgba(0,0,0,.06);
       border: none;
@@ -783,7 +909,7 @@ html[dir="rtl"]{
         &:after{
           left: 20px;
           right: auto;
-        } 
+        }
       }
     }
   }
@@ -793,9 +919,13 @@ html[dir="rtl"]{
   &[type="radio"] {
     right: 0;
     & + label {
-      padding-right: 22px;
-    }
-
+      padding-right: 30px;
+      span{ 
+        right: -11px;
+        // z-index: 0;
+        top: 47%; 
+      } 
+  }
     & + label:before {
       right: 0;
     }
@@ -808,6 +938,12 @@ html[dir="rtl"]{
   }
 
   &[type="radio"] {
+    & + label{
+      span{
+        right: -11px;
+        top: 45%;
+      }
+    }
     &:checked + label:after {
       right: 3px;
     }
@@ -815,5 +951,31 @@ html[dir="rtl"]{
   &.field--with-icon{
     padding-right: 3em;
   }
+  &.field--rounded{
+    &[type="checkbox"] {
+      & + label{
+        span{
+          right: -10px;
+        }
+      }
+      & + label:after {
+        right: 7px;
+      }
+    }
+  }
+  }
+  .check-field-group {
+    .field{
+      &[type="checkbox"],
+      &[type="radio"] { 
+      & + label {
+        span{
+          top: 8px;
+        }
+      } 
+    }
+  }
   }
 }
+
+

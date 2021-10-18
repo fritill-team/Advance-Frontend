@@ -6,7 +6,7 @@
 @import "layouts/_header";
 @import "layouts/_header-player";
 @import "layouts/_sidebar";
-@import "layouts/playlist";
+@import "layouts/sidebar-dark";
 @import "layouts/_footer";
 
 @import "./custom/toastr";
@@ -53,6 +53,7 @@
 @import "./components/_bread-crumbs";
 @import "./components/_recommendation.scss";
 
+@import "./components/delete-page";
 @import "./components/single-course/interactions-course.scss";
 @import "./components/single-course/user-component";
 @import "./components/single-course/user-item";

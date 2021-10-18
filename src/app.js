@@ -20,7 +20,8 @@ import "./assets/vendor/sortable.js";
 // js
 import "./assets/scripts/index";
 
-import { ListLoader } from "./assets/scripts/backend_scripts/panel-loader"
+import {ListLoader} from "./assets/scripts/backend_scripts/panel-loader"
+import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
 
 
 let up = $('.count-up'),
@@ -65,13 +66,16 @@ class Resource {
   get items() {
     return this.localItems
   }
+
   set items(value) {
     this.localItems = value
     this.itemsListener(value)
   }
+
   itemsListener(v) {
     countable.val(v)
   }
+
   // RESOURCE = {
   //   // items
   //   localItems: [],
@@ -89,13 +93,14 @@ class Resource {
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(item, options))
         this[item] = options[item]
-        console.log(item);
     this.localItems = []
   }
 
   fetch(Q = null) {
-    $.get(this.listingURL, { q: Q })
-      .then(res => {this.RESOURCE.items = res;})
+    $.get(this.listingURL, {q: Q})
+      .then(res => {
+        this.RESOURCE.items = res;
+      })
       .catch(e => this.handleError(e))
 
   }
@@ -104,22 +109,22 @@ class Resource {
     console.error(e)
   }
 
-  defaultStructure() {
-    return $(`<div class="container">
-        <div class="row">
-        <div class="col-6">
-          ${this.searchForm()}
-          ${this.listingTemplate()}
-        </div>
-        <div class="col-6">${this.formTemplate()}</div>
-        </div>
-    </div>`)}
+  // defaultStructure() {
+  //   return `<div class="container">
+  //       <div class="row">
+  //       <div class="col-6">
+  //         ${this.searchForm()}
+  //         ${this.listingTemplate()}
+  //       </div>
+  //       <div class="col-6">${this.formTemplate()}</div>
+  //       </div>
+  //   </div>`}
 
-  async build() {
-    await this.fetch('http://localhost:3000/recommendations/')
-    this.$container.empty()
-    this.$container.append(this.defaultStructure())
-  }
+  // async build() {
+  //   await this.fetch('http://localhost:3000/')
+  //   this.$container.empty()
+  //   this.$container.append(this.defaultStructure())
+  // }
 
 }
 
@@ -134,7 +139,7 @@ let recommendations = new Resource($('#recommendations'), {
   formTemplate(item, url) {
     return ''
   },
-  searchForm(item){
+  searchForm(item) {
     return ''
   },
   listingTemplate() {
@@ -142,8 +147,63 @@ let recommendations = new Resource($('#recommendations'), {
   },
   defaultStructure() {
     return ''
+  },
+  itemsListener() {
+
   }
 })
 
-recommendations.build()
+// recommendations.build()
 
+// console.log(recommendations.options);
+
+class NewResource {
+  constructor(container, options) {
+    this.container = container
+    this.options = options
+    for (let item in options)
+      if (Object.prototype.hasOwnProperty.call(item, options))
+        this[item] = options[item]
+  }
+
+  defaultStructure(data) {
+    return `<div class="container">
+        <div class="row">
+        <div class="col-6">
+          text default structure
+          ${data}
+        </div>
+        <div class="col-6">form structure</div>
+        </div>
+    </div>`
+  }
+
+  build() {
+    $.ajax({
+      type: 'GET',
+      url: `http://localhost:3000/recommendations/`,
+      success: (data) => {
+        this.container.append(this.defaultStructure(data))
+        console.log(data);
+      }
+    })
+  }
+}
+
+let resourse1 = new NewResource($('#recommendations'), {})
+
+resourse1.build()
+
+// TODO Mohammed Ibrahim
+// to map validation errors to form
+// field messages must has id of `#${app}-${fieldErrors}-messages`
+// example app: recommendations
+//         field: title
+const mapErrors = (app, $form, errors) => {
+  for (let field in errors)
+    if (Object.prototype.hasOwnProperty.call(field, errors))
+      $form.find(`#${app}-${field}-messages`)
+        .empty()
+        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+
+}

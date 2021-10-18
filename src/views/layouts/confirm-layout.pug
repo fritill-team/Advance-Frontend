@@ -1,0 +1,51 @@
+//- Master layout
+
+doctype html
+
+html(lang='en' dir="ltr" class="")
+	head
+		link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+
+		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
+		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+		link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+		link(href='../assets/vendor/lightbox.min.css' rel='stylesheet')
+		link(href='../assets/vendor/venobox.css' rel='stylesheet'  type="text/css" media="screen")
+		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
+		link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
+		link(href="../assets/vendor/toastr.css" rel='stylesheet')
+		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+		link(href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" rel="stylesheet")
+		link(href="../assets/vendor/dropzone.min.css" rel='stylesheet')
+		link(rel="stylesheet", href="../assets/vendor/jquery-ui.min.css")
+		//- Title
+		block title
+			title Your project!
+
+	body.sidebar-with-icon
+		include ../components/modal-dialog.pug
+		.wrapper
+			.wrapper__overlay.toggle
+			//- Menu
+			header.header
+				.container-fluid
+					include ../components/header.pug
+			.page-content
+				block content
+			include ../components/footer-admin.pug
+
+				//- Footer
+
+				//- block scripts
+				block scripts
+
+
+	script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-bash.min.js")
+	//- script(src='../assets/scripts/jquery-3.3.1.min.js')
+	//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
+	//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
+	//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
+	//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
+	//- script(src='../assets/scripts/custom.js')
+	//- script(src='../assets/scripts/night-mode.js')

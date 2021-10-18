@@ -1,19 +1,4 @@
-.playlist{
-  &.playlist--size{
-    // display: flex;
-    // width: 25%;
-    // position: fixed;
-    // z-index: 5px;
-    // overflow-y: hidden;
-    @media (min-width: 0px) and (max-width: 992px) {
-      position: fixed;
-      z-index: 5px;
-      top: 60px;
-      width:25% ;
-      transition: all 0.3s ease-in;
-      bottom: 0;
-    }
-  }
+.sidebar-dark{
   &.playlist--survey{
     padding: 10px 15px;
     color: $primary;
@@ -24,18 +9,18 @@
   .list{
     padding: 5px;
   }
-  .playlist__header-section{
-    padding: 10px 15px;
-    margin-bottom:0;
-    img{
-      @media (min-width: 0px) and (max-width: 992px) {
-        width: 200px;
-        text-align: center;
-        margin-top: 10px;
-        float: none;
-      }
-    }
-  }
+  // .playlist__header-section{
+  //   padding: 10px 15px;
+  //   margin-bottom:0;
+  //   img{
+  //     @media (min-width: 0px) and (max-width: 992px) {
+  //       width: 200px;
+  //       text-align: center;
+  //       margin-top: 10px;
+  //       float: none;
+  //     }
+  //   }
+  // }
   .playlist__list-item {
     display: flex;
     align-items: center;
@@ -334,7 +319,7 @@ span#percentage {
 }  
 // night-mode
 .night-mode{
-  .playlist{
+  .sidebar-dark{
     .playlist--survey{
       color: #efefef;
     }
