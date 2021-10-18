@@ -14,7 +14,7 @@ $(".wrapper__overlay").on("click",function(event){
  
 $(".list-item-date").each(function () {
   $(this).on('mouseenter', function () {
-    $('.menu__date').addClass('active')
+    $('.menu__date').toggleClass('active')
     // if ($('.menu__date').hasClass('active')) {
     //   $('.menu__date').removeClass('active');
     // }else {

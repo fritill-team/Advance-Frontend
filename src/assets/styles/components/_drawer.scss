@@ -114,4 +114,14 @@ html[dir="rtl"]{
       border-radius: 0;
     }
   }
+  .drawer{
+    .drawer__header{
+      display: flex;
+      align-items: center;
+      .btn{
+        margin-right: auto;
+        margin-left: inherit;
+      }
+    }
+  }
 }

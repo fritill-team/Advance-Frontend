@@ -12,89 +12,44 @@
     display: flex;
     justify-content: flex-start;
     height: 60px;
-    background-color: darken($primary, 7);
-  }
-  .header--exams {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header-player__logo {
-    display: block;
-    margin: 0;
-    line-height: 3.2;
-    background: $primary;
-    height: 100%;
-    padding: 14px 30px 2px 30px;
-    position: relative;
-
-    .logo__img {
-      height: 28px;
-    }
-
-    &:after {
-      border: 30px solid transparent;
-      border-left: 15px solid #0d758e;
-      border-right: 0;
-      content: "";
-      height: 0;
-      left: 100%;
-      position: absolute;
-      top: 0;
-      width: 0;
-      z-index: 1;
-    }
-  }
-
-  .header-player__img-small {
-    display: none;
-    margin: 0;
-    line-height: 1;
-    height: fit-content;
-    padding: 6px 10px 5px 4px;
-
-    .logo__img {
-      width: 30px;
-    }
     // logon 1
-//     .header-dark__logo {
-//       display: block;
-//       background-color: darken($primary, 7);
-//       display: block;
-//       margin: 0;
-//       line-height: 3.2;
-//       // background: $primary;
-//       height: 100%;
-//       padding: 14px 30px 2px 30px;
-//       position: relative;
-//       img{
-//         height: 28px;
-//       }
-//       &:after {
-//         border: 30px solid transparent;
-//         border-left: 15px solid darken($primary, 7);
-//         border-right: 0;
-//         content: "";
-//         height: 0;
-//         left: 100%;
-//         position: absolute;
-//         top: 0;
-//         width: 0;
-//         z-index: 1;
-//       }
-//     }
-//     //small logo
-//     .header-dark__img-sm {
-//       display: none;
-//       margin: 0;
-//       line-height: 1;
-//       height: fit-content;
-//       padding: 6px 10px 5px 4px;
-//       img {
-//         width: 30px;
-//       }
-    
+    .header-dark__logo {
+      display: block;
+      background-color: darken($primary, 7);
+      display: block;
+      margin: 0;
+      line-height: 3.2;
+      // background: $primary;
+      height: 100%;
+      padding: 14px 30px 2px 30px;
+      position: relative;
+      img{
+        height: 28px;
+      }
+      &:after {
+        border: 30px solid transparent;
+        border-left: 15px solid darken($primary, 7);
+        border-right: 0;
+        content: "";
+        height: 0;
+        left: 100%;
+        position: absolute;
+        top: 0;
+        width: 0;
+        z-index: 1;
+      }
+    }
+    //small logo
+    .header-dark__img-sm {
+      display: none;
+      margin: 0;
+      line-height: 1;
+      height: fit-content;
+      padding: 6px 10px 5px 4px;
+      img {
+        width: 30px;
+      }
+    }
     //title course
     .header-dark__courses {
       margin: 0;
@@ -178,16 +133,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-  }
+  }  
   @media (min-width: 992px) {
     .header {
     &.header--admin{ 
       padding-right: 60px; 
     }
+    } 
   } 
-}
-//   } 
 }
 
 html.night-mode {
@@ -195,7 +148,7 @@ html.night-mode {
     background-color: rgb(56, 68, 77);
   }
 }
-
+// logon in master header
 .header__logo {
   float: left;
   width: 135px;
@@ -259,7 +212,7 @@ html.night-mode {
 .header__notification {
   margin-left: auto; 
 }
-
+//header-filter
 .notification__list {
   display: flex;
   align-items: center;
@@ -269,12 +222,7 @@ html.night-mode {
     padding: 0px 5px;
     display: inline-block !important;
     vertical-align: middle;
-    .list-item--opencard {
-      padding: 18px 8px;
-      font-size: 20px;
-      color: $darkGray;
-      position: relative;
-
+    .list-item--opencard { 
       .opencard__icon {
         font-size: 120%;
       }
