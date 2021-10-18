@@ -12,44 +12,89 @@
     display: flex;
     justify-content: flex-start;
     height: 60px;
+    background-color: darken($primary, 7);
+  }
+  .header--exams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-player__logo {
+    display: block;
+    margin: 0;
+    line-height: 3.2;
+    background: $primary;
+    height: 100%;
+    padding: 14px 30px 2px 30px;
+    position: relative;
+
+    .logo__img {
+      height: 28px;
+    }
+
+    &:after {
+      border: 30px solid transparent;
+      border-left: 15px solid #0d758e;
+      border-right: 0;
+      content: "";
+      height: 0;
+      left: 100%;
+      position: absolute;
+      top: 0;
+      width: 0;
+      z-index: 1;
+    }
+  }
+
+  .header-player__img-small {
+    display: none;
+    margin: 0;
+    line-height: 1;
+    height: fit-content;
+    padding: 6px 10px 5px 4px;
+
+    .logo__img {
+      width: 30px;
+    }
     // logon 1
-    .header-dark__logo {
-      display: block;
-      background-color: darken($primary, 7);
-      display: block;
-      margin: 0;
-      line-height: 3.2;
-      // background: $primary;
-      height: 100%;
-      padding: 14px 30px 2px 30px;
-      position: relative;
-      img{
-        height: 28px;
-      }
-      &:after {
-        border: 30px solid transparent;
-        border-left: 15px solid darken($primary, 7);
-        border-right: 0;
-        content: "";
-        height: 0;
-        left: 100%;
-        position: absolute;
-        top: 0;
-        width: 0;
-        z-index: 1;
-      }
-    }
-    //small logo
-    .header-dark__img-sm {
-      display: none;
-      margin: 0;
-      line-height: 1;
-      height: fit-content;
-      padding: 6px 10px 5px 4px;
-      img {
-        width: 30px;
-      }
-    }
+//     .header-dark__logo {
+//       display: block;
+//       background-color: darken($primary, 7);
+//       display: block;
+//       margin: 0;
+//       line-height: 3.2;
+//       // background: $primary;
+//       height: 100%;
+//       padding: 14px 30px 2px 30px;
+//       position: relative;
+//       img{
+//         height: 28px;
+//       }
+//       &:after {
+//         border: 30px solid transparent;
+//         border-left: 15px solid darken($primary, 7);
+//         border-right: 0;
+//         content: "";
+//         height: 0;
+//         left: 100%;
+//         position: absolute;
+//         top: 0;
+//         width: 0;
+//         z-index: 1;
+//       }
+//     }
+//     //small logo
+//     .header-dark__img-sm {
+//       display: none;
+//       margin: 0;
+//       line-height: 1;
+//       height: fit-content;
+//       padding: 6px 10px 5px 4px;
+//       img {
+//         width: 30px;
+//       }
+    
     //title course
     .header-dark__courses {
       margin: 0;
@@ -133,10 +178,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    button {
-      margin: 0;
+    
+  }
+  @media (min-width: 992px) {
+    .header {
+    &.header--admin{ 
+      padding-right: 60px; 
     }
   } 
+}
+//   } 
 }
 
 html.night-mode {
@@ -276,30 +327,23 @@ html.night-mode {
       font-weight: 500;
     }
   }
-
   .item__profile-link {
     display: flex;
-
-
     .profile-link__content {
       width: 80%;
       white-space: normal;
-
       .content__name {
         font-size: 14px;
         font-weight: 500;
-        //font-family: box-shadow 0.1s ease, width 0.1s ease;
         margin-bottom: 5px;
         color: $darkBlack;
         text-align: left;
         position: relative;
         margin-top: 0;
       }
-
       .content__details {
         font-size: 13px;
         font-weight: 400;
-        //font-family: box-shadow 0.1s ease, width 0.1s ease;
         margin-bottom: 8px;
         color: $darkGray;
         text-align: left;
@@ -319,6 +363,7 @@ html.night-mode {
     z-index: 13;
   }
 }
+
 .item__view-all {
   width: 100%;
   text-align: center;
@@ -648,6 +693,13 @@ html.night-mode {
     }
   }
 }
+@media (min-width: 992px) {
+  .header {
+    &.header--admin{ 
+      padding-left: 60px; 
+    } 
+  }
+} 
 @media (max-width: 567px) {
   .header{
     background-color: #FFF;
