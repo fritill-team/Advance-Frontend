@@ -19,10 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // align-items: center;
-    button {
-      margin: 0;
-    }
   }
 
   .header-player__logo {
@@ -312,30 +308,23 @@ html.night-mode {
       font-weight: 500;
     }
   }
-
   .item__profile-link {
     display: flex;
-
-
     .profile-link__content {
       width: 80%;
       white-space: normal;
-
       .content__name {
         font-size: 14px;
         font-weight: 500;
-        //font-family: box-shadow 0.1s ease, width 0.1s ease;
         margin-bottom: 5px;
         color: $darkBlack;
         text-align: left;
         position: relative;
         margin-top: 0;
       }
-
       .content__details {
         font-size: 13px;
         font-weight: 400;
-        //font-family: box-shadow 0.1s ease, width 0.1s ease;
         margin-bottom: 8px;
         color: $darkGray;
         text-align: left;
@@ -352,62 +341,9 @@ html.night-mode {
   }
 
   &:hover {
-    // background: rgba(0, 0, 0, 0.05);
     z-index: 13;
   }
 }
-
-// .massege__menu {
-//   cursor: auto;
-//   position: absolute;
-//   display: none;
-//   outline: none;
-//   top: 100%;
-//   // min-width: max-content;
-//   margin-top: 6px !important;
-//   padding: 0;
-//   background: $white;
-//   font-size: 1em;
-//   text-shadow: none;
-//   text-align: left;
-//   left: auto !important;
-//   right: 0 !important;
-//   // box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
-//   border: 1px solid rgba(34, 36, 38, 0.15) !important;
-//   border-radius: 0.28571429rem;
-//   transition: opacity 0.1s ease;
-//   z-index: 11;
-//   will-change: transform, opacity;
-//   min-width: 300px !important;
-
-//   .menu--item {
-//     position: relative;
-//     cursor: pointer;
-//     display: block;
-//     border: none;
-//     height: auto;
-//     text-align: left;
-//     border-top: none;
-//     line-height: 1em;
-//     color: rgba(0, 0, 0, 0.87);
-//     padding: 0.78571429rem 1.14285714rem !important;
-//     font-size: 1rem;
-//     text-transform: none;
-//     font-weight: 400;
-//     box-shadow: none;
-//     border-bottom: 1px solid $light-white !important;
-//   // margin-left: 20px;
-
-//   .list__profile {
-//     cursor: pointer;
-//     position: relative;
-//     display: inline-block;
-//     outline: none;
-//     text-align: left;
-//     transition: box-shadow 0.1s ease, width 0.1s ease;
-//     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-//   }
-// }
 
 .item__view-all {
   width: 100%;

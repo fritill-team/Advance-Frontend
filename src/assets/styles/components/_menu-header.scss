@@ -21,6 +21,10 @@
      animation: rotateX 400ms ease-in-out forwards;
     transform-origin: top center;
   }
+  .card-list{
+    width: 280px;
+    padding: 10px;
+  }
 }
 @keyframes rotateX {
   0% {

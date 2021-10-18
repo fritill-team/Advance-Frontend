@@ -11,11 +11,17 @@ $(".wrapper__overlay").on("click",function(event){
   event.stopPropagation();
 });
 // open data menu
-
-$(document).on('click', '.list-item-date', function () {
-  if ($('.menu__date').hasClass('active')) {
-    $('.menu__date').removeClass('active');
-  }else {
-    $('.menu__date').addClass('active');
-  }
+ 
+$(".list-item-date").each(function () {
+  $(this).on('mouseenter', function () {
+    $('.menu__date').addClass('active')
+    // if ($('.menu__date').hasClass('active')) {
+    //   $('.menu__date').removeClass('active');
+    // }else {
+    //   $('.menu__date').addClass('active');
+    // }
+  })
+  $(this).on('mouseleave', function () {
+    // $('.menu__date').toggleClass('active') 
+  })
 })
