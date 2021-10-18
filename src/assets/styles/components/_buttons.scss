@@ -694,6 +694,9 @@ html[dir="rtl"] {
     svg,
     i {
       margin-left: 5px;
+      transform: rotate(
+        180deg
+        );
     }
   }
 
