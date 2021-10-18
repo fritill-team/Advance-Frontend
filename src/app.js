@@ -237,9 +237,22 @@ class NewResource {
       error: xhr => console.error(xhr)
     })
   }
-  const form = document.querySelector('.recommendation-form');
-  const formData = {
-    title: 
+  // const form = document.getElementById('recommendation-form')
+  // formData = {
+  //   title: $('#title').value,
+  //   description: $('#description').value
+  // }
+  createRecommendation(title, description){
+    $.ajax({
+      url: this.listingURL,
+      type: 'post',
+      body: JSON.stringify(this.formData),
+      success: () => {
+        this.formData.title = ''
+        this.formData.description = ''
+      },
+      error: e => console.error(e)
+    })
   }
 
 
@@ -282,7 +295,7 @@ class NewResource {
 
   formTemplate() {
     return `
-      <form class='card recommendation-form' data-data='data'>
+      <form class='card recommendation-form' data-data='data' id='recommendation-form'>
         <div class="field-wrapper field-wrapper--sm">
           <label class="field-wrapper__label">Course Title*</label>
           <div class="field-wrapper__content">
@@ -301,7 +314,7 @@ class NewResource {
             <li>Please provide a valid city.</li>
           </ul>
         </div>
-        <input class="btn btn--primary" type="submit">
+        <input class="btn btn--primary" type="submit" onclick="createRecommendation()">
       </form>
     `
   }
