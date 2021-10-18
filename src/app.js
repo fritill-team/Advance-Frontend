@@ -19,8 +19,6 @@ import "./assets/vendor/select2.min.js";
 import "./assets/vendor/sortable.js";
 // js
 import "./assets/scripts/index";
-
-import {ListLoader} from "./assets/scripts/backend_scripts/panel-loader"
 // import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
 
 
@@ -61,8 +59,121 @@ export default {
   }
 }
 
+//
+// class Resource {
+//   constructor($container, options) {
+//     this.prefix = options.prefix ? options.prefix : ''
+//     this.$container = $container
+//     this.listingURL = options.listingURL
+//     this.formURL = options.formURL
+//     this.deleteURL = options.deleteURL
+//     for (let item in options)
+//       if (Object.prototype.hasOwnProperty.call(item, options))
+//         this[item] = options[item]
+//     this.localItems = []
+//   }
+//
+//   get items() {
+//     return this.localItems
+//   }
+//
+//   set items(value) {
+//     this.localItems = value
+//     this.itemsListener(value)
+//   }
+//
+//   // RESOURCE = {
+//   //   // items
+//   //   localItems: [],
+//
+//   //   // search
+//   //   localSearch: '',
+//   // }
+//
+//   itemsListener(v) {
+//     countable.val(v)
+//   }
+//
+//   fetch(Q = null) {
+//     $.get(this.listingURL, {q: Q})
+//       .then(res => {
+//         this.RESOURCE.items = res;
+//       })
+//       .catch(e => this.handleError(e))
+//
+//   }
+//
+//   handleError(e) {
+//     console.error(e)
+//   }
+//
+//   // defaultStructure() {
+//   //   return `<div class="container">
+//   //       <div class="row">
+//   //       <div class="col-6">
+//   //         ${this.searchForm()}
+//   //         ${this.listingTemplate()}
+//   //       </div>
+//   //       <div class="col-6">${this.formTemplate()}</div>
+//   //       </div>
+//   //   </div>`}
+//
+//   // async build() {
+//   //   await this.fetch('http://localhost:3000/')
+//   //   this.$container.empty()
+//   //   this.$container.append(this.defaultStructure())
+//   // }
+//
+// }
 
-class Resource {
+//
+// let recommendations = new Resource($('#recommendations'), {
+//   listingURL: '',
+//   formURL: '',
+//   deleteURL: '',
+//   itemTemplate(item) {
+//     return ''
+//   },
+//   formTemplate(item, url) {
+//     return ''
+//   },
+//   searchForm(item) {
+//     return ''
+//   },
+//   listingTemplate() {
+//     return ''
+//   },
+//   defaultStructure() {
+//     return ''
+//   },
+//   itemsListener() {
+//
+//   }
+// })
+
+// recommendations.build()
+
+// console.log(recommendations.options);
+
+class NewResource {
+  constructor($container, options) {
+    // properties
+    this.localItems = []
+    this.loading =  false
+    this.$container = $container
+    this.options = options
+    this.prefix = options.prefix ? options.prefix : ''
+    this.listingURL = options.listingURL
+    this.formURL = options.formURL
+    this.deleteURL = options.deleteURL
+
+
+    for (let item in options)
+      if (Object.prototype.hasOwnProperty.call(options, item)) {
+        this[item] = options[item]
+      }
+  }
+
   get items() {
     return this.localItems
   }
@@ -73,124 +184,89 @@ class Resource {
   }
 
   itemsListener(v) {
-    countable.val(v)
+    this.$itemsList = $(`#${this.prefix}-listing`)
+    this.$itemsList.html($(this.listingTemplate()))
   }
 
-  // RESOURCE = {
-  //   // items
-  //   localItems: [],
-
-  //   // search
-  //   localSearch: '',
-  // }
-
-  constructor($container, options) {
-    this.prefix = options.prefix ? options.prefix : ''
-    this.$container = $container
-    this.listingURL = options.listingURL
-    this.formURL = options.formURL
-    this.deleteURL = options.deleteURL
-    for (let item in options)
-      if (Object.prototype.hasOwnProperty.call(item, options))
-        this[item] = options[item]
-    this.localItems = []
-  }
-
-  fetch(Q = null) {
-    $.get(this.listingURL, {q: Q})
-      .then(res => {
-        this.RESOURCE.items = res;
-      })
-      .catch(e => this.handleError(e))
-
-  }
-
-  handleError(e) {
-    console.error(e)
-  }
-
-  // defaultStructure() {
-  //   return `<div class="container">
-  //       <div class="row">
-  //       <div class="col-6">
-  //         ${this.searchForm()}
-  //         ${this.listingTemplate()}
-  //       </div>
-  //       <div class="col-6">${this.formTemplate()}</div>
-  //       </div>
-  //   </div>`}
-
-  // async build() {
-  //   await this.fetch('http://localhost:3000/')
-  //   this.$container.empty()
-  //   this.$container.append(this.defaultStructure())
-  // }
-
-}
-
-
-let recommendations = new Resource($('#recommendations'), {
-  listingURL: '',
-  formURL: '',
-  deleteURL: '',
-  itemTemplate(item) {
-    return ''
-  },
-  formTemplate(item, url) {
-    return ''
-  },
-  searchForm(item) {
-    return ''
-  },
-  listingTemplate() {
-    return ''
-  },
-  defaultStructure() {
-    return ''
-  },
-  itemsListener() {
-
-  }
-})
-
-// recommendations.build()
-
-// console.log(recommendations.options);
-
-class NewResource {
-  constructor(container, options) {
-    this.container = container
-    this.options = options
-    for (let item in options)
-      if (Object.prototype.hasOwnProperty.call(item, options))
-        this[item] = options[item]
-  }
-
-  defaultStructure(data) {
-    return `<div class="container">
-        <div class="row">
-        <div class="col-6">
-          text default structure
-          ${data}
-        </div>
-        <div class="col-6">form structure</div>
-        </div>
-    </div>`
-  }
-
-  build() {
+  fetchItems(query = null) {
+    this.loading = true
     $.ajax({
       type: 'GET',
-      url: `http://localhost:3000/recommendations/`,
+      url: this.listingURL,
       success: (data) => {
-        this.container.append(this.defaultStructure(data))
-        console.log(data);
+        this.items = data
+        this.loading = false
+        // this.container.append(this.defaultStructure(JSON.stringify(data)));
+        // console.log(this.defaultStructure(JSON.stringify(data)));
+        // console.log(this.container);
       }
     })
   }
+
+  containerTemplate(data) {
+    return $(`<div class="container">
+      <div class="row">
+        <div class="col-6">
+          ${this.formTemplate()}
+        </div>
+        <div class="col-6">
+          ${this.searchForm()}
+          <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+
+        </div>
+      </div>
+    </div>`)
+  }
+
+  searchForm() {
+    return `<h1></h1>`
+  }
+
+  listingTemplate() {
+    return this.items.map(item => this.itemTemplate(item)).join('')
+  }
+
+  itemTemplate(item) {
+    return `<li>${item.title}</li>`
+  }
+
+  formTemplate() {
+    this.fetchItems()
+  }
+
+  build() {
+    this.$container.append(this.containerTemplate())
+    this.fetchItems()
+  }
 }
 
-let resourse1 = new NewResource($('#recommendations'), {})
+let textContainer = $('#recommendations')
+
+const recommendations = $('.recommendations-list')
+
+let resourse1 = new NewResource(recommendations, {
+  listingURL: recommendations.data('listing-url'),
+  prefix: "recommendations",
+  itemTemplate(item) {
+    return `
+      <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
+        <div class="card__header" >
+          <h5 class='title-5 my-0'>${item.title}</h4>
+          <div class="d-flex card__tools" >
+            ${item.actions.map(action => `
+              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
+                <i class="${action.icon}"></i>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+        <div class="card__content">
+          <p>${item.description}</p>
+        </div>
+      </div>
+    `
+  },
+})
 
 resourse1.build()
 
@@ -207,3 +283,35 @@ const mapErrors = (app, $form, errors) => {
         .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
 
 }
+
+/*
+*
+*
+*
+*
+  searchForm() {
+    return `<form class='card recommendation-form' data-data='data'>
+      <div class="field-wrapper field-wrapper--sm">
+        <label class="field-wrapper__label">Course Title*</label>
+        <div class="field-wrapper__content">
+          <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="title" value="">
+        </div>
+        <ul class="field-wrapper__messages">
+          <li>Please provide a valid city.</li>
+        </ul>
+      </div>
+      <div class="field-wrapper">
+        <label class="field-wrapper__label">Course Radio Button*</label>
+        <div class="field-wrapper__content">
+          <textarea class="textarea field" id="description" rows="5" name="description" placeholder="Insert your course description" ></textarea>
+        </div>
+        <ul class="field-wrapper__messages">
+          <li>Please provide a valid city.</li>
+        </ul>
+      </div>
+    </form>
+    `
+  },
+  *
+  *
+  * */

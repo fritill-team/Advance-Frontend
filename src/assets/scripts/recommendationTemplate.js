@@ -1,5 +1,6 @@
+/*
 const recommendationTemplate = item => `
-  
+
     <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
         <h5 class='title-5 my-0'>${item.title}</h4>
@@ -37,9 +38,6 @@ const recommendationForm = () => `
     </ul>
   </div>
 </form>
-<div id="recommendations">
-
-</div>
 
 `
 
@@ -50,9 +48,9 @@ $('.recommendations-list').each((i, container) => {
     form = $("<div class='col-lg-6'>")
   // row.append($(
   // `
-    
+
   // `))
-  
+
   $.get(url)
   .then(res => {
     for (let item of res) {
@@ -68,4 +66,4 @@ $('.recommendations-list').each((i, container) => {
   .catch(e => console.log(e))
   // console.log($('recommendation-details').data('data'));
 })
- 
+ */
