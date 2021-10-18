@@ -1,9 +1,12 @@
 extends ../../../layouts/admin.pug
 block title
 	title lists
+//- block button-collapsed
+//- 	include ../../../components/general-component/toggle-menu.pug
 block sidebar
-	include ../../../components/sidebar-content.pug
-
+	include ../../../components/sidebar.pug
+	+sidebar 
+		include ../../../components/sidebar-content.pug
 block content
 	.container
 		//- .row

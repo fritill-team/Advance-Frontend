@@ -27,13 +27,9 @@ html(lang='en' dir="ltr" class="")
 		.wrapper
 			.wrapper__overlay.toggle
 			//- Menu
-			header.header.header--admin
-				block button-collapsed
-				.container-fluid
-					include ../components/header.pug
+			block header
 
-			include ../components/sidebar.pug
-				block sidebar
+			block sidebar
 				//- include ../components/sidebar-content.pug
 
 			//- block contentservay
