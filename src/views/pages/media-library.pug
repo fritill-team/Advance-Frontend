@@ -1,8 +1,17 @@
 extends ../layouts/admin.pug
 block title
 	title Media-library
+block header  
+	header.header.header--admin
+		block button-collapsed
+			.container-fluid
+				include ../components/header.pug
 block sidebar
-	include ../components/sidebar-content.pug
+	include ../components/sidebar.pug
+	+sidebar
+		include ../components/sidebar-content.pug
+//- block sidebar
+//- 	include ../components/sidebar-content.pug
 
 block content
 	.container-fluid

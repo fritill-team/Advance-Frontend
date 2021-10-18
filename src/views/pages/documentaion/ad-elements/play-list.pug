@@ -1,8 +1,15 @@
 extends ../../../layouts/admin.pug
 block title
 	title play-list
+block header  
+	header.header
+		block button-collapsed
+			.container-fluid
+				include ../../../components/header.pug
 block sidebar
 	include ../../../components/sidebar.pug
+	+sidebar("sidebar--width")
+		include ../../../components/sidebar-content.pug
 
 block content
 	.container

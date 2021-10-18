@@ -3,6 +3,15 @@ extends ../layouts/admin.pug
 
 block title
 	title Category-course
+block header  
+	header.header.header--admin
+		block button-collapsed
+			.container-fluid
+				include ../components/header.pug
+block sidebar
+	include ../components/sidebar.pug
+	+sidebar
+		include ../components/sidebar-content.pug
 block menu-header
 	include ../components/menu-list.pug
 block content

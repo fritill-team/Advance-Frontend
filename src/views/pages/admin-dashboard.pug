@@ -1,8 +1,17 @@
 extends ../layouts/admin.pug
 block title
 	title Admin Dashboard
-block button-collapsed 
-	include ../components/general-component/toggle-menu.pug 
+block header  
+	header.header
+		block button-collapsed
+			.container-fluid
+				include ../components/header.pug
+block sidebar
+	include ../components/sidebar.pug
+	+sidebar("sidebar--width")
+		include ../components/sidebar-content.pug
+//- block button-collapsed 
+//- 	include ../components/general-component/toggle-menu.pug 
 block content
 	section.course-video
 		img(src="/assets/images/sign.svg", alt="")
