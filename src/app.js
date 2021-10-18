@@ -162,6 +162,9 @@ class NewResource {
     this.localSearch = ''
     this.localLoading = false
 
+    this.title = ''
+    this.description = ''
+
     // properties
     this.prefix = ''
     this.withPagination = false
@@ -237,22 +240,26 @@ class NewResource {
       error: xhr => console.error(xhr)
     })
   }
+
   // const form = document.getElementById('recommendation-form')
   // formData = {
   //   title: $('#title').value,
   //   description: $('#description').value
   // }
   createRecommendation(title, description){
-    $.ajax({
-      url: this.listingURL,
-      type: 'post',
-      body: JSON.stringify(this.formData),
-      success: () => {
-        this.formData.title = ''
-        this.formData.description = ''
-      },
-      error: e => console.error(e)
-    })
+    title = $('#title').val()
+    description = $('#description').val()
+    console.log(title + description);
+    // $.ajax({
+    //   url: this.listingURL,
+    //   type: 'post',
+    //   body: JSON.stringify(this.formData),
+    //   success: () => {
+    //     this.formData.title = ''
+    //     this.formData.description = ''
+    //   },
+    //   error: e => console.error(e)
+    // })
   }
 
 
@@ -282,6 +289,18 @@ class NewResource {
 
 
   paginationTemplate() {
+    return `
+      <div class="pagination">
+        <button class="btn btn--text btn--primary icon--hover" href="#" aria-label="Previous">
+        <i class="fas fa-chevron-left pagination-icon"></i></button>
+        <button class="btn btn--text btn--primary icon--hover text-1" href="#">1</button>
+        <button class="btn btn--text btn--primary icon--hover text-1" href="#">2</button>
+        <button class="btn btn--text btn--primary icon--hover text-1" href="#">3</button>
+        <button class="btn btn--text btn--primary icon--hover text-1" href="#">...</button>
+        <button class="btn btn--text btn--primary icon--hover" href="#" aria-label="Next">
+        <i class="fas fa-chevron-right pagination-icon"></i></button>
+      </div>
+    `
 
   }
 
@@ -314,8 +333,10 @@ class NewResource {
             <li>Please provide a valid city.</li>
           </ul>
         </div>
-        <input class="btn btn--primary" type="submit" onclick="createRecommendation()">
-      </form>
+        <button class="btn btn--primary" type="submit" onclick="createRecommendation()">
+          submit
+        </button>
+        </form>
     `
   }
 
