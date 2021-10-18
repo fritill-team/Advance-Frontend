@@ -1,360 +1,360 @@
 extends ../../../layouts/admin.pug
 block title
-  title buttons
+	title buttons
 block sidebar
-  include ../../../components/sidebar-content.pug
+	include ../../../components/sidebar-content.pug
 
 block content
-  .container
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 Default
-          .card__content
-            h4.text-2 Buttons
-            p with hover background-color and click event
-            button.btn.btn--default.x-small default
-            button.btn.btn--primary.small primary
-            button.btn.btn--success.default success
-            button.btn.btn--info.large info
-            button.btn.btn--warning.x-large warning
-            button.btn.btn--danger danger
-            button.btn.btn--secondary secondary 
-            button(class="btn" disabled="disabled") disabled
-            br
-            button.btn.btn--primary.btn--sm primary
-            button.btn.btn--primary.btn--lg primary               
-            hr
-            
-            h4.text-2 Links
-            p with hover background-color and click event
-            a(href="#" class="btn btn--secondary") secondary
-            a(href="#" class="btn btn--success") success
-            a(href="#" class="btn btn--info") info
-            a(href="#" class="btn btn--default") default
-            a(href="#" class="btn btn--primary") primary
-            a(href="#" class="btn btn--warning") warning
-            a(href="#" class="btn btn--danger") danger
-            a(href="#" class="btn btn--disabled") disabled
+	.container
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 Default
+					.card__content
+						h4.text-2 Buttons
+						p with hover background-color and click event
+						button.btn.btn--default.x-small default
+						button.btn.btn--primary.small primary
+						button.btn.btn--success.default success
+						button.btn.btn--info.large info
+						button.btn.btn--warning.x-large warning
+						button.btn.btn--danger danger
+						button.btn.btn--secondary secondary 
+						button(class="btn" disabled="disabled") disabled
+						br
+						button.btn.btn--primary.btn--sm primary
+						button.btn.btn--primary.btn--lg primary               
+						hr
+						
+						h4.text-2 Links
+						p with hover background-color and click event
+						a(href="#" class="btn btn--secondary") secondary
+						a(href="#" class="btn btn--success") success
+						a(href="#" class="btn btn--info") info
+						a(href="#" class="btn btn--default") default
+						a(href="#" class="btn btn--primary") primary
+						a(href="#" class="btn btn--warning") warning
+						a(href="#" class="btn btn--danger") danger
+						a(href="#" class="btn btn--disabled") disabled
 
 
 
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 Rounded
-          .card__content
-            h4.text-2 Buttons
-            p with click event
-            button.btn.btn--secondary.btn--rounded.x-small secondary
-            button.btn.btn--success.btn--rounded.small success
-            button.btn.btn--info.btn--rounded.default info
-            button.btn.btn--default.btn--rounded.large default
-            button.btn.btn--primary.btn--rounded.x-large primary
-            button.btn.btn--warning.btn--rounded warning
-            button.btn.btn--danger.btn--rounded danger
-            button(class="btn btn--rounded" disabled="disabled") disabled
-            br
-            button.btn.btn--primary.btn--sm.btn--rounded primary
-            button.btn.btn--primary.btn--lg.btn--rounded primary
-            br
-            hr
-            h4.text-2 Links
-            p with click event and hover
-            a(href="#" class="btn btn--secondary btn--rounded") secondary
-            a(href="#" class="btn btn--success btn--rounded") success
-            a(href="#" class="btn btn--info btn--rounded") info
-            a(href="#" class="btn btn--default btn--rounded") default
-            a(href="#" class="btn btn--primary btn--rounded") primary
-            a(href="#" class="btn btn--warning btn--rounded") warning
-            a(href="#" class="btn btn--danger btn--rounded") danger
-            a(href="#" class="btn btn--disabled btn--rounded") disabled
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 Rounded
+					.card__content
+						h4.text-2 Buttons
+						p with click event
+						button.btn.btn--secondary.btn--rounded.x-small secondary
+						button.btn.btn--success.btn--rounded.small success
+						button.btn.btn--info.btn--rounded.default info
+						button.btn.btn--default.btn--rounded.large default
+						button.btn.btn--primary.btn--rounded.x-large primary
+						button.btn.btn--warning.btn--rounded warning
+						button.btn.btn--danger.btn--rounded danger
+						button(class="btn btn--rounded" disabled="disabled") disabled
+						br
+						button.btn.btn--primary.btn--sm.btn--rounded primary
+						button.btn.btn--primary.btn--lg.btn--rounded primary
+						br
+						hr
+						h4.text-2 Links
+						p with click event and hover
+						a(href="#" class="btn btn--secondary btn--rounded") secondary
+						a(href="#" class="btn btn--success btn--rounded") success
+						a(href="#" class="btn btn--info btn--rounded") info
+						a(href="#" class="btn btn--default btn--rounded") default
+						a(href="#" class="btn btn--primary btn--rounded") primary
+						a(href="#" class="btn btn--warning btn--rounded") warning
+						a(href="#" class="btn btn--danger btn--rounded") danger
+						a(href="#" class="btn btn--disabled btn--rounded") disabled
 
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 Outlined
-          .card__content
-            h4.text-2 Buttons
-            p with hover
-            button.btn.btn--default.btn--outlined default
-            button.btn.btn--primary.btn--outlined primary
-            button.btn.btn--secondary.btn--outlined secondary
-            button.btn.btn--success.btn--outlined success
-            button.btn.btn--info.btn--outlined info
-            button.btn.btn--warning.btn--outlined warning
-            button.btn.btn--danger.btn--outlined danger
-            button.btn.btn--outlined.btn--disabled danger
-            br
-            button.btn.btn--primary.btn--sm.btn--outlined primary
-            button.btn.btn--primary.btn--lg.btn--outlined primary
-            br
-            hr
-            h4.text-2 links
-            p with hover
-            a(href="#" class="btn btn--default btn--outlined") default
-            a(href="#" class="btn btn--primary btn--outlined") primary
-            a(href="#" class="btn btn--secondary btn--outlined") secondary
-            a(href="#" class="btn btn--success btn--outlined") success
-            a(href="#" class="btn btn--info btn--outlined") info
-            a(href="#" class="btn btn--warning btn--outlined") warning
-            a(href="#" class="btn btn--danger btn--outlined") danger
-            a(href="#" class="btn btn--outlined btn--disabled") danger
-            p with hover
-            button.btn.btn--primary.btn--outlined.btn--rounded outlined-rounded
-            button.btn.btn--outlined.btn--rounded.btn--disabled outlined-rounded
-            button.btn.btn--primary.btn--outlined.btn--rounded.btn--lg outlined-rounded
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 Outlined
+					.card__content
+						h4.text-2 Buttons
+						p with hover
+						button.btn.btn--default.btn--outlined default
+						button.btn.btn--primary.btn--outlined primary
+						button.btn.btn--secondary.btn--outlined secondary
+						button.btn.btn--success.btn--outlined success
+						button.btn.btn--info.btn--outlined info
+						button.btn.btn--warning.btn--outlined warning
+						button.btn.btn--danger.btn--outlined danger
+						button.btn.btn--outlined.btn--disabled danger
+						br
+						button.btn.btn--primary.btn--sm.btn--outlined primary
+						button.btn.btn--primary.btn--lg.btn--outlined primary
+						br
+						hr
+						h4.text-2 links
+						p with hover
+						a(href="#" class="btn btn--default btn--outlined") default
+						a(href="#" class="btn btn--primary btn--outlined") primary
+						a(href="#" class="btn btn--secondary btn--outlined") secondary
+						a(href="#" class="btn btn--success btn--outlined") success
+						a(href="#" class="btn btn--info btn--outlined") info
+						a(href="#" class="btn btn--warning btn--outlined") warning
+						a(href="#" class="btn btn--danger btn--outlined") danger
+						a(href="#" class="btn btn--outlined btn--disabled") danger
+						p with hover
+						button.btn.btn--primary.btn--outlined.btn--rounded outlined-rounded
+						button.btn.btn--outlined.btn--rounded.btn--disabled outlined-rounded
+						button.btn.btn--primary.btn--outlined.btn--rounded.btn--lg outlined-rounded
 
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 Text
-          .card__content
-            h4.text-2 Buttons
-            p with hover
-            button.btn.btn--default.btn--text default
-            button.btn.btn--primary.btn--text primary
-            button.btn.btn--secondary.btn--text secondary
-            button.btn.btn--success.btn--text success
-            p with hover-rounded
-            button.btn.btn--success.btn--text.btn--hover-rounded success
-            button.btn.btn--info.btn--text.btn--hover-rounded info
-            button.btn.btn--warning.btn--text.btn--hover-rounded warning
-            button.btn.btn--danger.btn--text.btn--hover-rounded danger
-            p with line-hover
-            button.btn.btn--primary.btn--text.btn--hover-line success
-            button.btn.btn--default.btn--text.btn--hover-line success
-            p with hover
-            button.btn.btn--info.btn--text.link-color info
-            button.btn.btn--warning.btn--text.link-color warning
-            button.btn.btn--danger.btn--text.link-color danger
-            button.btn.btn--text.link-color.btn--disabled danger
-            br
-            button.btn.btn--primary.btn--text.btn--sm primary
-            button.btn.btn--primary.btn--text.btn--lg primary
-            br
-            hr
-            h4.text-2 links
-            p link with hover
-            a(href="#" class="btn btn--default btn--text") default
-            a(href="#" class="btn btn--primary btn--text") primary
-            a(href="#" class="btn btn--secondary btn--text") secondary
-            p link with hover-rounded
-            a(href="#" class="btn btn--success btn--text btn--hover-rounded") success
-            a(href="#" class="btn btn--info btn--text btn--hover-rounded") info
-            a(href="#" class="btn btn--warning btn--text btn--hover-rounded") warning
-            a(href="#" class="btn btn--danger btn--text btn--hover-rounded") danger
-            p link with line-hover
-            a(href="#" class="btn btn--primary btn--text btn--hover-line") success
-            a(href="#" class="btn btn--default btn--text btn--hover-line") success
-            h4.text-2 links
-            p link with hover
-            a(href="#" class="btn btn--default btn--text hover--opacity") default
-            a(href="#" class="btn btn--primary btn--text hover--opacity") primary
-            a(href="#" class="btn btn--warning btn--text hover--opacity") secondary
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 Icon
-          .card__content
-            p Buttons
-            button.btn.btn--default.btn--icon
-              i.fas.fa-info
-            button.btn.btn--primary.btn--icon.btn--sm
-              i.fas.fa-info
-            button.btn.btn--secondary.btn--icon
-              i.fas.fa-info
-            button.btn.btn--success.btn--icon
-              i.fas.fa-info
-            button.btn.btn--info.btn--icon
-              i.fas.fa-info
-            button.btn.btn--warning.btn--icon
-              i.fas.fa-info
-            button.btn.btn--danger.btn--icon.btn--outlined
-              i.fas.fa-info
-            br
-            button.btn.btn--primary.btn--icon.btn--sm 
-              i.fas.fa-info
-            button.btn.btn--primary.btn--icon.btn--lg 
-              i.fas.fa-info
-            button.btn.btn--disabled.btn--icon.btn--lg 
-              i.fas.fa-info
-            p links
-            a(href ="#" class="btn btn--default btn--icon btn--sm")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--primary btn--icon btn--outlined")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--secondary btn--icon btn--lg")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--success btn--icon")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--info btn--icon")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--warning btn--icon")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--danger btn--icon")
-              i.fas.fa-info
-            p link with hover
-            a(href ="#" class="btn btn--text btn--default icon--hover btn--lg")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--primary icon--hover btn--sm")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--secondary icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--success icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--info icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--warning icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--danger icon--hover")
-              i.fas.fa-info
-            p link without hover
-            a(href ="#" class="btn btn--text btn--default link-color btn--lg")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--primary link-color btn--sm")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--secondary link-color")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--success link-color")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--info link-color")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--warning link-color")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--danger link-color")
-              i.fas.fa-info
-            p link with hover
-            a(href ="#" class="btn btn--text btn--default hover--opacity icon--hover btn--lg")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--primary icon--hover hover--opacity btn--sm")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--secondary hover--opacity icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--success hover--opacity icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--info hover--opacity icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--warning hover--opacity icon--hover")
-              i.fas.fa-info
-            a(href ="#" class="btn btn--text btn--danger hover--opacity icon--hover")
-              i.fas.fa-info
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 With-Icon
-          .card__content
-            p Buttons
-            button.btn.btn--default.btn--with-icon
-              i.fa.fa-info
-              | default
-            button.btn.btn--primary.btn--with-icon
-              i.fa.fa-info
-              | primary
-            button.btn.btn--secondary.btn--with-icon
-              i.fa.fa-info
-              | secondary
-            button.btn.btn--success.btn--with-icon
-              i.fa.fa-info
-              | success
-            button.btn.btn--info.btn--with-icon
-              i.fa.fa-info
-              | info
-            button.btn.btn--warning.btn--with-icon
-              i.fa.fa-info
-              | warning
-            button.btn.btn--danger.btn--with-icon
-              i.fa.fa-info
-              | danger
-            br
-            button.btn.btn--primary.btn--with-icon.btn--sm 
-              i.fa.fa-info
-              | primary
-            button.btn.btn--primary.btn--with-icon.btn--lg 
-              i.fa.fa-info
-              | primary
-            br
-            p links
-            a.btn.btn--default.btn--with-icon
-              i.fa.fa-info
-              | default-link
-            a.btn.btn--primary.btn--with-icon
-              i.fa.fa-info
-              | primary-link
-            a.btn.btn--secondary.btn--with-icon
-              i.fa.fa-info
-              | secondary-link
-            a.btn.btn--success.btn--with-icon
-              i.fa.fa-info
-              | success-link
-            a.btn.btn--info.btn--with-icon
-              i.fa.fa-info
-              | info-link
-            a.btn.btn--warning.btn--with-icon
-              i.fa.fa-info
-              | warning-link
-            a.btn.btn--danger.btn--with-icon
-              i.fa.fa-info
-              | danger-link
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 Text
+					.card__content
+						h4.text-2 Buttons
+						p with hover
+						button.btn.btn--default.btn--text default
+						button.btn.btn--primary.btn--text primary
+						button.btn.btn--secondary.btn--text secondary
+						button.btn.btn--success.btn--text success
+						p with hover-rounded
+						button.btn.btn--success.btn--text.btn--hover-rounded success
+						button.btn.btn--info.btn--text.btn--hover-rounded info
+						button.btn.btn--warning.btn--text.btn--hover-rounded warning
+						button.btn.btn--danger.btn--text.btn--hover-rounded danger
+						p with line-hover
+						button.btn.btn--primary.btn--text.btn--hover-line success
+						button.btn.btn--default.btn--text.btn--hover-line success
+						p with hover
+						button.btn.btn--info.btn--text.link-color info
+						button.btn.btn--warning.btn--text.link-color warning
+						button.btn.btn--danger.btn--text.link-color danger
+						button.btn.btn--text.link-color.btn--disabled danger
+						br
+						button.btn.btn--primary.btn--text.btn--sm primary
+						button.btn.btn--primary.btn--text.btn--lg primary
+						br
+						hr
+						h4.text-2 links
+						p link with hover
+						a(href="#" class="btn btn--default btn--text") default
+						a(href="#" class="btn btn--primary btn--text") primary
+						a(href="#" class="btn btn--secondary btn--text") secondary
+						p link with hover-rounded
+						a(href="#" class="btn btn--success btn--text btn--hover-rounded") success
+						a(href="#" class="btn btn--info btn--text btn--hover-rounded") info
+						a(href="#" class="btn btn--warning btn--text btn--hover-rounded") warning
+						a(href="#" class="btn btn--danger btn--text btn--hover-rounded") danger
+						p link with line-hover
+						a(href="#" class="btn btn--primary btn--text btn--hover-line") success
+						a(href="#" class="btn btn--default btn--text btn--hover-line") success
+						h4.text-2 links
+						p link with hover
+						a(href="#" class="btn btn--default btn--text hover--opacity") default
+						a(href="#" class="btn btn--primary btn--text hover--opacity") primary
+						a(href="#" class="btn btn--warning btn--text hover--opacity") secondary
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 Icon
+					.card__content
+						p Buttons
+						button.btn.btn--default.btn--icon
+							i.fas.fa-info
+						button.btn.btn--primary.btn--icon.btn--sm
+							i.fas.fa-info
+						button.btn.btn--secondary.btn--icon
+							i.fas.fa-info
+						button.btn.btn--success.btn--icon
+							i.fas.fa-info
+						button.btn.btn--info.btn--icon
+							i.fas.fa-info
+						button.btn.btn--warning.btn--icon
+							i.fas.fa-info
+						button.btn.btn--danger.btn--icon.btn--outlined
+							i.fas.fa-info
+						br
+						button.btn.btn--primary.btn--icon.btn--sm 
+							i.fas.fa-info
+						button.btn.btn--primary.btn--icon.btn--lg 
+							i.fas.fa-info
+						button.btn.btn--disabled.btn--icon.btn--lg 
+							i.fas.fa-info
+						p links
+						a(href ="#" class="btn btn--default btn--icon btn--sm")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--primary btn--icon btn--outlined")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--secondary btn--icon btn--lg")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--success btn--icon")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--info btn--icon")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--warning btn--icon")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--danger btn--icon")
+							i.fas.fa-info
+						p link with hover
+						a(href ="#" class="btn btn--text btn--default icon--hover btn--lg")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--primary icon--hover btn--sm")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--secondary icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--success icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--info icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--warning icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--danger icon--hover")
+							i.fas.fa-info
+						p link without hover
+						a(href ="#" class="btn btn--text btn--default link-color btn--lg")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--primary link-color btn--sm")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--secondary link-color")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--success link-color")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--info link-color")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--warning link-color")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--danger link-color")
+							i.fas.fa-info
+						p link with hover
+						a(href ="#" class="btn btn--text btn--default hover--opacity icon--hover btn--lg")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--primary icon--hover hover--opacity btn--sm")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--secondary hover--opacity icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--success hover--opacity icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--info hover--opacity icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--warning hover--opacity icon--hover")
+							i.fas.fa-info
+						a(href ="#" class="btn btn--text btn--danger hover--opacity icon--hover")
+							i.fas.fa-info
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 With-Icon
+					.card__content
+						p Buttons
+						button.btn.btn--default.btn--with-icon
+							i.fa.fa-info
+							| default
+						button.btn.btn--primary.btn--with-icon
+							i.fa.fa-info
+							| primary
+						button.btn.btn--secondary.btn--with-icon
+							i.fa.fa-info
+							| secondary
+						button.btn.btn--success.btn--with-icon
+							i.fa.fa-info
+							| success
+						button.btn.btn--info.btn--with-icon
+							i.fa.fa-info
+							| info
+						button.btn.btn--warning.btn--with-icon
+							i.fa.fa-info
+							| warning
+						button.btn.btn--danger.btn--with-icon
+							i.fa.fa-info
+							| danger
+						br
+						button.btn.btn--primary.btn--with-icon.btn--sm 
+							i.fa.fa-info
+							| primary
+						button.btn.btn--primary.btn--with-icon.btn--lg 
+							i.fa.fa-info
+							| primary
+						br
+						p links
+						a.btn.btn--default.btn--with-icon
+							i.fa.fa-info
+							| default-link
+						a.btn.btn--primary.btn--with-icon
+							i.fa.fa-info
+							| primary-link
+						a.btn.btn--secondary.btn--with-icon
+							i.fa.fa-info
+							| secondary-link
+						a.btn.btn--success.btn--with-icon
+							i.fa.fa-info
+							| success-link
+						a.btn.btn--info.btn--with-icon
+							i.fa.fa-info
+							| info-link
+						a.btn.btn--warning.btn--with-icon
+							i.fa.fa-info
+							| warning-link
+						a.btn.btn--danger.btn--with-icon
+							i.fa.fa-info
+							| danger-link
 
-    
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h4 Rounded input
-          .card__content
-            input.btn.btn--default.btn--rounded(type='button' value='button')
-          .card__title
-            h4 Outlined input
-          .card__content
-            input.btn.btn--primary.btn--outlined(type='button' value='button')
-          .card__title
-            h4 Text input
-          .card__content
-            input.btn.btn--secondary.btn--text.btn--hover(type='button' value='button')
-            input.btn.btn--secondary.btn--text.btn--hover-rounded(type='button' value='button')
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 button-group
-          .card__content
-            .btn-group
-              button.btn.btn--info default
-              button.btn.btn--primary primary
-              button.btn.btn--secondary secondary
-          .card__content
-            .btn-group      
-              button.btn.btn--info.btn--rounded default
-              button.btn.btn--primary.btn--rounded primary
-              button.btn.btn--secondary.btn--rounded secondary
-          .card__content
-            .btn-group.btn-group--outlined
-              button.btn.btn--info.btn--outlined default
-              button.btn.btn--primary.btn--outlined primary
-              button.btn.btn--secondary.btn--outlined secondary
-    .row
-      .col-lg-12
-        .card
-          .card__title
-            h3 variations
-          .card__content
-            h3 button-ripple
-            p default buttons
-            button.btn.btn--secondary.btn--rounded default
-            button.btn.btn--primary.btn--rounded primary
-          .card__content
-            h3 Default
-            p default buttons
-            button.btn.btn--default.btn--lg.btn--rounded large button
-            button.btn.btn--secondary.btn--sm small button
-            button.btn.btn--rounded.btn--disabled disabled button
-            button.btn.btn--link-text link-text
-            //- button.btn--text-basic text-basic
+		
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h4 Rounded input
+					.card__content
+						input.btn.btn--default.btn--rounded(type='button' value='button')
+					.card__title
+						h4 Outlined input
+					.card__content
+						input.btn.btn--primary.btn--outlined(type='button' value='button')
+					.card__title
+						h4 Text input
+					.card__content
+						input.btn.btn--secondary.btn--text.btn--hover(type='button' value='button')
+						input.btn.btn--secondary.btn--text.btn--hover-rounded(type='button' value='button')
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 button-group
+					.card__content
+						.btn-group
+							button.btn.btn--info default
+							button.btn.btn--primary primary
+							button.btn.btn--secondary secondary
+					.card__content
+						.btn-group      
+							button.btn.btn--info.btn--rounded default
+							button.btn.btn--primary.btn--rounded primary
+							button.btn.btn--secondary.btn--rounded secondary
+					.card__content
+						.btn-group.btn-group--outlined
+							button.btn.btn--info.btn--outlined default
+							button.btn.btn--primary.btn--outlined primary
+							button.btn.btn--secondary.btn--outlined secondary
+		.row
+			.col-lg-12
+				.card
+					.card__title
+						h3 variations
+					.card__content
+						h3 button-ripple
+						p default buttons
+						button.btn.btn--secondary.btn--rounded default
+						button.btn.btn--primary.btn--rounded primary
+					.card__content
+						h3 Default
+						p default buttons
+						button.btn.btn--default.btn--lg.btn--rounded large button
+						button.btn.btn--secondary.btn--sm small button
+						button.btn.btn--rounded.btn--disabled disabled button
+						button.btn.btn--link-text link-text
+						//- button.btn--text-basic text-basic
