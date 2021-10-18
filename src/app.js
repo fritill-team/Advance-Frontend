@@ -21,7 +21,7 @@ import "./assets/vendor/sortable.js";
 import "./assets/scripts/index";
 
 import {ListLoader} from "./assets/scripts/backend_scripts/panel-loader"
-import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
+// import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
 
 
 let up = $('.count-up'),
