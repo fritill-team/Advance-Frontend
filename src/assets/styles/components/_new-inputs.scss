@@ -645,6 +645,12 @@
     }
   }
 }
+.check-field-group{
+  &.check-field-group--horizontal {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+}
 }
 //// start night-mode
 .night-mode{
