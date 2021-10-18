@@ -237,6 +237,11 @@ class NewResource {
       error: xhr => console.error(xhr)
     })
   }
+  const form = document.querySelector('.recommendation-form');
+  const formData = {
+    title: 
+  }
+
 
   containerTemplate(data) {
     return $(`<div class="container">
