@@ -1,12 +1,14 @@
 .action-wrapper {
   position: relative;
-  height: 100%;
+  // height: 100%;
   width: 100%;
+  height: calc(100vh - 277px);
   .actions-form {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 20px;
+    justify-content: center;
     .title-h3{
       margin-bottom: .5em;
     }
@@ -19,7 +21,8 @@
     right: 50px;
     font-size: 500px;
     opacity: 0.05;
-    bottom: 0;
+    top: 0;
+    // bottom: 0;
   }
   .card-content__card-description {
     margin-bottom: 15px;
