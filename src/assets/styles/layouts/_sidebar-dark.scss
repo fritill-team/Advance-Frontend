@@ -53,7 +53,21 @@
     width: 0;
   }
 }
-
+@media (max-width: 767px) {
+  .page-content--horizontal{
+    .sidebar-dark { 
+      position: absolute;
+      width: 60%;
+      z-index: 4;
+      &.sidebar-dark--close {
+        width: 0;
+      }
+    }
+  }
+  .vertical--minify {
+    width: 0;
+  }
+}
 .night-mode {
   .sidebar-dark {
     background-color: lighten($primary-darkmode, 5);

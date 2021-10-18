@@ -1,25 +1,25 @@
 /* src/app.js */
 
 // Styles
-import "./assets/styles/app.scss";
+import "./assets/styles/app.scss"
 // vendor
-import "./assets/vendor/jquery-3.3.1.min.js";
-// import "./assets/vendor/select2.min.js";
-// import "./assets/vendor/fontawesome-free/js/all.js";
-import "./assets/vendor/OwlCarousel/owl.carousel.js";
-import "./assets/vendor/dropzone.js";
+import "./assets/vendor/jquery-3.3.1.min.js"
+// import "./assets/vendor/select2.min.js"
+// import "./assets/vendor/fontawesome-free/js/all.js"
+import "./assets/vendor/OwlCarousel/owl.carousel.js"
+import "./assets/vendor/dropzone.js"
 import "./assets/vendor/jquery-ui.min.js"
 
-// import "./assets/vendor/bootstrap/js/bootstrap.min.js";
-import "./assets/vendor/popper.min.js";
-import "./assets/vendor/lightbox.min.js";
-import "./assets/vendor/star/jquery.star-rating-svg";
+// import "./assets/vendor/bootstrap/js/bootstrap.min.js"
+import "./assets/vendor/popper.min.js"
+import "./assets/vendor/lightbox.min.js"
+import "./assets/vendor/star/jquery.star-rating-svg"
 import "./assets/vendor/venobox.min.js"
-import "./assets/vendor/select2.min.js";
-import "./assets/vendor/sortable.js";
+import "./assets/vendor/select2.min.js"
+import "./assets/vendor/sortable.js"
 // js
-import "./assets/scripts/index";
-// import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle";
+import "./assets/scripts/index"
+// import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle"
 
 
 let up = $('.count-up'),
@@ -97,7 +97,7 @@ export default {
 //   fetch(Q = null) {
 //     $.get(this.listingURL, {q: Q})
 //       .then(res => {
-//         this.RESOURCE.items = res;
+//         this.RESOURCE.items = res
 //       })
 //       .catch(e => this.handleError(e))
 //
@@ -153,25 +153,38 @@ export default {
 
 // recommendations.build()
 
-// console.log(recommendations.options);
+// console.log(recommendations.options)
 
 class NewResource {
   constructor($container, options) {
-    // properties
+    // observables
     this.localItems = []
-    this.loading =  false
+    this.localSearch = ''
+    this.localLoading = false
+
+    // properties
+    this.prefix = ''
+    this.withPagination = false
+    this.paginationType = 'pagination' // 'show-more'
+
+    // elements
     this.$container = $container
-    this.options = options
-    this.prefix = options.prefix ? options.prefix : ''
-    this.listingURL = options.listingURL
-    this.formURL = options.formURL
-    this.deleteURL = options.deleteURL
+    this.$searchBar = null
+    this.$itemsList = null
 
 
     for (let item in options)
-      if (Object.prototype.hasOwnProperty.call(options, item)) {
+      if (Object.prototype.hasOwnProperty.call(options, item))
         this[item] = options[item]
-      }
+  }
+
+  get loading() {
+    return this.localLoading
+  }
+
+  set loading(v) {
+    this.localLoading = v
+    this.loadingListener(v)
   }
 
   get items() {
@@ -183,25 +196,65 @@ class NewResource {
     this.itemsListener(value)
   }
 
-  itemsListener(v) {
-    this.$itemsList = $(`#${this.prefix}-listing`)
-    this.$itemsList.html($(this.listingTemplate()))
+  get search() {
+    return this.localSearch
   }
 
-  fetchItems(query = null) {
+  set search(value) {
+    this.localSearch = value
+    this.searchListener(value)
+  }
+
+  loadingListener(v) {
+    if (v) {
+      this.$itemsList.empty()
+      this.$itemsList.text('Loading...')
+    }
+
+  }
+
+  searchListener(value) {
+    this.$searchBar.val(value)
+    this.fetchItems({q: value})
+  }
+
+  itemsListener(v) {
+    this.$itemsList.empty()
+    this.$itemsList.append(this.listingTemplate())
+  }
+
+  fetchItems(data = {}) {
     this.loading = true
+
     $.ajax({
-      type: 'GET',
       url: this.listingURL,
-      success: (data) => {
+      type: 'get',
+      data,
+      success: data => {
         this.items = data
         this.loading = false
-        // this.container.append(this.defaultStructure(JSON.stringify(data)));
-        // console.log(this.defaultStructure(JSON.stringify(data)));
-        // console.log(this.container);
-      }
+      },
+      error: xhr => console.error(xhr)
     })
   }
+  // const form = document.getElementById('recommendation-form')
+  // formData = {
+  //   title: $('#title').value,
+  //   description: $('#description').value
+  // }
+  createRecommendation(title, description){
+    $.ajax({
+      url: this.listingURL,
+      type: 'post',
+      body: JSON.stringify(this.formData),
+      success: () => {
+        this.formData.title = ''
+        this.formData.description = ''
+      },
+      error: e => console.error(e)
+    })
+  }
+
 
   containerTemplate(data) {
     return $(`<div class="container">
@@ -212,14 +265,24 @@ class NewResource {
         <div class="col-6">
           ${this.searchForm()}
           <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
-
+          ${this.withPagination ? this.paginationTemplate() : ''}
         </div>
       </div>
     </div>`)
   }
 
   searchForm() {
-    return `<h1></h1>`
+    return `<div class="field-wrapper">
+     <div class="field-wrapper__label">Search</div>
+     <div class="field-wrapper__content">
+       <input type="search" class="field" id="${this.prefix}-searchbar">
+     </div>
+    </div>`
+  }
+
+
+  paginationTemplate() {
+
   }
 
   listingTemplate() {
@@ -231,11 +294,36 @@ class NewResource {
   }
 
   formTemplate() {
-    this.fetchItems()
+    return `
+      <form class='card recommendation-form' data-data='data' id='recommendation-form'>
+        <div class="field-wrapper field-wrapper--sm">
+          <label class="field-wrapper__label">Course Title*</label>
+          <div class="field-wrapper__content">
+            <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="title" value="">
+          </div>
+          <ul class="field-wrapper__messages">
+            <li>Please provide a valid city.</li>
+          </ul>
+        </div>
+        <div class="field-wrapper">
+          <label class="field-wrapper__label">Course Radio Button*</label>
+          <div class="field-wrapper__content">
+            <textarea class="textarea field" id="description" rows="5" name="description" placeholder="Insert your course description" ></textarea>
+          </div>
+          <ul class="field-wrapper__messages">
+            <li>Please provide a valid city.</li>
+          </ul>
+        </div>
+        <input class="btn btn--primary" type="submit" onclick="createRecommendation()">
+      </form>
+    `
   }
 
   build() {
     this.$container.append(this.containerTemplate())
+    this.$itemsList = $(`#${this.prefix}-listing`)
+    this.$searchBar = $(`#${this.prefix}-searchbar`)
+    this.$searchBar.on('input', e => this.search = e.target.value)
     this.fetchItems()
   }
 }
@@ -244,32 +332,31 @@ let textContainer = $('#recommendations')
 
 const recommendations = $('.recommendations-list')
 
-let resourse1 = new NewResource(recommendations, {
+let resource = new NewResource(recommendations, {
   listingURL: recommendations.data('listing-url'),
   prefix: "recommendations",
   itemTemplate(item) {
-    return `
-      <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
-        <div class="card__header" >
-          <h5 class='title-5 my-0'>${item.title}</h4>
-          <div class="d-flex card__tools" >
-            ${item.actions.map(action => `
-              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-                <i class="${action.icon}"></i>
-              </a>
-            `).join('')}
-          </div>
-        </div>
-        <div class="card__content">
-          <p>${item.description}</p>
+    return `<div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
+      <div class="card__header" >
+        <h5 class='title-5 my-0'>${item.title}</h4>
+        <div class="d-flex card__tools" >
+          ${item.actions.map(action => `
+            <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
+              <i class="${action.icon}"></i>
+            </a>
+          `).join('')}
         </div>
       </div>
-    `
+      <div class="card__content">
+        <p>${item.description}</p>
+      </div>
+    </div>`
   },
 })
 
-resourse1.build()
+resource.build()
 
+resource.search = 'new'
 // TODO Mohammed Ibrahim
 // to map validation errors to form
 // field messages must has id of `#${app}-${fieldErrors}-messages`
