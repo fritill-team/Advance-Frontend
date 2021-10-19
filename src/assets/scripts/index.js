@@ -18,7 +18,6 @@ import "./tabs.js"
 import "./survey.js"
 import "./ripple.js"
 import "./select2"
-import "./dropdown"
 import "./convertable"
 import "./rating"
 import './owl-carousel'
