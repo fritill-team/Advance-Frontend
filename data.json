@@ -9,14 +9,13 @@
         {
           "id": 1,
           "title": "chapter title",
-          "actions": 
-          {
+          "actions": {
             "edit": "#",
             "delete": "#",
             "update": "#",
             "move": "#"
           },
-          "content":[
+          "content": [
             {
               "type": "video",
               "id": 1,
@@ -48,14 +47,13 @@
         {
           "id": 1,
           "title": "chapter title",
-          "actions": 
-          {
+          "actions": {
             "edit": "#",
             "delete": "#",
             "update": "#",
             "move": "#"
           },
-          "content":[
+          "content": [
             {
               "type": "video",
               "id": 1,
@@ -85,7 +83,7 @@
           ]
         }
       ]
-    }    
+    }
   ],
   "recommendations": [
     {
@@ -187,114 +185,73 @@
   ],
   "sideBar": [
     {
-  
-      "title": "Categories",
-  
-      "has_children": false,
-  
-      "icon": "fa fa-home",
-  
-      "url": "#",
-  
-      "is_active": false
-  
-    },
-  
-    {
-  
-      "title": "Tags",
-  
-      "has_children": false,
-  
-      "icon": "fa fa-home",
-  
-      "url": "#",
-  
-      "is_active": false
-  
-    },
-  
-    {
-  
-      "title": "Courses",
-  
-      "has_children": false,
-  
-      "icon": "fa fa-home",
-  
-      "url": "#",
-  
-      "is_active": false
-  
-    },
-  
-    {
-  
-      "title": "Assessments and Surveys",
-  
+      "title": "Documentation",
       "has_children": true,
-  
-      "icon": "fa fa-layers",
-  
-      "is_active": true,
-  
-      "children": [
-  
-        {
-  
-          "title": "Assessments and Surveys",
-  
-          "has_children": false,
-  
-          "url": "#",
-  
-          "is_active": true
-  
-        }
-  
-      ]
-  
-    },
-  
-    {
-  
-      "title": "Users",
-  
-      "has_children": true,
-  
-      "icon": "fa fa-layers",
-  
+      "icon": "fa fa-file",
       "is_active": false,
-  
       "children": [
-  
         {
-  
-          "title": "Users",
-  
-          "has_children": false,
-  
-          "url": "#",
-  
+          "title": "Buttons",
+          "url": "/ad-elements/buttons.html",
           "is_active": false
-  
-        },
-  
-        {
-  
-          "title": "Groups",
-  
-          "has_children": false,
-  
-          "url": "#",
-  
-          "is_active": false
-  
         }
-  
       ]
-  
+    },
+
+    {
+      "title": "Categories",
+      "has_children": false,
+      "icon": "fa fa-home",
+      "url": "#",
+      "is_active": false
+    },
+    {
+      "title": "Tags",
+      "has_children": false,
+      "icon": "fa fa-home",
+      "url": "#",
+      "is_active": false
+    },
+    {
+      "title": "Courses",
+      "has_children": false,
+      "icon": "fa fa-home",
+      "url": "#",
+      "is_active": false
+    },
+    {
+      "title": "Assessments and Surveys",
+      "has_children": true,
+      "icon": "fa fa-layers",
+      "is_active": true,
+      "children": [
+        {
+          "title": "Assessments and Surveys",
+          "has_children": false,
+          "url": "#",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "title": "Users",
+      "has_children": true,
+      "icon": "fa fa-layers",
+      "is_active": false,
+      "children": [
+        {
+          "title": "Users",
+          "has_children": false,
+          "url": "#",
+          "is_active": false
+        },
+        {
+          "title": "Groups",
+          "has_children": false,
+          "url": "#",
+          "is_active": false
+        }
+      ]
     }
-  
   ]
 }

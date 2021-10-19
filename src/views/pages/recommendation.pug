@@ -1,27 +1,20 @@
 extends ../layouts/admin.pug
+
 block title
 	title Admin course chapter
-block header  
-	header.header.header--admin
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar
-		include ../components/sidebar-content.pug
+
 block content
 
 
 	include ../components/bread-crumbs.pug
 	+pageTitle
 	.container
-			
+
 		.row
 			.col-lg-12
 				//- div(class='recommendations-list' data-link="http://localhost:3000/recommendations/")
-			
-			//- .col-lg-12 
+
+			//- .col-lg-12
 				#test
 					h3 Section 1
 					div

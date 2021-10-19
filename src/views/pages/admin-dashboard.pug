@@ -1,17 +1,7 @@
 extends ../layouts/admin.pug
 block title
 	title Admin Dashboard
-block header  
-	header.header
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar("sidebar--width")
-		include ../components/sidebar-content.pug
-//- block button-collapsed 
-//- 	include ../components/general-component/toggle-menu.pug 
+
 block content
 	section.course-video
 		img(src="/assets/images/sign.svg", alt="")
@@ -111,8 +101,8 @@ block content
 								.d-flex.justify-content-between.align-items-center.w-100
 									h3.course-content__title.mb-0 Thread Chapter content
 									button.btn.btn--primary.btn--rounded create thread
-								.row 
-									.col-lg-12 
+								.row
+									.col-lg-12
 										.ad-card.ad-card--with-actions.mb-3
 											.ad-card__title
 												h4.title-h4 card title
@@ -149,7 +139,7 @@ block content
 														.tags
 															.tags__item #Development
 															.tags__item #Development
-								.row 
+								.row
 									.col-lg-12
 										//- start table-dashboard
 										include ../components/general-component/table-dashboard.pug

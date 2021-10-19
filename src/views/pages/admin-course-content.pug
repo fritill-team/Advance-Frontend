@@ -1,17 +1,8 @@
 extends ../layouts/admin.pug
 block title
 	title Admin course content
-block header  
-	header.header
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar("sidebar--width")
-		include ../components/sidebar-content.pug
-//- block button-collapsed 
-//- 	include ../components/general-component/toggle-menu.pug 
+
+
 block content
 	include ../components/bread-crumbs.pug
 	+pageTitle

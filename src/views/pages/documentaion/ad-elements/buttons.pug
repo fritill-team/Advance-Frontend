@@ -1,15 +1,7 @@
 extends ../../../layouts/admin.pug
 block title
 	title buttons
-block header  
-	header.header
-		block button-collapsed
-			.container-fluid
-				include ../../../components/header.pug
-block sidebar
-	include ../../../components/sidebar.pug
-	+sidebar("sidebar--width")
-		include ../../../components/sidebar-content.pug
+
 
 block content
 	.container
@@ -27,13 +19,13 @@ block content
 						button.btn.btn--info.large info
 						button.btn.btn--warning.x-large warning
 						button.btn.btn--danger danger
-						button.btn.btn--secondary secondary 
+						button.btn.btn--secondary secondary
 						button(class="btn" disabled="disabled") disabled
 						br
 						button.btn.btn--primary.btn--sm primary
-						button.btn.btn--primary.btn--lg primary               
+						button.btn.btn--primary.btn--lg primary
 						hr
-						
+
 						h4.text-2 Links
 						p with hover background-color and click event
 						a(href="#" class="btn btn--secondary") secondary
@@ -185,11 +177,11 @@ block content
 						button.btn.btn--danger.btn--icon.btn--outlined
 							i.fas.fa-info
 						br
-						button.btn.btn--primary.btn--icon.btn--sm 
+						button.btn.btn--primary.btn--icon.btn--sm
 							i.fas.fa-info
-						button.btn.btn--primary.btn--icon.btn--lg 
+						button.btn.btn--primary.btn--icon.btn--lg
 							i.fas.fa-info
-						button.btn.btn--disabled.btn--icon.btn--lg 
+						button.btn.btn--disabled.btn--icon.btn--lg
 							i.fas.fa-info
 						p links
 						a(href ="#" class="btn btn--default btn--icon btn--sm")
@@ -280,10 +272,10 @@ block content
 							i.fa.fa-info
 							| danger
 						br
-						button.btn.btn--primary.btn--with-icon.btn--sm 
+						button.btn.btn--primary.btn--with-icon.btn--sm
 							i.fa.fa-info
 							| primary
-						button.btn.btn--primary.btn--with-icon.btn--lg 
+						button.btn.btn--primary.btn--with-icon.btn--lg
 							i.fa.fa-info
 							| primary
 						br
@@ -310,7 +302,7 @@ block content
 							i.fa.fa-info
 							| danger-link
 
-		
+
 		.row
 			.col-lg-12
 				.card
@@ -338,7 +330,7 @@ block content
 							button.btn.btn--primary primary
 							button.btn.btn--secondary secondary
 					.card__content
-						.btn-group      
+						.btn-group
 							button.btn.btn--info.btn--rounded default
 							button.btn.btn--primary.btn--rounded primary
 							button.btn.btn--secondary.btn--rounded secondary
