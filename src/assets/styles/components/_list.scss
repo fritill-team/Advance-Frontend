@@ -14,6 +14,31 @@
   background-color: $white;
   flex-flow: column nowrap; 
   padding: 6px 0px;
+  &.list--condensed{
+    .list{
+      padding: 0;
+    }
+    .list-item__avatar{
+      // padding: 4px 6px 4px 12px;
+      min-width: 60px;
+      .image{
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .list-item__content{
+      padding: 6px 8px;
+    }
+    // .card__content{
+    //   padding-left: 0;
+    // }
+    .list-item__action {
+      padding: 4px 6px;
+    }
+    @media (min-width: 0px) and (max-width: 400px) {
+      overflow: scroll;
+    }
+  }
   & > a {  
       margin: 0;
       color: rgba(0,0,0,.7);
