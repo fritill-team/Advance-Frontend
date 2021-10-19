@@ -88,8 +88,8 @@
   "recommendations": [
     {
       "id": 1,
-      "collectionId": 1,
-      "title": "recommendation title 1",
+      "collection_id": 1,
+      "name": "recommendation title 1",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
       "actions": [
         {
@@ -120,8 +120,8 @@
     },
     {
       "id": 2,
-      "collectionId": 1,
-      "title": "recommendation title 2",
+      "collection_id": 1,
+      "name": "recommendation title 2",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
       "actions": [
         {
@@ -152,8 +152,8 @@
     },
     {
       "id": 3,
-      "collectionId": 1,
-      "title": "recommendation title 3",
+      "collection_id": 1,
+      "name": "recommendation title 3",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
       "actions": [
         {
@@ -181,6 +181,56 @@
           "link": "/recommendations/3/move"
         }
       ]
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 4
+    },
+    {
+      "name": "new Pull Shit",
+      "description": "New Pull Shit Description\r\n",
+      "id": 5
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "name": "New Pullshit",
+      "description": "New NEw Pullshit",
+      "id": 7
+    },
+    {
+      "name": "Old Pullshit",
+      "description": "Old Pullshit",
+      "id": 8
+    },
+    {
+      "name": "asdsad",
+      "description": "dasdasdasd",
+      "id": 9
+    },
+    {
+      "name": "fdgdfgfdg",
+      "description": "dfgfdgdfg",
+      "id": 10
+    },
+    {
+      "name": "mohammed ibraheem zaki",
+      "description": "text",
+      "id": 11
+    },
+    {
+      "name": "asdsad",
+      "description": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 13
     }
   ],
   "sideBar": [
@@ -222,7 +272,7 @@
     {
       "title": "Assessments and Surveys",
       "has_children": true,
-      "icon": "fa fa-layers",
+      "icon": "fas fa-layer-group",
       "is_active": true,
       "children": [
         {
@@ -236,7 +286,7 @@
     {
       "title": "Users",
       "has_children": true,
-      "icon": "fa fa-layers",
+      "icon": "fas fa-layer-group",
       "is_active": false,
       "children": [
         {

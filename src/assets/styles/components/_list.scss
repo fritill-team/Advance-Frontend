@@ -14,6 +14,31 @@
   background-color: $white;
   flex-flow: column nowrap; 
   padding: 6px 0px;
+  &.list--condensed{
+    .list{
+      padding: 0;
+    }
+    .list-item__avatar{
+      // padding: 4px 6px 4px 12px;
+      min-width: 60px;
+      .image{
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .list-item__content{
+      padding: 6px 8px;
+    }
+    // .card__content{
+    //   padding-left: 0;
+    // }
+    .list-item__action {
+      padding: 4px 6px;
+    }
+    @media (min-width: 0px) and (max-width: 400px) {
+      overflow: scroll;
+    }
+  }
   & > a {  
       margin: 0;
       color: rgba(0,0,0,.7);
@@ -397,6 +422,7 @@ a.list-item{
   }
   // open list menu
   &.list-item--open{
+    // background-color: rgba($color: $primary, $alpha: 0.2);
     & + .list-item-group{
       display: block; 
       animation: rotateX 400ms ease-in-out forwards;
@@ -426,24 +452,24 @@ a.list-item{
   // }
   // active list menu
   &.list-item--active{
-    background-color: rgba($primary,.8);
+    background-color: rgba($primary,.2);
     i{
       transition: all 0.4s ease-in-out;
       color: $accent;
     }
     .list-item__icon{
       i{
-        color: $accent;
+        // color: $accent;
       }
     }
     .list-item__content{
-      span{
-        color: #FFF;
-      }
+      // span{
+      //   color: #FFF;
+      // }
     }
-    &:hover{
-      background-color: rgba($primary,.8);
-    }
+    // &:hover{
+    //   background-color: rgba($primary,.8);
+    // }
   }
 }
 // list item wrapper group
@@ -494,8 +520,8 @@ a.list-item{
     padding: 0;
   }
   .list-item__avatar{
-    padding: 4px 6px 4px 12px;
-    min-width: 50px;
+    // padding: 4px 6px 4px 12px;
+    min-width: 60px;
     .image{
       width: 40px;
       height: 40px;

@@ -167,6 +167,9 @@ class NewResource {
 
     // properties
     this.prefix = ''
+    this.listingURL = ''
+    this.createURL = ''
+    this.editURL = ''
     this.withPagination = false
     this.paginationType = 'pagination' // 'show-more'
 
@@ -174,7 +177,7 @@ class NewResource {
     this.$container = $container
     this.$searchBar = null
     this.$itemsList = null
-
+    this.$form = null
 
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(options, item))
@@ -246,20 +249,44 @@ class NewResource {
   //   title: $('#title').value,
   //   description: $('#description').value
   // }
-  createRecommendation(title, description){
-    title = $('#title').val()
-    description = $('#description').val()
-    console.log(title + description);
-    // $.ajax({
-    //   url: this.listingURL,
-    //   type: 'post',
-    //   body: JSON.stringify(this.formData),
-    //   success: () => {
-    //     this.formData.title = ''
-    //     this.formData.description = ''
-    //   },
-    //   error: e => console.error(e)
-    // })
+  submitForm($form) {
+    let url = $form.attr('action')
+    $.ajax({
+      type: 'POST',
+      dataType: 'json',
+      url,
+      data: $form.serialize(),
+      success: () => {
+        if (url !== this.createURL) {
+          // TODO improve behavior
+          this.fetchItems()
+          this.formTemplate({}, this.createURL)
+        } else {
+          this.fetchItems()
+          $form.trigger('reset')
+        }
+      },
+      error: error => {
+        console.error(error)
+        if (error.status = 422)
+          console.log('validation error')
+        //   mapErrors(this.prefix, $form, error.message.errors)
+      }
+    });
+
+  }
+
+  editForm($form){
+    let url = $form.attr('action')
+    $.ajax({
+      type: 'PUT',
+      dataType: 'json',
+      url,
+      data: $form.serialize(),
+      success: () => {
+
+      }
+    })
   }
 
 
@@ -267,7 +294,9 @@ class NewResource {
     return $(`<div class="container">
       <div class="row">
         <div class="col-6">
-          ${this.formTemplate()}
+          <div class="card" id="recommendations-form">
+            ${this.formTemplate({}, this.createURL)}
+          </div>
         </div>
         <div class="col-6">
           ${this.searchForm()}
@@ -286,7 +315,6 @@ class NewResource {
      </div>
     </div>`
   }
-
 
   paginationTemplate() {
     return `
@@ -312,39 +340,28 @@ class NewResource {
     return `<li>${item.title}</li>`
   }
 
-  formTemplate() {
-    return `
-      <form class='card recommendation-form' data-data='data' id='recommendation-form'>
-        <div class="field-wrapper field-wrapper--sm">
-          <label class="field-wrapper__label">Course Title*</label>
-          <div class="field-wrapper__content">
-            <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="title" value="">
-          </div>
-          <ul class="field-wrapper__messages">
-            <li>Please provide a valid city.</li>
-          </ul>
-        </div>
-        <div class="field-wrapper">
-          <label class="field-wrapper__label">Course Radio Button*</label>
-          <div class="field-wrapper__content">
-            <textarea class="textarea field" id="description" rows="5" name="description" placeholder="Insert your course description" ></textarea>
-          </div>
-          <ul class="field-wrapper__messages">
-            <li>Please provide a valid city.</li>
-          </ul>
-        </div>
-        <button class="btn btn--primary" type="submit" onclick="createRecommendation()">
-          submit
-        </button>
-        </form>
-    `
+  formTemplate(item = {}, action = '') {
+    return ``
   }
 
   build() {
     this.$container.append(this.containerTemplate())
     this.$itemsList = $(`#${this.prefix}-listing`)
     this.$searchBar = $(`#${this.prefix}-searchbar`)
+    this.$form = $(`#${this.prefix}-form`)
     this.$searchBar.on('input', e => this.search = e.target.value)
+    let self = this
+    let formElement = this.$form.find('form')
+    formElement.submit(function (e) {
+      e.preventDefault()
+      self.submitForm($(this))
+    })
+    $(`.${this.prefix}-edit`).on('click', (e) => {
+      e.preventDefault()
+      let parentContainer = $(this).closest('.card')
+      this.$form.empty()
+      this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
+    })
     this.fetchItems()
   }
 }
@@ -355,29 +372,66 @@ const recommendations = $('.recommendations-list')
 
 let resource = new NewResource(recommendations, {
   listingURL: recommendations.data('listing-url'),
+  createURL: recommendations.data('create-url'),
+  editURL: recommendations.data('edit-url'),
   prefix: "recommendations",
   itemTemplate(item) {
-    return `<div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
+    return `<div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
-        <h5 class='title-5 my-0'>${item.title}</h4>
-        <div class="d-flex card__tools" >
-          ${item.actions.map(action => `
-            <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-              <i class="${action.icon}"></i>
-            </a>
-          `).join('')}
+        <h5 class='title-5 my-0'>${item.name}</h4>
+        <div class="d-flex card__tools">
+          <button class="${this.prefix}-edit btn btn--primary btn--text btn--icon ">
+            <i class="far fa-edit"></i>
+          </button>
+          <button class="btn btn--primary btn--text btn--icon ">
+            <i class="far fa-trash-alt"></i></div>
+          </button>
         </div>
-      </div>
-      <div class="card__content">
-        <p>${item.description}</p>
-      </div>
+        <div class="card__content">
+          <p>${item.description}</p>
+        </div>
     </div>`
   },
+  formTemplate(item = {}, action = '') {
+    return `<form action="${action}" method="post">
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="recommendations-name">Name <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <input
+             class="field"
+             type="text"
+             placeholder="Recommendations"
+             name="name"
+             id="recommendations-name"
+             value="${item.name ? item.name : ''}">
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <textarea
+            name="description"
+            id="recommendations-description"
+            placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="ml-auto d-inline-block">
+        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
+        <button class="btn btn--primary" type="submit">submit</button>
+      </div>
+    </form>`
+  }
 })
-
+//
+// ${item.actions.map(action => `
+//              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
+// <i class="${action.icon}"></i>
+// </a>
+// `).join('')}
 resource.build()
 
-resource.search = 'new'
 // TODO Mohammed Ibrahim
 // to map validation errors to form
 // field messages must has id of `#${app}-${fieldErrors}-messages`
