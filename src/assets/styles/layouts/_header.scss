@@ -153,6 +153,9 @@ html.night-mode {
   float: left;
   width: 135px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   .header__img {
     display: block;
     margin: 0;

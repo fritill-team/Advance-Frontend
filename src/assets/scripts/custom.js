@@ -224,7 +224,7 @@ var nav = $('.sidebar'),
   sidebarIcon = $('.sidebar-with-icon'),
   menuItem = $('.sub-menu-item'),
   menu = $("#js-menu")
-
+var a7a = null
 $(document)
   .on('click', '.toggle', function () {
     nav.toggleClass('nav--opened vertical--minify')
@@ -510,26 +510,39 @@ $(document)
 const sidebarTemplate = function (listItem) {
   
   return `
-    ${listItem.map(item => `
-      <li class="list__item ${item.has_children ? 'sub-menu-item' : ''} ${item.is_active ? 'menu--opened': ''}">
-        <a class="item__link" title="Categories">
-          <i class="fas fa-home item__icon"></i>
-          <span class="item__label">${item.title}</span>
-        </a>
+      ${listItem.map(item => `
+        <li class="list-item list-item--one-line ${item.is_active ? 'list-item--open' : ''} ">
+          <div class="list-item__avatar">
+            <i class="${item.icon}"></i>
+          </div>
+          <div class="list-item__content">
+            <span class="body-2">${item.title}</span>
+          </div>
+          <div class="list-item__action">
+          ${item.has_children ? `
+            <i class="fas fa-chevron-down"></i>
+            `: ``}
+          </div>
+        </li>
         ${item.has_children ? `
-          <ul class="sub-menu ">
+          <div class="list-item-group">
             ${item.children.map(child => `
-              <li class="sum-menu__item">
-                <a class="sub-menu__link" href="${child.url}">${child.title}</a>
-              </li>
+              <a class="list-item list-item--one-line" href="${child.url}">
+                <div class="list-item__avatar">
+                  <i class="${child.icon}"></i>
+                </div>
+                <div class="list-item__content">
+                  <span class="body-2">${child.title}</span>
+                </div>
+              </a>
             `).join('')}
-          </ul>
-        `: ''}
-      </li>
-    `  
-    ).join('')}
+          </div>
+        ` : ``}
+      `
+    ).join('')}      
   `
 }
+
 
 $('.list__sidebar').each(function(i, item) {
   let listItem = $(item),
@@ -566,6 +579,9 @@ $('.list__sidebar').each(function(i, item) {
 // })
 // drawers
 $(document)
+  .on('click', '.toggle', function(){
+    $('.drawer--left').toggleClass('open')
+  })
   .on('click', '.left-open', function(){
     $('.drawer--left').toggleClass('open')
   })

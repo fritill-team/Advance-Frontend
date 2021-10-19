@@ -56,9 +56,10 @@
 }
 
 .drawers-container{
+  padding-top: 60px;
   display: flex;
   width: 100%;
-  height: calc(100vh - 60px);
+  // height: calc(100vh - 60px);
   justify-content: space-between;
   flex-direction: row;
   .page-content{
