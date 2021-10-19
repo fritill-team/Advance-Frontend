@@ -235,6 +235,20 @@
   ],
   "sideBar": [
     {
+      "title": "Documentation",
+      "has_children": true,
+      "icon": "fa fa-file",
+      "is_active": false,
+      "children": [
+        {
+          "title": "Buttons",
+          "url": "/ad-elements/buttons.html",
+          "is_active": false
+        }
+      ]
+    },
+
+    {
       "title": "Categories",
       "has_children": false,
       "icon": "fa fa-home",

@@ -1,31 +1,21 @@
 extends ../layouts/admin.pug
 block title
 	title Edit Media-library
-block header  
-	header.header.header--admin
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar
-		include ../components/sidebar-content.pug
-//- block button-collapsed 
-//- 	include ../components/general-component/toggle-menu.pug 
+
 block content
 	.container-fluid
 		.row
 			.col-lg-12
 				.d-flex.flex-column.my-3
 					.d-flex.justify-content-between.align-items-center
-						h1.title-h1.mb-0 Edit Media 
-		 
+						h1.title-h1.mb-0 Edit Media
+
 		.row
 			.col-lg-9
 				.update-media
 					form(action="/media-library.html" class="dropzone" id="my-awesome-dropzone")
 						.fallback#myId
-							input(name="file" type="file" multiple) 
+							input(name="file" type="file" multiple)
 					form(action="")
 						.field-wrapper
 							label.field-wrapper__label File Name
@@ -36,7 +26,7 @@ block content
 									type='text'
 									placeholder='Name'
 									name='name'
-									maxlength='' 
+									maxlength=''
 									required
 									)
 							ul.messages
@@ -46,10 +36,10 @@ block content
 								abbr(title="required") *
 							.field-wrapper__content
 								textarea(
-									class="textarea mb-2" 
+									class="textarea mb-2"
 									name="description"
-									placeholder='Insert your course description' 
-									maxlength=''  
+									placeholder='Insert your course description'
+									maxlength=''
 									required
 									)
 							ul.messages
@@ -67,10 +57,9 @@ block content
 						.d-flex
 							span.description__name Author
 								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur 
+							p.description__details Lorem ipsum, dolor sit amet consectetur
 						.d-flex
 							span.description__name Author
 								strong :
 							p.description__details Lorem ipsum, dolor sit amet consectetur
 
-		

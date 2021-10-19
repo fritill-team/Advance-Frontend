@@ -73,7 +73,26 @@ module.exports = env => ({
          },*/
       {
         test: /\.pug$/,
-        loader: "pug-loader"
+        loader: "pug-loader",
+        options: {
+          data: {
+            sidebar: JSON.stringify([
+              {
+                "title": "Documentation",
+                "has_children": true,
+                "icon": "fa fa-file",
+                "is_active": false,
+                "children": [
+                  {
+                    "title": "Buttons",
+                    "url": "/ad-elements/buttons.html",
+                    "is_active": false
+                  }
+                ]
+              },
+            ])
+          }
+        }
       },
       {
         test: /\.(png|jpg|gif|svg|ico|srt|vtt)(\?.*)?$/,

@@ -3,25 +3,17 @@ extends ../layouts/admin.pug
 
 block title
 	title Category-course
-block header  
-	header.header.header--admin
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar
-		include ../components/sidebar-content.pug
-block menu-header
-	include ../components/menu-list.pug
+
+//- block menu-header
+//- 	include ../components/menu-list.pug
 block content
-	.container 
-		.row 
+	.container
+		.row
 			.col-xl-12.col-lg-12
 				section.category-item
 					h2.item_title Category Item
-						
-			.col-lg-12 
+
+			.col-lg-12
 				section.category-results.mt-3.mb-6
 					.filter__selector
 						.selector__text
@@ -53,7 +45,7 @@ block content
 				div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
 			.col-sm-12.col-md-6.col-lg-4
 				div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
-		
+
 		.row
-			.col-lg-12 
+			.col-lg-12
 				include ../components/general-component/pagination.pug

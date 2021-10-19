@@ -3,18 +3,11 @@ block title
 	title Admin course chapter
 //- block button-collapsed
 //- 	include ../components/general-component/toggle-menu.pug
-block header  
-	header.header.header--admin
-		block button-collapsed
-			.container-fluid
-				include ../components/header.pug
-block sidebar
-	include ../components/sidebar.pug
-	+sidebar
-		include ../components/sidebar-content.pug
+
+
 block content
 	// page title bread-crumbs
-	include ../components/bread-crumbs.pug 
+	include ../components/bread-crumbs.pug
 	+pageTitle("page-header--with-block")
 		.tabs.tabs--center.tabs--page-header
 			a(class="tab tab--active" href='#nav-content') Content
@@ -23,7 +16,7 @@ block content
 			a(class="tab" href='#nav-media') Media
 			a(class="tab" href='#nav-translates') Translations
 	.container-fluid
-		.row 
+		.row
 			.col-lg-12
 				.card.card--data
 					.card__header
@@ -78,7 +71,7 @@ block content
 
 							//- h2 Transcript
 							div(class="chapter course-content mt-0" data-data='{"courseName":"course name","descreiption":"Description","noOfLectures":"402 leactures","totalDuration":"47:06:29","chapter":[{"id":1,"title":"chapter title","actions":{"edit":"#","delete":"#","update":"#","move":"#"},"content":[{"type":"video","id":1,"title":"video title","duration":"22:06","description":"video description","actions":{"edit":"#","delete":"#","translate":"#","moveToChapter":"#"}},{"type":"exam","id":1,"title":"exam title","grad":"70%","description":"exam description"},{"type":"artical","id":1,"title":"artical title","description":"artical description"}]},{"id":1,"title":"chapter title","actions":{"edit":"#","delete":"#","update":"#","move":"#"},"content":[{"type":"video","id":1,"title":"video title","duration":"22:06","description":"video description","actions":{"edit":"#","delete":"#","translate":"#","moveToChapter":"#"}},{"type":"exam","id":1,"title":"exam title","grad":"70%","description":"exam description"},{"type":"artical","id":1,"title":"artical title","description":"artical description"}]}]}')
-							
+
 							//- #accordion.course-content__course-list
 								#test
 									div(class="chapter course-list__item")
