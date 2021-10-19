@@ -511,7 +511,7 @@ const sidebarTemplate = function (listItem) {
   
   return `
       ${listItem.map(item => `
-        <li class="list-item list-item--one-line ${item.is_active ? 'list-item--open' : ''} ">
+        <a href="${item.has_children ? "javascript:void(0)" : item.url }" class="list-item list-item--one-line ${item.is_active ? 'list-item--open' : ''} ">
           <div class="list-item__avatar">
             <i class="${item.icon}"></i>
           </div>
@@ -523,11 +523,11 @@ const sidebarTemplate = function (listItem) {
             <i class="fas fa-chevron-down"></i>
             `: ``}
           </div>
-        </li>
+        </a>
         ${item.has_children ? `
           <div class="list-item-group">
             ${item.children.map(child => `
-              <a class="list-item list-item--one-line" href="${child.url}">
+              <a class="list-item list-item--one-line ${child.is_active ? 'list-item--active' : ''} " href="${child.url}">
                 <div class="list-item__avatar">
                   <i class="${child.icon}"></i>
                 </div>
