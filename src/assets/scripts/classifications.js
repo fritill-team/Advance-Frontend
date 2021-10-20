@@ -1,72 +1,3 @@
-/*
-const recommendationTemplate = item => `
-
-    <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
-      <div class="card__header" >
-        <h5 class='title-5 my-0'>${item.title}</h4>
-        <div class="d-flex card__tools" >
-          ${item.actions.map(action => `
-            <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-              <i class="${action.icon}"></i>
-            </a>
-          `).join('')}
-        </div>
-      </div>
-      <div class="card__content">
-        <p>${item.description}</p>
-      </div>
-    </div>
-  `
-const recommendationForm = () => `
-<form class='card recommendation-form' data-data='data'>
-  <div class="field-wrapper field-wrapper--sm">
-    <label class="field-wrapper__label">Course Title*</label>
-    <div class="field-wrapper__content">
-      <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="title" value="">
-    </div>
-    <ul class="field-wrapper__messages">
-      <li>Please provide a valid city.</li>
-    </ul>
-  </div>
-  <div class="field-wrapper">
-    <label class="field-wrapper__label">Course Radio Button*</label>
-    <div class="field-wrapper__content">
-      <textarea class="textarea field" id="description" rows="5" name="description" placeholder="Insert your course description" ></textarea>
-    </div>
-    <ul class="field-wrapper__messages">
-      <li>Please provide a valid city.</li>
-    </ul>
-  </div>
-</form>
-
-`
-
-$('.recommendations-list').each((i, container) => {
-  let url = $(container).data('link'),
-    row = $("<div class='row'>"),
-    list = $("<div class='col-lg-6'>"),
-    form = $("<div class='col-lg-6'>")
-  // row.append($(
-  // `
-
-  // `))
-
-  $.get(url)
-  .then(res => {
-    for (let item of res) {
-      // console.log(item.data)
-      $(list).append($(recommendationTemplate(item)))
-      // console.log(item);
-    }
-    $(form).append($(recommendationForm()))
-    $(row).append(form)
-    $(row).append(list)
-    $(container).append(row)
-  })
-  .catch(e => console.log(e))
-  // console.log($('recommendation-details').data('data'));
-})
- */
 class NewResource {
   constructor($container, options) {
     // observables
@@ -75,7 +6,7 @@ class NewResource {
     this.localLoading = false
 
     this.title = ''
-    this.description = ''
+    this.number = ''
 
     // properties
     this.prefix = ''
@@ -156,7 +87,7 @@ class NewResource {
     })
   }
 
-  // const form = document.getElementById('recommendation-form')
+  // const form = document.getElementById('classification-form')
   // formData = {
   //   title: $('#title').value,
   //   description: $('#description').value
@@ -188,32 +119,32 @@ class NewResource {
 
   }
 
-  editForm($form){
-    let url = $form.attr('action')
-    $.ajax({
-      type: 'PUT',
-      dataType: 'json',
-      url,
-      data: $form.serialize(),
-      success: () => {
-        if (url !== this.editURL) {
-          // TODO improve behavior
-          this.fetchItems()
-          this.formTemplate({}, this.editURL)
-        } else {
-          this.fetchItems()
-          $form.trigger('reset')
-        }
-      }
-    })
-  }
+  // editForm($form){
+  //   let url = $form.attr('action')
+  //   $.ajax({
+  //     type: 'PUT',
+  //     dataType: 'json',
+  //     url,
+  //     data: $form.serialize(),
+  //     success: () => {
+  //       if (url !== this.editURL) {
+  //         // TODO improve behavior
+  //         this.fetchItems()
+  //         this.formTemplate({}, this.editURL)
+  //       } else {
+  //         this.fetchItems()
+  //         $form.trigger('reset')
+  //       }
+  //     }
+  //   })
+  // }
 
 
   containerTemplate(data) {
     return $(`<div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <div class="card" id="recommendations-form">
+          <div class="card" id="classification-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
         </div>
@@ -294,15 +225,14 @@ class NewResource {
   }
 }
 
-let textContainer = $('#recommendations')
+let textContainer = $('#classifications')
 
-const recommendations = $('.recommendations-list')
+const classification = $('.classifications-list')
 
-let resource = new NewResource(recommendations, {
-  listingURL: recommendations.data('listing-url'),
-  createURL: recommendations.data('create-url'),
-  editURL: recommendations.data('edit-url'),
-  prefix: "recommendations",
+let resource = new NewResource(classification, {
+  listingURL: classification.data('listing-url'),
+  createURL: classification.data('create-url'),
+  prefix: "classifications",
   itemTemplate(item) {
     return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
@@ -324,34 +254,37 @@ let resource = new NewResource(recommendations, {
         </div>
       </div>
       <div class="card__content">
-        <p>${item.description}</p>
+        <p>${item.number}</p>
       </div>
     </div>`
   },
   formTemplate(item = {}, action = '') {
     return `<form action="${action}" method="post">
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="recommendations-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="classifications-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input
              class="field"
              type="text"
-             placeholder="Recommendations"
+             placeholder="Classifications"
              name="name"
-             id="recommendations-name"
+             id="classifications-name"
              required
              value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="classifications-number">Description <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-          <textarea
-            required
-            name="description"
-            id="recommendations-description"
-            placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
+            <input
+             class="field"
+             type="number"
+             placeholder="0"
+             name="number"
+             id="classifications-number"
+             required
+             value="${item.number ? item.number : ''}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
@@ -373,7 +306,7 @@ resource.build()
 // TODO Mohammed Ibrahim
 // to map validation errors to form
 // field messages must has id of `#${app}-${fieldErrors}-messages`
-// example app: recommendations
+// example app: classifications
 //         field: title
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)

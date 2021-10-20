@@ -276,18 +276,25 @@ class NewResource {
 
   }
 
-  editForm($form){
-    let url = $form.attr('action')
-    $.ajax({
-      type: 'PUT',
-      dataType: 'json',
-      url,
-      data: $form.serialize(),
-      success: () => {
-
-      }
-    })
-  }
+  // editForm($form){
+  //   let url = $form.attr('action')
+  //   $.ajax({
+  //     type: 'PUT',
+  //     dataType: 'json',
+  //     url,
+  //     data: $form.serialize(),
+  //     success: () => {
+  //       if (url !== this.editURL) {
+  //         // TODO improve behavior
+  //         this.fetchItems()
+  //         this.formTemplate({}, this.editURL)
+  //       } else {
+  //         this.fetchItems()
+  //         $form.trigger('reset')
+  //       }
+  //     }
+  //   })
+  // }
 
 
   containerTemplate(data) {
@@ -357,12 +364,12 @@ class NewResource {
       e.preventDefault()
       self.submitForm($(this))
     })
-    $(document).on('click', `#${this.prefix}-edit`, (e) => {
+    $(document).on('click', `.${this.prefix}-edit`, (e) => {
       e.preventDefault()
       let parentContainer = $(this).closest('.card')
-      console.log(parentContainer)
       this.$form.empty()
       this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
+      // console.log(this.formTemplate())
     })
     // $(`#${this.prefix}-edit`).on('click', (e) => {
     //   e.preventDefault()
@@ -394,7 +401,7 @@ let resource = new NewResource(recommendations, {
               <i class="fas fa-ellipsis-h"></i>
             </button>
             <div class="dropdown__content">
-              <a id="${this.prefix}-edit" class="content__link" href="">
+              <a id="${this.prefix}-edit" class="${this.prefix}-edit content__link" href="javascript.void(0)">
                 <i class="far fa-edit"></i>edit
               </a>
               <a class="content__link" href="javascript.void(0)">
@@ -420,6 +427,7 @@ let resource = new NewResource(recommendations, {
              placeholder="Recommendations"
              name="name"
              id="recommendations-name"
+             required
              value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages"></ul>
@@ -428,6 +436,7 @@ let resource = new NewResource(recommendations, {
         <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <textarea
+            required
             name="description"
             id="recommendations-description"
             placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
