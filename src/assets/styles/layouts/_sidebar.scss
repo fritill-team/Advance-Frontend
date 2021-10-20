@@ -34,7 +34,7 @@
   &.sidebar--width{
     width: 0;
   }
-} 
+}
 .toggle-menu {
   width: 60px;
   text-align: center;
@@ -66,7 +66,7 @@
 }
 .list-header{
   // padding: 4px 20px;
-  display: flex; 
+  display: flex;
   align-items: center;
   background: #0a6076;
   .list-title {
@@ -147,15 +147,15 @@
     right: 15px;
     content: "";
     transition: all 0.4s ease-in-out;
-  } 
+  }
 }
 .sub-menu {
   display: none;
   overflow: hidden;
-  list-style: none; 
+  list-style: none;
   .sub-menu__link {
     display: block;
-    padding: 10px 16px 10px 25px; 
+    padding: 10px 16px 10px 25px;
     font-size: 14px;
     font-weight: 400;
     color: $primary;
@@ -163,7 +163,7 @@
     margin: 0;
     &:hover {
       background: rgba( $primary ,.3);
-      color: $primary;  
+      color: $primary;
     }
   }
 }

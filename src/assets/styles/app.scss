@@ -3,13 +3,12 @@
 
 @import "layouts/_base";
 @import "layouts/_page-content";
-@import "layouts/_header"; 
+@import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/sidebar-dark";
 @import "layouts/_footer";
 
 @import "./custom/toastr";
-// @import "./base/_style.scss";
 @import "./components/_tabs.scss";
 @import "./custom/_owl-slider.scss";
 @import "./components/_menu-responsive";
@@ -38,7 +37,10 @@
 @import "./components/_tags";
 @import "./components/_info";
 @import "./components/_video-player";
+
+//TODO Remove this file
 @import "./components/authentication-layout";
+
 @import "./components/new-inputs";
 @import "./components/_general-wrapper";
 @import "./components/_table";
@@ -58,7 +60,7 @@
 @import "./components/single-course/user-item";
 @import "./components/exam/exam.scss";
 @import "./base/typography";
-//@import "./base/instructor-dashboard.css";
+
 @import "./components/_images";
 // @import "./base/night-mode.css";
 @import "./components/_list.scss";

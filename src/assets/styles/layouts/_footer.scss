@@ -1,15 +1,16 @@
 /* src/assets/styles/components/_footer.scss  */
 .footer {
-  // margin-top: 30px;
+  position: relative;
+  margin-top: auto;
   background: darken($secondary, 5%);
   width: 100%;
   padding-top: 50px;
-  position: relative;
-  // margin-top: auto;
-  &.footer--size{
-    padding-top: 50px 70px;
+
+  &.footer--size {
+    padding-top: 50px;
   }
-  .footer__background{
+
+  .footer__background {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,16 +32,18 @@
       &:hover {
         color: $light-white;
       }
-      &.footer-content--admin{
+
+      &.footer-content--admin {
         display: inline-block;
-      } 
+      }
     }
-    
+
   }
 
   .footer__footer-buttons {
     display: flex;
     flex-direction: column;
+
     .footer-buttons__link {
       height: 40px;
       padding: 10px 15px;
@@ -92,23 +95,16 @@
     background: transparent;
     margin: 0;
   }
-  &.footer--admin{
-    position: relative;
-    // margin-left: 60px;
-    bottom: 0;
-    // margin-top: auto;
-    // position: fixed;
-    // width: 96%;
-  }
 }
-@media(max-width: 992px){
-  .footer{
-    &.footer--admin{
+@media(max-width: 992px) {
+  .footer {
+    &.footer--admin {
       margin-left: 0px;
       width: 100%;
     }
   }
 }
+
 // .footer_bottm
 .footer-line {
   margin-top: 50px;
@@ -118,20 +114,23 @@
     margin-top: 30px;
   }
 }
-.fritill{
+
+.fritill {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  .fritill-logo{
+
+  .fritill-logo {
     width: 100px;
     height: 40px;
     margin-left: 10px;
   }
-  @media(max-width: 768px){
+
+  @media(max-width: 768px) {
     justify-content: center;
   }
-  @media(max-width: 370px){
-    .list__paragraph{
+  @media(max-width: 370px) {
+    .list__paragraph {
       font-size: 13px;
     }
   }
@@ -150,6 +149,7 @@
     display: inline-block;
     vertical-align: middle;
   }
+
   a.list__link {
     .footer-logo {
       img {
@@ -168,14 +168,15 @@
     text-align: left;
     line-height: 24px;
     margin: 0;
-    @media(max-width: 370px){
+    @media(max-width: 370px) {
       font-size: 13px;
     }
+
     strong {
       font-weight: bold;
     }
   }
-  
+
 }
 
 
@@ -185,6 +186,7 @@
   height: 100%;
   align-items: center;
   justify-content: flex-end;
+
   .social-links__link {
     // padding-top: 10px;
     padding-left: 15px;
@@ -215,6 +217,7 @@
 html[dir="rtl"] {
   .footer {
     padding-top: 50px;
+
     .footer__footer-content {
       a.footer-content__link {
         padding-left: 20px;
@@ -238,7 +241,8 @@ html[dir="rtl"] {
     &.footer--auth {
       padding: 50px 0;
     }
-    &.footer--admin{
+
+    &.footer--admin {
       margin-right: 0;
     }
   }
@@ -361,7 +365,7 @@ html[dir="rtl"] {
 //       color: #f7f7f7;
 //       text-align: left;
 //       line-height: 24px;
-  
+
 //       strong {
 //         font-weight: bold;
 //       }

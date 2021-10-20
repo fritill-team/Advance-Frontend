@@ -1,44 +1,14 @@
-//- Master layout
+extends ./master
+block body
+  include ../components/header.pug
 
-doctype html
-html(lang='en' dir="ltr")
-	head
-		//- Stylesheets
-		//link(href='../assets/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
-		//link(href='../assets/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet' type='text/css')
-		link(rel='preconnect' href='https://fonts.googleapis.com')
-		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-		link(href='https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap' rel='stylesheet')
-		link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
-		link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
-		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
-		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-		link(href='../assets/vendor/star/star-rating-svg.css' rel='stylesheet')
-		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+  .drawers-container
+    block left
 
-		//- Title
-		block title
-			title Your project!
+    // block content
+    .page
+      .page__content
+        block content
+      include ../components/footer-admin.pug
 
-		block style
-
-
-	body
-		block header
-		.wrapper.drawers-container
-			block left
-			// Menu
-			//- include ../components/exams-header.pug
-			//include ../components/sidebar.pug
-				block sidebar
-					include ../components/sidebar-content.pug
-
-			// block content
-			.page-content
-				block content
-
-			block right
-				//- block scripts
-		block scripts
+    block right

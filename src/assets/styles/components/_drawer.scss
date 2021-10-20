@@ -1,7 +1,7 @@
 .drawer{
   // position: absolute;
   // top: 0;
-  height: auto;
+  height: 100%;
   width: 100%;
   max-width: 0;
   background-color: $white;
@@ -41,7 +41,7 @@
     }
   }
   &.drawer--left{
-    
+
   }
   &.drawer--right{
     // .btn{
@@ -83,18 +83,6 @@
   }
 }
 
-.drawers-container{
-  padding-top: 60px;
-  display: flex;
-  width: 100%;
-  // height: calc(100vh - 60px);
-  justify-content: space-between;
-  flex-direction: row;
-  .page-content{
-    padding-top: 0;
-    width: 100%;
-  }
-}
 
 .survey-content{
   height: calc( 100vh - 60px );
