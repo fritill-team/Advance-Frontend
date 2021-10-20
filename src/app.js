@@ -293,12 +293,12 @@ class NewResource {
   containerTemplate(data) {
     return $(`<div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <div class="card" id="recommendations-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           ${this.searchForm()}
           <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
           ${this.withPagination ? this.paginationTemplate() : ''}
