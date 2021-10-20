@@ -360,7 +360,7 @@ class NewResource {
     $(`#${this.prefix}-edit`).on('click', (e) => {
       e.preventDefault()
       let parentContainer = $(this).closest('.card')
-      console.log(this)
+      console.log(parentContainer)
       this.$form.empty()
       this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
     })
@@ -378,20 +378,28 @@ let resource = new NewResource(recommendations, {
   editURL: recommendations.data('edit-url'),
   prefix: "recommendations",
   itemTemplate(item) {
-    return `<div class="card" data-data='${JSON.stringify(item)}'>
+    return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
-        <h5 class='title-5 my-0'>${item.name}</h4>
+        <h4 class='title-5 my-0'>${item.name}</h4>
         <div class="d-flex card__tools">
-          <button id="${this.prefix}-edit" class="btn btn--primary btn--text btn--icon ">
-            <i class="far fa-edit"></i>
-          </button>
-          <button class="btn btn--primary btn--text btn--icon ">
-            <i class="far fa-trash-alt"></i></div>
-          </button>
+          <div class="dropdown dropdown__activator">
+            <button class="btn btn--info btn--icon btn--text dropdown--btn">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="dropdown__content">
+              <a id="${this.prefix}-edit" class="content__link" href="">
+                <i class="far fa-edit"></i>edit
+              </a>
+              <a class="content__link" href="javascript.void(0)">
+               <i class="far fa-trash-alt"></i> delete
+             </a>
+            </div>
+          </div>
         </div>
-        <div class="card__content">
-          <p>${item.description}</p>
-        </div>
+      </div>
+      <div class="card__content">
+        <p>${item.description}</p>
+      </div>
     </div>`
   },
   formTemplate(item = {}, action = '') {
