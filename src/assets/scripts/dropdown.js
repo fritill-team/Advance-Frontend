@@ -33,7 +33,7 @@ $(document)
 
 $('.dropdown--header').each(function (item) {
   let content = $(item).find('.dropdown__content')
-  console.log(content)
+  // console.log(content)
   // if ($(document).attr('dir') === 'ltr') {
   //   console.log('4564')
   //   content.css('right', `-${$(document).width() - (content.offset().left + content.width())}px`)

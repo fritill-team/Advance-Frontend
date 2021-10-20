@@ -357,13 +357,20 @@ class NewResource {
       e.preventDefault()
       self.submitForm($(this))
     })
-    $(`#${this.prefix}-edit`).on('click', (e) => {
+    $(document).on('click', `#${this.prefix}-edit`, (e) => {
       e.preventDefault()
       let parentContainer = $(this).closest('.card')
       console.log(parentContainer)
       this.$form.empty()
       this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
     })
+    // $(`#${this.prefix}-edit`).on('click', (e) => {
+    //   e.preventDefault()
+    //   let parentContainer = $(this).closest('.card')
+    //   console.log(parentContainer)
+    //   this.$form.empty()
+    //   this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
+    // })
     this.fetchItems()
   }
 }
