@@ -1,141 +1,141 @@
 .d-flex.align-items-center.header
-  button(class="toggle-menu toggle" id="toggleMenu" type='button')
-    i.fas.fa-bars.toggle__icon
-  .header__logo
-    a.header__img(href='index.html')
-      img(src='../../assets/images/Etqadem_Logo.svg' alt='')
-    a.header__img-small(href='index.html')
-      img(src='../../assets/images/Etqadem_Icon (1).svg' alt='')
-  block menu-header
-  //- block category
-    //- include ../components/header-blocks/selectCategory.pug
-  .header__search
-    .search__wrapper
-      .wrapper__inputs-form
-        input.inputs-form--input(type='text' placeholder='Search for Tuts Videos, Tutors, Tests and more..')
-        i.fas.fa-search.inputs-form--icon
-  .header__notification
-    //ul.notification__list
-    block my-courses
-    .dropdown.dropdown--header
-      a.message.dropdown__activator(href='#' title='Messages')
-        i.message__icon.far.fa-envelope
-        span.message__count-num 3
-      .dropdown__content
-        .card-list
-          .card__content
-            .list
-              .list-item.list-item--multible.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  span.overline
-                    | lorem lorem
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-1.gray Jose_Portilla@test.com
-                  span.subtitle-2.gray.bold 12/3/1688
-                .list-item__action
-              //- .divider
-              .list-item.list-item--three-lines.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  span.overline
-                    | lorem lorem
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-1.gray Jose_Portilla@test.com
-                .list-item__action
-              //- .divider
-              .list-item.list-item--two-lines.list-item--with-border
-                .list-item__avatar
-                  i.fas.fa-user
-                  //- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-2.gray Jose_Portilla@test.com
-                .list-item__action
-              //- .divider
-              .list-item.list-item--one-line.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  a(href="#" class="body-2 bold") Jose Portilla
-                .list-item__action
-    .dropdown.dropdown--header.dropdown--close-on-click
-      a(class="message dropdown__activator" href='#' title='Messages')
-        i.message__icon.far.fa-bell
-        span.message__count-num 3
-      .dropdown__content
-        .card-list
-          .card__content
-            .list
-              .list-item.list-item--multible.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  span.overline
-                    | lorem lorem
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-1.gray Jose_Portilla@test.com
-                  span.subtitle-2.gray.bold 12/3/1688
-                .list-item__action
-              //- .divider
-              .list-item.list-item--three-lines.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  span.overline
-                    | lorem lorem
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-1.gray Jose_Portilla@test.com
-                .list-item__action
-              //- .divider
-              .list-item.list-item--two-lines.list-item--with-border
-                .list-item__avatar
-                  i.fas.fa-user
-                  //- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  a(href="#" class="body-2 bold") Jose Portilla
-                  p.subtitle-2.gray Jose_Portilla@test.com
-                .list-item__action
-              //- .divider
-              .list-item.list-item--one-line.list-item--with-border
-                .list-item__avatar
-                  img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-                .list-item__content
-                  a(href="#" class="body-2 bold") Jose Portilla
-                .list-item__action
-    .dropdown.dropdown--header
-      img(src='../../assets/images/hd_dp.jpg' alt='' class="dropdown__activator profile-link__img")
-      .dropdown__content
-        .list.list--condensed
-          .list-item.list-item--one-line
-            .list-item__avatar
-              img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
-            .list-item__content
-              a(href="#" class="body-2 bold") Jose Portilla
-              p.subtitle-1.gray Jose_Portilla@test.com
-          //- a(href="#" class="link") Lorem ipsum dolor
-          .divider
-          .list-item.list-item--one-line
-            .list-item__avatar
-              i.fas.fa-moon
-            .list-item__content
-              a(href="#" class="body-2") Lorem ipsum
-            .list-item__action
-              .switch
-                input(id="dark-mode-toggle" type="checkbox")
-                label(for="dark-mode-toggle")
-          .divider
-          .list-item.list-item--one-line
-            .list-item__content
-              a(href="#" class="body-2") Lorem ipsum
-          .list-item.list-item--one-line
-            .list-item__content
-              a(href="#" class="body-2") Lorem ipsum
-          .list-item.list-item--one-line
-            .list-item__content
-              a(href="#" class="body-2") Lorem ipsum
-          .list-item.list-item--one-line
-            .list-item__content
-              a(href="#" class="body-2") Lorem ipsum
+	button(class="toggle-menu toggle" id="toggleMenu" type='button')
+		i.fas.fa-bars.toggle__icon
+	.header__logo
+		a.header__img(href='index.html')
+			img(src='../../assets/images/Etqadem_Logo.svg' alt='')
+		//- a.header__img-small(href='index.html')
+		//-   img(src='../../assets/images/Etqadem_Icon.svg' alt='')
+	block menu-header
+	//- block category
+		//- include ../components/header-blocks/selectCategory.pug
+	.header__search
+		.search__wrapper
+			.wrapper__inputs-form
+				input.inputs-form--input(type='text' placeholder='Search for Tuts Videos, Tutors, Tests and more..')
+				i.fas.fa-search.inputs-form--icon
+	.header__notification
+		//ul.notification__list
+		block my-courses
+		.dropdown.dropdown--header
+			a.message.dropdown__activator(href='#' title='Messages')
+				i.message__icon.far.fa-envelope
+				span.message__count-num 3
+			.dropdown__content
+				.card-list
+					.card__content
+						.list
+							.list-item.list-item--multible.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline
+										| lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action
+							//- .divider
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline
+										| lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action
+							//- .divider
+							.list-item.list-item--two-lines.list-item--with-border
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action
+							//- .divider
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action
+		.dropdown.dropdown--header.dropdown--close-on-click
+			a(class="message dropdown__activator" href='#' title='Messages')
+				i.message__icon.far.fa-bell
+				span.message__count-num 3
+			.dropdown__content
+				.card-list
+					.card__content
+						.list
+							.list-item.list-item--multible.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline
+										| lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+									span.subtitle-2.gray.bold 12/3/1688
+								.list-item__action
+							//- .divider
+							.list-item.list-item--three-lines.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									span.overline
+										| lorem lorem
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-1.gray Jose_Portilla@test.com
+								.list-item__action
+							//- .divider
+							.list-item.list-item--two-lines.list-item--with-border
+								.list-item__avatar
+									i.fas.fa-user
+									//- img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+									p.subtitle-2.gray Jose_Portilla@test.com
+								.list-item__action
+							//- .divider
+							.list-item.list-item--one-line.list-item--with-border
+								.list-item__avatar
+									img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+								.list-item__content
+									a(href="#" class="body-2 bold") Jose Portilla
+								.list-item__action
+		.dropdown.dropdown--header
+			img(src='../../assets/images/hd_dp.jpg' alt='' class="dropdown__activator profile-link__img image image--small-profile image--rounded")
+			.dropdown__content
+				.list.list--condensed
+					.list-item.list-item--one-line
+						.list-item__avatar
+							img(class="image image--small-profile image--rounded" src="../../assets/images/hd_dp.jpg", alt="avatar")
+						.list-item__content
+							a(href="#" class="body-2 bold") Jose Portilla
+							p.subtitle-1.gray Jose_Portilla@test.com
+					//- a(href="#" class="link") Lorem ipsum dolor
+					.divider
+					.list-item.list-item--one-line
+						.list-item__avatar
+							i.fas.fa-moon
+						.list-item__content
+							a(href="#" class="body-2") Lorem ipsum
+						.list-item__action
+							.switch
+								input(id="dark-mode-toggle" type="checkbox")
+								label(for="dark-mode-toggle")
+					.divider
+					.list-item.list-item--one-line
+						.list-item__content
+							a(href="#" class="body-2") Lorem ipsum
+					.list-item.list-item--one-line
+						.list-item__content
+							a(href="#" class="body-2") Lorem ipsum
+					.list-item.list-item--one-line
+						.list-item__content
+							a(href="#" class="body-2") Lorem ipsum
+					.list-item.list-item--one-line
+						.list-item__content
+							a(href="#" class="body-2") Lorem ipsum

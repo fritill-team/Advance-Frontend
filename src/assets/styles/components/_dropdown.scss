@@ -43,12 +43,32 @@
   }
 
   &.dropdown--header {
-    height: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
     //.dropdown__activator {
     //  height: ;
     //}
     //padding: 0 8px;
-
+    margin-right: 20px;
+    position: relative;
+    a{
+      color: $white;
+      font-size: 24px;
+      margin: 0;
+    }
+    .message__count-num{
+      position: absolute;
+      background-color: $accent;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 12px;
+      top: 8px;
+      right: -8px;
+      text-align: center;
+      line-height: 16px;
+    }
     .dropdown__content {
       width: 300px;
     }
