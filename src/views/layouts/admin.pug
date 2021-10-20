@@ -3,52 +3,46 @@
 doctype html
 
 html(lang='en' dir="ltr" class="")
-	head
-		link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+  head
+    link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
 
-		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-		link(href='../assets/vendor/lightbox.min.css' rel='stylesheet')
-		link(href='../assets/vendor/venobox.css' rel='stylesheet'  type="text/css" media="screen")
-		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
-		link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
-		link(href="../assets/vendor/toastr.css" rel='stylesheet')
-		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-		link(href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" rel="stylesheet")
-		link(href="../assets/vendor/dropzone.min.css" rel='stylesheet')
-		link(rel="stylesheet", href="../assets/vendor/jquery-ui.min.css")
-		//- Title
-		block title
-			title Your project!
+    link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
+    link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+    link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+    link(href='../assets/vendor/lightbox.min.css' rel='stylesheet')
+    link(href='../assets/vendor/venobox.css' rel='stylesheet'  type="text/css" media="screen")
+    link(href='../assets/vendor/select2.min.css' rel='stylesheet')
+    link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
+    link(href="../assets/vendor/toastr.css" rel='stylesheet')
+    meta(name="viewport" content="width=device-width, shrink-to-fit=9")
+    link(href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" rel="stylesheet")
+    link(href="../assets/vendor/dropzone.min.css" rel='stylesheet')
+    link(rel="stylesheet", href="../assets/vendor/jquery-ui.min.css")
+    //- Title
+    block title
+      title Your project!
 
-	body.sidebar-with-icon
-		include ../components/modal-dialog.pug
-		.wrapper
-			.wrapper__overlay.toggle
-			//- Menu
-			block header
+  body
+    .wrapper
+      .wrapper__overlay.toggle
+      include ../components/modal-dialog.pug
 
-			block sidebar
-				//- include ../components/sidebar-content.pug
+      //header
+      include ../components/header.pug
 
-			//- block contentservay
-			.page-content.page-content--margin-left
-				block content
-			include ../components/footer-admin.pug
+      .drawers-container
+        .drawer.drawer--left.drawer--partially-closed
+          div(class="list__sidebar list" data-link='[{"title":"Categories","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Tags","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Courses","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Assessments and Surveys","has_children":true,"icon":"fas fa-layer-group","is_active":true,"children":[{"title":"Assessments and Surveys","has_children":false,"url":"#","is_active":true}]},{"title":"Users","has_children":true,"icon":"fas fa-layer-group","is_active":false,"children":[{"title":"Users","has_children":false,"url":"#","is_active":false},{"title":"Groups","has_children":false,"url":"#","is_active":false}]}]')
 
-				//- Footer
+        //- block contentservay
+        .page-content
+          block content
 
-				//- block scripts
-				block scripts
+          include ../components/footer-admin.pug
 
+        //- Footer
 
-	script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js")
-	script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-bash.min.js")
-	//- script(src='../assets/scripts/jquery-3.3.1.min.js')
-	//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-	//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-	//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-	//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-	//- script(src='../assets/scripts/custom.js')
-	//- script(src='../assets/scripts/night-mode.js')
+        //- block scripts
+      block scripts
+      script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.js")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-bash.min.js")
