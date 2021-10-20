@@ -632,7 +632,7 @@ a.list-item{
 // rtl
 html[dir="rtl"] {
   .list-item{
-    padding-right: 5px; 
+    // padding-right: 5px; 
     .list-item__action {
       margin-right: auto;
       margin-left: inherit;

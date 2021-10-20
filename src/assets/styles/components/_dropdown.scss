@@ -48,7 +48,27 @@
     //  height: ;
     //}
     //padding: 0 8px;
-
+    margin-right: 20px;
+    position: relative;
+    a{
+      color: $white;
+      font-size: 24px;
+    }
+    img{
+      margin-top: 4px;
+    }
+    .message__count-num{
+      position: absolute;
+      background-color: $accent;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 12px;
+      top: 0;
+      right: -8px;
+      text-align: center;
+      line-height: 16px;
+    }
     .dropdown__content {
       width: 300px;
     }

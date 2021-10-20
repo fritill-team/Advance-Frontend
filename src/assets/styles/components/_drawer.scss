@@ -1,7 +1,7 @@
 .drawer{
   // position: absolute;
   // top: 0;
-  height:  calc(100vh - 60px );
+  height: auto;
   width: 100%;
   max-width: 0;
   background-color: $white;
@@ -36,6 +36,9 @@
   }
   &.drawer--partially-closed{
     max-width: 60px;
+    @media(max-width: 760px){
+      max-width: 0;
+    }
   }
   &.drawer--left{
     
@@ -73,9 +76,10 @@
     }
   }
   @media (max-width: 767px) {
-    position: absolute;
+    position: fixed;
+    height: 100%;
     width: 80%;
-    z-index: 2;
+    z-index: 4;
   }
 }
 
