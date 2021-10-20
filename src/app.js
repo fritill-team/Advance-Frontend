@@ -348,6 +348,7 @@ class NewResource {
     this.$container.append(this.containerTemplate())
     this.$itemsList = $(`#${this.prefix}-listing`)
     this.$searchBar = $(`#${this.prefix}-searchbar`)
+    this.$editItem = $(`#${this.prefix}-edit`)
     this.$form = $(`#${this.prefix}-form`)
     this.$searchBar.on('input', e => this.search = e.target.value)
     let self = this
@@ -356,9 +357,10 @@ class NewResource {
       e.preventDefault()
       self.submitForm($(this))
     })
-    $(`.${this.prefix}-edit`).on('click', (e) => {
+    $(`#${this.prefix}-edit`).on('click', (e) => {
       e.preventDefault()
       let parentContainer = $(this).closest('.card')
+      console.log(this)
       this.$form.empty()
       this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
     })
@@ -380,7 +382,7 @@ let resource = new NewResource(recommendations, {
       <div class="card__header" >
         <h5 class='title-5 my-0'>${item.name}</h4>
         <div class="d-flex card__tools">
-          <button class="${this.prefix}-edit btn btn--primary btn--text btn--icon ">
+          <button id="${this.prefix}-edit" class="btn btn--primary btn--text btn--icon ">
             <i class="far fa-edit"></i>
           </button>
           <button class="btn btn--primary btn--text btn--icon ">
