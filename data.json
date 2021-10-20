@@ -183,54 +183,125 @@
       ]
     },
     {
-      "name": "",
-      "description": "",
+      "name": "test",
+      "description": "dfbfgn",
+      "id": 4
+    }
+  ],
+  "classifications": [
+    {
+      "id": 1,
+      "collection_id": 1,
+      "name": "classifications title 1",
+      "number": 1,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/1/edit"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/1/translate"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/1/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/1/move"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "collection_id": 1,
+      "name": "classifications title 2",
+      "number": 2,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/2/edit"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/2/translate"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/2/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/2/move"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "collection_id": 1,
+      "name": "classifications title 3",
+      "number": 3,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "btn--primary edit-recommendation",
+          "link": "/recommendations/3/edit"
+        },
+        {
+          "name": "translate",
+          "icon": "fas fa-globe",
+          "class": "btn--primary",
+          "link": "/recommendations/3/translate"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "/recommendations/3/delete"
+        },
+        {
+          "name": "move",
+          "icon": "fas fa-arrows-alt",
+          "class": "btn--primary handle",
+          "link": "/recommendations/3/move"
+        }
+      ]
+    },
+    {
+      "name": "dfbfgnb",
+      "number": "12",
       "id": 4
     },
     {
-      "name": "new Pull Shit",
-      "description": "New Pull Shit Description\r\n",
+      "name": "gmygmjhm",
+      "number": "4",
       "id": 5
     },
     {
-      "name": "",
-      "description": "",
+      "name": "dgfgn",
+      "number": "3",
       "id": 6
-    },
-    {
-      "name": "New Pullshit",
-      "description": "New NEw Pullshit",
-      "id": 7
-    },
-    {
-      "name": "Old Pullshit",
-      "description": "Old Pullshit",
-      "id": 8
-    },
-    {
-      "name": "asdsad",
-      "description": "dasdasdasd",
-      "id": 9
-    },
-    {
-      "name": "fdgdfgfdg",
-      "description": "dfgfdgdfg",
-      "id": 10
-    },
-    {
-      "name": "mohammed ibraheem zaki",
-      "description": "text",
-      "id": 11
-    },
-    {
-      "name": "asdsad",
-      "description": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "description": "",
-      "id": 13
     }
   ],
   "sideBar": [
@@ -247,7 +318,6 @@
         }
       ]
     },
-
     {
       "title": "Categories",
       "has_children": false,

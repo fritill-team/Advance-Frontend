@@ -30,4 +30,5 @@ import './dropdown'
 import "./chapter-content"
 import "./menu-header"
 import "./backend_scripts/panel-loader"
-import "./recommendationTemplate"
+// import "./recommendationTemplate"
+import "./classifications"
