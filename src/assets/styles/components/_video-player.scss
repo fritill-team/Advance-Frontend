@@ -1,11 +1,16 @@
-
 .video-player {
+
   width: 100%;
   height: 100%;
+
+  iframe,
+  .iframe-parent-class {
+    width: 100%;
+    height: 100%;
+  }
+
   //flex-grow: 2 2;
   //iframe {
-  //  width: 100%;
-  //  height: 100%;
   ////  height: calc(100vh - 60px);
   //}
   //&.video-player--size{
@@ -21,6 +26,7 @@
   //  }
   //}
 }
+
 //.iframe-parent-class {
 //  height: 100%;
 //}
