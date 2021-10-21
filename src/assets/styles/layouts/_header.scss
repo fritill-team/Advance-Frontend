@@ -7,14 +7,9 @@
   background-color: darken($primary, 7);
 
   .header__link {
-    display: block;
-    height: 100%;
-    margin: 0;
-    line-height: 1;
-    color: $white;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 22px 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
 
     &.header__link-condensed {
       padding: 16px 24px;
@@ -24,7 +19,10 @@
   .header__logo-full {
     height: 30px;
   }
-
+  .header__logo-sm{
+    height: 30px;
+    display: none;
+  }
   .header__arrow {
     position: relative;
 
@@ -79,13 +77,32 @@
     .header__top-category {
       display: none;
     }
-
+    .header__link {
+      display: block;
+      height: 100%;
+      margin: 0;
+      line-height: 1;
+      color: $white;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 22px 24px;
+  
+      &.header__link-condensed {
+        padding: 16px 24px;
+      }
+    }
     .header__notification {
       .notification__list {
         .list__list-item {
           display: none !important;
         }
       }
+    }
+    .header__logo-full{
+      display: none;
+    }
+    .header__logo-sm{
+      display: block;
     }
   }
   .notification__item {
@@ -479,27 +496,27 @@
   }
 }
 
-@media (min-width: 992px) {
-  .header {
-    &.header--admin {
-      padding-left: 60px;
-    }
-  }
-}
+// @media (min-width: 992px) {
+//   .header {
+//     &.header--admin {
+//       padding-left: 60px;
+//     }
+//   }
+// }
 
 @media (max-width: 567px) {
-  .header {
-    // background-color: #FFF;
-    &.header--dark {
-      .header-dark__course-name {
-        color: $primary;
+  // .header {
+  //   // background-color: #FFF;
+  //   &.header--dark {
+  //     .header-dark__course-name {
+  //       color: $primary;
 
-        &:hover {
-          color: $primary;
-        }
-      }
-    }
-  }
+  //       &:hover {
+  //         color: $primary;
+  //       }
+  //     }
+  //   }
+  // }
   .header__logo {
     float: left;
     // width: 50px;
@@ -570,48 +587,48 @@
 }
 
 .night-mode {
-  .header {
-    &.header--dark {
-      background: $primary-darkmode;
+  // .header {
+  //   &.header--dark {
+  //     background: $primary-darkmode;
 
-      .header-dark__course-name {
-        color: #FFF;
-      }
-    }
-  }
+  //     .header-dark__course-name {
+  //       color: #FFF;
+  //     }
+  //   }
+  // }
 }
 
 html[dir="rtl"] {
-  .header-dark__logo {
-    &:after {
-      border: 30px solid transparent;
-      border-right: 15px solid #0d758e;
-      border-left: 0;
-      right: 100%;
-    }
-  }
+  // .header-dark__logo {
+  //   &:after {
+  //     border: 30px solid transparent;
+  //     border-right: 15px solid #0d758e;
+  //     border-left: 0;
+  //     right: 100%;
+  //   }
+  // }
 
-  .header-dark__img-sm {
-    padding: 6px 4px 5px 10px;
-  }
+  // .header-dark__img-sm {
+  //   padding: 6px 4px 5px 10px;
+  // }
 
-  .header {
-    &.header--dark {
-      .header-dark__courses {
-        &:after {
-          border-right: 15px solid #1597bb;
-          border-left: 0;
-          right: 100%;
-        }
-      }
+  // .header {
+  //   &.header--dark {
+  //     .header-dark__courses {
+  //       &:after {
+  //         border-right: 15px solid #1597bb;
+  //         border-left: 0;
+  //         right: 100%;
+  //       }
+  //     }
 
-      .header-dark__logo {
-        &:after {
-          border-right: 15px solid darken($primary, 7);
-          border-left: 0;
-          right: 100%;
-        }
-      }
-    }
-  }
+  //     .header-dark__logo {
+  //       &:after {
+  //         border-right: 15px solid darken($primary, 7);
+  //         border-left: 0;
+  //         right: 100%;
+  //       }
+  //     }
+  //   }
+  // }
 }
