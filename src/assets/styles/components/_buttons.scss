@@ -6,7 +6,7 @@ input[type="button"].btn {
   height: 36px;
   line-height: 34px;
   border-radius: 5px;
-  border: 1px solid $default;
+  border: none;
   background-color: $default;
   color: $gray;
   font-size: 14px;
@@ -54,7 +54,7 @@ input[type="button"].btn {
   }
 
   &.btn--outlined {
-    border-color: currentColor;
+    border: 1px solid currentColor;
   }
 
   &.btn--text,
@@ -302,7 +302,7 @@ html[dir="rtl"] {
 .night-mode {
   .btn{
     background-color: #39444f;
-    border: 1px solid #39444f;
+    //border: 1px solid #39444f;
     color: #fff;
   }
   a.btn {
