@@ -24,16 +24,16 @@ input[type="button"].btn {
   &:before {
     content: '';
     display: block;
+    pointer-events: none;
+    border-radius: inherit;
     position: absolute;
-    background-color: currentColor;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     opacity: 0;
     color: inherit;
-    pointer-events: none;
-    border-radius: inherit;
+    background-color: currentColor;
     transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
   }
 
