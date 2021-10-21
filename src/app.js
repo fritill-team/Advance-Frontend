@@ -340,7 +340,7 @@ class NewResource {
   }
 
   listingTemplate() {
-    return this.items.map(item => this.itemTemplate(item)).join('')
+    return ''//this.items.map(item => this.itemTemplate(item)).join('')
   }
 
   itemTemplate(item) {
