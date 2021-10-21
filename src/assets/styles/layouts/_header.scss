@@ -14,14 +14,14 @@
     color: $white;
     font-size: 18px;
     font-weight: 500;
-    padding: 22px 24px;
+    padding: 22px 24px 22px 36px;
 
     &.header__link-condensed {
       padding: 16px 24px;
     }
   }
 
-  .header__logo-full {
+  .header__logo {
     height: 30px;
   }
 
@@ -43,6 +43,7 @@
 
     &.header__arrow-secondary {
       background-color: $secondary;
+
 
       &:after {
         content: "";
@@ -68,6 +69,7 @@
       width: 280px;
       margin: 0 4px;
     }
+
     i {
       opacity: 0.5;
     }
