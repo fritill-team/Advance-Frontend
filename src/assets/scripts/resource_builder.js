@@ -1,4 +1,13 @@
-class NewResource {
+const mapErrors = (app, $form, errors) => {
+  for (let field in errors)
+    if (Object.prototype.hasOwnProperty.call(field, errors))
+      $form.find(`#${app}-${field}-messages`)
+        .empty()
+        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+}
+
+class ResourceBuilder {
+
   constructor($container, options) {
     // observables
     this.localItems = []
@@ -6,13 +15,12 @@ class NewResource {
     this.localLoading = false
 
     this.title = ''
-    this.number = ''
+    this.description = ''
 
     // properties
     this.prefix = ''
     this.listingURL = ''
     this.createURL = ''
-    this.editURL = ''
     this.withPagination = false
     this.paginationType = 'pagination' // 'show-more'
 
@@ -59,7 +67,6 @@ class NewResource {
       this.$itemsList.empty()
       this.$itemsList.text('Loading...')
     }
-
   }
 
   searchListener(value) {
@@ -87,11 +94,6 @@ class NewResource {
     })
   }
 
-  // const form = document.getElementById('classification-form')
-  // formData = {
-  //   title: $('#title').value,
-  //   description: $('#description').value
-  // }
   submitForm($form) {
     let url = $form.attr('action')
     $.ajax({
@@ -116,35 +118,13 @@ class NewResource {
         //   mapErrors(this.prefix, $form, error.message.errors)
       }
     });
-
   }
-
-  // editForm($form){
-  //   let url = $form.attr('action')
-  //   $.ajax({
-  //     type: 'PUT',
-  //     dataType: 'json',
-  //     url,
-  //     data: $form.serialize(),
-  //     success: () => {
-  //       if (url !== this.editURL) {
-  //         // TODO improve behavior
-  //         this.fetchItems()
-  //         this.formTemplate({}, this.editURL)
-  //       } else {
-  //         this.fetchItems()
-  //         $form.trigger('reset')
-  //       }
-  //     }
-  //   })
-  // }
-
 
   containerTemplate(data) {
     return $(`<div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <div class="card" id="classification-form">
+          <div class="card" id="recommendations-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
         </div>
@@ -183,7 +163,7 @@ class NewResource {
   }
 
   listingTemplate() {
-    return '' //this.items.map(item => this.itemTemplate(item)).join('')
+    return this.items.map(item => this.itemTemplate(item)).join('')
   }
 
   itemTemplate(item) {
@@ -203,6 +183,7 @@ class NewResource {
     this.$searchBar.on('input', e => this.search = e.target.value)
     let self = this
     let formElement = this.$form.find('form')
+    console.log(formElement)
     formElement.submit(function (e) {
       e.preventDefault()
       self.submitForm($(this))
@@ -225,16 +206,16 @@ class NewResource {
   }
 }
 
-let textContainer = $('#classifications')
 
-const classification = $('.classifications-list')
-
-let resource = new NewResource(classification, {
-  listingURL: classification.data('listing-url'),
-  createURL: classification.data('create-url'),
-  prefix: "classifications",
-  itemTemplate(item) {
-    return ` <div class="card" data-data='${JSON.stringify(item)}'>
+const recommendations = $('#recommendations-list')
+if (recommendations) {
+  let recommendationResource = new ResourceBuilder(recommendations, {
+    listingURL: recommendations.data('listing-url'),
+    createURL: recommendations.data('create-url'),
+    editURL: recommendations.data('edit-url'),
+    prefix: "recommendations",
+    itemTemplate(item) {
+      return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
         <h4 class='title-5 my-0'>${item.name}</h4>
         <div class="d-flex card__tools">
@@ -254,37 +235,34 @@ let resource = new NewResource(classification, {
         </div>
       </div>
       <div class="card__content">
-        <p>${item.number}</p>
+        <p>${item.description}</p>
       </div>
     </div>`
-  },
-  formTemplate(item = {}, action = '') {
-    return `<form action="${action}" method="post">
+    },
+    formTemplate(item = {}, action = '') {
+      return `<form action="${action}" method="post">
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="classifications-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="recommendations-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input
              class="field"
              type="text"
-             placeholder="Classifications"
+             placeholder="Recommendations"
              name="name"
-             id="classifications-name"
+             id="recommendations-name"
              required
              value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="classifications-number">Description <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-            <input
-             class="field"
-             type="number"
-             placeholder="0"
-             name="number"
-             id="classifications-number"
-             required
-             value="${item.number ? item.number : ''}">
+          <textarea
+            required
+            name="description"
+            id="recommendations-description"
+            placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
@@ -293,26 +271,91 @@ let resource = new NewResource(classification, {
         <button class="btn btn--primary" type="submit">submit</button>
       </div>
     </form>`
-  }
-})
-//
+    }
+  })
+  recommendationResource.build()
+
+// TODO Put this in template
 // ${item.actions.map(action => `
 //              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
 // <i class="${action.icon}"></i>
 // </a>
 // `).join('')}
-resource.build()
+}
 
-// TODO Mohammed Ibrahim
-// to map validation errors to form
-// field messages must has id of `#${app}-${fieldErrors}-messages`
-// example app: classifications
-//         field: title
-const mapErrors = (app, $form, errors) => {
-  for (let field in errors)
-    if (Object.prototype.hasOwnProperty.call(field, errors))
-      $form.find(`#${app}-${field}-messages`)
-        .empty()
-        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+const classifications = $('#classifications-list')
+if (classifications) {
+  let classificationsResource = new ResourceBuilder(classifications, {
+    listingURL: classifications.data('listing-url'),
+    createURL: classifications.data('create-url'),
+    editURL: classifications.data('edit-url'),
+    prefix: "classifications",
+    itemTemplate(item) {
+      return ` <div class="card" data-data='${JSON.stringify(item)}'>
+      <div class="card__header" >
+        <h4 class='title-5 my-0'>${item.name}</h4>
+        <div class="d-flex card__tools">
+          <div class="dropdown dropdown__activator">
+            <button class="btn btn--info btn--icon btn--text dropdown--btn">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="dropdown__content">
+              <a id="${this.prefix}-edit" class="${this.prefix}-edit content__link" href="javascript.void(0)">
+                <i class="far fa-edit"></i>edit
+              </a>
+              <a class="content__link" href="javascript.void(0)">
+               <i class="far fa-trash-alt"></i> delete
+             </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <p>${item.description}</p>
+      </div>
+    </div>`
+    },
+    formTemplate(item = {}, action = '') {
+      return `<form action="${action}" method="post">
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="classifications-name">Name <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <input
+             class="field"
+             type="text"
+             placeholder="Recommendations"
+             name="name"
+             id="classifications-name"
+             required
+             value="${item.name ? item.name : ''}">
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="classifications-description">Score <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <input
+            required
+            name="score"
+            id="classifications-description"
+            placeholder="Recommendation Score"
+             value="${item.score ? item.score : 0}">
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="ml-auto d-inline-block">
+        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
+        <button class="btn btn--primary" type="submit">submit</button>
+      </div>
+    </form>`
+    }
+  })
+  classificationsResource.build()
 
+// TODO Put this in template
+// ${item.actions.map(action => `
+//              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
+// <i class="${action.icon}"></i>
+// </a>
+// `).join('')}
 }

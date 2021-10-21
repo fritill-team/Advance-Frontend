@@ -186,6 +186,21 @@
       "name": "test",
       "description": "dfbfgn",
       "id": 4
+    },
+    {
+      "name": "gdhfh",
+      "description": "dshgh",
+      "id": 5
+    },
+    {
+      "name": "gfhfgh",
+      "description": "fghfgh",
+      "id": 6
+    },
+    {
+      "name": "fghfghfgh",
+      "description": "fghfghfghsgrh 333",
+      "id": 7
     }
   ],
   "classifications": [
@@ -193,8 +208,7 @@
       "id": 1,
       "collection_id": 1,
       "name": "classifications title 1",
-      "number": 1,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "score": 1,
       "actions": [
         {
           "name": "edit",
@@ -226,8 +240,7 @@
       "id": 2,
       "collection_id": 1,
       "name": "classifications title 2",
-      "number": 2,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "score": 2,
       "actions": [
         {
           "name": "edit",
@@ -259,8 +272,7 @@
       "id": 3,
       "collection_id": 1,
       "name": "classifications title 3",
-      "number": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi laboriosam reiciendis. At quibusdam nisi rem eum, eveniet expedita nihil iste qui illum atque incidunt sunt eos architecto perferendis libero?",
+      "score": 3,
       "actions": [
         {
           "name": "edit",
@@ -289,19 +301,9 @@
       ]
     },
     {
-      "name": "dfbfgnb",
-      "number": "12",
+      "name": "sdfgsfdgsdfg",
+      "score": "0gsdfgsdfg",
       "id": 4
-    },
-    {
-      "name": "gmygmjhm",
-      "number": "4",
-      "id": 5
-    },
-    {
-      "name": "dgfgn",
-      "number": "3",
-      "id": 6
     }
   ],
   "sideBar": [
