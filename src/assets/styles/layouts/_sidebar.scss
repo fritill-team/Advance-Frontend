@@ -444,3 +444,10 @@ body {
   overflow: hidden;
   height: 100vh;
 }
+.night-mode{
+  .toggle-menu{
+    .toggle__icon{
+      background: $black;
+    }
+  }
+}

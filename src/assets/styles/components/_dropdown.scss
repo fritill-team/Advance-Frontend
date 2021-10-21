@@ -71,16 +71,43 @@
     }
     .dropdown__content {
       width: 300px;
-    }
+    } 
   }
 
+}
+@media (max-width : 576px){
+  .dropdown{
+    &.dropdown--header { 
+      margin-right: 15px; 
+      // a{
+      //   color: $white;
+      //   font-size: 24px;
+      //   margin: 0;
+      // }
+      // .message__count-num{
+      //   position: absolute;
+      //   background-color: $accent;
+      //   width: 16px;
+      //   height: 16px;
+      //   border-radius: 50%;
+      //   font-size: 12px;
+      //   top: 8px;
+      //   right: -8px;
+      //   text-align: center;
+      //   line-height: 16px;
+      // }
+      .dropdown__content {
+        width: 250px;
+      }
+    }
+  }
 }
 
 html[dir=rtl] {
   .dropdown {
     .dropdown__content {
       right: unset;
-      left: -30px;
+      left: 0;
     }
   }
 }
