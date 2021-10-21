@@ -1,4 +1,4 @@
-extends ../layouts/layout-darkMode.pug
+extends ../layouts/spa-layout
 
 
 block title
@@ -10,12 +10,12 @@ block content
 		//- +sidebar-dark
 		.exams-questions.video-player
 			section.questions-header
-				.container 
+				.container
 					.questions-header__title
 						h1.title-h1 Exams Development
 						.questions-header__info
 							p.body-1 The only course you need to learn web development
-							p.body-1 The only course you need 
+							p.body-1 The only course you need
 			section.questions-name
 				.container
 					.row
@@ -23,7 +23,7 @@ block content
 							.question-title
 								h3.title-h3 Exams Difficile
 								.question-title__info
-									p.body-1 Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+									p.body-1 Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
 			.questions
 				.container
 					.row
@@ -53,8 +53,8 @@ block content
 										ul.field-wrapper__messages
 											li Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.field-wrapper
@@ -80,8 +80,8 @@ block content
 											li Please provide a valid city.
 								// time
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3 The flowchart has one output variable
 								.question__content
 									.field-wrapper
@@ -93,8 +93,8 @@ block content
 												| Please provide a valid city.
 							//data
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.field-wrapper
@@ -105,8 +105,8 @@ block content
 											li
 												| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -133,8 +133,8 @@ block content
 											ul.field-wrapper__messages
 												li Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -148,8 +148,8 @@ block content
 												li
 													| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3 The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -163,8 +163,8 @@ block content
 												li
 													| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3 The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -178,8 +178,8 @@ block content
 												li
 													| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -191,10 +191,10 @@ block content
 												input(class="field" type='number' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
 											ul.field-wrapper__messages
 												li
-													| Please provide a valid city. 
+													| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
 								.question__content
 									.question__item.question__item--cover
@@ -214,11 +214,11 @@ block content
 												li
 													| Please provide a valid city.
 						.col-lg-12
-							.question 
-								.question__title 
+							.question
+								.question__title
 									h3.title-h3  The flowchart has one output variable
-								.question__content 
-									.question__item.question__item--horizontal  
+								.question__content
+									.question__item.question__item--horizontal
 										.check-field-group.check-field-group--horizontal
 											div
 												input(class="field" type="checkbox" id="checkbox-21" name="checkname")
@@ -226,7 +226,7 @@ block content
 													span
 										.image-wrapper
 											img(src="../../assets/images/get_img.jpg", alt="")
-									.question__item.question__item--horizontal 
+									.question__item.question__item--horizontal
 										.check-field-group.check-field-group--horizontal
 											div
 												input(class="field" type="checkbox" id="checkbox-221" name="checkname")
@@ -234,7 +234,7 @@ block content
 													span
 										.image-wrapper
 											img(src="../../assets/images/get_img.jpg", alt="")
-									.question__item.question__item--horizontal 
+									.question__item.question__item--horizontal
 										.check-field-group.check-field-group--horizontal
 											div
 												input(class="field" type="checkbox" id="checkbox-212" name="checkname")
@@ -242,7 +242,7 @@ block content
 													span
 										.image-wrapper
 											img(src="../../assets/images/get_img.jpg", alt="")
-									.question__item.question__item--horizontal   
+									.question__item.question__item--horizontal
 										.check-field-group.check-field-group--horizontal
 											div
 												input(class="field" type="checkbox" id="checkbox-210" name="checkname")
@@ -252,14 +252,14 @@ block content
 											img(src="../../assets/images/get_img.jpg", alt="")
 						.col-lg-12
 							.exam__footer
-								.card__footer-actions  
+								.card__footer-actions
 									a(href="#" class="btn btn--default hover btn--ripple") Previous
-								.card__footer-actions  
+								.card__footer-actions
 									a(href="#" class="btn btn--primary hover btn--ripple") Next
-									
+
 						//- .col-lg-12
-						//- 	.card.answer 
-						//- 		.card__header 
+						//- 	.card.answer
+						//- 		.card__header
 						//- 			h3.header__title.title-h3  the flowchart has one output variable
 						//- 		.card__info
 						//- 			span.info__description he flowchart has one output variable
@@ -271,7 +271,7 @@ block content
 						//- 						label.check-field__label.radio-field__label(for="radio-1" name="radioName") Lorem ipsum dolor.
 						//- 					.check-field
 						//- 						input.check-field__input(type="radio" id="radio-2" name="radioName")
-						//- 						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor. 
+						//- 						label.check-field__label.radio-field__label(for="radio-2" ) Lorem ipsum dolor.
 						//- 					.check-field
 						//- 						input.check-field__input(type="radio" id="radio-3" name="radioName")
-						//- 						label.check-field__label.radio-field__label(for="radio-3" ) Lorem ipsum dolor. 
+						//- 						label.check-field__label.radio-field__label(for="radio-3" ) Lorem ipsum dolor.

@@ -1,11 +1,12 @@
-extends ../layouts/layout-darkMode.pug
+extends ../layouts/spa-layout
+
 block title
 	title player
 //- block listVideo
 block content
 	.page-content.page-content--video-player
 		include ../components/sidebar-dark.pug
-		+sidebar-dark("sidebar-dark--no-title") 
+		+sidebar-dark("sidebar-dark--no-title")
 			//- include ../components/list-video.pug
-		.video-player 
+		.video-player
 			iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY" frameBorder="0")

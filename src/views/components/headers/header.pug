@@ -1,0 +1,13 @@
+.d-flex.align-items-center.header
+  button(class="toggle-menu toggle" id="toggleMenu" type='button')
+    i.fas.fa-bars.toggle__icon
+
+  .header__logo
+    a.header__img(href='index.html')
+      img(src='../../assets/images/Etqadem_Logo.svg' alt='')
+    //- a.header__img-small(href='index.html')
+    //-   img(src='../../assets/images/Etqadem_Icon.svg' alt='')
+  block menu-header
+
+  include partials/search
+  include partials/notifications
