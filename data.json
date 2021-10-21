@@ -95,26 +95,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/1/edit"
-        },
-        {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/1/translate"
+          "class": "recommendations-edit",
+          "link": "http://localhost:3000/recommendations/1/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
           "link": "/recommendations/1/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/1/move"
         }
       ]
     },
@@ -127,26 +115,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/2/edit"
-        },
-        {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/2/translate"
+          "class": "recommendations-edit",
+          "link": "http://localhost:3000/recommendations/2"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
           "link": "/recommendations/2/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/2/move"
         }
       ]
     },
@@ -159,48 +135,16 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/3/edit"
-        },
-        {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/3/translate"
+          "class": "recommendations-edit",
+          "link": "http://localhost:3000/recommendations/3"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
-          "link": "/recommendations/3/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/3/move"
+          "link": "/recommendations/3"
         }
       ]
-    },
-    {
-      "name": "test",
-      "description": "dfbfgn",
-      "id": 4
-    },
-    {
-      "name": "gdhfh",
-      "description": "dshgh",
-      "id": 5
-    },
-    {
-      "name": "gfhfgh",
-      "description": "fghfgh",
-      "id": 6
-    },
-    {
-      "name": "fghfghfgh",
-      "description": "fghfghfghsgrh 333",
-      "id": 7
     }
   ],
   "classifications": [
@@ -217,22 +161,10 @@
           "link": "/recommendations/1/edit"
         },
         {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/1/translate"
-        },
-        {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
           "link": "/recommendations/1/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/1/move"
         }
       ]
     },
@@ -249,22 +181,10 @@
           "link": "/recommendations/2/edit"
         },
         {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/2/translate"
-        },
-        {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
           "link": "/recommendations/2/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/2/move"
         }
       ]
     },
@@ -281,29 +201,12 @@
           "link": "/recommendations/3/edit"
         },
         {
-          "name": "translate",
-          "icon": "fas fa-globe",
-          "class": "btn--primary",
-          "link": "/recommendations/3/translate"
-        },
-        {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "btn--primary",
           "link": "/recommendations/3/delete"
-        },
-        {
-          "name": "move",
-          "icon": "fas fa-arrows-alt",
-          "class": "btn--primary handle",
-          "link": "/recommendations/3/move"
         }
       ]
-    },
-    {
-      "name": "sdfgsfdgsdfg",
-      "score": "0gsdfgsdfg",
-      "id": 4
     }
   ],
   "sideBar": [

@@ -95,12 +95,14 @@ class ResourceBuilder {
   }
 
   submitForm($form) {
-    let url = $form.attr('action')
+    let url = $form.attr('action'),
+      data = $form.serialize()
+
     $.ajax({
-      type: 'POST',
+      type: data.indexOf('PUT') ? 'PUT' : 'POST',
       dataType: 'json',
       url,
-      data: $form.serialize(),
+      data,
       success: () => {
         if (url !== this.createURL) {
           // TODO improve behavior
@@ -112,9 +114,8 @@ class ResourceBuilder {
         }
       },
       error: error => {
-        console.error(error)
-        if (error.status = 422)
-          console.log('validation error')
+        if (error.status === 422)
+          console.log(error.message)
         //   mapErrors(this.prefix, $form, error.message.errors)
       }
     });
@@ -178,30 +179,23 @@ class ResourceBuilder {
     this.$container.append(this.containerTemplate())
     this.$itemsList = $(`#${this.prefix}-listing`)
     this.$searchBar = $(`#${this.prefix}-searchbar`)
-    this.$editItem = $(`#${this.prefix}-edit`)
     this.$form = $(`#${this.prefix}-form`)
     this.$searchBar.on('input', e => this.search = e.target.value)
     let self = this
-    let formElement = this.$form.find('form')
-    console.log(formElement)
-    formElement.submit(function (e) {
-      e.preventDefault()
-      self.submitForm($(this))
-    })
-    $(document).on('click', `.${this.prefix}-edit`, (e) => {
-      e.preventDefault()
-      let parentContainer = $(this).closest('.card')
-      this.$form.empty()
-      this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
-      // console.log(this.formTemplate())
-    })
-    // $(`#${this.prefix}-edit`).on('click', (e) => {
-    //   e.preventDefault()
-    //   let parentContainer = $(this).closest('.card')
-    //   console.log(parentContainer)
-    //   this.$form.empty()
-    //   this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
-    // })
+
+    $(document)
+      .on('click', `.${this.prefix}-edit`, function (e) {
+        e.preventDefault()
+        let parentContainer = $(this).closest('.card')
+        self.$form.empty()
+        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'))))
+        self.$form.find('form').append($(`<input type="hidden" name="method" value="PUT">`))
+        // console.log(this.formTemplate())
+      })
+      .on('submit', `#${this.prefix}-form > form`, function (e) {
+        e.preventDefault()
+        self.submitForm($(this))
+      })
     this.fetchItems()
   }
 }
@@ -212,7 +206,6 @@ if (recommendations) {
   let recommendationResource = new ResourceBuilder(recommendations, {
     listingURL: recommendations.data('listing-url'),
     createURL: recommendations.data('create-url'),
-    editURL: recommendations.data('edit-url'),
     prefix: "recommendations",
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
@@ -220,16 +213,18 @@ if (recommendations) {
         <h4 class='title-5 my-0'>${item.name}</h4>
         <div class="d-flex card__tools">
           <div class="dropdown dropdown__activator">
-            <button class="btn btn--info btn--icon btn--text dropdown--btn">
+            <button class="btn btn--info btn--icon btn--text dropdown--btn ">
               <i class="fas fa-ellipsis-h"></i>
             </button>
             <div class="dropdown__content">
-              <a id="${this.prefix}-edit" class="${this.prefix}-edit content__link" href="javascript.void(0)">
-                <i class="far fa-edit"></i>edit
-              </a>
-              <a class="content__link" href="javascript.void(0)">
-               <i class="far fa-trash-alt"></i> delete
-             </a>
+              <div class="list">
+                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                  <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
+                  <span class="list-item__content">
+
+                  </span>
+                </a>`)}
+              </div>
             </div>
           </div>
         </div>
@@ -262,7 +257,7 @@ if (recommendations) {
             required
             name="description"
             id="recommendations-description"
-            placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
+            placeholder="Recommendation Description">${item.description ? item.description : ''}</textarea>
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
@@ -274,13 +269,6 @@ if (recommendations) {
     }
   })
   recommendationResource.build()
-
-// TODO Put this in template
-// ${item.actions.map(action => `
-//              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-// <i class="${action.icon}"></i>
-// </a>
-// `).join('')}
 }
 
 const classifications = $('#classifications-list')
@@ -336,6 +324,8 @@ if (classifications) {
         <div class="field-wrapper__content">
           <input
             required
+            type="number"
+            class="field"
             name="score"
             id="classifications-description"
             placeholder="Recommendation Score"
@@ -351,11 +341,4 @@ if (classifications) {
     }
   })
   classificationsResource.build()
-
-// TODO Put this in template
-// ${item.actions.map(action => `
-//              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-// <i class="${action.icon}"></i>
-// </a>
-// `).join('')}
 }
