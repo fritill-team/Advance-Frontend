@@ -11,7 +11,7 @@
 html {
   //line-height: 1.15; /* 1 */
   //-webkit-text-size-adjust: 100%; /* 2 */
-  font-family: unquote("Quicksand"), 'Roboto', 'sans-serif';
+  font-family: unquote("Quicksand"), "Roboto", "sans-serif";
 }
 
 /* Sections
@@ -272,7 +272,7 @@ label:focus-visible {
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
-  color: $input-color ;
+  color: $input-color;
 }
 
 input::placeholder,
@@ -280,12 +280,12 @@ textarea::placeholder {
   color: $input-color;
   opacity: 1; /* Firefox */
 }
-textarea[disabled="disabled"]{
-  background-color: rgba(0,0,0,.06);
+textarea[disabled="disabled"] {
+  background-color: rgba(0, 0, 0, 0.06);
 }
-input[type="file"]{
-  &[disabled="disabled"]{
-    background-color: rgba(0,0,0,.06);
+input[type="file"] {
+  &[disabled="disabled"] {
+    background-color: rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -379,26 +379,26 @@ template {
   display: none;
 }
 
-
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
-.night-mode{
+.night-mode {
   input:focus::-webkit-input-placeholder,
   textarea:focus::-webkit-input-placeholder {
-    color: #FFF;
+    color: #fff;
   }
   input::placeholder,
   textarea::placeholder {
-    color: #FFF;
+    color: #fff;
     opacity: 1; /* Firefox */
   }
   input:focus,
   textarea:focus {
     outline: 0;
     // box-shadow: 0 0 4px 0 rgba(#FFF, 0.5);
-    border : 1px solid rgba(#FFF, 0.5);
+    border: 1px solid rgba(#fff, 0.5);
   }
 }
