@@ -580,7 +580,7 @@ $('.list__sidebar').each(function(i, item) {
 // drawers
 $(document)
   .on('click', '.toggle', function(){
-    $('.drawer--left').toggleClass('open')
+    $('.drawer--left').toggleClass('drawer--open')
   })
   .on('click', '.left-open', function(){
     $('.drawer--left').toggleClass('open')
