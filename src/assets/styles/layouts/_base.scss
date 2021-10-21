@@ -6,7 +6,8 @@ body {
   position: relative;
   margin: 0;
   height: 100%;
-  background-color: rgba($secondary, 0.02);
+  background-color: $bgcolor;
+  //background-color: rgba($secondary, 0.02);
 
   &.with--overlay-full {
     .modal-overlay {
