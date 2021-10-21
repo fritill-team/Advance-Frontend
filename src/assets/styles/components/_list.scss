@@ -352,7 +352,7 @@ a.list-item {
     }
   }
 
-  &.list-item--multible {
+  &.list-item--multiple {
     align-items: flex-start;
 
     &.list-item--with-border {
@@ -360,7 +360,9 @@ a.list-item {
         width: calc(100% - 76px);
       }
     }
-
+    .list-item__action{
+      margin-top: 10px;
+    }
     // .list-item__content{
     //   .overline{
     //     margin-bottom: 4px;
@@ -385,7 +387,7 @@ a.list-item {
     flex-direction: column;
     margin-left: auto;
     padding: 10px;
-    margin-top: 10px;
+    // margin-top: 10px;
     // height: 60px;
     justify-content: center;
 
