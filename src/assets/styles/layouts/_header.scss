@@ -13,12 +13,20 @@
     line-height: 1;
     color: $white;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
+    padding: 22px 24px;
+
+    &.header__link-condensed {
+      padding: 16px 24px;
+    }
+  }
+
+  .header__logo-full {
+    height: 30px;
   }
 
   .header__arrow {
     position: relative;
-    padding: 15px 25px;
 
     &:after {
       content: "";
@@ -37,215 +45,32 @@
       background-color: $secondary;
 
       &:after {
-        border: 30px solid transparent;
+        content: "";
         border-left: 15px solid #1597bb;
-        border-right: 0;
-        content: "";
-        height: 0;
         left: 100%;
-        position: absolute;
-        top: 0;
-        width: 0;
         z-index: 1;
       }
     }
   }
 
-  .header__logo-full {
-    height: 30px;
-  }
-
-  &.header--arrows {
-    //position: relative;
-    //display: flex;
-    //justify-content: flex-start;
-    //height: 60px;
-    // logon 1
-    .header-dark__logo {
-      display: block;
-      background-color: darken($primary, 7);
-
-      line-height: 3.2;
-      // background: $primary;
-
-      padding: 14px 30px 2px 30px;
-
-
-      &:after {
-        border: 30px solid transparent;
-        border-left: 15px solid darken($primary, 7);
-        border-right: 0;
-        content: "";
-        height: 0;
-        left: 100%;
-        position: absolute;
-        top: 0;
-        width: 0;
-        z-index: 1;
-      }
-    }
-
-    //small logo
-    .header-dark__img-sm {
-      display: none;
-      margin: 0;
-      line-height: 1;
-      height: fit-content;
-      padding: 6px 10px 5px 4px;
-
-      img {
-        width: 30px;
-      }
-    }
-
-    //title course
-    .header-dark__courses {
-      margin: 0;
-      line-height: 3.2;
-      padding: 0 25px 0 30px;
-      background: $secondary;
-      height: 100%;
-      text-align: center;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 400;
-      position: relative;
-
-      &:hover {
-        color: #fff;
-      }
-
-      //  display: grid;
-
-      .courses__name {
-        font-size: 18px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      &:after {
-        border: 30px solid transparent;
-        border-left: 15px solid #1597bb;
-        border-right: 0;
-        content: "";
-        height: 0;
-        left: 100%;
-        position: absolute;
-        top: 0;
-        width: 0;
-        z-index: 1;
-      }
-    }
-
-    .header-dark__course-name {
-      margin: 0;
-      line-height: 2.1;
-      height: 40px;
-      padding: 0 25px;
-      text-align: center;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 400;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      cursor: pointer;
-
-      &:hover {
-        color: $white;
-      }
-
-      .course-name__title {
-        font-size: 18px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .header-dark__logo {
-        width: 80px;
-        // display: none;
-      }
-      .header-dark__img-sm {
-        // display: block;
-        height: 100%;
-        background: #0d758e;
-        line-height: 4.6;
-        padding: 6px 10px;
-      }
-    }
-  }
-
-  .header--exams {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (min-width: 992px) {
-    .header {
-      &.header--admin {
-        padding-right: 60px;
-      }
-    }
-  }
-}
-
-html.night-mode {
-  body {
-    background-color: rgb(56, 68, 77);
-  }
-}
-
-// logon in master header
-.header__logo {
-  float: left;
-  width: 135px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-
-  .header__img {
-    display: block;
-    margin: 0;
-    height: 26px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-  }
-
-  .header__img-small {
-    display: none;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-  }
-
-  &.logo--sidebar {
-    .header__img {
-      margin-left: 15px;
-    }
-
-    .header__img-small {
-      margin-left: 10px;
-    }
-  }
-}
-
-@media (max-width: 1199px) {
   .header__search {
-    display: none;
-    margin-left: 0 !important;
+    margin: auto 0;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 20px;
+    background: $default;
+    min-width: 300px;
+
+    input {
+      border: none;
+      background: $default;
+      display: inline-block;
+      width: 280px;
+      margin: 0 4px;
+    }
+    i {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -644,63 +469,6 @@ html.night-mode {
   }
 }
 
-.header__search {
-  float: left;
-  margin-left: 50px;
-
-  .search__wrapper {
-    font-size: 1em;
-    position: relative;
-
-    .wrapper__inputs-form {
-      font-size: 14px !important;
-      width: 350px;
-      position: relative;
-      font-weight: 400;
-      font-style: normal;
-      display: inline-flex;
-      color: rgba(0, 0, 0, 0.87);
-
-      .inputs-form--input {
-        padding-left: 3.2em !important;
-        padding-right: 1em !important;
-        font-size: 13px;
-        font-weight: 400;
-        border-radius: 500rem;
-        margin: 0;
-        max-width: 100%;
-        -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-        outline: 0;
-        text-align: left;
-        line-height: 1.21428571em;
-        padding: 0.67857143em 1em;
-        background: #f7f7f7;
-        border: 0 !important;
-        color: rgba(0, 0, 0, 0.87);
-        transition: box-shadow 0.1s ease, border-color 0.1s ease;
-        box-shadow: none;
-      }
-
-      .inputs-form--icon {
-        cursor: default;
-        position: absolute;
-        line-height: 2;
-        text-align: center;
-        top: 0;
-        left: 1px;
-        right: auto;
-        height: 100%;
-        margin: 0;
-        width: 2.67142857em;
-        opacity: 0.5;
-        transition: opacity 0.3s ease;
-        font-size: 16px !important;
-      }
-    }
-  }
-}
 
 @media (max-width: 375px) {
   .header {

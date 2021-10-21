@@ -1,4 +1,4 @@
-$(document).on("click", ".btn, .list-item", function (evt) {
+$(document).on("click", ".btn", function (evt) {
   let targetElement = $(evt.currentTarget);
   let x = evt.pageX - targetElement.offset().left;
   let y = evt.pageY - targetElement.offset().top;

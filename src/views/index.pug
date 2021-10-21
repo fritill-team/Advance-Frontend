@@ -1,31 +1,18 @@
-extends ./layouts/master.pug
+extends ./layouts/site.pug
 
 block title
 	title My Page - Home
-block button-collapsed
-	button(class="toggle-menu toggle-menu--mobile toggle" id="toggleMenu" type='button')
+//- block button-collapsed
+//- 	button(class="toggle-menu toggle-menu--mobile toggle" id="toggleMenu" type='button')
 		i.fas.fa-bars.toggle__icon
-block menu-header
-	include ./components/menu-list.pug
-block my-courses
-	li
-		a.white.body-2.notification__item(href='#')
+//- block menu-header
+//- 	include ./components/menu-list.pug
+//- block my-courses
+//- 	li
+//- 		a.white.body-2.notification__item(href='#')
 			|My Courses
 block content
-	//- .container
-	//- 	.row
-	//- 		.col-xl-9.col-lg-9
-	//- 			.container
-	//- 				.row
-	//- 					.col-12.d-flex
-	//- 						button(class="btn btn--icon btn--primary count-down")
-	//- 							i.fa.fa-minus
-	//- 						input(type="number" class="countable" value="0")
-	//- 						button(class="btn btn--icon btn--primary count-up")
-	//- 							i.fa.fa-plus
-		// Menu
-		//- +menu('home')
-			//- Desktop page
+	
 	.hero
 		img(class="hero__bg" src="./assets/images/hero_bg.jpg", alt="")
 		//- img(class="hero__avatar" src="./assets/images/hero_shape.png", alt="")
