@@ -4,8 +4,6 @@
 @import "layouts/_base";
 @import "layouts/_page-content";
 @import "layouts/_header";
-@import "layouts/_sidebar";
-@import "layouts/sidebar-dark";
 @import "layouts/_footer";
 
 @import "./custom/toastr";
@@ -38,7 +36,7 @@
 @import "./components/_info";
 @import "./components/_video-player";
 @import "./components/hero";
-
+@import "./components/toggle-sidebar";
 //TODO Remove this file
 @import "./components/authentication-layout";
 

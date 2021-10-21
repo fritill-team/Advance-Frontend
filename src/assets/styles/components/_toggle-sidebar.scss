@@ -1,0 +1,95 @@
+.toggle-menu {
+  width: 60px;
+  text-align: center;
+  display: block;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  background: #1597bb;
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  cursor: pointer;
+  float: left;
+  &:hover {
+    color: #fff;
+    background: #1597bb;
+  }
+  .toggle__icon {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+  }
+  &.toggle-menu--mobile {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .toggle-menu {
+    width: 60px;
+    text-align: center;
+    display: block;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    background: #1597bb;
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    &:hover {
+      color: #fff;
+      background: #1597bb;
+    }
+    .toggle-menu__icon {
+      display: block;
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 28px;
+    }
+    &.toggle-menu--mobile {
+      display: none;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .toggle-menu {
+    display: block;
+    line-height: 57px;
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    .toggle__icon {
+      width: 60px;
+      text-align: center;
+      display: block;
+      padding: 0;
+      border: 0;
+      background: $primary;
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+      cursor: pointer;
+    }
+    &:hover {
+      color: transparent;
+      background-color: transparent;
+    }
+    &.sidebar--mobile {
+      left: -60%;
+      width: 60%;
+      display: block;
+      z-index: 9;
+      top: 60px;
+    }
+  }
+}
