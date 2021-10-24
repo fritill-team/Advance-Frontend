@@ -116,14 +116,14 @@
       }
     }
     .notification__list {
-      .notification__message {
+      .notification__item {
         font-size: 16px;
         color: #686f7a;
         position: relative;
-        .message__icon {
+        .notification__icon {
           font-size: 18px;
         }
-        .message__count-num {
+        .notification__number {
           font-size: 11px;
           position: absolute;
           top: -8px;

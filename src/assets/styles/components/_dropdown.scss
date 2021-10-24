@@ -53,7 +53,7 @@
       font-size: 24px;
       margin: 0;
     }
-    .message__count-num {
+    .notification__number {
       position: absolute;
       background-color: $accent;
       width: 16px;
@@ -98,7 +98,7 @@ html[dir="rtl"] {
       }
     }
     &.dropdown--header {
-      .message__count-num {
+      .notification__number {
         left: -8px;
         right: auto;
       }
