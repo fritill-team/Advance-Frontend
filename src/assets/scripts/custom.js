@@ -580,13 +580,13 @@ $('.list__sidebar').each(function(i, item) {
 // drawers
 $(document)
   .on('click', '.toggle', function(){
-    $('.drawer--left').toggleClass('open')
+    $('.drawer--left').toggleClass('drawer--open')
   })
   .on('click', '.left-open', function(){
     $('.drawer--left').toggleClass('open')
   })
-  .on('click', '.header-player__course-name', function(){
-    $('.drawer--left').toggleClass('open')
+  .on('click', '.header__link', function(){
+    $('.drawer--left').toggleClass('drawer--open')
   })
   .on('click', '.right-open', function(){
     $('.drawer--right').toggleClass('open')

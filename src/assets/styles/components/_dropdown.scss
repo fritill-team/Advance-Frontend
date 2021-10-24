@@ -97,6 +97,12 @@ html[dir="rtl"] {
         margin-right: 0;
       }
     }
+    &.dropdown--header {
+      .message__count-num {
+        left: -8px;
+        right: auto;
+      }
+    }
   }
 }
 

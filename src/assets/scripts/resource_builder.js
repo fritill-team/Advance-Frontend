@@ -1,73 +1,13 @@
-/*
-const recommendationTemplate = item => `
+const mapErrors = (app, $form, errors) => {
+  for (let field in errors)
+    if (Object.prototype.hasOwnProperty.call(field, errors))
+      $form.find(`#${app}-${field}-messages`)
+        .empty()
+        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+}
 
-    <div class="recommendation-details card" data-data='${JSON.stringify(item)}'>
-      <div class="card__header" >
-        <h5 class='title-5 my-0'>${item.title}</h4>
-        <div class="d-flex card__tools" >
-          ${item.actions.map(action => `
-            <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-              <i class="${action.icon}"></i>
-            </a>
-          `).join('')}
-        </div>
-      </div>
-      <div class="card__content">
-        <p>${item.description}</p>
-      </div>
-    </div>
-  `
-const recommendationForm = () => `
-<form class='card recommendation-form' data-data='data'>
-  <div class="field-wrapper field-wrapper--sm">
-    <label class="field-wrapper__label">Course Title*</label>
-    <div class="field-wrapper__content">
-      <input class="field" type="text" placeholder="Insert your course title." name="title" data-purpose="edit-course-title" maxlength="" id="title" value="">
-    </div>
-    <ul class="field-wrapper__messages">
-      <li>Please provide a valid city.</li>
-    </ul>
-  </div>
-  <div class="field-wrapper">
-    <label class="field-wrapper__label">Course Radio Button*</label>
-    <div class="field-wrapper__content">
-      <textarea class="textarea field" id="description" rows="5" name="description" placeholder="Insert your course description" ></textarea>
-    </div>
-    <ul class="field-wrapper__messages">
-      <li>Please provide a valid city.</li>
-    </ul>
-  </div>
-</form>
+class ResourceBuilder {
 
-`
-
-$('.recommendations-list').each((i, container) => {
-  let url = $(container).data('link'),
-    row = $("<div class='row'>"),
-    list = $("<div class='col-lg-6'>"),
-    form = $("<div class='col-lg-6'>")
-  // row.append($(
-  // `
-
-  // `))
-
-  $.get(url)
-  .then(res => {
-    for (let item of res) {
-      // console.log(item.data)
-      $(list).append($(recommendationTemplate(item)))
-      // console.log(item);
-    }
-    $(form).append($(recommendationForm()))
-    $(row).append(form)
-    $(row).append(list)
-    $(container).append(row)
-  })
-  .catch(e => console.log(e))
-  // console.log($('recommendation-details').data('data'));
-})
- */
-class NewResource {
   constructor($container, options) {
     // observables
     this.localItems = []
@@ -81,7 +21,6 @@ class NewResource {
     this.prefix = ''
     this.listingURL = ''
     this.createURL = ''
-    this.editURL = ''
     this.withPagination = false
     this.paginationType = 'pagination' // 'show-more'
 
@@ -128,7 +67,6 @@ class NewResource {
       this.$itemsList.empty()
       this.$itemsList.text('Loading...')
     }
-
   }
 
   searchListener(value) {
@@ -156,18 +94,15 @@ class NewResource {
     })
   }
 
-  // const form = document.getElementById('recommendation-form')
-  // formData = {
-  //   title: $('#title').value,
-  //   description: $('#description').value
-  // }
   submitForm($form) {
-    let url = $form.attr('action')
+    let url = $form.attr('action'),
+      data = $form.serialize()
+
     $.ajax({
-      type: 'POST',
+      type: data.indexOf('PUT') ? 'PUT' : 'POST',
       dataType: 'json',
       url,
-      data: $form.serialize(),
+      data,
       success: () => {
         if (url !== this.createURL) {
           // TODO improve behavior
@@ -179,35 +114,12 @@ class NewResource {
         }
       },
       error: error => {
-        console.error(error)
-        if (error.status = 422)
-          console.log('validation error')
+        if (error.status === 422)
+          console.log(error.message)
         //   mapErrors(this.prefix, $form, error.message.errors)
       }
     });
-
   }
-
-  editForm($form){
-    let url = $form.attr('action')
-    $.ajax({
-      type: 'PUT',
-      dataType: 'json',
-      url,
-      data: $form.serialize(),
-      success: () => {
-        if (url !== this.editURL) {
-          // TODO improve behavior
-          this.fetchItems()
-          this.formTemplate({}, this.editURL)
-        } else {
-          this.fetchItems()
-          $form.trigger('reset')
-        }
-      }
-    })
-  }
-
 
   containerTemplate(data) {
     return $(`<div class="container">
@@ -267,44 +179,107 @@ class NewResource {
     this.$container.append(this.containerTemplate())
     this.$itemsList = $(`#${this.prefix}-listing`)
     this.$searchBar = $(`#${this.prefix}-searchbar`)
-    this.$editItem = $(`#${this.prefix}-edit`)
     this.$form = $(`#${this.prefix}-form`)
     this.$searchBar.on('input', e => this.search = e.target.value)
     let self = this
-    let formElement = this.$form.find('form')
-    formElement.submit(function (e) {
-      e.preventDefault()
-      self.submitForm($(this))
-    })
-    $(document).on('click', `.${this.prefix}-edit`, (e) => {
-      e.preventDefault()
-      let parentContainer = $(this).closest('.card')
-      this.$form.empty()
-      this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
-      // console.log(this.formTemplate())
-    })
-    // $(`#${this.prefix}-edit`).on('click', (e) => {
-    //   e.preventDefault()
-    //   let parentContainer = $(this).closest('.card')
-    //   console.log(parentContainer)
-    //   this.$form.empty()
-    //   this.$form.append($(this.formTemplate(parentContainer.data('data'), $(this).data('action'))))
-    // })
+
+    $(document)
+      .on('click', `.${this.prefix}-edit`, function (e) {
+        e.preventDefault()
+        let parentContainer = $(this).closest('.card')
+        self.$form.empty()
+        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'))))
+        self.$form.find('form').append($(`<input type="hidden" name="method" value="PUT">`))
+        // console.log(this.formTemplate())
+      })
+      .on('submit', `#${this.prefix}-form > form`, function (e) {
+        e.preventDefault()
+        self.submitForm($(this))
+      })
     this.fetchItems()
   }
 }
 
-let textContainer = $('#recommendations')
 
-const recommendations = $('.recommendations-list')
+const recommendations = $('#recommendations-list')
+if (recommendations) {
+  let recommendationResource = new ResourceBuilder(recommendations, {
+    listingURL: recommendations.data('listing-url'),
+    createURL: recommendations.data('create-url'),
+    prefix: "recommendations",
+    itemTemplate(item) {
+      return ` <div class="card" data-data='${JSON.stringify(item)}'>
+      <div class="card__header" >
+        <h4 class='title-5 my-0'>${item.name}</h4>
+        <div class="d-flex card__tools">
+          <div class="dropdown dropdown__activator">
+            <button class="btn btn--info btn--icon btn--text dropdown--btn ">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="dropdown__content">
+              <div class="list">
+                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                  <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
+                  <span class="list-item__content">
 
-let resource = new NewResource(recommendations, {
-  listingURL: recommendations.data('listing-url'),
-  createURL: recommendations.data('create-url'),
-  editURL: recommendations.data('edit-url'),
-  prefix: "recommendations",
-  itemTemplate(item) {
-    return ` <div class="card" data-data='${JSON.stringify(item)}'>
+                  </span>
+                </a>`)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <p>${item.description}</p>
+      </div>
+    </div>`
+    },
+    formTemplate(item = {}, action = '') {
+      return `<form action="${action}" method="post">
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="recommendations-name">Name <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <input
+             class="field"
+             type="text"
+             placeholder="Recommendations"
+             name="name"
+             id="recommendations-name"
+             required
+             value="${item.name ? item.name : ''}">
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <textarea
+            required
+            name="description"
+            id="recommendations-description"
+            placeholder="Recommendation Description">${item.description ? item.description : ''}</textarea>
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="ml-auto d-inline-block">
+        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
+        <button class="btn btn--primary" type="submit">submit</button>
+      </div>
+    </form>`
+    }
+  })
+  recommendationResource.build()
+}
+
+const classifications = $('#classifications-list')
+if (classifications) {
+  let classificationsResource = new ResourceBuilder(classifications, {
+    listingURL: classifications.data('listing-url'),
+    createURL: classifications.data('create-url'),
+    editURL: classifications.data('edit-url'),
+    prefix: "classifications",
+    itemTemplate(item) {
+      return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
         <h4 class='title-5 my-0'>${item.name}</h4>
         <div class="d-flex card__tools">
@@ -327,31 +302,34 @@ let resource = new NewResource(recommendations, {
         <p>${item.description}</p>
       </div>
     </div>`
-  },
-  formTemplate(item = {}, action = '') {
-    return `<form action="${action}" method="post">
+    },
+    formTemplate(item = {}, action = '') {
+      return `<form action="${action}" method="post">
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="recommendations-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="classifications-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input
              class="field"
              type="text"
              placeholder="Recommendations"
              name="name"
-             id="recommendations-name"
+             id="classifications-name"
              required
              value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="classifications-description">Score <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-          <textarea
+          <input
             required
-            name="description"
-            id="recommendations-description"
-            placeholder="Recommendation Description">${item.name ? item.name : ''}</textarea>
+            type="number"
+            class="field"
+            name="score"
+            id="classifications-description"
+            placeholder="Recommendation Score"
+             value="${item.score ? item.score : 0}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
@@ -360,26 +338,7 @@ let resource = new NewResource(recommendations, {
         <button class="btn btn--primary" type="submit">submit</button>
       </div>
     </form>`
-  }
-})
-//
-// ${item.actions.map(action => `
-//              <a href="${action.link}" class="btn btn--text btn--icon ${action.class}">
-// <i class="${action.icon}"></i>
-// </a>
-// `).join('')}
-resource.build()
-
-// TODO Mohammed Ibrahim
-// to map validation errors to form
-// field messages must has id of `#${app}-${fieldErrors}-messages`
-// example app: recommendations
-//         field: title
-const mapErrors = (app, $form, errors) => {
-  for (let field in errors)
-    if (Object.prototype.hasOwnProperty.call(field, errors))
-      $form.find(`#${app}-${field}-messages`)
-        .empty()
-        .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
-
+    }
+  })
+  classificationsResource.build()
 }

@@ -14,8 +14,7 @@
     font-size: 18px;
     font-weight: 500;
     padding: 22px 24px 22px 30px;
-
-    &.header__link-condensed {
+    &.header__link--condensed {
       padding: 16px 24px;
     }
   }
@@ -33,25 +32,18 @@
   }
   .header__arrow-secondary {
     background-color: $secondary;
-    &:after {
-      content: "";
-      border-left: 15px solid;
-      border-color: #1597bb;
-      left: 100%;
-      z-index: 1;
-    }
   }
   .header__search {
     margin: auto 0;
     padding: 8px;
     font-size: 14px;
     border-radius: 20px;
-    background: $default;
+    background: $white;
     min-width: 300px;
 
     input {
       border: none;
-      background: $default;
+      background: $white;
       display: inline-block;
       width: 280px;
       margin: 0 4px;
@@ -66,7 +58,31 @@
     display: flex;
     align-items: center;
   }
-
+  .toggle-menu {
+    width: 60px;
+    text-align: center;
+    display: block;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    background: #1597bb;
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    .toggle__icon {
+      display: block;
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 22px;
+    }
+    &.toggle-menu--mobile {
+      display: none;
+    }
+  }
   @media (max-width: 768px) {
     .header__logo {
       display: none;
@@ -77,77 +93,69 @@
     .header__search {
       display: none;
     }
-  }
-
-  @media (max-width: 576px) {
     .header__arrow-secondary {
       display: none;
     }
     .header__link {
       display: none;
     }
-    .header__link-condensed {
+    .header__link--condensed {
       display: block;
+    }
+    .toggle-menu {
+      &.toggle-menu--mobile {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 567px) {
+    .header__logo {
+      float: left;
+      margin-left: 0;
+      .header__img {
+        width: 100px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      }
+      .header__img-small {
+        display: block;
+      }
+    }
+    .notification__list {
+      .notification__message {
+        font-size: 16px;
+        color: #686f7a;
+        position: relative;
+        .message__icon {
+          font-size: 18px;
+        }
+        .message__count-num {
+          font-size: 11px;
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background: $primary;
+          color: $white;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+          line-height: 1.5;
+          border-radius: 100%;
+          font-weight: 500;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 567px) {
-  .header__logo {
-    float: left;
-    margin-left: 0;
-    .header__img {
-      width: 100px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
-    }
-    .header__img-small {
-      display: block;
-    }
-  }
-  .notification__list {
-    .message {
-      font-size: 16px;
-      color: #686f7a;
-      position: relative;
-
-      .message__icon {
-        font-size: 18px;
-      }
-
-      .message__count-num {
-        font-size: 11px;
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background: $primary;
-        color: $white;
-        width: 16px;
-        height: 16px;
-        text-align: center;
-        line-height: 1.5;
-        border-radius: 100%;
-        font-weight: 500;
-      }
-    }
-  }
-}
 .night-mode {
   .header {
     background: $black;
-    .header__arrow {
-      &:after {
-        border-left: 15px solid $black;
-      }
-    }
     .header__arrow-secondary {
       background-color: darken($accent, 7);
-      &:after {
-        border-left: 15px solid darken($accent, 7);
-      }
     }
     .header__search {
       border: 1px solid #576874;
@@ -158,23 +166,17 @@
       }
     }
   }
+  .toggle-menu {
+    background: #43525c;
+  }
 }
 html[dir="rtl"] {
   .header {
     .header__arrow {
       clip-path: polygon(10% 1%, 100% 0, 90% 50%, 100% 100%, 10% 100%, 0 50%);
-      &:after {
-        right: 100%;
-        border-right: 15px solid darken($primary, 7);
-        border-left: 0;
-      }
     }
     .header__arrow-secondary {
       padding: 22px 30px 22px 24px;
-      &:after {
-        right: 100%;
-        border-right: 15px solid #1597bb;
-      }
     }
     .header__notification {
       margin-right: auto;
