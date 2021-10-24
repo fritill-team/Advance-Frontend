@@ -93,22 +93,13 @@
     .header__search {
       display: none;
     }
-    .header__arrow-secondary {
-      display: none;
-    }
     .header__link {
-      display: none;
-    }
-    .header__link--condensed {
-      display: block;
-    }
-    .toggle-menu {
-      &.toggle-menu--mobile {
-        display: block;
-      }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
-  @media (max-width: 567px) {
+  @media (max-width: 560px) {
     .header__logo {
       float: left;
       margin-left: 0;
@@ -146,6 +137,20 @@
           border-radius: 100%;
           font-weight: 500;
         }
+      }
+    }
+    .header__arrow-secondary {
+      display: none;
+    }
+    .header__link {
+      display: none;
+    }
+    .header__link--condensed {
+      display: block;
+    }
+    .toggle-menu {
+      &.toggle-menu--mobile {
+        display: block;
       }
     }
   }
