@@ -182,13 +182,4 @@ html[dir="rtl"] {
       margin-left: 0;
     }
   }
-  @media (max-width: 420px) {
-    .header {
-      .header__link {
-        &.header__link-condensed {
-          padding: 16px 6px 16px 18px;
-        }
-      }
-    }
-  }
 }
