@@ -46,18 +46,14 @@
     height: 60px;
     display: flex;
     align-items: center;
-    //.dropdown__activator {
-    //  height: ;
-    //}
-    //padding: 0 8px;
-    margin-right: 20px;
+    margin-right: 25px;
     position: relative;
-    a{
+    a {
       color: $white;
       font-size: 24px;
       margin: 0;
     }
-    .message__count-num{
+    .notification__number {
       position: absolute;
       background-color: $accent;
       width: 16px;
@@ -73,14 +69,39 @@
       width: 300px;
     }
   }
-
+}
+@media (max-width: 576px) {
+  .dropdown {
+    &.dropdown--header {
+      margin-right: 15px;
+      .dropdown__content {
+        width: 250px;
+      }
+    }
+  }
 }
 
-html[dir=rtl] {
+html[dir="rtl"] {
   .dropdown {
     .dropdown__content {
       right: unset;
-      left: -30px;
+      left: 0;
+    }
+    &.dropdown--header {
+      margin-left: 25px;
+      margin-right: 0;
+    }
+    @media (max-width: 576px) {
+      &.dropdown--header {
+        margin-left: 15px;
+        margin-right: 0;
+      }
+    }
+    &.dropdown--header {
+      .notification__number {
+        left: -8px;
+        right: auto;
+      }
     }
   }
 }

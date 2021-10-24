@@ -1,8 +1,9 @@
 /* src/assets/styles/components/_footer.scss  */
-.footer{
+.footer {
   position: relative;
   margin-top: auto;
-  background: darken($secondary, 5%);
+  background: darken($secondary, 5%); //
+  background-color: lighten($primary, 3%);
   width: 100%;
   .footer__background {
     position: absolute;
@@ -11,81 +12,63 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .3;
+    opacity: 0.3;
   }
-  .footer__content{
+  .footer__content {
     padding: 40px 0;
-    a{
+    a {
       display: block;
       color: #fff;
     }
   }
-  .footer-line{
+  .footer-line {
     padding: 10px 0;
     margin-top: 0;
   }
-  .social-links{
+  .social-links {
     display: flex;
     justify-content: flex-end;
     height: auto;
-    a{
-      margin-left: 14px;
-      font-size: 16px;
+    a {
+      &:hover {
+        color: #fff;
+      }
     }
   }
-  .footer__logo{
+  .footer__logo {
     width: 38px;
     height: 38px;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
     margin: 0 20px 0 0;
   }
   .footer-line {
-    // margin-top: 50px;
     padding: 10px 0;
     border-top: 1px solid $accent;
-    @media (max-width: 560px) {
-      // margin-top: 30px;
-    }
   }
-  
+
   .fritill {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  
+
     .fritill-logo {
       width: 100px;
       height: 40px;
       margin-left: 10px;
     }
-  
-    @media(max-width: 768px) {
-      justify-content: center;
-    }
-    @media(max-width: 370px) {
-      .list__paragraph {
-        font-size: 13px;
-      }
-    }
   }
-  
+
   // // .fotb_left
   .copy-right {
     margin-top: 0px;
-    @media (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
     .copy-right__list {
       display: inline-block;
       vertical-align: middle;
     }
-  
+
     a.list__link {
       .footer-logo {
         img {
@@ -96,7 +79,7 @@
         }
       }
     }
-  
+
     p.list__paragraph {
       font-size: 14px;
       font-weight: 400;
@@ -104,41 +87,52 @@
       text-align: left;
       line-height: 24px;
       margin: 0;
-      @media(max-width: 370px) {
-        font-size: 13px;
-      }
-  
       strong {
         font-weight: bold;
       }
     }
-  
   }
-  
-}
-
-html[dir="rtl"]{
-  .footer{
-    .social-links{
-      a{
-        margin-left: 0;
-        margin-right: 14px;
-      }
+  // media responsive 992px
+  @media (max-width: 992px) {
+    .social-links {
+      justify-content: flex-start;
     }
-    .footer__logo{
+  }
+  // media responsive 768px
+  @media (max-width: 768px) {
+    .footer__content {
+      padding: 20px 0 0;
+    }
+    .fritill {
+      justify-content: center;
+    }
+    .copy-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // media responsive 370px
+  @media (max-width: 370px) {
+    .list__paragraph {
+      font-size: 13px;
+    }
+  }
+}
+html[dir="rtl"] {
+  .footer {
+    .footer__logo {
       margin: 0 0 0 20px;
     }
   }
-  .fritill{
-    .fritill-logo{
+  .fritill {
+    .fritill-logo {
       margin: 0 16px 0 0;
     }
   }
 }
-
-.night-mode{
-  .footer{
+.night-mode {
+  .footer {
     background-color: #43525c;
   }
 }
-

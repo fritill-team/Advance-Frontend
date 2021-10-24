@@ -56,6 +56,10 @@ input[type="button"].btn {
   &.btn--outlined {
     border: 1px solid currentColor;
   }
+  &.btn--double-line {
+    border: 3px double ;
+    border-color:currentColor ;
+  }
 
   &.btn--text,
   &.btn--outlined {
