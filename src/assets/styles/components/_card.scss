@@ -59,7 +59,7 @@
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 20px;
-
+  // overflow: hidden;
   .card__header {
     display: flex;
     flex-flow: row nowrap;
@@ -107,15 +107,17 @@
   }
 
   .card__content {
-    padding-left: 10px;
   }
-
+  
   &.card--side-col {
     display: flex;
-
+    
     .card__header,
     .card__content {
       width: 100%;
+    }
+    .card__content{
+      padding-left: 10px;
     }
   }
   &.card--centered {
