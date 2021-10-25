@@ -1,14 +1,16 @@
 .exam {
   padding: 50px 0;
   display: flex;
+
   .exam__footer {
     display: flex;
     justify-content: flex-end;
     padding: 10px 0;
     margin: 10px 0;
   }
-  .exam__content{
-    .card__header{
+
+  .exam__content {
+    .card__header {
       @include normalizeTypo;
       margin-bottom: 16px;
     }
@@ -20,6 +22,7 @@
 .dragging-placeholder {
   display: flex;
   justify-content: center;
+
   i {
     color: $primary;
     font-size: 18px;
@@ -28,8 +31,8 @@
 
 
 .card--form {
-  
-  
+
+
   .card__header {
     align-items: flex-start;
     margin-bottom: 16px;
@@ -38,15 +41,12 @@
       margin-bottom: 0;
     }
   }
-  
+
   .question__type {
     & + .select2 {
       width: 180px !important;
     }
   }
-
-
-  
 
   &.question--active {
     .card--drag-vertical {
@@ -189,9 +189,6 @@
 }
 
 
-
-
-
 // .card{
 .upload-input {
   input[type="file"] {
@@ -267,7 +264,6 @@
   border-bottom-left-radius: 5px;
   display: none;
 }
-
 
 
 .question__type {
@@ -373,7 +369,7 @@
     justify-content: space-between;
     padding: 15px;
     padding: 20px;
-    background: rgba($primary, 0.04 );
+    background: rgba($primary, 0.04);
 
     .questions-header__title {
       width: 50%;
@@ -382,13 +378,13 @@
         margin: 0;
         margin-bottom: 5px;
         word-wrap: break-word;
-        color: rgba($gray,.8);
+        color: rgba($gray, .8);
       }
     }
 
     .questions-header__info {
       p {
-        color: rgba($gray,.8);
+        color: rgba($gray, .8);
         margin: 5px 0;
         margin-top: 5px;
       }
@@ -405,9 +401,9 @@
   }
 
   .questions-name {
-    padding: 15px; 
+    padding: 15px;
     margin-bottom: 25px;
-    background: rgba($primary, 0.02 );
+    background: rgba($primary, 0.02);
   }
 
   .exam__footer {
@@ -425,16 +421,17 @@
   padding: 15px;
   margin: 10px 0;
   border-radius: 6px;
-  color: rgba($gray,.8);
+  color: rgba($gray, .8);
+
   h3 {
-    margin: 0; 
+    margin: 0;
     margin-bottom: 5px;
-    color: rgba($gray,.8);
+    color: rgba($gray, .8);
   }
 
   .question-title__info {
     p {
-      color: rgba($gray,.8);
+      color: rgba($gray, .8);
       margin: 0;
     }
   }
@@ -451,15 +448,17 @@
   // border-radius: 10px;
   // border-bottom: 1px solid rgba($primary, 0.4);
 
-  &.question--no-line{
+  &.question--no-line {
     border-bottom: none;
   }
+
   .question__title {
     align-items: flex-start;
     margin: 5px 0 10px 0;
     display: flex;
     flex-flow: row nowrap;
-    width: 100%; 
+    width: 100%;
+
     h3 {
       color: rgba($gray, .8);
     }
@@ -570,15 +569,16 @@
     // .check-field-group {
     //   flex-direction: column;
     // }
-    
+
   }
 }
 
 @media (max-width: 767px) {
-  .question { 
-    .question__content{
+  .question {
+    .question__content {
       padding-left: 0;
     }
+
     // .check-field-group {
     //   flex-direction: column;
     //   padding-left: 0;
@@ -681,16 +681,19 @@
     }
   }
 }
+
 // rtl
 html[dir="rtl"] {
-  .exam { 
+  .exam {
     .exam__footer {
       padding: 10px 0;
       margin: 10px 0;
     }
   }
+
   .question {
     padding: 14px 30px 14px 14px;
+
     .card--drag-vertical {
       right: 0px;
       border-top-right-radius: 5px;
@@ -698,9 +701,11 @@ html[dir="rtl"] {
       border-top-left-radius: unset;
       border-bottom-left-radius: unset;
     }
+
     .card__footer {
       justify-content: flex-start;
     }
+
     .field-wrapper {
       &.field-wrapper__input--text {
         padding-right: 15px;
@@ -708,6 +713,7 @@ html[dir="rtl"] {
     }
   }
 }
+
 .night-mode {
   // Question card
   .question {
