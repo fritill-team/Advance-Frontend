@@ -86,13 +86,16 @@
   align-items: center;
   position: absolute;
   left: 0;
-  top: -36px;
+  top: -35%;
+  @include normalizeTypo;
   .card__label-inner{
+    display: flex;
+    align-items: center;
     padding: 8px 16px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: $default;
-    color: $white;
+    color: $darkGray;
   }
   .card__label-outer{
     display: flex;
@@ -102,57 +105,75 @@
   & + .card--drag-vertical{
     border-top-left-radius: 0;
   }
-  &.card__label--primary{
+  &.card__label-primary{
     .card__label-inner{
       background-color: $primary;
+      *{
+        color: $white;
+      }
     }
     & + .card{
       border-top: 10px solid $primary;
     }
   }
-  &.card__label--secondary{
+  &.card__label-secondary{
     .card__label-inner{
       background-color: $secondary;
+      *{
+        color: $white;
+      }
     }
     & + .card{
       border-top: 10px solid $secondary;
     }
   }
-  &.card__label--accent{
+  &.card__label-accent{
     .card__label-inner{
       background-color: $accent;
+      *{
+        color: $white;
+      }
     }
     & + .card{
       border-top: 10px solid $accent;
     }
   }
-  &.card__label--danger{
+  &.card__label-danger{
     .card__label-inner{
       background-color: $danger;
+      *{
+        color: $white;
+      }
     }
     & + .card{
       border-top: 10px solid $danger;
     }
   }
-  &.card__label--success{
+  &.card__label-success{
     .card__label-inner{
       background-color: $success;
+      *{
+        color: $white;
+      }
     }
     & + .card{
       border-top: 10px solid $success;
     }
   }
 }
-  &.card--form{
-    padding: 14px 14px 14px 30px;
+  &.card--with-label{
+    padding: 14px;
     border-top-left-radius: 0;
     // position: relative;
     margin: 40px 0 0 0;
-    &.card--form-active{
-
+  }
+  &.card--dragging{
+    padding-left: 30px;
+    .card--drag-vertical{
+      display: flex;
     }
   }
-  &.card--form-active{
+  &.card--dragging-active{
     .card--drag-vertical{
       background-color: $primary;
       i{

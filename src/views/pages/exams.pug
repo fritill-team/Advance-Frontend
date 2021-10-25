@@ -8,10 +8,12 @@ block content
 	.container
 		.exam
 			.exam__content
-				.card.card--form
+				.card.card--with-label
 					.card__label
-						div.card__label-inner section 1 of 3
-						div.body-2.card__label-outer after section 1
+						div.card__label-inner 
+							p section 1 of 3
+						div.body-2.card__label-outer 
+							p after section 1
 							.dropdown.dropdown__activator
 								button.btn.btn--text.dropdown--btn
 									| next 
@@ -36,8 +38,7 @@ block content
 								div
 									input(class="field" type="radio" id="radio-3" name="radioName")
 									label(for="radio-3") Lorem ipsum dolor.
-							ul.field-wrapper__messages
-								li Please provide a valid city.
+						
 					//- div.dragging-placeholder
 						i.fas.fa-ellipsis-h
 
