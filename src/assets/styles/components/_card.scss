@@ -59,11 +59,97 @@
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 20px;
+  position: relative;
   // overflow: hidden;
   .card__header {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
+  }
+  .card__label{
+    display: flex;
+    align-items: center;
+  .card__label-number{
+    padding: 8px 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: $default;
+    color: $white;
+  }
+  .card__label-outer{
+    margin: 0 10px; 
+  }
+  
+}
+.card__label{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: -36px;
+  .card__label-number{
+    padding: 8px 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: $default;
+    color: $white;
+  }
+  .card__label-outer{
+    margin: 0 10px; 
+  }
+  & + .card--drag-vertical{
+    border-top-left-radius: 0;
+  }
+  
+  &.card__label--primary{
+    .card__label-number{
+      background-color: $primary;
+    }
+    & + .card{
+      border-top: 10px solid $primary;
+    }
+  }
+  &.card__label--secondary{
+    .card__label-number{
+      background-color: $secondary;
+    }
+    & + .card{
+      border-top: 10px solid $secondary;
+    }
+  }
+  &.card__label--accent{
+    .card__label-number{
+      background-color: $accent;
+    }
+    & + .card{
+      border-top: 10px solid $accent;
+    }
+  }
+  &.card__label--danger{
+    .card__label-number{
+      background-color: $danger;
+    }
+    & + .card{
+      border-top: 10px solid $danger;
+    }
+  }
+  &.card__label--success{
+    .card__label-number{
+      background-color: $success;
+    }
+    & + .card{
+      border-top: 10px solid $success;
+    }
+  }
+}
+  &.card--form{
+    padding: 14px 14px 14px 30px;
+    border-top-left-radius: 0;
+    // position: relative;
+    margin: 40px 0 0 0;
+    &.card--form-active{
+
+    }
   }
 
   &.card--transparent {

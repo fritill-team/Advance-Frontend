@@ -1,0 +1,99 @@
+.survey-check-field-group {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+
+.survey-check-field {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  cursor: pointer;
+  color: $darkGray;
+  position: relative;
+  text-align: center;
+  &.survey-check-field--primary {
+    color: $primary;
+  }
+  input {
+    display: none;
+  }
+
+  input:checked + .survey-check-field__label {
+    border-color: currentColor;
+    color: currentColor;
+  }
+
+
+
+  // .survey-check-field__input{
+  //   display: none;
+
+  //   &:checked  + .survey-check-field__label{
+  //     // color: currentColor;
+  //     border-color: currentColor;
+  //     // & + * {
+  //     //   color: $accent;
+  //     // }
+
+  //   }
+  // }
+
+  .survey-check-field__label {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: currentColor;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      pointer-events: none;
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      color: inherit;
+      background-color: currentColor;
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    &:hover:before {
+      opacity: 0.15;
+    }
+
+    &:focus:before {
+      opacity: 0.24;
+    }
+
+    & + * {
+      color: currentColor;
+      font-size: 2em;
+      font-weight: 500;
+      display: inline-block;
+      transition: 0.2s ease all;
+    }
+
+
+    & + label {
+      position: absolute;
+      top: 54px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    &.survey-check-field__label--with-image {
+      background-image: url("../images/get_img.jpg");
+      & + label {
+        top: 108%;
+      }
+    }
+  }
+}
