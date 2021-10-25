@@ -102,7 +102,6 @@
   & + .card--drag-vertical{
     border-top-left-radius: 0;
   }
-  
   &.card__label--primary{
     .card__label-inner{
       background-color: $primary;
@@ -153,7 +152,14 @@
 
     }
   }
-
+  &.card--form-active{
+    .card--drag-vertical{
+      background-color: $primary;
+      i{
+        color: $white;
+      }
+    }
+  }
   &.card--transparent {
     background-color: transparent;
     border: 0;
