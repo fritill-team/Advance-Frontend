@@ -86,7 +86,8 @@
   align-items: center;
   position: absolute;
   left: 0;
-  top: -35%;
+  top: 0;
+  transform: translateY(-100%);
   @include normalizeTypo;
   .card__label-inner{
     display: flex;
