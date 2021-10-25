@@ -15,6 +15,15 @@
   &.survey-check-field--primary {
     color: $primary;
   }
+  &.survey-check-field--accent{
+    color: $accent;
+  }
+  &.survey-check-field--danger{
+    color: $danger;
+  }
+  &.survey-check-field--success{
+    color: $success;
+  }
   input {
     display: none;
   }
