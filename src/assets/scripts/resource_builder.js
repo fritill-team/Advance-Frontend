@@ -99,7 +99,7 @@ class ResourceBuilder {
       data = $form.serialize()
 
     $.ajax({
-      type: data.indexOf('PUT') ? 'PUT' : 'POST',
+      type: 'POST',
       dataType: 'json',
       url,
       data,
@@ -175,6 +175,25 @@ class ResourceBuilder {
     return ``
   }
 
+  deleteItem(item){
+    let parentContainer = $(item).closest('.card')
+    let url = parentContainer.data('data').actions[1].link
+    $.ajax({
+      type: 'DELETE',
+      dataType: 'json',
+      url,
+      success: () => {
+        self.fetchItems()
+      },
+      error: error => {
+        if (error.status === 422)
+          console.log(error.message)
+        //   mapErrors(this.prefix, $form, error.message.errors)
+      }
+    });
+
+  }
+
   build() {
     this.$container.append(this.containerTemplate())
     this.$itemsList = $(`#${this.prefix}-listing`)
@@ -189,14 +208,20 @@ class ResourceBuilder {
         let parentContainer = $(this).closest('.card')
         self.$form.empty()
         self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'))))
-        self.$form.find('form').append($(`<input type="hidden" name="method" value="PUT">`))
-        // console.log(this.formTemplate())
       })
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
         self.submitForm($(this))
+        self.fetchItems()
+
       })
-    this.fetchItems()
+
+      .on('click', `.${this.prefix}-delete`, function (e){
+        e.preventDefault()
+        self.deleteItem(this)
+        self.fetchItems()
+      })
+
   }
 }
 
@@ -221,7 +246,6 @@ if (recommendations) {
                 ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
                   <span class="list-item__content">
-
                   </span>
                 </a>`)}
               </div>
@@ -288,12 +312,11 @@ if (classifications) {
               <i class="fas fa-ellipsis-h"></i>
             </button>
             <div class="dropdown__content">
-              <a id="${this.prefix}-edit" class="${this.prefix}-edit content__link" href="javascript.void(0)">
-                <i class="far fa-edit"></i>edit
-              </a>
-              <a class="content__link" href="javascript.void(0)">
-               <i class="far fa-trash-alt"></i> delete
-             </a>
+                    <div class="list">
+                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                  <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
+                </a>`)}
+              </div>
             </div>
           </div>
         </div>
@@ -311,7 +334,7 @@ if (classifications) {
           <input
              class="field"
              type="text"
-             placeholder="Recommendations"
+             placeholder="Classification"
              name="name"
              id="classifications-name"
              required
@@ -328,7 +351,7 @@ if (classifications) {
             class="field"
             name="score"
             id="classifications-description"
-            placeholder="Recommendation Score"
+            placeholder="Classification Score"
              value="${item.score ? item.score : 0}">
         </div>
         <ul class="field-wrapper__messages"></ul>
