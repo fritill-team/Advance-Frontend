@@ -1,38 +1,23 @@
 .table-responsive {
   display: block;
   width: 100%;
-  // overflow-x: auto;
-  border: 1px solid #efefef;
+  // border: 1px solid #efefef;
   border-radius: 5px;
   margin-bottom: 12px;
-  &.table-responsive-survey{
+  &.table-responsive-survey {
     border: none;
     border-radius: 0;
   }
 }
-
 .table {
   width: 100%;
-
   th {
     background-color: #1dbae626;
     font-weight: 600;
     color: $primary;
   }
-
-  th.sortable {
-
-    .sortable--up {
-
-    }
-
-    .sortable--down {
-
-    }
-  }
-
-
-  th, td {
+  th,
+  td {
     padding: 4px 8px;
     font-size: 14px;
     line-height: 1;
@@ -41,16 +26,12 @@
     &.main-cell {
       text-align: left;
     }
-
-    * {
-      font-size: 14px;
-    }
   }
-  th{
+  th {
     text-transform: capitalize;
   }
-  td{
-    &.td--nowrap{
+  td {
+    &.td--nowrap {
       white-space: nowrap;
     }
   }
@@ -63,69 +44,96 @@
     font-size: 14px;
     padding: 4px;
   }
-  &.table--survey{
-    width: 80%;
+  &.table--survey {
     border-collapse: collapse;
     margin: auto;
-    tbody{
-      tr{
+    tbody {
+      tr {
         &:nth-of-type(odd) {
           background-color: aliceblue;
         }
       }
-    }  
+    }
     th {
       background-color: unset;
-      &:first-child{
+      &:first-child {
         opacity: 0;
       }
     }
-    th, td{
+    th,
+    td {
       padding: 8px 8px;
-      .check-field{
+      .check-field {
         margin: auto;
       }
     }
-    td{
+    td {
       font-weight: 600;
-      color:$primary ;
+      color: $primary;
       padding: 10px;
     }
+  }
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: scroll;
   }
 }
 
 html[dir="rtl"] {
   .table {
-    th, td {
+    th,
+    td {
       &.main-cell {
         text-align: right;
       }
     }
-    &.table--survey{
-      thead{
+    &.table--survey {
+      thead {
         position: relative;
-        left: 12px;        
+        left: 12px;
+      }
+      td {
+        .field {
+          &[type="radio"],
+          &[type="checkbox"] {
+            & + label {
+              padding-right: 0;
+            }
+          }
+        }
       }
     }
   }
 }
-.night-mode{
-  .table{
-    &.table--survey{
-      tbody{
+.night-mode {
+  .table {
+    th {
+      background-color: #43525c;
+      color: #fff;
+    }
+    tbody {
+      background: #3a474f;
+      color: #fff;
+    }
+    &.table--survey {
+      tbody {
         background: transparent;
-        tr{
+        tr {
           &:nth-of-type(odd) {
-            background-color: rgba($color: $primary, $alpha: 0.2);
+            background-color: rgba($color: #3a474f, $alpha: 0.7);
           }
         }
-      }  
+      }
       th {
         color: $white;
       }
-      td{
-        color:$white ;
+      td {
+        color: $white;
       }
     }
+    // i[class*="fa-"] {
+    //   color: $accent;
+    // }
   }
 }
