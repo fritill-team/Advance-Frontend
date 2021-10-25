@@ -9,6 +9,7 @@
   }
   .exam__content{
     .card__header{
+      @include normalizeTypo;
       margin-bottom: 16px;
     }
   }

@@ -87,7 +87,7 @@
   position: absolute;
   left: 0;
   top: -36px;
-  .card__label-number{
+  .card__label-inner{
     padding: 8px 16px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -95,6 +95,8 @@
     color: $white;
   }
   .card__label-outer{
+    display: flex;
+    align-items: center;
     margin: 0 10px; 
   }
   & + .card--drag-vertical{
@@ -102,7 +104,7 @@
   }
   
   &.card__label--primary{
-    .card__label-number{
+    .card__label-inner{
       background-color: $primary;
     }
     & + .card{
@@ -110,7 +112,7 @@
     }
   }
   &.card__label--secondary{
-    .card__label-number{
+    .card__label-inner{
       background-color: $secondary;
     }
     & + .card{
@@ -118,7 +120,7 @@
     }
   }
   &.card__label--accent{
-    .card__label-number{
+    .card__label-inner{
       background-color: $accent;
     }
     & + .card{
@@ -126,7 +128,7 @@
     }
   }
   &.card__label--danger{
-    .card__label-number{
+    .card__label-inner{
       background-color: $danger;
     }
     & + .card{
@@ -134,7 +136,7 @@
     }
   }
   &.card__label--success{
-    .card__label-number{
+    .card__label-inner{
       background-color: $success;
     }
     & + .card{
