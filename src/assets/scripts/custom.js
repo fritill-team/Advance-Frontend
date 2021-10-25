@@ -229,7 +229,7 @@ $(document)
   .on('click', '.toggle', function () {
     nav.toggleClass('nav--opened vertical--minify')
     wrapper.toggleClass('toggle-content page-content--minify ');
-    sidebarIcon.toggleClass("open-side-nav"); 
+    sidebarIcon.toggleClass("open-side-nav");
     $('.sub-menu-item').each(function (i, item) {
       $(item).removeClass('menu--opened');
     })
@@ -263,8 +263,8 @@ $(document)
       $(this).siblings().removeClass('menu--opened')
     }else {
       console.log(true);
-    } 
-    
+    }
+
   })
 
 // active class in collapsed sidebar
@@ -485,10 +485,10 @@ $(document)
   })
   .on('click', '.edit-recommendation', function(e){
     e.preventDefault()
-    let editable = $(this).closest('.recommendation-details').data('data')
-    $('.recommendation-form').data('data').append(editable)
+    // let editable = $(this).closest('.recommendation-details').data('data')
+    // $('.recommendation-form').data('data').append(editable)
   })
-  
+
   // $(this).on('click', function(){
   //   $(this).siblings().hide();
   // })
@@ -508,7 +508,7 @@ $(document)
 // sidebar
 
 const sidebarTemplate = function (listItem) {
-  
+
   return `
       ${listItem.map(item => `
         <a href="${item.has_children ? "javascript:void(0)" : item.url }" class="list-item list-item--one-line ${item.is_active ? 'list-item--open' : ''} ">
@@ -539,7 +539,7 @@ const sidebarTemplate = function (listItem) {
           </div>
         ` : ``}
       `
-    ).join('')}      
+    ).join('')}
   `
 }
 
@@ -550,7 +550,7 @@ $('.list__sidebar').each(function(i, item) {
   listItem.html($(sidebarTemplate(data)))
 
 })
-  
+
   // $.get(url)
   // .then(res => {
   //   // let listItem = $(item),
@@ -570,9 +570,9 @@ $('.list__sidebar').each(function(i, item) {
   //   }
   //   console.log(listContainer);
     // let listContent = res,
-    
+
     // data = $(item)
-    
+
     // console.log(list);
 //   })
 //   .catch(e => console.log(e))
@@ -602,10 +602,10 @@ $(document)
     $('.drawer').removeClass('open--half')
   })
 
-  // progress bar 
+  // progress bar
 
   // !function(a){a.fn.percentageLoader=function(b){this.each(function(){function q(){p.customAttributes.arc=function(a,b,c){var h,d=360/b*a,e=(90-d)*Math.PI/180,f=j+c*Math.cos(e),g=k-c*Math.sin(e);return h=b==a?[["M",j,k-c],["A",c,c,0,1,1,j-.01,k-c]]:[["M",j,k-c],["A",c,c,0,+(d>180),1,f,g]],{path:h}},p.path().attr({arc:[100,100,l],"stroke-width":d.strokeWidth,stroke:d.bgColor}),e&&(m=p.path().attr({arc:[.01,100,l],"stroke-width":d.strokeWidth,stroke:d.ringColor,cursor:"pointer"}),r(e,100,l,m,2)),n=p.text(j,k,e+"%").attr({font:d.fontWeight+" "+d.fontSize+" Arial",fill:d.textColor})}function r(a,b,c,d){f?d.animate({arc:[a,b,c]},900,">"):a&&a!=b?d.animate({arc:[a,b,c]},750,"elastic"):(a=b,d.animate({arc:[a,b,c]},750,"bounce",function(){d.attr({arc:[0,b,c]})}))}var c=a(this),d=a.extend({},a.fn.percentageLoader.defaultConfig,b),e=parseInt(c.children(d.valElement).text()),f=!0,h=parseInt(c.css("width")),i=parseInt(c.css("height")),j=h/2,k=i/2,l=j-d.strokeWidth/2,m=null,n=null,p=Raphael(this,h,i);q()})},a.fn.percentageLoader.defaultConfig={valElement:"p",strokeWidth:20,bgColor:"#d9d9d9",ringColor:"#d53f3f",textColor:"#9a9a9a",fontSize:"12px",fontWeight:"normal"}}(jQuery);
-    
+
 	// 	$('.percent').percentageLoader({
 	// 	  bgColor: 'rgba(0,0,0,.2)',
 	// 	  ringColor: '#0abde3',

@@ -3,13 +3,13 @@ block title
 	title login
 block content
 	h2.title-h4.semi-bold  Welcome Back
-	//- p Log In to Your Edututs+ Account! 
+	//- p Log In to Your Edututs+ Account!
 	.tabs.tabs--center
 		a(href="#tab1" class="tab tab--active ") Login With Email
-		a(href="#tab2" class="tab") Login With Phone 
+		a(href="#tab2" class="tab") Login With Phone
 	.tabs-panels
 		#tab1.tab-panel.tab-panel--active
-			form
+			form(action='register/')
 				.field-wrapper
 					label.field-wrapper__label Course Title
 						abbr(title="required") *
@@ -61,7 +61,7 @@ block content
 							name="phone"
 							)
 					ul.field-wrapper__messages
-						li Invalid phone number. 
+						li Invalid phone number.
 				.field-wrapper
 					label.field-wrapper__label
 						|	Course Title
@@ -100,5 +100,5 @@ block content
 			i.fab.fa-twitter
 		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
 			i.fab.fa-google
-	p.title-2 Don't have an account ? 
+	p.title-2 Don't have an account ?
 		a(href="signup.html" class="text-3")  Sign Up

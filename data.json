@@ -101,8 +101,8 @@
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/1/delete"
+          "class": "btn--primary recommendations-delete",
+          "link": "/recommendations/1"
         }
       ]
     },
@@ -121,8 +121,8 @@
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/2/delete"
+          "class": "btn--primary recommendations-delete",
+          "link": "/recommendations/2"
         }
       ]
     },
@@ -136,16 +136,17 @@
           "name": "edit",
           "icon": "far fa-edit",
           "class": "recommendations-edit",
-          "link": "http://localhost:3000/recommendations/3"
+          "link": "/recommendations/3"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "btn--primary recommendations-delete",
           "link": "/recommendations/3"
         }
       ]
-    }
+    },
+
   ],
   "classifications": [
     {
@@ -183,7 +184,7 @@
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "btn--primary ",
           "link": "/recommendations/2/delete"
         }
       ]
