@@ -13,9 +13,11 @@
     color: $white;
     font-size: 18px;
     font-weight: 500;
-    padding: 22px 24px 22px 30px;
+    padding: 0px 24px 0px 30px;
+    display: flex;
+    align-items: center;
     &.header__link--condensed {
-      padding: 16px 24px;
+      padding: 5px 15px;
     }
   }
 
@@ -153,11 +155,11 @@
       display: none;
     }
     .header__link--condensed {
-      display: block;
+      display: flex;
     }
     .toggle-menu {
       &.toggle-menu--mobile {
-        display: block;
+        display: flex;
       }
     }
   }
