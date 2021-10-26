@@ -2,28 +2,28 @@ extends ../layouts/spa-layout
 
 block title
 	title survey
-
-block content
-	.page-content.page-content--horizonta
-		//- include ../components/sidebar-dark.pug
-		//- +sidebar-dark
-		//- 	include ../components/survey-sidebar.pug
-		.survey-check-field-group
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-1" value="radio-1" type="checkbox" name="survey")
-				label(class="survey-check-field__label survey-check-field__label--with-image" for="survey-1")
-				label(class="" for="survey-2")  lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-4" value="radio-1" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-4")
-				label lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-2" value="radio-2" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-2")
-				label(for="survey-2") lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-3" value="radio-3" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-3")
-				label(for="survey-3") lorem
-		.video-player
-			include ../components/survey-content.pug
+block variables
+	div(class=classes class=[''])
+		block left
+			.drawer.drawer--left.drawer--open.open
+		block content
+			.page-content
+				.survey-check-field-group
+					.survey-check-field
+						input(class="survey-check-field__input" id="survey-1" value="radio-1" type="checkbox" name="survey")
+						label(class="survey-check-field__label survey-check-field__label--with-image" for="survey-1")
+						label(class="" for="survey-2")  lorem
+					.survey-check-field
+						input(class="survey-check-field__input" id="survey-4" value="radio-1" type="checkbox" name="survey")
+						label(class="survey-check-field__label" for="survey-4")
+						label lorem
+					.survey-check-field
+						input(class="survey-check-field__input" id="survey-2" value="radio-2" type="checkbox" name="survey")
+						label(class="survey-check-field__label" for="survey-2")
+						label(for="survey-2") lorem
+					.survey-check-field
+						input(class="survey-check-field__input" id="survey-3" value="radio-3" type="checkbox" name="survey")
+						label(class="survey-check-field__label" for="survey-3")
+						label(for="survey-3") lorem
+				.video-player
+					include ../components/survey-content.pug
