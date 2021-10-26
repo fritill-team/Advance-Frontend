@@ -13,8 +13,12 @@
   color: $darkGray;
   position: relative;
   text-align: center;
+	display: inline-block;
   &.survey-check-field--primary {
     color: $primary;
+  }
+	&.survey-check-field--secondary {
+    color: $secondary;
   }
   &.survey-check-field--accent{
     color: $accent;
@@ -98,11 +102,17 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
+			white-space: nowrap;
     }
     &.survey-check-field__label--with-image {
       background-image: url("../images/get_img.jpg");
+			// margin-top: 40px;
       & + label {
-        top: 108%;
+        position: relative;
+				left: unset;
+				transform: unset;
+				top: unset;
+				
       }
     }
   }
