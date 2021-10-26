@@ -70,16 +70,14 @@
   }
 }
 
-
-
-@media (max-width: 992px) {
+@media (max-width: 767px){
+  .header-menu{
+    display: none;
+  }
   .menu {
     &.menu--open {
       display: none;
     }
-  }
-  .header-menu{
-    display: none;
   }
 }
 html[dir="rtl"]{
