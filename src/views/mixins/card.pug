@@ -1,0 +1,11 @@
+var class = "card"
+mixin card(modifier)
+	div(class="card card--with-label")
+		block label
+		.card__header
+			block header
+		.card__content
+			block content 
+		.card__footer 
+			block footer
+
