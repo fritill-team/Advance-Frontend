@@ -607,6 +607,16 @@ $(document)
   .on("click", ".open-modal", function () {
     $(".modal-overlay").toggleClass("modal--active");
     $("body").toggleClass("no-scroll");
+  })
+  .on("click", ".open-modal--full", function () {
+    $(".modal-overlay").addClass("modal-overlay-full");
+    $(".modal-overlay").toggleClass("modal--active");
+    $("body").toggleClass("no-scroll");
+  })
+  .on("click", ".close-modal", function () {
+    $(".modal-overlay").removeClass("modal--active");
+    $(".modal-overlay").removeClass("modal-overlay-full");
+    $("body").removeClass("no-scroll");
   });
 
 // modal
@@ -621,4 +631,4 @@ $(document)
 // 	  textColor: '#fff',
 // 	  fontSize: '20px',
 // 	  strokeWidth: 10
-// 	});
+// 	})

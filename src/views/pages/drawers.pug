@@ -1,34 +1,34 @@
-extends ../layouts/drawer.pug
+extends ../layouts/admin.pug
 
 
 block title
   title drawers page
 
-block left
-  .drawer.drawer--left.drawer--partially-closed
-    //- .drawer__header
-    //- 	h5.title-h5 title
-      button.btn.btn--default.btn--icon.btn--ripple
-        i.fas.fa-times
-    div(class="list__sidebar list" data-link='[{"title":"Categories","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Tags","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Courses","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Assessments and Surveys","has_children":true,"icon":"fas fa-layer-group","is_active":true,"children":[{"title":"Assessments and Surveys","has_children":false,"url":"#","is_active":true}]},{"title":"Users","has_children":true,"icon":"fas fa-layer-group","is_active":false,"children":[{"title":"Users","has_children":false,"url":"#","is_active":false},{"title":"Groups","has_children":false,"url":"#","is_active":false}]}]')
+//- block left
+//-   .drawer.drawer--left.drawer--partially-closed
+//-     //- .drawer__header
+//-     //- 	h5.title-h5 title
+//-       button.btn.btn--default.btn--icon.btn--ripple
+//-         i.fas.fa-times
+//-     div(class="list__sidebar list" data-link='[{"title":"Categories","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Tags","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Courses","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Assessments and Surveys","has_children":true,"icon":"fas fa-layer-group","is_active":true,"children":[{"title":"Assessments and Surveys","has_children":false,"url":"#","is_active":true}]},{"title":"Users","has_children":true,"icon":"fas fa-layer-group","is_active":false,"children":[{"title":"Users","has_children":false,"url":"#","is_active":false},{"title":"Groups","has_children":false,"url":"#","is_active":false}]}]')
 
-    //- include ../components/list-video.pug
-block right
-  .drawer.drawer--right
-    .drawer__header
-      h5.title-h5 title
-      button.btn.btn--small.btn--icon.btn--primary
-        i.fas.fa-times
-    include ../components/list-video.pug
+//-     //- include ../components/list-video.pug
+//- block right
+//-   .drawer.drawer--right
+//-     .drawer__header
+//-       h5.title-h5 title
+//-       button.btn.btn--small.btn--icon.btn--primary
+//-         i.fas.fa-times
+//-     include ../components/list-video.pug
 block content
   .container
     .row
       .col-lg-6
         p.body-1 open modal under header and sidebar
-        button.btn.btn--primary.open-modal modal
+        button.btn.btn--primary.open-modal partial modal
       .col-lg-6
         p.body-1 open modal above header and sidebar
-        button.btn.btn--primary open modal
+        button.btn.btn--primary.open-modal--full full modal
     .row
       .col-lg-6
         p.body-1 open from left
