@@ -8,22 +8,46 @@ block content
 	.container
 		.exam
 			.exam__content
-				.card-label
-					span.section-number section 1 of 3
-					p.body-2.card-label__outer after section 1
-					.dropdown.dropdown__activator
-						button.btn.btn--text.dropdown--btn
-							| next 
-							i.fas.fa-chevron-down
-						.dropdown__content
-							a.content__link(href="#") lorem 1
-							a.content__link(href="#") lorem 2
-							a.content__link(href="#") lorem 3
-				.card.card-form.card-section
-					.card--drag-vertical.mb-0
+				include ../mixins/card.pug
+					.card__label
+						div.card__label-inner
+							p section 1 of 3
+						div.body-2.card__label-outer
+							p after section 1
+							.dropdown.dropdown__activator
+								button.btn.btn--text.dropdown--btn
+									| next
+									i.fas.fa-chevron-down
+								.dropdown__content
+									a.content__link(href="#") lorem 1
+									a.content__link(href="#") lorem 2
+									a.content__link(href="#") lorem 3
+					block label
+						p lorem
+					block header
+						p lorem
+					block content 
+						p lorem
+					block footer 
+						p lorem
+				.card.card--with-label
+					.card__label
+						div.card__label-inner
+							p section 1 of 3
+						div.body-2.card__label-outer
+							p after section 1
+							.dropdown.dropdown__activator
+								button.btn.btn--text.dropdown--btn
+									| next
+									i.fas.fa-chevron-down
+								.dropdown__content
+									a.content__link(href="#") lorem 1
+									a.content__link(href="#") lorem 2
+									a.content__link(href="#") lorem 3
+					.card--drag-vertical
 						i.fas.fa-grip-vertical
-					.card__header 
-						h3.title-h3.mt-0.mb-1 Question title
+					.card__header
+						h3.title-h3 Question title
 					.card__content
 						.field-wrapper
 							.check-field-group.check-field-group--horizontal
@@ -36,8 +60,41 @@ block content
 								div
 									input(class="field" type="radio" id="radio-3" name="radioName")
 									label(for="radio-3") Lorem ipsum dolor.
-							ul.field-wrapper__messages
-								li Please provide a valid city.
+
+					//- div.dragging-placeholder
+						i.fas.fa-ellipsis-h
+
+				.card.card--with-label
+					.card__label
+						div.card__label-inner
+							p section 1 of 3
+						div.body-2.card__label-outer
+							p after section 1
+							.dropdown.dropdown__activator
+								button.btn.btn--text.dropdown--btn
+									| next
+									i.fas.fa-chevron-down
+								.dropdown__content
+									a.content__link(href="#") lorem 1
+									a.content__link(href="#") lorem 2
+									a.content__link(href="#") lorem 3
+					.card--drag-vertical
+						i.fas.fa-grip-vertical
+					.card__header
+						h3.title-h3 Question title
+					.card__content
+						.field-wrapper
+							.check-field-group.check-field-group--horizontal
+								div
+									input(class="field" type="radio" id="radio-1" name="radioName")
+									label(for="radio-1") Lorem ipsum dolor.
+								div
+									input(class="field" type="radio" id="radio-2" name="radioName")
+									label(for="radio-2") Lorem ipsum dolor.
+								div
+									input(class="field" type="radio" id="radio-3" name="radioName")
+									label(for="radio-3") Lorem ipsum dolor.
+
 					//- div.dragging-placeholder
 						i.fas.fa-ellipsis-h
 
@@ -46,16 +103,16 @@ block content
 					p.body-2.card-label__outer after section 1
 					.dropdown.dropdown__activator
 						button.btn.btn--text.dropdown--btn
-							| next 
+							| next
 							i.fas.fa-chevron-down
 						.dropdown__content
 							a.content__link(href="#") lorem 1
 							a.content__link(href="#") lorem 2
 							a.content__link(href="#") lorem 3
 				.card.card-form.card-section
-					.card--drag-vertical.mb-0 
+					.card--drag-vertical.mb-0
 						i.fas.fa-grip-vertical
-					.card__header 
+					.card__header
 						h3.title-h3.mt-0.mb-2 Question title
 					.card__content
 						.field-wrapper
@@ -146,7 +203,7 @@ block content
 										option(value='Category2') Category2
 								ul.field-wrapper__messages
 									li.gray
-										| hint message for question. 
+										| hint message for question.
 					.card__footer
 						div lorem
 						.card__footer-actions
@@ -158,7 +215,7 @@ block content
 								input#switch(type="checkbox", name="")
 								label(for="switch") Is required
 			include ../components/toolbar.pug
-				
+
 			//- .container-fluid
 				.row
 					.col-lg-10
@@ -236,7 +293,7 @@ block content
 												option(value='Category2') Category2
 										ul.field-wrapper__messages
 											li.gray
-												| hint message for question. 
+												| hint message for question.
 							.card__footer
 								div lorem
 								.card__footer-actions
@@ -246,7 +303,7 @@ block content
 										i.far.fa-clone
 									.switch
 										input#switch(type="checkbox", name="")
-										label(for="switch") Is required	
+										label(for="switch") Is required
 						.card.question--section
 							.card__header
 								i.fas.fa-grip-vertical.exam__icon
@@ -267,7 +324,7 @@ block content
 											| hint message for question.
 								.upload-input
 									input(type="file", name="" id="file-input")
-									label.file-input(for="file-input") 
+									label.file-input(for="file-input")
 										i.far.fa-image.exam__icon
 								//- .field-wrapper
 								select.field
@@ -283,7 +340,7 @@ block content
 								ul.field-wrapper__messages
 									li
 										| Please provide a valid city.
-							
+
 							.field-wrapper.field-wrapper__input--text
 								//- label.field-wrapper__label Insert you question *
 								.field-wrapper__content
@@ -297,13 +354,13 @@ block content
 										input(type="file", name="" id="file-input")
 										label.file-input(for="file-input")
 											i.far.fa-image.exam__icon
-									
+
 								ul.field-wrapper__messages
 									li.gray
 										| hint message for question.
 								.image.preview
 									img(src="../../assets/images/sign.svg", alt="")
-							
+
 							.field-wrapper.field-wrapper__input--text
 								//- label.field-wrapper__label Insert you question *
 								.field-wrapper__content
@@ -336,9 +393,9 @@ block content
 									input#switch(type="checkbox", name="")
 									label(for="switch") Is required
 
-				
+
 					.card.question.question-dragging
-						.card--drag-vertical 
+						.card--drag-vertical
 							i.fas.fa-grip-vertical
 						.card__header
 							.field-wrapper
@@ -350,7 +407,7 @@ block content
 										| hint message for question.
 							.upload-input
 								input(type="file", name="" id="file-input")
-								label.file-input(for="file-input") 
+								label.file-input(for="file-input")
 									i.far.fa-image.exam__icon
 							//- .field-wrapper
 							select.field
@@ -365,7 +422,7 @@ block content
 								ul.field-wrapper__messages
 									li
 										| Please provide a valid city.
-							
+
 							.field-wrapper.field-wrapper__input--text
 								//- label.field-wrapper__label Insert you question *
 								.field-wrapper__content
@@ -379,13 +436,13 @@ block content
 										input(type="file", name="" id="file-input")
 										label.file-input(for="file-input")
 											i.far.fa-image.exam__icon
-									
+
 								ul.field-wrapper__messages
 									li.gray
 										| hint message for question.
 								.preview
 									img(src="../../assets/images/sign.svg", alt="")
-							
+
 							.field-wrapper.field-wrapper__input--text
 								//- label.field-wrapper__label Insert you question *
 								.field-wrapper__content
@@ -422,7 +479,7 @@ block content
 					.card.question
 						.card--drag-vertical.mb-0
 							i.fas.fa-grip-vertical
-						.card__header 
+						.card__header
 							h3.title-h3.mt-0.mb-1 Question title
 						.card__content
 							.field-wrapper
@@ -443,9 +500,9 @@ block content
 
 
 					.card.question
-						.card--drag-vertical.mb-0 
+						.card--drag-vertical.mb-0
 							i.fas.fa-grip-vertical
-						.card__header 
+						.card__header
 							h3.title-h3.mt-0.mb-2 Question title
 						.card__content
 							.field-wrapper
@@ -462,13 +519,13 @@ block content
 								ul.field-wrapper__messages
 									li Please provide a valid city.
 
-				
+
 					.card.question.question-dragging-placeholder
-						.card--drag-vertical.mb-0 
+						.card--drag-vertical.mb-0
 							i.fas.fa-grip-vertical
-						.card__header 
+						.card__header
 							h3.title-h3.mt-0.mb-2 Question title
-						
+
 						div.dragging-placeholder
 							i.fas.fa-ellipsis-h
 							//- .field-wrapper
@@ -488,14 +545,14 @@ block content
 								textarea.textarea#id_course_description(rows='5' name='description' placeholder='Insert your course description')
 							ul.messages
 								li
-									| Please provide a valid city.			
+									| Please provide a valid city.
 					//- select.js-example-basic-single.select2(name='state')
 								option(value='eg') Egypt
 								option(value='AL') Alabama
 								option(value='WY') Wyoming
-				
 
-							
-							
+
+
+
 
 

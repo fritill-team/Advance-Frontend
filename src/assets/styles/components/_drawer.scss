@@ -10,6 +10,8 @@
   overflow-x: hidden;
   padding-top: 8px;
   z-index: 4;
+  border-right: 1px solid #ddd;
+
 
   * {
     transition: inherit;
@@ -146,6 +148,7 @@ html[dir="rtl"] {
   }
 
   .drawer {
+    border-left: 1px solid #ddd;
     .drawer__header {
       display: flex;
       align-items: center;
