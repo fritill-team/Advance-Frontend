@@ -1,13 +1,12 @@
 extends ../layouts/spa-layout
 
 block title
-	title video-player
-block content
-	.page-content.page-content--video-player
-		include ../components/sidebar-dark.pug
-		+sidebar-dark
-			include ../components/video-item-loader.pug
-		.loader-wrapper.loader-wrapper--fill
-			.loader
-		//- .video-player
-			iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY")
+	title player loading
+block variables
+	div(class=classes class=[''])
+		block left
+			.drawer.drawer--left.drawer--open.open
+				include ../components/video-item-loader.pug
+		block content
+			.loader-wrapper.loader-wrapper--fill
+				.loader
