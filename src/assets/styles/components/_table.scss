@@ -55,13 +55,10 @@
     }
     th {
       background-color: unset;
-      // &:first-child {
-      //   opacity: 0;
-      // }
     }
     th,
     td {
-      padding: 8px 8px;
+      padding: 12px;
       .check-field {
         margin: auto;
       }
