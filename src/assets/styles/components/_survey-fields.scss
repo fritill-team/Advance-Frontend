@@ -4,10 +4,21 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	@media(max-width: 560px){
+		justify-content: flex-start;
+	}
 }
 .survey__header{
 	text-align: center;
 	margin-bottom: 20px;
+	@media(max-width: 375px){
+		.title-h2{
+			font-size: 24px;
+		}
+		.body-1{
+			font-size: 16px;
+		}
+	}
 }
 .survey__footer{
 	width: 70%;
@@ -19,6 +30,7 @@
 	}
 	@media(max-width: 560px){
 		width: 90%;
+		padding-bottom: 20px;
 	}
 	.btn{
 		display: flex;
