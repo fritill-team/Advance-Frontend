@@ -43,10 +43,11 @@ body {
         width: 100%;
         max-width: 100%;
         height: 0;
-        &.drawer--open{
-          max-width: 100%;
-          height: 100%;
-        }
+        padding-top: 0;
+      }
+      .drawer.drawer--open{
+        max-width: 100%;
+        height: 100%;
       }
     }
   }
