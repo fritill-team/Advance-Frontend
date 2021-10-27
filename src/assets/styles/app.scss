@@ -5,7 +5,7 @@
 @import "layouts/_page-content";
 @import "layouts/_header";
 @import "layouts/_footer";
-
+@import "layouts/mixins";
 @import "./custom/toastr";
 @import "./components/_tabs.scss";
 @import "./custom/_owl-slider.scss";
@@ -64,6 +64,7 @@
 @import "./components/_list.scss";
 @import "./components/_panel.scss";
 @import "./components/_survey.scss";
+@import "./components/survey-fields";
 @import "./components/loader";
 /* TODO DELETE */
 @import "./base/_rtl.scss";
