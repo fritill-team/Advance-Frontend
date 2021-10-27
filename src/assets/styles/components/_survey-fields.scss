@@ -13,8 +13,12 @@
   color: $darkGray;
   position: relative;
   text-align: center;
+	display: inline-block;
   &.survey-check-field--primary {
     color: $primary;
+  }
+	&.survey-check-field--secondary {
+    color: $secondary;
   }
   &.survey-check-field--accent{
     color: $accent;
@@ -30,8 +34,10 @@
   }
 
   input:checked + .survey-check-field__label {
-    border-color: currentColor;
-    color: currentColor;
+    border-color: $accent;
+		& + *{
+			color: $accent;
+		}
   }
 
 
@@ -55,10 +61,10 @@
     height: 150px;
     border-radius: 50%;
     color: currentColor;
-    border: 1px solid currentColor;
+    border: 4px solid currentColor;
     cursor: pointer;
     position: relative;
-
+		transition: .3s ease all;
     &:before {
       content: "";
       display: block;
@@ -71,22 +77,27 @@
       bottom: 0;
       opacity: 0;
       color: inherit;
-      background-color: currentColor;
+      background-color: $accent;
       transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
     }
 
     &:hover:before {
       opacity: 0.15;
     }
-
+		&:hover{
+			border-color: $accent;
+			& + *{
+				color: $accent;
+			}
+		}
     &:focus:before {
       opacity: 0.24;
     }
 
     & + * {
       color: currentColor;
-      font-size: 2em;
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 400;
       display: inline-block;
       transition: 0.2s ease all;
     }
@@ -94,15 +105,21 @@
 
     & + label {
       position: absolute;
-      top: 54px;
+      top: 60px;
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
+			white-space: nowrap;
     }
     &.survey-check-field__label--with-image {
       background-image: url("../images/get_img.jpg");
+			// margin-top: 40px;
       & + label {
-        top: 108%;
+        position: relative;
+				left: unset;
+				transform: unset;
+				top: unset;
+				
       }
     }
   }
