@@ -9,21 +9,8 @@ block content
 		.exam
 			.exam__content
 				include ../mixins/card.pug
-					.card__label
-						div.card__label-inner
-							p section 1 of 3
-						div.body-2.card__label-outer
-							p after section 1
-							.dropdown.dropdown__activator
-								button.btn.btn--text.dropdown--btn
-									| next
-									i.fas.fa-chevron-down
-								.dropdown__content
-									a.content__link(href="#") lorem 1
-									a.content__link(href="#") lorem 2
-									a.content__link(href="#") lorem 3
-					block label
-						p lorem
+				+card('card--dragging')
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae quaerat optio blanditiis, magni voluptatibus illo asperiores aspernatur minus fugit rerum quibusdam ipsam consectetur commodi eligendi temporibus itaque neque dolorum?
 					block header
 						p lorem
 					block content 
@@ -60,8 +47,7 @@ block content
 								div
 									input(class="field" type="radio" id="radio-3" name="radioName")
 									label(for="radio-3") Lorem ipsum dolor.
-
-					//- div.dragging-placeholder
+					div.dragging-placeholder
 						i.fas.fa-ellipsis-h
 
 				.card.card--with-label
@@ -110,7 +96,7 @@ block content
 							a.content__link(href="#") lorem 2
 							a.content__link(href="#") lorem 3
 				.card.card-form.card-section
-					.card--drag-vertical.mb-0
+					.card--drag-vertical
 						i.fas.fa-grip-vertical
 					.card__header
 						h3.title-h3.mt-0.mb-2 Question title
