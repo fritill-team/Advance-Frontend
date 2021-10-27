@@ -43,7 +43,7 @@ body {
   //  width: 100%;
   //}
   @media (max-width: 768px){
-    &.drawers-container--mobile{
+    &.drawers-container--player{
       flex-direction: column-reverse;
       .drawer{
         position: inherit;
