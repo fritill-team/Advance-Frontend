@@ -42,7 +42,7 @@ body {
   //  padding-top: 0;
   //  width: 100%;
   //}
-  @media (max-width: 992px){
+  @media (max-width: 768px){
     &.drawers-container--mobile{
       flex-direction: column-reverse;
       .drawer{
