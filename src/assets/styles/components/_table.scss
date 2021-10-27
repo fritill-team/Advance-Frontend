@@ -3,7 +3,7 @@
   width: 100%;
   border-radius: 5px;
   margin-bottom: 12px;
-  &.table-responsive-survey {
+  &.table-responsive-exams {
     border: none;
     border-radius: 0;
   }
@@ -43,7 +43,7 @@
     font-size: 14px;
     padding: 4px;
   }
-  &.table--survey {
+  &.table--exams {
     border-collapse: collapse;
     margin: auto;
     tbody {
@@ -84,11 +84,7 @@ html[dir="rtl"] {
         text-align: right;
       }
     }
-    &.table--survey {
-      thead {
-        position: relative;
-        left: 12px;
-      }
+    &.table--exams {
       td {
         .field {
           &[type="radio"],
@@ -104,15 +100,11 @@ html[dir="rtl"] {
 }
 .night-mode {
   .table {
-    th {
-      background-color: #3a474f;
-      color: #fff;
-    }
     tbody {
       background: #3a474f;
       color: #fff;
     }
-    &.table--survey {
+    &.table--exams {
       tbody {
         background: transparent;
         tr {
