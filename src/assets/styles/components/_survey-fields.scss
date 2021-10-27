@@ -1,10 +1,48 @@
-.survey-check-field-group {
+.survey{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.survey__header{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.survey__footer{
+	width: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	@media(max-width: 768px){
+		width: 80%;
+	}
+	@media(max-width: 560px){
+		width: 90%;
+	}
+	.btn{
+		display: flex;
+		align-items: center;
+		i{
+			margin-top: 2px;
+		}
+		&:last-of-type{
+			flex-direction: row-reverse;
+			i{
+				margin: 2px 0 0 5px;
+			}
+		}	
+	}
+}
+.survey__check-field-group {
   display: flex;
   justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
   // align-items: center;
 }
 
-.survey-check-field {
+.survey__check-field {
   // display: flex;
   // flex-direction: column;
   // align-items: center;
@@ -15,26 +53,26 @@
   text-align: center;
 	display: inline-block;
 	margin: 10px 20px;
-  &.survey-check-field--primary {
+  &.survey__check-field--primary {
     color: $primary;
   }
-	&.survey-check-field--secondary {
+	&.survey__check-field--secondary {
     color: $secondary;
   }
-  &.survey-check-field--accent{
+  &.survey__check-field--accent{
     color: $accent;
   }
-  &.survey-check-field--danger{
+  &.survey__check-field--danger{
     color: $danger;
   }
-  &.survey-check-field--success{
+  &.survey__check-field--success{
     color: $success;
   }
   input {
     display: none;
   }
 
-  input:checked + .survey-check-field__label {
+  input:checked + .survey__check-field-label {
     border: 3px solid $accent;
 		& + *{
 			color: $accent;
@@ -56,7 +94,7 @@
   //   }
   // }
 
-  .survey-check-field__label {
+  .survey__check-field-label {
     display: block;
     width: 150px;
     height: 150px;
@@ -112,7 +150,7 @@
       z-index: -1;
 			white-space: nowrap;
     }
-    &.survey-check-field__label--with-image {
+    &.survey__check-field-label--with-image {
       background-image: url("../images/get_img.jpg");
 			// margin-top: 40px;
       & + label {
@@ -123,5 +161,25 @@
 				
       }
     }
+		@media (max-width: 768.98px) {
+			width: 130px;
+			height: 130px;
+			& + label{
+				top: 50px;
+			}
+		}
+		@media (max-width: 560px){
+			width: 120px;
+			height: 120px;
+			& + label{
+				top: 45px;
+			}
+		}
   }
+}
+
+.night-mode{
+	.survey__check-field{
+		color: $white;
+	}
 }
