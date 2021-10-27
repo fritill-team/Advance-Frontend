@@ -2,7 +2,8 @@ extends ./master
 
 block body
   include ../components/headers/spa-header
-  .drawers-container
+  - var classes = ['drawers-container']
+  block variables
     block left
     .page
       .page__content
