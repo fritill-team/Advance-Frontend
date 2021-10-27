@@ -57,7 +57,7 @@ input[type="button"].btn {
     border: 1px solid currentColor;
   }
   &.btn--double-line {
-    border: 3px double ;
+    border: 4px double ;
     border-color:currentColor ;
   }
 
@@ -221,12 +221,49 @@ input[type="button"].btn {
       transform: translate(-50%, -50%);
     }
   }
-
-
   svg,
   i {
     font-size: inherit;
     margin-right: 5px;
+  }
+  &.btn--white{
+    color: #FFF;
+  }
+  &.btn--player {
+    width: 50px;
+    height: 50px;
+    color: $accent;
+    position: relative;
+    background-color: transparent;
+    border-radius: 50% ;
+    transition: .3s ease all;
+    * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+    }
+    &:hover {
+      cursor: pointer;
+      &::after {
+        background-color: rgba($color: $primary, $alpha: .3);
+      }
+    }
+
+    // &.btn--lg {
+    //   margin: 0;
+    //   padding: 0;
+    //   width: 70px;
+    //   height: 70px;
+
+    //   &::after {
+    //     width: 63px;
+    //     height: 63px;
+    //     top: 3px;
+    //     left: 3px;
+    //   }
+    // }
   }
 }
 
@@ -315,64 +352,6 @@ html[dir="rtl"] {
     }
   }
 }
-
-
-.btn--player {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 50px;
-  height: 50px;
-  color: $accent;
-  position: relative;
-  background-color: transparent;
-  border-radius: 50% !important;
-  border: 1px solid $accent !important;
-  transition: .3s ease all;
-
-  * {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    width: 43px;
-    height: 43px;
-    top: 3px;
-    left: 3px;
-    z-index: -1;
-    // transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 1px solid $accent;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &::after {
-      background-color: rgba($color: $primary, $alpha: .3);
-    }
-  }
-
-  &.btn--lg {
-    margin: 0;
-    padding: 0;
-    width: 70px;
-    height: 70px;
-
-    &::after {
-      width: 63px;
-      height: 63px;
-      top: 3px;
-      left: 3px;
-    }
-  }
-}
-
 @media (max-width: 768.98px) {
   .btn--player {
     margin-top: 16px !important;

@@ -16,7 +16,11 @@
   background-color: $white;
   flex-flow: column nowrap;
   padding: 6px 0px;
-
+  .list__title-name{
+    margin: 0;
+    font-weight: 400;
+    padding: 10px 20px;
+  }
   &.list--condensed {
     .list {
       padding: 0;
