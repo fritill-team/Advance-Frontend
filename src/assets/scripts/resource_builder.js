@@ -139,12 +139,18 @@ class ResourceBuilder {
   }
 
   searchForm() {
-    return `<div class="field-wrapper">
+
+    return `
+
+<form method="get">
+<div class="field-wrapper">
      <div class="field-wrapper__label">Search</div>
      <div class="field-wrapper__content">
-       <input type="search" class="field" id="${this.prefix}-searchbar">
+       <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
+       <button class="btn btn--primary my-3" type="submit">Search</button>
      </div>
-    </div>`
+    </div>
+</form>`
   }
 
   paginationTemplate() {
