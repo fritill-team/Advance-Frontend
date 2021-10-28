@@ -35,6 +35,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   height: 100%;
+	overflow: hidden;
   @media (max-width: 768px){
     &.drawers-container--player{
       flex-direction: column-reverse;

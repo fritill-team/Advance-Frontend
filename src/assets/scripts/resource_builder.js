@@ -139,12 +139,17 @@ class ResourceBuilder {
   }
 
   searchForm() {
-    return `<div class="field-wrapper">
+
+    return `
+
+<form method="get">
+<div class="field-wrapper">
      <div class="field-wrapper__label">Search</div>
      <div class="field-wrapper__content">
-       <input type="search" class="field" id="${this.prefix}-searchbar">
+       <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
      </div>
-    </div>`
+    </div>
+</form>`
   }
 
   paginationTemplate() {
@@ -226,7 +231,7 @@ class ResourceBuilder {
 
 
 const recommendations = $('#recommendations-list')
-if (recommendations) {
+if (recommendations.length > 0) {
   let recommendationResource = new ResourceBuilder(recommendations, {
     listingURL: recommendations.data('listing-url'),
     createURL: recommendations.data('create-url'),
@@ -295,7 +300,7 @@ if (recommendations) {
 }
 
 const classifications = $('#classifications-list')
-if (classifications) {
+if (classifications.length > 0) {
   let classificationsResource = new ResourceBuilder(classifications, {
     listingURL: classifications.data('listing-url'),
     createURL: classifications.data('create-url'),
@@ -366,12 +371,15 @@ if (classifications) {
 
 
 const categories = $('#categories-list')
-if (categories) {
+if (categories.length > 0) {
   let categoriesResource = new ResourceBuilder(categories, {
     listingURL: categories.data('listing-url'),
     createURL: categories.data('create-url'),
     prefix: "categories",
     withPagination: false,
+    listingTemplate() {
+      return this.items.map(item => this.itemTemplate(item)).join('')
+    },
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
@@ -438,7 +446,7 @@ if (categories) {
 
 
 const tags = $('#tags-list')
-if (tags) {
+if (tags.length > 0) {
   let tagsResource = new ResourceBuilder(tags, {
     listingURL: tags.data('listing-url'),
     createURL: tags.data('create-url'),
