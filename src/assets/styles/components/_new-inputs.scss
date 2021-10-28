@@ -1,27 +1,10 @@
 .field-wrapper{
-  font-size: 16px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: 5px;
-  margin-bottom: 5px;
-
   &.field-wrapper--error{
-    input:focus,
-    textarea:focus {
-      outline: 0;
-      border: 1px solid #dc3545;
-    }
-    input::placeholder,
-    textarea::placeholder {
-      color: #dc3545;
-    }
-    textarea{
-      border: 1px solid #dc3545;
-    }
-    .field-wrapper__input {
-      color: #dc3545;
-    }
+    
+    .field-wrapper__input,
     .field-wrapper__label {
       color: #dc3545;
     }
@@ -33,7 +16,6 @@
     }
     // field Error
     .field{
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
       border: 1px solid #dc3545;
       color: #dc3545;
       &[type="checkbox"],
@@ -45,11 +27,6 @@
         & + label {
           color: #dc3545;
         }
-        // & + label{
-        //   &:hover:before{
-        //     box-shadow: 0 0 6px 3px rgba(#dc3545, 0.2);
-        //   }
-        // }
       }
       &[type="checkbox"] {
         &:checked + label:after {
@@ -61,19 +38,9 @@
           span{
             background-color: #dc3545;
           }
-          &:hover{
-            span{
-              opacity: .2;
-            }
-        }
         }
       }
-
       &[type="radio"] {
-        & + label:before {
-          border-radius: 50%;
-        }
-
         &:not(:checked) + label:after {
           opacity: 0;
         }
@@ -85,11 +52,6 @@
           span{
             background-color: #dc3545;
           }
-          &:hover{
-            span{
-              opacity: .2;
-            }
-        }
         }
       }
       &[type='file']{
@@ -100,7 +62,6 @@
           }
         }
       }
-
       &.field--underline{
         border: none;
         border-bottom: 1px solid rgba( #dc3545 , 0.2);
@@ -124,7 +85,7 @@
       padding: 4px 9px;
       height: 38px;
       &[type='file']{
-        display: none;
+        // display: none;
         & + label{
           font-size: 14px;
         }
@@ -169,7 +130,7 @@
       font-size: 18px;
       height: 48px;
       &[type='file']{
-        display: none;
+        // display: none;
         & + label{
           font-size: 18px;
           padding: 1.4rem .9rem;
@@ -208,7 +169,6 @@
           &:before {
             background-color: rgba($color: $primary, $alpha: 0.3);
           }
-
           &:after {
             left: 18px;
             background-color: $primary;
@@ -234,7 +194,6 @@
       transition: 0.5s ease all;
       z-index: 0;
     }
-
     &:after {
       position: absolute;
       content: "";
@@ -279,14 +238,12 @@
     }
   }
 }
-
 .field-wrapper__label{
  font-size: 16px;
   font-weight: 600;
   padding: 6px 16px;
   color: $primary;
 }
-
 .field-wrapper__content{
   position: relative;
   .field-wrapper__icon {
@@ -334,12 +291,12 @@
   }
   .field{
     &[type="checkbox"],
-    &[type="radio"] { 
+    &[type="radio"] {
     & + label {
       span{
         top: 50%;
       }
-    } 
+    }
   }
 }
 }
@@ -389,7 +346,7 @@
           opacity: .2;
         }
      }
-    } 
+    }
     & + label:before {
       content: '';
       display: block;
@@ -563,11 +520,11 @@
         border-bottom: 3px solid $accent;
         border-right: 3px solid $accent;
       }
-      & + label{ 
+      & + label{
         span{
           background-color: $accent;
         }
-      } 
+      }
     }
   }
   // checked opacity
@@ -648,7 +605,7 @@
 }
 .check-field-group{
   &.check-field-group--horizontal {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
   }
 }
@@ -733,15 +690,7 @@
       }
     }
   }
-  textarea {
-    background: #576874;
-    box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
 
-    &:focus {
-      color: #FFF;
-      box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
-    }
-  }
   .upload-input{
     display: inline-block;
   }
@@ -881,24 +830,7 @@
     }
   }
 }
-textarea {
-  width: 100%;
-  height: 150px;
-  margin: 0;
-  outline: none;
-  font-size: 1em;
-  background: $white;
-  color: $input-color;
-  border-radius: 10px;
-  padding: 1em;
-  resize: none;
-  border: 1px solid #e5e5e5;
 
-  &:focus {
-    color: $input-color;
-    border-bottom: 1px solid rgba($primary, 0.5);
-  }
-}
 .field[disabled="disabled"]{
   background-color: rgba(0,0,0,.06);
   & + label{
@@ -927,11 +859,10 @@ html[dir="rtl"]{
     right: 0;
     & + label {
       padding-right: 30px;
-      span{ 
+      span{
         right: -11px;
-        // z-index: 0;
-        top: 47%; 
-      } 
+        top: 47%;
+      }
   }
     & + label:before {
       right: 0;
@@ -974,15 +905,13 @@ html[dir="rtl"]{
   .check-field-group {
     .field{
       &[type="checkbox"],
-      &[type="radio"] { 
+      &[type="radio"] {
       & + label {
         span{
           top: 8px;
         }
-      } 
+      }
     }
   }
   }
 }
-
-
