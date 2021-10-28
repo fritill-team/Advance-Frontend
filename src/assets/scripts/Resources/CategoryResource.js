@@ -5,7 +5,6 @@ export default class CategoryResource extends BaseResource {
   constructor($container, options) {
     options['prefix'] = 'categories'
     super($container, options)
-    let self = this
     this.fetchItems()
   }
 
@@ -13,9 +12,9 @@ export default class CategoryResource extends BaseResource {
     $('#categories-listing').treeview({
       data: this.formatItems(v),
       levels: 0,
-      emptyIcon: 'fa fa-leaf',
-      expandIcon: 'fa fa-folder',
-      collapseIcon: 'fa fa-folder-open',
+      emptyIcon: 'fa fa-leaf primary',
+      expandIcon: 'fa fa-folder primary',
+      collapseIcon: 'fa fa-folder-open primary',
       class: 'list-item list-item--two-lines'
     })
   }
@@ -37,9 +36,13 @@ export default class CategoryResource extends BaseResource {
 
   formatItems(v) {
     return v.map(i => ({
-      text: i.name,
+      text: this.getItemName(i),
       nodes: this.formatItems(i.children),
       meta: i
     }))
+  }
+
+  getItemName(item) {
+    return item.name + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
   }
 }
