@@ -45,8 +45,8 @@ export default class CategoryResource extends BaseResource {
 
   getItemName(item) {
     return item.name
-      + `<button class="btn btn--primary btn--icon btn--text move-down""><i class="fa fa-chevron-down"></i></button>`
-      + `<button class="btn btn--primary btn--icon btn--text move-up""><i class="fa fa-chevron-up"></i></button>`
+      + `<a class="btn btn--primary btn--icon btn--text move-down""><i class="fa fa-chevron-down"></i></a>`
+      + `<a class="btn btn--primary btn--icon btn--text move-up""><i class="fa fa-chevron-up"></i></a>`
       + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
   }
 }
