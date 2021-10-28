@@ -7,8 +7,8 @@
   right: 0;
   height: 100%;
   width: 100%;
+	z-index: 3;
   background-color: rgba($primary-light-darkmode , 0.7);
-  
   .dialog {
     position: absolute;
     top: 50%;
@@ -22,6 +22,21 @@
     height: 50%;
     text-align: center;
   }
+
+	&.modal--active{
+		display: block;
+	}
+	.close-modal{
+		position: absolute;
+		top: 70px;
+		right: 20px;
+	}
+	&.modal-overlay-full{
+		z-index: 7;
+		.close-modal{
+			top: 20px;
+		}
+	}
 }
 .night-mode {
   .modal-overlay{
@@ -33,4 +48,10 @@
       color: #fff;
     }
   }
+}
+
+.no-scroll{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
