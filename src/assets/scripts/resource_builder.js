@@ -175,7 +175,7 @@ class ResourceBuilder {
     return ``
   }
 
-  deleteItem(item){
+  deleteItem(item) {
     let parentContainer = $(item).closest('.card')
     let url = parentContainer.data('data').actions[1].link
     $.ajax({
@@ -214,7 +214,7 @@ class ResourceBuilder {
         self.fetchItems()
 
       })
-      .on('click', `.${this.prefix}-delete`, function (e){
+      .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
         self.deleteItem(this)
         self.fetchItems()
@@ -299,7 +299,6 @@ if (classifications) {
   let classificationsResource = new ResourceBuilder(classifications, {
     listingURL: classifications.data('listing-url'),
     createURL: classifications.data('create-url'),
-    editURL: classifications.data('edit-url'),
     prefix: "classifications",
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
@@ -314,7 +313,7 @@ if (classifications) {
                     <div class="list">
                 ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
-                </a>`): ''}
+                </a>`) : ''}
               </div>
             </div>
           </div>
@@ -371,8 +370,8 @@ if (categories) {
   let categoriesResource = new ResourceBuilder(categories, {
     listingURL: categories.data('listing-url'),
     createURL: categories.data('create-url'),
-    editURL: categories.data('edit-url'),
     prefix: "categories",
+    withPagination: false,
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
