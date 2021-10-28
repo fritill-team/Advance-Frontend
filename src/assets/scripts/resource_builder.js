@@ -147,7 +147,6 @@ class ResourceBuilder {
      <div class="field-wrapper__label">Search</div>
      <div class="field-wrapper__content">
        <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
-       <button class="btn btn--primary my-3" type="submit">Search</button>
      </div>
     </div>
 </form>`
