@@ -264,6 +264,12 @@
     .card__content {
       padding-left: 10px;
     }
+		@media(max-width: 560px){
+			flex-wrap: wrap;
+			.card__content{
+				padding-left: 0;
+			}
+		}
   }
 
   &.card--centered {

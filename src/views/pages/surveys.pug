@@ -2,78 +2,22 @@ extends ../layouts/site.pug
 
 block title
 	title Surveys 
-	//- block category
-	//- 	include ./components/header-blocks/selectCategory.pug
-//- block my-courses
-//- 	li.ui.dropdown.list__massege.dropdown(data-toggle="dropdown")
-//- 		a.massege__opencard(href='#' title='Messages')
 
 block content
 	.container
 		.row 
 			.col-lg-8.offset-lg-2 
-				section.category-item
-					h2.item_title Survays list
-					p.my-0.body-1 lorem
+				section.section-header
+					h3.title-h3 Survays list
+					p.body-1 lorem
 			.col-lg-8.offset-lg-2 
-				.card.card--side-col.mt-5.mb-3
-					img.image.preview.m-0(src='../../assets/images/sign.svg' alt='')
-					.card__content
-						h5.title-5.my-0
-							a.title-5(href='blog_single_view.html') Blog Title Here
-						p.body-1.text-2
-							| Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, . In sit amet laoreet dolor, vitae fringilla quam interdum mollis arcu.
-						p.body-1.text-2
-							| category type
-						a(href="#" class="btn btn--primary btn--text btn--hover-line px-0")
-							| tag #1
-						a(href="#" class="btn btn--primary btn--text btn--hover-line")
-							| tag #2
+				include ../components/survey-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/survey-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/survey-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/survey-card.pug
 				
-			.col-lg-8.offset-lg-2 
-				.card.card--side-col.mb-3
-					img.image.preview.m-0(src='../../assets/images/sign.svg' alt='')
-					.card__content
-						h5.title-5.my-0
-							a.title-5(href='blog_single_view.html') Blog Title Here
-						p.body-1.text-2
-							| Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, . In sit amet laoreet dolor, vitae fringilla quam interdum mollis arcu.
-						p.body-1.text-2
-							| category type
-						a(href="#" class="btn btn--primary btn--text btn--hover-line px-0")
-							| tag #1
-						a(href="#" class="btn btn--primary btn--text btn--hover-line")
-							| tag #2
-
-			.col-lg-8.offset-lg-2 
-				.card.card--side-col.mb-3
-					img.image.preview.m-0(src='../../assets/images/sign.svg' alt='')
-					.card__content
-						h5.title-5.my-0
-							a.title-5(href='blog_single_view.html') Blog Title Here
-						p.body-1.text-2
-							| Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, . In sit amet laoreet dolor, vitae fringilla quam interdum mollis arcu.
-						p.body-1.text-2
-							| category type
-						a(href="#" class="btn btn--primary btn--text btn--hover-line px-0")
-							| tag #1
-						a(href="#" class="btn btn--primary btn--text btn--hover-line")
-							| tag #2
-
-			.col-lg-8.offset-lg-2 
-				.card.card--side-col.mb-3
-					img.image.preview.m-0(src='../../assets/images/sign.svg' alt='')
-					.card__content
-						h5.title-5.my-0
-							a.title-5(href='blog_single_view.html') Blog Title Here
-						p.body-1.text-2
-							| Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, . In sit amet laoreet dolor, vitae fringilla quam interdum mollis arcu.
-						p.body-1.text-2
-							| category type
-						a(href="#" class="btn btn--primary btn--text btn--hover-line px-0")
-							| tag #1
-						a(href="#" class="btn btn--primary btn--text btn--hover-line")
-							| tag #2
-
 			.col-lg-12 
 				include ../components/general-component/pagination.pug

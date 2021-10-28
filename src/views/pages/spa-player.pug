@@ -2,13 +2,13 @@ extends ../layouts/spa-layout
 
 block title
   title Spa Page
-//- block listVideo
+
 
 block left
   .drawer.drawer--left.drawer--open.open
     .list
-      .list__title Chapter 1
-
+      .title-h5 Chapter 1
+      .divider
       .list-item.list-item--two-lines.list-item--with-border
         .list-item__avatar.avatar__video-preview
           img(class="image image--profile" src="../../assets/images/get_img.jpg")
@@ -69,8 +69,6 @@ block left
         .list-item__content
           a(href="#" class="body-2 bold") Jose Portilla
           p.subtitle-1.gray lorem lorem lorem
-
-
 
 block content
   .video-player

@@ -16,6 +16,11 @@
   }
   .footer__content {
     padding: 40px 0;
+    .footer-content__title {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+    }
     a {
       display: block;
       color: #fff;
@@ -27,7 +32,7 @@
   }
   .social-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     height: auto;
     a {
       &:hover {

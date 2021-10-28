@@ -1,8 +1,10 @@
-.category-item {
+.section-header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  margin: 40px 0 10px 0;
+	margin-top: 20px;
+  // @include normalizeTypo;
+	// margin: 20px 0 28px 0;
   .item_title {
     margin: 0;
     font-size: 30px;

@@ -3,27 +3,36 @@ extends ../layouts/spa-layout
 block title
 	title survey
 
+block left
+	.drawer.drawer--left.drawer--open
 block content
-	.page-content.page-content--horizonta
-		//- include ../components/sidebar-dark.pug
-		//- +sidebar-dark
-		//- 	include ../components/survey-sidebar.pug
-		.survey-check-field-group
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-1" value="radio-1" type="checkbox" name="survey")
-				label(class="survey-check-field__label survey-check-field__label--with-image" for="survey-1")
+	.survey
+		.survey__header
+			h2.title-h2 Lorem ipsum dolor
+			p.body-1 amet consectetur adipisicing elit.
+		.survey__check-field-group
+			.survey__check-field
+				input(class="survey__check-field-input" id="survey-1" value="radio-1" type="checkbox" name="survey")
+				label(class="survey__check-field-label survey__check-field-label--with-image" for="survey-1")
 				label(class="" for="survey-2")  lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-4" value="radio-1" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-4")
+			.survey__check-field
+				input(class="survey__check-field-input" id="survey-4" value="radio-1" type="checkbox" name="survey")
+				label(class="survey__check-field-label" for="survey-4")
 				label lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-2" value="radio-2" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-2")
+			.survey__check-field
+				input(class="survey__check-field-input" id="survey-2" value="radio-2" type="checkbox" name="survey")
+				label(class="survey__check-field-label" for="survey-2")
 				label(for="survey-2") lorem
-			.survey-check-field
-				input(class="survey-check-field__input" id="survey-3" value="radio-3" type="checkbox" name="survey")
-				label(class="survey-check-field__label" for="survey-3")
+			.survey__check-field
+				input(class="survey__check-field-input" id="survey-3" value="radio-3" type="checkbox" name="survey")
+				label(class="survey__check-field-label" for="survey-3")
 				label(for="survey-3") lorem
-		.video-player
-			include ../components/survey-content.pug
+		.survey__footer
+			button.btn.btn--primary.btn--with-icon
+				i.fas.fa-arrow-left
+				| primary
+			button.btn.btn--primary.btn--with-icon
+				i.fas.fa-arrow-right
+				| primary
+		//- .video-player
+		//- 	include ../components/survey-content.pug
