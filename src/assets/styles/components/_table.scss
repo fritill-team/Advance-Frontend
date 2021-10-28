@@ -46,15 +46,14 @@
   &.table--exams {
     border-collapse: collapse;
     margin: auto;
+		position: relative;
+    overflow: auto;
     tbody {
       tr {
-        &:nth-of-type(odd) {
-          background-color: aliceblue;
-        }
+				background-color: #f8f9fa;
+				border-bottom: 4px solid;
+				border-color: #FFF;
       }
-    }
-    th {
-      background-color: unset;
     }
     th,
     td {
@@ -62,10 +61,26 @@
       .check-field {
         margin: auto;
       }
+			&:first-of-type{
+				z-index: 2;
+				position: sticky;
+				left: 0px;
+				box-shadow: 5px 0 5px -1px #d7d4d4;
+				background-color: #f8f9fa;
+				padding: 8px;
+			}
+    }
+		th {
+      background-color: unset;
+			color: #202124;
+			&:first-of-type{
+				z-index: 2;
+				background-color: #FFF;
+			}
     }
     td {
       font-weight: 600;
-      color: $primary;
+      color: #202124;
       padding: 12px;
     }
   }
@@ -95,6 +110,13 @@ html[dir="rtl"] {
           }
         }
       }
+			th,
+			td {
+				&:first-of-type{
+					z-index: 2;
+					right: 0px;
+				}
+			}
     }
   }
 }
@@ -104,24 +126,31 @@ html[dir="rtl"] {
       background: #3a474f;
       color: #fff;
     }
-    &.table--exams {
-      tbody {
-        background: transparent;
-        tr {
-          &:nth-of-type(odd) {
-            background-color: rgba($color: #3a474f, $alpha: 0.7);
-          }
-        }
-      }
-      th {
-        color: $white;
-      }
-      td {
-        color: $white;
-      }
-    }
-    // i[class*="fa-"] {
-    //   color: $accent;
-    // }
+		&.table--exams {
+			tbody {
+				tr {
+					background-color:#43525c;
+					border-color: #576874;
+				}
+			}
+			th,
+			td {
+				&:first-of-type{
+					box-shadow: 5px 0 5px -1px #fff;
+					background-color: #43525c;
+					color: $white;
+				}
+			}
+			th {
+				background-color: unset;
+				color: $white;
+				&:first-of-type{
+					background-color: #43525c;
+				}
+			}
+			td {
+				color: #202124;
+			}
+		}
   }
 }
