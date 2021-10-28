@@ -121,7 +121,7 @@
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary recommendations-delete",
+          "class": "recommendations-delete",
           "link": "/recommendations/2"
         }
       ]
@@ -145,8 +145,7 @@
           "link": "/recommendations/3"
         }
       ]
-    },
-
+    }
   ],
   "classifications": [
     {

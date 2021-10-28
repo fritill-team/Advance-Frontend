@@ -187,8 +187,7 @@ class ResourceBuilder {
       },
       error: error => {
         if (error.status === 422)
-          console.log(error.message)
-        //   mapErrors(this.prefix, $form, error.message.errors)
+          mapErrors(this.prefix, $form, error.message.errors)
       }
     });
 
@@ -215,13 +214,13 @@ class ResourceBuilder {
         self.fetchItems()
 
       })
-
       .on('click', `.${this.prefix}-delete`, function (e){
         e.preventDefault()
         self.deleteItem(this)
         self.fetchItems()
       })
-
+    // To Fetch on start
+    self.fetchItems()
   }
 }
 
@@ -243,11 +242,11 @@ if (recommendations) {
             </button>
             <div class="dropdown__content">
               <div class="list">
-                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
                   <span class="list-item__content">
                   </span>
-                </a>`)}
+                </a>`) : ''}
               </div>
             </div>
           </div>
@@ -272,7 +271,7 @@ if (recommendations) {
              required
              value="${item.name ? item.name : ''}">
         </div>
-        <ul class="field-wrapper__messages"></ul>
+        <ul id="recommendations-name-messages" class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
         <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
@@ -283,7 +282,7 @@ if (recommendations) {
             id="recommendations-description"
             placeholder="Recommendation Description">${item.description ? item.description : ''}</textarea>
         </div>
-        <ul class="field-wrapper__messages"></ul>
+        <ul id="recommendations-description-messages" class="field-wrapper__messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
         <button class="btn btn--primary btn--text" type="reset">Cancel</button>
@@ -313,9 +312,9 @@ if (classifications) {
             </button>
             <div class="dropdown__content">
                     <div class="list">
-                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
-                </a>`)}
+                </a>`): ''}
               </div>
             </div>
           </div>
