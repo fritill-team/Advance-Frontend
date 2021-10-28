@@ -134,6 +134,7 @@
   .drawer {
     background-color: #43525c;
     color: $white;
+		box-shadow: 5px 0px 30px 0px rgba( $white, .6);
   }
 }
 
@@ -148,7 +149,7 @@ html[dir="rtl"] {
   }
 
   .drawer {
-    border-left: 1px solid #ddd;
+    // border-left: 1px solid #ddd;
     .drawer__header {
       display: flex;
       align-items: center;

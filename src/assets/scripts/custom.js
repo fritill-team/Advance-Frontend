@@ -584,6 +584,16 @@ $(".list__sidebar").each(function (i, item) {
 $(document)
   .on("click", ".toggle", function () {
     $(".drawer--left").toggleClass("drawer--open");
+    if (
+      $(".drawer--left")
+        .closest(".drawers-container")
+        .classList.contains(".drawers-container--player")
+    ) {
+      console.log("ana gamd neek");
+    } else console.log("a7a");
+
+    $(".video-player").toggleClass("video-player--collapse");
+    // console.log($(".drawer--left").closest(".drawers-container"));
   })
   .on("click", ".left-open", function () {
     $(".drawer--left").toggleClass("open");
