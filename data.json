@@ -121,7 +121,7 @@
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary recommendations-delete",
+          "class": "recommendations-delete",
           "link": "/recommendations/2"
         }
       ]
@@ -217,6 +217,123 @@
       "name": "thtynty",
       "score": "0",
       "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "name": "Banker",
+      "slug": "en-banker-16354283931979148",
+      "parent": null,
+      "children": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "edit-recommendation",
+          "link": "categories/2/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "categories/2/"
+        }
+      ],
+      "created_at": "2021-10-28T13:39:53.198535Z",
+      "updated_at": "2021-10-28T13:39:53.201210Z"
+    },
+    {
+      "id": 1,
+      "name": "Human resources officer",
+      "slug": "en-human-resources-officer-16354283931953762",
+      "parent": null,
+      "children": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "edit-recommendation",
+          "link": "categories/1/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "categories/1/"
+        }
+      ],
+      "created_at": "2021-10-28T13:39:53.196064Z",
+      "updated_at": "2021-10-28T13:39:53.197503Z"
+    },
+    {
+      "id": 4,
+      "name": "Personnel officer",
+      "slug": "en-personnel-officer-1635428393204223",
+      "parent": null,
+      "children": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "edit-recommendation",
+          "link": "categories/4/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "categories/4/"
+        }
+      ],
+      "created_at": "2021-10-28T13:39:53.204848Z",
+      "updated_at": "2021-10-28T13:39:53.206534Z"
+    },
+    {
+      "id": 5,
+      "name": "Programmer, applications",
+      "slug": "en-programmer-applications-1635428393206933",
+      "parent": null,
+      "children": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "edit-recommendation",
+          "link": "categories/5/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "categories/5/"
+        }
+      ],
+      "created_at": "2021-10-28T13:39:53.207564Z",
+      "updated_at": "2021-10-28T13:39:53.209227Z"
+    },
+    {
+      "id": 3,
+      "name": "Solicitor",
+      "slug": "en-solicitor-16354283932016718",
+      "parent": null,
+      "children": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "edit-recommendation",
+          "link": "categories/3/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary",
+          "link": "categories/3/"
+        }
+      ],
+      "created_at": "2021-10-28T13:39:53.202408Z",
+      "updated_at": "2021-10-28T13:39:53.203813Z"
     }
   ],
   "sideBar": [

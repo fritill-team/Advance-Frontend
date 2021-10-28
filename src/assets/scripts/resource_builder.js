@@ -180,7 +180,7 @@ class ResourceBuilder {
     return ``
   }
 
-  deleteItem(item){
+  deleteItem(item) {
     let parentContainer = $(item).closest('.card')
     let url = parentContainer.data('data').actions[1].link
     $.ajax({
@@ -192,8 +192,7 @@ class ResourceBuilder {
       },
       error: error => {
         if (error.status === 422)
-          console.log(error.message)
-        //   mapErrors(this.prefix, $form, error.message.errors)
+          mapErrors(this.prefix, $form, error.message.errors)
       }
     });
 
@@ -220,19 +219,19 @@ class ResourceBuilder {
         self.fetchItems()
 
       })
-
-      .on('click', `.${this.prefix}-delete`, function (e){
+      .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
         self.deleteItem(this)
         self.fetchItems()
       })
-
+    // To Fetch on start
+    self.fetchItems()
   }
 }
 
 
 const recommendations = $('#recommendations-list')
-if (recommendations) {
+if (recommendations.length > 0) {
   let recommendationResource = new ResourceBuilder(recommendations, {
     listingURL: recommendations.data('listing-url'),
     createURL: recommendations.data('create-url'),
@@ -248,11 +247,11 @@ if (recommendations) {
             </button>
             <div class="dropdown__content">
               <div class="list">
-                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
                   <span class="list-item__content">
                   </span>
-                </a>`)}
+                </a>`) : ''}
               </div>
             </div>
           </div>
@@ -277,7 +276,7 @@ if (recommendations) {
              required
              value="${item.name ? item.name : ''}">
         </div>
-        <ul class="field-wrapper__messages"></ul>
+        <ul id="recommendations-name-messages" class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
         <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
@@ -288,7 +287,7 @@ if (recommendations) {
             id="recommendations-description"
             placeholder="Recommendation Description">${item.description ? item.description : ''}</textarea>
         </div>
-        <ul class="field-wrapper__messages"></ul>
+        <ul id="recommendations-description-messages" class="field-wrapper__messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
         <button class="btn btn--primary btn--text" type="reset">Cancel</button>
@@ -301,11 +300,10 @@ if (recommendations) {
 }
 
 const classifications = $('#classifications-list')
-if (classifications) {
+if (classifications.length > 0) {
   let classificationsResource = new ResourceBuilder(classifications, {
     listingURL: classifications.data('listing-url'),
     createURL: classifications.data('create-url'),
-    editURL: classifications.data('edit-url'),
     prefix: "classifications",
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
@@ -318,9 +316,9 @@ if (classifications) {
             </button>
             <div class="dropdown__content">
                     <div class="list">
-                ${item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
+                ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                   <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
-                </a>`)}
+                </a>`) : ''}
               </div>
             </div>
           </div>
@@ -373,12 +371,15 @@ if (classifications) {
 
 
 const categories = $('#categories-list')
-if (categories) {
+if (categories.length > 0) {
   let categoriesResource = new ResourceBuilder(categories, {
     listingURL: categories.data('listing-url'),
     createURL: categories.data('create-url'),
-    editURL: categories.data('edit-url'),
     prefix: "categories",
+    withPagination: false,
+    listingTemplate() {
+      return this.items.map(item => this.itemTemplate(item)).join('')
+    },
     itemTemplate(item) {
       return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
@@ -445,7 +446,7 @@ if (categories) {
 
 
 const tags = $('#tags-list')
-if (tags) {
+if (tags.length > 0) {
   let tagsResource = new ResourceBuilder(tags, {
     listingURL: tags.data('listing-url'),
     createURL: tags.data('create-url'),
