@@ -22,7 +22,7 @@ export default class BaseResource {
     this.$itemsList = null
     this.$form = null
     this.$deleteDialog = null
-    this.$deleteForm = null
+
 
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(options, item))
@@ -33,7 +33,6 @@ export default class BaseResource {
     this.$searchBar = $(`#${this.prefix}-searchbar`)
     this.$form = $(`#${this.prefix}-form`)
     this.$deleteDialog = $(`#${this.prefix}-delete-dialog`)
-    this.$deleteForm = $(`#${this.prefix}-delete-form`)
 
     this.$searchBar.on('input', e => this.search = e.target.value)
 
@@ -108,12 +107,17 @@ export default class BaseResource {
     this.$itemsList.append(this.listingTemplate())
   }
 
-  mapErrors(app, $form, errors) {
+  mapErrors(errors) {
+    console.log(errors)
     for (let field in errors)
-      if (Object.prototype.hasOwnProperty.call(field, errors))
-        $form.find(`#${app}-${field}-messages`)
-          .empty()
-          .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+      if (errors.hasOwnProperty(field)) {
+        let messages = this.$form.find(`#${this.prefix}-${field}-messages`),
+          wrapper = messages.closest('.field-wrapper')
+        wrapper.addClass('field-wrapper--error')
+        messages.empty()
+        messages.append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+
+      }
   }
 
   fetchItems(data = {}) {
@@ -124,11 +128,13 @@ export default class BaseResource {
       type: 'get',
       data,
       headers: {'X-CSRFToken': self.csrf},
-      success: data => {
-        this.items = data
-        this.loading = false
+      success: function (data) {
+        self.items = data
+        self.loading = false
       },
-      error: xhr => console.error(xhr)
+      error: function (xhr) {
+        console.error(xhr)
+      }
     })
   }
 
@@ -139,24 +145,17 @@ export default class BaseResource {
 
     $.ajax({
       type: 'POST',
-      dataType: 'json',
       url,
       data,
       headers: {'X-CSRFToken': self.csrf},
       success: () => {
-        if (url !== this.createURL) {
-          // TODO improve behavior
-          this.fetchItems()
-          this.formTemplate({}, this.createURL)
-        } else {
-          this.fetchItems()
-          $form.trigger('reset')
-        }
+        this.fetchItems()
+        this.$form.empty()
+        this.$form.append($(this.formTemplate({}, this.createURL)))
       },
-      error: error => {
-        if (error.status === 422)
-          console.log(error.message)
-        //   mapErrors(this.prefix, $form, error.message.errors)
+      error: (xhr, status, error) => {
+        if (xhr.status === 422)
+          this.mapErrors(xhr.responseJSON)
       }
     });
   }
@@ -167,7 +166,7 @@ export default class BaseResource {
       <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <div class="card" id="recommendations-form">
+          <div class="card" id="${this.prefix}-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
         </div>
@@ -225,15 +224,17 @@ export default class BaseResource {
   confirmDelete() {
     let self = this
     $.ajax({
-      type: 'DELETE',
-      dataType: 'json',
       url: self.deleteURL,
+      type: "DELETE",
       headers: {'X-CSRFToken': self.csrf},
-      success: () => {
+      success: function () {
         self.fetchItems()
         self.deleteURL = ''
+      },
+      error: function (xhr) {
+
       }
-    });
+    })
   }
 
   deleteDialog() {

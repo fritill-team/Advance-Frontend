@@ -5,24 +5,31 @@ export default class CategoryResource extends BaseResource {
   constructor($container, options) {
     options['prefix'] = 'categories'
     super($container, options)
+    this.flatItems = []
+
     let self = this
-    $(`#${this.prefix}-parent`).select2({
-      ajax: {
-        url: this.listingURL,
-        dataType: 'json',
-        headers: {'X-CSRFToken': self.csrf},
-        data: function (params) {
-          return {flat: true, q: params.term}
-        },
-        results: data => ({
-          results: $.map(data, function (item) {
-            return {
-              text: item.name,
-              id: item.id
-            }
-          })
-        })
+
+    $.ajax({
+      url: self.listingURL,
+      type: 'get',
+      data: {flat: true},
+      headers: {'X-CSRFToken': self.csrf},
+      success: function (data) {
+        self.flatItems = data
+        self.$form.empty()
+        self.$form.append($(self.formTemplate({}, self.createURL)))
+        $(`#${this.prefix}-parent`).select2()
+      },
+      error: function (xhr) {
       }
+    })
+
+
+    $(document).on('click', `.categories-edit`, function (e) {
+      e.preventDefault()
+      self.$form.empty()
+      self.$form.append($(self.formTemplate($(this).data('item'), $(this).attr('href'))))
+      $(`#${this.prefix}-parent`).select2()
     })
 
     this.fetchItems()
@@ -73,7 +80,7 @@ export default class CategoryResource extends BaseResource {
 
   getItemName(item) {
     return item.name
-      + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
+      + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" data-item='${JSON.stringify(item)}' href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
   }
 
   formTemplate(item = {}, action = '') {
@@ -89,7 +96,10 @@ export default class CategoryResource extends BaseResource {
       <div class="field-wrapper">
         <label class="field-wrapper__label" for="${this.prefix}-parent">Category Parent</label>
         <div class="field-wrapper__content">
-          <select class="field select2" name="parent" id="${this.prefix}-parent"></select>
+          <select class="field select2" name="parent" id="${this.prefix}-parent">
+          <option value="">-- No Parent --</option>
+          ${this.flatItems && this.flatItems.map(i => `<option value="${i.id}" ${item && i.id === item.id ? 'selected' : ''}>${i.name}</option>`).join('')}
+          </select>
         </div>
         <ul class="field-wrapper__messages" id="categories-parent-messages"></ul>
       </div>
