@@ -7,6 +7,7 @@
   display: none;
   z-index: 8;
 
+
   &.dialog--show {
     display: block;
   }
@@ -17,6 +18,9 @@
 
   &.dialog--lg {
     width: 75%;
+  }
+  .card {
+    margin-bottom: 0;
   }
 }
 

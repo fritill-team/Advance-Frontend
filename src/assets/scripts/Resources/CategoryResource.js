@@ -5,6 +5,26 @@ export default class CategoryResource extends BaseResource {
   constructor($container, options) {
     options['prefix'] = 'categories'
     super($container, options)
+    let self = this
+    $(`#${this.prefix}-parent`).select2({
+      ajax: {
+        url: this.listingURL,
+        dataType: 'json',
+        headers: {'X-CSRFToken': self.csrf},
+        data: function (params) {
+          return {flat: true, q: params.term}
+        },
+        results: data => ({
+          results: $.map(data, function (item) {
+            return {
+              text: item.name,
+              id: item.id
+            }
+          })
+        })
+      }
+    })
+
     this.fetchItems()
   }
 
@@ -27,18 +47,20 @@ export default class CategoryResource extends BaseResource {
   }
 
   containerTemplate(data) {
-    return $(`<div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="card" id="${this.prefix}-form">
-            ${this.formTemplate({}, this.createURL)}
-          </div>
-          <div id="${this.prefix}-listing">
-           ${this.listingTemplate()}
+    return $(`
+      ${this.deleteDialog()}
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card" id="${this.prefix}-form">
+              ${this.formTemplate({}, this.createURL)}
+            </div>
+            <div id="${this.prefix}-listing">
+             ${this.listingTemplate()}
+            </div>
           </div>
         </div>
-      </div>
-    </div>`)
+      </div>`)
   }
 
   formatItems(v) {
@@ -51,8 +73,6 @@ export default class CategoryResource extends BaseResource {
 
   getItemName(item) {
     return item.name
-      // + `<a class="btn btn--primary btn--icon btn--text move-down""><i class="fa fa-chevron-down"></i></a>`
-      // + `<a class="btn btn--primary btn--icon btn--text move-up""><i class="fa fa-chevron-up"></i></a>`
       + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
   }
 
@@ -61,16 +81,17 @@ export default class CategoryResource extends BaseResource {
       <div class="field-wrapper">
         <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-          <input
-             class="field"
-             type="text"
-             placeholder="Category Name"
-             name="name"
-             id="${this.prefix}-name"
-             required
-             value="${item.name ? item.name : ''}">
+          <input class="field" type="text" placeholder="Category Name" name="name" id="${this.prefix}-name"
+             required value="${item.name ? item.name : ''}">
         </div>
-        <ul class="field-wrapper__messages"></ul>
+        <ul class="field-wrapper__messages" id="categories-name-messages"></ul>
+      </div>
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="${this.prefix}-parent">Category Parent</label>
+        <div class="field-wrapper__content">
+          <select class="field select2" name="parent" id="${this.prefix}-parent"></select>
+        </div>
+        <ul class="field-wrapper__messages" id="categories-parent-messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
         <button class="btn btn--primary btn--text" type="reset">Cancel</button>

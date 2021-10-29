@@ -20,3 +20,11 @@ $(document)
       })
     }
   })
+  .on('keyup', function(e) {
+    if (e.key === "Escape") {
+      closeOverlay()
+      $('.dialog').each(function () {
+        $(this).removeClass('dialog--show')
+      })
+    }
+  });

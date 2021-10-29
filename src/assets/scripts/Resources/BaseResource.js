@@ -1,3 +1,5 @@
+import {openOverlay} from "../overlay";
+
 export default class BaseResource {
   constructor($container, options) {
     // observables
@@ -5,22 +7,22 @@ export default class BaseResource {
     this.localSearch = ''
     this.localLoading = false
 
-    this.title = ''
-    this.description = ''
-
     // properties
     this.prefix = ''
     this.listingURL = ''
     this.createURL = ''
+    this.deleteURL = ''
     this.subBuild = null
     this.withPagination = false
-    this.paginationType = 'pagination' // 'show-more'
-
+    this.paginationType = 'pagination'
+    this.csrf = $('meta[name="csrf-token"]').prop('content')
     // elements
     this.$container = $container
     this.$searchBar = null
     this.$itemsList = null
     this.$form = null
+    this.$deleteDialog = null
+    this.$deleteForm = null
 
     for (let item in options)
       if (Object.prototype.hasOwnProperty.call(options, item))
@@ -30,6 +32,8 @@ export default class BaseResource {
     this.$itemsList = $(`#${this.prefix}-listing`)
     this.$searchBar = $(`#${this.prefix}-searchbar`)
     this.$form = $(`#${this.prefix}-form`)
+    this.$deleteDialog = $(`#${this.prefix}-delete-dialog`)
+    this.$deleteForm = $(`#${this.prefix}-delete-form`)
 
     this.$searchBar.on('input', e => this.search = e.target.value)
 
@@ -50,9 +54,13 @@ export default class BaseResource {
       })
       .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
-       
-        // self.deleteItem(this)
-        // self.fetchItems()
+        self.deleteURL = $(this).attr('href')
+        openOverlay()
+        self.$deleteDialog.addClass('dialog--show')
+      })
+      .on('click', `.${this.prefix}-confirm-delete`, function (e) {
+        e.preventDefault()
+        self.confirmDelete()
       })
   }
 
@@ -100,13 +108,22 @@ export default class BaseResource {
     this.$itemsList.append(this.listingTemplate())
   }
 
+  mapErrors(app, $form, errors) {
+    for (let field in errors)
+      if (Object.prototype.hasOwnProperty.call(field, errors))
+        $form.find(`#${app}-${field}-messages`)
+          .empty()
+          .append($(errors[field].map(error => `<li>${error}</li>`).join('')))
+  }
+
   fetchItems(data = {}) {
     this.loading = true
-
+    let self = this
     $.ajax({
       url: this.listingURL,
       type: 'get',
       data,
+      headers: {'X-CSRFToken': self.csrf},
       success: data => {
         this.items = data
         this.loading = false
@@ -117,13 +134,15 @@ export default class BaseResource {
 
   submitForm($form) {
     let url = $form.attr('action'),
-      data = $form.serialize()
+      data = $form.serialize(),
+      self = this
 
     $.ajax({
       type: 'POST',
       dataType: 'json',
       url,
       data,
+      headers: {'X-CSRFToken': self.csrf},
       success: () => {
         if (url !== this.createURL) {
           // TODO improve behavior
@@ -143,7 +162,9 @@ export default class BaseResource {
   }
 
   containerTemplate(data) {
-    return $(`<div class="container">
+    return $(`
+      ${this.deleteDialog()}
+      <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <div class="card" id="recommendations-form">
@@ -201,18 +222,36 @@ export default class BaseResource {
     return ``
   }
 
-  deleteItem(item) {
-    let parentContainer = $(item).closest('.card')
-    let url = parentContainer.data('data').actions[1].link
+  confirmDelete() {
+    let self = this
     $.ajax({
       type: 'DELETE',
       dataType: 'json',
-      url,
+      url: self.deleteURL,
+      headers: {'X-CSRFToken': self.csrf},
       success: () => {
         self.fetchItems()
+        self.deleteURL = ''
       }
     });
+  }
 
+  deleteDialog() {
+    return `<div class="dialog" id="${this.prefix}-delete-dialog">
+      <div class="card">
+        <div class="card__title">
+          <h3>You are About to delete this item</h3>
+        </div>
+        <div class="card__body">
+            <p class="body">If you deleted it you will never be able to retreive it</p>
+            <p class="body bold">Are you sure</p>
+        </div>
+        <div class="card__footer">
+          <button class="btn btn--text btn--danger close-dialog">Cancel</button>
+          <button class="btn btn--primary close-dialog ${this.prefix}-confirm-delete">Confirm</button>
+        </div>
+      </div>
+    </div>`
   }
 
   build() {
