@@ -2,7 +2,7 @@ extends ../layouts/auth.pug
 block title
 	title login
 block content
-	h2.title-h4.semi-bold  Welcome Back
+	//- h2.title-h4.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account!
 	.tabs.tabs--center
 		a(href="#tab1" class="tab tab--active ") Login With Email
@@ -44,8 +44,6 @@ block content
 					div
 						input(class="field" type="checkbox" id="checkbox-1" name="checkname")
 						label(for="checkbox-1") Lorem ipsum dolor.
-				ul.field-wrapper__messages
-					li Please provide a valid city.
 				.d-flex.justify-content-around
 					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
 		#tab2.tab-panel
@@ -82,13 +80,11 @@ block content
 					div
 						input(class="field" type="checkbox" id="checkbox-2" name="checkname")
 						label(for="checkbox-2") Lorem ipsum dolor.
-				ul.field-wrapper__messages
-					li Remember Me
 				.d-flex.justify-content-around
 					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
 
 	p.title-2
-		a(href="forget.html" class="text-2")  Forgot Password
+		a(href="forget.html" class="")  Forgot Password
 	.middle-or.d-flex
 		hr
 		p.text-2  Or

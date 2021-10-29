@@ -116,6 +116,7 @@ $(".list").on("click", function () {
   $(this).addClass("active").siblings().removeClass("active");
   $(".course-card--list-view")
     .parent()
+    .parent()
     .removeClass("col-lg-4")
     .addClass("col-lg-12");
 });
@@ -125,6 +126,7 @@ $(".grid").on("click", function () {
     .addClass("course-card--grid-view");
   $(this).addClass("active").siblings().removeClass("active");
   $(".course-card--grid-view")
+    .parent()
     .parent()
     .removeClass("col-lg-12")
     .addClass("col-lg-4");
