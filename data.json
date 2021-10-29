@@ -157,14 +157,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/1/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/1/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/1/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/1/delete"
         }
       ]
     },
@@ -177,14 +177,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/2/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/2/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary ",
-          "link": "/recommendations/2/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/2/delete"
         }
       ]
     },
@@ -197,14 +197,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/3/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/3/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/3/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/3/delete"
         }
       ]
     }
@@ -226,13 +226,13 @@
             {
               "name": "edit",
               "icon": "far fa-edit",
-              "class": "edit-recommendation",
+              "class": "categories-edit",
               "link": "categories/11/"
             },
             {
               "name": "delete",
               "icon": "far fa-trash-alt",
-              "class": "btn--primary",
+              "class": "categories-delete",
               "link": "categories/11/"
             }
           ],
@@ -244,13 +244,13 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
+          "class": "categories-edit",
           "link": "categories/2/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "categories-delete",
           "link": "categories/2/"
         }
       ],
@@ -267,13 +267,13 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
+          "class": "categories-edit",
           "link": "categories/1/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "categories-delete",
           "link": "categories/1/"
         }
       ],
@@ -290,13 +290,13 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
+          "class": "categories-edit",
           "link": "categories/4/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "categories-delete",
           "link": "categories/4/"
         }
       ],
@@ -313,13 +313,13 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
+          "class": "categories-edit",
           "link": "categories/5/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "categories-delete",
           "link": "categories/5/"
         }
       ],
@@ -336,13 +336,13 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
+          "class": "categories-edit",
           "link": "categories/3/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
+          "class": "categories-delete",
           "link": "categories/3/"
         }
       ],

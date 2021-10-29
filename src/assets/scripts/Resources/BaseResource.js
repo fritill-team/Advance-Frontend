@@ -50,11 +50,10 @@ export default class BaseResource {
       })
       .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
-        self.deleteItem(this)
-        self.fetchItems()
+       
+        // self.deleteItem(this)
+        // self.fetchItems()
       })
-
-
   }
 
   get loading() {
@@ -211,10 +210,6 @@ export default class BaseResource {
       url,
       success: () => {
         self.fetchItems()
-      },
-      error: error => {
-        if (error.status === 422)
-          mapErrors(this.prefix, $form, error.message.errors)
       }
     });
 

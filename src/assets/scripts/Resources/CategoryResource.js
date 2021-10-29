@@ -13,10 +13,16 @@ export default class CategoryResource extends BaseResource {
       data: this.formatItems(v),
       levels: 0,
       selectable: false,
+      checkable: false,
+      onHoverColor: 'transparent',
+      backColor: 'transparent',
       emptyIcon: 'fa fa-leaf primary',
       expandIcon: 'fa fa-folder primary',
       collapseIcon: 'fa fa-folder-open primary',
-      class: 'list-item list-item--two-lines'
+      tags: [
+        'available',
+        {text: 'not available', class: 'disabled'}
+      ],
     })
   }
 
@@ -45,8 +51,31 @@ export default class CategoryResource extends BaseResource {
 
   getItemName(item) {
     return item.name
-      + `<a class="btn btn--primary btn--icon btn--text move-down""><i class="fa fa-chevron-down"></i></a>`
-      + `<a class="btn btn--primary btn--icon btn--text move-up""><i class="fa fa-chevron-up"></i></a>`
+      // + `<a class="btn btn--primary btn--icon btn--text move-down""><i class="fa fa-chevron-down"></i></a>`
+      // + `<a class="btn btn--primary btn--icon btn--text move-up""><i class="fa fa-chevron-up"></i></a>`
       + item.actions.map(action => `<a class="btn btn--primary btn--icon btn--text ${action.class}" href="${action.link}"><i class="${action.icon}"></i></a>`).join('')
+  }
+
+  formTemplate(item = {}, action = '') {
+    return `<form action="${action}" method="post">
+      <div class="field-wrapper">
+        <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
+        <div class="field-wrapper__content">
+          <input
+             class="field"
+             type="text"
+             placeholder="Category Name"
+             name="name"
+             id="${this.prefix}-name"
+             required
+             value="${item.name ? item.name : ''}">
+        </div>
+        <ul class="field-wrapper__messages"></ul>
+      </div>
+      <div class="ml-auto d-inline-block">
+        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
+        <button class="btn btn--primary" type="submit">submit</button>
+      </div>
+    </form>`
   }
 }

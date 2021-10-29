@@ -464,24 +464,6 @@ ul {
       flex-wrap: nowrap;
 }
 
-.wrapper__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #0d7189;
-  z-index: -1;
-  opacity: 0;
-}
-
-.open-side-nav .wrapper__overlay {
-  z-index: 5;
-  opacity: 0.3;
-}
-
 .page-content {
   padding: 60px 0 0 0;
   -webkit-transition: all 0.3s ease-out;
