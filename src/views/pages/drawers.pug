@@ -24,8 +24,57 @@ block content
   .container
     .row
       .col-lg-6
+        div(class="dialog" id="default-dialog")
+          .card
+            .card__title
+              h3 Lorem ipsum dolor.
+            .card__body
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+            .card__footer
+              button.btn.btn--text.btn--danger.close-dialog Cancel
+              button.btn.btn--primary.close-dialog Confirm
+
+        div(class="dialog dialog--sm" id="small-dialog")
+          .card
+            .card__title
+              h3 Lorem ipsum dolor.
+            .card__body
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+            .card__footer
+              button.btn.btn--text.btn--danger.close-dialog Cancel
+              button.btn.btn--primary.close-dialog Confirm
+
+        div(class="dialog dialog--lg" id="large-dialog")
+          .card
+            .card__title
+              h3 Lorem ipsum dolor.
+            .card__body
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque
+                | debitis dolore dolores ea fugiat magni odit optio sunt vel, voluptate. A alias
+                | assumenda, deserunt dolorem expedita ipsum temporibus.
+            .card__footer
+              button.btn.btn--text.btn--danger.close-dialog Cancel
+              button.btn.btn--primary.close-dialog Confirm
         p.body-1 open modal under header and sidebar
-        button.btn.btn--primary.open-modal partial modal
+        button(class="btn btn--primary toggle-dialog" data-target="#default-dialog") default dialog
+        button(class="btn btn--primary toggle-dialog" data-target="#small-dialog") small dialog
+        button(class="btn btn--primary toggle-dialog" data-target="#large-dialog") large dialog
       .col-lg-6
         p.body-1 open modal above header and sidebar
         button.btn.btn--primary.open-modal--full full modal

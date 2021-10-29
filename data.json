@@ -157,14 +157,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/1/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/1/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/1/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/1/delete"
         }
       ]
     },
@@ -177,14 +177,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/2/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/2/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary ",
-          "link": "/recommendations/2/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/2/delete"
         }
       ]
     },
@@ -197,26 +197,16 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "btn--primary edit-recommendation",
-          "link": "/recommendations/3/edit"
+          "class": "classifications-edit",
+          "link": "/classifications/3/edit"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "/recommendations/3/delete"
+          "class": "classifications-delete",
+          "link": "/classifications/3/delete"
         }
       ]
-    },
-    {
-      "name": "thtynty",
-      "score": "0",
-      "id": 4
-    },
-    {
-      "name": "thtynty",
-      "score": "0",
-      "id": 5
     }
   ],
   "categories": [
@@ -225,46 +215,47 @@
       "name": "Banker",
       "slug": "en-banker-16354283931979148",
       "parent": null,
-      "children": [],
+      "children": [
+        {
+          "id": 11,
+          "name": "lorem 3",
+          "slug": "en-human-resources-officer-16354283931953762",
+          "parent": null,
+          "children": [],
+          "actions": [
+            {
+              "name": "edit",
+              "icon": "far fa-edit",
+              "class": "categories-edit",
+              "link": "http://localhost:3000/categories/11/"
+            },
+            {
+              "name": "delete",
+              "icon": "far fa-trash-alt",
+              "class": "categories-delete toggle-dialog",
+              "link": "http://localhost:3000/categories/11/"
+            }
+          ],
+          "created_at": "2021-10-28T13:39:53.196064Z",
+          "updated_at": "2021-10-28T13:39:53.197503Z"
+        }
+      ],
       "actions": [
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
-          "link": "categories/2/"
+          "class": "categories-edit",
+          "link": "http://localhost:3000/categories/2/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "categories/2/"
+          "class": "categories-delete toggle-dialog",
+          "link": "http://localhost:3000/categories/2/"
         }
       ],
       "created_at": "2021-10-28T13:39:53.198535Z",
       "updated_at": "2021-10-28T13:39:53.201210Z"
-    },
-    {
-      "id": 1,
-      "name": "Human resources officer",
-      "slug": "en-human-resources-officer-16354283931953762",
-      "parent": null,
-      "children": [],
-      "actions": [
-        {
-          "name": "edit",
-          "icon": "far fa-edit",
-          "class": "edit-recommendation",
-          "link": "categories/1/"
-        },
-        {
-          "name": "delete",
-          "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "categories/1/"
-        }
-      ],
-      "created_at": "2021-10-28T13:39:53.196064Z",
-      "updated_at": "2021-10-28T13:39:53.197503Z"
     },
     {
       "id": 4,
@@ -276,14 +267,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
-          "link": "categories/4/"
+          "class": "categories-edit",
+          "link": "http://localhost:3000/categories/4/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "categories/4/"
+          "class": "categories-delete toggle-dialog",
+          "link": "http://localhost:3000/categories/4/"
         }
       ],
       "created_at": "2021-10-28T13:39:53.204848Z",
@@ -299,14 +290,14 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
-          "link": "categories/5/"
+          "class": "categories-edit",
+          "link": "http://localhost:3000/categories/5/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "categories/5/"
+          "class": "categories-delete toggle-dialog",
+          "link": "http://localhost:3000/categories/5/"
         }
       ],
       "created_at": "2021-10-28T13:39:53.207564Z",
@@ -322,19 +313,20 @@
         {
           "name": "edit",
           "icon": "far fa-edit",
-          "class": "edit-recommendation",
-          "link": "categories/3/"
+          "class": "categories-edit",
+          "link": "http://localhost:3000/categories/3/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
-          "class": "btn--primary",
-          "link": "categories/3/"
+          "class": "categories-delete toggle-dialog",
+          "link": "http://localhost:3000/categories/3/"
         }
       ],
       "created_at": "2021-10-28T13:39:53.202408Z",
       "updated_at": "2021-10-28T13:39:53.203813Z"
     }
+
   ],
   "sideBar": [
     {

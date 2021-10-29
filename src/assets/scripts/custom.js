@@ -581,12 +581,14 @@ $(".list__sidebar").each(function (i, item) {
 //   .catch(e => console.log(e))
 // })
 // drawers
+
 $(document)
   .on("click", ".toggle", function () {
+    // console.log()
     $(".drawer--left").toggleClass("drawer--open");
 
     $(".video-player").toggleClass("video-player--collapse");
-    // console.log($(".drawer--left").closest(".drawers-container"));
+    console.log($(".drawer--left").closest(".drawers-container"));
   })
   .on("click", ".left-open", function () {
     $(".drawer--left").toggleClass("open");
