@@ -3,15 +3,22 @@
   width: 100%;
   // height: 100%;
   height: calc(100vh - 60px);
-	transition: .3s ease all;
+  transition: .3s ease all;
+
   iframe,
   .iframe-parent-class {
     width: 100%;
     height: 100%;
   }
-	&.video-player--collapse{
-		height: calc(50vh - 30px);
-	}
+
+  iframe {
+    border: none
+  }
+
+  &.video-player--collapse {
+    height: calc(50vh - 30px);
+  }
+
   //flex-grow: 2 2;
   //iframe {
   ////  height: calc(100vh - 60px);
