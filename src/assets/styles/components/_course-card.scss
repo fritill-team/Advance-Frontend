@@ -31,7 +31,7 @@
 		transform: translateY(100%);
 		z-index: 1;
 		clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
-		opacity: .8;
+		opacity: .9;
 	}
 	&::after{
 		transition: .5s ease all;
@@ -218,17 +218,32 @@
     animation: list;
     animation-duration: 0.5s;
 		display: flex;
+		height: auto;
+		&::after,&::before{
+			height: 100%;
+			// display: none;
+		}
+		&::after{
+			z-index: 1;
+		}
+		&::before{
+			z-index: 2;
+		}
 		.course-card__preview{
 			display: inline-block;
 			width: 35%;
 			min-height: 200px;
-
+			margin-bottom: 0;
+			z-index: 5;
 		}
 		.course-card__content{
 			width: 100%;
-
 		}
-
+		&:hover{
+			// .course-card__content *{
+			// 	color: inherit;
+			// }
+		}
     //.course-card__card-media {
     //  display: flex;
     //  width: 100%;
