@@ -335,6 +335,9 @@ textarea {
       border: 1px solid #dc3545;
     }
   }
+  select{
+    padding: 8px 12px;
+  }
 }
 
 /**
@@ -434,12 +437,36 @@ ul {
     // box-shadow: 0 0 4px 0 rgba(#FFF, 0.5);
     border: 1px solid rgba(#fff, 0.5);
   }
+  input:focus,
+  textarea:focus {
+    outline: 0;
+    box-shadow: none;
+    border: none;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #FFF;
+  }
   textarea {
     background: #576874;
     box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
     &:focus {
       color: #FFF;
       box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
+    }
+  }
+  .field-wrapper{
+    &.field-wrapper--error{
+      input:focus,
+      textarea:focus {
+        outline: 0;
+        box-shadow: none;
+        border: none;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: #FFF;
+      }
     }
   }
 }

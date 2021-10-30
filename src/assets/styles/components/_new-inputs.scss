@@ -2,22 +2,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  // field wrapper Error case (1)
   &.field-wrapper--error{
-    
-    .field-wrapper__input,
     .field-wrapper__label {
       color: #dc3545;
     }
     .field-wrapper__messages {
       li {
-        display: block;
         color: #dc3545;
       }
     }
-    // field Error
     .field{
       border: 1px solid #dc3545;
-      color: #dc3545;
       &[type="checkbox"],
       &[type="radio"] {
         & + label:before {
@@ -64,11 +60,11 @@
       }
       &.field--underline{
         border: none;
-        border-bottom: 1px solid rgba( #dc3545 , 0.2);
-        box-shadow: none;
+        border-bottom: 1px solid rgba( #dc3545 , 1);
     }
     }
   }
+  // field wrapper smaller case (2)
   &.field-wrapper--sm{
     .field-wrapper__label {
       font-size: 12px;
@@ -84,12 +80,6 @@
       font-size: 12px;
       padding: 4px 9px;
       height: 38px;
-      &[type='file']{
-        // display: none;
-        & + label{
-          font-size: 14px;
-        }
-      }
       &[type="checkbox"],
       &[type="radio"] {
         & + label {
@@ -98,6 +88,7 @@
       }
       &[type='file']{
         & + label{
+          font-size: 14px;
           padding: 1rem 0.8rem;
           &:after{
             padding: 1rem 0.8rem;
@@ -112,6 +103,7 @@
       }
     }
   }
+  // field wrapper larger case (3)
   &.field-wrapper--lg{
     .field-wrapper__label {
       font-size: 18px;
@@ -130,7 +122,6 @@
       font-size: 18px;
       height: 48px;
       &[type='file']{
-        // display: none;
         & + label{
           font-size: 18px;
           padding: 1.4rem .9rem;
@@ -157,60 +148,9 @@
           }
         }
       }
+   }
   }
-  }
-  // start switch
-  .switch {
-    input[type="checkbox"],
-    input[type="radio"]{
-      display: none;
-      &:checked {
-        & + label {
-          &:before {
-            background-color: rgba($color: $primary, $alpha: 0.3);
-          }
-          &:after {
-            left: 18px;
-            background-color: $primary;
-          }
-        }
-      }
-    }
-
-  label {
-    padding-left: 40px;
-    position: relative;
-    &:before {
-      position: absolute;
-      content: "";
-      width: 37px;
-      height: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 2px;
-      background-color: rgba($color: #a9a9a9, $alpha: 0.3);
-      box-shadow: 0 0 3px rgba($color: #a9a9a9, $alpha: 0.7);
-      border-radius: 25px;
-      transition: 0.5s ease all;
-      z-index: 0;
-    }
-    &:after {
-      position: absolute;
-      content: "";
-      width: 21px;
-      height: 21px;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 2px;
-      border-radius: 50%;
-      background-color: #a9a9a9;
-      transition: 0.5s ease all;
-    }
-  }
-  }
-  select{
-    padding: 8px 12px;
-  }
+  // field wrapper input with arrow case (4)
   &.field-wrapper--arrow{
     .field-wrapper__content{
       position: relative;
@@ -238,11 +178,53 @@
     }
   }
 }
-.field-wrapper__label{
- font-size: 16px;
-  font-weight: 600;
-  padding: 6px 16px;
-  color: $primary;
+// start switch
+.switch {
+  input[type="checkbox"],
+  input[type="radio"]{
+    display: none;
+    &:checked {
+      & + label {
+        &:before {
+          background-color: rgba($color: $primary, $alpha: 0.3);
+        }
+        &:after {
+          left: 18px;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+label {
+  padding-left: 40px;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 37px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    background-color: rgba($color: #a9a9a9, $alpha: 0.3);
+    box-shadow: 0 0 3px rgba($color: #a9a9a9, $alpha: 0.7);
+    border-radius: 25px;
+    transition: 0.5s ease all;
+    z-index: 0;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    border-radius: 50%;
+    background-color: #a9a9a9;
+    transition: 0.5s ease all;
+  }
+}
 }
 .field-wrapper__content{
   position: relative;
@@ -260,20 +242,6 @@
     left: 0;
   }
 }
-
-.field-wrapper__messages{
-  font-weight: 500;
-  color: inherit;
-  list-style: none;
-
-  li {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 16px;
-    color: $primary;
-  }
-}
-
 .check-field-group {
   display: flex;
   flex-direction: column;
@@ -283,24 +251,29 @@
   & > div {
     display: contents;
   }
-
   &.check-field-group--horizontal {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-  .field{
-    &[type="checkbox"],
-    &[type="radio"] {
-    & + label {
-      span{
-        top: 50%;
-      }
-    }
+    flex-wrap: wrap;
   }
 }
+.field-wrapper__label{
+  font-size: 16px;
+   font-weight: 600;
+   padding: 6px 16px;
+   color: $primary;
+ }
+.field-wrapper__messages{
+  font-weight: 500;
+  color: inherit;
+  li {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    color: $primary;
+  }
 }
-
 .field{
   font-size: 16px;
   width: 100%;
@@ -314,11 +287,7 @@
 
   &[type="checkbox"],
   &[type="radio"] {
-    position: absolute;
-    left: 0;
-    width: 12px;
     display: none;
-
     & + label {
       position: relative;
       font-size: 14px;
@@ -327,12 +296,10 @@
       color: $gray;
       margin: 7px 0px;
       padding-left: 30px;
-      white-space: nowrap;
       span{
         position: absolute;
         background-color: $primary;
         left: -11px;
-        // z-index: 0;
         top: 8px;
         transform: translateY(-50%);
         width: 40px;
@@ -379,16 +346,8 @@
     & + label {
       padding-top: 2px;
       span{
-        left: -11px;
         top: 9px;
-        width: 40px;
-        height: 40px;
       }
-      &:hover{
-        span{
-          opacity:0.2;
-        }
-    }
     }
     & + label:before {
       border-radius: 2px;
@@ -404,17 +363,6 @@
   }
 
   &[type="radio"] {
-    & + label{
-      span{
-        left: -11px;
-        top: 8px;
-      }
-      &:hover{
-        span{
-          opacity:0.2;
-        }
-    }
-    }
     & + label:before {
       left: 0px;
       top: -1px;
@@ -469,15 +417,9 @@
   }
 
   &.field--underline{
-    box-shadow: none;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-    position: relative;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin: 0 10px 0 0;
-    position: relative;
     &:focus {
       border-bottom: 1px solid rgba($primary, 0.5);
     }
@@ -597,7 +539,6 @@
   &[type='file']{
     display: none;
     & + label{
-      // height: calc(1.4em + 0.75rem + 2px);
       padding: 1.2rem .8rem;
       font-size: 14px;
     }
@@ -662,12 +603,11 @@
 
     &.field--underline{
       background: #43525c;
-      box-shadow: none;
-      border: 0;
-      border-bottom: 1px solid rgba(#57687451 ,.5);
+			border: none;
+			box-shadow: none;
+      border-bottom: 1px solid hsla(0,0%,100%,.5);
       &:focus{
         border-bottom: 1px solid hsla(0,0%,100%,.5);
-
       }
     }
     &.field--checked{
@@ -696,22 +636,6 @@
   }
   .field-wrapper{
     &.field-wrapper--error{
-      input:focus,
-      textarea:focus {
-        outline: 0;
-        box-shadow: none;
-        border: none;
-      }
-      input::placeholder,
-      textarea::placeholder {
-        color: #FFF;
-      }
-      .field-wrapper__input {
-        color: #FFF;
-      }
-      .field-wrapper__label {
-        color: #dc3545;
-      }
       .field-wrapper__messages {
         li {
           display: block;
@@ -720,11 +644,7 @@
       }
       // field Error
       .field{
-        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
-        box-shadow: none;
-        border: none;
         color: #FFF;
-
         &[type="checkbox"],
         &[type="radio"] {
           & + label {
@@ -764,9 +684,6 @@
             }
           }
         }
-        &.field--underline{
-          border-bottom: 1px solid rgba( #dc3545 , 1);
-      }
      }
     }
     .field{

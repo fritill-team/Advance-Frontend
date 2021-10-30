@@ -307,58 +307,58 @@
   }
 }
 
-.switch {
-  margin-left: 10px;
+// .switch {
+//   margin-left: 10px;
 
-  input[type="checkbox"] {
-    display: none;
+//   input[type="checkbox"] {
+//     display: none;
 
-    &:checked {
-      & + label {
-        &:before {
-          background-color: rgba($color: $secondary, $alpha: 0.3);
-        }
+//     &:checked {
+//       & + label {
+//         &:before {
+//           background-color: rgba($color: $secondary, $alpha: 0.3);
+//         }
 
-        &:after {
-          left: 16px;
-        }
-      }
-    }
-  }
+//         &:after {
+//           left: 16px;
+//         }
+//       }
+//     }
+//   }
 
-  label {
-    padding-left: 40px;
-    position: relative;
+//   label {
+//     padding-left: 40px;
+//     position: relative;
 
-    &:before {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      background-color: rgba($color: #aaa, $alpha: 0.3);
-      box-shadow: 0 0 3px rgba($color: $secondary, $alpha: 0.7);
-      border-radius: 25px;
-      transition: 0.5s ease all;
-      z-index: 0;
-    }
+//     &:before {
+//       position: absolute;
+//       content: "";
+//       width: 30px;
+//       height: 14px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       left: 0;
+//       background-color: rgba($color: #aaa, $alpha: 0.3);
+//       box-shadow: 0 0 3px rgba($color: $secondary, $alpha: 0.7);
+//       border-radius: 25px;
+//       transition: 0.5s ease all;
+//       z-index: 0;
+//     }
 
-    &:after {
-      position: absolute;
-      content: "";
-      width: 12px;
-      height: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 2px;
-      border-radius: 50%;
-      background-color: $primary;
-      transition: 0.5s ease all;
-    }
-  }
-}
+//     &:after {
+//       position: absolute;
+//       content: "";
+//       width: 12px;
+//       height: 12px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       left: 2px;
+//       border-radius: 50%;
+//       background-color: $primary;
+//       transition: 0.5s ease all;
+//     }
+//   }
+// }
 
 // Answer Style
 .exams-questions {
