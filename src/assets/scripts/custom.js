@@ -589,14 +589,14 @@ $(document)
     // console.log()
     $(".drawer--left").toggleClass("drawer--open");
 
-    $(".video-player").toggleClass("video-player--collapse");
-    console.log($(".drawer--left").closest(".drawers-container"));
+    // $(".video-player").toggleClass("video-player--collapse");
+    // console.log($(".drawer--left").closest(".drawers-container"));
   })
   .on("click", ".left-open", function () {
     $(".drawer--left").toggleClass("open");
   })
   .on("click", ".header__link", function () {
-    $(".drawer--left").toggleClass("drawer--open");
+    // $(".drawer--left").toggleClass("drawer--open");
   })
   .on("click", ".right-open", function () {
     $(".drawer--right").toggleClass("open");
