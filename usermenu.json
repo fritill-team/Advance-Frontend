@@ -9,8 +9,15 @@
   {
     "title": "Account Settings",
     "has_children": false,
-    "icon": "fa fa-user-cogs",
+    "icon": "fa fa-user-cog",
     "url": "/user-settings.html",
+    "is_active": false
+  },
+  {
+    "title": "Account Security",
+    "has_children": false,
+    "icon": "fa fa-user-shield",
+    "url": "/user-security.html",
     "is_active": false
   },
   {
