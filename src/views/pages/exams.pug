@@ -9,14 +9,21 @@ block content
 		.exam
 			.exam__content
 				include ../mixins/card.pug
-				+card('card--dragging')
-					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae quaerat optio blanditiis, magni voluptatibus illo asperiores aspernatur minus fugit rerum quibusdam ipsam consectetur commodi eligendi temporibus itaque neque dolorum?
-					block header
-						p lorem
-					block content 
-						p lorem
-					block footer 
-						p lorem
+				+card('card--with-label card--active')
+					.field-wrapper
+						label.field-wrapper__label Section Title*
+						.field-wrapper__content
+							input(class="field field--underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+						ul.field-wrapper__messages
+							li
+								| Please provide a section name
+					.field-wrapper
+						label.field-wrapper__label Section description*
+						.field-wrapper__content
+							textarea( rows='5' name='description' placeholder='Insert your course description')
+						ul.field-wrapper__messages
+							li
+								| Please provide section description
 				.card.card--with-label
 					.card__label
 						div.card__label-inner
