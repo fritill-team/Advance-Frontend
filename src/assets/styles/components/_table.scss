@@ -1,39 +1,23 @@
 .table-responsive {
   display: block;
   width: 100%;
-  // overflow-x: auto;
-  border: 1px solid #efefef;
   border-radius: 5px;
   margin-bottom: 12px;
-  &.table-responsive-survey{
+  &.table-responsive-exams {
     border: none;
     border-radius: 0;
   }
 }
-
 .table {
   width: 100%;
-
   th {
     background-color: #1dbae626;
     font-weight: 600;
     color: $primary;
   }
-
-  th.sortable {
-
-    .sortable--up {
-
-    }
-
-    .sortable--down {
-
-    }
-  }
-
-
-  th, td {
-    padding: 4px 8px;
+  th,
+  td {
+    padding: 12px;
     font-size: 14px;
     line-height: 1;
     text-align: center;
@@ -41,16 +25,12 @@
     &.main-cell {
       text-align: left;
     }
-
-    * {
-      font-size: 14px;
-    }
   }
-  th{
+  th {
     text-transform: capitalize;
   }
-  td{
-    &.td--nowrap{
+  td {
+    &.td--nowrap {
       white-space: nowrap;
     }
   }
@@ -63,69 +43,119 @@
     font-size: 14px;
     padding: 4px;
   }
-  &.table--survey{
-    width: 80%;
+  &.table--exams {
     border-collapse: collapse;
     margin: auto;
-    tbody{
-      tr{
-        &:nth-of-type(odd) {
-          background-color: aliceblue;
-        }
-      }
-    }  
-    th {
-      background-color: unset;
-      &:first-child{
-        opacity: 0;
+		position: relative;
+    overflow: auto;
+    tbody {
+      tr {
+				background-color: #f8f9fa;
+				border-bottom: 4px solid;
+				border-color: #FFF;
       }
     }
-    th, td{
-      padding: 8px 8px;
-      .check-field{
+    th,
+    td {
+      padding: 12px;
+      .check-field {
         margin: auto;
       }
+			&:first-of-type{
+				z-index: 2;
+				position: sticky;
+				left: 0px;
+				background-color: #f8f9fa;
+			}
     }
-    td{
+		th {
+      background-color: unset;
+			color: #202124;
+			&:first-of-type{
+				z-index: 2;
+				background-color: #FFF;
+			}
+    }
+    td {
       font-weight: 600;
-      color:$primary ;
-      padding: 10px;
+      color: #202124;
+      padding: 12px;
     }
+    @media (max-width: 767px) {
+      th,
+      td {
+        &:first-of-type{
+          box-shadow: 5px 0 5px -1px #d7d4d4;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: scroll;
   }
 }
 
 html[dir="rtl"] {
   .table {
-    th, td {
+    th,
+    td {
       &.main-cell {
         text-align: right;
       }
     }
-    &.table--survey{
-      thead{
-        position: relative;
-        left: 12px;        
+    &.table--exams {
+      td {
+        .field {
+          &[type="radio"],
+          &[type="checkbox"] {
+            & + label {
+              padding-right: 0;
+            }
+          }
+        }
       }
+			th,
+			td {
+				&:first-of-type{
+					z-index: 2;
+					right: 0px;
+				}
+			}
     }
   }
 }
-.night-mode{
-  .table{
-    &.table--survey{
-      tbody{
-        background: transparent;
-        tr{
-          &:nth-of-type(odd) {
-            background-color: rgba($color: $primary, $alpha: 0.2);
-          }
-        }
-      }  
-      th {
-        color: $white;
-      }
-      td{
-        color:$white ;
-      }
+.night-mode {
+  .table {
+    tbody {
+      background: #3a474f;
+      color: #fff;
     }
+		&.table--exams {
+			tbody {
+				tr {
+					background-color:#43525c;
+					border-color: #576874;
+				}
+			}
+			th,
+			td {
+				&:first-of-type{
+					background-color: #43525c;
+					color: $white;
+				}
+			}
+			th {
+				background-color: unset;
+				color: $white;
+				&:first-of-type{
+					background-color: #43525c;
+				}
+			}
+			td {
+				color: #202124;
+			}
+		}
   }
 }

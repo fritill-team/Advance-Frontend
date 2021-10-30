@@ -119,6 +119,7 @@ $(".list").on("click", function () {
     .parent()
     .removeClass("col-lg-4")
     .addClass("col-lg-12");
+  $(".course-card-container").addClass("course-card-container--list-view");
 });
 $(".grid").on("click", function () {
   $(".course-card--list-view")
@@ -130,6 +131,7 @@ $(".grid").on("click", function () {
     .parent()
     .removeClass("col-lg-12")
     .addClass("col-lg-4");
+  $(".course-card-container").removeClass("course-card-container--list-view");
 });
 
 // $(".menu--item .menu--link").each(function() {
@@ -589,14 +591,14 @@ $(document)
     // console.log()
     $(".drawer--left").toggleClass("drawer--open");
 
-    $(".video-player").toggleClass("video-player--collapse");
-    console.log($(".drawer--left").closest(".drawers-container"));
+    // $(".video-player").toggleClass("video-player--collapse");
+    // console.log($(".drawer--left").closest(".drawers-container"));
   })
   .on("click", ".left-open", function () {
     $(".drawer--left").toggleClass("open");
   })
   .on("click", ".header__link", function () {
-    $(".drawer--left").toggleClass("drawer--open");
+    // $(".drawer--left").toggleClass("drawer--open");
   })
   .on("click", ".right-open", function () {
     $(".drawer--right").toggleClass("open");
