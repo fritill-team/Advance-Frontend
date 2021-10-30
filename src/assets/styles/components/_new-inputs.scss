@@ -124,10 +124,10 @@
       &[type='file']{
         & + label{
           font-size: 18px;
-          padding: 1.4rem .9rem;
+          padding: 1.5rem .9rem;
           &:after{
-            padding: 1.4rem 0.9rem;
-            height: calc(1.4em + .75rem);
+            padding: 1.5rem 0.9rem;
+            // height: calc(1.4em + .75rem);
           }
           &:before{
             font-size: 18px;
@@ -389,24 +389,20 @@ label {
       right: 0;
       left: 0;
       z-index: 1;
-      height: calc(1.4em + 0.75rem + 2px);
-      padding: 1.2rem 0.9rem;
+      padding: 1.25rem 0.9rem;
       font-weight: 400;
       line-height: 0;
       color: $primary;
       background-color: $white;
       border: 1px solid #efefef;
       border-radius: 6px;
-      margin-bottom: 0;
-      box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
       &:after{
         position: absolute;
         top: 0;
         right: 0;
         z-index: 3;
         display: block;
-        height: calc(1.4em + 0.75rem);
-        padding: 1.2rem 1rem;
+        padding: 1.25rem 1rem;
         color: $white;
         content: "Upload File";
         background-color: $primary;
@@ -415,7 +411,6 @@ label {
       }
     }
   }
-
   &.field--underline{
     border: none;
     border-radius: 0;
@@ -431,16 +426,10 @@ label {
   &.field--rounded{
     &[type="checkbox"] {
       & + label {
-        padding-top: 2px;
         span{
           left: -10px;
           top: 50%;
         }
-        &:hover{
-          span{
-            opacity:0.2;
-          }
-      }
       }
       & + label:before {
         border-radius: 50%;
@@ -512,19 +501,8 @@ label {
   }
 }
 
-@media(max-width: 767px){
-  .check-field-group{
-    flex-wrap: wrap;
-    label {
-      width: 50%;
-    }
-  }
-}
 @media(max-width: 576px){
   .field{
-    font-size: 14px;
-  }
-  textarea{
     font-size: 14px;
   }
   .field-wrapper__label{
@@ -535,15 +513,6 @@ label {
       font-size: 14px;
     }
   }
-  .field{
-  &[type='file']{
-    display: none;
-    & + label{
-      padding: 1.2rem .8rem;
-      font-size: 14px;
-    }
-  }
-}
 .check-field-group{
   &.check-field-group--horizontal {
     flex-direction: column;
@@ -586,7 +555,6 @@ label {
       &:checked + label:after {
         border: 6px solid #576874;
       }
-
     }
 
     &[type='file']{
@@ -618,7 +586,6 @@ label {
           & + label {
             opacity: 1;
             &:before{
-              // background: $primary;
               border: 1px solid $primary;
             }
             &:after{
@@ -630,15 +597,10 @@ label {
       }
     }
   }
-
-  .upload-input{
-    display: inline-block;
-  }
   .field-wrapper{
     &.field-wrapper--error{
       .field-wrapper__messages {
         li {
-          display: block;
           color: #dc3545;
         }
       }
@@ -651,7 +613,6 @@ label {
             color: #FFF;
           }
           & + label:before {
-            border: none;
             background: #FFF;
           }
         }
@@ -667,9 +628,6 @@ label {
         }
 
         &[type="radio"] {
-          &:checked + label:after {
-             border: none;
-          }
           & + label{
             &:after{
               background-color: #dc3545;
@@ -687,12 +645,10 @@ label {
      }
     }
     .field{
-      // accent color in night-mode
       &.field--accent{
         &[type="checkbox"] {
           & + label:before {
             border: 1px solid $accent;
-            // background: #e5e5e5;
           }
           &:checked + label:after {
             border-bottom: 3px solid $accent;
@@ -741,7 +697,6 @@ label {
    }
    textarea {
      color: #FFF;
-     border: none;
     &:focus {
       border: 1px solid #e5e5e5;
     }

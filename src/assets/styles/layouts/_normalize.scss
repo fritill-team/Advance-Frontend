@@ -293,6 +293,7 @@ select:focus-visible {
   border: 1px solid rgba($primary, 0.5);
   outline: none;
 }
+
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -453,6 +454,9 @@ ul {
     &:focus {
       color: #FFF;
       box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
+    }
+    @media(max-width: 576px){
+      font-size: 14px;
     }
   }
   .field-wrapper{
