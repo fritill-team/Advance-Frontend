@@ -1,8 +1,9 @@
-- var withLabel = 'card--with-label'
-- var dragging = 'card--dragging'
+- var withLabel = ' card--with-label'
+- var dragging = ' card--dragging'
+- var active = 'card--active'
 mixin card(modifier)
 	div.card(class=modifier)
-		if modifier === withLabel
+		if modifier == withLabel || dragging + withLabel || active + withLabel
 			.card__label
 				div.card__label-inner
 					p section 1 of 3
@@ -18,10 +19,10 @@ mixin card(modifier)
 							a.content__link(href="#") lorem 3
 			.card--drag-vertical
 				i.fas.fa-grip-vertical
-		block 
+		block
 		.card__header
 			block header
 		.card__content
-			block content 
-		.card__footer 
+			block content
+		.card__footer
 			block footer
