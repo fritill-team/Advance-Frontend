@@ -16,7 +16,7 @@ input[type="button"].btn {
   cursor: pointer;
   letter-spacing: 1.25px;
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
-
+	margin: 0 14px 0 0;
   &:hover:before {
     opacity: 0.15;
   }
@@ -357,4 +357,9 @@ html[dir="rtl"] {
     margin-top: 16px !important;
     margin-right: auto !important;
   }
+}
+html[dir="rtl"]{
+	.btn{
+		margin: 0 0 0 14px;
+	}
 }

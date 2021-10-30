@@ -89,11 +89,9 @@ let NoOfCols = 0,
 
 const courseTemplate = function (course) {
   return `
-    <div class="course-card">
+    <div class="course-card course-card--grid-view">
       <a href="${course.url}" class="course-card__preview youtube-activator">
-        <img src="${course.cover}" alt="${
-    course.title
-  }" class="course-card__preview-cover">
+        <img src="${course.cover}" alt="${course.title}" class="course-card__preview-cover">
         <div class="course-card__preview-video youtube-player"
              id="course-${course.id}"
              data-video-id="${course.video_id}"></div>
@@ -101,27 +99,15 @@ const courseTemplate = function (course) {
       </a>
       <div class="course-card__content">
         <div class="course-card__meta">
-          <span class="body-2">${course.subscribers}</span>
-          <span class="body-2">${course.duration}</span>
+				<a class="title-link text-2 semi-bold" href="${course.url}">${course.title}</a>
           <p class="body-2 course-card__rate">
             <i class="fa fa-star"></i>${course.total_rate}
           </p>
         </div>
-        <a class="title-link text-2 semi-bold" href="${course.url}">${
-    course.title
-  }</a>
         <p class="text-3 gray">${course.category}</p>
-        <div class="course-card__footer">
-           <a href="${
-             course.actions.url
-           }" class="btn btn--outlined btn--primary">${
-    course.actions.action
-  }</a>
-           <a href="javascript:void(0)" class="btn btn--text btn--danger icon--hover"><i class="${
-             course.is_favorite ? "fas" : "far"
-           } fa-heart"></i></a>
-        </div>
+        
       </div>
+			
     </div>`;
 };
 
