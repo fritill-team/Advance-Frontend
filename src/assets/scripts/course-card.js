@@ -104,7 +104,7 @@ const courseTemplate = function (course) {
             <i class="fa fa-star"></i>${course.total_rate}
           </p>
         </div>
-        <p class="text-3 gray">${course.category}</p>
+        <p class="body-2 gray">${course.category}</p>
         
       </div>
 			

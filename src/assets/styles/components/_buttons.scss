@@ -17,6 +17,8 @@ input[type="button"].btn {
   letter-spacing: 1.25px;
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
 	margin: 0 14px 0 0;
+	margin-right: 16px;
+	
   &:hover:before {
     opacity: 0.15;
   }

@@ -119,6 +119,7 @@ $(".list").on("click", function () {
     .parent()
     .removeClass("col-lg-4")
     .addClass("col-lg-12");
+  $(".course-card-container").addClass("course-card-container--list-view");
 });
 $(".grid").on("click", function () {
   $(".course-card--list-view")
@@ -130,6 +131,7 @@ $(".grid").on("click", function () {
     .parent()
     .removeClass("col-lg-12")
     .addClass("col-lg-4");
+  $(".course-card-container").removeClass("course-card-container--list-view");
 });
 
 // $(".menu--item .menu--link").each(function() {

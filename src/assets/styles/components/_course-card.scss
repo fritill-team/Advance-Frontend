@@ -5,6 +5,9 @@
 	// height: 100%;
 	margin-bottom: 30px;
   // padding-bottom: 30px;
+	&.course-card-container--list-view{
+		height: auto;
+	}
 }
 
 .course-card {
@@ -43,7 +46,7 @@
 		background-color: $accent;
 		left: 0;
 		bottom: 0;
-		transform: translateX(-100%);
+		transform: translateY(100%);
 		z-index: 2;
 	}
   &:hover{
@@ -51,7 +54,7 @@
 			transform: translateY(0);
 		}
 		&::after{
-			transform: translateX(0) ;
+			transform: translateY(0) ;
 		}
 		box-shadow: 0px 3px 10px 0px rgba(31,31,31,0.16);
 		.course-card__content{
@@ -148,17 +151,14 @@
   }
 
   .course-card__content {
-    padding: 10px 5px 0 5px;
+    // padding: 10px 5px 0 5px;
 		position: relative;
 		transition: .3s ease all;
 		z-index: 4;
-    @media (max-width: 1199.98px) and (min-width: 992px) {
-      padding: 0;
-    }
   }
 
   .course-card__rate {
-    margin-left: auto;
+    margin: 0 0 0 auto;
     color: $accent;
 		white-space: nowrap;
     i {
@@ -225,6 +225,8 @@
 		}
 		&::after{
 			z-index: 1;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			// test
 		}
 		&::before{
 			z-index: 2;
@@ -235,35 +237,16 @@
 			min-height: 200px;
 			margin-bottom: 0;
 			z-index: 5;
+			@media(max-width: 992px){
+				min-width: 110px;
+    		min-height: 110px;
+			}
 		}
 		.course-card__content{
 			width: 100%;
+			padding: 0 12px;
 		}
-		&:hover{
-			// .course-card__content *{
-			// 	color: inherit;
-			// }
-		}
-    //.course-card__card-media {
-    //  display: flex;
-    //  width: 100%;
-    //
-    //  .card-media__card-img {
-    //    max-width: 35%;
-    //  }
-    //
-    //  .card-media__card-content {
-    //    display: flex;
-    //    flex-direction: column;
-    //    justify-content: space-between;
-    //    padding-top: 0;
-    //    transition: all 0.4s ease-in-out;
-    //  }
-    //}
-    //
-    //.card-auth__price {
-    //  flex-direction: row-reverse;
-    //}
+		
   }
 }
 
@@ -274,102 +257,107 @@
 
 //dir rtl
 html[dir="rtl"] {
+
   .course-card {
-    .course-card__card-media {
+		.course-card__rate{
+			margin: 0 auto 0 0;
+		}
+	}
+  //   .course-card__card-media {
 
-      .card-media__card-img {
-        .card-img__card-overlay {
-          position: absolute;
-          top: 0;
-          padding: 10px;
-          left: 0;
-          right: 0;
-          bottom: 4px;
-          background-image: linear-gradient(
-              transparent,
-              rgba(51, 51, 51, 0.3) 90%
-          );
+  //     .card-media__card-img {
+  //       .card-img__card-overlay {
+  //         position: absolute;
+  //         top: 0;
+  //         padding: 10px;
+  //         left: 0;
+  //         right: 0;
+  //         bottom: 4px;
+  //         background-image: linear-gradient(
+  //             transparent,
+  //             rgba(51, 51, 51, 0.3) 90%
+  //         );
 
-          .card-overlay__badge-seller {
-            right: 0;
+  //         .card-overlay__badge-seller {
+  //           right: 0;
 
-            &::after {
-              right: -5px;
-              border-bottom-right-radius: 2px;
-              border-top-right-radius: 3px;
-              border-bottom-left-radius: 3px;
-            }
-          }
+  //           &::after {
+  //             right: -5px;
+  //             border-bottom-right-radius: 2px;
+  //             border-top-right-radius: 3px;
+  //             border-bottom-left-radius: 3px;
+  //           }
+  //         }
 
-          span.card-overlay__play_btn1 {
-            float: right;
-            left: 40%;
+  //         span.card-overlay__play_btn1 {
+  //           float: right;
+  //           left: 40%;
 
-            i.uil-play {
-              &::before {
-                margin-left: 0.2em;
-                margin-right: 0.2em;
-              }
-            }
-          }
+  //           i.uil-play {
+  //             &::before {
+  //               margin-left: 0.2em;
+  //               margin-right: 0.2em;
+  //             }
+  //           }
+  //         }
 
-          .card-overlay__crd-timer {
-            left: 0;
-            margin-right: 10px;
-          }
-        }
-      }
+  //         .card-overlay__crd-timer {
+  //           left: 0;
+  //           margin-right: 10px;
+  //         }
+  //       }
+  //     }
 
-      .card-overlay__reviews {
-        padding: 3px 10px 3px 15px;
-        left: 10px;
-        right: unset;
+  //     .card-overlay__reviews {
+  //       padding: 3px 10px 3px 15px;
+  //       left: 10px;
+  //       right: unset;
 
-        .crd-reviews i {
-          margin-left: 2px;
+  //       .crd-reviews i {
+  //         margin-left: 2px;
 
-          .uil-star::before {
-            content: "\EBAF";
-          }
+  //         .uil-star::before {
+  //           content: "\EBAF";
+  //         }
 
-          [class*=" uil-"]::before,
-          [class^="uil-"]::before {
-            margin-left: 0.2em;
-            margin-right: 0.2em;
-          }
-        }
-      }
+  //         [class*=" uil-"]::before,
+  //         [class^="uil-"]::before {
+  //           margin-left: 0.2em;
+  //           margin-right: 0.2em;
+  //         }
+  //       }
+  //     }
 
-      // start card-content part2
-      .card-media__card-content {
-        padding: 10px 5px 0 5px;
-        float: right;
+  //     // start card-content part2
+  //     .card-media__card-content {
+  //       padding: 10px 5px 0 5px;
+  //       float: right;
 
-        .card-content__card-details {
-          text-align: right;
-        }
+  //       .card-content__card-details {
+  //         text-align: right;
+  //       }
 
-        a.card-content__card-description {
-          text-align: right;
-        }
+  //       a.card-content__card-description {
+  //         text-align: right;
+  //       }
 
-        a.card-content__card-title {
-          text-align: right;
-        }
+  //       a.card-content__card-title {
+  //         text-align: right;
+  //       }
 
-        p.card-auth__name-auther {
-          margin: 0 0 5px 10px;
-          float: right;
-          text-align: right;
-        }
+  //       p.card-auth__name-auther {
+  //         margin: 0 0 5px 10px;
+  //         float: right;
+  //         text-align: right;
+  //       }
 
-        .card-auth__price {
-          float: left;
-          text-align: right;
-        }
-      }
-    }
-  }
+  //       .card-auth__price {
+  //         float: left;
+  //         text-align: right;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 //.course-card__card-media {
