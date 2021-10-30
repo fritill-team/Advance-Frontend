@@ -1216,9 +1216,9 @@ html[dir="rtl"] {
 
 .night-mode {
   .card {
-    background-color: #43525c;
-    box-shadow: 0 0 5px -1px #fff;
-
+    background: $black;
+    // box-shadow: 0 0 5px -1px #fff;
+		@include whiteTypo;
     .card__header {
       .header__title {
         color: #fff;

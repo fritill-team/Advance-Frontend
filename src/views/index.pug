@@ -2,20 +2,10 @@ extends ./layouts/site.pug
 
 block title
 	title My Page - Home
-//- block button-collapsed
-//- 	button(class="toggle-menu toggle-menu--mobile toggle" id="toggleMenu" type='button')
-		i.fas.fa-bars.toggle__icon
-//- block menu-header
-//- 	include ./components/menu-list.pug
-//- block my-courses
-//- 	li
-//- 		a.white.body-2.notification__item(href='#')
-			|My Courses
 block content
 
 	.hero
 		img(class="hero__bg" src="./assets/images/hero_bg.jpg", alt="")
-		//- img(class="hero__avatar" src="./assets/images/hero_shape.png", alt="")
 		.hero-content
 			.container
 				.row
@@ -24,129 +14,36 @@ block content
 						p.body-1.white Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus libero perferendis similique molestiae totam! Velit quasi consequuntur sint, dolorem eaque, alias iusto commodi dolor quia expedita enim ratione et earum!
 	.section--partners
 		.container 
-			.row 
+			.row.justify-content-center
 				.col-lg-12
 					h2.title-h2.white Our partner
+				.col-sm-6
+					.partner__item
+						img(class="image preview" src="../../assets/images/drosos.png" alt="")
+				.col-sm-6
+					.partner__item
+						img(class="image preview" src="../../assets/images/nbe.png" alt="")
 	.container
 		.row
-
 			.col-xl-12.col-lg-12
 				section.section-index.section-index--pt
-					.d-flex.flex-column
-						.d-flex.justify-content-between.align-items-center.w-100
-							h3.title-h3 Live Streams
-					//- h4.item_title Live Streams
-					//- a.see150(href='live_streams.html') See all
-					.section-index
-						.owl-carousel.live_stream.owl-theme
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
-							.item
-								.card.card--centered.card--live-section
-									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
-										.card__body
-											.card__content-header
-												.user-data
-													a.text-3.semi-bold.my-0.white(href="#") Jose Portilla
-													p.text-3.white
-														span
-														| Live
+					.d-flex.justify-content-between.align-items-center.w-100
+						h3.title-h6.semi-bold  Popular surveys
+						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+					.row
+						.col-lg-6.col-md-6.col-sm-12
+							.card
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-6.col-sm-12
+							.card
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-6.col-sm-12
+							.card
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+						.col-lg-6.col-md-6.col-sm-12
+							.card
+								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
+
 				section.section-index.section-index--pt
 					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
@@ -170,361 +67,11 @@ block content
 											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
 										.col-sm-12.col-md-6.col-lg-4
 											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
-
-
-									//- .owl-carousel.featured_courses.owl-theme
-										.item
-											div(class="course-card-container" data-data='{"video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp: Go from zero to hero in Python 3","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"duration": "4 minutes","created_at": "Ronaldo","action": {"text": "enroll","link": "#"}}')
-											//- +course-card
-										.item
-											include ./components/course-card.pug
-											+course-card
-										.item
-											+course-card
-										.item
-											+course-card
-										.item
-											+course-card
-										.item
-											+course-card
-										.item
-											+course-card
-					//- h4.item_title Newest Courses
-					//- a.see150(href='#') See all
-					//- .la5lo1
-					//- 	.owl-carousel.featured_courses.owl-theme
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='course_detail_view.html')
-					//- 					img(src='../assets/images/courses/img-14.jpg' alt='')
-					//- 					.course-overlay
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 12 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 15 views
-					//- 						span.vdt14 10 min ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| Build Responsive Real World Websites with
-					//- 						| HTML5 and CSS3
-					//- 					a.crse-cate(href='#') Development | CSS
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') John Doe
-					//- 						.prce142 $4
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='course_detail_view.html')
-					//- 					img(src='../assets/images/courses/img-11.jpg' alt='')
-					//- 					.course-overlay
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 28 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 5 views
-					//- 						span.vdt14 15 Min ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| The Complete JavaScript Course 2020: Build
-					//- 						| Real Projects!
-					//- 					a.crse-cate(href='#') Development | JavaScript
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Jassica William
-					//- 						.prce142 $5
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='course_detail_view.html')
-					//- 					img(src='../assets/images/courses/img-18.jpg' alt='')
-					//- 					.course-overlay
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 15 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 25 views
-					//- 						span.vdt14 2 Hour ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| The Complete Front-End Web Development
-					//- 						| Course!
-					//- 					a.crse-cate(href='#') Development | Web Development
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Joginder Singh
-					//- 						.prce142 $9
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='course_detail_view.html')
-					//- 					img(src='../assets/images/courses/img-19.jpg' alt='')
-					//- 					.course-overlay
-					//- 						.crse_reviews
-					//- 							i.uil.uil-star
-					//- 							| 5.0
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 1 hour
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 15 views
-					//- 						span.vdt14 6 hours ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| Ethical Hacking - Most Advanced Level
-					//- 						| Penetration Testing
-					//- 					a.crse-cate(href='#') IT &amp; Software | Ethical Hacking
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Poonam Verma
-					//- 						.prce142 $10
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='#')
-					//- 					img(src='../assets/images/courses/img-12.jpg' alt='')
-					//- 					.course-overlay
-					//- 						.crse_reviews
-					//- 							i.uil.uil-star
-					//- 							| 3.5
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 28 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 45 views
-					//- 						span.vdt14 20 hours ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| Advanced CSS and Sass: Flexbox, Grid,
-					//- 						| Animations and More!
-					//- 					a.crse-cate(href='#') Development | Sass
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Rock William
-					//- 						.prce142 $6
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='#')
-					//- 					img(src='../assets/images/courses/img-13.jpg' alt='')
-					//- 					.course-overlay
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 30 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 20 Views
-					//- 						span.vdt14 1 day ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| The Complete Node.js Developer Course (3rd
-					//- 						| Edition)
-					//- 					a.crse-cate(href='#') Development | Node.js
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') John Doe
-					//- 						.prce142 $3
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='#')
-					//- 					img(src='../assets/images/courses/img-20.jpg' alt='')
-					//- 					.course-overlay
-					//- 						.crse_reviews
-					//- 							i.uil.uil-star
-					//- 							| 5.0
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 21 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 200 Views
-					//- 						span.vdt14 4 days ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| WordPress Development - Themes, Plugins &amp;
-					//- 						| Gutenberg
-					//- 					a.crse-cate(href='#') Design | Wordpress
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Joy Dua
-					//- 						.prce142 $14
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
-					//- 		.item
-					//- 			.fcrse_1.mb-20
-					//- 				a.fcrse_img(href='course_detail_view.html')
-					//- 					img(src='../assets/images/courses/img-16.jpg' alt='')
-					//- 					.course-overlay
-					//- 						span.play_btn1
-					//- 							i.uil.uil-play
-					//- 						.crse_timer
-					//- 							| 22 hours
-					//- 				.fcrse_content
-					//- 					.eps_dots.more_dropdown
-					//- 						a(href='#')
-					//- 							i.uil.uil-ellipsis-v
-					//- 						.dropdown-content
-					//- 							span
-					//- 								i.uil.uil-share-alt
-					//- 								| Share
-					//- 							span
-					//- 								i.uil.uil-heart
-					//- 								| Save
-					//- 							span
-					//- 								i.uil.uil-ban
-					//- 								| Not Interested
-					//- 							span
-					//- 								i.uil.uil-windsock
-					//- 								| Report
-					//- 					.vdtodt
-					//- 						span.vdt14 11 Views
-					//- 						span.vdt14 5 Days ago
-					//- 					a.crse14s(href='course_detail_view.html')
-					//- 						| Vue JS 2 - The Complete Guide (incl. Vue
-					//- 						| Router &amp; Vuex)
-					//- 					a.crse-cate(href='#') Development | Vue JS
-					//- 					.auth1lnkprce
-					//- 						p.cr1fot
-					//- 							| By
-					//- 							a(href='#') Manreet Kaur
-					//- 						.prce142 $10
-					//- 						button.shrt-cart-btn(title='cart')
-					//- 							i.uil.uil-shopping-cart-alt
 				section.section-index.section-index--pt
+					.d-flex.justify-content-between.align-items-center.w-100
+						h3.title-h6.semi-bold  Testimonials
 					.row
-						.col-xl-6.col-lg-12.col-md-6
+						.col-xl-4.col-md-6.col-sm-12
 							.card.card--centered.card--icon
 								.card__content
 									.user-image.mb-2
@@ -535,7 +82,7 @@ block content
 												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
-						.col-xl-6.col-lg-12.col-md-6
+						.col-xl-4.col-md-6.col-sm-12
 							.card.card--centered.card--icon
 								.card__content
 									.user-image.mb-2
@@ -546,7 +93,7 @@ block content
 												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
-						.col-xl-6.col-lg-12.col-md-6
+						.col-xl-4.col-md-6.col-sm-12
 							.card.card--centered.card--icon
 								.card__content
 									.user-image.mb-2
@@ -557,7 +104,7 @@ block content
 												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
-						.col-xl-6.col-lg-12.col-md-6
+						.col-xl-4.col-md-6.col-sm-12
 							.card.card--centered.card--icon
 								.card__content
 									.user-image.mb-2
@@ -568,24 +115,29 @@ block content
 												p.title-h6.semi-bold.my-0 100,000 online courses
 										.card__content--details
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
-				section.section-index.section-index--pt
-					.d-flex.justify-content-between.align-items-center.w-100
-						h3.title-h6.semi-bold  Popular surveys
-						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
-					.row
-						.col-lg-6.col-md-12
-							.card
-								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
-						.col-lg-6.col-md-12
-							.card
-								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
-						.col-lg-6.col-md-12
-							.card
-								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
-						.col-lg-6.col-md-12
-							.card
-								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
-
+						.col-xl-4.col-md-6.col-sm-12
+							.card.card--centered.card--icon
+								.card__content
+									.user-image.mb-2
+										i.fas.fa-puzzle-piece.card--user-icon
+									.card__body
+										.card__content-header
+											.user-data
+												p.title-h6.semi-bold.my-0 100,000 online courses
+										.card__content--details
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+						.col-xl-4.col-md-6.col-sm-12
+							.card.card--centered.card--icon
+								.card__content
+									.user-image.mb-2
+										i.fas.fa-seedling.card--user-icon
+									.card__body
+										.card__content-header
+											.user-data
+												p.title-h6.semi-bold.my-0 100,000 online courses
+										.card__content--details
+											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+				
 				section.section-index.section-index--pt
 					.d-flex.justify-content-between.align-items-center.w-100
 						h3.title-h6.semi-bold  Popular Instructors
@@ -595,8 +147,7 @@ block content
 							.item
 								.card.card--centered.card--user
 									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
+										img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
 										.card__body
 											.card__content-header
 												.user-data
@@ -623,8 +174,7 @@ block content
 							.item
 								.card.card--centered.card--user
 									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
+										img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
 										.card__body
 											.card__content-header
 												.user-data
@@ -651,8 +201,7 @@ block content
 							.item
 								.card.card--centered.card--user
 									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
+										img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
 										.card__body
 											.card__content-header
 												.user-data
@@ -679,8 +228,7 @@ block content
 							.item
 								.card.card--centered.card--user
 									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
+										img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
 										.card__body
 											.card__content-header
 												.user-data
@@ -707,8 +255,7 @@ block content
 							.item
 								.card.card--centered.card--user
 									.card__content
-										.user-image
-											img(src="../../assets/images/profile.png" alt="")
+										img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
 										.card__body
 											.card__content-header
 												.user-data

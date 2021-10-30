@@ -109,7 +109,7 @@ $(".toggle-filter").on("click", function () {
   }
 });
 
-$(".list").on("click", function () {
+$("#list").on("click", function () {
   $(".course-card--grid-view")
     .removeClass("course-card--grid-view")
     .addClass("course-card--list-view");
@@ -121,7 +121,7 @@ $(".list").on("click", function () {
     .addClass("col-lg-12");
   $(".course-card-container").addClass("course-card-container--list-view");
 });
-$(".grid").on("click", function () {
+$("#grid").on("click", function () {
   $(".course-card--list-view")
     .removeClass("course-card--list-view")
     .addClass("course-card--grid-view");
