@@ -12,24 +12,25 @@ block content
 					.col-lg-6
 						h1.title-h1.white hello from itqadem
 						p.body-1.white Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus libero perferendis similique molestiae totam! Velit quasi consequuntur sint, dolorem eaque, alias iusto commodi dolor quia expedita enim ratione et earum!
-	.section--partners
+	.section.section--partners
 		.container 
 			.row.justify-content-center
 				.col-lg-12
-					h2.title-h2.white Our partner
+					h2.title-h2 Our partner
 				.col-sm-6
 					.partner__item
 						img(class="image preview" src="../../assets/images/drosos.png" alt="")
 				.col-sm-6
 					.partner__item
 						img(class="image preview" src="../../assets/images/nbe.png" alt="")
+	
 	.container
 		.row
 			.col-xl-12.col-lg-12
-				section.section-index.section-index--pt
+				section.section
 					.d-flex.justify-content-between.align-items-center.w-100
-						h3.title-h6.semi-bold  Popular surveys
-						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
+						h3.title-h3.semi-bold  Popular surveys
+						a(class="gray" href="#") See all
 					.row
 						.col-lg-6.col-md-6.col-sm-12
 							.card
@@ -44,11 +45,11 @@ block content
 							.card
 								div(class="content-list-item mb-0" data-data='{"id":1,"type":"article", "enabled": true, "title": "article-title", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.", "thumb":"../../assets/images/exam.png", "url": "#"}')
 
-				section.section-index.section-index--pt
+				section.section
 					.d-flex.flex-column
 						.d-flex.justify-content-between.align-items-center.w-100
-							h3.title-h6.title-h6--bolder.semi-bold Newest Courses
-							a(href="#").text-3--bolder.gray See all
+							h3.title-h3.title-h6--bolder.semi-bold Newest Courses
+							a(class="gray" href="#") See all
 					.section-index
 						block content
 							include ./components/course-wrapper.pug
@@ -67,9 +68,9 @@ block content
 											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
 										.col-sm-12.col-md-6.col-lg-4
 											div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
-				section.section-index.section-index--pt
+				section.section
 					.d-flex.justify-content-between.align-items-center.w-100
-						h3.title-h6.semi-bold  Testimonials
+						h3.title-h3.semi-bold  Testimonials
 					.row
 						.col-xl-4.col-md-6.col-sm-12
 							.card.card--centered.card--icon
@@ -138,11 +139,11 @@ block content
 										.card__content--details
 											p.text-1.gray.mb-0 lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
 				
-				section.section-index.section-index--pt
+				section.section
 					.d-flex.justify-content-between.align-items-center.w-100
-						h3.title-h6.semi-bold  Popular Instructors
-						a(href="#").text-3.text-3--bolder.gray.mt-0 See all
-					.section-index.section-index--pt
+						h3.title-h3.semi-bold  Popular Instructors
+						a(class="gray" href="#") See all
+					.section-index
 						.owl-carousel.top_instrutors.owl-theme
 							.item
 								.card.card--centered.card--user
@@ -371,10 +372,10 @@ block content
 										.card__btn
 											button(type="submit").btn.btn--primary.btn--rounded.semi-bold.mt-2  Get Started
 			.col-xl-12.col-lg-12
-				section.section-.mb-5
+				section.section
 					.d-flex.flex-column.my-2
 						.d-flex.justify-content-between.align-items-center.w-100
-							h3.title-h6.title-h6--bolder.semi-bold What Our Student Have Today
+							h3.title-h3.title-h6--bolder.semi-bold What Our Student Have Today
 					.la5lo1
 						.owl-carousel.Student_says.owl-theme
 							.item

@@ -32,9 +32,10 @@
   }
   .social-links {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     height: auto;
     a {
+			color: $white;
       &:hover {
         color: #fff;
       }

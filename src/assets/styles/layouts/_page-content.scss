@@ -35,14 +35,14 @@
   }
 }
 
-.section-index{
+.section{
 	margin-bottom: 80px;
+	// padding: 100px 0;
 }
-
 .section--partners{
 	padding: 100px 0;
-	margin-bottom: 80px;
-	background-color: lighten($black, 10%);
+	// margin-bottom: 80px;
+	background-color: rgba(#333, .06);
 	text-align: center;
 	.partner__item{
 		max-width: 300px;
@@ -64,3 +64,8 @@
 	}
 }
 
+.night-mode{
+	.section--partners{
+		background-color: lighten($black, 10%);
+	}
+}
