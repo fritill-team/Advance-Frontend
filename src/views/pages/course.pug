@@ -62,12 +62,13 @@ block content
 						ul.video-content__btn-list
 							li
 								include ../components/general-component/btn.pug
-								+btn-link('btn btn--lg btn--primary btn--rounded white', 'Enroll' , "#")
+								+btn-link('btn btn--info btn--rounded btn--lg', 'Enroll' , "#")
 								+btn-link('btn btn--lg btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
-							
+
 				.col-md-6.d-flex.align-items-end.justify-content-end
-					button(type="button" class="btn btn--player btn--lg")
+					button(type="button" class="btn btn--player btn--lg btn--double-line")
 						img(src="../../assets/images/replay.svg" alt="player toggle")
+
 						//- i.fas.fa-play
 	section
 		.container
