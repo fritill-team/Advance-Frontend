@@ -38,12 +38,16 @@
 .section{
 	margin-bottom: 80px;
 	// padding: 100px 0;
+	text-align: center;
+	.card{
+		margin-bottom: 30px;
+	}
 }
 .section--partners{
 	padding: 100px 0;
 	// margin-bottom: 80px;
 	background-color: rgba(#333, .06);
-	text-align: center;
+	// text-align: center;
 	.partner__item{
 		max-width: 300px;
 		max-height: 150px;
