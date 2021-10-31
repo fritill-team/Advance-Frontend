@@ -43,10 +43,13 @@
 		margin-bottom: 30px;
 	}
 }
-.section--partners{
-	padding: 100px 0;
-	// margin-bottom: 80px;
+.section--with-bg{
 	background-color: rgba(#333, .06);
+	padding: 50px 0;
+}
+.section--partners{
+	padding: 80px 0;
+	// margin-bottom: 80px;
 	// text-align: center;
 	.partner__item{
 		max-width: 300px;
