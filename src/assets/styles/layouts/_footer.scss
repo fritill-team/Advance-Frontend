@@ -1,7 +1,7 @@
 /* src/assets/styles/components/_footer.scss  */
 .footer {
   position: relative;
-  margin-top: auto;
+  margin-top: 60px;
   // background: darken($secondary, 5%); //
   background-color: lighten($primary, 3%);
   width: 100%;
@@ -35,6 +35,7 @@
     justify-content: flex-end;
     height: auto;
     a {
+			color: $white;
       &:hover {
         color: #fff;
       }
@@ -138,6 +139,6 @@ html[dir="rtl"] {
 }
 .night-mode {
   .footer {
-    background-color: #43525c;
+    background-color: $black;
   }
 }

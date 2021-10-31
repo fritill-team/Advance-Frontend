@@ -18,7 +18,7 @@
       &[type="radio"] {
         & + label:before {
           border: 1px solid #dc3545;
-          background: #FFF;
+          background: #fff;
         }
         & + label {
           color: #dc3545;
@@ -31,7 +31,7 @@
         }
         & + label {
           color: #dc3545;
-          span{
+          span {
             background-color: #dc3545;
           }
         }
@@ -42,18 +42,18 @@
         }
 
         &:checked + label:after {
-          border: 6px solid  #dc3545;
+          border: 6px solid #dc3545;
         }
-        & + label{
-          span{
+        & + label {
+          span {
             background-color: #dc3545;
           }
         }
       }
-      &[type='file']{
-        & + label{
+      &[type="file"] {
+        & + label {
           color: #dc3545;
-          &:after{
+          &:after {
             background-color: #dc3545;
           }
         }
@@ -71,8 +71,8 @@
       margin-bottom: 4px;
       padding: 4px 10px;
     }
-    .input-group{
-      .file-input{
+    .input-group {
+      .file-input {
         height: 34px;
       }
     }
@@ -90,7 +90,7 @@
         & + label{
           font-size: 14px;
           padding: 1rem 0.8rem;
-          &:after{
+          &:after {
             padding: 1rem 0.8rem;
           }
         }
@@ -108,13 +108,13 @@
     .field-wrapper__label {
       font-size: 18px;
     }
-    .field-wrapper__messages{
-      li{
+    .field-wrapper__messages {
+      li {
         font-size: 16px;
       }
     }
-    .input-group{
-      .file-input{
+    .input-group {
+      .file-input {
         height: 48px;
       }
     }
@@ -129,7 +129,7 @@
             padding: 1.5rem 0.9rem;
             // height: calc(1.4em + .75rem);
           }
-          &:before{
+          &:before {
             font-size: 18px;
           }
         }
@@ -141,8 +141,8 @@
         }
       }
       &[type="radio"] {
-        & + label{
-          span{
+        & + label {
+          span {
             left: -11px;
             top: 8px;
           }
@@ -154,7 +154,7 @@
   &.field-wrapper--arrow{
     .field-wrapper__content{
       position: relative;
-      &:after{
+      &:after {
         position: absolute;
         top: 35%;
         transform: translateY(44%);
@@ -165,13 +165,13 @@
         height: 10px;
         width: 10px;
         transform: rotate(42deg);
-        transition: all 0.3s ease-in-out ;
+        transition: all 0.3s ease-in-out;
         display: block;
       }
-      &:focus-within{
-        &:after{
+      &:focus-within {
+        &:after {
           top: 46%;
-          transition: all 0.3s ease-in-out ;
+          transition: all 0.3s ease-in-out;
           transform: rotate(-136deg);
         }
       }
@@ -306,16 +306,16 @@ label {
         height: 40px;
         border-radius: 50%;
         opacity: 0;
-        transition: .3s ease all;
+        transition: 0.3s ease all;
       }
-      &:hover{
-        span{
-          opacity: .2;
+      &:hover {
+        span {
+          opacity: 0.2;
         }
      }
     }
     & + label:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 0;
@@ -323,7 +323,7 @@ label {
       width: 18px;
       height: 18px;
       border: 1px solid $gray;
-      background: #FFF;
+      background: #fff;
       transition: all 275ms;
       z-index: 1;
     }
@@ -333,7 +333,7 @@ label {
     }
 
     &:checked + label:after {
-      content: '';
+      content: "";
       position: absolute;
       height: 12px;
       transform: rotate(45deg);
@@ -351,7 +351,6 @@ label {
     }
     & + label:before {
       border-radius: 2px;
-
     }
     &:checked + label:after {
       left: 6px;
@@ -380,9 +379,9 @@ label {
     }
   }
 
-  &[type='file']{
+  &[type="file"] {
     display: none;
-    & + label{
+    & + label {
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -420,10 +419,10 @@ label {
     }
   }
 
-  &.field--with-icon{
+  &.field--with-icon {
     padding-left: 3em;
   }
-  &.field--rounded{
+  &.field--rounded {
     &[type="checkbox"] {
       & + label {
         span{
@@ -442,7 +441,7 @@ label {
       }
     }
   }
-  &.field--accent{
+  &.field--accent {
     &[type="checkbox"] {
       & + label:before {
         border: 1px solid $accent;
@@ -459,13 +458,13 @@ label {
     }
   }
   // checked opacity
-  &.field--checked{
+  &.field--checked {
     display: none;
     &[type="checkbox"],
     &[type="radio"] {
       & + label {
         opacity: 0.3;
-        &:hover{
+        &:hover {
           opacity: 1;
         }
       }
@@ -475,13 +474,13 @@ label {
       &[type="radio"] {
         & + label {
           opacity: 1;
-          &:before{
+          &:before {
             background: $primary;
             border: 1px solid $primary;
           }
-          &:after{
-            border-bottom: 3px solid #FFF;
-            border-right: 3px solid #FFF;
+          &:after {
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
           }
         }
       }
@@ -507,8 +506,8 @@ label {
   }
   .field-wrapper__label{
     font-size: 14px;
-   }
-  .field-wrapper__messages{
+  }
+  .field-wrapper__messages {
     li {
       font-size: 14px;
     }
@@ -521,24 +520,24 @@ label {
 }
 }
 //// start night-mode
-.night-mode{
+.night-mode {
   //start field
-  .field{
+  .field {
     box-shadow: inset 0 0 3px 0 rgba(#576874, 0.1);
     border: 1px solid #576874;
-    color: #FFF;
+    color: #fff;
     background: #576874;
 
     &[type="checkbox"],
     &[type="radio"] {
       & + label:before {
         border: 1px solid #576874;
-        background: #FFF;
+        background: #fff;
       }
       & + label {
-        color: #FFF;
-        span{
-          background-color: #FFF;
+        color: #fff;
+        span {
+          background-color: #fff;
         }
       }
     }
@@ -548,7 +547,6 @@ label {
         border-bottom: 3px solid #576874;
         border-right: 3px solid #576874;
       }
-
     }
 
     &[type="radio"] {
@@ -557,19 +555,19 @@ label {
       }
     }
 
-    &[type='file']{
-      & + label{
+    &[type="file"] {
+      & + label {
         color: #576874;
         background-color: $white;
         border: 1px solid #576874;
         box-shadow: inset 0px 1px 4px rgba(#576874, 1);
-        &:after{
+        &:after {
           color: $white;
         }
       }
     }
 
-    &.field--underline{
+    &.field--underline {
       background: #43525c;
 			border: none;
 			box-shadow: none;
@@ -578,7 +576,7 @@ label {
         border-bottom: 1px solid hsla(0,0%,100%,.5);
       }
     }
-    &.field--checked{
+    &.field--checked {
       display: none;
       &:checked {
         &[type="checkbox"],
@@ -588,9 +586,9 @@ label {
             &:before{
               border: 1px solid $primary;
             }
-            &:after{
-              border-bottom: 3px solid #FFF;
-              border-right: 3px solid #FFF;
+            &:after {
+              border-bottom: 3px solid #fff;
+              border-right: 3px solid #fff;
             }
           }
         }
@@ -610,7 +608,7 @@ label {
         &[type="checkbox"],
         &[type="radio"] {
           & + label {
-            color: #FFF;
+            color: #fff;
           }
           & + label:before {
             background: #FFF;
@@ -623,7 +621,7 @@ label {
             border-right: 3px solid #dc3545;
           }
           & + label {
-            color: #FFF;
+            color: #fff;
           }
         }
 
@@ -634,10 +632,10 @@ label {
             }
           }
         }
-        &[type='file']{
-          & + label{
+        &[type="file"] {
+          & + label {
             color: #dc3545;
-            &:after{
+            &:after {
               background-color: #dc3545;
             }
           }
@@ -657,7 +655,7 @@ label {
         }
       }
       // night-mode invert
-      &.field--invert{
+      &.field--invert {
         &[type="checkbox"] {
           & + label:before {
             background: #e5e5e5;
@@ -669,9 +667,9 @@ label {
         }
       }
     }
-    &.field-wrapper--arrow{
-      .field-wrapper__content{
-        &:after{
+    &.field-wrapper--arrow {
+      .field-wrapper__content {
+        &:after {
           border-right: 3px solid #e5e5e5;
           border-bottom: 3px solid #e5e5e5;
         }
@@ -712,19 +710,19 @@ label {
     }
   }
 }
-html[dir="rtl"]{
-  .field-wrapper{
+html[dir="rtl"] {
+  .field-wrapper {
     margin-right: 0;
-    &.field-wrapper--arrow{
-      .field-wrapper__content{
-        &:after{
+    &.field-wrapper--arrow {
+      .field-wrapper__content {
+        &:after {
           left: 20px;
           right: auto;
         }
       }
     }
   }
-  .field{
+  .field {
     margin: 0 0 0 5px;
     &[type="checkbox"],
   &[type="radio"] {
@@ -739,43 +737,43 @@ html[dir="rtl"]{
     & + label:before {
       right: 0;
     }
-  }
+	}
 
-  &[type="checkbox"] {
-    &:checked + label:after {
-      right: 6px;
-    }
-  }
-
-  &[type="radio"] {
-    & + label{
-      span{
-        right: -11px;
-        top: 45%;
+    &[type="checkbox"] {
+      &:checked + label:after {
+        right: 6px;
       }
     }
-    &:checked + label:after {
-      right: 3px;
-    }
-  }
-  &.field--with-icon{
-    padding-right: 3em;
-  }
-  &.field--rounded{
-    &[type="checkbox"] {
-      & + label{
-        span{
-          right: -10px;
+
+    &[type="radio"] {
+      & + label {
+        span {
+          right: -11px;
+          top: 45%;
         }
       }
-      & + label:after {
-        right: 7px;
+      &:checked + label:after {
+        right: 3px;
       }
     }
+    &.field--with-icon {
+      padding-right: 3em;
+    }
+    &.field--rounded {
+      &[type="checkbox"] {
+        & + label {
+          span {
+            right: -10px;
+          }
+        }
+        & + label:after {
+          right: 7px;
+        }
+    }
   }
-  }
+}
   .check-field-group {
-    .field{
+    .field {
       &[type="checkbox"],
       &[type="radio"] {
       & + label {

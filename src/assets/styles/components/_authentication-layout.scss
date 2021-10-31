@@ -1,12 +1,10 @@
 .wrapper-content {
   background: #fff;
   border-radius: 10px;
-  padding: 50px 50px 30px;
+  padding: 30px 50px;
   box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
-  flex: 1;
-  float: left;
   width: 100%;
-  margin-top: 0;
+  margin-top: auto;
   h2 {
     font-family: Quicksand, sans-serif;
     text-align: center;
@@ -57,7 +55,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  // padding: 40px 0;
+	margin-bottom: 20px;
   z-index: 1;
 
   a {

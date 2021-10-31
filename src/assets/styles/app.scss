@@ -5,7 +5,7 @@
 @import "layouts/_page-content";
 @import "layouts/_header";
 @import "layouts/_footer";
-@import "layouts/mixins";
+@import "utils/mixins";
 @import "./custom/toastr";
 @import "./components/_tabs.scss";
 @import "./custom/_owl-slider.scss";
@@ -19,7 +19,8 @@
 @import "./components/_comments";
 @import "./components/_category-course";
 @import "./components/_pagination.scss";
-@import "./components/_drawer";
+@import "layouts/drawer";
+@import "./components/category-list";
 
 @import "./components/_list-dropdown";
 @import "./components/_course-card.scss";

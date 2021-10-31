@@ -51,6 +51,9 @@
 @media (max-width: 767px ) {
   .tabs{
     overflow-x: scroll;
+		&::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 .tab {

@@ -109,25 +109,29 @@ $(".toggle-filter").on("click", function () {
   }
 });
 
-$(".list").on("click", function () {
+$("#list").on("click", function () {
   $(".course-card--grid-view")
     .removeClass("course-card--grid-view")
     .addClass("course-card--list-view");
   $(this).addClass("active").siblings().removeClass("active");
   $(".course-card--list-view")
     .parent()
+    .parent()
     .removeClass("col-lg-4")
     .addClass("col-lg-12");
+  $(".course-card-container").addClass("course-card-container--list-view");
 });
-$(".grid").on("click", function () {
+$("#grid").on("click", function () {
   $(".course-card--list-view")
     .removeClass("course-card--list-view")
     .addClass("course-card--grid-view");
   $(this).addClass("active").siblings().removeClass("active");
   $(".course-card--grid-view")
     .parent()
+    .parent()
     .removeClass("col-lg-12")
     .addClass("col-lg-4");
+  $(".course-card-container").removeClass("course-card-container--list-view");
 });
 
 // $(".menu--item .menu--link").each(function() {
@@ -581,15 +585,20 @@ $(".list__sidebar").each(function (i, item) {
 //   .catch(e => console.log(e))
 // })
 // drawers
+
 $(document)
   .on("click", ".toggle", function () {
+    // console.log()
     $(".drawer--left").toggleClass("drawer--open");
+
+    // $(".video-player").toggleClass("video-player--collapse");
+    // console.log($(".drawer--left").closest(".drawers-container"));
   })
   .on("click", ".left-open", function () {
     $(".drawer--left").toggleClass("open");
   })
   .on("click", ".header__link", function () {
-    $(".drawer--left").toggleClass("drawer--open");
+    // $(".drawer--left").toggleClass("drawer--open");
   })
   .on("click", ".right-open", function () {
     $(".drawer--right").toggleClass("open");

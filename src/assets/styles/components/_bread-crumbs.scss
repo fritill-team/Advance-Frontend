@@ -5,6 +5,9 @@
   &.page-header--with-block{
     padding: 20px 20px 0 20px;
   }
+	&.page-header--transparent{
+		background-color: transparent;
+	}
 }
 .page-header__content{
   display: flex;

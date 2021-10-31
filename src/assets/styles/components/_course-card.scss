@@ -2,7 +2,12 @@
 .course-card-container {
   position: relative;
   height: 400px;
-  margin-bottom: 16px;
+	// height: 100%;
+	margin-bottom: 30px;
+  // padding-bottom: 30px;
+	&.course-card-container--list-view{
+		height: auto;
+	}
 }
 
 .course-card {
@@ -11,12 +16,51 @@
   //left: 0;
   transition: all 0.4s ease;
   background: $white;
-  padding: 10px;
+  // padding: 10px;
   border-radius: 5px;
   height: 100%;
+	position: relative;
   overflow: hidden;
   width: 100%;
+	&::before{
+		transition: .3s ease all;
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 75%;
+		background-color: $primary;
+		left: 0;
+		bottom: 0;
+		transform: translateY(100%);
+		z-index: 2;
+		clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+	}
+	&::after{
+		transition: .5s ease all;
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 60%;
+		clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+		background-color: $accent;
+		left: 0;
+		bottom: 0;
+		transform: translateY(100%);
+		z-index: 1;
+	}
   &:hover{
+		&::before{
+			transform: translateY(0);
+		}
+		&::after{
+			transform: translateY(0) ;
+		}
+		box-shadow: 0px 3px 10px 0px rgba(31,31,31,0.16);
+		.course-card__content{
+			*{
+				color: #fff;
+			}
+		}
     // opacity: 0;
   }
   
@@ -66,11 +110,14 @@
   .course-card__preview {
     width: 100%;
     max-height: 200px;
+		min-height: 200px;
     height: 100%;
     position: relative;
     transition: inherit;
     display: block;
     margin: 0;
+		z-index: 0;
+		margin-bottom: 16px;
   }
 
   .course-card__preview-cover {
@@ -103,16 +150,25 @@
   }
 
   .course-card__content {
-    padding: 10px 5px 0 5px;
-    @media (max-width: 1199.98px) and (min-width: 992px) {
-      padding: 0;
-    }
+    padding: 0 16px;
+		position: relative;
+		transition: .3s ease all;
+		z-index: 4;
+		text-align: left;
+		max-height: 164px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
   }
+	.course-card__description{
+		// color: $white;
+	}
 
   .course-card__rate {
-    margin-left: auto;
+    margin: 0 0 0 auto;
     color: $accent;
-
+		white-space: nowrap;
     i {
       transform: translateY(-1px);
     }
@@ -121,8 +177,10 @@
   .course-card__meta {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
-
+		justify-content: space-between;
+		align-items: center;
+    // align-items: flex-start;
+		@include normalizeTypo;
     :nth-child(1) {
       margin-right: 4px;
     }
@@ -161,35 +219,44 @@
 
   &.course-card--grid-view {
     animation: grid;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
   }
 
   &.course-card--list-view {
     max-width: 100%;
     width: 100%;
     animation: list;
-    animation-duration: 0.3s;
-
-    //.course-card__card-media {
-    //  display: flex;
-    //  width: 100%;
-    //
-    //  .card-media__card-img {
-    //    max-width: 35%;
-    //  }
-    //
-    //  .card-media__card-content {
-    //    display: flex;
-    //    flex-direction: column;
-    //    justify-content: space-between;
-    //    padding-top: 0;
-    //    transition: all 0.4s ease-in-out;
-    //  }
-    //}
-    //
-    //.card-auth__price {
-    //  flex-direction: row-reverse;
-    //}
+    animation-duration: 0.5s;
+		display: flex;
+		height: auto;
+		&::after,&::before{
+			height: 100%;
+			// display: none;
+		}
+		&::after{
+			z-index: 1;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			// test
+		}
+		&::before{
+			z-index: 2;
+		}
+		.course-card__preview{
+			display: inline-block;
+			width: 35%;
+			min-height: 200px;
+			margin-bottom: 0;
+			z-index: 5;
+			@media(max-width: 992px){
+				min-width: 110px;
+    		min-height: 110px;
+			}
+		}
+		.course-card__content{
+			width: 100%;
+			padding: 16px ;
+		}
+		
   }
 }
 
@@ -200,491 +267,130 @@
 
 //dir rtl
 html[dir="rtl"] {
+
   .course-card {
-    .course-card__card-media {
+		.course-card__rate{
+			margin: 0 auto 0 0;
+		}
+	}
+  //   .course-card__card-media {
 
-      .card-media__card-img {
-        .card-img__card-overlay {
-          position: absolute;
-          top: 0;
-          padding: 10px;
-          left: 0;
-          right: 0;
-          bottom: 4px;
-          background-image: linear-gradient(
-              transparent,
-              rgba(51, 51, 51, 0.3) 90%
-          );
+  //     .card-media__card-img {
+  //       .card-img__card-overlay {
+  //         position: absolute;
+  //         top: 0;
+  //         padding: 10px;
+  //         left: 0;
+  //         right: 0;
+  //         bottom: 4px;
+  //         background-image: linear-gradient(
+  //             transparent,
+  //             rgba(51, 51, 51, 0.3) 90%
+  //         );
 
-          .card-overlay__badge-seller {
-            right: 0;
+  //         .card-overlay__badge-seller {
+  //           right: 0;
 
-            &::after {
-              right: -5px;
-              border-bottom-right-radius: 2px;
-              border-top-right-radius: 3px;
-              border-bottom-left-radius: 3px;
-            }
-          }
+  //           &::after {
+  //             right: -5px;
+  //             border-bottom-right-radius: 2px;
+  //             border-top-right-radius: 3px;
+  //             border-bottom-left-radius: 3px;
+  //           }
+  //         }
 
-          span.card-overlay__play_btn1 {
-            float: right;
-            left: 40%;
+  //         span.card-overlay__play_btn1 {
+  //           float: right;
+  //           left: 40%;
 
-            i.uil-play {
-              &::before {
-                margin-left: 0.2em;
-                margin-right: 0.2em;
-              }
-            }
-          }
+  //           i.uil-play {
+  //             &::before {
+  //               margin-left: 0.2em;
+  //               margin-right: 0.2em;
+  //             }
+  //           }
+  //         }
 
-          .card-overlay__crd-timer {
-            left: 0;
-            margin-right: 10px;
-          }
-        }
-      }
+  //         .card-overlay__crd-timer {
+  //           left: 0;
+  //           margin-right: 10px;
+  //         }
+  //       }
+  //     }
 
-      .card-overlay__reviews {
-        padding: 3px 10px 3px 15px;
-        left: 10px;
-        right: unset;
+  //     .card-overlay__reviews {
+  //       padding: 3px 10px 3px 15px;
+  //       left: 10px;
+  //       right: unset;
 
-        .crd-reviews i {
-          margin-left: 2px;
+  //       .crd-reviews i {
+  //         margin-left: 2px;
 
-          .uil-star::before {
-            content: "\EBAF";
-          }
+  //         .uil-star::before {
+  //           content: "\EBAF";
+  //         }
 
-          [class*=" uil-"]::before,
-          [class^="uil-"]::before {
-            margin-left: 0.2em;
-            margin-right: 0.2em;
-          }
-        }
-      }
+  //         [class*=" uil-"]::before,
+  //         [class^="uil-"]::before {
+  //           margin-left: 0.2em;
+  //           margin-right: 0.2em;
+  //         }
+  //       }
+  //     }
 
-      // start card-content part2
-      .card-media__card-content {
-        padding: 10px 5px 0 5px;
-        float: right;
+  //     // start card-content part2
+  //     .card-media__card-content {
+  //       padding: 10px 5px 0 5px;
+  //       float: right;
 
-        .card-content__card-details {
-          text-align: right;
-        }
+  //       .card-content__card-details {
+  //         text-align: right;
+  //       }
 
-        a.card-content__card-description {
-          text-align: right;
-        }
+  //       a.card-content__card-description {
+  //         text-align: right;
+  //       }
 
-        a.card-content__card-title {
-          text-align: right;
-        }
+  //       a.card-content__card-title {
+  //         text-align: right;
+  //       }
 
-        p.card-auth__name-auther {
-          margin: 0 0 5px 10px;
-          float: right;
-          text-align: right;
-        }
+  //       p.card-auth__name-auther {
+  //         margin: 0 0 5px 10px;
+  //         float: right;
+  //         text-align: right;
+  //       }
 
-        .card-auth__price {
-          float: left;
-          text-align: right;
-        }
-      }
-    }
-  }
+  //       .card-auth__price {
+  //         float: left;
+  //         text-align: right;
+  //       }
+  //     }
+  //   }
+  // }
+}
+.night-mode{
+	.course-card{
+		@include whiteTypo;
+		background-color: $black;
+	}
 }
 
-//.course-card__card-media {
-//
-//  margin-bottom: 30px;
-//  //width: 100%;
-//  //float: left;
-//
-//
-//  transition: all 0.5s ease-in-out;
-//
-//  // .card-media__card-content {
-//  // .card-content__card-auth {
-//  // }
-//  // }
-//  // start card-img part1
-//  .card-media__card-img {
-//    width: 100%;
-//    height: 200px;
-//    float: left;
-//    position: relative;
-//    color: $twitter;
-//    text-decoration: none;
-//    background-image: linear-gradient(transparent, rgba(51, 51, 51, 0.3) 90%);
-//
-//    &:hover {
-//      text-decoration: none !important;
-//      color: inherit !important;
-//    }
-//
-//    img {
-//      width: 100%;
-//      height: 100%;
-//    }
-//
-//    .card-img {
-//      width: 100%;
-//      border-radius: 5px;
-//    }
-//
-//    .card-img__card-overlay {
-//      position: absolute;
-//      top: 0;
-//      padding: 10px;
-//      left: 0;
-//      right: 0;
-//      bottom: 4px;
-//      background-image: linear-gradient(transparent, rgba(51, 51, 51, 0.3) 90%);
-//
-//      &:hover {
-//        span.card-overlay__play_btn1 {
-//          background-image: linear-gradient(
-//              transparent,
-//              rgba(51, 51, 51, 0.4) 90%
-//          );
-//          display: block;
-//          visibility: visible;
-//          opacity: 1;
-//          padding: 12px 12px;
-//          transition: all 0.4s ease;
-//          transform: translateY(-5px);
-//        }
-//      }
-//
-//      .card-overlay__badge-seller {
-//        border-radius: 3px;
-//        font-size: 10px;
-//        position: absolute;
-//        padding: 2px 10px;
-//        background: #fa8305;
-//        border: none;
-//        color: $white;
-//        font-weight: 600;
-//        line-height: 1.5;
-//        right: 0;
-//        text-align: center;
-//        text-transform: uppercase;
-//        top: 10px;
-//        z-index: 2;
-//        vertical-align: baseline;
-//        border-bottom-right-radius: 0;
-//        border-top-right-radius: 0;
-//        box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
-//        0 3px 1px 0 rgba(20, 23, 28, 0.1);
-//
-//        &::after {
-//          background: inherit;
-//          content: "";
-//          height: 12px;
-//          position: absolute;
-//          top: 3px;
-//          transform: rotate(45deg);
-//          width: 12px;
-//          z-index: 1;
-//          display: block;
-//          left: -5px;
-//          border-bottom-left-radius: 2px;
-//          border-top-left-radius: 3px;
-//          border-bottom-right-radius: 3px;
-//        }
-//      }
-//
-//      span.card-overlay__play_btn1 {
-//        display: none;
-//        border: 0;
-//        width: 50px;
-//        height: 50px;
-//        float: left;
-//        text-align: center;
-//        border-radius: 100%;
-//        padding: 15px 13px;
-//        font-size: 20px;
-//        top: 40%;
-//        right: 40%;
-//        opacity: 0;
-//        position: absolute;
-//        color: $white;
-//        background: rgba(51, 51, 51, 0.8);
-//
-//        i.uil-play {
-//          &::before {
-//            font-family: unicons;
-//            font-style: normal;
-//            font-weight: 400;
-//            speak-as: none;
-//            display: inline-block;
-//            text-decoration: inherit;
-//            width: 1em;
-//            margin-right: 0.2em;
-//            text-align: center;
-//            -webkit-font-feature-settings: normal;
-//            font-feature-settings: normal;
-//            font-variant: normal;
-//            text-transform: none;
-//            line-height: 1em;
-//            margin-left: 0.2em;
-//          }
-//        }
-//      }
-//
-//      .card-overlay__crd-timer {
-//        position: absolute;
-//        color: white;
-//        background: rgba(51, 51, 51, 0.8);
-//        bottom: 0;
-//        margin-bottom: 10px;
-//        right: 0;
-//        margin-right: 10px;
-//        display: inline-block;
-//        padding: 3px 10px;
-//        border-radius: 20px;
-//        font-size: 12px;
-//        font-weight: 500;
-//      }
-//    }
-//  }
-//
-//  .card-overlay__reviews {
-//    color: $white;
-//    background: #fdcc0d;
-//    display: inline-block;
-//    padding: 3px 15px 3px 10px;
-//    border-radius: 20px;
-//    font-size: 14px;
-//    font-weight: 500;
-//    position: absolute;
-//    right: 10px;
-//
-//    .crd-reviews i {
-//      margin-right: 2px;
-//
-//      .uil-star::before {
-//        content: "\EBAF";
-//      }
-//
-//      [class*=" uil-"]::before,
-//      [class^="uil-"]::before {
-//        font-family: unicons;
-//        font-style: normal;
-//        font-weight: 400;
-//        display: inline-block;
-//        text-decoration: inherit;
-//        width: 1em;
-//        margin-right: 0.2em;
-//        text-align: center;
-//        font-feature-settings: normal;
-//        font-variant: normal;
-//        text-transform: none;
-//        line-height: 1em;
-//        margin-left: 0.2em;
-//      }
-//    }
-//  }
-//
-//  // start card-content part2
-//  .card-media__card-content {
-//    padding: 10px 5px 0 5px;
-//    float: left;
-//    width: 100%;
-//    position: relative;
-//    transition: all 1s ease-in-out;
-//    animation: fadeIn ease 1s;
-//    @keyframes fadeIn {
-//      0% {
-//        opacity: 1;
-//      }
-//      100% {
-//        opacity: 1;
-//      }
-//    }
-//
-//    .course-card__details {
-//      height: 140px;
-//      max-height: 140px;
-//      transition: all 0.4s ease-in-out;
-//    }
-//
-//    .card-content__card-details {
-//      margin-bottom: 10px;
-//      font-size: 12px;
-//      margin-top: 5px;
-//      font-weight: 400;
-//      color: $darkGray;
-//      text-align: left;
-//      display: block;
-//
-//      span.card-details__card-view {
-//        &::after {
-//          content: "\2022";
-//          margin: 0 4px;
-//        }
-//
-//        &:last-of-type {
-//          &::after {
-//            display: none;
-//            content: "";
-//          }
-//        }
-//      }
-//    }
-//
-//    a.card-content__card-description {
-//      display: block;
-//      font-size: 16px;
-//      font-weight: 600;
-//      color: $black;
-//      text-align: left;
-//      // margin-bottom: 7px;
-//      line-height: 24px;
-//    }
-//
-//    a.card-content__card-title {
-//      display: block;
-//      text-align: left;
-//      font-size: 13px;
-//      font-weight: 400;
-//      color: $darkGray;
-//      padding-top: 2px;
-//      margin-bottom: 0.7rem;
-//    }
-//
-//    p.card-auth__name-auther {
-//      // margin-right: 10px;
-//      margin: 0 10px 5px 0;
-//      float: left;
-//      font-size: 16px;
-//      color: $darkGray;
-//      text-align: left;
-//      line-height: 24px;
-//
-//      a {
-//        // color: $black;
-//        font-weight: 500;
-//        // &:hover {
-//        // color: $black !important;
-//        // text-decoration: underline !important;
-//        // }
-//      }
-//    }
-//
-//    // .card-content__card-auth {
-//    //   width: 100%;
-//
-//    // }
-//    .card-auth__price {
-//      // margin-top: 30px;
-//      padding-top: 10px;
-//      border-top: 1px solid $light-white;
-//      float: right;
-//      color: $black;
-//      text-align: right;
-//      display: flex;
-//      align-items: center;
-//      justify-content: space-between;
-//      width: 100%;
-//
-//      p {
-//        line-height: 1;
-//        color: $black;
-//        font-weight: 500;
-//        font-size: 18px;
-//      }
-//
-//      .course-card__actions {
-//        display: flex;
-//        align-items: center;
-//      }
-//
-//      .btn-wishlist {
-//        display: inline-block !important;
-//        margin: 0 10px;
-//        color: $accent;
-//        font-size: 20px;
-//
-//        // i{
-//        //   display: block;
-//        //   margin: 0 10px;
-//        // }
-//      }
-//    }
-//  }
-//}
-//
-//@keyframes grid {
-//  0% {
-//    transform: scale(0);
-//  }
-//  // 50%  {transform: scale(1.2);}
-//  100% {
-//    transform: scale(1);
-//  }
-//}
-//@keyframes list {
-//  0% {
-//    transform: scale(0);
-//  }
-//  // 50%  {transform: scale(1.2);}
-//  100% {
-//    transform: scale(1);
-//  }
-//}
-//}
-
-//
-//.course-card {
-//  transition: all 0.4s ease-in-out;
-//
-//  &.course-card--hover {
-//    //transition: all 0.5s ease-in-out;
-//
-//    .course-card__card-media {
-//      transform: scale(1.5);
-//      //transition: all 0.5s ease-in-out;
-//    }
-//
-//    img {
-//      //transition: all 0.5s ease-in-out;
-//      //transform: scale(1.3);
-//      //padding-bottom: 10px;
-//    }
-//
-//    .card-img__card-overlay {
-//      //display: none;
-//    }
-//
-//    .course-card__details {
-//      //display: none;
-//      transition: all 0.8s ease-in-out;
-//    }
-//
-//    .card-media__card-content {
-//      height: 0;
-//      //transition: all 0.8s ease-in-out;
-//      //display: none;
-//      //animation: fadeOut ease 1s;
-//      //@keyframes fadeOut {
-//      //  0% {
-//      //    opacity: 1;
-//      //  }
-//      //  100% {
-//      //    opacity: 1;
-//      //  }
-//    }
-//
-//    //.card-auth__price {
-//    //  border-top: 0;
-//    //  padding: 0;
-//    //}
-//  }
-//}
-
-
+@keyframes grid {
+ 0% {
+   transform: scale(0);
+ }
+ // 50%  {transform: scale(1.2);}
+ 100% {
+   transform: scale(1);
+ }
+}
+@keyframes list {
+ 0% {
+   transform: scale(0);
+ }
+ // 50%  {transform: scale(1.2);}
+ 100% {
+   transform: scale(1);
+ }
+}
