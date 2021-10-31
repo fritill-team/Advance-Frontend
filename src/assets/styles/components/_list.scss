@@ -82,18 +82,19 @@
 
 .list-title {
   padding: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  background-color: $secondary;
+  // font-weight: 600;
+  font-size: 16px;
+  background-color: #55828b;
   @include normalizeTypo();
 	position: relative;
 	p{
-		color: $white;	
+		color: $white;
+		font-size: inherit;
 	}
 
   &.list-title--lg {
-    font-size: 16px;
-		background-color: darken($primary, 10%);
+    font-size: 20px;
+		background-color: #3b6064;
   }
 }
 
@@ -717,9 +718,9 @@ html[dir="rtl"] {
 
 .night-mode{
 	.list-title{
-		background-color: darken($black, 5%);
+		background-color: #2f3237;
 		&.list-title--lg{
-			background-color: $black;
+			background-color: #1d1e13;
 		}
 	}
 }
