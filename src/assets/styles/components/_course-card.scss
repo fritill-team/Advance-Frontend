@@ -168,10 +168,10 @@
 
   .course-card__rate {
     margin: 0 0 0 auto;
-    color: $accent;
 		white-space: nowrap;
     i {
       transform: translateY(-1px);
+			color: $accent;
     }
   }
 

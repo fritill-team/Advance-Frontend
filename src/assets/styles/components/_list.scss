@@ -84,7 +84,7 @@
   padding: 8px;
   font-weight: 600;
   font-size: 14px;
-  background-color: lighten($black, 40%);
+  background-color: $secondary;
   @include normalizeTypo();
 	position: relative;
 	p{
@@ -713,4 +713,13 @@ html[dir="rtl"] {
       right: 6px;
     }
   }
+}
+
+.night-mode{
+	.list-title{
+		background-color: darken($black, 5%);
+		&.list-title--lg{
+			background-color: $black;
+		}
+	}
 }
