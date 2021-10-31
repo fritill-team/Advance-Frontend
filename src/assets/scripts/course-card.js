@@ -98,14 +98,14 @@ const courseTemplate = function (course) {
         <div class="course-card__preview-overlay"></div>
       </a>
       <div class="course-card__content">
-        <div class="course-card__meta">
 				<a class="title-link text-2 semi-bold" href="${course.url}">${course.title}</a>
+				<p class="title-link course-card__description body-2 gray">${course.description}</p>
+				<div class="course-card__meta">
+					<p class="body-2 gray">${course.category}</p>
           <p class="body-2 course-card__rate">
             <i class="fa fa-star"></i>${course.total_rate}
           </p>
         </div>
-        <p class="body-2 gray">${course.category}</p>
-        
       </div>
 			
     </div>`;
