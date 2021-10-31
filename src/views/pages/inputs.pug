@@ -69,14 +69,14 @@ block content
 									li
 										| Please provide a valid city.
 							// input field-wrapper--error
-							p.body-2 5- inputs field error class=(field--arrow)
-							.field-wrapper
-								label.field-wrapper__label Course Title*
-								.field-wrapper__content
-									input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-								ul.field-wrapper__messages
-									li
-										| Please provide a valid city.
+							//- p.body-2 5- inputs field error class=(field--arrow)
+							//- .field-wrapper
+							//- 	label.field-wrapper__label Course Title*
+							//- 	.field-wrapper__content
+							//- 		input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
+							//- 	ul.field-wrapper__messages
+							//- 		li
+							//- 			| Please provide a valid city.
 							// input Default
 							p.body-2 1- inputs Default class=(field-wrapper)
 							.field-wrapper
@@ -108,7 +108,7 @@ block content
 									p.body-2 1- inputs field file icon
 									.upload-input
 										input(type="file", name="" id="file-input")
-										label.file-input(for="file-input") 
+										label.file-input(for="file-input")
 											i.far.fa-image.exam__icon
 								.col-lg-6.col-md-12.col-sm-12
 									// input field type file sm
@@ -169,6 +169,34 @@ block content
 							.row
 								.col-lg-12.col-md-12.col-sm-12
 									// input checkbox type checkbox
+									p.body-2 1- default check-field-group
+									.field-wrapper
+										label.field-wrapper__label checkbox *
+										.check-field-group
+											div
+												input(class="field" type="checkbox" id="checkbox-1" name="checkname")
+												label(for="checkbox-1")
+													span
+													| Lorem ipsum dolor.
+											div
+												input(class="field" type="checkbox" id="checkbox-2" name="checkname")
+												label(for="checkbox-2")
+													span
+													| Lorem ipsum dolor.
+											div
+												input(class="field" type="checkbox" id="checkbox-3" name="checkname")
+												label(for="checkbox-3")
+													span
+													| Lorem ipsum dolor.
+											div
+												input(class="field" type="checkbox" id="checkbox-4" name="checkname")
+												label(for="checkbox-4")
+													span
+													| Lorem ipsum dolor.
+										ul.field-wrapper__messages
+											li Please provide a valid city.
+								.col-lg-12.col-md-12.col-sm-12
+									// input checkbox type checkbox
 									p.body-2 1- add class(check-field-group--horizontal) in check-field-group
 									.field-wrapper
 										label.field-wrapper__label checkbox *
@@ -176,22 +204,22 @@ block content
 											div
 												input(class="field" type="checkbox" id="checkbox-1" name="checkname")
 												label(for="checkbox-1")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-2" name="checkname")
 												label(for="checkbox-2")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-3" name="checkname")
 												label(for="checkbox-3")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-4" name="checkname")
 												label(for="checkbox-4")
-													span 
+													span
 													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
@@ -204,22 +232,22 @@ block content
 											div
 												input(class="field" type="checkbox" id="checkbox-5" name="checkname")
 												label(for="checkbox-5")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-6" name="checkname")
 												label(for="checkbox-6")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-7" name="checkname")
 												label(for="checkbox-7")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-8" name="checkname")
 												label(for="checkbox-8")
-													span 
+													span
 													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
@@ -232,22 +260,22 @@ block content
 											div
 												input(class="field" type="checkbox" id="checkbox-9" name="checkname")
 												label(for="checkbox-9")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-10" name="checkname")
 												label(for="checkbox-10")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-11" name="checkname")
 												label(for="checkbox-11")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-12" name="checkname")
 												label(for="checkbox-12")
-													span 
+													span
 													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
@@ -260,17 +288,17 @@ block content
 											div
 												input(class="field" type="checkbox" id="checkbox-13" name="checkname")
 												label(for="checkbox-13")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-14" name="checkname")
 												label(for="checkbox-14")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="checkbox" id="checkbox-15" name="checkname")
 												label(for="checkbox-15")
-													span 
+													span
 													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
@@ -280,42 +308,42 @@ block content
 										div
 											input(class="field" type="checkbox" id="checkbox-16" name="checkname")
 											label(for="checkbox-16")
-												span 
+												span
 									// input checkbox type checkbox
 									p.body-2 6- input checkbox rounded add class=(field--rounded) in input
 									.field-wrapper
 										div
 											input(class="field field--rounded" type="checkbox" id="checkbox-17" name="checkname")
 											label(for="checkbox-17")
-												span 
+												span
 									// input checkbox type checkbox
 									p.body-2 7- input checkbox change color to accent add class=(field--accent) in input
 									.field-wrapper
 										div
 											input(class="field field--accent" type="checkbox" id="checkbox-18" name="checkname")
 											label(for="checkbox-18")
-												span 
+												span
 									// input checkbox type checkbox
 									p.body-2 8- input checkbox class=(field--accent field--rounded)
 									.field-wrapper
 										div
 											input(class="field field--accent field--rounded" type="checkbox" id="checkbox-19" name="checkname")
 											label(for="checkbox-19")
-												span 
+												span
 									// input checkbox type checkbox
 									p.body-2 9- input checkbox opacity class=(field--checked)
 									.field-wrapper
 										div
 											input(class="field field--checked" type="checkbox" id="checkbox-20" name="checkname")
 											label(for="checkbox-20")
-												span 
+												span
 									// input checkbox type checkbox
 									p.body-2 9- input checkbox disabled
 									.field-wrapper
 										div
 											input(class="field" type="checkbox" id="checkbox-21" disabled="disabled" name="checkname")
 											label(for="checkbox-21")
-												span 
+												span
 									// input checkbox type checkbox
 									//- p.body-2 9- input checkbox vuetify
 									//- .field-wrapper
@@ -342,23 +370,23 @@ block content
 											div
 												input(class="field" type="radio" id="radio-1" name="radioName")
 												label(for="radio-1")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-2" name="radioName")
 												label(for="radio-2")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-3" name="radioName")
 												label(for="radio-3")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-4" name="radioName")
 												label(for="radio-4")
-													span 
-													| Lorem ipsum dolor. 
+													span
+													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
 								.col-lg-12.col-md-12.col-sm-12
@@ -370,23 +398,23 @@ block content
 											div
 												input(class="field" type="radio" id="radio-5" name="radioName")
 												label(for="radio-5")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-6" name="radioName")
 												label(for="radio-6")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-7" name="radioName")
 												label(for="radio-7")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-8" name="radioName")
 												label(for="radio-8")
-													span 
-													| Lorem ipsum dolor. 
+													span
+													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
 								.col-lg-12.col-md-12.col-sm-12
@@ -397,23 +425,23 @@ block content
 											div
 												input(class="field" type="radio" id="radio-9" name="radioName")
 												label(for="radio-9")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-10" name="radioName")
 												label(for="radio-10")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-11" name="radioName")
 												label(for="radio-11")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-12" name="radioName")
 												label(for="radio-12")
-													span 
-													| Lorem ipsum dolor. 
+													span
+													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
 								.col-lg-12.col-md-12.col-sm-12
@@ -425,23 +453,23 @@ block content
 											div
 												input(class="field" type="radio" id="radio-13" name="radioName")
 												label(for="radio-13")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-14" name="radioName")
 												label(for="radio-14")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-15" name="radioName")
 												label(for="radio-15")
-													span 
+													span
 													| Lorem ipsum dolor.
 											div
 												input(class="field" type="radio" id="radio-16" name="radioName")
 												label(for="radio-16")
-													span 
-													| Lorem ipsum dolor. 
+													span
+													| Lorem ipsum dolor.
 										ul.field-wrapper__messages
 											li Please provide a valid city.
 									.field-wrapper
@@ -455,7 +483,7 @@ block content
 										div
 											input(class="field" type="radio" disabled="disabled"  id="radio-17" name="radioName")
 											label(for="radio-17")
-												span  
+												span
 											//check-field out wrapper
 									// input checkbox type checkbox
 									p.body-2 9- input switch
