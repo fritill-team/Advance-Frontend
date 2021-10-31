@@ -24,6 +24,7 @@ import "./playlist-video";
 import "./course-card";
 import "./list-dropdown";
 import "./course-content";
+import "./survey-card";
 import "./dropdown";
 import "./chapter-content";
 import "./menu-header";

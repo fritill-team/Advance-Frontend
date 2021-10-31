@@ -7,13 +7,7 @@
 }
 .content-list-item {
   display: flex;
-  margin-bottom: 30px;
-	.course-card{
-		.course-card__content{
-			@include normalizeTypo;
-			padding-bottom: 16px;
-		}
-	}
+  margin-bottom: 16px;
   // @media(max-width: 375px){
   //   flex-direction: column;
   // }
