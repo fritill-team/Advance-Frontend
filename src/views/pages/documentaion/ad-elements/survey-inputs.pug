@@ -10,112 +10,22 @@ block content
 					.card__title
 						h3 checkbox
 					.card__content
-						.content
-							form.form-question
-								.form-question__question-form
-									h2 Lorem ipsum dolor
-									p.text-3 amet consectetur adipisicing elit.
-								.form-question__wrap
-									.wrap__form-group
-										input.form-group__input(id="survey-1" value="radio-1" type="checkbox" name="survey")
-										label.form-group__label(for="survey-1") lorem
-									.wrap__form-group
-										input.form-group__input(id="survey-2" value="radio-2" type="checkbox" name="survey")
-										label.form-group__label(for="survey-2") lorem
-									.wrap__form-group
-										input.form-group__input(id="survey-3" value="radio-3" type="checkbox" name="survey")
-										label.form-group__label(for="survey-3") lorem
+						include ../../../components/survey-content.pug
+						+mcq('checkbox')
 		.row
 			.col-lg-12
 				.card.card--centered
 					.card__title
 						h3 radio button
 					.card__content
-						.content
-							form.form-question
-								.form-question__question-form
-									h2 Lorem ipsum dolor
-									p.text-3 amet consectetur adipisicing elit.
-								.form-question__wrap
-									.wrap__form-group
-										input.form-group__input(id="survey-radio-1" value="radio-1" type="radio" name="survey")
-										label.form-group__label(for="survey-radio-1") lorem
-									.wrap__form-group
-										input.form-group__input(id="survey-radio-2" value="radio-2" type="radio" name="survey")
-										label.form-group__label(for="survey-radio-2") lorem
-									.wrap__form-group
-										input.form-group__input(id="survey-radio-3" value="radio-3" type="radio" name="survey")
-										label.form-group__label(for="survey-radio-3") lorem
-		.row
-			.col-lg-12
-				.card.card--centered
-					.card__title
-						h3 checkbox image
-					.card__content
-						.content
-							form.form-question
-								.form-question__question-form
-									h2 Lorem ipsum dolor
-									p.text-3 amet consectetur adipisicing elit.
-								.form-question__wrap
-									.wrap__form-group
-										input.form-group__input(id="toggle-1" value="radio-1" type="checkbox" name="survey")
-										label.form-group__label(for="toggle-1") lorem
-											img(src="../../assets/images/hd_dp.jpg")
-									.wrap__form-group
-										input.form-group__input(id="toggle-2" value="radio-2" type="checkbox" name="survey")
-										label.form-group__label(for="toggle-2") lorem
-											img(src="../../assets/images/hd_dp.jpg")
-									.wrap__form-group
-										input.form-group__input(id="toggle-3" value="radio-3" type="checkbox" name="survey")
-										label.form-group__label(for="toggle-3") lorem
-											img(src="../../assets/images/hd_dp.jpg")
-		.row
-			.col-lg-12
-				.card.card--centered
-					.card__title
-						h3 radio button
-					.card__content
-						.content
-							form.form-question
-								.form-question__question-form
-									h2 Lorem ipsum dolor
-									p.text-3 amet consectetur adipisicing elit.
-								.form-question__wrap
-									.wrap__form-group
-										input.form-group__input(id="radio-21" value="radio-1" type="radio" name="survey")
-										label.form-group__label(for="radio-21")
-											img(src="../../assets/images/get_img.jpg")
-											|lorem
-									.wrap__form-group
-										input.form-group__input(id="radio-22" value="radio-2" type="radio" name="survey")
-										label.form-group__label(for="radio-22") lorem
-											img(src="../../assets/images/get_img.jpg")
-									.wrap__form-group
-										input.form-group__input(id="radio-23" value="radio-3" type="radio" name="survey")
-										label.form-group__label(for="radio-23") lorem
-											img(src="../../assets/images/get_img.jpg")
-								.form-question__wrap
-									.wrap__form-group
-										input.form-group__input(id="radio-24" value="radio-3" type="radio" name="survey")
-										label.form-group__label(for="radio-24")
-											img(src="../../assets/images/get_img.jpg")
-										label.label-style lorem
-									.wrap__form-group
-										input.form-group__input(id="radio-25" value="radio-3" type="radio" name="survey")
-										label.form-group__label(for="radio-25")
-											img(src="../../assets/images/get_img.jpg")
-										label.label-style lorem
-									.wrap__form-group
-										input.form-group__input(id="radio-26" value="radio-3" type="radio" name="survey")
-										label.form-group__label(for="radio-26")
-											img(src="../../assets/images/get_img.jpg")
-										label.label-style lorem
+						include ../../../components/survey-content.pug
+						+mcq('radio')
+		
 		.row
 			.col-lg-12
 				.card
 					.card__title
-						h3 radio button
+						h3 Checkbox 
 					.card__content
 						.question.question--no-line
 							.question__item.question__item--cover

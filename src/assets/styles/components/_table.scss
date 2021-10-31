@@ -57,7 +57,7 @@
     }
     th,
     td {
-      padding: 12px;
+      padding: 18px 12px;
       .check-field {
         margin: auto;
       }
@@ -79,7 +79,21 @@
     td {
       font-weight: 600;
       color: #202124;
-      padding: 12px;
+      padding: 18px 12px;
+			.field[type="radio"] + label::before{
+				width: 20px;
+				height: 20px;
+			}
+			.field[type="radio"] + label::after{
+				width: 11px;
+				height: 11px;
+				top: 4px;
+				left: 5px;
+			}
+			.field[type="radio"] + label > span{
+				top: 9px;
+				left: -10px;
+			}
     }
     @media (max-width: 767px) {
       th,
