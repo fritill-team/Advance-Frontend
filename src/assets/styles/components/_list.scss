@@ -84,42 +84,16 @@
   padding: 8px;
   font-weight: 600;
   font-size: 14px;
-  //color: rgba(0, 0, 0, .6);
   background-color: lighten($black, 40%);
-	background-color: darken($primary, 7);
   @include normalizeTypo();
 	position: relative;
-	&::after,&::before{
-		position: absolute;
-		content: '';
-		background-color: $accent;
-	}
-	&::before{
-		width: 70%;
-		left: 8px;
-		bottom: 6px;
-		height: 1px;
-	}
-	&::after{
-		left: 8px;
-		width: 30%;
-		bottom: 5px;
-		height: 3px;
-	}
-	
 	p{
 		color: $white;	
 	}
 
   &.list-title--lg {
     font-size: 16px;
-    background-color: $accent;
-		&::after,&::before{
-			background-color: $primary;
-		}
-		&::after{
-			height: 4px;
-		}
+		background-color: darken($primary, 10%);
   }
 }
 
