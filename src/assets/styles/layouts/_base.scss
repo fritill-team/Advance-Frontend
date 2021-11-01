@@ -67,6 +67,13 @@ body {
 	&.drawers-container--full{
 		min-height: 100%;
 	}
+	&.drawer-container-survey{
+		.page__content{
+			height: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
   @media (max-width: 768px) {
     &.drawers-container--player {
       flex-direction: column-reverse;
