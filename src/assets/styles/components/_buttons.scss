@@ -17,7 +17,7 @@ input[type="button"].btn {
   letter-spacing: 1.25px;
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
 	margin: 0 14px 0 0;
-	margin-right: 16px;
+	margin-right: 5px;
 	&:last-of-type{
 		margin-right: 0;
 	}
@@ -271,14 +271,9 @@ input[type="button"].btn {
   }
 }
 
-a.btn {
-  margin: 0 16px 0 0;
-  display: inline-block;
-
-  &:hover {
-    // color: inherit;
-  }
-}
+// a.btn {
+//   display: inline-block;
+// }
 
 
 .btn-group {
