@@ -275,13 +275,19 @@
       }
     }
   }
-
-  &.card--centered {
-		max-width: 700px;
+	&.card--welcome{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		.title-h1{
 			text-align: center;
 			margin: .5em 0;
 		}
+	}
+  &.card--centered {
+		max-width: 700px;
+		
     .card__content-header {
       flex-direction: column;
     }

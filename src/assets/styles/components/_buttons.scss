@@ -18,7 +18,9 @@ input[type="button"].btn {
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
 	margin: 0 14px 0 0;
 	margin-right: 16px;
-
+	&:last-of-type{
+		margin-right: 0;
+	}
   &:hover:before {
     opacity: 0.15;
   }
@@ -363,5 +365,8 @@ html[dir="rtl"] {
 html[dir="rtl"]{
 	.btn{
 		margin: 0 0 0 14px;
+		&:last-of-type{
+			margin: 0;
+		}
 	}
 }
