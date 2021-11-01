@@ -18,13 +18,14 @@
   }
 
   .list-item {
+		height: 55px;
     .list-item__avatar {
       min-width: 60px;
     }
 
     .list-item__content {
       white-space: nowrap;
-      opacity: 0;
+      display: none;
     }
 
     &.list-item--open + .list-item-group {
@@ -66,7 +67,7 @@
     // padding-right: 8px;
     .list-item {
       .list-item__content {
-        opacity: 1;
+        display: block;
       }
 
       &.list-item--open + .list-item-group {
