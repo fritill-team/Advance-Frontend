@@ -62,8 +62,11 @@ body {
   padding-top: 60px;
   display: flex;
   flex-flow: row nowrap;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+	&.drawers-container--full{
+		min-height: 100%;
+	}
   @media (max-width: 768px) {
     &.drawers-container--player {
       flex-direction: column-reverse;
