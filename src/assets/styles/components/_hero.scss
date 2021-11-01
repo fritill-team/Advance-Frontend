@@ -18,18 +18,27 @@
     object-fit: cover;
     opacity: .8;
   }
-
+	.emoji{
+		// position: ;
+	}
   .hero__avatar {
     position: absolute;
-    bottom: 0;
-    right: -20px;
-    width: 50%;
-    height: 80%;
-    @media(max-width: 992px) {
-      width: 70%;
-      right: 0;
-      // opacity: ;
-    }
+    top: 50%;
+    right: 24%;
+		font-size: 200px;
+		color: $primary;
+    &:nth-of-type(2){
+			top: 20%;
+			right: 10%;
+			font-size: 220px;
+			transform: rotate(30deg);
+		}
+    &:nth-of-type(3){
+			top: 40%;
+			right: 10%;
+			font-size: 220px;
+			transform: rotate(30deg);
+		}
   }
 
   .hero-content {
