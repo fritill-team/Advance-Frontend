@@ -5,13 +5,7 @@ const contentTemplate = (item) => `
 		</a>
 		<div class="content-list-item__content">
 			<div class="content-list-item__content-header">
-				<h5 class="title-5">
-					${
-            item.enabled
-              ? `<a class="title-5" href="${item.url}">${item.title}</a>`
-              : item.title
-          }
-				</h5>
+        <a class="title-5" href="${item.enabled ? item.url : 'javascript:void(0)'}">${item.title}</a>
 				${
           item.type === "video"
             ? `<span class="title-5">${item.duration}</span>`
@@ -35,7 +29,7 @@ const contentTemplate = (item) => `
 const chapterTemplate = (item) => `
   <h3 class="chapter-item__title">${item.title}</h3>
   <div class="chapter-item__details">
-    <span class="title-5">${item.progress}<span>lectures</span></span>
+    <span class="title-5">${item.progress.progress}<span>lectures</span></span>
     <span class="title-5">${item.duration}</span>
   </div>`;
 

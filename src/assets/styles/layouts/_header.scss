@@ -27,15 +27,20 @@
     display: none;
   }
   .header__arrow {
-		padding: 0 20px;
+		padding: 0 24px;
     position: relative;
     clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%);
 		display: inline-block;
 		line-height: 60px;
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 240px;
+    white-space: nowrap;
   }
   .header__arrow-secondary {
     background-color: $secondary;
-		padding: 0 24px 0 30px;
+		padding: 0 24px 0 40px;
   }
   .header__search {
     margin: auto 100px;

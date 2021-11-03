@@ -123,7 +123,7 @@
   display: flex;
   width: 100%;
   font-size: 16px;
-  justify-items: center;
+  justify-content: space-between;
   background: $light-white;
   border: 1px solid $light-white;
   padding: 10px 20px;
@@ -139,10 +139,14 @@
     line-height: 22px;
   }
 
+  .rate-display{
+    display: flex;
+  }
+
   .total-rating__rating-box {
     color: #dedfe0;
     display: flex;
-    flex-basis: 30%;
+    // flex-basis: 30%;
 
     .rating-box__rating-star {
       @include rating-star;
