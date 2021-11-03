@@ -6,9 +6,9 @@ const surveyTemplate = (item) => `
 	</a>
 	<div class="course-card__content">
 		<a class="title-link text-2 semi-bold" href="${item.url}">${item.title}</a>
-		<p class="title-link course-card__description body-2 gray">${item.short_description ? item.short_description : "there is no description"}</p>
+		<p class="title-link course-card__description body-2 gray">${item.short_description ? item.short_description : ""}</p>
 		<div class="course-card__meta">
-			<p class="body-2 gray">${item.category ? item.category : "there is no category"}</p>
+			<p class="body-2 gray">${item.category ? item.category : ""}</p>
 		</div>		
 	</div>
 </div>
