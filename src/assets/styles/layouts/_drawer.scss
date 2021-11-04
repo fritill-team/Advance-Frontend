@@ -1,6 +1,7 @@
 .drawer {
-  // position: absolute;
-  // top: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
   max-width: 0;
@@ -18,7 +19,8 @@
   }
 
   .list-item {
-		min-height: 55px;
+    min-height: 55px;
+
     .list-item__avatar {
       min-width: 60px;
     }
@@ -134,7 +136,7 @@
   .drawer {
     background-color: #43525c;
     color: $white;
-		box-shadow: 5px 0px 30px 0px rgba( $white, .6);
+    box-shadow: 5px 0px 30px 0px rgba($white, .6);
   }
 }
 
