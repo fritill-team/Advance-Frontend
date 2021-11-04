@@ -7,16 +7,9 @@
   max-width: 0;
   background-color: $white;
   transition: 0.3s ease all;
-  // transform: translateY(60px);
-  overflow: hidden auto;
   z-index: 4;
   border-right: 1px solid #ddd;
 
-
-  * {
-    transition: inherit;
-    // opacity: 0;
-  }
 
   .list-item {
     min-height: 55px;
@@ -30,8 +23,39 @@
       display: none;
     }
 
+    .list-item__action {
+      display: none;
+    }
+
     &.list-item--open + .list-item-group {
       display: none;
+    }
+  }
+
+
+  &.drawer--partially-closed {
+    max-width: 60px;
+    @media (max-width: 760px) {
+      max-width: 0;
+    }
+  }
+
+  &.drawer--partially-closed.drawer--open,
+  &.drawer--open {
+    max-width: 300px;
+
+    .list-item {
+      &.list-item--open + .list-item-group {
+        display: block;
+      }
+
+      .list-item__content {
+        display: block;
+      }
+
+      .list-item__action {
+        display: block;
+      }
     }
   }
 
@@ -44,46 +68,9 @@
     }
   }
 
-  &.drawer--partially-closed {
-    max-width: 60px;
-    @media (max-width: 760px) {
-      max-width: 0;
-    }
-  }
-
-  &.drawer--left {
-  }
-
-  &.drawer--right {
-    // .btn{
-    // margin-left: auto;
-    // position: absolute;
-    //   top: 8px;
-    //   left: 8px;
-    // }
-  }
-
-  &.drawer--open {
-    max-width: 300px;
-    // padding-left: 8px;
-    // padding-right: 8px;
-    .list-item {
-      .list-item__content {
-        display: block;
-      }
-
-      &.list-item--open + .list-item-group {
-        display: block;
-      }
-    }
-
-    * {
-      opacity: 1;
-    }
-  }
 
   &.open--half {
-    max-width: 50vw;
+    max-width: 50vw; // NO NO NO NO
     padding-left: 8px;
     padding-right: 8px;
 
@@ -113,16 +100,16 @@
 
 .landing-survay-preview {
   max-width: 800px;
-  min-width: 50vw;
+  min-width: 50vw; // NO NO NO NO
   width: 100%;
-  min-height: 50vh;
+  min-height: 50vh; // NO NO NO NO
   background-color: #43525c;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 
   * {
     width: 100%;
-    min-height: 50vh;
+    min-height: 50vh; // NO NO NO NO
     overflow: hidden;
   }
 

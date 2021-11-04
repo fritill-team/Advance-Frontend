@@ -16,6 +16,22 @@
   }
 }
 
+.drawer {
+  &.drawer--partially-closed + .page {
+    padding-left: 60px;
+    @media (max-width: 760px) {
+      padding-left: 0;
+    }
+  }
+
+  &.drawer--partially-closed.drawer--open + .page,
+  &.drawer--open + .page {
+    padding-left: 300px;
+  }
+}
+
+
+// TODO TELL ME What the fuck is this shit
 .page-content--auth {
   padding: 0;
   height: 100%;
@@ -35,7 +51,8 @@
     height: 100%;
   }
 }
-// What the fuck is this shit
+
+
 .section {
   margin-bottom: 80px;
   // padding: 100px 0;
@@ -79,5 +96,21 @@
 .night-mode {
   .section--partners {
     background-color: lighten($black, 10%);
+  }
+}
+
+
+html[dir="rtl"] {
+  .drawer {
+    &.drawer--partially-closed + .page {
+      padding-left: unset;
+      padding-right: 60px;
+    }
+
+    &.drawer--partially-closed.drawer--open + .page,
+    &.drawer--open + .page {
+      padding-left: unset;
+      padding-right: 300px;
+    }
   }
 }

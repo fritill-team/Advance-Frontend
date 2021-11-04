@@ -496,67 +496,7 @@ $(document)
 
 // sidebar
 
-const sidebarTemplate = function (listItem) {
-  return `
-      ${listItem
-        .map(
-          (item) => `
-        <a href="${
-          item.has_children ? "javascript:void(0)" : item.url
-        }" class="list-item list-item--one-line ${
-            item.is_active ? "list-item--open" : ""
-          } ">
-          <div class="list-item__avatar">
-            <i class="${item.icon}"></i>
-          </div>
-          <div class="list-item__content">
-            <span class="body-2">${item.title}</span>
-          </div>
-          <div class="list-item__action">
-          ${
-            item.has_children
-              ? `
-            <i class="fas fa-chevron-down"></i>
-            `
-              : ``
-          }
-          </div>
-        </a>
-        ${
-          item.has_children
-            ? `
-          <div class="list-item-group">
-            ${item.children
-              .map(
-                (child) => `
-              <a class="list-item list-item--one-line ${
-                child.is_active ? "list-item--active" : ""
-              } " href="${child.url}">
-                <div class="list-item__avatar">
-                  <i class="${child.icon}"></i>
-                </div>
-                <div class="list-item__content">
-                  <span class="body-2">${child.title}</span>
-                </div>
-              </a>
-            `
-              )
-              .join("")}
-          </div>
-        `
-            : ``
-        }
-      `
-        )
-        .join("")}
-  `;
-};
 
-$(".list__sidebar").each(function (i, item) {
-  let listItem = $(item),
-    data = listItem.data("link");
-  listItem.html($(sidebarTemplate(data)));
-});
 
 // $.get(url)
 // .then(res => {
@@ -586,47 +526,47 @@ $(".list__sidebar").each(function (i, item) {
 // })
 // drawers
 
-$(document)
-  .on("click", ".toggle", function () {
-    // console.log()
-    $(".drawer--left").toggleClass("drawer--open");
-
-    // $(".video-player").toggleClass("video-player--collapse");
-    // console.log($(".drawer--left").closest(".drawers-container"));
-  })
-  .on("click", ".left-open", function () {
-    $(".drawer--left").toggleClass("open");
-  })
-  .on("click", ".header__link", function () {
-    // $(".drawer--left").toggleClass("drawer--open");
-  })
-  .on("click", ".right-open", function () {
-    $(".drawer--right").toggleClass("open");
-  })
-  .on("click", ".left-open-half", function () {
-    $(".drawer--left").toggleClass("open--half");
-  })
-  .on("click", ".right-open-half", function () {
-    $(".drawer--right").toggleClass("open--half");
-  })
-  .on("click", ".drawer .btn", function () {
-    $(".drawer").removeClass("open");
-    $(".drawer").removeClass("open--half");
-  })
-  .on("click", ".open-modal", function () {
-    $(".modal-overlay").toggleClass("modal--active");
-    $("body").toggleClass("no-scroll");
-  })
-  .on("click", ".open-modal--full", function () {
-    $(".modal-overlay").addClass("modal-overlay-full");
-    $(".modal-overlay").toggleClass("modal--active");
-    $("body").toggleClass("no-scroll");
-  })
-  .on("click", ".close-modal", function () {
-    $(".modal-overlay").removeClass("modal--active");
-    $(".modal-overlay").removeClass("modal-overlay-full");
-    $("body").removeClass("no-scroll");
-  });
+// $(document)
+//   .on("click", ".toggle", function () {
+//     // console.log()
+//     $(".drawer--left").toggleClass("drawer--open");
+//
+//     // $(".video-player").toggleClass("video-player--collapse");
+//     // console.log($(".drawer--left").closest(".drawers-container"));
+//   })
+//   .on("click", ".left-open", function () {
+//     $(".drawer--left").toggleClass("open");
+//   })
+//   .on("click", ".header__link", function () {
+//     // $(".drawer--left").toggleClass("drawer--open");
+//   })
+//   .on("click", ".right-open", function () {
+//     $(".drawer--right").toggleClass("open");
+//   })
+//   .on("click", ".left-open-half", function () {
+//     $(".drawer--left").toggleClass("open--half");
+//   })
+//   .on("click", ".right-open-half", function () {
+//     $(".drawer--right").toggleClass("open--half");
+//   })
+//   .on("click", ".drawer .btn", function () {
+//     $(".drawer").removeClass("open");
+//     $(".drawer").removeClass("open--half");
+//   })
+//   .on("click", ".open-modal", function () {
+//     $(".modal-overlay").toggleClass("modal--active");
+//     $("body").toggleClass("no-scroll");
+//   })
+//   .on("click", ".open-modal--full", function () {
+//     $(".modal-overlay").addClass("modal-overlay-full");
+//     $(".modal-overlay").toggleClass("modal--active");
+//     $("body").toggleClass("no-scroll");
+//   })
+//   .on("click", ".close-modal", function () {
+//     $(".modal-overlay").removeClass("modal--active");
+//     $(".modal-overlay").removeClass("modal-overlay-full");
+//     $("body").removeClass("no-scroll");
+//   });
 
 // modal
 
