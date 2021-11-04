@@ -91,7 +91,9 @@ const courseTemplate = function (course) {
   return `
     <div class="course-card course-card--grid-view">
       <a href="${course.url}" class="course-card__preview youtube-activator">
-        <img src="${course.cover}" alt="${course.title}" class="course-card__preview-cover">
+        <img src="${course.cover}" alt="${
+    course.title
+  }" class="course-card__preview-cover">
         <div class="course-card__preview-video youtube-player"
              id="course-${course.id}"
              data-video-id="${course.video_id}"></div>
@@ -99,7 +101,9 @@ const courseTemplate = function (course) {
       </a>
       <div class="course-card__content">
 				<a class="title-link text-2 semi-bold" href="${course.url}">${course.title}</a>
-				<p class="title-link course-card__description body-2 gray">${course.short_description ? course.short_description : ""}</p>
+				<p class="title-link course-card__description body-2 gray">${
+          course.short_description ? course.short_description : ""
+        }</p>
 				<div class="course-card__meta">
 					<p class="body-2 gray">${course.category}</p>
           <p class="body-2 course-card__rate">
