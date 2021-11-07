@@ -2,6 +2,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+	.select2{
+		width: 100% !important;
+	}
   // field wrapper Error case (1)
   &.field-wrapper--error{
     .field-wrapper__label {

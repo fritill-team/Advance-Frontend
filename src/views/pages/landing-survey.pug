@@ -1,15 +1,10 @@
-extends ../layouts/drawer.pug
+extends ../layouts/spa-layout.pug
 
 
 block title
 	title drawers page
 block left 
-	.drawer.drawer--left
-		.drawer__header
-			h5.title-h5 title
-			button.btn.btn--default.btn--icon.btn--ripple
-				i.fas.fa-times
-
+	
 block content 
 	div(class="survey-content" dir='rtl')
 		.landing-survay-preview
