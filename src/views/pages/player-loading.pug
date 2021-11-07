@@ -1,11 +1,11 @@
 extends ../layouts/spa-layout
 
 block title
-  title player loading
+	title player loading
 
 block left
-  .drawer.drawer--left.drawer--open.open
-    include ../components/video-item-loader.pug
+	#left-sidebar.drawer.drawer--left.drawer--open.open
+		include ../components/video-item-loader.pug
 block content
-  .loader-wrapper.loader-wrapper--fill
-    .loader
+	.loader-wrapper.loader-wrapper--fill
+		.loader

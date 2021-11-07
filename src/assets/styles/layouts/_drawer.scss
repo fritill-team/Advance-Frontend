@@ -75,16 +75,6 @@
   }
 
 
-  &.open--half {
-    max-width: 50vw; // NO NO NO NO
-    padding-left: 8px;
-    padding-right: 8px;
-
-    * {
-      opacity: 1;
-    }
-  }
-
   @media (max-width: 767px) {
     position: fixed;
     height: 100%;
