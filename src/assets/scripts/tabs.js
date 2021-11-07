@@ -34,21 +34,21 @@ $('.tabs').each(function (tabs) {
 
 // chapters and contents tabs
 
-            $('.chapters-tabs').each(function (tabs) {
-                tabs = $(tabs);
+$('.chapters-tabs').each(function (tabs) {
+  tabs = $(tabs);
 
-                $('.tab-chapter').on('click', function (e) {
-                    var tab = $(this),
-                        target = $(tab.attr('href'));
+  $('.tab-chapter').on('click', function (e) {
+    var tab = $(this),
+      target = $(tab.attr('href'));
 
-                    // remove class active from all the sublings
-                    $('.chapters-tabs .tab-chapter').each(function (tab) {
-                        $(this).removeClass('tab--active')
-                    })
+    // remove class active from all the sublings
+    $('.chapters-tabs .tab-chapter').each(function (tab) {
+      $(this).removeClass('tab--active')
+    })
 
-                    target.siblings('.tab-panels-content .tab-panel').removeClass('tab-panel--active');
+    target.siblings('.tab-panels-content .tab-panel').removeClass('tab-panel--active');
 
-                    $(this).addClass('tab--active');
-                    target.addClass('tab-panel--active');
-                });
-            });
+    $(this).addClass('tab--active');
+    target.addClass('tab-panel--active');
+  });
+});
