@@ -27,7 +27,7 @@ export default class ClassificationResource extends BaseResource {
         </div>
       </div>
       <div class="card__content">
-        <p>${item.description}</p>
+        <p>${item.score}</p>
       </div>
     </div>`
   }
