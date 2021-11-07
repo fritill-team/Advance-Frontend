@@ -6,6 +6,7 @@ export default class RecommendationResource extends BaseResource {
     super($container, options)
     this.fetchItems()
   }
+
   itemTemplate(item) {
     return ` <div class="card" data-data='${JSON.stringify(item)}'>
       <div class="card__header" >
