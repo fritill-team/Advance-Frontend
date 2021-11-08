@@ -1,44 +1,54 @@
-.field-wrapper{
+.field-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
-	.select2{
-		width: 100% !important;
-	}
+
+  .select2 {
+    width: 100% !important;
+  }
+
   // field wrapper Error case (1)
-  &.field-wrapper--error{
+  &.field-wrapper--error {
     .field-wrapper__label {
       color: #dc3545;
     }
+
     .field-wrapper__messages {
       li {
         color: #dc3545;
       }
     }
-    .field{
+
+    .field {
       border: 1px solid #dc3545;
+
       &[type="checkbox"],
       &[type="radio"] {
         & + label:before {
           border: 1px solid #dc3545;
           background: #fff;
         }
+
         & + label {
           color: #dc3545;
         }
       }
+
       &[type="checkbox"] {
         &:checked + label:after {
           border-bottom: 3px solid #dc3545;
           border-right: 3px solid #dc3545;
         }
+
         & + label {
           color: #dc3545;
+
           span {
             background-color: #dc3545;
           }
         }
       }
+
       &[type="radio"] {
         &:not(:checked) + label:after {
           opacity: 0;
@@ -47,58 +57,69 @@
         &:checked + label:after {
           border: 6px solid #dc3545;
         }
+
         & + label {
           span {
             background-color: #dc3545;
           }
         }
       }
+
       &[type="file"] {
         & + label {
           color: #dc3545;
+
           &:after {
             background-color: #dc3545;
           }
         }
       }
-      &.field--underline{
+
+      &.field--underline {
         border: none;
-        border-bottom: 1px solid rgba( #dc3545 , 1);
-    }
+        border-bottom: 1px solid rgba(#dc3545, 1);
+      }
     }
   }
+
   // field wrapper smaller case (2)
-  &.field-wrapper--sm{
+  &.field-wrapper--sm {
     .field-wrapper__label {
       font-size: 12px;
       margin-bottom: 4px;
       padding: 4px 10px;
     }
+
     .input-group {
       .file-input {
         height: 34px;
       }
     }
+
     .field {
       font-size: 12px;
       padding: 4px 9px;
       height: 38px;
+
       &[type="checkbox"],
       &[type="radio"] {
         & + label {
           font-size: 14px;
         }
       }
-      &[type='file']{
-        & + label{
+
+      &[type='file'] {
+        & + label {
           font-size: 14px;
           padding: 1rem 0.8rem;
+
           &:after {
             padding: 1rem 0.8rem;
           }
         }
       }
     }
+
     .field-wrapper__messages {
       li {
         font-size: 12px;
@@ -106,43 +127,52 @@
       }
     }
   }
+
   // field wrapper larger case (3)
-  &.field-wrapper--lg{
+  &.field-wrapper--lg {
     .field-wrapper__label {
       font-size: 18px;
     }
+
     .field-wrapper__messages {
       li {
         font-size: 16px;
       }
     }
+
     .input-group {
       .file-input {
         height: 48px;
       }
     }
+
     .field {
       font-size: 18px;
       height: 48px;
-      &[type='file']{
-        & + label{
+
+      &[type='file'] {
+        & + label {
           font-size: 18px;
           padding: 1.5rem .9rem;
-          &:after{
+
+          &:after {
             padding: 1.5rem 0.9rem;
             // height: calc(1.4em + .75rem);
           }
+
           &:before {
             font-size: 18px;
           }
         }
       }
+
       &[type="checkbox"],
       &[type="radio"] {
         & + label {
           font-size: 16px;
         }
       }
+
       &[type="radio"] {
         & + label {
           span {
@@ -151,26 +181,26 @@
           }
         }
       }
-   }
+    }
   }
+
   // field wrapper input with arrow case (4)
-  &.field-wrapper--arrow{
-    .field-wrapper__content{
-      position: relative;
+  &.field-wrapper--arrow {
+    .field-wrapper__content {
       &:after {
         position: absolute;
         top: 35%;
-        transform: translateY(44%);
+        transform: translateY(44%) rotate(42deg);
         right: 20px;
         content: "";
         border-right: 3px solid #686f7a;
         border-bottom: 3px solid #686f7a;
         height: 10px;
         width: 10px;
-        transform: rotate(42deg);
         transition: all 0.3s ease-in-out;
         display: block;
       }
+
       &:focus-within {
         &:after {
           top: 46%;
@@ -181,16 +211,19 @@
     }
   }
 }
+
 // start switch
 .switch {
   input[type="checkbox"],
-  input[type="radio"]{
+  input[type="radio"] {
     display: none;
+
     &:checked {
       & + label {
         &:before {
           background-color: rgba($color: $primary, $alpha: 0.3);
         }
+
         &:after {
           left: 18px;
           background-color: $primary;
@@ -198,39 +231,44 @@
       }
     }
   }
-label {
-  padding-left: 40px;
-  position: relative;
-  &:before {
-    position: absolute;
-    content: "";
-    width: 37px;
-    height: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 2px;
-    background-color: rgba($color: #a9a9a9, $alpha: 0.3);
-    box-shadow: 0 0 3px rgba($color: #a9a9a9, $alpha: 0.7);
-    border-radius: 25px;
-    transition: 0.5s ease all;
-    z-index: 0;
-  }
-  &:after {
-    position: absolute;
-    content: "";
-    width: 21px;
-    height: 21px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 2px;
-    border-radius: 50%;
-    background-color: #a9a9a9;
-    transition: 0.5s ease all;
+
+  label {
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 37px;
+      height: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2px;
+      background-color: rgba($color: #a9a9a9, $alpha: 0.3);
+      box-shadow: 0 0 3px rgba($color: #a9a9a9, $alpha: 0.7);
+      border-radius: 25px;
+      transition: 0.5s ease all;
+      z-index: 0;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2px;
+      border-radius: 50%;
+      background-color: #a9a9a9;
+      transition: 0.5s ease all;
+    }
   }
 }
-}
-.field-wrapper__content{
-  position: relative;
+
+.field-wrapper__content {
+  //position: relative;
+
   .field-wrapper__icon {
     position: absolute;
     height: 100%;
@@ -245,15 +283,18 @@ label {
     left: 0;
   }
 }
+
 .check-field-group {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   padding-left: 10px;
   width: 100%;
+
   & > div {
     display: contents;
   }
+
   &.check-field-group--horizontal {
     flex-direction: row;
     justify-content: space-between;
@@ -261,15 +302,18 @@ label {
     flex-wrap: wrap;
   }
 }
-.field-wrapper__label{
+
+.field-wrapper__label {
   font-size: 16px;
-   font-weight: 600;
-   padding: 6px 16px;
-   color: $primary;
- }
-.field-wrapper__messages{
+  font-weight: 600;
+  padding: 6px 16px;
+  color: $primary;
+}
+
+.field-wrapper__messages {
   font-weight: 500;
   color: inherit;
+
   li {
     font-size: 14px;
     font-weight: 600;
@@ -277,7 +321,8 @@ label {
     color: $primary;
   }
 }
-.field{
+
+.field {
   font-size: 16px;
   width: 100%;
   border-radius: 5px;
@@ -291,6 +336,7 @@ label {
   &[type="checkbox"],
   &[type="radio"] {
     display: none;
+
     & + label {
       position: relative;
       font-size: 14px;
@@ -299,7 +345,8 @@ label {
       color: $gray;
       margin: 7px 0px;
       padding-left: 30px;
-      span{
+
+      span {
         position: absolute;
         background-color: $primary;
         left: -11px;
@@ -311,12 +358,14 @@ label {
         opacity: 0;
         transition: 0.3s ease all;
       }
+
       &:hover {
         span {
           opacity: 0.2;
         }
-     }
+      }
     }
+
     & + label:before {
       content: "";
       display: block;
@@ -348,13 +397,16 @@ label {
   &[type="checkbox"] {
     & + label {
       padding-top: 2px;
-      span{
+
+      span {
         top: 9px;
       }
     }
+
     & + label:before {
       border-radius: 2px;
     }
+
     &:checked + label:after {
       left: 6px;
       top: 2px;
@@ -370,9 +422,11 @@ label {
       top: -1px;
       border-radius: 50%;
     }
+
     &:not(:checked) + label:after {
       opacity: 0;
     }
+
     &:checked + label:after {
       left: 3px;
       top: 2px;
@@ -384,6 +438,7 @@ label {
 
   &[type="file"] {
     display: none;
+
     & + label {
       position: absolute;
       cursor: pointer;
@@ -398,7 +453,8 @@ label {
       background-color: $white;
       border: 1px solid #efefef;
       border-radius: 6px;
-      &:after{
+
+      &:after {
         position: absolute;
         top: 0;
         right: 0;
@@ -413,10 +469,12 @@ label {
       }
     }
   }
-  &.field--underline{
+
+  &.field--underline {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+
     &:focus {
       border-bottom: 1px solid rgba($primary, 0.5);
     }
@@ -425,62 +483,74 @@ label {
   &.field--with-icon {
     padding-left: 3em;
   }
+
   &.field--rounded {
     &[type="checkbox"] {
       & + label {
-        span{
+        span {
           left: -10px;
           top: 50%;
         }
       }
+
       & + label:before {
         border-radius: 50%;
         width: 20px;
         height: 20px;
       }
+
       & + label:after {
         left: 7px;
         top: 3px;
       }
     }
   }
+
   &.field--accent {
     &[type="checkbox"] {
       & + label:before {
         border: 1px solid $accent;
       }
+
       &:checked + label:after {
         border-bottom: 3px solid $accent;
         border-right: 3px solid $accent;
       }
-      & + label{
-        span{
+
+      & + label {
+        span {
           background-color: $accent;
         }
       }
     }
   }
+
   // checked opacity
   &.field--checked {
     display: none;
+
     &[type="checkbox"],
     &[type="radio"] {
       & + label {
         opacity: 0.3;
+
         &:hover {
           opacity: 1;
         }
       }
     }
+
     &:checked {
       &[type="checkbox"],
       &[type="radio"] {
         & + label {
           opacity: 1;
+
           &:before {
             background: $primary;
             border: 1px solid $primary;
           }
+
           &:after {
             border-bottom: 3px solid #fff;
             border-right: 3px solid #fff;
@@ -490,6 +560,7 @@ label {
     }
   }
 }
+
 .input-group {
   &.field-field-group {
     .file-input {
@@ -503,11 +574,11 @@ label {
   }
 }
 
-@media(max-width: 576px){
-  .field{
+@media(max-width: 576px) {
+  .field {
     font-size: 14px;
   }
-  .field-wrapper__label{
+  .field-wrapper__label {
     font-size: 14px;
   }
   .field-wrapper__messages {
@@ -515,13 +586,14 @@ label {
       font-size: 14px;
     }
   }
-.check-field-group{
-  &.check-field-group--horizontal {
-    flex-direction: column;
-    align-items: flex-start;
+  .check-field-group {
+    &.check-field-group--horizontal {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
-}
+
 //// start night-mode
 .night-mode {
   //start field
@@ -537,8 +609,10 @@ label {
         border: 1px solid #576874;
         background: #fff;
       }
+
       & + label {
         color: #fff;
+
         span {
           background-color: #fff;
         }
@@ -564,6 +638,7 @@ label {
         background-color: $white;
         border: 1px solid #576874;
         box-shadow: inset 0px 1px 4px rgba(#576874, 1);
+
         &:after {
           color: $white;
         }
@@ -572,23 +647,28 @@ label {
 
     &.field--underline {
       background: #43525c;
-			border: none;
-			box-shadow: none;
-      border-bottom: 1px solid hsla(0,0%,100%,.5);
-      &:focus{
-        border-bottom: 1px solid hsla(0,0%,100%,.5);
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid hsla(0, 0%, 100%, .5);
+
+      &:focus {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .5);
       }
     }
+
     &.field--checked {
       display: none;
+
       &:checked {
         &[type="checkbox"],
         &[type="radio"] {
           & + label {
             opacity: 1;
-            &:before{
+
+            &:before {
               border: 1px solid $primary;
             }
+
             &:after {
               border-bottom: 3px solid #fff;
               border-right: 3px solid #fff;
@@ -598,21 +678,25 @@ label {
       }
     }
   }
-  .field-wrapper{
-    &.field-wrapper--error{
+
+  .field-wrapper {
+    &.field-wrapper--error {
       .field-wrapper__messages {
         li {
           color: #dc3545;
         }
       }
+
       // field Error
-      .field{
+      .field {
         color: #FFF;
+
         &[type="checkbox"],
         &[type="radio"] {
           & + label {
             color: #fff;
           }
+
           & + label:before {
             background: #FFF;
           }
@@ -623,46 +707,53 @@ label {
             border-bottom: 3px solid #dc3545;
             border-right: 3px solid #dc3545;
           }
+
           & + label {
             color: #fff;
           }
         }
 
         &[type="radio"] {
-          & + label{
-            &:after{
-              background-color: #dc3545;
-            }
-          }
-        }
-        &[type="file"] {
           & + label {
-            color: #dc3545;
             &:after {
               background-color: #dc3545;
             }
           }
         }
-     }
+
+        &[type="file"] {
+          & + label {
+            color: #dc3545;
+
+            &:after {
+              background-color: #dc3545;
+            }
+          }
+        }
+      }
     }
-    .field{
-      &.field--accent{
+
+    .field {
+      &.field--accent {
         &[type="checkbox"] {
           & + label:before {
             border: 1px solid $accent;
           }
+
           &:checked + label:after {
             border-bottom: 3px solid $accent;
             border-right: 3px solid $accent;
           }
         }
       }
+
       // night-mode invert
       &.field--invert {
         &[type="checkbox"] {
           & + label:before {
             background: #e5e5e5;
           }
+
           &:checked + label:after {
             border-bottom: 3px solid $primary;
             border-right: 3px solid $primary;
@@ -670,6 +761,7 @@ label {
         }
       }
     }
+
     &.field-wrapper--arrow {
       .field-wrapper__content {
         &:after {
@@ -679,43 +771,49 @@ label {
       }
     }
   }
+
   //end field wrapper night mode
   //End field
-  .field-wrapper__label{
-     color: #FFF;
-   }
+  .field-wrapper__label {
+    color: #FFF;
+  }
 
-   .field-wrapper__content{
-     .field-wrapper__icon {
-       color: #FFF;
-     }
-   }
+  .field-wrapper__content {
+    .field-wrapper__icon {
+      color: #FFF;
+    }
+  }
 
-   .field-wrapper__messages{
-     li {
-       color: #FFF;
-     }
-   }
-   textarea {
-     color: #FFF;
+  .field-wrapper__messages {
+    li {
+      color: #FFF;
+    }
+  }
+
+  textarea {
+    color: #FFF;
+
     &:focus {
       border: 1px solid #e5e5e5;
     }
   }
 }
 
-.field[disabled="disabled"]{
-  background-color: rgba(0,0,0,.06);
-  & + label{
-    &:before{
-      background: rgba(0,0,0,.06);
+.field[disabled="disabled"] {
+  background-color: rgba(0, 0, 0, .06);
+
+  & + label {
+    &:before {
+      background: rgba(0, 0, 0, .06);
       border: none;
     }
   }
 }
+
 html[dir="rtl"] {
   .field-wrapper {
     margin-right: 0;
+
     &.field-wrapper--arrow {
       .field-wrapper__content {
         &:after {
@@ -725,22 +823,27 @@ html[dir="rtl"] {
       }
     }
   }
+
   .field {
     margin: 0 0 0 5px;
+
     &[type="checkbox"],
-  &[type="radio"] {
-    right: 0;
-    & + label {
-      padding-right: 30px;
-      span{
-        right: -11px;
-        top: 47%;
-      }
-  }
-    & + label:before {
+    &[type="radio"] {
       right: 0;
+
+      & + label {
+        padding-right: 30px;
+
+        span {
+          right: -11px;
+          top: 47%;
+        }
+      }
+
+      & + label:before {
+        right: 0;
+      }
     }
-	}
 
     &[type="checkbox"] {
       &:checked + label:after {
@@ -755,13 +858,16 @@ html[dir="rtl"] {
           top: 45%;
         }
       }
+
       &:checked + label:after {
         right: 3px;
       }
     }
+
     &.field--with-icon {
       padding-right: 3em;
     }
+
     &.field--rounded {
       &[type="checkbox"] {
         & + label {
@@ -769,22 +875,24 @@ html[dir="rtl"] {
             right: -10px;
           }
         }
+
         & + label:after {
           right: 7px;
-        }
-    }
-  }
-}
-  .check-field-group {
-    .field {
-      &[type="checkbox"],
-      &[type="radio"] {
-      & + label {
-        span{
-          top: 8px;
         }
       }
     }
   }
+
+  .check-field-group {
+    .field {
+      &[type="checkbox"],
+      &[type="radio"] {
+        & + label {
+          span {
+            top: 8px;
+          }
+        }
+      }
+    }
   }
 }
