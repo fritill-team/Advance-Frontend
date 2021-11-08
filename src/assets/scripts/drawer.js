@@ -36,5 +36,6 @@ $(document)
 
     if (!drawer.hasClass('drawer--open'))
       drawer.addClass('drawer--open')
-    group.css('display', 'block')
+
+    group.css('display', group.css('display') === 'block' ? 'none' : 'block')
   })
