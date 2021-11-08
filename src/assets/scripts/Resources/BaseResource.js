@@ -16,6 +16,7 @@ export default class BaseResource {
     this.withPagination = false
     this.paginationType = 'pagination'
     this.csrf = $('meta[name="csrf-token"]').prop('content')
+    this.user = null
     // elements
     this.$container = $container
     this.$searchBar = null
@@ -36,8 +37,8 @@ export default class BaseResource {
 
     this.$searchBar.on('input', e => this.search = e.target.value)
 
-    let self = this
 
+    let self = this
     $(document)
       .on('click', `.${this.prefix}-edit`, function (e) {
         e.preventDefault()
@@ -49,7 +50,6 @@ export default class BaseResource {
         e.preventDefault()
         self.submitForm($(this))
         self.fetchItems()
-
       })
       .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
@@ -180,17 +180,14 @@ export default class BaseResource {
   }
 
   searchForm() {
-
-    return `
-
-<form method="get">
-<div class="field-wrapper">
-     <div class="field-wrapper__label">Search</div>
-     <div class="field-wrapper__content">
-       <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
-     </div>
-    </div>
-</form>`
+    return `<form method="get">
+      <div class="field-wrapper">
+        <div class="field-wrapper__label">Search</div>
+          <div class="field-wrapper__content">
+            <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
+          </div>
+        </div>
+      </form>`
   }
 
   paginationTemplate() {

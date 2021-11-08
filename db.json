@@ -17,3 +17,36 @@
     "name": "typicode"
   }
 }
+
+
+media = [
+  {
+    "cover": {
+      'collection_name': 'collection_name',
+      'file': 'file/image.png',
+      'rules': {
+        'max_size': '12MB',
+        'is_single': 'True'
+      }
+    }
+  },
+  "promo":
+  {
+    'collection_name': 'collection_name',
+    'file': 'file/image.png',
+    'rules': {
+      'max_size': '12MB',
+      'is_single': 'True'
+    }
+  },
+  "files":
+  {
+    'collection_name': 'collection_name',
+    'file': 'file/image.png',
+    'rules': {
+      'max_size': '12MB',
+      'is_single': 'True'
+    }
+  }
+
+]
