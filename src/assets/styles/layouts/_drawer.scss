@@ -1,16 +1,17 @@
 .drawer {
   position: fixed;
   top: 60px;
+	left: 0;
+	transform: translateX(-100%);
   bottom: 0;
   height: 100%;
   width: 100%;
-  max-width: 0;
+  max-width: 300px;
   background-color: $white;
   transition: 0.3s ease all;
   z-index: 4;
   border-right: 1px solid #ddd;
-
-
+	padding-top: 60px;
   .list-item {
     min-height: 55px;
 
@@ -21,7 +22,7 @@
     .list-item__content {
       white-space: nowrap;
       display: none;
-    }
+		}
 
     .list-item__action {
       display: none;
@@ -35,6 +36,8 @@
 
   &.drawer--partially-closed {
     max-width: 60px;
+		transform: translateX(0);
+		@include noWrap;
     @media (max-width: 760px) {
       max-width: 0;
     }
@@ -42,9 +45,10 @@
 
   &.drawer--partially-closed.drawer--open,
   &.drawer--open {
-    max-width: 300px;
-
+		transform: translateX(0);
+		max-width: 300px;
     .list-item {
+			flex-wrap: nowrap;
       &.list-item--open + .list-item-group {
         display: block;
       }

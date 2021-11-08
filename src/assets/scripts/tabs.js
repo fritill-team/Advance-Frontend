@@ -20,7 +20,7 @@ $('.tabs').each(function (tabs) {
   tabs = $(tabs)
   let panels = tabs.closest('.tab-panels')
 
-  $('.tab').on('click', function(e) {
+  $('.tab').on('click', function (e) {
     // e.preventDefault()
     let tab = $(this),
       target = $(tab.attr('href'))
@@ -31,3 +31,24 @@ $('.tabs').each(function (tabs) {
     target.addClass('tab-panel--active')
   })
 })
+
+// chapters and contents tabs
+
+$('.chapters-tabs').each(function (tabs) {
+  tabs = $(tabs);
+
+  $('.tab-chapter').on('click', function (e) {
+    var tab = $(this),
+      target = $(tab.attr('href'));
+
+    // remove class active from all the sublings
+    $('.chapters-tabs .tab-chapter').each(function (tab) {
+      $(this).removeClass('tab--active')
+    })
+
+    target.siblings('.tab-panels-content .tab-panel').removeClass('tab-panel--active');
+
+    $(this).addClass('tab--active');
+    target.addClass('tab-panel--active');
+  });
+});

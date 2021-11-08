@@ -59,6 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+	white-space: nowrap;
 
   p {
     font-size: inherit;
@@ -98,7 +99,8 @@ a.list-item {
     &.avatar__video-preview {
       position: relative;
       padding: 16px 0 0;
-      width: 140px;
+			min-width: 80px;
+      width: 80px;
 
       .image {
         position: relative;
@@ -135,6 +137,7 @@ a.list-item {
     text-align: center;
     width: 100%;
     max-width: 60px;
+		min-width: 60px;
   }
 
   .list-item__content {
