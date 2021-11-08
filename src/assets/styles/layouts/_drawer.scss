@@ -105,14 +105,14 @@
   max-width: 800px;
   min-width: 50%; // NO NO NO NO
   width: 100%;
-  min-height: 50vh; // NO NO NO NO
+  min-height: 50%; // NO NO NO NO
   background-color: #43525c;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 
   * {
     width: 100%;
-    min-height: 50vh; // NO NO NO NO
+    min-height: 50%; // NO NO NO NO
     overflow: hidden;
   }
 
