@@ -21,8 +21,10 @@ mongoose.connect("mongodb+srv://itqademtestuser:CYIVvZGF7rbv8imk@cluster0.0qtig.
 */
 const categoryRoutes = require('./resources/categories')
 const tagRoutes = require('./resources/tags')
+const mediaRoutes = require('./resources/media_files')
 app.use('/categories', categoryRoutes);
 app.use('/tags', tagRoutes);
+app.use('/media_files', mediaRoutes);
 
 
 app.listen(3000, () => {
