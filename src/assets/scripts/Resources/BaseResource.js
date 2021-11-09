@@ -48,6 +48,9 @@ export default class BaseResource {
       })
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
+        // update the rating
+        $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+
         self.submitForm($(this))
         self.fetchItems()
       })
@@ -138,6 +141,10 @@ export default class BaseResource {
     })
   }
 
+  onFormSubmit( ){
+
+  }
+
   submitForm($form) {
     let url = $form.attr('action'),
       data = $form.serialize(),
@@ -152,6 +159,7 @@ export default class BaseResource {
         this.fetchItems()
         this.$form.empty()
         this.$form.append($(this.formTemplate({}, this.createURL)))
+        this.onFormSubmit()
       },
       error: (xhr, status, error) => {
         if (xhr.status === 422)
@@ -229,7 +237,7 @@ export default class BaseResource {
         self.deleteURL = ''
       },
       error: function (xhr) {
-
+        console.log("cannot delete this item")
       }
     })
   }
