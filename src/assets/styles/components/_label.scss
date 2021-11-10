@@ -1,0 +1,103 @@
+@mixin label(){
+
+}
+@mixin labelBg($color){
+  background-color: rgba($color,0.1);
+}
+
+.label{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 54px;
+  border-radius: 5px;
+  background-color: $white;
+  margin: 0;
+  transition: .3s ease all;
+  cursor: default;
+  .label__icon{
+    display: block;
+    margin: 0 16px 0 0;
+    font-size: 24px;
+  }
+  .label__content{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include normalizeTypo;
+    @include noLineHeight;
+  }
+  .overline{
+    color: $black;
+    font-size: 10px;
+  }
+  .subtitle{
+    color: $black;
+    font-size: 12px;
+  }
+  &.label--primary{
+    color: $primary;
+  }
+  &.label--success{
+    color: $success;
+  }
+  &.label--error{
+   color: $danger; 
+  }
+  &.label--info{
+    color: $info;
+  }
+  &.label--active{
+    border: 1px solid currentColor;
+  }
+}
+
+a.label{
+  cursor: pointer;
+  color: $black;
+  &:hover{
+    @include labelBg($black);
+  }
+  &.label--primary{
+    &:hover{
+      @include labelBg($primary);
+    }
+  }
+  &.label--success{
+    &:hover{
+      @include labelBg($success);
+    }
+  }
+  &.label--error{
+   &:hover{
+    @include labelBg($danger);
+  }
+  }
+  &.label--info{
+    &:hover{
+      @include labelBg($info);
+    }
+  }
+}
+
+.spacer{
+  padding: 16px 0;
+}
+
+html[dir="rtl"]{
+  .label{
+    .label__icon{
+      margin: 0 0 0 16px;
+    }
+  }
+}
+
+.night-mode{
+  .label{
+    background-color: $black;
+    @include whiteTypo;
+    
+  }
+}
+

@@ -15,6 +15,10 @@ app.use(cors());
 app.use(morgan('combined'));
 
 mongoose.connect("mongodb+srv://itqademtestuser:CYIVvZGF7rbv8imk@cluster0.0qtig.mongodb.net/itqadem?retryWrites=true&w=majority")
+var corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 /*
 * Routes
@@ -27,6 +31,6 @@ app.use('/tags', tagRoutes);
 app.use('/media_files', mediaRoutes);
 
 
-app.listen(3000, () => {
+app.listen(3000, cors(), () => {
   console.log('listening on port 3000');
 });
