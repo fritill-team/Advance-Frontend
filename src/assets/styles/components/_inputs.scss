@@ -1,0 +1,131 @@
+.field-wrapper {
+	width: 100%;
+	color: $input-color;
+	&.field-wrapper--error{
+		color: $danger;
+		.field{
+			border-color: $danger;
+		}
+	}
+	&.field-wrapper--sm{
+		.field{
+			height: 34px;
+			line-height: 34px;
+		}
+	}
+	&.field-wrapper--lg{
+		.field{
+			height: 48px;
+			line-height: 48px;
+		}
+	}
+	&.field-wrapper--arrow{
+		.field-wrapper__content::after{
+			position: absolute;
+			content: "";
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+			right: 16px;
+			width: 10px;
+			height: 10px;
+			border-bottom: 1px solid currentColor;
+			border-right: 1px solid currentColor;
+			transition: .3s ease all;
+		}
+		.field-wrapper__content:focus-within::after{
+			border-bottom: none;
+			border-right: none;
+			border-left: 1px solid currentColor;
+			border-top: 1px solid currentColor;
+		}
+	}
+}
+
+.field-wrapper__label {
+	font-size: 16px;
+	font-weight: 600;
+	padding: 6px 16px;
+	color: currentColor;
+}
+.field-wrapper__content{
+	position: relative;
+}
+.field-wrapper__icon {
+	position: absolute;
+	color: #aaaaaa;
+	font-size: 18px;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.field-wrapper__messages {
+	li {
+		font-size: 14px;
+		font-weight: 600;
+		padding: 6px 16px;
+		color: currentColor;
+	}
+}
+	
+.field {
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 16px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: $input-color;
+	line-height: 42px;
+  height: 42px;
+  margin: 0 5px 0 0;
+	@include inputs;
+	&:disabled{
+		background-color: rgba(0, 0, 0, .06);
+	}
+	&.field--with-icon {
+    padding-left: 48px;
+  }
+	&.field--underline {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    &:focus {
+      border-bottom: 1px solid rgba($primary, 0.5);
+    }
+  }
+	&[type="file"]{
+		& + label {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      padding: 1.25rem 0.9rem;
+      font-weight: 400;
+      line-height: 0;
+      color: $primary;
+      background-color: $white;
+      border: 1px solid #efefef;
+      border-radius: 6px;
+
+    }
+		& + label::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 3;
+			display: block;
+			padding: 1.25rem 1rem;
+			color: $white;
+			content: "Upload File";
+			background-color: $primary;
+			border-left: inherit;
+			border-radius: 0 5px 5px 0;
+		}
+	}
+}
+
+input[type="checkbox"], input[type="radio"], input[type="file"]{
+	display: none;
+}

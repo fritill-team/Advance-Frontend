@@ -1,0 +1,56 @@
+.toggle-menu {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background: #1597bb;
+}
+
+.toggle_animate--icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3px;
+  width: 50%;
+  background: $white;
+  box-shadow: 0 2px 5px rgba($white, .3);
+  transition: .3s ease all;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba($white, .3);
+    transition: .3s ease all;
+		left: 0;
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    bottom: -10px;
+  }
+
+  &.toggle-menu--active {
+    background-color: rgba($white, 0);
+    box-shadow: 0 2px 5px rgba($white, 0);
+
+    &::before {
+      top: 0px;
+      transform: rotate(45deg);
+
+    }
+
+    &::after {
+      top: 0px;
+      transform: rotate(135deg);
+    }
+  }
+}

@@ -107,15 +107,24 @@
 
 html[dir="rtl"] {
   .drawer {
+		@media (max-width: 768px) {
+			padding-left: 0;
+		}
     &.drawer--partially-closed + .page {
       padding-left: unset;
       padding-right: 60px;
+			@media (max-width: 768px) {
+				padding-right: 0;
+			}
     }
 
     &.drawer--partially-closed.drawer--open + .page,
     &.drawer--open + .page {
       padding-left: unset;
       padding-right: 300px;
+			@media (max-width: 768px) {
+				padding-right: 0;
+			}
     }
   }
 }

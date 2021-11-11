@@ -11,6 +11,7 @@
   transition: 0.3s ease all;
   z-index: 4;
   border-right: 1px solid #ddd;
+	overflow: hidden;
   .list-item {
     min-height: 55px;
 
@@ -72,16 +73,6 @@
   }
 
 
-  &.open--half {
-    max-width: 50%; // NO NO NO NO
-    padding-left: 8px;
-    padding-right: 8px;
-
-    * {
-      opacity: 1;
-    }
-  }
-
   @media (max-width: 767px) {
     position: fixed;
     height: 100%;
@@ -142,6 +133,8 @@ html[dir="rtl"] {
 
   .drawer {
     // border-left: 1px solid #ddd;
+		left: unset;
+		right: 0;
     .drawer__header {
       display: flex;
       align-items: center;
