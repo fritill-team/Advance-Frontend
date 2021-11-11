@@ -32,6 +32,11 @@ $(document).on("change", "#dark-mode-toggle", (val) => {
   //   $("html").removeClass("night-mode");
   // }
   // console.log(localStorage.darkmode);
+  if ($("#dark-mode-toggle").is(":checked")) {
+    $("html").addClass("night-mode");
+  } else {
+    $("html").removeClass("night-mode");
+  }
 });
 
 // const storedValue = localStorage.getItem(darkMode);
