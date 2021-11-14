@@ -1,14 +1,17 @@
 const storageInput = document.getElementById("dark-mode-toggle");
 
-// storageInput.addEventListener("change", (val) => {
-// console.log(val.target.checked);
-// localStorage.setItem("darkMode", val.target.checked);
-// const x = localStorage.getItem("darkMode");
-// if (x) {
-//   $("html").addClass("night-mode");
-// } else {
-//   $("html").removeClass("night-mode");
-// }
+storageInput.addEventListener("change", (val) => {
+  localStorage.setItem("darkMode", val.target.checked);
+  const x = !!localStorage.getItem("darkMode");
+  // val.target.checked = x;
+  console.log(val.target.checked, x);
+  if (x === "true") {
+    $("html").addClass("night-mode");
+  } else {
+    $("html").removeClass("night-mode");
+  }
+});
+
 // });
 // const x = localStorage.getItem("darkMode");
 
@@ -32,11 +35,11 @@ $(document).on("change", "#dark-mode-toggle", (val) => {
   //   $("html").removeClass("night-mode");
   // }
   // console.log(localStorage.darkmode);
-  if ($("#dark-mode-toggle").is(":checked")) {
-    $("html").addClass("night-mode");
-  } else {
-    $("html").removeClass("night-mode");
-  }
+  // if ($("#dark-mode-toggle").is(":checked")) {
+  //   $("html").addClass("night-mode");
+  // } else {
+  //   $("html").removeClass("night-mode");
+  // }
 });
 
 // const storedValue = localStorage.getItem(darkMode);
