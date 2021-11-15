@@ -1,16 +1,12 @@
 const storageInput = document.getElementById("dark-mode-toggle");
-
+storageInput ? 
 storageInput.addEventListener("change", (val) => {
   localStorage.setItem("darkMode", val.target.checked);
-  const x = !!localStorage.getItem("darkMode");
+  const x = localStorage.getItem("darkMode");
   // val.target.checked = x;
   console.log(val.target.checked, x);
-  if (x === "true") {
-    $("html").addClass("night-mode");
-  } else {
-    $("html").removeClass("night-mode");
-  }
-});
+  x ? $("html").addClass("night-mode") : $("html").removeClass("night-mode");
+}): '';
 
 // });
 // const x = localStorage.getItem("darkMode");
