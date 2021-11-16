@@ -4,7 +4,12 @@
 @mixin labelBg($color){
   background-color: rgba($color,0.1);
 }
-
+.label-group{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
 .label{
   display: inline-flex;
   align-items: center;
@@ -12,9 +17,10 @@
   height: 54px;
   border-radius: 5px;
   background-color: $white;
-  margin: 0;
+  margin: 0 5px 0 0;
   transition: .3s ease all;
   cursor: default;
+
   .label__icon{
     display: block;
     font-size: 24px;
