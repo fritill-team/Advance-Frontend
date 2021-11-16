@@ -397,56 +397,24 @@
       ]
     }
   ],
-  "reviews": [
+  "reviews":
     {
-      "id": 1,
-      "rate": "2.5",
-      "review": "This Course was nice I really recommend to watch it",
-      "created_at": "2021-11-07T12:16:38.761370Z",
-      "author": {
-        "id": 2,
-        "name": "Mahmoud Nasser",
-        "image": "src/image.png"
-      },
-      "actions": [
+      "count": 2,
+      "next": "null",
+      "previous": "http://localhost:8000/api/v1/reviews/courses/Course/4/?limit=1",
+      "results": [
         {
-          "name": "edit",
-          "icon": "far fa-edit",
-          "class": "btn--primary reviews-edit",
-          "link": "http://localhost:3000/reviews/1/"
-        },
-        {
-          "name": "delete",
-          "icon": "far fa-trash-alt",
-          "class": "btn--primary reviews-delete",
-          "link": "http://localhost:3000/reviews/1/"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "rate": "2.5",
-      "review": "This Course was nice I really recommend to watch it",
-      "created_at": "2021-11-07T12:16:38.761370Z",
-      "author": {
-        "id": 2,
-        "name": "Mahmoud Nasser",
-        "image": "src/image.png"
-      },
-      "actions": [
-        {
-          "name": "edit",
-          "icon": "far fa-edit",
-          "class": "btn--primary reviews-edit",
-          "link": "http://localhost:3000/reviews/1/"
-        },
-        {
-          "name": "delete",
-          "icon": "far fa-trash-alt",
-          "class": "btn--primary reviews-delete",
-          "link": "http://localhost:3000/reviews/1/"
+          "id": 3,
+          "rate": "4.0",
+          "review": "new review",
+          "author": {
+            "id": 11,
+            "name": "Mahmoud Nasser",
+            "image": "/media/default/images/profile.png"
+          },
+          "created_at": "an hour ago",
+          "actions": []
         }
       ]
     }
-  ]
 }

@@ -35,14 +35,12 @@ export default class ReviewResource extends BaseResource {
   }
 
   itemsListener(v) {
-    this.$itemsList.empty()
     this.$itemsList.append(this.listingTemplate())
     initializeRateDisplay()
   }
 
   onFormSubmit() {
     initializeRateInput()
-    self.fetchItems()
   }
 
   itemTemplate(item) {
@@ -50,7 +48,7 @@ export default class ReviewResource extends BaseResource {
    <div class="card__side-col">
       <img class="image image--rounded image--profile" src="${item.author.image}" alt="">
    </div>
-   <div class="card__content replacable">
+   <div class="card__content">
       <div class="card__header">
          <div class="card__header-multiline">
             <a class="primary bold" href="#">
@@ -60,14 +58,14 @@ export default class ReviewResource extends BaseResource {
             <time class="subtitle-2 gray">${item.created_at}</time>
             <div class="rate-display" data-rate="${item.rate}"></div>
          </div>
-         <div class="d-flex card__tools">
+         ${item.actions.length ? `<div class="d-flex card__tools">
             <div class="dropdown dropdown__activator">
                <button class="btn btn--info btn--icon btn--text dropdown--btn ">
                <i class="fas fa-ellipsis-h"></i>
                </button>
                <div class="dropdown__content">
                   <div class="list">
-                     ${item.actions.length > 1 ? item.actions.map(action => (this.admin && action.name !== "edit") || !this.admin ?
+                     ${item.actions.length >= 1 ? item.actions.map(action => (this.admin && action.name !== "edit") || !this.admin ?
       `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
                         <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
                         <span class="list-item__content">
@@ -77,6 +75,7 @@ export default class ReviewResource extends BaseResource {
                </div>
             </div>
          </div>
+` : ``}
       </div>
       <p class="text-2">${item.review}</p>
    </div>
@@ -86,7 +85,7 @@ export default class ReviewResource extends BaseResource {
   formTemplate(item = {}, action = '', reset = false) {
     return `<form action="${action}" method="post">
                  <div class="field-wrapper">
-                    <label class="field-wrapper__label">${this.user}</label>
+                    <label class="field-wrapper__label">${this.user.username}</label>
                     <div class="field-wrapper__content">
                       <input class="field"
                       type="text"
@@ -106,7 +105,7 @@ export default class ReviewResource extends BaseResource {
                     </div>
                  </div>
                  <div class="ml-auto d-inline-block">
-                 ${reset ? `<button class="btn btn--primary btn--text" type="reset">Cancel</button>`:``}
+                 ${reset ? `<button class="btn btn--primary btn--text" type="reset">Cancel</button>` : ``}
                  <button class="btn btn--primary btn--rounded">Save</button>
                 </div>
               </form>
@@ -118,25 +117,77 @@ export default class ReviewResource extends BaseResource {
       return $(`<div class="card card--side-col">
         ${this.deleteDialog()}
           <div class="card__side-col">
-            <img class="image image--profile image--rounded" src="" alt="">
+            <img class="image image--profile image--rounded" src="${this.user.image}" alt="">
           </div>
           <div class="card__content" >
           <div id="${this.prefix}-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
           <ul class="card__content" id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+           ${this.listingURL ? `<a class="gray bold text-center" id="reviews-loader">See More Reviews</a>` : ``}
           </div>
-        </div>`)
+        </div>
+        `)
     } else {
       return $(`<div class="card">
                 ${this.deleteDialog()}
               <div class="card">
                 <div class="card__content">
                   <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+                  ${this.listingURL !== "null" ? `<a class="gray bold text-center" id="reviews-loader">See More Reviews</a>` : ``}
                 </div>
               </div>
         </div>`)
     }
+  }
+
+  fetchItems(data = {}) {
+    this.loading = false
+    let self = this
+    $.ajax({
+      url: this.listingURL,
+      type: 'get',
+      data,
+      headers: {'X-CSRFToken': self.csrf},
+      success: function (data) {
+        console.log(data)
+        if (data.next) {
+          self.listingURL = data.next
+          $('#reviews-loader').fadeIn()
+        } else {
+          $('#reviews-loader').fadeOut()
+        }
+        self.items = data.results
+        self.loading = false
+      },
+      error: function (xhr) {
+        console.error(xhr)
+      }
+    })
+  }
+
+  submitForm($form) {
+    let url = $form.attr('action'),
+      data = $form.serialize(),
+      self = this
+    $.ajax({
+      type: 'POST',
+      url,
+      data,
+      headers: {'X-CSRFToken': self.csrf},
+      success: () => {
+        this.$form.empty()
+        this.$form.append($(this.formTemplate({}, this.createURL)))
+        this.onFormSubmit()
+        this.$itemsList.empty()
+        self.listingURL = this.starterURL
+        this.fetchItems()
+      },
+      error: (xhr, status, error) => {
+        if (xhr.status === 422)
+          this.mapErrors(xhr.responseJSON)
+      }
+    });
   }
 
 }

@@ -48,30 +48,29 @@ export default class BaseResource {
 
         // init star rating again
         $(document).ready(function () {
-      $(".rate-input").starRating({
-        initialRating: 0,
-        starSize: 25,
-        totalStars: 5,
-        starShape: '',
-        emptyColor: 'lightgray',
-        hoverColor: '#f2b01e',
-      });
-      $(".rate-display").each(function () {
-        let initial = $(this).data('rate')
-        $(this).starRating({
-          readOnly: true,
-          initialRating: initial,
-          starSize: 20,
-          totalStars: 5,
-          starShape: '',
-          emptyColor: 'lightgray',
-          hoverColor: '#f2b01e',
-        });
-      })
+          $(".rate-input").starRating({
+            initialRating: 0,
+            starSize: 25,
+            totalStars: 5,
+            starShape: '',
+            emptyColor: 'lightgray',
+            hoverColor: '#f2b01e',
+          });
+          $(".rate-display").each(function () {
+            let initial = $(this).data('rate')
+            $(this).starRating({
+              readOnly: true,
+              initialRating: initial,
+              starSize: 20,
+              totalStars: 5,
+              starShape: '',
+              emptyColor: 'lightgray',
+              hoverColor: '#f2b01e',
+            });
+          })
+          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
-      $('.rate-input-form').val($(".rate-input").starRating('getRating'))
-
-    })
+        })
 
       })
       .on('submit', `#${this.prefix}-form > form`, function (e) {
@@ -91,6 +90,9 @@ export default class BaseResource {
       .on('click', `.${this.prefix}-confirm-delete`, function (e) {
         e.preventDefault()
         self.confirmDelete()
+      })
+      .on('click', '#reviews-loader', function (e){
+        self.fetchItems()
       })
   }
 
@@ -177,7 +179,6 @@ export default class BaseResource {
     let url = $form.attr('action'),
       data = $form.serialize(),
       self = this
-
     $.ajax({
       type: 'POST',
       url,
