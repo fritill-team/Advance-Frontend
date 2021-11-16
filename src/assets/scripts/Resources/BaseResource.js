@@ -44,7 +44,35 @@ export default class BaseResource {
         e.preventDefault()
         let parentContainer = $(this).closest('.card')
         self.$form.empty()
-        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'))))
+        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'), true)))
+
+        // init star rating again
+        $(document).ready(function () {
+      $(".rate-input").starRating({
+        initialRating: 0,
+        starSize: 25,
+        totalStars: 5,
+        starShape: '',
+        emptyColor: 'lightgray',
+        hoverColor: '#f2b01e',
+      });
+      $(".rate-display").each(function () {
+        let initial = $(this).data('rate')
+        $(this).starRating({
+          readOnly: true,
+          initialRating: initial,
+          starSize: 20,
+          totalStars: 5,
+          starShape: '',
+          emptyColor: 'lightgray',
+          hoverColor: '#f2b01e',
+        });
+      })
+
+      $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+
+    })
+
       })
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
@@ -141,7 +169,7 @@ export default class BaseResource {
     })
   }
 
-  onFormSubmit( ){
+  onFormSubmit() {
 
   }
 

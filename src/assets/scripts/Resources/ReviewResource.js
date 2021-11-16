@@ -7,7 +7,6 @@ export default class ReviewResource extends BaseResource {
     options['prefix'] = 'reviews'
     super($container, options)
     this.fetchItems()
-
     $(document).ready(function () {
       $(".rate-input").starRating({
         initialRating: 0,
@@ -44,7 +43,6 @@ export default class ReviewResource extends BaseResource {
   onFormSubmit() {
     initializeRateInput()
     self.fetchItems()
-
   }
 
   itemTemplate(item) {
@@ -85,21 +83,32 @@ export default class ReviewResource extends BaseResource {
 </div>`
   }
 
-  formTemplate(item = {}, action = '') {
+  formTemplate(item = {}, action = '', reset = false) {
     return `<form action="${action}" method="post">
                  <div class="field-wrapper">
                     <label class="field-wrapper__label">${this.user}</label>
                     <div class="field-wrapper__content">
-                      <input class="field" type="text" placeholder="Insert your review." name="review">
+                      <input class="field"
+                      type="text"
+                      placeholder="Insert your review."
+                      name="review"
+                      value="${item.review ? item.review : ''}"
+                      >
                     </div>
                  </div>
                  <div class="field-wrapper">
                     <div class="field-wrapper__content">
                          <div class="rate-input"></div>
-                          <input type="hidden" value="0.0" name="rate" class="rate-input-form">
+                          <input type="hidden"
+                          value="${item.rate ? item.rate : '0.0'}"
+                          name="rate"
+                          class="rate-input-form">
                     </div>
                  </div>
-                 <button class="btn btn--primary btn--rounded">Add Review</button>
+                 <div class="ml-auto d-inline-block">
+                 ${reset ? `<button class="btn btn--primary btn--text" type="reset">Cancel</button>`:``}
+                 <button class="btn btn--primary btn--rounded">Save</button>
+                </div>
               </form>
 `
   }
@@ -111,9 +120,11 @@ export default class ReviewResource extends BaseResource {
           <div class="card__side-col">
             <img class="image image--profile image--rounded" src="" alt="">
           </div>
-          <div class="card__content" id="${this.prefix}-form">
+          <div class="card__content" >
+          <div id="${this.prefix}-form">
             ${this.formTemplate({}, this.createURL)}
-            <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+          </div>
+          <ul class="card__content" id="${this.prefix}-listing">${this.listingTemplate()}</ul>
           </div>
         </div>`)
     } else {
