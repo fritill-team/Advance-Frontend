@@ -9,6 +9,9 @@
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .label{
   display: inline-flex;
@@ -33,6 +36,9 @@
     justify-content: center;
     @include normalizeTypo;
     @include noLineHeight;
+    *{
+      white-space: nowrap;
+    }
   }
   .overline{
     color: $black;
@@ -53,6 +59,9 @@
   }
   &.label--info{
     color: $info;
+  }
+  &.label--accent{
+    color: $accent
   }
   &.label--active{
     border: 1px solid currentColor;
