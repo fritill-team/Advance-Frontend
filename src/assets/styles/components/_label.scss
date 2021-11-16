@@ -17,10 +17,10 @@
   cursor: default;
   .label__icon{
     display: block;
-    margin: 0 16px 0 0;
     font-size: 24px;
   }
   .label__content{
+    margin: 0 0 0 16px;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -87,8 +87,8 @@ a.label{
 
 html[dir="rtl"]{
   .label{
-    .label__icon{
-      margin: 0 0 0 16px;
+    .label__content{
+      margin: 0 16px 0 0;
     }
   }
 }
