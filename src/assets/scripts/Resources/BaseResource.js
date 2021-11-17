@@ -266,6 +266,7 @@ export default class BaseResource {
         self.deleteURL = ''
       },
       error: function (xhr) {
+        console.log(xhr)
         console.log("cannot delete this item")
       }
     })

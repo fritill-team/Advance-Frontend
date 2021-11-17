@@ -28,14 +28,15 @@ export default class ReviewResource extends BaseResource {
           hoverColor: '#f2b01e',
         });
       })
-
       $('.rate-input-form').val($(".rate-input").starRating('getRating'))
-
     })
   }
 
-  itemsListener(v) {
-    this.$itemsList.append(this.listingTemplate())
+  itemsListener(v, flag = false) {
+    if (!flag) {
+      this.$itemsList.empty()
+    }
+      this.$itemsList.append(this.listingTemplate())
     initializeRateDisplay()
   }
 
@@ -150,7 +151,6 @@ export default class ReviewResource extends BaseResource {
       data,
       headers: {'X-CSRFToken': self.csrf},
       success: function (data) {
-        console.log(data)
         if (data.next) {
           self.listingURL = data.next
           $('#reviews-loader').fadeIn()
@@ -175,19 +175,54 @@ export default class ReviewResource extends BaseResource {
       url,
       data,
       headers: {'X-CSRFToken': self.csrf},
-      success: () => {
+      success: (v) => {
         this.$form.empty()
         this.$form.append($(this.formTemplate({}, this.createURL)))
         this.onFormSubmit()
-        this.$itemsList.empty()
-        self.listingURL = this.starterURL
-        this.fetchItems()
+        this.itemsListener({}, true)
       },
       error: (xhr, status, error) => {
         if (xhr.status === 422)
           this.mapErrors(xhr.responseJSON)
       }
     });
+  }
+
+  confirmDelete() {
+    let self = this
+
+    // pop the element from DOM
+
+    // call a single element to add it from the dom and store it in the holder
+
+    // $.ajax({
+    //   url: this.starterURL + '?limit=1',
+    //   type: 'get',
+    //   data,
+    //   headers: {'X-CSRFToken': self.csrf},
+    //   success: function (data) {
+    //     console.log("the element fetched correctly")
+    //   },
+    //   error: function (xhr) {
+    //     console.error(xhr)
+    //   }
+    //
+    // })
+
+    // append the holder to listItem
+
+    $.ajax({
+      url: self.deleteURL,
+      type: "DELETE",
+      headers: {'X-CSRFToken': self.csrf},
+      success: function () {
+        self.fetchItems()
+        self.deleteURL = ''
+      },
+      error: function (xhr) {
+        console.log("cannot delete this item")
+      }
+    })
   }
 
 }
