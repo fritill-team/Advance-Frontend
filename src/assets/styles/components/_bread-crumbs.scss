@@ -29,9 +29,9 @@
   }
   a{
     // margin: 0 unset;
-    &:first-of-type{
-      margin-right: 15px;
-    }
+    // &:first-of-type{
+    //   margin-right: 15px;
+    // }
   }
 }
 .bread-crumbs__link{
@@ -48,8 +48,9 @@
     content: "/";
   }
   &:first-of-type{
+    margin: 0 10px;
     &::after{
-      display: none;
+      // display: none;
     }
   }
   &:last-of-type{

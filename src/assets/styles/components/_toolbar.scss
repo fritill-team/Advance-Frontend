@@ -23,7 +23,7 @@
     transform: translateX(-50%);
     transition: .3s ease all;
     margin: 0 auto;
-    &.toolbar--horizontal{
+    &.toolbar__content--horizontal{
       flex-direction: row;
     }
   }
