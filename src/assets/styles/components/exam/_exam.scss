@@ -78,13 +78,10 @@
     }
   }
 
+  .card__header-actions,
   .card__footer-actions {
     display: flex;
     align-items: center;
-
-    i {
-      font-size: 18px;
-    }
   }
 
   .field-wrapper {

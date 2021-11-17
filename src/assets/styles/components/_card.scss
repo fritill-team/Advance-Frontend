@@ -65,15 +65,20 @@
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
+    justify-content: space-between;
     width: 100%;
   }
-  .card__footer{
+
+  .card__footer {
     display: flex;
     align-items: center;
   }
-  .card__footer-actions{
+
+  .card__header-actions,
+  .card__footer-actions {
     margin: 0 0 0 auto;
   }
+
   .card__label {
     display: flex;
     align-items: center;
@@ -196,7 +201,8 @@
     padding: 14px;
     border-top-left-radius: 0;
     margin-top: 80px;
-    &::before{
+
+    &::before {
       border-radius: 0 5px 0 0 !important;
     }
   }
@@ -260,7 +266,7 @@
   }
 
   .card__content {
-		text-align: left;
+    text-align: left;
   }
 
   &.card--side-col {
@@ -282,19 +288,22 @@
       }
     }
   }
-	&.card--welcome{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		max-width: 700px;
-		.title-h1{
-			text-align: center;
-			margin: .5em 0;
-		}
-	}
+
+  &.card--welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+
+    .title-h1 {
+      text-align: center;
+      margin: .5em 0;
+    }
+  }
+
   &.card--centered {
-		
+
     .card__content-header {
       flex-direction: column;
     }
@@ -1020,8 +1029,9 @@
     background-color: rgba($warning, 0.1);
     border: 1px solid $warning;
   }
+
   &.card--active {
-    &:before{
+    &:before {
       position: absolute;
       content: '';
       width: 100%;
@@ -1124,18 +1134,22 @@ html[dir="rtl"] {
     .card__content-header {
       align-items: flex-start;
     }
-    .card__tools{
+
+    .card__tools {
       margin: 0 auto 0 0;
     }
-    .card__footer-actions{
+
+    .card__footer-actions {
       margin: 0 auto 0 0;
     }
+
     .card__content--details {
       p {
         text-align: right;
       }
     }
-    .card__content{
+
+    .card__content {
       padding: 0 10px 0 0;
       @include textRight;
     }
@@ -1246,7 +1260,8 @@ html[dir="rtl"] {
   .card {
     background: $black;
     // box-shadow: 0 0 5px -1px #fff;
-		@include whiteTypo;
+    @include whiteTypo;
+
     .card__header {
       .header__title {
         color: #fff;
