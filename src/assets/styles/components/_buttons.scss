@@ -48,7 +48,10 @@ input[type="button"].btn {
       opacity: 0.24;
     }
   }
-
+  &.btn--with-icon{
+    display: flex;
+    align-items: center;
+  }
   &.btn--rounded {
     border-radius: 20px;
   }
