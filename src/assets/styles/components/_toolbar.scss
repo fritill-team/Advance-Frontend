@@ -23,9 +23,9 @@
     transform: translateX(-50%);
     transition: .3s ease all;
     margin: 0 auto;
-  }
-  &.toolbar--horizontal{
-    flex-direction: row;
+    &.toolbar--horizontal{
+      flex-direction: row;
+    }
   }
 }
 .top{
