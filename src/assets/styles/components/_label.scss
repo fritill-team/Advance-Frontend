@@ -9,8 +9,14 @@
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
+  width: 100%;
   &::-webkit-scrollbar {
     display: none;
+  }
+  .btn{
+    &:last-of-type{
+      margin-left: auto;
+    }
   }
 }
 .label{
@@ -23,6 +29,9 @@
   margin: 0 5px 0 0;
   transition: .3s ease all;
   cursor: default;
+  &:last-of-type{
+    margin: 0;
+  }
 
   .label__icon{
     display: block;
@@ -101,7 +110,14 @@ a.label{
 }
 
 html[dir="rtl"]{
+  .label-group{
+    flex-direction: row-reverse;
+    .btn:last-of-type{
+      margin-left: auto;
+    }
+  }
   .label{
+    margin: 0 0 0 5px;
     .label__content{
       margin: 0 16px 0 0;
     }

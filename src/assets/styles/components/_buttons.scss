@@ -217,7 +217,9 @@ input[type="button"].btn {
     &.btn--xl {
       width: 52px;
     }
-
+    &.btn--rounded{
+      border-radius: 50%;
+    }
     svg,
     i,span {
       position: absolute;
