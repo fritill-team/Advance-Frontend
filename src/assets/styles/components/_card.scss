@@ -1134,6 +1134,10 @@ html[dir="rtl"] {
         text-align: right;
       }
     }
+    .card__content{
+      padding: 0 10px 0 0;
+      @include textRight;
+    }
 
     .user-image {
       margin-left: 10px;

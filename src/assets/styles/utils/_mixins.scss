@@ -3,6 +3,13 @@
     margin: 0;
   }
 }
+
+@mixin textRight() {
+  h1, h2, h3, h4, h5, h6, p, a, span {
+    text-align: right;
+  }
+}
+
 @mixin whiteTypo(){
 	h1, h2, h3, h4, h5, h6, p, a, span,i {
 		color: $white;
