@@ -51,6 +51,9 @@ input[type="button"].btn {
   &.btn--with-icon{
     display: flex;
     align-items: center;
+    span{
+      margin: 0 8px 0 0;
+    }
   }
   &.btn--rounded {
     border-radius: 20px;
@@ -318,15 +321,10 @@ a.btn {
 
 html[dir="rtl"] {
   .btn--with-icon {
-    padding-right: 12px;
-
-    svg,
-    i {
-      margin-left: 5px;
-      transform: rotate(
-          180deg
-      );
+    span{
+      margin: 0 0 0 8px;
     }
+    
   }
 
   .btn-group {

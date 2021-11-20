@@ -1130,7 +1130,10 @@
 // dir en to ar
 html[dir="rtl"] {
   .card {
-
+    .card__label{
+      left: unset;
+      right: 0;
+    }
     .card__content-header {
       align-items: flex-start;
     }
