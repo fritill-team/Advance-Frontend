@@ -16,11 +16,13 @@ input[type="button"].btn {
   cursor: pointer;
   letter-spacing: 1.25px;
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
-	margin: 0 14px 0 0;
-	margin-right: 5px;
-	&:last-of-type{
-		margin-right: 0;
-	}
+  margin: 0 14px 0 0;
+  margin-right: 5px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   &:hover:before {
     opacity: 0.15;
   }
@@ -48,13 +50,16 @@ input[type="button"].btn {
       opacity: 0.24;
     }
   }
-  &.btn--with-icon{
+
+  &.btn--with-icon {
     display: flex;
     align-items: center;
-    span{
+
+    span {
       margin: 0 8px 0 0;
     }
   }
+
   &.btn--rounded {
     border-radius: 20px;
   }
@@ -66,9 +71,9 @@ input[type="button"].btn {
   &.btn--outlined {
     border: 1px solid currentColor;
   }
+
   &.btn--double-line {
-    border: 4px double ;
-    border-color:currentColor ;
+    border: 4px double currentColor;
   }
 
   &.btn--text,
@@ -204,10 +209,12 @@ input[type="button"].btn {
 
   &.btn--icon {
     width: 36px;
+    min-width: 36px;
     padding: 0;
     border-radius: 50%;
-		text-align: center;
-		line-height: 36px;
+    text-align: center;
+    line-height: 36px;
+
     &.btn--xs {
       width: 20px;
     }
@@ -223,33 +230,39 @@ input[type="button"].btn {
     &.btn--xl {
       width: 52px;
     }
-    &.btn--rounded{
+
+    &.btn--rounded {
       border-radius: 50%;
     }
+
     svg,
-    i,span {
+    i, span {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
   }
+
   svg,
   i {
     font-size: inherit;
     margin-right: 5px;
   }
-  &.btn--white{
+
+  &.btn--white {
     color: #FFF;
   }
+
   &.btn--player {
     width: 50px;
     height: 50px;
     color: $accent;
     position: relative;
     background-color: transparent;
-    border-radius: 50% ;
+    border-radius: 50%;
     transition: .3s ease all;
+
     * {
       position: absolute;
       top: 50%;
@@ -257,8 +270,10 @@ input[type="button"].btn {
       transform: translate(-50%, -50%);
       width: 60%;
     }
+
     &:hover {
       cursor: pointer;
+
       &::after {
         background-color: rgba($color: $primary, $alpha: .3);
       }
@@ -321,10 +336,10 @@ a.btn {
 
 html[dir="rtl"] {
   .btn--with-icon {
-    span{
+    span {
       margin: 0 0 0 8px;
     }
-    
+
   }
 
   .btn-group {
@@ -342,30 +357,33 @@ html[dir="rtl"] {
 }
 
 
-
 .night-mode {
-  .btn{
+  .btn {
     background-color: #39444f;
     //border: 1px solid #39444f;
     color: #fff;
   }
+
   a.btn {
     &:hover {
       color: #fff;
     }
   }
 }
+
 @media (max-width: 768.98px) {
   .btn--player {
     margin-top: 16px !important;
     margin-right: auto !important;
   }
 }
-html[dir="rtl"]{
-	.btn{
-		margin: 0 0 0 14px;
-		&:last-of-type{
-			margin: 0;
-		}
-	}
+
+html[dir="rtl"] {
+  .btn {
+    margin: 0 0 0 14px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
 }

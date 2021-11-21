@@ -1,245 +1,415 @@
 .field-wrapper {
-	width: 100%;
-	color: $input-color;
-	&.field-wrapper--error{
-		color: $danger;
-		.field{
-			border-color: $danger;
-		}
-		.field[type="file"]+label{
-			color: $danger;
-		}
-		.field[type="file"]+label::after{
-			background-color: $danger;
-		}
-	}
-	&.field-wrapper--accent{
-		color: $accent;
-	}
-	&.field-wrapper--sm{
-		.field{
-			height: 34px;
-			line-height: 34px;
-		}
-		.field[type="file"]+label{
-			height: 32px;
-			line-height: 32px;
-		}
-		.field[type="file"]+label::after{
-			line-height: 32px;
-		}
-	}
-	&.field-wrapper--lg{
-		.field{
-			height: 48px;
-			line-height: 48px;
-		}
-		.field[type="file"]+label{
-			height: 48px;
-			line-height: 48px;
-		}
-		.field[type="file"]+label::after{
-			line-height: 48px;
-		}
-	}
-	&.field-wrapper--arrow{
-		.field-wrapper__content::after{
-			position: absolute;
-			content: "";
-			top: 50%;
-			transform: translateY(-50%) rotate(45deg);
-			right: 16px;
-			width: 10px;
-			height: 10px;
-			border-bottom: 1px solid currentColor;
-			border-right: 1px solid currentColor;
-			transition: .3s ease all;
-		}
-		.field-wrapper__content:focus-within::after{
-			border-bottom: none;
-			border-right: none;
-			border-left: 1px solid currentColor;
-			border-top: 1px solid currentColor;
-		}
-	}
-	select{
-		padding: 0 12px;
-	}
+  width: 100%;
+  color: $input-color;
+
+  &.field-wrapper--error {
+    color: $danger;
+
+    .field {
+      border-color: $danger;
+    }
+
+    .field[type="file"] + label {
+      color: $danger;
+    }
+
+    .field[type="file"] + label::after {
+      background-color: $danger;
+    }
+  }
+
+  &.field-wrapper--accent {
+    color: $accent;
+  }
+
+  &.field-wrapper--sm {
+    .field {
+      height: 34px;
+      line-height: 34px;
+    }
+
+    .field[type="file"] + label {
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .field[type="file"] + label::after {
+      line-height: 32px;
+    }
+  }
+
+  &.field-wrapper--lg {
+    .field {
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .field[type="file"] + label {
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .field[type="file"] + label::after {
+      line-height: 48px;
+    }
+  }
+
+  &.field-wrapper--arrow {
+    .field-wrapper__content::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      right: 16px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transition: .3s ease all;
+    }
+
+    .field-wrapper__content:focus-within::after {
+      border-bottom: none;
+      border-right: none;
+      border-left: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+    }
+  }
+
+  select {
+    padding: 0 12px;
+  }
 }
 
 .field-wrapper__label {
-	font-size: 16px;
-	font-weight: 600;
-	padding: 6px 16px;
-	color: currentColor;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 16px;
+  color: currentColor;
 }
-.field-wrapper__content{
-	position: relative;
+
+.field-wrapper__content {
+  position: relative;
 }
+
 .field-wrapper__icon {
-	position: absolute;
-	color: #aaaaaa;
-	font-size: 18px;
-	left: 16px;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  color: #aaaaaa;
+  font-size: 18px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .field-wrapper__messages {
-	li {
-		font-size: 14px;
-		font-weight: 600;
-		padding: 6px 16px;
-		color: currentColor;
-	}
+  li {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    color: currentColor;
+  }
 }
-	
+
 .field {
-	font-size: 16px;
-	width: 100%;
-	border-radius: 5px;
-	padding: 0 16px;
-	border: 1px solid #e5e5e5;
-	background: #fff;
-	color: $input-color;
-	line-height: 42px;
-	height: 42px;
-	margin: 0 5px 0 0;
-	@include inputs;
-	&:disabled{
-		background-color: rgba(0, 0, 0, .06);
-	}
-	&.field--with-icon {
-		padding-left: 48px;
-	}
-	&.field--underline {
-		border: none;
-		border-radius: 0;
-		border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-		&:focus {
-			border-bottom: 1px solid rgba($primary, 0.5);
-		}
-	}
-	
-	
-	&[type="file"]{
-		& + label {
-			display: block;
-			cursor: pointer;
-			z-index: 1;
-			height: 42px;
-			padding: 0 16px;
-			font-weight: 400;
-			line-height: 42px;
-			color: $input-color;
-			background-color: $white;
-			border: 1px solid #efefef;
-			border-radius: 5px;
-			position: relative;
-		}
-		& + label::after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 3;
-			display: block;
-			padding: 0 16px;
-			line-height: 42px;
-			color: $white;
-			content: "Upload File";
-			background-color: $primary;
-			border-left: inherit;
-			border-radius: 0 5px 5px 0;
-		}
-	}
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 16px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: $input-color;
+  line-height: 42px;
+  height: 42px;
+  margin: 0 5px 0 0;
+  @include inputs;
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, .06);
+  }
+
+  &.field--with-icon {
+    padding-left: 48px;
+  }
+
+  &.field--underline {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+
+    &:focus {
+      border-bottom: 1px solid rgba($primary, 0.5);
+    }
+  }
+
+
+  &[type="file"] {
+    & + label {
+      display: block;
+      cursor: pointer;
+      z-index: 1;
+      height: 42px;
+      padding: 0 16px;
+      font-weight: 400;
+      line-height: 42px;
+      color: $input-color;
+      background-color: $white;
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    & + label::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      display: block;
+      padding: 0 16px;
+      line-height: 42px;
+      color: $white;
+      content: "Upload File";
+      background-color: $primary;
+      border-left: inherit;
+      border-radius: 0 5px 5px 0;
+    }
+  }
 }
-.check-field-group--horizontal{
-	display: flex;
-	align-items: center;
-	// justify-content: space-evenly;
+
+.check-field-group--horizontal {
+  display: flex;
+  align-items: center;
+  // justify-content: space-evenly;
 }
-.check-field__control{
-	display: flex;
-	height: 34px;
-	align-items: center;
-	margin: 8px 0;
-	padding: 0 18px;
-	// color: $default;
-	label{
-		display: inherit;
-		align-items: inherit;
-		position: relative;
-		cursor: pointer;
-		&::before{
-			position: absolute;
-			content: '';
-			background-color: currentColor;
-			width: 36px;
-			height: 36px;
-			left: -9px;
-			top: 50%;
-			transform: translateY(-50%);
-			border-radius: 50%;
-			z-index: 0;
-			transition: .3s ease all;
-			opacity: 0;
-		}
-		&:hover::before{
-			opacity: .3;
-		}
-	}
-	div{
-		width: 18px;
-		height: 18px;
-		margin-right: 10px;
-		border: 1px solid;
-		border-color: currentColor;
-		background-color: #fff;
-		border-radius: 2px;
-		z-index: 1;
-		position: relative;
-		&::after{
-			position: absolute;
-			content: 'L';
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -56%) rotateZ(45deg) rotateY(180deg);
-			opacity: 0;
-		}
-	}
-	input[type="radio"]{
-		& + label > div{
-			border-radius: 50%;
-		}
-		& + label > div::after{
-			content: '';
-			width: 12px;
-			height: 12px;
-			border-radius: inherit;
-			background-color: currentColor;
-			transform: translate(-50%, -50%);
-		}
-	}
-	input[type="checkbox"]:checked,input[type="radio"]:checked {
-		& + label > div::after {
-			opacity: 1;
-		}
-	}
+
+.check-field {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-left: 16px;
+
+  .check-field__control {
+    position: relative;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .check-field__input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+    & + label {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: calc(50% - 8px);
+        top: calc(50% - 8px);
+        width: 17px;
+        height: 17px;
+        border: 2px solid currentColor;
+        border-radius: 4px;
+        background: transparent;
+        transition: all 275ms;
+        z-index: 1;
+      }
+    }
+
+    &:not(:checked) + label:after {
+      opacity: 0;
+    }
+
+    &:checked + label {
+      color: $primary;
+
+      &:before {
+        background-color: currentColor;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 12px;
+        transform: rotate(45deg);
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+
+    &[type="checkbox"]:checked + label:after {
+      left: calc(50% - 3px);
+      top: calc(50% - 7px);
+      width: 6px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+
+    &[type="radio"] {
+      & + label {
+        background-color: transparent;
+
+        &:before {
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &:not(:checked) + label:after {
+        opacity: 0;
+      }
+      &:checked + label {
+        &:before {
+          background-color: transparent;
+        }
+
+        &:after {
+          left: calc(50% - 4px);
+          top: calc(50% - 4px);
+          width: 8px;
+          height: 8px;
+          background-color: $primary;
+          border-radius: 50%;
+        }
+      }
+
+    }
+
+    & ~ span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      border-radius: 50%;
+      transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+      background-color: currentColor;
+    }
+
+    &:checked ~ span {
+      color: $primary
+    }
+
+    &:hover ~ span {
+      opacity: 0.15;
+    }
+
+    &:focus ~ span {
+      opacity: 0.24;
+    }
+  }
+
+  .check-field__label {
+    padding: 8px;
+  }
+  //.check-field__control {
+  //  display: flex;
+  //  height: 34px;
+  //  align-items: center;
+  //  margin: 8px 0;
+  //  padding: 0 18px;
+  //
+  //  label {
+  //    display: inherit;
+  //    align-items: inherit;
+  //    position: relative;
+  //    cursor: pointer;
+  //
+  //    &::before {
+  //      position: absolute;
+  //      content: '';
+  //      background-color: currentColor;
+  //      width: 36px;
+  //      height: 36px;
+  //      left: -9px;
+  //      top: 50%;
+  //      transform: translateY(-50%);
+  //      border-radius: 50%;
+  //      z-index: 0;
+  //      transition: .3s ease all;
+  //      opacity: 0;
+  //    }
+  //
+  //    &:hover::before {
+  //      opacity: .3;
+  //    }
+  //  }
+  //
+  //  div {
+  //    width: 18px;
+  //    height: 18px;
+  //    margin-right: 10px;
+  //    border: 1px solid;
+  //    border-color: currentColor;
+  //    background-color: #fff;
+  //    border-radius: 2px;
+  //    z-index: 1;
+  //    position: relative;
+  //
+  //    &::after {
+  //      position: absolute;
+  //      content: 'L';
+  //      top: 50%;
+  //      left: 50%;
+  //      transform: translate(-50%, -56%) rotateZ(45deg) rotateY(180deg);
+  //      opacity: 0;
+  //    }
+  //  }
+  //
+  //  input[type="radio"] {
+  //    & + label > div {
+  //      border-radius: 50%;
+  //    }
+  //
+  //    & + label > div::after {
+  //      content: '';
+  //      width: 12px;
+  //      height: 12px;
+  //      border-radius: inherit;
+  //      background-color: currentColor;
+  //      transform: translate(-50%, -50%);
+  //    }
+  //  }
+  //
+  //  input[type="checkbox"]:checked, input[type="radio"]:checked {
+  //    & + label > div::after {
+  //      opacity: 1;
+  //    }
+  //  }
+  //}
 }
+
 
 .switch {
   input[type="checkbox"]:checked,
   input[type="radio"]:checked {
-   
-		& + label::before {
-			background-color: rgba($color: $primary, $alpha: 0.3);
-		}
-		& + label::after{
-			left: 18px;
-			background-color: $primary;
-		}
-        
-	}
-    
+
+    & + label::before {
+      background-color: rgba($color: $primary, $alpha: 0.3);
+    }
+
+    & + label::after {
+      left: 18px;
+      background-color: $primary;
+    }
+
+  }
+
   label {
     padding-left: 40px;
     position: relative;
@@ -274,42 +444,47 @@
   }
 }
 
-input[type="checkbox"], input[type="radio"], input[type="file"]{
-	display: none;
+//input[type="checkbox"], input[type="radio"], input[type="file"] {
+//  display: none;
+//}
+
+.night-mode {
+  .field-wrapper {
+    @include whiteTypo
+  }
+
+  .field {
+    background: #576874;
+  }
+
+  .check-field__control {
+    & > label::before {
+      background-color: $white;
+    }
+
+    div {
+      background-color: #576874;
+    }
+  }
 }
 
-.night-mode{
-	.field-wrapper{
-		@include whiteTypo
-	}
-	.field{
-		background: #576874;
-	}
-	.check-field__control{
-		& > label::before{
-			background-color: $white;
-		}
-		div{
-			background-color: #576874;
-		}
-	}
-}
+html[dir="rtl"] {
+  .field[type="file"] {
+    & + label::after {
+      right: unset;
+      left: 0;
+      border-radius: 5px 0 0 5px;
+    }
+  }
 
-html[dir="rtl"]{
-	.field[type="file"]{
-		& + label::after{
-			right: unset;
-			left: 0;
-			border-radius: 5px 0 0 5px;
-		}
-	}
-	.check-field__control{
-		& > label::before{
-			left: unset;
-			right: -9px;
-		}
-		div{
-			margin: 0 0 0 10px;
-		}
-	}
+  .check-field__control {
+    & > label::before {
+      left: unset;
+      right: -9px;
+    }
+
+    div {
+      margin: 0 0 0 10px;
+    }
+  }
 }
