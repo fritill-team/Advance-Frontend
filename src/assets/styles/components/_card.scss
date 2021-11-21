@@ -1134,6 +1134,9 @@ html[dir="rtl"] {
       left: unset;
       right: 0;
     }
+    .card__content{
+      text-align: right;
+    }
     .card__content-header {
       align-items: flex-start;
     }
