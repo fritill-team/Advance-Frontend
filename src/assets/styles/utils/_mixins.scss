@@ -16,6 +16,12 @@
 	}
 }
 
+@mixin redTypo(){
+  h1, h2, h3, h4, h5, h6, p, a, span,i,label,li {
+		color: $danger;
+	}
+}
+
 @mixin noWrap() {
 	h1, h2, h3, h4, h5, h6, p, a, span {
 		white-space: nowrap;

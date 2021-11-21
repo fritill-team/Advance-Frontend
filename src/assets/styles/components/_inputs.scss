@@ -16,6 +16,15 @@
     .field[type="file"] + label::after {
       background-color: $danger;
     }
+    .check-field .check-field__input:checked + label{
+      color: $danger;
+    }
+    .check-field .check-field__input[type='radio']:checked + label:after{
+      background-color: $danger;
+    }
+    .check-field .check-field__input:checked ~ span{
+      color: $danger;
+    }
   }
 
   &.field-wrapper--accent {
@@ -143,6 +152,7 @@
 
 
   &[type="file"] {
+    display: none;
     & + label {
       display: block;
       cursor: pointer;
@@ -396,9 +406,11 @@
 
 
 .switch {
+  input[type="checkbox"],input[type="radio"]{
+    display: none;
+  }
   input[type="checkbox"]:checked,
   input[type="radio"]:checked {
-
     & + label::before {
       background-color: rgba($color: $primary, $alpha: 0.3);
     }
@@ -407,7 +419,6 @@
       left: 18px;
       background-color: $primary;
     }
-
   }
 
   label {
@@ -450,13 +461,23 @@
 
 .night-mode {
   .field-wrapper {
-    @include whiteTypo
+    @include whiteTypo;
+    &.field-wrapper--error{
+      @include redTypo;
+    }
   }
 
   .field {
     background: #576874;
+    color: $white;
+    &[type="file"] + label{
+      border: none;
+      background-color: #576874;
+    }
   }
-
+  // .check-field .check-field__input+label:before{
+  //   border-color: $danger;
+  // }
   .check-field__control {
     & > label::before {
       background-color: $white;
@@ -469,6 +490,12 @@
 }
 
 html[dir="rtl"] {
+  .field-wrapper{
+    &.field-wrapper--arrow .field-wrapper__content::after{
+      right: unset;
+      left: 16px;
+    }
+  }
   .field[type="file"] {
     & + label::after {
       right: unset;
@@ -479,12 +506,15 @@ html[dir="rtl"] {
 
   .check-field__control {
     & > label::before {
-      left: unset;
-      right: -9px;
+      // left: unset;
+      // right: -9px;
     }
 
     div {
-      margin: 0 0 0 10px;
+      // margin: 0 0 0 10px;
     }
+  }
+  .check-field{
+    margin: 0 16px 0 0;
   }
 }
