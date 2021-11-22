@@ -4,7 +4,7 @@ MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 const fitHeight = () => {
   let documentHeight = $(document).height(),
     headerHeight = $($('.header')[0]).height(),
-    footerHeight = $($('.footer')[0]).height() + 60, //60 for margin top
+    footerHeight = $($('.footer')[0]).height() , //60 for margin top
     pageContent = $($('.page__content')[0]),
     pageContentHeight = pageContent.height()
   // console.log('documentHeight', documentHeight)
@@ -15,7 +15,7 @@ const fitHeight = () => {
 
   if (documentHeight >= (headerHeight + pageContentHeight + footerHeight)) {
     let newPageContentHeight = documentHeight - (headerHeight + footerHeight)
-    // pageContent.css('height', `${newPageContentHeight}px`)
+    pageContent.css('height', `${newPageContentHeight}px`)
   }
 }
 

@@ -4,7 +4,7 @@
 	left: 0;
 	transform: translateX(-100%);
   bottom: 0;
-  height: 100%;
+  height: calc(100% - 60px);
   width: 100%;
   max-width: 300px;
   background-color: $white;
