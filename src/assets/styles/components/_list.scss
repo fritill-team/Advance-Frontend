@@ -3,7 +3,10 @@
   background-color: $white;
   flex-flow: column nowrap;
   padding: 6px 0;
-
+  margin-bottom: 20px;
+  &.list--with-top-space{
+    margin-top: 40px;
+  }
   &.list--condensed {
     padding: 0;
 
@@ -324,9 +327,13 @@ a.list-item {
 
     &.list-item--with-border {
       &::after {
-        bottom: -10px;
+        bottom: -5px;
         width: calc(100% - 76px);
       }
+    }
+
+    &.list-item--with-border:last-of-type::after{
+      display: none;
     }
 
     .list-item__action {

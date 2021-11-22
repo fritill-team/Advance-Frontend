@@ -217,3 +217,14 @@ $(".feature_careers").owlCarousel({
     },
   },
 });
+
+$(".blog__media").owlCarousel({
+  items: 1,
+  nav: true,
+  loop: false,
+  dots: false,
+  navText: [
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>",
+  ],
+})
