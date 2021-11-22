@@ -1,6 +1,6 @@
 .field-wrapper {
   width: 100%;
-  color: $input-color;
+  color: $gray;
 
   &.field-wrapper--error {
     color: $danger;
@@ -16,9 +16,10 @@
     .field[type="file"] + label::after {
       background-color: $danger;
     }
-    .check-field .check-field__input:checked + label{
+    .check-field .check-field__input + label::before{
       color: $danger;
     }
+    
     .check-field .check-field__input[type='radio']:checked + label:after{
       background-color: $danger;
     }
@@ -126,7 +127,7 @@
   padding: 0 16px;
   border: 1px solid #e5e5e5;
   background: #fff;
-  color: $input-color;
+  color: $gray;
   line-height: 42px;
   height: 42px;
   margin: 0 5px 0 0;
@@ -161,7 +162,7 @@
       padding: 0 16px;
       font-weight: 400;
       line-height: 42px;
-      color: $input-color;
+      color: $gray;
       background-color: $white;
       border: 1px solid #efefef;
       border-radius: 5px;
@@ -228,6 +229,7 @@
         top: calc(50% - 8px);
         width: 17px;
         height: 17px;
+        color: $gray;
         border: 2px solid currentColor;
         border-radius: 4px;
         background: transparent;
@@ -241,9 +243,9 @@
     }
 
     &:checked + label {
-      color: $primary;
-
+      
       &:before {
+        color: $primary;
         background-color: currentColor;
       }
 
