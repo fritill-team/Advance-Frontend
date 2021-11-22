@@ -91,9 +91,7 @@ const courseTemplate = function (course) {
   return `
     <div class="course-card course-card--grid-view">
       <a href="${course.url}" class="course-card__preview youtube-activator">
-        <img src="${course.cover}" alt="${
-    course.title
-  }" class="course-card__preview-cover">
+        <img src="${course.cover}" alt="${course.title}" class="course-card__preview-cover">
         <div class="course-card__preview-video youtube-player"
              id="course-${course.id}"
              data-video-id="${course.video_id}"></div>
