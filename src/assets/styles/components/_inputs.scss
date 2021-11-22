@@ -96,6 +96,7 @@
   font-weight: 600;
   padding: 6px 16px;
   color: currentColor;
+  display: block;
 }
 
 .field-wrapper__content {
@@ -183,6 +184,25 @@
       border-left: inherit;
       border-radius: 0 5px 5px 0;
     }
+  }
+}
+
+textarea.field{
+  height: unset;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0;
+  outline: none;
+  font-size: 1em;
+  background: $white;
+  color: $input-color;
+  border-radius: 10px;
+  padding: 1em;
+  resize: none;
+  border: 1px solid #e5e5e5;
+  &:focus {
+    color: $input-color;
+    border-bottom: 1px solid rgba($primary, 0.5);
   }
 }
 
