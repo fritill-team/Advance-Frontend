@@ -72,9 +72,7 @@
     font-size: 20px;
   }
 
-  .list-title__actions {
-
-  }
+  
 }
 
 a.list-item {
@@ -137,10 +135,15 @@ a.list-item {
   }
 
   .list-item__icon {
+    display: flex;
+    justify-content: center;
     text-align: center;
     width: 100%;
     max-width: 60px;
 		min-width: 60px;
+    i,span{
+      color: #43525c;
+    }
   }
 
   .list-item__content {
@@ -640,7 +643,7 @@ a.list-item {
     .list-item__icon {
       background-color: transparent;
 
-      i {
+      i,span {
         color: rgba($color: $accent, $alpha: 0.7);
       }
     }
