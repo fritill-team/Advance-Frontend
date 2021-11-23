@@ -87,6 +87,7 @@ let NoOfCols = 0,
 //     col.removeClass(`col-${currentBreakpoint}-12`)
 //   })
 
+
 const courseTemplate = function (course) {
   return `
     <div class="course-card course-card--grid-view">

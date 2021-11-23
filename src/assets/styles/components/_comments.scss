@@ -1,6 +1,10 @@
 .threads {
   padding: 30px 10px;
 }
+.comment-container{
+  background-color: #fff;
+  border-radius: 5px;
+}
 .comments {
   float: left;
   width: 100%;
@@ -109,15 +113,18 @@
 .item__actions {
   display: flex;
   .action__report {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     font-weight: 400;
-      color: $black;
+    color: $black;
     line-height: 24px;
     margin-left: 5px;
     cursor: pointer;
     .report__icon {
       font-size: 130%;
       padding: 0 5px;
+      color: #686f7a;
     }
     &:hover {
       color: $primary !important;
