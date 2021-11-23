@@ -16,6 +16,7 @@ export default class BaseResource {
     this.withPagination = false
     this.paginationType = 'pagination'
     this.csrf = $('meta[name="csrf-token"]').prop('content')
+    this.user = null
     // elements
     this.$container = $container
     this.$searchBar = null
@@ -36,20 +37,49 @@ export default class BaseResource {
 
     this.$searchBar.on('input', e => this.search = e.target.value)
 
-    let self = this
 
+    let self = this
     $(document)
       .on('click', `.${this.prefix}-edit`, function (e) {
         e.preventDefault()
         let parentContainer = $(this).closest('.card')
         self.$form.empty()
-        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'))))
+        self.$form.append($(self.formTemplate(parentContainer.data('data'), $(this).attr('href'), true)))
+
+        // init star rating again
+        $(document).ready(function () {
+          $(".rate-input").starRating({
+            initialRating: 0,
+            starSize: 25,
+            totalStars: 5,
+            starShape: '',
+            emptyColor: 'lightgray',
+            hoverColor: '#f2b01e',
+          });
+          $(".rate-display").each(function () {
+            let initial = $(this).data('rate')
+            $(this).starRating({
+              readOnly: true,
+              initialRating: initial,
+              starSize: 20,
+              totalStars: 5,
+              starShape: '',
+              emptyColor: 'lightgray',
+              hoverColor: '#f2b01e',
+            });
+          })
+          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+
+        })
+
       })
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
+        // update the rating
+        $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+
         self.submitForm($(this))
         self.fetchItems()
-
       })
       .on('click', `.${this.prefix}-delete`, function (e) {
         e.preventDefault()
@@ -60,6 +90,9 @@ export default class BaseResource {
       .on('click', `.${this.prefix}-confirm-delete`, function (e) {
         e.preventDefault()
         self.confirmDelete()
+      })
+      .on('click', '#reviews-loader', function (e){
+        self.fetchItems()
       })
   }
 
@@ -138,11 +171,14 @@ export default class BaseResource {
     })
   }
 
+  onFormSubmit() {
+
+  }
+
   submitForm($form) {
     let url = $form.attr('action'),
       data = $form.serialize(),
       self = this
-
     $.ajax({
       type: 'POST',
       url,
@@ -152,6 +188,7 @@ export default class BaseResource {
         this.fetchItems()
         this.$form.empty()
         this.$form.append($(this.formTemplate({}, this.createURL)))
+        this.onFormSubmit()
       },
       error: (xhr, status, error) => {
         if (xhr.status === 422)
@@ -180,17 +217,14 @@ export default class BaseResource {
   }
 
   searchForm() {
-
-    return `
-
-<form method="get">
-<div class="field-wrapper">
-     <div class="field-wrapper__label">Search</div>
-     <div class="field-wrapper__content">
-       <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
-     </div>
-    </div>
-</form>`
+    return `<form method="get">
+      <div class="field-wrapper">
+        <div class="field-wrapper__label">Search</div>
+          <div class="field-wrapper__content">
+            <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
+          </div>
+        </div>
+      </form>`
   }
 
   paginationTemplate() {
@@ -232,7 +266,8 @@ export default class BaseResource {
         self.deleteURL = ''
       },
       error: function (xhr) {
-
+        console.log(xhr)
+        console.log("cannot delete this item")
       }
     })
   }

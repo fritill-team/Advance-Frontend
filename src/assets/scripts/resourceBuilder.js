@@ -2,6 +2,7 @@ import TagResource from "./Resources/TagResource";
 import CategoryResource from "./Resources/CategoryResource";
 import RecommendationResource from "./Resources/RecommendationResource";
 import ClassificationResource from "./Resources/ClassificationResource";
+import ReviewResource from "./Resources/ReviewResource";
 
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)
@@ -40,5 +41,16 @@ if (classifications.length > 0) {
   new ClassificationResource(classifications, {
     listingURL: classifications.data('listing-url'),
     createURL: classifications.data('create-url'),
+  })
+}
+
+const reviews = $('#reviews-list')
+if (reviews.length > 0) {
+  new ReviewResource(reviews, {
+    listingURL: reviews.data('listing-url'),
+    starterURL: reviews.data('listing-url'),
+    createURL: reviews.data('create-url'),
+    admin: reviews.data('is-admin'),
+    user: reviews.data('user')
   })
 }

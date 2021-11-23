@@ -445,13 +445,13 @@ $(".course-list__item").each(function () {
   });
 });
 
-$(function () {
-  $("#sortable").sortable({
-    handle: ".handle",
-  });
-  $("#sortable").disableSelection();
-  $("#test").accordion();
-});
+// $(function () {
+//   $("#sortable").sortable({
+//     handle: ".handle",
+//   });
+//   $("#sortable").disableSelection();
+//   $("#test").accordion();
+// });
 
 // const renderRecomendations = async () => {
 //    let url = `http://localhost:3000/recommendations`;
@@ -462,25 +462,25 @@ $(function () {
 // }
 
 // window.addEventListener('DOMContentLoaded', () => renderRecomendations());
-$(function () {});
+// $(function () {});
 // $(document)
 // 	.on('click', '.collapse_menu', function () {
 // 		console.log('dlkvdogn')
 // 		nav.toggleClass('nav--opened vertical_nav__minify')
 // 		wrapper.toggleClass('toggle-content wrapper__minify ');
 // 	})
-$(document)
-  .on("click", ".recommendation-details .card__header", function () {
-    $(this).next().toggleClass("d-none");
-  })
-  .on("click", "edit-recommendation", function () {
-    $(this).closest(".recommendation-details");
-  })
-  .on("click", ".edit-recommendation", function (e) {
-    e.preventDefault();
-    // let editable = $(this).closest('.recommendation-details').data('data')
-    // $('.recommendation-form').data('data').append(editable)
-  });
+// $(document)
+//   .on("click", ".recommendation-details .card__header", function () {
+//     $(this).next().toggleClass("d-none");
+//   })
+//   .on("click", "edit-recommendation", function () {
+//     $(this).closest(".recommendation-details");
+//   })
+//   .on("click", ".edit-recommendation", function (e) {
+//     e.preventDefault();
+//     // let editable = $(this).closest('.recommendation-details').data('data')
+//     // $('.recommendation-form').data('data').append(editable)
+//   });
 
 // $(this).on('click', function(){
 //   $(this).siblings().hide();
