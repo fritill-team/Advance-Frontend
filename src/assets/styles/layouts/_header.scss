@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   background-color: darken($primary, 7);
+  padding: 0 16px 0 0;
   .header__link {
     height: 100%;
     margin: 0;
@@ -188,6 +189,7 @@
 }
 html[dir="rtl"] {
   .header {
+    padding: 0 0 0 16px;
     .header__arrow {
       clip-path: polygon(10% 1%, 100% 0, 90% 50%, 100% 100%, 10% 100%, 0 50%);
     }
