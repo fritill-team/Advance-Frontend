@@ -19,10 +19,11 @@ export default class RecommendationResource extends BaseResource {
             <div class="dropdown__content">
               <div class="list">
                 ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}">
-                  <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
+                  <div class="list-item__icon"><i class="${action.icon}"></i></div>
                   <span class="list-item__content">
+                    ${action.name}
                   </span>
-                </a>`) : ''}
+                </a>`).join("") : ''}
               </div>
             </div>
           </div>
@@ -54,6 +55,7 @@ export default class RecommendationResource extends BaseResource {
         <label class="field-wrapper__label" for="recommendations-description">Description <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <textarea
+            class="field"
             required
             name="description"
             id="recommendations-description"

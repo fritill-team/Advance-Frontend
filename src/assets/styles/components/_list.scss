@@ -140,9 +140,12 @@ a.list-item {
     text-align: center;
     width: 100%;
     max-width: 60px;
-		min-width: 60px;
+		min-width: 55px;
     i,span{
       color: #43525c;
+    }
+    & + .list-item__content{
+      padding: 16px 10px 16px 0;
     }
   }
 

@@ -397,6 +397,44 @@
       ]
     }
   ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "tag1",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "tags-edit",
+          "link": "http://localhost:3000/tags/1/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary tags-delete",
+          "link": "/tags/1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tag2",
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "tags-edit",
+          "link": "http://localhost:3000/tags/2/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary tags-delete",
+          "link": "/tags/2"
+        }
+      ]
+    }
+  ],
   "reviews": {
     "review": "hjdbvhbdb",
     "rate": "3.5"

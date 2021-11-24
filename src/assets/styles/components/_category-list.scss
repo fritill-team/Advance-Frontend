@@ -1,3 +1,8 @@
+.list-group{
+  background-color: $white;
+  border-radius: 5px;
+  padding: 16px;
+}
 .list-group-item{
 	display: flex;
 	align-items: center;
@@ -7,14 +12,15 @@
 			margin: 0 0 0 auto;
 		}
 	}
+  // .list-group-item.node-categories-listing:not(.node-disabled):hover 
 	&.node-categories-listing:not(.node-disabled):hover{
-		background-color: transparent;
+    background-color: rgba($primary, .1);
 	}
 	&.node-categories-listing.node-selected{
 		color: inherit;
 		background-color: transparent;
 		&:hover{
-			color: inherit;
+      background-color: rgba($primary, .1);
 		}
 	}
   &:hover{

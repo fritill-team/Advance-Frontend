@@ -42,8 +42,8 @@ export default class TagResource extends BaseResource {
 
   itemTemplate(item) {
     return ` <div class="list-item list-item--one-line">
-      <div class="lit-item__content">
-        <p>${item.name}</p>
+      <div class="list-item__content">
+        <p class="body-1">${item.name}</p>
       </div>
       <div class="list-item__actions">
         <div class="dropdown">
@@ -52,9 +52,13 @@ export default class TagResource extends BaseResource {
           </button>
           <div class="dropdown__content">
             <div class="list">
-              ${item.actions.length > 1 ? item.actions.map(action => `<a class="list-item list-item--one-line ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'>
-                <div class="list-item__avatar"><i class="${action.icon}">${action.name}</i></div>
-              </a>`).join('') : ''}
+              ${item.actions.length > 1 ? item.actions.map(action => `
+                <a class="list-item list-item--one-line ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'>
+                <div class="list-item__icon"><i class="${action.icon}"></i></div>
+                  <span class="list-item__content">
+                    ${action.name}
+                  </span>
+                </a>`).join('') : ''}
             </div>
           </div>
         </div>
