@@ -359,15 +359,70 @@
 // }
 
 // Answer Style
+.assessment{
+  padding: 20px;
+  color: $gray;
+  background: rgba($gray, 0.2);
+  .assessment__title{
+    @include normalizeTypo;
+    h1,h3{
+      color: rgba($gray, .7);
+      margin-bottom: 16px;
+    }
+  }
+  .assessment__image{
+    display: inline-block;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 180px;
+    min-height: 180px;
+    width: 100%;
+    height: 100%;
+    float: right;
+    // max-height: 200px;
+    // height: 150px;
+  }
+  &.assessment--section{
+    background: rgba($gray, 0.1);
+  }
+}
+.assessment-item{
+  margin: 14px 0 40px 0;
+  padding: 16px 0;
+  .assessment-item__image{
+    display: inline-block;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 180px;
+    min-height: 180px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+    float: right;
+  }
+  .field-wrapper__content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .check-field{
+    margin-left: 0;
+    align-items: flex-start;
+    .check-field__control{
+      margin-top: 6px;
+    }
+  }
+  &:nth-of-type(even){
+    background-color: rgba(#333, .06);
+  }
+}
+
 .exams-questions {
   padding-top: 0px;
 
   .questions-header {
-    // display: flex;
-    // justify-content: space-between;
-    // padding: 15px;
+    
     padding: 20px;
-    background: rgba($primary, 0.5);
+    background: rgba($gray, 0.2);
 
     .questions-header__title {
       // width: 50%;
@@ -376,34 +431,25 @@
         margin: 0;
         margin-bottom: 5px;
         word-wrap: break-word;
-        color: $white;
-        // color: rgba($gray, .8);
+        color: rgba($gray, 1);
+        // color: $input-color;
       }
     }
 
     .questions-header__info {
       p {
-        color: $white;
-        // color: rgba($gray, .8);
+        color: rgba($gray, .9);
         margin: 5px 0;
         margin-top: 5px;
       }
     }
-
-    // .questions-header__description {
-    //   width: 30%;
-    //   margin-top: 10px;
-
-    //   p {
-    //     color: $primary;
-    //   }
-    // }
   }
 
   .questions-name {
     padding: 15px;
     margin-bottom: 25px;
-    background: rgba($secondary, 0.3);
+    background: rgba($gray, 0.1);
+    // background: rgba($secondary, 0.3);
   }
 
   .exam__footer {
@@ -421,7 +467,7 @@
   padding: 15px;
   margin: 10px 0;
   border-radius: 6px;
-  // color: rgba($gray, .8);
+  color: rgba($gray, .8);
 
   h3 {
     margin: 0;
@@ -684,6 +730,11 @@
 
 // rtl
 html[dir="rtl"] {
+  .assessment{
+    .assessment__image{
+      float: left;
+    }
+  }
   .exam {
     .exam__footer {
       padding: 10px 0;
@@ -715,6 +766,13 @@ html[dir="rtl"] {
 }
 
 .night-mode {
+  .assessment{
+    @include whiteTypo;
+    background: rgba($black, 0.4);
+    &.assessment--section{
+      background: rgba($black, 0.2);
+    }
+  }
   // Question card
   .question {
     background-color: transparent;

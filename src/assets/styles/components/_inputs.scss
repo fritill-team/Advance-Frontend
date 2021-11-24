@@ -99,6 +99,9 @@
   padding: 6px 16px;
   color: currentColor;
   display: block;
+  & + p{
+    padding: 0 16px;
+  }
 }
 
 .field-wrapper__content {
