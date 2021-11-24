@@ -19,7 +19,9 @@
     .check-field .check-field__input + label::before{
       color: $danger;
     }
-    
+    .check-field .check-field__label {
+      color: $danger;
+    }
     .check-field .check-field__input[type='radio']:checked + label:after{
       background-color: $danger;
     }

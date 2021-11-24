@@ -35,7 +35,7 @@ export default class TagResource extends BaseResource {
 
   listingTemplate() {
     console.log('here')
-    return `<div class="list list--condensed" id="${this.prefix}-listing">
+    return `<div class="card list list--condensed" id="${this.prefix}-listing">
       ${this.items.map(item => this.itemTemplate(item)).join('')}
     </div>`
   }

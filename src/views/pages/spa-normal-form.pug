@@ -36,14 +36,18 @@ block content
 	.page-content.page-content--horizontal
 		//- include ../components/sidebar-dark.pug
 		//- +sidebar-dark
-		.exams-questions.video-player
+		.exams-questions
 			section.questions-header
 				.container
-					.questions-header__title
-						h1.title-h1 Exams Development
-						.questions-header__info
-							p.body-1 The only course you need to learn web development
-							p.body-1 The only course you need
+					.row 
+						.col-sm-8 
+							.questions-header__title
+								h1.title-h1 Exams Development
+								.questions-header__info
+									p.body-1 The only course you need to learn web development
+									p.body-1 The only course you need
+						.col-sm-4 
+							img(src="", alt="")
 			section.questions-name
 				.container
 					.row
@@ -52,7 +56,7 @@ block content
 								h3.title-h3 Exams Difficile
 								.question-title__info
 									p.body-1 Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-			.questions
+			//- .questions
 				.container
 					.row
 						.col-lg-12

@@ -553,7 +553,7 @@ a.list-item {
 //night mood
 .night-mode {
   .list {
-    background-color: #43525c;
+    background-color: #1d1e13;
 
     & > a {
       &:hover {
@@ -581,6 +581,7 @@ a.list-item {
   }
 
   .list-item {
+    // background-color: #1d1e13;
     &.list-item--open {
       .list-item__action {
         i {
