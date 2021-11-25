@@ -1173,7 +1173,19 @@ html[dir="rtl"] {
     .uil-check-circle {
       right: 8px;
     }
+    &.card--centered{
+      .card__content{
+        padding: 0;
+        @include textCenter;
+      }
+      .user-data .details{
+        @include textCenter;
 
+      }
+    }
+    &.card--icon .card__content-header{
+      align-items: center;
+    }
     &.card--sm {
       .card__content {
         padding-left: 20px;

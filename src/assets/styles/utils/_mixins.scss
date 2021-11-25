@@ -5,8 +5,13 @@
 }
 
 @mixin textRight() {
-  h1, h2, h3, h4, h5, h6, p, a, span {
+  h1, h2, h3, h4, h5, h6, p, a, span, div {
     text-align: right;
+  }
+}
+@mixin textCenter() {
+  h1, h2, h3, h4, h5, h6, p, a, span, div {
+    text-align: center;
   }
 }
 

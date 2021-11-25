@@ -138,6 +138,9 @@ html[dir="rtl"]{
       margin-right: 0;
       margin-left: 18px;
     }
+    .content-list-item__content{
+      @include textRight;
+    }
     .content-list-item__progress{
       span{
         left: unset;

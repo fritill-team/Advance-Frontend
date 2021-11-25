@@ -278,6 +278,9 @@ html[dir="rtl"] {
 		.course-card__rate{
 			margin: 0 auto 0 0;
 		}
+    .course-card__content{
+      @include textRight;
+    }
 	}
   //   .course-card__card-media {
 

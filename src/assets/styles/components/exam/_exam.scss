@@ -387,7 +387,7 @@
   }
 }
 .assessment-item{
-  margin: 14px 0 40px 0;
+  // margin: 14px 0 40px 0;
   padding: 16px 0;
   .assessment-item__image{
     display: inline-block;
@@ -397,7 +397,7 @@
     min-height: 180px;
     width: 100%;
     height: 100%;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     float: right;
   }
   .field-wrapper__content{
@@ -418,7 +418,12 @@
 
 .exams-questions {
   padding-top: 0px;
-
+  .exams-questions__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
   .questions-header {
     
     padding: 20px;
