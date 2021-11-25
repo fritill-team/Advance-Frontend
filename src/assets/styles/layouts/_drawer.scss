@@ -137,6 +137,9 @@ html[dir="rtl"] {
 		right: 0;
     transform: translateX(100%);
     overflow-y: auto;
+    &.drawer--partially-closed{
+      transform: translateX(0);
+    }
     &.drawer--open{
       transform: translateX(0);
     }
