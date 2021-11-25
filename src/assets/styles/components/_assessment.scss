@@ -1,0 +1,35 @@
+.assessment-sidebar {
+  @include normalizeTypo;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // height: 1500px;
+  .assessment-sidebar__title {
+    white-space: normal !important;
+    padding: 16px;
+  }
+  .assessment-sidebar__cover {
+    padding: 16px;
+    height: 180px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .assessment-sidebar__progress{
+    width: 200px;
+    height: 200px;
+    background-color: $gray;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .assessment-sidebar__logo{
+    padding: 16px;
+    height: 140px;
+    margin-top: auto;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
