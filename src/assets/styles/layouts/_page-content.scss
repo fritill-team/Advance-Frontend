@@ -95,6 +95,12 @@
       width: 100%;
       height: 70%;
     }
+    @media (max-width: 560px) {
+      margin-bottom: 16px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
