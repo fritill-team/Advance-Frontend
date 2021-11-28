@@ -7,33 +7,24 @@ block title
 //-   include ../components/menu-list.pug
 
 block content
+
 	.container
 		.row
-			.col-md-12
-				.d-flex.flex-column.mt-3
-					.d-flex.justify-content-between.align-items-center.w-100
-						h1.course-content__title Thread Chapter content
-					.d-flex
-						.info
-							.info__details
-								span.details__name Asked
-								span.details__data 3 years
-		//- include ../components/comments.pug
-						//- info components
-		.row
+			.col-lg-8.offset-lg-2 
+				section.section-header
+					h3.title-h3 Threads list
+					p.body-1 lorem
+			.col-lg-8.offset-lg-2 
+				include ../components/thread-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/thread-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/thread-card.pug
+			.col-lg-8.offset-lg-2 
+				include ../components/thread-card.pug
+
 			.col-lg-12 
-				.comment-form
-				div.comments__add-comment
-					.add-comment__group
-						.group__img-wrapper
-							img.group__img(src="../../assets/images/hd_dp.jpg" alt="")
-						textarea.group__textarea(placeholder="Add a public comment")
-					button.btn.btn--primary.btn--rounded(type="submit")  Comment
-				
-			.col-12
-				.comment-container
-				.comment-container
-				.comment-container
+				include ../components/general-component/pagination.pug
 				//- .card.d-flex
 					.user-image
 						img(src="../../assets/images/hd_dp.jpg")
@@ -94,139 +85,139 @@ block content
 
 				// start question
 				//- .d-flex
-				//- 	.d-flex.justify-content-between.align-items-center.w-100
-				//- 		h3.course-content__title.mb-0 1 Answer
-				//- 	// start Answer
+					.d-flex.justify-content-between.align-items-center.w-100
+						h3.course-content__title.mb-0 1 Answer
+					// start Answer
 				//- .d-flex.flex-column.w-100
-				//- 	.card--convertible
-				//- 		// start convertible__form Answer
-				//- 		.convertible__form
-				//- 			.card.card--horizontal
-				//- 				.card__content
-				//- 					.user-image
-				//- 						img(src="../../assets/images/hd_dp.jpg" alt="")
-				//- 						i.uil.uil-check-circle
-				//- 					.card__body
-				//- 						.card__content-header
-				//- 							.user-data
-				//- 								a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
-				//- 								time.text-3.gray Jan 15 '18 at 13:56
-				//- 						// start  form
-				//- 						form.form__action(action="")
-				//- 							.field-wrapper.field-wrapper--no-margin
-				//- 								textarea.textarea#course_description.mb-2(rows='5' name='description' placeholder='Edit post')
-				//- 								.d-flex.my-3
-				//- 									include ../components/general-component/btn.pug
-				//- 									a(class="btn btn--secondary btn--ml-auto btn--text convert text-2 bold" href="#") cancel
-				//- 									+btn('btn btn--danger btn--rounded convert text-2 bold', 'post')
-				//- 				// End Answer form
-				//- 		// start  convertible__date Answer
-				//- 		.convertible__data
-				//- 			.card.card--horizontal
-				//- 				.card__content
-				//- 					.user-image
-				//- 						img(src="../../assets/images/hd_dp.jpg" alt="")
-				//- 						i.uil.uil-check-circle
-				//- 					.card__body
-				//- 						.card__content-header
-				//- 							.user-data
-				//- 								a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
-				//- 								time.text-3.gray Jan 15 '18 at 13:56
-				//- 							.dropdown.dropdown__activator
-				//- 								a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
-				//- 									i.fas.fa-ellipsis-v
-				//- 								.dropdown__content.dropdown-content-width
-				//- 									.list
-				//- 										a(href="#" class="list-item") 
-				//- 											.list-item__icon
-				//- 												i.far.fa-copy
-				//- 											.list-item__content.convert
-				//- 												span.text-2 Edit  
-				//- 										a(href="#" class="list-item") 
-				//- 											.list-item__icon
-				//- 												i.far.fa-copy
-				//- 											.list-item__content
-				//- 												span.text-2 Delete  
-				//- 						//start Content
-				//- 						.card__content--details
-				//- 							.rich-textarea
-				//- 								h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				//- 								h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				//- 								h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				//- 								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				//- 								span  Lorem ipsum dolor
-				//- 								ul
-				//- 									li Lorem ipsum dolor
-				//- 									li Lorem ipsum dolor
-				//- 									li Lorem ipsum dolor
-				//- 									li Lorem ipsum dolor
-				//- 								q Lorem ipsum dolor
-				//- 								a(href="#") Link
-				//- 								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				//- 								i mostafa
-				//- 						// End Content
-				//- 			// End  convertible__date Answer
-				//- 	// start comment-list
-				//- 	.comments-list
-				//- 		//- comment 1 add class transparent (no-background)
-				//- 		.card--convertible
-				//- 			// start comment-form
-				//- 			.card.card--transparent.card--sm.card--horizontal.convertible__form
-				//- 				.card__content
-				//- 					.user-image
-				//- 						img(src="../../assets/images/hd_dp.jpg" alt="")
-				//- 						i.uil.uil-check-circle
-				//- 					.card__body
-				//- 						.card__content-header
-				//- 							.user-data
-				//- 								a(href="#" class="btn btn--primary  btn--link-text text-2 bold") Jose Portilla
-				//- 								time.text-1.gray Jan 15 '18 at 13:56
-				//- 						form.form__action.mb-3(action="")
-				//- 							.field-wrapper#editCommentForm.m-0
-				//- 								input.field-wrapper__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
-				//- 								.d-flex.my-3
-				//- 									include ../components/general-component/btn.pug
-				//- 									a(class="btn btn--secondary btn--ml-auto btn--text convert text-2 bold" href="#") cancel
-				//- 									+btn('btn btn--danger btn--rounded convert text-2 bold', 'post')
-				//- 				// End comment-form
-				//- 				// start comment-data
-				//- 			.card.card--horizontal.card--transparent.card--sm#comment.convertible__data
-				//- 				.card__content
-				//- 					.user-image
-				//- 						img(src="../../assets/images/hd_dp.jpg" alt="")
-				//- 						i.uil.uil-check-circle
-				//- 					.card__body
-				//- 						.card__content-header
-				//- 							.user-data
-				//- 								a(href="#" class="btn btn--secondary btn--link-text text-2 bold") Jose Portilla
-				//- 								time.text-1.gray Jan 15 '18 at 13:56
-				//- 							.dropdown.dropdown__activator
-				//- 								a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
-				//- 									i.fas.fa-ellipsis-v
-				//- 								.dropdown__content.dropdown-content-width
-				//- 									.list
-				//- 										a(href="#" class="list-item") 
-				//- 											.list-item__icon
-				//- 												i.far.fa-copy
-				//- 											.list-item__content.convert
-				//- 												span.text-2 Edit  
-				//- 										a(href="#" class="list-item") 
-				//- 											.list-item__icon
-				//- 												i.far.fa-copy
-				//- 											.list-item__content
-				//- 												span.text-2 Delete 
-				//- 						.card__content--details
-				//- 							p.text-3 lorem ipsum dolor sit
-				//- 					// End comment-data
-				//- 		//- comment 2
-				//- 		.create-comment
-				//- 			.create-comment__content
-				//- 				.content__user-img
-				//- 					img.user-img__img(src=" ../../assets/images/hd_dp.jpg")
-				//- 			form.form__action(action="")
-				//- 				input(placeholder="Add a public comment").group__textarea.textarea--thread
-				//- 	//- replay component contains user-component, paragraph & #tags
-				//- 	//- form add replay at the end of list
+					.card--convertible
+						// start convertible__form Answer
+						.convertible__form
+							.card.card--horizontal
+								.card__content
+									.user-image
+										img(src="../../assets/images/hd_dp.jpg" alt="")
+										i.uil.uil-check-circle
+									.card__body
+										.card__content-header
+											.user-data
+												a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
+												time.text-3.gray Jan 15 '18 at 13:56
+										// start  form
+										form.form__action(action="")
+											.field-wrapper.field-wrapper--no-margin
+												textarea.textarea#course_description.mb-2(rows='5' name='description' placeholder='Edit post')
+												.d-flex.my-3
+													include ../components/general-component/btn.pug
+													a(class="btn btn--secondary btn--ml-auto btn--text convert text-2 bold" href="#") cancel
+													+btn('btn btn--danger btn--rounded convert text-2 bold', 'post')
+								// End Answer form
+						// start  convertible__date Answer
+						.convertible__data
+							.card.card--horizontal
+								.card__content
+									.user-image
+										img(src="../../assets/images/hd_dp.jpg" alt="")
+										i.uil.uil-check-circle
+									.card__body
+										.card__content-header
+											.user-data
+												a.btn.btn--secondary.btn--link-text.text-2.bold(href="#") Jose Portilla
+												time.text-3.gray Jan 15 '18 at 13:56
+											.dropdown.dropdown__activator
+												a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
+													i.fas.fa-ellipsis-v
+												.dropdown__content.dropdown-content-width
+													.list
+														a(href="#" class="list-item") 
+															.list-item__icon
+																i.far.fa-copy
+															.list-item__content.convert
+																span.text-2 Edit  
+														a(href="#" class="list-item") 
+															.list-item__icon
+																i.far.fa-copy
+															.list-item__content
+																span.text-2 Delete  
+										//start Content
+										.card__content--details
+											.rich-textarea
+												h2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												h3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												h1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												span  Lorem ipsum dolor
+												ul
+													li Lorem ipsum dolor
+													li Lorem ipsum dolor
+													li Lorem ipsum dolor
+													li Lorem ipsum dolor
+												q Lorem ipsum dolor
+												a(href="#") Link
+												p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												i mostafa
+										// End Content
+							// End  convertible__date Answer
+					// start comment-list
+					.comments-list
+						//- comment 1 add class transparent (no-background)
+						.card--convertible
+							// start comment-form
+							.card.card--transparent.card--sm.card--horizontal.convertible__form
+								.card__content
+									.user-image
+										img(src="../../assets/images/hd_dp.jpg" alt="")
+										i.uil.uil-check-circle
+									.card__body
+										.card__content-header
+											.user-data
+												a(href="#" class="btn btn--primary  btn--link-text text-2 bold") Jose Portilla
+												time.text-1.gray Jan 15 '18 at 13:56
+										form.form__action.mb-3(action="")
+											.field-wrapper#editCommentForm.m-0
+												input.field-wrapper__input.mb-2(type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main' value='' required)
+												.d-flex.my-3
+													include ../components/general-component/btn.pug
+													a(class="btn btn--secondary btn--ml-auto btn--text convert text-2 bold" href="#") cancel
+													+btn('btn btn--danger btn--rounded convert text-2 bold', 'post')
+								// End comment-form
+								// start comment-data
+							.card.card--horizontal.card--transparent.card--sm#comment.convertible__data
+								.card__content
+									.user-image
+										img(src="../../assets/images/hd_dp.jpg" alt="")
+										i.uil.uil-check-circle
+									.card__body
+										.card__content-header
+											.user-data
+												a(href="#" class="btn btn--secondary btn--link-text text-2 bold") Jose Portilla
+												time.text-1.gray Jan 15 '18 at 13:56
+											.dropdown.dropdown__activator
+												a(class="btn btn--text btn--default icon--hover btn--lg btn--ripple") 
+													i.fas.fa-ellipsis-v
+												.dropdown__content.dropdown-content-width
+													.list
+														a(href="#" class="list-item") 
+															.list-item__icon
+																i.far.fa-copy
+															.list-item__content.convert
+																span.text-2 Edit  
+														a(href="#" class="list-item") 
+															.list-item__icon
+																i.far.fa-copy
+															.list-item__content
+																span.text-2 Delete 
+										.card__content--details
+											p.text-3 lorem ipsum dolor sit
+									// End comment-data
+						//- comment 2
+						.create-comment
+							.create-comment__content
+								.content__user-img
+									img.user-img__img(src=" ../../assets/images/hd_dp.jpg")
+							form.form__action(action="")
+								input(placeholder="Add a public comment").group__textarea.textarea--thread
+					//- replay component contains user-component, paragraph & #tags
+					//- form add replay at the end of list
 				//- .col-lg-12
 					// start add Answer
 					.d-flex.flex-column

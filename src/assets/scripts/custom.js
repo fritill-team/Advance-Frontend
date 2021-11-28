@@ -229,7 +229,7 @@ var nav = $(".sidebar"),
   sidebarIcon = $(".sidebar-with-icon"),
   menuItem = $(".sub-menu-item"),
   menu = $("#js-menu");
-var a7a = null;
+
 $(document).on("click", ".toggle", function () {
   nav.toggleClass("nav--opened vertical--minify");
   wrapper.toggleClass("toggle-content page-content--minify ");
