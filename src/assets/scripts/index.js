@@ -32,7 +32,6 @@ import './menu-header'
 import './drag-drop-multifield'
 import '../vendor/fieldChooser.min'
 import './backend_scripts/panel-loader'
-import '../vendor/jquery.multi-select'
 import './multi-select'
 // import "./recommendationTemplate"
 import './resourceBuilder'
