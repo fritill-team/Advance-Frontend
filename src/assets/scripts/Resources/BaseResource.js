@@ -17,6 +17,10 @@ export default class BaseResource {
     this.paginationType = 'pagination'
     this.csrf = $('meta[name="csrf-token"]').prop('content')
     this.user = null
+    this.categoryListingUrl = ''
+    this.tagsListingUrl = ''
+    this.categories = []
+    this.tags = []
     // elements
     this.$container = $container
     this.$searchBar = null
@@ -68,7 +72,8 @@ export default class BaseResource {
               hoverColor: '#f2b01e',
             });
           })
-          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+          if($('.rate-input-form').length)
+              $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         })
 
@@ -76,7 +81,8 @@ export default class BaseResource {
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
         // update the rating
-        $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+        if($('.rate-input-form').length)
+          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         self.submitForm($(this))
         self.fetchItems()
@@ -91,7 +97,7 @@ export default class BaseResource {
         e.preventDefault()
         self.confirmDelete()
       })
-      .on('click', '#reviews-loader', function (e){
+      .on('click', '#reviews-loader', function (e) {
         self.fetchItems()
       })
   }
@@ -166,6 +172,39 @@ export default class BaseResource {
         self.loading = false
       },
       error: function (xhr) {
+        console.error(xhr)
+      }
+    })
+  }
+
+
+  fetchOptions(data = {}){
+    this.loading = true
+    let self = this
+    // fetch categories
+    $.ajax({
+      url: this.categoryListingUrl,
+      type:'get',
+      data,
+      headers: {'X-CSRFToken': self.csrf},
+      success:function (data){
+        console.log(data)
+        self.categories = data
+      },
+      error: function (xhr){
+        console.error(xhr)
+      }
+    })
+    // fetch tags
+    $.ajax({
+      url: this.tagsListingUrl,
+      type:'get',
+      data,
+      headers: {'X-CSRFToken': self.csrf},
+      success:function (data){
+        self.tags = data
+      },
+      error: function (xhr){
         console.error(xhr)
       }
     })

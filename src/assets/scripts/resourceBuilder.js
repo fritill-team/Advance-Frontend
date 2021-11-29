@@ -4,7 +4,7 @@ import RecommendationResource from "./Resources/RecommendationResource";
 import ClassificationResource from "./Resources/ClassificationResource";
 import ReviewResource from "./Resources/ReviewResource";
 import CommentResource from "./Resources/CommentResource";
-
+import ThreadRecourse from './Resources/ThreadResource';
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)
     if (Object.prototype.hasOwnProperty.call(field, errors))
@@ -53,6 +53,18 @@ if (reviews.length > 0) {
     createURL: reviews.data('create-url'),
     admin: reviews.data('is-admin'),
     user: reviews.data('user')
+  })
+}
+
+
+const threads = $('#threads-list')
+if (threads.length > 0){
+  new ThreadRecourse(threads, {
+    listingURL: threads.data('listing-url'),
+    createUrl: threads.data('create-url'),
+    user: threads.data('user'),
+    categoryListingUrl:threads.data('category-url'),
+    tagsListingUrl:threads.data('tags-url')
   })
 }
 

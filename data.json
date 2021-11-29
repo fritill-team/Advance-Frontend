@@ -162,7 +162,6 @@
         "class": "fas fa-reply",
         "link": "/comments/1"
       }
-      
     },
     {
       "id": 2,
@@ -178,7 +177,6 @@
         "class": "fas fa-reply",
         "link": "/comments/2"
       }
-      
     }
   ],
   "classifications": [
@@ -472,5 +470,34 @@
   "reviews": {
     "review": "hjdbvhbdb",
     "rate": "3.5"
-  }
+  },
+  "threads": [
+    {
+      "id": 1,
+      "title": "thread title with id 1",
+      "content": "cool content for thread with id 1",
+      "category": "Entertainment",
+      "tags": [
+        "play",
+        "football"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "thread title with id 2",
+      "content": "cool content for thread with id 2",
+      "category": "Doctor",
+      "tags": [
+        "play",
+        "basketball"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "thread title with id 3",
+      "content": "cool content for thread with id 3",
+      "category": "Mediacal",
+      "tags": []
+    }
+  ]
 }
