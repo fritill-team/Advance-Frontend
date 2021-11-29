@@ -218,7 +218,7 @@ export default class BaseResource {
 
   searchForm() {
     return `<form method="get">
-      <div class="field-wrapper">
+      <div class="field-wrapper field-wrapper--full">
         <div class="field-wrapper__label">Search</div>
           <div class="field-wrapper__content">
             <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
@@ -288,6 +288,15 @@ export default class BaseResource {
         </div>
       </div>
     </div>`
+  }
+  emptyTemplate(){
+    return `
+      <div class="status"> 
+        <span class="material-icons status__img"> widgets</span>
+        <h4 class="title-h4">nothing here</h4>
+        <p class="body-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illo necessitatibus possimus ipsum rem maxime laboriosam sed, sit quisquam a ipsam, molestiae repellendus eos labore impedit autem, fugit vero quidem?</p>
+      </div>
+    `
   }
 
   build() {
