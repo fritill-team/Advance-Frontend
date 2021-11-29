@@ -3,7 +3,7 @@ const itemTemplate = (item) => {
              class='list-item list-item--one-line${
                item.is_active ? " list-item--active" : ""
              }${item.has_children ? " list-item--parent" : ""}'>
-    <div class='list-item__icon'><i class='${item.icon}'></i></div>
+    <div class='list-item__icon'><span class="material-icons">${item.icon}</span></div>
     <div class='list-item__content'>
       <p class='body-2'>${item.title}</p>
     </div>
