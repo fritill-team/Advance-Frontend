@@ -2,6 +2,10 @@
   width: 100%;
   color: $gray;
   margin-bottom: 8px;
+  max-width: 400px;
+  &.field-wrapper--full{
+    max-width: 100%;
+  }
   &.field-wrapper--error {
     color: $danger;
 
@@ -174,9 +178,8 @@
       border-radius: 5px;
       position: relative;
       white-space: nowrap;
-      @media (max-width: 768px ) {
-        
-      }
+      overflow: hidden;
+      @media (max-width: 768px ){}
     }
 
     & + label::after {
@@ -192,6 +195,12 @@
       background-color: $primary;
       border-left: inherit;
       border-radius: 0 5px 5px 0;
+      @media (max-width: 768px ) {
+        padding: 0 8px;
+        font-size: 20px;
+        font-family: "Material Icons";
+        content: "note_add";
+      }
     }
   }
 }
