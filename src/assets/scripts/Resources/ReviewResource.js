@@ -80,7 +80,7 @@ export default class ReviewResource extends BaseResource {
       </div>
       <p class="text-2">${item.review}</p>
    </div>
-</div>`
+</div> `
   }
 
   formTemplate(item = {}, action = '', reset = false) {

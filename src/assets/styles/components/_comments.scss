@@ -69,7 +69,7 @@
     .group__textarea {
       height: 40px;
       font-size: 14px;
-          margin-left: 20px;
+      margin-left: 16px;
       border: 1px solid $light-white;
       width: 100%;
       overflow: hidden;
@@ -195,5 +195,28 @@ html[dir="rtl"] {
   }
   .user-img__img {
     margin-left: 15px;
+  }
+  .review-comment__item{
+    @include textRight;
+  }
+  .comments__add-comment{
+    .add-comment__group .group__textarea{
+      margin: 0 16px 0 0;
+    }
+    .btn{
+      float: left;
+    }
+  }
+}
+
+.night-mode{
+  .comment-container{
+    background-color: $black;
+  }
+  .review-comment__item{
+    @include whiteTypo;
+  }
+  .comments__add-comment{
+    background-color: $white;
   }
 }

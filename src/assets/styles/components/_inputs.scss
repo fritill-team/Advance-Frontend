@@ -173,6 +173,10 @@
       border: 1px solid #efefef;
       border-radius: 5px;
       position: relative;
+      white-space: nowrap;
+      @media (max-width: 768px ) {
+        
+      }
     }
 
     & + label::after {
