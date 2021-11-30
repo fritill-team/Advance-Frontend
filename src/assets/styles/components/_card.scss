@@ -61,11 +61,11 @@
   padding: 20px;
   position: relative;
   // overflow: hidden;
+
   .card__header {
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    justify-content: space-between;
     width: 100%;
   }
 
@@ -76,6 +76,8 @@
 
   .card__header-actions,
   .card__footer-actions {
+    display: flex;
+    align-items: start;
     margin: 0 0 0 auto;
   }
 
@@ -1130,13 +1132,15 @@
 // dir en to ar
 html[dir="rtl"] {
   .card {
-    .card__label{
+    .card__label {
       left: unset;
       right: 0;
     }
-    .card__content{
+
+    .card__content {
       text-align: right;
     }
+
     .card__content-header {
       align-items: flex-start;
     }
@@ -1173,19 +1177,23 @@ html[dir="rtl"] {
     .uil-check-circle {
       right: 8px;
     }
-    &.card--centered{
-      .card__content{
+
+    &.card--centered {
+      .card__content {
         padding: 0;
         @include textCenter;
       }
-      .user-data .details{
+
+      .user-data .details {
         @include textCenter;
 
       }
     }
-    &.card--icon .card__content-header{
+
+    &.card--icon .card__content-header {
       align-items: center;
     }
+
     &.card--sm {
       .card__content {
         padding-left: 20px;
