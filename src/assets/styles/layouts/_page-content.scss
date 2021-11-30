@@ -6,6 +6,7 @@
   justify-content: space-between;
 	transition: .3s ease all;
   //overflow-y: auto; // we need this to prevent scrolling of drawer
+  // @include arabicTypo;
 
   .page__content {
     width: 100%;
@@ -37,7 +38,7 @@
 }
 
 
-// TODO TELL ME What the fuck is this shit
+
 .page__content--auth {
   padding: 0;
   height: 100%;
