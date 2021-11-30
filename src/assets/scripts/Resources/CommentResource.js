@@ -50,9 +50,14 @@ export default class CommentResource extends BaseResource {
     </div>
     `
   }
+
+  add(){
+    
+  }
+
   formTemplate(item = {}, action = '') {
     return `
-    <div class="comments__add-comment" id="comments-form">
+    <form action="${action}" class="comments__add-comment" id="comments-form">
       <div class="add-comment__group">
         <div class="group__img-wrapper">
           <img class="group__img" src="../../assets/images/hd_dp.jpg" alt="">
@@ -60,7 +65,7 @@ export default class CommentResource extends BaseResource {
         <textarea class="group__textarea" placeholder="Add a public comment"></textarea>
       </div>
       <button class="btn btn--primary btn--rounded" type="submit"> Comment</button>
-    </div>
+    </form>
     `
   }
 }

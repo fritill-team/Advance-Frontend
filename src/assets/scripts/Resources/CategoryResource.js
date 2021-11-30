@@ -84,7 +84,8 @@ export default class CategoryResource extends BaseResource {
   }
 
   formTemplate(item = {}, action = '') {
-    return `<form action="${action}" method="post">
+    console.log(item);
+    return `<form action="${action}" method="${action = 'edit'? 'put': 'post'}">
       <div class="field-wrapper field-wrapper--full">
         <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
