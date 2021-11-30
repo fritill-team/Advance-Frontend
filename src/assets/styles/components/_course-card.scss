@@ -79,7 +79,7 @@
     @media (max-width: 875.98px) {
       transform: none;
     }
-
+   
     .course-card__preview {
       height: 100%;
       max-height: 400px;
@@ -106,7 +106,21 @@
     animation: cousreFading .6s;
     // opacity: 1;
   }
-
+  .course-card__sponsor {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 4px;
+    z-index: 7;
+    background-color: $white;
+    border-radius: 0 5px 5px 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
   .course-card__preview {
     width: 100%;
     max-height: 200px;
