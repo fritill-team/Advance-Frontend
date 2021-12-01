@@ -380,8 +380,9 @@ $(document).on("click", "content__item", function () {
 // Drop zone
 $("div#myId").dropzone({ url: "/file/post" });
 
-$(document).on('change', '#inputGroupFile06', function(e){
-  let imageList = $('.image-list')
+$(document).on('change', 'input[type="file"]', function(e){
+  // let imageList = $('.image-list')
+  let imageList = '.'+$(this).name+'-image-list'
   var images = [];
   for (var i = 0; i < $(this).get(0).files.length; ++i) {
     // images.push($(this).get(0).files[i].name);
