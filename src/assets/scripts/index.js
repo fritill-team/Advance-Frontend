@@ -10,7 +10,7 @@ import './night-mode.js'
 import './login.js'
 
 import './toaster'
-import './handleDarkMode'
+// import './handleDarkMode'
 
 import './tabs.js'
 import './survey.js'

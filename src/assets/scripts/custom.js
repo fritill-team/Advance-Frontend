@@ -379,7 +379,25 @@ $(document).on("click", "content__item", function () {
 
 // Drop zone
 $("div#myId").dropzone({ url: "/file/post" });
-
+$(document).on('change', '#inputGroupFile06', function(e){
+  let imageList = $('.image-list')
+  var images = [];
+  for (var i = 0; i < $(this).get(0).files.length; ++i) {
+      images.push($(this).get(0).files[i].name);
+  }
+  // var tmppath = $('<img>', attr('src',)) URL.createObjectURL(event.target.files[0]);
+  console.log(images);
+  function image() {
+    return `
+      ${images.map(src => `
+        <img class="image preview" src="../../assets/images/${src}">
+      `)}
+    `
+  }
+  // console.log($(this).val());
+  imageList.append(image())
+  // console.dir(image);
+})
 //venobox
 $(document).ready(function () {
   $(".venobox").venobox();

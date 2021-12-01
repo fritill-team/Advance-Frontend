@@ -671,7 +671,11 @@ html[dir="rtl"] {
         transform: rotate(180deg);
       }
     }
-
+    .list-item__icon{
+      & + .list-item__content{
+        padding: 16px 0 16px 10px;
+      }
+    }
     &.list-item--open {
       .list-item__action {
         .arrow-right {

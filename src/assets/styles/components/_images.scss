@@ -47,7 +47,8 @@
 }
 .image-list{
   display: flex;
+  flex-wrap: wrap;
   .image{
-    margin: 0 4px;
+    margin: 8px 4px;
   }
 }

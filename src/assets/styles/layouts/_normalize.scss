@@ -15,7 +15,9 @@ html {
 }
 html[dir="rtl"]{
   font-family: unquote("Noto Kufi Arabic"), "sans-serif";
-  
+  a > span.material-icons{
+    font-family: 'Material Icons';
+  }
 }
 
 

@@ -5,10 +5,13 @@ const surveyTemplate = (item) => `
 		<div class="course-card__preview-overlay"></div>
 	</a>
   ${item.sponsor.cover.length > 0 ? `
-    <div class="course-card__sponsor">
+    <div class="course-card__badge">
       <img src="${item.sponsor.cover}" >
     </div>
   `: ''}
+  <div class="course-card__badge course-card__badge--category">
+    test  
+  </div>
 	<div class="course-card__content">
 		<a class="title-link text-2 semi-bold" href="${item.url}" lang="${item.language}">${item.title}</a>
 		<p class="title-link course-card__description body-2 gray" lang="${item.language}" >${item.short_description ? item.short_description : ""}</p>
