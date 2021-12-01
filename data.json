@@ -433,6 +433,20 @@
       "tags": [
         "play",
         "football"
+      ],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/1/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/1/"
+        }
       ]
     },
     {
@@ -443,6 +457,20 @@
       "tags": [
         "play",
         "basketball"
+      ],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/2/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/2/"
+        }
       ]
     },
     {
@@ -450,7 +478,21 @@
       "title": "thread title with id 3",
       "content": "cool content for thread with id 3",
       "category": "Mediacal",
-      "tags": []
+      "tags": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/3/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/3/"
+        }
+      ]
     }
   ]
 }

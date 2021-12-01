@@ -45,27 +45,53 @@ if (classifications.length > 0) {
   })
 }
 
-const reviews = $('#reviews-list')
-if (reviews.length > 0) {
-  new ReviewResource(reviews, {
-    listingURL: reviews.data('listing-url'),
-    starterURL: reviews.data('listing-url'),
-    createURL: reviews.data('create-url'),
-    admin: reviews.data('is-admin'),
-    user: reviews.data('user')
-  })
-}
+// const reviews = $('#reviews-list')
+// if (reviews.length > 0) {
+//   new ReviewResource(reviews, {
+//     listingURL: reviews.data('listing-url'),
+//     starterURL: reviews.data('listing-url'),
+//     createURL: reviews.data('create-url'),
+//     admin: reviews.data('is-admin'),
+//     user: reviews.data('user')
+//   })
+// }
 
 
 const threads = $('#threads-list')
 if (threads.length > 0){
-  new ThreadRecourse(threads, {
-    listingURL: threads.data('listing-url'),
-    createUrl: threads.data('create-url'),
-    user: threads.data('user'),
-    categoryListingUrl:threads.data('category-url'),
-    tagsListingUrl:threads.data('tags-url')
-  })
+  let categoriesList = [],tags = [];
+    $.when(
+    $.ajax({
+      url: threads.data('tags-url'),
+      type: 'get',
+      headers: {'X-CSRFToken': self.csrf},
+      success: function (data) {
+        tags = data
+      },
+      error: function (xhr) {
+        console.error(xhr)
+      }
+    }),
+      $.ajax({
+        url: threads.data('category-url'),
+        type: 'get',
+        headers: {'X-CSRFToken': self.csrf},
+        success: function (data) {
+          categoriesList = data
+        },
+        error: function (xhr) {
+          console.error(xhr)
+        }
+      })
+    ).done(function (data){
+        new ThreadRecourse(threads, {
+          listingURL: threads.data('listing-url'),
+          createURL: threads.data('create-url'),
+          user: threads.data('user'),
+          categories: categoriesList,
+          tags:tags
+        })
+      })
 }
 
 const comments = $('#comments-list')

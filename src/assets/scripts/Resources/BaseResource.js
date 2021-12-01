@@ -177,39 +177,6 @@ export default class BaseResource {
     })
   }
 
-
-  fetchOptions(data = {}){
-    this.loading = true
-    let self = this
-    // fetch categories
-    $.ajax({
-      url: this.categoryListingUrl,
-      type:'get',
-      data,
-      headers: {'X-CSRFToken': self.csrf},
-      success:function (data){
-        console.log(data)
-        self.categories = data
-      },
-      error: function (xhr){
-        console.error(xhr)
-      }
-    })
-    // fetch tags
-    $.ajax({
-      url: this.tagsListingUrl,
-      type:'get',
-      data,
-      headers: {'X-CSRFToken': self.csrf},
-      success:function (data){
-        self.tags = data
-      },
-      error: function (xhr){
-        console.error(xhr)
-      }
-    })
-  }
-
   onFormSubmit() {
 
   }

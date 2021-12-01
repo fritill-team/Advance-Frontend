@@ -382,7 +382,7 @@ $("div#myId").dropzone({ url: "/file/post" });
 
 $(document).on('change', 'input[type="file"]', function(e){
   // let imageList = $('.image-list')
-  let imageList = '.'+$(this).name+'-image-list'
+  let imageList = $('.'+$(this).name+'-image-list')
   var images = [];
   for (var i = 0; i < $(this).get(0).files.length; ++i) {
     // images.push($(this).get(0).files[i].name);
@@ -465,13 +465,21 @@ $(".course-list__item").each(function () {
   });
 });
 
-// $(function () {
-//   $("#sortable").sortable({
-//     handle: ".handle",
-//   });
-//   $("#sortable").disableSelection();
-//   $("#test").accordion();
-// });
+$(function () {
+  // contents sortables
+  $("#sortable-contents").sortable({
+    handle: ".handle-contents",
+  });
+
+  // chapters sortables
+  $("#sortable-chapters").sortable({
+    handle: ".handle-chapters",
+  });
+
+    // $("#sortable-contents").disableSelection();
+  // $("#test").accordion();
+});
+
 
 // const renderRecomendations = async () => {
 //    let url = `http://localhost:3000/recommendations`;
