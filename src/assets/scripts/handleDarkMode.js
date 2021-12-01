@@ -1,95 +1,32 @@
+const darkToggle = document.getElementById("dark-mode-toggle")
 
-
-
-let darkMode = localStorage.getItem('darkMode')
-
-const storageInput = document.getElementById("dark-mode-toggle");
-
-
-
-storageInput.checked = darkMode;
-
-const enableDarkMode = () => {
-  $('html').addClass('night-mode')
-  localStorage.setItem('darkMode', true)
-}
-const disableDarkMode = () => {
-  $('html').addClass('night-mode')
-  localStorage.setItem('darkMode', false)
+if (localStorage.getItem('darkMode')===null){
+    localStorage.setItem('darkMode', "false");
 }
 
-enableDarkMode();
-disableDarkMode();
-// console.log(document.classList());
-// storageInput ? 
-// storageInput.checked = localStorage.getItem('darkMode')
-storageInput.addEventListener("change", (val) => {
-  if(val.target.checked){
-    enableDarkMode()
-  }
-  if(!val.target.checked) {
-    disableDarkMode()
-  }
-  // if(darkMode){
-  // } else {
-  // }
-  // localStorage.setItem("darkMode", val.target.checked); val.target.checked);
-  // val.target.checked ? localStorage.setItem("darkMode", true)
-  // : localStorage.setItem("darkMode", false); 
-  
-  // storageInput.checked = localStorage.getItem('darkMode')
-  // console.log(val.target.checked);
-  // val.target.checked = localStorage.getItem("darkMode");
-  // val.target.checked ? console.log('dark') : console.log('light');
-  // const x = localStorage.getItem("darkMode");
-  // // val.target.checked = x;
-  // console.log(val.target.checked, x);
-  // x ? $("html").addClass("night-mode") : $("html").removeClass("night-mode");
-});
-var dark = localStorage.getItem("darkMode");
-// console.log(localStorage.getItem('darkMode'));
-// if (localStorage.getItem('darkMode')) {
-//   $("html").addClass("night-mode")
-// } else {
-//   $("html").removeClass("night-mode")
-// }
+checkStatus()
 
-// });
-// const x = localStorage.getItem("darkMode");
+function checkStatus(){
+    if (localStorage.getItem('darkMode')==="true"){
+      darkToggle.checked = true;                                       //the checkbox is checked (if you load the page by default it isn’t)
+        $('html').addClass('night-mode');            //the backgornd is set to a dark grey
+    }else{
+      darkToggle.checked = false;
+        $('html').removeClass('night-mode');
+    }
+}
 
-// storageInput.checked = x;
+function changeStatus(){                                            //This function gets called every time the checkbox is clicked
+    if (localStorage.getItem('darkMode')==="true"){                 //if darkMode was active and this function is called it means the user now wants light
+        localStorage.setItem('darkMode', "false");                  //so we set it to false, to indicate we are in light mode
+        $('html').removeClass('night-mode');
+    } else{
+        localStorage.setItem('darkMode', "true");                   //same code but adapted for dark theme
+        $('html').addClass('night-mode');
+    }
+}
 
-// localStorage.setItem("darkmode", "off");
+
 $(document).on("change", "#dark-mode-toggle", (val) => {
-  // console.log(dark);
-  // if (localStorage.getItem('darkMode') === true) {
-  //   $("html").addClass("night-mode")
-  // } else {
-  //   $("html").removeClass("night-mode")
-  // }
-  // if ($("#dark-mode-toggle").is(":checked"))
-  //   localStorage.setItem("darkmode", "on");
-  // else localStorage.setItem("darkmode", "off");
-  // localStorage.getItem("darkmode");
-  // console.log(val.target.checked);
-  // localStorage.setItem("darkMode", val.target.checked);
-  // const dark = localStorage.getItem("darkMode");
-  // val.target.checked = dark;
-  // console.log(dark);
-  // console.log(storageInput.checked);
-  // if (storageInput.checked) {
-  //   $("html").addClass("night-mode");
-  // } else {
-  //   $("html").removeClass("night-mode");
-  // }
-  // console.log(localStorage.darkmode);
-  // if ($("#dark-mode-toggle").is(":checked")) {
-  //   $("html").addClass("night-mode");
-  // } else {
-  //   $("html").removeClass("night-mode");
-  // }
+  changeStatus()
 });
-
-// const storedValue = localStorage.getItem(darkMode);
-
-// console.log(storedValue);
