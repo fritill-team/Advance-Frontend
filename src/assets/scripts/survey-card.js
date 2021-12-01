@@ -10,7 +10,7 @@ const surveyTemplate = (item) => `
     </div>
   `: ''}
   <div class="course-card__badge course-card__badge--category">
-    Type  
+    ${item.type}  
   </div>
 	<div class="course-card__content">
 		<a class="title-link text-2 semi-bold" href="${item.url}" lang="${item.language}">${item.title}</a>
