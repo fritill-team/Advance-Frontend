@@ -250,7 +250,7 @@ export default class BaseResource {
   }
 
   listingTemplate() {
-    print(this.items)
+    // print(this.items)
     if (this.items.length) {
       return this.items.map(item => this.itemTemplate(item)).join('')
     }
