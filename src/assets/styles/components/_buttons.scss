@@ -214,6 +214,8 @@ input[type="button"].btn {
     border-radius: 50%;
     text-align: center;
     line-height: 36px;
+    min-height: 36px;
+    max-height: 36px;
 
     &.btn--xs {
       width: 20px;
