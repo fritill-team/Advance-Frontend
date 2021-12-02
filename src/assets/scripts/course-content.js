@@ -1,6 +1,6 @@
 const contentTemplate = (item) => `
 	<div class="content-list-item">
-		<a href="${item.url}" class="content-list-item__image">
+		<a href="${item.enabled ? item.url : 'javascript:void(0)'}" class="content-list-item__image">
 			<img src="${item.thumb}" alt=""/>
 		</a>
 		<div class="content-list-item__content">

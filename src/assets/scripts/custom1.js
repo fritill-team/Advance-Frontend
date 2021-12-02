@@ -141,7 +141,7 @@ headers.click(function () {
 // hook up the expand/collapse all
 expandLink.click(function () {
 	var isAllOpen = !$(this).data('isAllOpen');
-	console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
+	// console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
 	contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
 
 	expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all')

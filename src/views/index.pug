@@ -14,7 +14,7 @@ block content
 					.col-lg-7
 						h1.title-h1.white The Egyptian Association for the Advancement of Persons with Disabilities and Autism
 						//- p.body-1.white Advance
-	.section.section--partners.section--with-bg
+	.section.section--partners
 		.container 
 			.row.justify-content-center
 				.col-lg-12
@@ -35,7 +35,7 @@ block content
 				.col-sm-6.col-md-4.col-lg-3
 					div(class="survey-card-container" data-data='{"id":1,"title":"article-title","short_description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.","thumb":"../../assets/images/exam.png","category":"Web Development | Python","url":"#","language":"ar","type": "Type"}')
 				.col-sm-6.col-md-4.col-lg-3
-					div(class="survey-card-container" data-data='{"id":1,"title":"article-title","short_description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.","thumb":"../../assets/images/exam.png","category":"Web Development | Python","url":"#","language":"ar","sponsor":{"id":1,"title":"sponsor title","cover":"../../assets/images/NBE.svg"},"type": "Type"}')
+					div(class="survey-card-container" data-data='{"id":1,"title":"article-title","short_description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.","thumb":"../../assets/images/exam.png","category":"Web Development | Python","url":"#","language":"ar","sponsor":{"id":1,"title":"sponsor title","cover":"../../assets/images/DrososLogoPrint.svg"},"type": "Type"}')
 				.col-sm-6.col-md-4.col-lg-3
 					div(class="survey-card-container" data-data='{"id":1,"title":"article-title","short_description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corporis aliquam voluptas cumque. Aperiam quo dolor ut iste nam a distinctio? Distinctio ad sint aperiam.","thumb":"../../assets/images/exam.png","category":"Web Development | Python","url":"#","language":"ar","sponsor":{"id":1,"title":"sponsor title","cover":"../../assets/images/NBE.svg"},"type": "Type"}')
 				.col-sm-6.col-md-4.col-lg-3
@@ -398,4 +398,5 @@ block content
 			.row 
 				.col-12 
 					include ./components/status.pug
-		
+					include ./components/general-component/user-account.pug
+					+user-card("../../assets/images/hd_dp.jpg","John Doe", "2 hour ago")

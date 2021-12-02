@@ -147,7 +147,7 @@ export default class BaseResource {
   }
 
   mapErrors(errors) {
-    console.log(errors)
+    // console.log(errors)
     for (let field in errors)
       if (errors.hasOwnProperty(field)) {
         let messages = this.$form.find(`#${this.prefix}-${field}-messages`),
@@ -251,6 +251,12 @@ export default class BaseResource {
 
   listingTemplate() {
     return this.items.map(item => this.itemTemplate(item)).join('')
+    // if(this.items){
+    //   return this.emptyTemplate()
+    // } else {
+    //   return this.items.map(item => this.itemTemplate(item)).join('')
+    //   console.log(this.items);
+    // }
   }
 
   itemTemplate(item) {

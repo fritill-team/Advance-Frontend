@@ -35,7 +35,7 @@ import './backend_scripts/panel-loader'
 import './multi-select'
 // import "./recommendationTemplate"
 import './resourceBuilder'
-import './content-height'
+// import './content-height'
 import './overlay'
 import './dialog'
 import './jquery.nicescroll.min'

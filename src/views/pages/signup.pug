@@ -5,16 +5,16 @@ block title
 	title sign-up
 
 block content
-	h2.title-h4.semi-bold  Welcome Back
+	//- h2.title-h4.semi-bold  Welcome Back
 	//- p Log In to Your Edututs+ Account!
 	form.form
-		.field-wrapper
+		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
 				|	Course Title
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field"
+					class="field"
 					type='text'
 					placeholder='fullName'
 					name='fullName'
@@ -23,13 +23,13 @@ block content
 					)
 			ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper
+		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
 				|	Course Title
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field"
+					class="field"
 					type='email'
 					placeholder='Email Address'
 					name='emailAddress'
@@ -38,13 +38,13 @@ block content
 					)
 			ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper
+		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
 				|	Course Title
 				abbr(title="required") *
 			.field-wrapper__content
 				input(
-          class="field"
+					class="field"
 					type='Password'
 					placeholder='Password'
 					name='Password'
@@ -53,10 +53,14 @@ block content
 					)
 			ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper
-			div
-				input(class="field" type="checkbox" id="checkbox-11" name="checkname")
-				label(for="checkbox-11") I’m in for emails with exciting discounts and personalized recommendations 
+		.field-wrapper.field-wrapper--full
+			div.check-field
+				div.check-field__control
+					input(class="check-field__input" type="checkbox" id="checkbox-11" name="checkname")
+					label(for="checkbox-11")
+					span
+				label.check-field__label I’m in for emails with exciting discounts and personalized recommendations 
+			
 		.d-flex.justify-content-around
 			button(type="submit" class="btn btn--primary btn--ripple btn--sm btn--rounded")  Sign Up
 	p.title-2.terms-link  By signing up, you agree to our

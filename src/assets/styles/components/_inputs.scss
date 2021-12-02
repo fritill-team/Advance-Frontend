@@ -3,6 +3,9 @@
   color: $gray;
   margin-bottom: 8px;
   max-width: 400px;
+  .select2 {
+    width: 100% !important;
+  }
   &.field-wrapper--full{
     max-width: 100%;
   }
@@ -115,7 +118,7 @@
 .field-wrapper__icon {
   position: absolute;
   color: #aaaaaa;
-  font-size: 18px;
+  font-size: 24px;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -530,7 +533,21 @@ textarea.field{
 }
 
 html[dir="rtl"] {
+  .field{
+    &.field--with-icon{
+      padding: 0 52px 0 6px;
+    }
+  }
+  span.material-icons.field-wrapper__icon{
+    left: unset;
+    right: 16px;
+    transform: translateY(-50%) rotateY(180deg);
+  }
+  .iti__arrow{
+    margin: 0 6px 0 0;
+  }
   .field-wrapper{
+    text-align: right;
     &.field-wrapper--arrow .field-wrapper__content::after{
       right: unset;
       left: 16px;

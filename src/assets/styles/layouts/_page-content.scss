@@ -3,18 +3,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
 	transition: .3s ease all;
+  min-height: calc(100vh - 60px);
   //overflow-y: auto; // we need this to prevent scrolling of drawer
   // @include arabicTypo;
 
   .page__content {
     width: 100%;
     transition: all 0.3s ease-out;
+    margin-bottom: 120px;
   }
 
   .page__content-fit-window {
     height: 100%;
+  }
+  .footer{
+    margin-top: auto;
   }
 }
 
@@ -92,7 +97,7 @@
     background-color: $white;
     border-radius: 5px;
 
-    img {
+    img,svg {
       width: 100%;
       height: 100%;
     }

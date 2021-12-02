@@ -34,15 +34,17 @@ export default class TagResource extends BaseResource {
   }
   
   listingTemplate() {
-    console.log('here')
-    console.log(this.items.length);
+    // console.log('here')
+    // console.log(this.items.length);
     return `<div class="card list list--condensed" id="${this.prefix}-listing">
         ${this.items.map(item => this.itemTemplate(item)).join('')}
       </div>`
-    // if(this.items.length === 0){
-    //   return this.emptyTemplate()
+    // if(this.items){
+    //   return `<div class="card list list--condensed" id="${this.prefix}-listing">
+    //   ${this.items.map(item => this.itemTemplate(item)).join('')}
+    //   </div>`
     // } else {
-      
+    //   return this.emptyTemplate()
     // }
   }
 

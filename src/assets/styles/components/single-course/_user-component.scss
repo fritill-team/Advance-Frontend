@@ -75,3 +75,37 @@
     margin-top: 15px;
   }
 }
+
+.user-account{
+  display: flex;
+  padding: 16px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: $white;
+  max-width: 400px;
+  width: auto;
+  @include normalizeTypo;
+  .image{
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+  }
+  .user-account__content{
+    text-align: left;
+  }
+}
+.night-mode{
+  .user-account{
+    @include whiteTypo;
+    background-color: #1c282c;
+  }
+}
+html[dir="rtl"]{
+  .user-account{
+    .image{
+      margin: 0 0 0 8px;
+    }
+    .user-account__content{
+      text-align: right;
+    }
+  }
+}

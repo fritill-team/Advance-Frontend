@@ -43,7 +43,7 @@ let x = {
     this.countListener(value)
   },
   countListener(v) {
-    console.log(v)
+    // console.log(v)
     countable.val(v)
   }
 }

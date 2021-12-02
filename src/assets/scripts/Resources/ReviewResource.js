@@ -191,7 +191,7 @@ export default class ReviewResource extends BaseResource {
   confirmDelete() {
     let self = this
     let selector = "#" + self.prefix + "-" + self.deleteURL.charAt(self.deleteURL.length - 2);
-    console.log(selector)
+    // console.log(selector)
     $(selector).fadeOut("slow").then(()=>{
       $.ajax({
         url: self.deleteURL,

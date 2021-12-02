@@ -55,7 +55,7 @@ input[type="button"].btn {
     display: flex;
     align-items: center;
 
-    span {
+    i,span {
       margin: 0 8px;
     }
   }
@@ -336,7 +336,7 @@ a.btn {
 
 html[dir="rtl"] {
   .btn--with-icon {
-    span {
+    i,span {
       margin: 0 8px;
     }
 
@@ -381,8 +381,7 @@ html[dir="rtl"] {
 html[dir="rtl"] {
   .btn {
     margin: 0 0 0 14px;
-
-    &:last-of-type {
+    &:first-of-type {
       margin: 0;
     }
   }

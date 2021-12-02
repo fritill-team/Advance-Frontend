@@ -17,9 +17,18 @@ html[dir="rtl"]{
   font-family: unquote("Noto Kufi Arabic"), "sans-serif";
   span.material-icons{
     font-family: 'Material Icons';
+    transform: rotateY(180deg);
   }
 }
 
+.text--right{
+  font-family: unquote("Noto Kufi Arabic"), "sans-serif";
+  text-align: right;
+}
+.text--left{
+  font-family: unquote("Quicksand"), "Roboto", "sans-serif";
+  text-align: left;
+}
 
 /* Sections
    ========================================================================== */

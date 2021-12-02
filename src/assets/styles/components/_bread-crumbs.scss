@@ -101,6 +101,14 @@ html[dir="rtl"] {
       transform: rotate(180deg);
     }
   }
+  .bread-crumbs__link{
+    margin: 0 0 0 10px;
+  }
+  .bread-crumbs__link:after{
+    right: unset;
+    left: 0;
+    transform: translateX(-6px);
+  }
           //     i{
 //       transform: rotate(
 //         177deg

@@ -1,22 +1,22 @@
 //- Master layout
 
 doctype html
-html(lang='en' dir="" class="")
+html(lang='en' dir="rtl" class="")
 	head
 		//- Stylesheets
-		link(href='../assets/vendor/semantic/semantic.min.css' rel='stylesheet' type='text/css' )
-		//- link(href='../assets/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet' type='text/css')
-		link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap' rel='stylesheet')
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
 		link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
-		//- link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
-		//- link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-		//- link(href='../assets/vendors/select2.min.css')
-		//- link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-		link(href='../assets/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		//- link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
 		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
+		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
+		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
+		link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
+		link(href='../assets/vendor/star/star-rating-svg.css' rel='stylesheet')
 		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-		//- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css")
-		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css")
 		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js")
@@ -31,7 +31,7 @@ html(lang='en' dir="" class="")
 		//- script(src='../assets/scripts/select2.min.js')
 
 	body
-		div.wrapper
+		div.page
 			.page__content.page__content--auth
 				img.auth__bg(src="../../assets/images/sign.svg", alt="")
 				div.container

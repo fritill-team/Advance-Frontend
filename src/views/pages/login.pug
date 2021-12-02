@@ -10,7 +10,7 @@ block content
 	.tabs-panels
 		#tab1.tab-panel.tab-panel--active
 			form(action='register/')
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					label.field-wrapper__label Course Title
 						abbr(title="required") *
 					.field-wrapper__content
@@ -22,10 +22,10 @@ block content
 							maxlength=''
 							value=''
 							)
-						i.far.fa-envelope.field-wrapper__icon
+						span.material-icons.field-wrapper__icon mail_outline
 					ul.field-wrapper__messages
 						li Please provide a valid city.
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					label.field-wrapper__label Course Title
 						abbr(title="required") *
 					.field-wrapper__content
@@ -37,10 +37,10 @@ block content
 							maxlength=''
 							required
 							)
-						i.fas.fa-key.field-wrapper__icon
+						span.material-icons.field-wrapper__icon key
 					ul.field-wrapper__messages
 						li Please provide a valid city.
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					div.check-field
 						div.check-field__control
 							input(class="check-field__input" type="checkbox" id="checkbox-1" name="checkname")
@@ -54,19 +54,19 @@ block content
 					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
 		#tab2.tab-panel
 			form
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					label.field-wrapper__label Course Title
 						abbr(title="required") *
 					.field-wrapper__content.w-100
 						input(
 							id="phone"
 							class="field field--with-icon"
-							type="tel"
+							type="number"
 							name="phone"
 							)
 					ul.field-wrapper__messages
 						li Invalid phone number.
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					label.field-wrapper__label
 						|	Course Title
 						abbr(title="required") *
@@ -79,10 +79,10 @@ block content
 							maxlength=''
 							required
 							)
-						i.fas.fa-key.field-wrapper__icon
+						span.material-icons.field-wrapper__icon key
 					ul.field-wrapper__messages
 						li Please provide a valid city.
-				.field-wrapper
+				.field-wrapper.field-wrapper--full
 					div.check-field
 						div.check-field__control
 							input(class="check-field__input" type="checkbox" id="checkbox-2" name="checkname")

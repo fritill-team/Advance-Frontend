@@ -119,17 +119,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    span.title-5 > span {
+      margin: 6px;
+    }
     @media(max-width: 560px){
-      span{
-        &:first-of-type{
-          span{
-            display: none;
-          }
+      span:first-of-type{
+        span{
+          display: none;
         }
       }
     }
   }
-
 }
 
 html[dir="rtl"]{
