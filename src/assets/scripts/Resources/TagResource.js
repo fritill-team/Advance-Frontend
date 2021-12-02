@@ -44,11 +44,6 @@ export default class TagResource extends BaseResource {
     //   ${this.items.map(item => this.itemTemplate(item)).join('')}
     //   </div>`
     // } else {
-<<<<<<< HEAD
-    //   return this.emptyTemplate()
-=======
-
->>>>>>> be3c606616d65b165997a26856153aadc640bba1
     // }
   }
 
