@@ -45,16 +45,16 @@ if (classifications.length > 0) {
   })
 }
 
-// const reviews = $('#reviews-list')
-// if (reviews.length > 0) {
-//   new ReviewResource(reviews, {
-//     listingURL: reviews.data('listing-url'),
-//     starterURL: reviews.data('listing-url'),
-//     createURL: reviews.data('create-url'),
-//     admin: reviews.data('is-admin'),
-//     user: reviews.data('user')
-//   })
-// }
+const reviews = $('#reviews-list')
+if (reviews.length > 0) {
+  new ReviewResource(reviews, {
+    listingURL: reviews.data('listing-url'),
+    starterURL: reviews.data('listing-url'),
+    createURL: reviews.data('create-url'),
+    admin: reviews.data('is-admin'),
+    user: reviews.data('user')
+  })
+}
 
 
 const threads = $('#threads-list')

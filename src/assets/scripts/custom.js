@@ -50,7 +50,7 @@ if (
       if (windowScrollTop > iframeBottom) {
         iframeWrap.height(iframeHeight);
         iframe.addClass("stuck");
-        jQuery(".scrolldown").css({ display: "none" });
+        jQuery(".scrolldown").css({display: "none"});
       } else {
         iframeWrap.height("auto");
         iframe.removeClass("stuck");
@@ -84,7 +84,7 @@ headers.click(function () {
 // hook up the expand/collapse all
 expandLink.click(function () {
   var isAllOpen = !$(this).data("isAllOpen");
-  console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas });
+  console.log({isAllOpen: isAllOpen, contentAreas: contentAreas});
   contentAreas[isAllOpen ? "slideDown" : "slideUp"]();
 
   expandLink
@@ -378,11 +378,11 @@ $(document).on("click", "content__item", function () {
 // edit threads
 
 // Drop zone
-$("div#myId").dropzone({ url: "/file/post" });
+$("div#myId").dropzone({url: "/file/post"});
 
-$(document).on('change', 'input[type="file"]', function(e){
+$(document).on('change', 'input[type="file"]', function (e) {
   // let imageList = $('.image-list')
-  let imageList = $('.'+$(this).name+'-image-list')
+  let imageList = $('.' + $(this).name + '-image-list')
   var images = [];
   for (var i = 0; i < $(this).get(0).files.length; ++i) {
     // images.push($(this).get(0).files[i].name);
@@ -391,6 +391,7 @@ $(document).on('change', 'input[type="file"]', function(e){
   }
   console.log(srcArray);
   console.log(images);
+
   function image() {
     return `
       ${images.map(src => `
@@ -398,6 +399,7 @@ $(document).on('change', 'input[type="file"]', function(e){
       `)}
     `
   }
+
   imageList.append(image())
 })
 //venobox
@@ -460,7 +462,7 @@ $(document).on("click", function () {
 $(".course-list__item").each(function () {
   $(this).on("click", function () {
     console.log("text");
-    $(this).children("course-list__list-content").css({ display: "none" });
+    $(this).children("course-list__list-content").css({display: "none"});
     // $(this).next().css({"display": "none"})
   });
 });
@@ -469,15 +471,84 @@ $(function () {
   // contents sortables
   $("#sortable-contents").sortable({
     handle: ".handle-contents",
+    // update: function (event, ui) {
+    //   $(this).children().each(function (index) {
+    //
+    //     // assign data order in the data base
+    //     if ($(this).attr('data-order') !== (index + 1)) {
+    //       $(this).attr('data-order', (index + 1)).addClass('updated-order');
+    //     }
+    //
+    //     // store the updated positions and their id
+    //     let positions = []
+    //     $('.updated-order').each(function () {
+    //       positions.push({"itemId":$(this).attr('data-id'),"itemOrder": $(this).attr('data-order')});
+    //       $(this).removeClass('updated-order');
+    //     });
+    //
+    //     // make the ajax call
+    //     $.ajax({
+    //       url: $("#sortable-chapters").attr('data-order-url'),
+    //       method: 'POST',
+    //       dataType: 'text',
+    //       headers: {'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')},
+    //       data: {
+    //         positions: positions
+    //       },
+    //       success: function (response) {
+    //         console.log(response);
+    //       },
+    //       error: function (error) {
+    //         console.error(error)
+    //       }
+    //     })
+    //
+    //   })
+    // }
+
   });
 
   // chapters sortables
   $("#sortable-chapters").sortable({
     handle: ".handle-chapters",
+    update: function (event, ui) {
+      $(this).children().each(function (index) {
+
+        // assign data order in the data base
+        if ($(this).attr('data-order') !== (index + 1)) {
+          $(this).attr('data-order', (index + 1)).addClass('updated-order');
+        }
+
+        // store the updated positions and their id
+        let positions = []
+        $('.updated-order').each(function () {
+          positions.push({"itemId":$(this).attr('data-id'),"itemOrder": $(this).attr('data-order')});
+          $(this).removeClass('updated-order');
+        });
+
+        // make the ajax call
+        $.ajax({
+          url: $("#sortable-chapters").attr('data-order-url'),
+          method: 'POST',
+          dataType: 'text',
+          headers: {'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')},
+          data: {
+            positions: positions
+          },
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (error) {
+            console.error(error)
+          }
+        })
+
+      })
+    }
   });
 
-    // $("#sortable-contents").disableSelection();
-  // $("#test").accordion();
+  // $("#sortable-contents").disableSelection();
+  //$("#test").accordion();
 });
 
 
@@ -523,7 +594,6 @@ $(function () {
 // })
 
 // sidebar
-
 
 
 // $.get(url)

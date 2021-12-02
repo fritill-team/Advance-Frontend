@@ -26,13 +26,13 @@ export default class TagResource extends BaseResource {
         </div>
         <div class="col-md-6 col-sm-12">
           ${this.searchForm()}
-          ${this.listingTemplate()}
+          <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
           ${this.withPagination ? this.paginationTemplate() : ''}
         </div>
       </div>
     </div>`)
   }
-  
+
   listingTemplate() {
     console.log('here')
     console.log(this.items.length);
@@ -42,7 +42,7 @@ export default class TagResource extends BaseResource {
     // if(this.items.length === 0){
     //   return this.emptyTemplate()
     // } else {
-      
+
     // }
   }
 
