@@ -1,0 +1,10 @@
+extends ../layouts/admin.pug
+block title
+	title Comments
+
+
+block content
+	div(id='comments-list'
+		data-listing-url="http://localhost:3000/comments/"
+		data-create-url="http://localhost:3000/comments/" )
+		

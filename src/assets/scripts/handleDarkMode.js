@@ -1,43 +1,32 @@
-const storageInput = document.getElementById("dark-mode-toggle");
-storageInput ? 
-storageInput.addEventListener("change", (val) => {
-  localStorage.setItem("darkMode", val.target.checked);
-  const x = localStorage.getItem("darkMode");
-  // val.target.checked = x;
-  console.log(val.target.checked, x);
-  x ? $("html").addClass("night-mode") : $("html").removeClass("night-mode");
-}): '';
+const darkToggle = document.getElementById("dark-mode-toggle")
 
-// });
-// const x = localStorage.getItem("darkMode");
+if (localStorage.getItem('darkMode')===null){
+    localStorage.setItem('darkMode', "false");
+}
 
-// storageInput.checked = x;
+checkStatus()
 
-// localStorage.setItem("darkmode", "off");
+function checkStatus(){
+    if (localStorage.getItem('darkMode')==="true"){
+      darkToggle.checked = true;                                       //the checkbox is checked (if you load the page by default it isn’t)
+        $('html').addClass('night-mode');            //the backgornd is set to a dark grey
+    }else{
+      darkToggle.checked = false;
+        $('html').removeClass('night-mode');
+    }
+}
+
+function changeStatus(){                                            //This function gets called every time the checkbox is clicked
+    if (localStorage.getItem('darkMode')==="true"){                 //if darkMode was active and this function is called it means the user now wants light
+        localStorage.setItem('darkMode', "false");                  //so we set it to false, to indicate we are in light mode
+        $('html').removeClass('night-mode');
+    } else{
+        localStorage.setItem('darkMode', "true");                   //same code but adapted for dark theme
+        $('html').addClass('night-mode');
+    }
+}
+
+
 $(document).on("change", "#dark-mode-toggle", (val) => {
-  // if ($("#dark-mode-toggle").is(":checked"))
-  //   localStorage.setItem("darkmode", "on");
-  // else localStorage.setItem("darkmode", "off");
-  // localStorage.getItem("darkmode");
-  // console.log(val.target.checked);
-  // localStorage.setItem("darkMode", val.target.checked);
-  // const dark = localStorage.getItem("darkMode");
-  // val.target.checked = dark;
-  // console.log(dark);
-  // console.log(storageInput.checked);
-  // if (storageInput.checked) {
-  //   $("html").addClass("night-mode");
-  // } else {
-  //   $("html").removeClass("night-mode");
-  // }
-  // console.log(localStorage.darkmode);
-  // if ($("#dark-mode-toggle").is(":checked")) {
-  //   $("html").addClass("night-mode");
-  // } else {
-  //   $("html").removeClass("night-mode");
-  // }
+  changeStatus()
 });
-
-// const storedValue = localStorage.getItem(darkMode);
-
-// console.log(storedValue);

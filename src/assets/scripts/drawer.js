@@ -15,7 +15,7 @@ const itemTemplate = (item) => {
   </a>
   ${
     item.has_children
-      ? `<div class='list-item-group'>${item.children
+        ? `<div class='list-item-group'>${item.children
           .map((child) => itemTemplate(child))
           .join("")}</div>`
       : ""

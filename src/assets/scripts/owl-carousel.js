@@ -102,6 +102,7 @@ $(".category_courses").owlCarousel({
   margin: 20,
   nav: true,
   dots: false,
+  rtl: true,
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -135,6 +136,7 @@ $(".top_instrutors").owlCarousel({
   margin: 20,
   nav: true,
   dots: false,
+  rtl: true,
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -165,6 +167,7 @@ $(".Student_says").owlCarousel({
   margin: 30,
   nav: true,
   dots: false,
+  rtl: true,
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",

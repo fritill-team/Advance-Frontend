@@ -11,7 +11,8 @@
   transition: 0.3s ease all;
   z-index: 4;
   border-right: 1px solid #ddd;
-	overflow: hidden;
+	overflow-y: hidden;
+  // overflow: ;
   .list-item {
     min-height: 55px;
 
@@ -47,6 +48,7 @@
   &.drawer--open {
 		transform: translateX(0);
 		max-width: 300px;
+    overflow-y: auto;
     .list-item {
 			flex-wrap: nowrap;
       &.list-item--open + .list-item-group {

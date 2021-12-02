@@ -147,6 +147,38 @@
       ]
     }
   ],
+  "comments": [
+    {
+      "id": 1,
+      "author": {
+        "user_name": "Mohammed",
+        "author_image": "./assets/images/profile.png"
+      },
+      "created_at": "2021-10-28",
+      "content": "comment Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "actions": {
+        "name": "like",
+        "icon": "reply",
+        "class": "fas fa-reply",
+        "link": "/comments/1"
+      }
+    },
+    {
+      "id": 2,
+      "author": {
+        "user_name": "Ahmed",
+        "author_image": "./assets/images/profile.png"
+      },
+      "created_at": "2021-10-28",
+      "content": "comment Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "actions": {
+        "name": "like",
+        "icon": "reply",
+        "class": "fas fa-reply",
+        "link": "/comments/2"
+      }
+    }
+  ],
   "classifications": [
     {
       "id": 1,
@@ -211,56 +243,9 @@
   ],
   "categories": [
     {
-      "id": 2,
-      "name": "Banker",
-      "slug": "en-banker-16354283931979148",
-      "parent": null,
-      "children": [
-        {
-          "id": 11,
-          "name": "lorem 3",
-          "slug": "en-human-resources-officer-16354283931953762",
-          "parent": null,
-          "children": [],
-          "actions": [
-            {
-              "name": "edit",
-              "icon": "far fa-edit",
-              "class": "categories-edit",
-              "link": "http://localhost:3000/categories/11/"
-            },
-            {
-              "name": "delete",
-              "icon": "far fa-trash-alt",
-              "class": "categories-delete toggle-dialog",
-              "link": "http://localhost:3000/categories/11/"
-            }
-          ],
-          "created_at": "2021-10-28T13:39:53.196064Z",
-          "updated_at": "2021-10-28T13:39:53.197503Z"
-        }
-      ],
-      "actions": [
-        {
-          "name": "edit",
-          "icon": "far fa-edit",
-          "class": "categories-edit",
-          "link": "http://localhost:3000/categories/2/"
-        },
-        {
-          "name": "delete",
-          "icon": "far fa-trash-alt",
-          "class": "categories-delete toggle-dialog",
-          "link": "http://localhost:3000/categories/2/"
-        }
-      ],
-      "created_at": "2021-10-28T13:39:53.198535Z",
-      "updated_at": "2021-10-28T13:39:53.201210Z"
-    },
-    {
-      "id": 4,
-      "name": "Personnel officer",
-      "slug": "en-personnel-officer-1635428393204223",
+      "id": 1,
+      "name": "Programmer, applications",
+      "slug": "en-programmer-applications-1635428393206933",
       "parent": null,
       "children": [],
       "actions": [
@@ -268,17 +253,17 @@
           "name": "edit",
           "icon": "far fa-edit",
           "class": "categories-edit",
-          "link": "http://localhost:3000/categories/4/"
+          "link": "http://localhost:3000/categories/1/"
         },
         {
           "name": "delete",
           "icon": "far fa-trash-alt",
           "class": "categories-delete toggle-dialog",
-          "link": "http://localhost:3000/categories/4/"
+          "link": "http://localhost:3000/categories/1/"
         }
       ],
-      "created_at": "2021-10-28T13:39:53.204848Z",
-      "updated_at": "2021-10-28T13:39:53.206534Z"
+      "created_at": "2021-10-28T13:39:53.207564Z",
+      "updated_at": "2021-10-28T13:39:53.209227Z"
     },
     {
       "id": 5,
@@ -438,5 +423,76 @@
   "reviews": {
     "review": "hjdbvhbdb",
     "rate": "3.5"
-  }
+  },
+  "threads": [
+    {
+      "id": 1,
+      "title": "thread title with id 1",
+      "content": "cool content for thread with id 1",
+      "category": "Entertainment",
+      "tags": [
+        "play",
+        "football"
+      ],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/1/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/1/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "thread title with id 2",
+      "content": "cool content for thread with id 2",
+      "category": "Doctor",
+      "tags": [
+        "play",
+        "basketball"
+      ],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/2/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/2/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "thread title with id 3",
+      "content": "cool content for thread with id 3",
+      "category": "Mediacal",
+      "tags": [],
+      "actions": [
+        {
+          "name": "edit",
+          "icon": "far fa-edit",
+          "class": "threads-edit",
+          "link": "http://localhost:3000/threads/3/"
+        },
+        {
+          "name": "delete",
+          "icon": "far fa-trash-alt",
+          "class": "btn--primary threads-delete",
+          "link": "http://localhost:3000/threads/3/"
+        }
+      ]
+    }
+  ]
 }

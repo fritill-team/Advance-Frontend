@@ -45,3 +45,10 @@
     margin: 0 16px;
   }
 }
+.image-list{
+  display: flex;
+  flex-wrap: wrap;
+  .image{
+    margin: 8px 4px;
+  }
+}

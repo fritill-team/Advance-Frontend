@@ -95,11 +95,14 @@ block content
 								.col-lg-6.col-md-12.col-sm-12
 									// input field type file
 									p.body-2 1- inputs field type=(file)
-									.field-wrapper
+									.field-wrapper.field-wrapper--full
 										label.field-wrapper__label File*
+										.image-list
+											img(src="../../assets/images/sign.svg" class="image preview" alt="")
+											img(src="../../assets/images/sign.svg" class="image preview" alt="")
 										.input-group.field-field-group
 											.file-input
-												input(id="inputGroupFile06" class="field" type='file')
+												input(id="inputGroupFile06" class="field" type='file' multiple)
 												label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
 										ul.field-wrapper__messages
 											li
@@ -127,6 +130,10 @@ block content
 									p.body-2 1- inputs field error class=(field-wrapper--error)
 									.field-wrapper.field-wrapper--error
 										label.field-wrapper__label File*
+										.image-list
+											div
+												img(src="../../assets/images/sign.svg" class="image preview" alt="")
+
 										.input-group.field-field-group
 											.file-input
 												input(id="inputGroupFile06" class="field" type='file')

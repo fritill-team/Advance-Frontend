@@ -12,8 +12,11 @@ html {
   //line-height: 1.15; /* 1 */
   //-webkit-text-size-adjust: 100%; /* 2 */
   font-family: unquote("Quicksand"), "Roboto", "sans-serif";
-  &[dir="rtl"]{
-    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+html[dir="rtl"]{
+  font-family: unquote("Noto Kufi Arabic"), "sans-serif";
+  span.material-icons{
+    font-family: 'Material Icons';
   }
 }
 

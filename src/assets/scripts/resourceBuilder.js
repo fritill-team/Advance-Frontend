@@ -3,7 +3,8 @@ import CategoryResource from "./Resources/CategoryResource";
 import RecommendationResource from "./Resources/RecommendationResource";
 import ClassificationResource from "./Resources/ClassificationResource";
 import ReviewResource from "./Resources/ReviewResource";
-
+import CommentResource from "./Resources/CommentResource";
+import ThreadRecourse from './Resources/ThreadResource';
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)
     if (Object.prototype.hasOwnProperty.call(field, errors))
@@ -44,13 +45,59 @@ if (classifications.length > 0) {
   })
 }
 
-const reviews = $('#reviews-list')
-if (reviews.length > 0) {
-  new ReviewResource(reviews, {
-    listingURL: reviews.data('listing-url'),
-    starterURL: reviews.data('listing-url'),
-    createURL: reviews.data('create-url'),
-    admin: reviews.data('is-admin'),
-    user: reviews.data('user')
+// const reviews = $('#reviews-list')
+// if (reviews.length > 0) {
+//   new ReviewResource(reviews, {
+//     listingURL: reviews.data('listing-url'),
+//     starterURL: reviews.data('listing-url'),
+//     createURL: reviews.data('create-url'),
+//     admin: reviews.data('is-admin'),
+//     user: reviews.data('user')
+//   })
+// }
+
+
+const threads = $('#threads-list')
+if (threads.length > 0){
+  let categoriesList = [],tags = [];
+    $.when(
+    $.ajax({
+      url: threads.data('tags-url'),
+      type: 'get',
+      headers: {'X-CSRFToken': self.csrf},
+      success: function (data) {
+        tags = data
+      },
+      error: function (xhr) {
+        console.error(xhr)
+      }
+    }),
+      $.ajax({
+        url: threads.data('category-url'),
+        type: 'get',
+        headers: {'X-CSRFToken': self.csrf},
+        success: function (data) {
+          categoriesList = data
+        },
+        error: function (xhr) {
+          console.error(xhr)
+        }
+      })
+    ).done(function (data){
+        new ThreadRecourse(threads, {
+          listingURL: threads.data('listing-url'),
+          createURL: threads.data('create-url'),
+          user: threads.data('user'),
+          categories: categoriesList,
+          tags:tags
+        })
+      })
+}
+
+const comments = $('#comments-list')
+if (comments.length > 0) {
+  new CommentResource(comments, {
+    listingURL: comments.data('listing-url'),
+    createURL: comments.data('create-url'),
   })
 }

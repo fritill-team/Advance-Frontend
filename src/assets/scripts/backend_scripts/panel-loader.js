@@ -1,17 +1,25 @@
-//
-// $(document)
-//   .on("click", ".replacer", function (e) {
-//     e.preventDefault()
-//     let replacable = $(this).closest(".replacable"),
-//       targetTemplate = $($(this).data("target")),
-//       swap = $('<div>')
-//
-//     swap.empty().html($(replacable.html()))
-//     replacable.empty().html($(targetTemplate.html()))
-//     targetTemplate.empty().html($(swap.html()))
-//     swap = $('<div>')
-//   })
-//
+
+$(document)
+  .on("click", ".replacer", function (e) {
+    e.preventDefault()
+    let replacable = $(this).closest(".replacable"), //but this on the card body
+      targetTemplate = $($(this).data("target")), // this is the target template form
+      swap = $('<div>')
+    swap.empty().html($(replacable.html()))
+    replacable.empty().html($(targetTemplate.html()))
+    //targetTemplate.empty().html($(swap.html()))
+    var replacerContainer = document.createElement('div');
+    replacerContainer.setAttribute('class', 'replacer-container');
+    document.body.appendChild(replacerContainer);
+    $('.replacer-container').empty().html(swap.html())
+    swap = $('<div>')
+
+  })
+$(document).on('click', '.no-replacer', function (e){
+  e.preventDefault()
+  console.log($('.replacer-container').html())
+
+})
 // export var reviewUpdateForm = function (item, url) {
 //   return `
 //     <div class="card__header">

@@ -17,6 +17,10 @@ export default class BaseResource {
     this.paginationType = 'pagination'
     this.csrf = $('meta[name="csrf-token"]').prop('content')
     this.user = null
+    this.categoryListingUrl = ''
+    this.tagsListingUrl = ''
+    this.categories = []
+    this.tags = []
     // elements
     this.$container = $container
     this.$searchBar = null
@@ -68,7 +72,8 @@ export default class BaseResource {
               hoverColor: '#f2b01e',
             });
           })
-          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+          if($('.rate-input-form').length)
+              $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         })
 
@@ -76,7 +81,8 @@ export default class BaseResource {
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
         // update the rating
-        $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+        if($('.rate-input-form').length)
+          $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         self.submitForm($(this))
         self.fetchItems()
@@ -91,7 +97,7 @@ export default class BaseResource {
         e.preventDefault()
         self.confirmDelete()
       })
-      .on('click', '#reviews-loader', function (e){
+      .on('click', '#reviews-loader', function (e) {
         self.fetchItems()
       })
   }
@@ -218,7 +224,7 @@ export default class BaseResource {
 
   searchForm() {
     return `<form method="get">
-      <div class="field-wrapper">
+      <div class="field-wrapper field-wrapper--full">
         <div class="field-wrapper__label">Search</div>
           <div class="field-wrapper__content">
             <input name="q" type="search" class="field" id="${this.prefix}-searchbar">
@@ -288,6 +294,15 @@ export default class BaseResource {
         </div>
       </div>
     </div>`
+  }
+  emptyTemplate(){
+    return `
+      <div class="status"> 
+        <span class="material-icons status__img"> widgets</span>
+        <h4 class="title-h4">nothing here</h4>
+        <p class="body-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illo necessitatibus possimus ipsum rem maxime laboriosam sed, sit quisquam a ipsam, molestiae repellendus eos labore impedit autem, fugit vero quidem?</p>
+      </div>
+    `
   }
 
   build() {

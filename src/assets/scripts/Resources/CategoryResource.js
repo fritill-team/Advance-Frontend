@@ -84,8 +84,9 @@ export default class CategoryResource extends BaseResource {
   }
 
   formTemplate(item = {}, action = '') {
-    return `<form action="${action}" method="post">
-      <div class="field-wrapper">
+    console.log(item);
+    return `<form action="${action}" method="${action = 'edit'? 'put': 'post'}">
+      <div class="field-wrapper field-wrapper--full">
         <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input class="field" type="text" placeholder="Category Name" name="name" id="${this.prefix}-name"
@@ -93,7 +94,7 @@ export default class CategoryResource extends BaseResource {
         </div>
         <ul class="field-wrapper__messages" id="categories-name-messages"></ul>
       </div>
-      <div class="field-wrapper">
+      <div class="field-wrapper field-wrapper--full">
         <label class="field-wrapper__label" for="${this.prefix}-parent">Category Parent</label>
         <div class="field-wrapper__content">
           <select class="field select2" name="parent" id="${this.prefix}-parent">

@@ -1,0 +1,37 @@
+extends ../layouts/site.pug
+block title
+	title Single thread
+
+
+block content
+	.page-header 
+		.container 
+			.row 
+				.col-12
+					include ../components/general-component/user-account.pug
+					+account-review("../../assets/images/hd_dp.jpg","John Doe", "2 hour ago")
+				.col-12
+					.page-header__content
+						h1.title-h1 This is thread question ?
+				.col-12
+					.page-header__info
+						span.body-1
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at beatae, commodi iste
+							| magnam numquam placeat reiciendis! Animi architecto cumque dolorum ea eos eveniet,
+							| nesciunt perspiciatis, placeat quaerat quia quibusdam!
+					
+	.container
+		.row
+			.col-12 
+				.comment-form
+			.col-12
+				.comment-container
+			.col-12
+				.comment-form
+			.col-12
+				.comment-container
+			.col-12
+				.comment-form
+			.col-12
+				.comment-container
+				.comment-form

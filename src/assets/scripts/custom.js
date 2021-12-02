@@ -229,7 +229,7 @@ var nav = $(".sidebar"),
   sidebarIcon = $(".sidebar-with-icon"),
   menuItem = $(".sub-menu-item"),
   menu = $("#js-menu");
-var a7a = null;
+
 $(document).on("click", ".toggle", function () {
   nav.toggleClass("nav--opened vertical--minify");
   wrapper.toggleClass("toggle-content page-content--minify ");
@@ -380,6 +380,26 @@ $(document).on("click", "content__item", function () {
 // Drop zone
 $("div#myId").dropzone({ url: "/file/post" });
 
+$(document).on('change', 'input[type="file"]', function(e){
+  // let imageList = $('.image-list')
+  let imageList = $('.'+$(this).name+'-image-list')
+  var images = [];
+  for (var i = 0; i < $(this).get(0).files.length; ++i) {
+    // images.push($(this).get(0).files[i].name);
+    var srcArray = URL.createObjectURL(this.files[i]);
+    images.push(srcArray)
+  }
+  console.log(srcArray);
+  console.log(images);
+  function image() {
+    return `
+      ${images.map(src => `
+        <img class="image preview" src="${src}">
+      `)}
+    `
+  }
+  imageList.append(image())
+})
 //venobox
 $(document).ready(function () {
   $(".venobox").venobox();
@@ -445,13 +465,21 @@ $(".course-list__item").each(function () {
   });
 });
 
-// $(function () {
-//   $("#sortable").sortable({
-//     handle: ".handle",
-//   });
-//   $("#sortable").disableSelection();
-//   $("#test").accordion();
-// });
+$(function () {
+  // contents sortables
+  $("#sortable-contents").sortable({
+    handle: ".handle-contents",
+  });
+
+  // chapters sortables
+  $("#sortable-chapters").sortable({
+    handle: ".handle-chapters",
+  });
+
+    // $("#sortable-contents").disableSelection();
+  // $("#test").accordion();
+});
+
 
 // const renderRecomendations = async () => {
 //    let url = `http://localhost:3000/recommendations`;

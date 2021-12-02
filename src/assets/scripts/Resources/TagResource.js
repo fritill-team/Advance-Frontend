@@ -32,12 +32,18 @@ export default class TagResource extends BaseResource {
       </div>
     </div>`)
   }
-
+  
   listingTemplate() {
     console.log('here')
+    console.log(this.items.length);
     return `<div class="card list list--condensed" id="${this.prefix}-listing">
-      ${this.items.map(item => this.itemTemplate(item)).join('')}
-    </div>`
+        ${this.items.map(item => this.itemTemplate(item)).join('')}
+      </div>`
+    // if(this.items.length === 0){
+    //   return this.emptyTemplate()
+    // } else {
+      
+    // }
   }
 
   itemTemplate(item) {
@@ -68,7 +74,7 @@ export default class TagResource extends BaseResource {
 
   formTemplate(item = {}, action = '') {
     return `<form action="${action}" method="post">
-      <div class="field-wrapper">
+      <div class="field-wrapper field-wrapper--full">
         <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input class="field" type="text" placeholder="Tag Name" name="name" id="${this.prefix}-name"
