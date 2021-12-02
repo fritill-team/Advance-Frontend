@@ -28,7 +28,8 @@ export default class ReviewResource extends BaseResource {
           hoverColor: '#f2b01e',
         });
       })
-      $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+      if($(".rate-input").length)
+        $('.rate-input-form').val($(".rate-input").starRating('getRating'))
     })
   }
 
@@ -134,6 +135,7 @@ export default class ReviewResource extends BaseResource {
                 ${this.deleteDialog()}
               <div class="card">
                 <div class="card__content">
+
                   <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
                   ${this.listingURL !== "null" ? `<a class="gray bold text-center" id="reviews-loader">See More Reviews</a>` : ``}
                 </div>

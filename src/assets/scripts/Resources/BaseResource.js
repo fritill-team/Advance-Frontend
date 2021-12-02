@@ -72,8 +72,8 @@ export default class BaseResource {
               hoverColor: '#f2b01e',
             });
           })
-          if($('.rate-input-form').length)
-              $('.rate-input-form').val($(".rate-input").starRating('getRating'))
+          if ($('.rate-input-form').length)
+            $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         })
 
@@ -81,7 +81,7 @@ export default class BaseResource {
       .on('submit', `#${this.prefix}-form > form`, function (e) {
         e.preventDefault()
         // update the rating
-        if($('.rate-input-form').length)
+        if ($('.rate-input-form').length)
           $('.rate-input-form').val($(".rate-input").starRating('getRating'))
 
         self.submitForm($(this))
@@ -250,13 +250,11 @@ export default class BaseResource {
   }
 
   listingTemplate() {
-    return this.items.map(item => this.itemTemplate(item)).join('')
-    // if(this.items){
-    //   return this.emptyTemplate()
-    // } else {
-    //   return this.items.map(item => this.itemTemplate(item)).join('')
-    //   console.log(this.items);
-    // }
+    print(this.items)
+    if (this.items.length) {
+      return this.items.map(item => this.itemTemplate(item)).join('')
+    }
+    return this.emptyTemplate()
   }
 
   itemTemplate(item) {
@@ -301,12 +299,12 @@ export default class BaseResource {
       </div>
     </div>`
   }
-  emptyTemplate(){
+
+  emptyTemplate() {
     return `
-      <div class="status"> 
-        <span class="material-icons status__img"> widgets</span>
+      <div class="status">
+        <span class="material-icons status__img">widgets</span>
         <h4 class="title-h4">nothing here</h4>
-        <p class="body-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illo necessitatibus possimus ipsum rem maxime laboriosam sed, sit quisquam a ipsam, molestiae repellendus eos labore impedit autem, fugit vero quidem?</p>
       </div>
     `
   }

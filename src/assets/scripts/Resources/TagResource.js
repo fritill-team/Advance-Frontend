@@ -26,13 +26,13 @@ export default class TagResource extends BaseResource {
         </div>
         <div class="col-md-6 col-sm-12">
           ${this.searchForm()}
-          ${this.listingTemplate()}
+          <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
           ${this.withPagination ? this.paginationTemplate() : ''}
         </div>
       </div>
     </div>`)
   }
-  
+
   listingTemplate() {
     // console.log('here')
     // console.log(this.items.length);
@@ -44,7 +44,11 @@ export default class TagResource extends BaseResource {
     //   ${this.items.map(item => this.itemTemplate(item)).join('')}
     //   </div>`
     // } else {
+<<<<<<< HEAD
     //   return this.emptyTemplate()
+=======
+
+>>>>>>> be3c606616d65b165997a26856153aadc640bba1
     // }
   }
 
