@@ -20,7 +20,9 @@ html[dir="rtl"]{
     transform: rotateY(180deg);
   }
 }
-
+.django-cheditor-widget{
+  width: 100%;
+}
 .text--right{
   font-family: unquote("Noto Kufi Arabic"), "sans-serif";
   text-align: right;
