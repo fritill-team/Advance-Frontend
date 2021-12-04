@@ -11,6 +11,7 @@ $('.tabs').each(function (tabs) {
     target.siblings('.tab-panel').removeClass('tab-panel--active')
     $(this).addClass('tab--active')
     target.addClass('tab-panel--active')
+    // handleUrl(url);
   })
 })
 
@@ -66,3 +67,33 @@ $('.chapters-tabs').each(function (tabs) {
     target.addClass('tab-panel--active');
   });
 });
+var url = window.location.href.split("#");
+
+function handleUrl(url){
+  // let urlArray = url.split("#");
+  // let tabId = urlArray[1];
+  $('.tab-panel').each(function(){
+    if($(this).attr('id') == url[1]){
+      $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
+    }
+    // $(this).attr('id') == url[1] ? console.log('aywa sa7 keda') : console.log('la la keda 8lt');
+    // console.log('==============');
+    // console.log($(this).attr('id'), url[1]);
+    // console.log('==============================');
+  })
+}
+// handleUrl(url);
+
+console.log(url[1]);
+$( function() {
+} );
+
+// $( "#tabs" ).tabs({
+//   beforeLoad: function( event, ui ) {
+//     ui.jqXHR.fail(function() {
+//       ui.panel.html(
+//         "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+//         "If this wouldn't be a demo." );
+//     });
+//   }
+// });
