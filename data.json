@@ -420,7 +420,10 @@
       ]
     }
   ],
-  "reviews":[ ],
+  "reviews":[ {
+    "review": "hjdbvhbdb",
+    "rate": "3.5"
+  }],
   "threads": [
     {
       "id": 1,
