@@ -11,7 +11,7 @@ $('.tabs').each(function (tabs) {
     target.siblings('.tab-panel').removeClass('tab-panel--active')
     $(this).addClass('tab--active')
     target.addClass('tab-panel--active')
-    // handleUrl(url);
+    // handleUrl();
   })
 })
 
@@ -67,24 +67,31 @@ $('.chapters-tabs').each(function (tabs) {
     target.addClass('tab-panel--active');
   });
 });
-var url = window.location.href.split("#");
 
-function handleUrl(url){
+window.addEventListener("onhashchange", function(){
+  //url hash # has changed
+  // console.log(window.location.href);
+  // handleUrl()
+});
+
+(function handleUrl(){
+  let url = window.location.href.split("#");
+  console.log(url);
   // let urlArray = url.split("#");
   // let tabId = urlArray[1];
   $('.tab-panel').each(function(){
-    if($(this).attr('id') == url[1]){
+    if($(this).attr('id') === url[1]){
       $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
     }
-    // $(this).attr('id') == url[1] ? console.log('aywa sa7 keda') : console.log('la la keda 8lt');
+    $(this).attr('id') === url[1] ? console.log('aywa sa7 keda') : console.log('la la keda 8lt');
     // console.log('==============');
-    // console.log($(this).attr('id'), url[1]);
+    // console.log($(this).attr('id'), url);
     // console.log('==============================');
   })
-}
-// handleUrl(url);
+})
+// handleUrl();
 
-console.log(url[1]);
+// console.log(url[1]);
 $( function() {
 } );
 

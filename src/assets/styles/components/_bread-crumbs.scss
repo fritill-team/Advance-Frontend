@@ -99,16 +99,19 @@ html[dir="rtl"] {
   .bread-crumbs{
     .btn{
       transform: rotate(180deg);
+      margin-left: 10px;
     }
   }
   .bread-crumbs__link{
     margin: 0 0 0 10px;
+    &::after{
+      right: unset;
+      left: 0;
+      transform: translateX(-6px);
+    }
+    
   }
-  .bread-crumbs__link:after{
-    right: unset;
-    left: 0;
-    transform: translateX(-6px);
-  }
+  
           //     i{
 //       transform: rotate(
 //         177deg
