@@ -68,39 +68,21 @@ $('.chapters-tabs').each(function (tabs) {
   });
 });
 
-window.addEventListener("onhashchange", function(){
-  //url hash # has changed
-  // console.log(window.location.href);
-  // handleUrl()
-});
+function handleUrl(){
+  $(window).on('hashchange', function(e){
+    let hash = window.location.href.split("#");
+    let id = hash[1].toString()
+    $('.tab').each(function() {
+      if ($(this).attr('href') === '#'+id){
+        $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
+      }
+    })
+    $('.tab-panel').each(function(){
+      if($(this).attr('id') === id){
+        $(this).addClass('tab-panel--active').siblings('.tab-panel').removeClass('tab-panel--active');
+      }
+    })
+  });
+}
+handleUrl();
 
-(function handleUrl(){
-  let url = window.location.href.split("#");
-  console.log(url);
-  // let urlArray = url.split("#");
-  // let tabId = urlArray[1];
-  $('.tab-panel').each(function(){
-    if($(this).attr('id') === url[1]){
-      $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
-    }
-    $(this).attr('id') === url[1] ? console.log('aywa sa7 keda') : console.log('la la keda 8lt');
-    // console.log('==============');
-    // console.log($(this).attr('id'), url);
-    // console.log('==============================');
-  })
-})
-// handleUrl();
-
-// console.log(url[1]);
-$( function() {
-} );
-
-// $( "#tabs" ).tabs({
-//   beforeLoad: function( event, ui ) {
-//     ui.jqXHR.fail(function() {
-//       ui.panel.html(
-//         "Couldn't load this tab. We'll try to fix this as soon as possible. " +
-//         "If this wouldn't be a demo." );
-//     });
-//   }
-// });
