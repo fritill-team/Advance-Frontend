@@ -469,9 +469,44 @@ $(".course-list__item").each(function () {
 
 $(function () {
   // contents sortables
-  $("#table-body").sortable()
+  $("#table-body").sortable({
+    update: function (event, ui) {
+      $(this).children().each(function (index) {
+
+        // assign data order in the data base
+        if ($(this).attr('data-order') !== (index + 1)) {
+          $(this).attr('data-order', (index + 1)).addClass('updated-order');
+        }
+
+        // store the updated positions and their id
+        let positions = []
+        $('.updated-order').each(function () {
+          positions.push({"itemId":$(this).attr('data-id'),"itemOrder": $(this).attr('data-order')});
+          $(this).removeClass('updated-order');
+        });
+
+        // make the ajax call
+        $.ajax({
+          url: $("#table-body").attr('data-order-url'),
+          method: 'POST',
+          dataType: 'text',
+          headers: {'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')},
+          data: {
+            positions: positions
+          },
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (error) {
+            console.error(error)
+          }
+        })
+
+      })
+    }
+  })
   $("#sortable-contents").sortable({
-    handle: ".handle-contents",
+    handle: ".handle-contents"
     // update: function (event, ui) {
     //   $(this).children().each(function (index) {
     //
