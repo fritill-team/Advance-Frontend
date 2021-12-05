@@ -69,20 +69,20 @@ $('.chapters-tabs').each(function (tabs) {
 });
 
 function handleUrl(){
-  $(window).on('hashchange', function(e){
-    let hash = window.location.href.split("#");
-    let id = hash[1].toString()
-    $('.tab').each(function() {
-      if ($(this).attr('href') === '#'+id){
-        $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
-      }
-    })
-    $('.tab-panel').each(function(){
-      if($(this).attr('id') === id){
-        $(this).addClass('tab-panel--active').siblings('.tab-panel').removeClass('tab-panel--active');
-      }
-    })
-  });
+  // $(window).on('hashchange', function(e){
+  //   let hash = window.location.href.split("#");
+  //   let id = hash[1].toString()
+  //   $('.tab').each(function() {
+  //     if ($(this).attr('href') === '#'+id){
+  //       $(this).addClass('tab--active').siblings('.tab').removeClass('tab--active')
+  //     }
+  //   })
+  //   $('.tab-panel').each(function(){
+  //     if($(this).attr('id') === id){
+  //       $(this).addClass('tab-panel--active').siblings('.tab-panel').removeClass('tab-panel--active');
+  //     }
+  //   })
+  // });
 }
 handleUrl();
 
