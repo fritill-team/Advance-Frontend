@@ -469,6 +469,7 @@ $(".course-list__item").each(function () {
 
 $(function () {
   // contents sortables
+  $("#table-body").sortable()
   $("#sortable-contents").sortable({
     handle: ".handle-contents",
     // update: function (event, ui) {

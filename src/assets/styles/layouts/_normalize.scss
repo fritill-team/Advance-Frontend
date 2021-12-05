@@ -20,6 +20,11 @@ html[dir="rtl"]{
     transform: rotateY(180deg);
   }
 }
+
+div[id^="cke_id_"]{
+  width: 100% !important;
+}
+
 .django-ckeditor-widget{
   width: 100% !important;
 }

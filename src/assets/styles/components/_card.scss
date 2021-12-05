@@ -291,6 +291,9 @@
 
   .card__content {
     text-align: left;
+    .status{
+      margin: 16px 0;
+    }
   }
 
   &.card--side-col {
