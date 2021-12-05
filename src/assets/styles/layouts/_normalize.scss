@@ -15,6 +15,7 @@ html {
 }
 html[dir="rtl"]{
   font-family: unquote("Noto Kufi Arabic"), "sans-serif";
+  
   span.material-icons{
     font-family: 'Material Icons';
     transform: rotateY(180deg);
