@@ -497,5 +497,40 @@
         }
       ]
     }
+  ],
+  "media":[
+    {
+      "images": "images",
+      "items": [
+        {
+          
+        }
+      ],
+      "rules": {
+
+      }
+    },
+    {
+      "cover": "cover",
+      "items": [
+        {
+          
+        }
+      ],
+      "rules": {
+
+      }
+    },
+    {
+      "file": "file",
+      "items": [
+        {
+          
+        }
+      ],
+      "rules": {
+
+      }
+    }
   ]
 }
