@@ -115,13 +115,6 @@
 
 
 html[dir="rtl"] {
-  .page{
-    .page__content{
-      .row{
-        flex-direction: row-reverse;
-      }
-    }
-  }
   .drawer {
 		@media (max-width: 768px) {
 			padding-left: 0;

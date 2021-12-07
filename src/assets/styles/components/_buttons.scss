@@ -52,9 +52,9 @@ input[type="button"].btn {
   }
 
   &.btn--with-icon {
-    display: flex;
-    align-items: center;
-
+    .material-icons{
+      font-size: inherit;
+    }
     i,span {
       margin: 0 4px;
     }

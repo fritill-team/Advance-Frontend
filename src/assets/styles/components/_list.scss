@@ -4,9 +4,12 @@
   flex-flow: column nowrap;
   padding: 6px 0;
   margin-bottom: 20px;
-  &.list--with-top-space{
+  border-radius: 5px;
+
+  &.list--with-top-space {
     margin-top: 40px;
   }
+
   &.list--condensed {
     padding: 0;
 
@@ -62,7 +65,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-	white-space: nowrap;
+  white-space: nowrap;
 
   p {
     font-size: inherit;
@@ -72,7 +75,7 @@
     font-size: 20px;
   }
 
-  
+
 }
 
 a.list-item {
@@ -100,7 +103,7 @@ a.list-item {
     &.avatar__video-preview {
       position: relative;
       padding: 16px 0 0;
-			min-width: 80px;
+      min-width: 80px;
       width: 80px;
 
       .image {
@@ -140,12 +143,14 @@ a.list-item {
     text-align: center;
     width: 100%;
     max-width: 60px;
-		min-width: 55px;
+    min-width: 55px;
     padding: 16px;
-    i,span{
+
+    i, span {
       color: #43525c;
     }
-    & + .list-item__content{
+
+    & + .list-item__content {
       padding: 16px 10px 16px 0;
     }
   }
@@ -339,7 +344,7 @@ a.list-item {
       }
     }
 
-    &.list-item--with-border:last-of-type::after{
+    &.list-item--with-border:last-of-type::after {
       display: none;
     }
 
@@ -544,7 +549,8 @@ a.list-item {
   margin-top: 4px;
   margin-bottom: 4px;
   border-bottom: 1px solid rgba($darkBlack, 0.1);
-  &.divider--vertical{
+
+  &.divider--vertical {
     width: auto;
     border-right: 1px solid rgba($darkBlack, 0.1);
     margin: 0 4px;
@@ -648,7 +654,7 @@ a.list-item {
     .list-item__icon {
       background-color: transparent;
 
-      i,span {
+      i, span {
         color: rgba($color: $accent, $alpha: 0.7);
       }
     }
@@ -671,11 +677,13 @@ html[dir="rtl"] {
         transform: rotate(180deg);
       }
     }
-    .list-item__icon{
-      & + .list-item__content{
+
+    .list-item__icon {
+      & + .list-item__content {
         padding: 16px 0 16px 10px;
       }
     }
+
     &.list-item--open {
       .list-item__action {
         .arrow-right {
