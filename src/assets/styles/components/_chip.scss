@@ -1,0 +1,36 @@
+.chip-list{
+  display: flex;
+  flex-wrap: wrap;
+  .chip-list__item{
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: $black;
+    background-color: $default;
+    display: inline-flex;
+    align-items: center;
+    @include normalizeTypo;
+    &.chip-list__item--with-icon{
+      padding: 0 8px;
+    }
+    &.chip-list__item--with-image{
+
+    }
+    &.chip-list__item--outline{
+      background-color: transparent;
+      border: 1px solid #eef1f3;
+    }
+    .material-icons{
+      font-size: inherit;
+      color: inherit;
+      line-height: 32px;
+    }
+    span{
+      margin-right: 8px;
+    }
+    // &.chip-list__item--with-image{
+
+    // }
+  }
+}

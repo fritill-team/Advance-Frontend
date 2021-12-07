@@ -10,7 +10,7 @@ const validationRules = {
 
 router.get('/', async function (req, res) {
   let list = await Model.find({});
-  list = mapItems(list, 'media_files')
+  list = mapItems(list, 'media')
   try {
     res.send(list);
   } catch (error) {
@@ -37,7 +37,7 @@ router.post('/', function (req, res) {
 
 router.get('/:id', async function (req, res) {
   let record = await Model.findOne({nick: 'noname'});
-  record = mapItem(record, 'media_files')
+  record = mapItem(record, 'media')
   try {
     res.send(record);
   } catch (error) {

@@ -5,6 +5,7 @@ import ClassificationResource from "./Resources/ClassificationResource";
 import ReviewResource from "./Resources/ReviewResource";
 import CommentResource from "./Resources/CommentResource";
 import ThreadRecourse from './Resources/ThreadResource';
+
 const mapErrors = (app, $form, errors) => {
   for (let field in errors)
     if (Object.prototype.hasOwnProperty.call(field, errors))

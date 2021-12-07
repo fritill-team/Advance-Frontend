@@ -389,13 +389,13 @@
       "actions": [
         {
           "name": "edit",
-          "icon": "far fa-edit",
+          "icon": "edit",
           "class": "tags-edit",
           "link": "http://localhost:3000/tags/1/"
         },
         {
           "name": "delete",
-          "icon": "far fa-trash-alt",
+          "icon": "delete_outline",
           "class": "btn--primary tags-delete",
           "link": "/tags/1"
         }
@@ -500,7 +500,7 @@
   ],
   "media":[
     {
-      "images": "images",
+      "title": "images",
       "items": [
         {
           
@@ -511,18 +511,18 @@
       }
     },
     {
-      "cover": "cover",
+      "title": "cover",
       "items": [
         {
           
         }
       ],
       "rules": {
-
+        
       }
     },
     {
-      "file": "file",
+      "title": "file",
       "items": [
         {
           

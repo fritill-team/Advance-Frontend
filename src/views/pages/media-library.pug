@@ -5,6 +5,9 @@ block title
 block content
 	include ../components/bread-crumbs.pug
 	+pageTitle()
+	div(id='media-list' class="media-library"
+		data-listing-url="http://localhost:3000/media/")
+	
 	.container
 		//- .row
 		//- 	.col-lg-12

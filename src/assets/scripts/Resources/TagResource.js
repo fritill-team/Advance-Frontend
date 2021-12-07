@@ -36,7 +36,7 @@ export default class TagResource extends BaseResource {
   listingTemplate() {
     // console.log('here')
     // console.log(this.items.length);
-    return `<div class="card list list--condensed" id="${this.prefix}-listing">
+    return `<div class="chip-list" id="${this.prefix}-listing">
         ${this.items.map(item => this.itemTemplate(item)).join('')}
       </div>`
     // if(this.items){
@@ -48,29 +48,33 @@ export default class TagResource extends BaseResource {
   }
 
   itemTemplate(item) {
-    return ` <div class="list-item list-item--one-line">
-      <div class="list-item__content">
-        <p class="body-1">${item.name}</p>
-      </div>
-      <div class="list-item__actions">
-        <div class="dropdown">
-          <button class="btn btn--info btn--icon btn--text dropdown__activator">
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-          <div class="dropdown__content">
-            <div class="list">
-              ${item.actions.length > 1 ? item.actions.map(action => `
-                <a class="list-item list-item--one-line ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'>
-                <div class="list-item__icon"><i class="${action.icon}"></i></div>
-                  <span class="list-item__content">
-                    ${action.name}
-                  </span>
-                </a>`).join('') : ''}
+    return ` 
+    <div class="list list--condensed"> 
+      <div class="list-item list-item--one-line">
+        <div class="list-item__content">
+          <p class="body-1">${item.name}</p>
+        </div>
+        <div class="list-item__actions">
+          <div class="dropdown">
+            <button class="btn btn--info btn--icon btn--text dropdown__activator">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="dropdown__content">
+              <div class="list">
+                ${item.actions.length > 1 ? item.actions.map(action => `
+                  <a class="list-item list-item--one-line ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'>
+                  <div class="list-item__icon"><i class="${action.icon}"></i></div>
+                    <span class="list-item__content">
+                      ${action.name}
+                    </span>
+                  </a>`).join('') : ''}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>`
+    </div>
+    `
   }
 
   formTemplate(item = {}, action = '') {

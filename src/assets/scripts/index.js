@@ -36,6 +36,7 @@ import './backend_scripts/panel-loader'
 import './multi-select'
 // import "./recommendationTemplate"
 import './resourceBuilder'
+import './Resources/Media'
 // import './content-height'
 import './overlay'
 import './dialog'

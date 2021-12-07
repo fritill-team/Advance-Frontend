@@ -4,11 +4,6 @@ const surveyTemplate = (item) => `
 		<img src="${item.thumb}" alt="" class="course-card__preview-cover">
 		<div class="course-card__preview-overlay"></div>
 	</a>
-  ${item.sponsor ? `
-    <div class="course-card__badge">
-      <img src="${item.sponsor.cover}" >
-    </div>
-  `: ''}
   <div class="course-card__badge course-card__badge--category">
     ${item.type}  
   </div>
@@ -18,6 +13,11 @@ const surveyTemplate = (item) => `
 		<div class="course-card__meta">
 			<p class="body-2 gray" lang="${item.language}">${item.category ? item.category : ""}</p>
 		</div>		
+    ${item.sponsor ? `
+      <div class="course-card__badge">
+        <img src="${item.sponsor.cover}" >
+      </div>
+    `: ''}
 	</div>
 </div>
 `;

@@ -14,7 +14,8 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan('combined'));
 
-mongoose.connect("mongodb+srv://itqademtestuser:CYIVvZGF7rbv8imk@cluster0.0qtig.mongodb.net/itqadem?retryWrites=true&w=majority")
+// mongoose.connect("mongodb+srv://itqademtestuser:CYIVvZGF7rbv8imk@cluster0.0qtig.mongodb.net/itqadem?retryWrites=true&w=majority")
+mongoose.connect("mongodb://localhost/advance")
 var corsOptions = {
   origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
