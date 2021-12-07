@@ -1,6 +1,12 @@
 import BaseResource from './BaseResource'
 import 'patternfly-bootstrap-treeview'
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
+
 export default class CategoryResource extends BaseResource {
   constructor($container, options) {
     options['prefix'] = 'categories'
@@ -87,26 +93,26 @@ export default class CategoryResource extends BaseResource {
     // console.log(item);
     return `<form action="${action}" method="${action = 'edit'? 'put': 'post'}">
       <div class="field-wrapper field-wrapper--full">
-        <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="${this.prefix}-name">${gettext("Name")} <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-          <input class="field" type="text" placeholder="Category Name" name="name" id="${this.prefix}-name"
+          <input class="field" type="text" placeholder="${gettext("Category Name")}" name="name" id="${this.prefix}-name"
              required value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages" id="categories-name-messages"></ul>
       </div>
       <div class="field-wrapper field-wrapper--full">
-        <label class="field-wrapper__label" for="${this.prefix}-parent">Category Parent</label>
+        <label class="field-wrapper__label" for="${this.prefix}-parent">${gettext("Parent Category")}</label>
         <div class="field-wrapper__content">
           <select class="field select2" name="parent" id="${this.prefix}-parent">
-          <option value="">-- No Parent --</option>
+          <option value="">-- ${gettext("No Parent")} --</option>
           ${this.flatItems && this.flatItems.map(i => `<option value="${i.id}" ${item && i.id === item.id ? 'selected' : ''}>${i.name}</option>`).join('')}
           </select>
         </div>
         <ul class="field-wrapper__messages" id="categories-parent-messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
-        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
-        <button class="btn btn--primary" type="submit">submit</button>
+        <button class="btn btn--primary btn--text" type="reset">${gettext("Cancel")}</button>
+        <button class="btn btn--primary" type="submit">${gettext("Submit")}</button>
       </div>
     </form>`
   }
