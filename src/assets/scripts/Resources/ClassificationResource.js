@@ -1,5 +1,10 @@
 import BaseResource from "./BaseResource";
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 export default class ClassificationResource extends BaseResource {
   constructor($container, options) {
     options['prefix'] = 'classifications'
@@ -35,12 +40,12 @@ export default class ClassificationResource extends BaseResource {
   formTemplate(item = {}, action = '') {
     return `<form action="${action}" method="post">
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="classifications-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="classifications-name">${gettext("Name")} <abbr>*</abbr></label>
         <div class="field-wrapper__content">
           <input
              class="field"
              type="text"
-             placeholder="Classification"
+             placeholder="${gettext("Classification")}"
              name="name"
              id="classifications-name"
              required
@@ -49,21 +54,21 @@ export default class ClassificationResource extends BaseResource {
         <ul class="field-wrapper__messages"></ul>
       </div>
       <div class="field-wrapper">
-        <label class="field-wrapper__label" for="classifications-description">Score</label>
+        <label class="field-wrapper__label" for="classifications-description">${gettext("Score")}</label>
         <div class="field-wrapper__content">
           <input
             type="number"
             class="field"
             name="score"
             id="classifications-description"
-            placeholder="Classification Score"
+            placeholder="${gettext("Classification Score")}"
              value="${item.score ? item.score : 0}">
         </div>
         <ul class="field-wrapper__messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
-        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
-        <button class="btn btn--primary" type="submit">submit</button>
+        <button class="btn btn--primary btn--text" type="reset">${gettext("Cancel")}</button>
+        <button class="btn btn--primary" type="submit">${gettext("Submit")}</button>
       </div>
     </form>`
   }

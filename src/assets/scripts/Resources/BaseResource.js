@@ -1,5 +1,10 @@
 import {openOverlay} from "../overlay";
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 export default class BaseResource {
   constructor($container, options) {
     // observables
@@ -286,15 +291,15 @@ export default class BaseResource {
     return `<div class="dialog" id="${this.prefix}-delete-dialog">
       <div class="card">
         <div class="card__title">
-          <h3>You are About to delete this item</h3>
+          <h3>${gettext("You are About to delete this item<")}/h3>
         </div>
         <div class="card__body">
-            <p class="body">If you deleted it you will never be able to retreive it</p>
-            <p class="body bold">Are you sure</p>
+            <p class="body">${gettext("If you deleted it you will never be able to retreive it")}</p>
+            <p class="body bold">${gettext("Are you sure")}</p>
         </div>
         <div class="card__footer">
-          <button class="btn btn--text btn--danger close-dialog">Cancel</button>
-          <button class="btn btn--primary close-dialog ${this.prefix}-confirm-delete">Confirm</button>
+          <button class="btn btn--text btn--danger close-dialog">${gettext("Cancel")}</button>
+          <button class="btn btn--primary close-dialog ${this.prefix}-confirm-delete">${gettext("Confirm")}</button>
         </div>
       </div>
     </div>`
@@ -304,7 +309,7 @@ export default class BaseResource {
     return `
       <div class="status">
         <span class="material-icons status__img">widgets</span>
-        <h4 class="title-h4">nothing here</h4>
+        <h4 class="title-h4">${gettext("nothing here")}</h4>
       </div>
     `
   }
@@ -313,3 +318,17 @@ export default class BaseResource {
     this.fetchItems()
   }
 }
+
+// db.media.insert({
+//   id: 1,
+//   collection_name: "Cover",
+//   content_type: 3,
+//   object_id: 3,
+//   order: 1,
+//   name: "images",
+//   file: "test file",
+//   mime_type: "text.jpg",
+//   size: 100,
+//   caption: "lorem lorem lorem",
+//   collection_name: "files"
+// })

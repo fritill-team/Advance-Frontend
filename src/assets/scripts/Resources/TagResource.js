@@ -1,4 +1,11 @@
 import BaseResource from "./BaseResource";
+import 'patternfly-bootstrap-treeview'
+
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 
 export default class TagResource extends BaseResource {
   constructor($container, options) {
@@ -49,47 +56,31 @@ export default class TagResource extends BaseResource {
 
   itemTemplate(item) {
     return ` 
-    <div class="list list--condensed"> 
-      <div class="list-item list-item--one-line">
-        <div class="list-item__content">
-          <p class="body-1">${item.name}</p>
-        </div>
-        <div class="list-item__actions">
-          <div class="dropdown">
-            <button class="btn btn--info btn--icon btn--text dropdown__activator">
-              <i class="fas fa-ellipsis-h"></i>
-            </button>
-            <div class="dropdown__content">
-              <div class="list">
-                ${item.actions.length > 1 ? item.actions.map(action => `
-                  <a class="list-item list-item--one-line ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'>
-                  <div class="list-item__icon"><i class="${action.icon}"></i></div>
-                    <span class="list-item__content">
-                      ${action.name}
-                    </span>
-                  </a>`).join('') : ''}
-              </div>
-            </div>
-          </div>
+      <div class="chip-list">
+        <div class="chip-list__item">
+        <span class="material-icons">tag</span></a>
+          <p class="chip-list__item-content">${item.name}</p>
+          ${item.actions.length > 1 ? item.actions.map(action => `
+            <a class="chip-list__item-action" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
+          `).join('') : ''}
         </div>
       </div>
-    </div>
     `
   }
 
   formTemplate(item = {}, action = '') {
     return `<form action="${action}" method="post">
       <div class="field-wrapper field-wrapper--full">
-        <label class="field-wrapper__label" for="${this.prefix}-name">Name <abbr>*</abbr></label>
+        <label class="field-wrapper__label" for="${this.prefix}-name">${gettext("Name")} <abbr>*</abbr></label>
         <div class="field-wrapper__content">
-          <input class="field" type="text" placeholder="Tag Name" name="name" id="${this.prefix}-name"
+          <input class="field" type="text" placeholder="${gettext("Tag Name")}" name="name" id="${this.prefix}-name"
              required value="${item.name ? item.name : ''}">
         </div>
         <ul class="field-wrapper__messages" id="category-name-messages"></ul>
       </div>
       <div class="ml-auto d-inline-block">
-        <button class="btn btn--primary btn--text" type="reset">Cancel</button>
-        <button class="btn btn--primary" type="submit">submit</button>
+        <button class="btn btn--primary btn--text" type="reset">${gettext("Cancel")}</button>
+        <button class="btn btn--primary" type="submit">${gettext("Submit")}</button>
       </div>
     </form>`
   }

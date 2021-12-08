@@ -4,13 +4,14 @@
   .chip-list__item{
     height: 32px;
     padding: 0 12px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 16px;
-    color: $black;
+    color: $gray;
     background-color: $default;
     display: inline-flex;
     align-items: center;
     @include normalizeTypo;
+    margin: 0 10px 10px 0;
     &.chip-list__item--with-icon{
       padding: 0 8px;
     }
@@ -19,18 +20,57 @@
     }
     &.chip-list__item--outline{
       background-color: transparent;
-      border: 1px solid #eef1f3;
+      border: 1px solid currentColor;
+    }
+    &.chip-list__item--primary{
+      background-color: rgba($primary, .2);
+    }
+    &.chip-list__item--secondary{
+      background-color: rgba($secondary, .2);
+    }
+    &.chip-list__item--accent{
+      background-color: rgba($accent, .2);
+    }
+    &.chip-list__item--danger{
+      background-color: rgba($danger, .2);
     }
     .material-icons{
       font-size: inherit;
       color: inherit;
       line-height: 32px;
     }
-    span{
-      margin-right: 8px;
+    .chip-list__item-content{
+      margin: 0 8px;
+    }
+    .chip-list__item-action{
+      color: $gray;
+      margin: 0 8px 0 0;
+      &:last-of-type{
+        margin: 0;
+      }
     }
     // &.chip-list__item--with-image{
 
     // }
+  }
+}
+
+html[dir="rtl"]{
+  .chip-list{
+    .chip-list__item{
+      margin: 0 0 10px 10px;
+      // &:first-of-type{
+      //   margin: 0;
+      // }
+    }
+    .chip-list__item-content{
+      // margin: 0 0 0 8px;
+    }
+    .chip-list__item-action{
+      margin: 0 0 0 8px;
+      &:last-of-type{
+        margin: 0;
+      }
+    }
   }
 }

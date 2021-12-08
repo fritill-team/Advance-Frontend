@@ -1,6 +1,11 @@
 import BaseResource from "./BaseResource";
 import {initializeRateDisplay, initializeRateInput} from "../rating";
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 export default class ReviewResource extends BaseResource {
 
   constructor($container, options) {
@@ -91,7 +96,7 @@ export default class ReviewResource extends BaseResource {
                     <div class="field-wrapper__content">
                       <input class="field"
                       type="text"
-                      placeholder="Insert your review."
+                      placeholder="${gettext("Insert your review.")}"
                       name="review"
                       value="${item.review ? item.review : ''}"
                       >
@@ -107,8 +112,8 @@ export default class ReviewResource extends BaseResource {
                     </div>
                  </div>
                  <div class="ml-auto d-inline-block">
-                 ${reset ? `<button class="btn btn--primary btn--text" type="reset">Cancel</button>` : ``}
-                 <button class="btn btn--primary btn--rounded">Save</button>
+                 ${reset ? `<button class="btn btn--primary btn--text" type="reset">${gettext("Cancel")}</button>` : ``}
+                 <button class="btn btn--primary btn--rounded">${gettext("Save")}</button>
                 </div>
               </form>
 `

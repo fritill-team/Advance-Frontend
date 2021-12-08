@@ -1,73 +1,45 @@
 import { openOverlay } from "../overlay";
 
 export default class MediaResource {
-  constructor($container, options){
-    this.localItems = []
-    this.localLoading = false
+  constructor($container){
 
     // props
-    this.prefix = 'media'
-    this.listingURL = ''
-    this.createUrl = ''
-    this.deleteURL = ''
-    this.media = []
+    // this.prefix = 'media'
+    this.listingURL = 'http://localhost:3000/api/v1/utils/media'  
+    this.appLabel = $container.data('app_label')
+    this.model = $container.data('model')
+    this.object_id = $container.data('object_id')
+    this.localItems = []
     this.csrf = $('meta[name="csrf-token"]').prop('content')
     this.$container = $container
-    this.mediaListingUrl = ''
-    this.$itemsList = null
-    this.$form = null
-    this.$deleteDialog = null
-
-    for (let item in options)
-      if (Object.prototype.hasOwnProperty.call(options, item))
-        this[item] = options[item]
+    console.log(this.object_id);
+    
 
     this.$container.append(this.containerTemplate())
-    this.$itemsList = $(`#${this.prefix}-listing`)
-    this.$form = $(`#${this.prefix}-form`)
-    this.$deleteDialog = $(`#${this.prefix}-delete-dialog`)
     
-    // let self = this
-
+    this.fetchItems()
   }
 
-  get loading() {
-    return this.localLoading
-  }
-
-  set loading(v) {
-    this.localLoading = v
-    this.loadingListener(v)
-  }
-
-  get items() {
+  get items(){
     return this.localItems
-  }
-
-  set items(value) {
+  }  
+ 
+  set items(value){
     this.localItems = value
     this.itemsListener(value)
   }
 
-
-  loadingListener(v) {
-    if (v) {
-      this.$itemsList.empty()
-      this.$itemsList.text('Loading...')
-    }
+  itemsListener(v){
+    console.log(this.listingTemplate());
+    this.$container.empty()
+    this.$container.append(this.listingTemplate())
   }
-
-  itemsListener(v) {
-    this.$itemsList.empty()
-    this.$itemsList.append(this.listingTemplate())
-  }
-
   
   fetchItems(data = {}) {
     this.loading = true
     let self = this
     $.ajax({
-      url: this.listingURL,
+      url: this.listingURL+this.appLabel+this.model+this.object_id,
       type: 'get',
       data,
       headers: {'X-CSRFToken': self.csrf},
@@ -79,7 +51,7 @@ export default class MediaResource {
         console.error(xhr)
       }
     })
-    console.log(self);
+    // console.log(url);
   }
 
   containerTemplate(data) {
@@ -93,7 +65,7 @@ export default class MediaResource {
             </div>
           </div>
           <div class="col-md-9 col-sm-12">
-            <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+            <ul id="media-listing">${this.listingTemplate()}</ul>
           </div class="col-md-3">
 
           <div>
@@ -104,15 +76,21 @@ export default class MediaResource {
   }
   listingTemplate() {
     // print(this.items)
-    if (this.items.length) {
-      return this.items.map(item => this.itemTemplate(item)).join('')
-    }
-    return this.emptyTemplate()
+    // return this.media;
+    // if (this.items.length) {
+    console.log(this.items);
+    // return this.items.map(item => this.itemTemplate(item)).join('')
+    return this.items.map(item => console.log(item)).join('')
+    // }
+    // return this.items.map(item => this.itemTemplate(item)).join('')
+    // if (this.items) {
+    // }
+    // return this.emptyTemplate()
     
   }
 
   itemTemplate(item) {
-    return `<div>${item}</div>`
+    return `<div>${item.name}</div>`
   }
 
   emptyTemplate() {
@@ -124,20 +102,18 @@ export default class MediaResource {
     `
   }
 
-  build() {
-    this.fetchItems()
-  }
+  
   
 }
 // console.log(this.items);
 console.log('this is from media class');
-
+// console.log(listingURL);
 $('.media-library').each(function(){
   if($(this).length > 0) {
-    new MediaResource($(this), {
-      listingURL: $(this).data('listing-url')
-    })
+    new MediaResource($(this))
+    // listingURL: $(this).data('app_label')+$(this).data('model')+$(this).data('object_id')
   }
+  // console.log(listingURL);
 })
 
 // const media = $('#media-list')

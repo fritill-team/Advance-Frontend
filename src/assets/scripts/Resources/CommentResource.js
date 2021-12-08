@@ -1,5 +1,10 @@
 import BaseResource from "./BaseResource";
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 
 export default class CommentResource extends BaseResource {
   constructor($container, options) {
@@ -44,7 +49,7 @@ export default class CommentResource extends BaseResource {
       <p class="review-comment__comment">${item.content}</p>
       <div class="item__actions">
         <a class="btn btn--text">
-          <i class="${item.actions.class}"></i>Reply
+          <i class="${item.actions.class}"></i>${gettext("Reply")}
         </a>
       </div>
     </div>
@@ -62,9 +67,9 @@ export default class CommentResource extends BaseResource {
         <div class="group__img-wrapper">
           <img class="group__img" src="../../assets/images/hd_dp.jpg" alt="">
         </div>
-        <textarea class="group__textarea" placeholder="Add a public comment"></textarea>
+        <textarea class="group__textarea" placeholder="${gettext("Add a public comment")}"></textarea>
       </div>
-      <button class="btn btn--primary btn--rounded" type="submit"> Comment</button>
+      <button class="btn btn--primary btn--rounded" type="submit"> ${gettext("Comment")}</button>
     </form>
     `
   }

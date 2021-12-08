@@ -6,9 +6,13 @@ block content
 	include ../components/bread-crumbs.pug
 	+pageTitle()
 	div(id='media-list' class="media-library"
-		data-listing-url="http://localhost:3000/media/")
+    data-app_label="/courses"
+    data-model="/model"
+    data-object_id="/1/"
+    )
+
 	
-	.container
+	//- .container
 		//- .row
 		//- 	.col-lg-12
 		//- 		.d-flex.flex-column.my-3

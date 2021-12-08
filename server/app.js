@@ -26,10 +26,10 @@ var corsOptions = {
 */
 const categoryRoutes = require('./resources/categories')
 const tagRoutes = require('./resources/tags')
-const mediaRoutes = require('./resources/media_files')
+const mediaRoutes = require('./resources/mediaLibrary')
 app.use('/categories', categoryRoutes);
 app.use('/tags', tagRoutes);
-app.use('/media_files', mediaRoutes);
+app.use('/api/v1/utils/media', mediaRoutes);
 
 
 app.listen(3000, cors(), () => {

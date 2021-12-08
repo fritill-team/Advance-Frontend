@@ -59,6 +59,8 @@
     min-height: 24px;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    margin: 0 8px 0 0;
   }
 }
 .image-list{
@@ -66,5 +68,13 @@
   flex-wrap: wrap;
   .image{
     margin: 8px 4px;
+  }
+}
+
+html[dir="rtl"]{
+  .image{
+    &.image--chip{
+      margin: 0 0 0 8px;
+    }
   }
 }
