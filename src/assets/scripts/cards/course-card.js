@@ -1,3 +1,8 @@
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
 const breakpoints = {
   sm: 576,
   md: 768,
@@ -99,16 +104,16 @@ const courseTemplate = function (course) {
         <div class="course-card__preview-overlay"></div>
       </a>
       <div class="course-card__content">
-				<a class="title-link text-2 semi-bold" href="${course.url}" lang="${course.language}" >${course.title}</a>
+				<a class="title-link text-2 semi-bold" href="${course.url}" lang="${course.language}" >${gettext(course.title)}</a>
 				<p class="title-link course-card__description body-2 gray" lang="${course.language}">${
-          course.short_description ? course.short_description : ""
+          gettext(course.short_description) ? gettext(course.short_description) : ""
         }</p>
 				<div class="course-card__meta">
-					<p class="body-2 gray" lang="${course.language}">${course.category}</p>
-          <p class="body-2 course-card__rate" lang="${course.language}">
-            <i class="fa fa-star"></i>${course.total_rate}
-          </p>
+					<p class="body-2 gray bold" lang="${course.language}">${gettext(course.category)}</p>
         </div>
+        <p class="body-2 course-card__rate" lang="${course.language}">
+          <i class="fa fa-star"></i>${course.total_rate}
+        </p>
       </div>
 
     </div>`;

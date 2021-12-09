@@ -12,26 +12,29 @@ export default class MediaResource {
     this.localItems = []
     this.csrf = $('meta[name="csrf-token"]').prop('content')
     this.$container = $container
-    console.log(this.object_id);
-    
+    this.$itemsList = null
 
+    
+    
     this.$container.append(this.containerTemplate())
+    this.$itemsList = $("#media-listing")
     
     this.fetchItems()
+    // console.log($itemsList);
   }
 
   get items(){
     return this.localItems
   }  
- 
+  
   set items(value){
     this.localItems = value
     this.itemsListener(value)
   }
 
   itemsListener(v){
-    console.log(this.listingTemplate());
-    this.$container.empty()
+    // console.log(this.listingTemplate());
+    this.$itemsList.empty()
     this.$container.append(this.listingTemplate())
   }
   
@@ -65,10 +68,10 @@ export default class MediaResource {
             </div>
           </div>
           <div class="col-md-9 col-sm-12">
-            <ul id="media-listing">${this.listingTemplate()}</ul>
-          </div class="col-md-3">
+            <div id="media-listing">${this.listingTemplate()}</div>
+          </div>
+          <div class="col-md-3">
 
-          <div>
           </div>
         </div>
       </div>
@@ -78,19 +81,60 @@ export default class MediaResource {
     // print(this.items)
     // return this.media;
     // if (this.items.length) {
-    console.log(this.items);
-    // return this.items.map(item => this.itemTemplate(item)).join('')
-    return this.items.map(item => console.log(item)).join('')
+    // console.log(this.items);
+    // return this.items.map(item => {
+    //   for(mediaItem in item){
+    //     console.log(mediaItem);
+    //   }
+    // })
+    // let mediaItems = this.items
+    // // console.log(mediaItems);
+    // mediaItems.map(mediaItem => {
+    //   var itemsList = mediaItem.items
+    //   var itemRules = mediaItem.rules
+    //   return itemsList.map(item => this.itemTemplate(item)).join('');
+    // })
+    return this.items.map(mediaItem => {
+      this.itemTemplate(JSON.stringify(mediaItem))
+      console.log(JSON.stringify(mediaItem))
+    })
+    // console.log(mediaItems);
+    // return mediaItems.items.map(item => this.itemTemplate(item)).join('');
+
+    // console.log("===========");
+    // console.log(itemRules);
+    // for(const item in mediaItem){
+      // console.log(mediaItem[item]);
+
+      // return this.itemTemplate(mediaItem[])
+      // console.log(mediaItem.hasOwnProperty(item.items));
     // }
+    // for(let item in mediaItems){
+    //   console.log(`${item}: ${mediaItems[item]}`)
+    // }
+    // return mediaItems.map(item => console.log(item)).join('')
+    // return mediaItems.map(item => this.itemTemplate(item)).join('')
+    // mediaItems.map(mediaItem => console.log(mediaItem.items));
+    // for(item in mediaItem){
+    //   console.log(item);
+    // }
+    // return mediaItems.map(mediaItem => mediaItem.map(item => console.log(item)))
+    // this.itemTemplate(mediaItem)).join('')
     // return this.items.map(item => this.itemTemplate(item)).join('')
+    // return this.items.map(item => console.log(item.rules+"this is items"+item.items )).join('')
+    // }
+    // return this.items.map(item => this.itemTemplate(item.items)).join('')
     // if (this.items) {
     // }
     // return this.emptyTemplate()
     
   }
+  rulesTemplate(item){
+    return `<div>${item}</div>`
 
+  }
   itemTemplate(item) {
-    return `<div>${item.name}</div>`
+    return `<div>${item.caption}</div>`
   }
 
   emptyTemplate() {
