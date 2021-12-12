@@ -4,7 +4,9 @@
   margin-bottom: 8px;
   max-width: 600px;
   min-width: 300px;
-  
+  @media (max-width: 768px) {
+    min-width: unset;
+  }
   &.field-wrapper--full{
     max-width: 100%;
   }

@@ -34,6 +34,7 @@ import './drag-drop-multifield'
 import '../vendor/fieldChooser.min'
 import './backend_scripts/panel-loader'
 import './multi-select'
+import './tooltipster.bundle.min'
 // import "./recommendationTemplate"
 import './resourceBuilder'
 import './Resources/Media'
@@ -42,4 +43,3 @@ import './overlay'
 import './dialog'
 import './jquery.nicescroll.min'
 import './scrollbars'
-

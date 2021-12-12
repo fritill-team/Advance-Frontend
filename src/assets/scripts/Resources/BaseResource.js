@@ -320,8 +320,8 @@ export default class BaseResource {
 }
 
 // db.media.insert({
-//   id: 1,
-//   collection_name: "Cover",
+//   id: 3,
+//   collection_name: "images",
 //   content_type: 3,
 //   object_id: 3,
 //   order: 1,
@@ -330,5 +330,4 @@ export default class BaseResource {
 //   mime_type: "text.jpg",
 //   size: 100,
 //   caption: "lorem lorem lorem",
-//   collection_name: "files"
 // })

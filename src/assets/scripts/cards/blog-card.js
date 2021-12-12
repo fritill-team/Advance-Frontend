@@ -33,3 +33,16 @@ $(".blog-card-container").each(function (i, item) {
   let data = item.data("data");
   item.html($(blogCard(data)));
 });
+$(function(){
+  $('.course-card__author').each(function(){
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      content: $('<div class="card"><p class="body-2">This text is in bold case !</p></div>')
+    });
+  })
+})

@@ -8,28 +8,28 @@ block content
 	div(id='media-list' class="media-library"
     data-app_label="/courses"
     data-model="/model"
-    data-object_id="/1/"
+    data-object_id="/3/"
     )
 
 	
-	//- .container
+	.container
 		//- .row
 		//- 	.col-lg-12
 		//- 		.d-flex.flex-column.my-3
 		//- 			.d-flex.justify-content-between.align-items-center
-		//- 				h1.title-h1.mb-0 Media
+		//- 				h1.mb-0 Media
 		.row
 			.col-lg-12
 				.d-flex.flex-column
 					.d-flex.justify-content-between.align-items-center
-						h2.title-h2 Media Library
+						h2 Media Library
 						a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
 		.row
 
 			.col-lg-9
 				.row
 					.col-lg-4.col-md-4
-						.media-card
+						.media-card(id="tool" title="this is title from tooltipster")
 							.media-card__image
 								a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
 									img(src='../../assets/images/get_img.jpg' alt='')
@@ -203,7 +203,7 @@ block content
 			.col-lg-12
 				.d-flex.flex-column
 					.d-flex.justify-content-between.align-items-center
-						h2.title-h2.mt-0 Media Library
+						h2.mt-0 Media Library
 						a(class="btn btn--primary btn--primary btn--rounded" href="#") Set
 		.row
 			.col-lg-9
@@ -253,7 +253,7 @@ block content
 			.col-lg-12
 				.d-flex.flex-column
 					.d-flex.justify-content-between.align-items-center
-						h2.title-h2 Download File
+						h2 Download File
 						a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
 		.row
 			.col-lg-9

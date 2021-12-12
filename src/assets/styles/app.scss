@@ -1,4 +1,5 @@
 @import "./base/_variables.scss";
+@import "./base/_bootstrap-grid-rtl.scss";
 @import "layouts/_normalize.scss";
 
 @import "layouts/_base";
@@ -9,6 +10,7 @@
 @import "./custom/toastr";
 @import "./components/_tabs.scss";
 @import "./custom/_owl-slider.scss";
+@import "./custom/_tooltipster.scss";
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
 @import "./components/_about-list";

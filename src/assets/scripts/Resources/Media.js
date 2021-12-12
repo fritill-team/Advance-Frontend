@@ -1,5 +1,11 @@
 import { openOverlay } from "../overlay";
 
+let gettext
+if (typeof window.gettext === 'function')
+  gettext = window.gettext
+else
+  gettext = key => key
+
 export default class MediaResource {
   constructor($container){
 
@@ -13,12 +19,12 @@ export default class MediaResource {
     this.csrf = $('meta[name="csrf-token"]').prop('content')
     this.$container = $container
     this.$itemsList = null
-
+    this.$itemRules = null
     
     
     this.$container.append(this.containerTemplate())
     this.$itemsList = $("#media-listing")
-    
+    this.$itemRules = $("#media-rules")
     this.fetchItems()
     // console.log($itemsList);
   }
@@ -34,8 +40,9 @@ export default class MediaResource {
 
   itemsListener(v){
     // console.log(this.listingTemplate());
-    this.$itemsList.empty()
-    this.$container.append(this.listingTemplate())
+    // this.$itemsList.empty()
+    this.$itemsList.append(this.listingTemplate())
+    // this.$itemRules.append(this.rulesTemplate())
   }
   
   fetchItems(data = {}) {
@@ -57,6 +64,23 @@ export default class MediaResource {
     // console.log(url);
   }
 
+  confirmDelete() {
+    let self = this
+    $.ajax({
+      url: self.deleteURL,
+      type: "DELETE",
+      headers: {'X-CSRFToken': self.csrf},
+      success: function () {
+        self.fetchItems()
+        self.deleteURL = ''
+      },
+      error: function (xhr) {
+        console.log(xhr)
+        console.log("cannot delete this item")
+      }
+    })
+  }
+
   containerTemplate(data) {
     return $(`
       <div class="container">
@@ -67,75 +91,78 @@ export default class MediaResource {
               <a class="btn btn--primary btn--primary btn--rounded" href="#">Add</a>
             </div>
           </div>
-          <div class="col-md-9 col-sm-12">
-            <div id="media-listing">${this.listingTemplate()}</div>
-          </div>
-          <div class="col-md-3">
 
-          </div>
+        </div>
+        <div class="row" id="media-listing">
+          ${this.listingTemplate()}
+          
         </div>
       </div>
     `)
   }
   listingTemplate() {
-    // print(this.items)
-    // return this.media;
-    // if (this.items.length) {
-    // console.log(this.items);
-    // return this.items.map(item => {
-    //   for(mediaItem in item){
-    //     console.log(mediaItem);
-    //   }
-    // })
-    // let mediaItems = this.items
-    // // console.log(mediaItems);
-    // mediaItems.map(mediaItem => {
-    //   var itemsList = mediaItem.items
-    //   var itemRules = mediaItem.rules
-    //   return itemsList.map(item => this.itemTemplate(item)).join('');
-    // })
-    return this.items.map(mediaItem => {
-      this.itemTemplate(JSON.stringify(mediaItem))
-      console.log(JSON.stringify(mediaItem))
+    let mediaItems = this.items
+    console.log(mediaItems);
+    
+    return mediaItems.map(item => {
+      
+      let itemRules = item.rules
+      let mediaItem = item.items
+      
+      // loop on items
+      return [this.itemTemplate(mediaItem), this.rulesTemplate(itemRules)].join('')
+        
     })
-    // console.log(mediaItems);
-    // return mediaItems.items.map(item => this.itemTemplate(item)).join('');
-
-    // console.log("===========");
-    // console.log(itemRules);
-    // for(const item in mediaItem){
-      // console.log(mediaItem[item]);
-
-      // return this.itemTemplate(mediaItem[])
-      // console.log(mediaItem.hasOwnProperty(item.items));
-    // }
-    // for(let item in mediaItems){
-    //   console.log(`${item}: ${mediaItems[item]}`)
-    // }
-    // return mediaItems.map(item => console.log(item)).join('')
-    // return mediaItems.map(item => this.itemTemplate(item)).join('')
-    // mediaItems.map(mediaItem => console.log(mediaItem.items));
-    // for(item in mediaItem){
-    //   console.log(item);
-    // }
-    // return mediaItems.map(mediaItem => mediaItem.map(item => console.log(item)))
-    // this.itemTemplate(mediaItem)).join('')
-    // return this.items.map(item => this.itemTemplate(item)).join('')
-    // return this.items.map(item => console.log(item.rules+"this is items"+item.items )).join('')
-    // }
-    // return this.items.map(item => this.itemTemplate(item.items)).join('')
-    // if (this.items) {
-    // }
-    // return this.emptyTemplate()
     
   }
-  rulesTemplate(item){
-    return `<div>${item}</div>`
-
+  itemTemplate(mediaItem) {
+    return mediaItem.map(item => {
+      return `<div class="col-9">
+        <div class="row">
+          ${item.collection_name === 'images'? `
+            <div class="col-4">
+              <div class="media-card"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div></div>
+            </div> 
+            `: item.collection_name === "cover" ? `
+            <div class="col-12">
+              <div class="media-card media-card--cover"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div></div>
+            </div>
+            `: `
+              <div class="col-6">
+                <div class="media-card media-card--file tooltip" title="This is my div's tooltip message!"><span class="material-icons media-card__file-icon">description</span><div class="media-card__content"> <h4 class="text-h4 media-card__file-name">file Item</h4><div class="media-card__details"><div class="media-card__file-data"> <span class="body-1 gray"> Size :</span><span class="body-2 gray">45m</span></div><div class="media-card__file-data"> <span class="body-1 gray"> Type :</span><span class="body-2 gray">PDF</span></div></div></div><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div>
+              </div>
+            `}
+        </div>
+      </div>`
+    }).join('')
   }
-  itemTemplate(item) {
-    return `<div>${item.caption}</div>`
+  rulesTemplate(ruleItem){
+    return `<div class="col-3">
+      <div class="card card--data">
+        <div class="card__header"><h5 class="title-h5">${gettext("Rules")}</h5></div>
+        <div class="card__content">
+          <div class="description">
+            <span class="description__name">${gettext("max")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.max_size}</p>
+          </div>
+          <div class="description">
+            <span class="description__name">${gettext("display")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.display_name}</p>
+          </div>
+          <div class="description">
+            <span class="description__name">${gettext("description")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.description}</p>
+          </div>
+          <div class="description">
+            <span class="description__name">${gettext("file")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.single_file}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
   }
+  
 
   emptyTemplate() {
     return `
