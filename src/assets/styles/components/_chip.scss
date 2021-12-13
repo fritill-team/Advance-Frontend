@@ -1,37 +1,37 @@
-.chip-list{
+.chips-wrapper{
   display: flex;
   flex-wrap: wrap;
-  .chip-list__item{
+  .chip__item{
     height: 32px;
     padding: 0 12px;
     border-radius: 50px;
     font-size: 16px;
     color: $gray;
-    background-color: $default;
+    background-color: $white;
     display: inline-flex;
     align-items: center;
     @include normalizeTypo;
     margin: 0 10px 10px 0;
-    &.chip-list__item--with-icon{
+    &.chip__item--with-icon{
       padding: 0 8px;
     }
-    &.chip-list__item--with-image{
+    &.chip__item--with-image{
 
     }
-    &.chip-list__item--outline{
+    &.chip__item--outline{
       background-color: transparent;
       border: 1px solid currentColor;
     }
-    &.chip-list__item--primary{
+    &.chip__item--primary{
       background-color: rgba($primary, .2);
     }
-    &.chip-list__item--secondary{
+    &.chip__item--secondary{
       background-color: rgba($secondary, .2);
     }
-    &.chip-list__item--accent{
+    &.chip__item--accent{
       background-color: rgba($accent, .2);
     }
-    &.chip-list__item--danger{
+    &.chip__item--danger{
       background-color: rgba($danger, .2);
     }
     .material-icons{
@@ -39,10 +39,10 @@
       color: inherit;
       line-height: 32px;
     }
-    .chip-list__item-content{
+    .chip__item-content{
       margin: 0 8px;
     }
-    .chip-list__item-action{
+    .chip__item-action{
       color: $gray;
       margin: 0 8px 0 0;
       &:last-of-type{
@@ -56,21 +56,30 @@
 }
 
 html[dir="rtl"]{
-  .chip-list{
-    .chip-list__item{
+  .chips-wrapper{
+    .chip__item{
       margin: 0 0 10px 10px;
       // &:first-of-type{
       //   margin: 0;
       // }
     }
-    .chip-list__item-content{
+    .chip__item-content{
       // margin: 0 0 0 8px;
     }
-    .chip-list__item-action{
+    .chip__item-action{
       margin: 0 0 0 8px;
       &:last-of-type{
         margin: 0;
       }
+    }
+  }
+}
+
+.night-mode{
+  .chips-wrapper{
+    .chip__item{
+      background-color: $black;
+      @include whiteTypo;
     }
   }
 }

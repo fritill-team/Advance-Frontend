@@ -20,12 +20,25 @@ export default class MediaResource {
     this.$container = $container
     this.$itemsList = null
     this.$itemRules = null
+    this.$dialog = null
     
     
     this.$container.append(this.containerTemplate())
     this.$itemsList = $("#media-listing")
     this.$itemRules = $("#media-rules")
+    this.$dialog = $("#media-dialog")
     this.fetchItems()
+    // $(function(){
+    //   $('.add-media').each(function(){
+    //     $(this).on('click', function(){console.log('clicked')})
+    //   })
+    // })
+    let self = this
+    $(document).on('click', '.add-media', function(e){
+      e.preventDefault();
+      openOverlay()
+      self.$dialog.addClass('dialog--show')
+    })
     // console.log($itemsList);
   }
 
@@ -83,19 +96,10 @@ export default class MediaResource {
 
   containerTemplate(data) {
     return $(`
+    ${this.dialog()}
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="title-h2">Media Library</h2>
-              <a class="btn btn--primary btn--primary btn--rounded" href="#">Add</a>
-            </div>
-          </div>
-
-        </div>
         <div class="row" id="media-listing">
           ${this.listingTemplate()}
-          
         </div>
       </div>
     `)
@@ -110,15 +114,24 @@ export default class MediaResource {
       let mediaItem = item.items
       
       // loop on items
-      return [this.itemTemplate(mediaItem), this.rulesTemplate(itemRules)].join('')
+      return [this.itemTemplate(mediaItem, itemRules), this.rulesTemplate(itemRules)].join('')
         
     })
     
   }
-  itemTemplate(mediaItem) {
-    return mediaItem.map(item => {
-      return `<div class="col-9">
+  
+  itemTemplate(mediaItem, itemRules) {
+    return `
+      <div class="col-9">
         <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="title-h2">Media ${itemRules.collection_name}</h2>
+              <a class="btn btn--primary btn--primary btn--rounded add-media" href="#">Add</a>
+            </div>
+          </div>
+        ${mediaItem.map(item => {
+          return `
           ${item.collection_name === 'images'? `
             <div class="col-4">
               <div class="media-card"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div></div>
@@ -132,9 +145,11 @@ export default class MediaResource {
                 <div class="media-card media-card--file tooltip" title="This is my div's tooltip message!"><span class="material-icons media-card__file-icon">description</span><div class="media-card__content"> <h4 class="text-h4 media-card__file-name">file Item</h4><div class="media-card__details"><div class="media-card__file-data"> <span class="body-1 gray"> Size :</span><span class="body-2 gray">45m</span></div><div class="media-card__file-data"> <span class="body-1 gray"> Type :</span><span class="body-2 gray">PDF</span></div></div></div><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div>
               </div>
             `}
+          `
+        }).join('')}
         </div>
-      </div>`
-    }).join('')
+      </div>
+    `
   }
   rulesTemplate(ruleItem){
     return `<div class="col-3">
@@ -173,6 +188,15 @@ export default class MediaResource {
     `
   }
 
+  dialog(){
+    return `
+      <div class="dialog show--dialog" id="media-dialog">
+        <div class="card">
+          <input type="file"/>
+        </div>
+      </div>
+    `
+  }
   
   
 }

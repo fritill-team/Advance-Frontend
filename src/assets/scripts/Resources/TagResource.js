@@ -32,7 +32,6 @@ export default class TagResource extends BaseResource {
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
-          ${this.searchForm()}
           <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
           ${this.withPagination ? this.paginationTemplate() : ''}
         </div>
@@ -43,7 +42,7 @@ export default class TagResource extends BaseResource {
   listingTemplate() {
     // console.log('here')
     // console.log(this.items.length);
-    return `<div class="chip-list" id="${this.prefix}-listing">
+    return `<div class="chips-wrapper" id="${this.prefix}-listing">
         ${this.items.map(item => this.itemTemplate(item)).join('')}
       </div>`
     // if(this.items){
@@ -56,12 +55,12 @@ export default class TagResource extends BaseResource {
 
   itemTemplate(item) {
     return ` 
-      <div class="chip-list">
-        <div class="chip-list__item">
+      <div class="chips-wrapper">
+        <div class="chip__item">
         <span class="material-icons">tag</span></a>
-          <p class="chip-list__item-content">${item.name}</p>
+          <p class="chip__item-content">${item.name}</p>
           ${item.actions.length > 1 ? item.actions.map(action => `
-            <a class="chip-list__item-action" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
+            <a class="chip__item-action ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
           `).join('') : ''}
         </div>
       </div>

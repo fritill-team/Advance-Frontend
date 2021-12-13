@@ -9,13 +9,13 @@ const validator = (body, rules, customMessages, callback) => {
 const mapActions = (id, resource) => ([
   {
     "name": "edit",
-    "icon": "far fa-edit",
+    "icon": "edit",
     "class": `${resource}-edit`,
     "link": `http://localhost:3000/${resource}/${id}/`
   },
   {
     "name": "delete",
-    "icon": "far fa-trash-alt",
+    "icon": "delete",
     "class": `${resource}-delete toggle-dialog`,
     "link": `http://localhost:3000/${resource}/${id}/`,
   }
