@@ -39,6 +39,22 @@ export default class MediaResource {
       openOverlay()
       self.$dialog.addClass('dialog--show')
     })
+    
+
+    // $('.media-dialog').each(function(){
+    // })
+    // $(function(){
+      // $('#media-dialog').dropzone({url: 'this/listingURL'})
+      // $('#media-dialog').load(function(){
+        // console.log('loaded');
+      // })
+    // })
+    // $(document).on('load', '#media-dialog', function(){
+    //   console.log('#media-dialog');
+    // })
+
+    // $('#media-dialog').dropzone();
+    
     // console.log($itemsList);
   }
 
@@ -134,15 +150,16 @@ export default class MediaResource {
           return `
           ${item.collection_name === 'images'? `
             <div class="col-4">
-              <div class="media-card"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div></div>
+              <div class="media-card"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>${item.caption}</p></div></div>
             </div> 
             `: item.collection_name === "cover" ? `
             <div class="col-12">
-              <div class="media-card media-card--cover"><div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div></div>
+              <div class="media-card media-card--cover">
+                <div class="media-card__image"><a class="venobox vbox-item" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU"><img src="../../assets/images/get_img.jpg" alt=""></a><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div><div class="media-card__description"><p>${item.caption}</p></div></div>
             </div>
             `: `
               <div class="col-6">
-                <div class="media-card media-card--file tooltip" title="This is my div's tooltip message!"><span class="material-icons media-card__file-icon">description</span><div class="media-card__content"> <h4 class="text-h4 media-card__file-name">file Item</h4><div class="media-card__details"><div class="media-card__file-data"> <span class="body-1 gray"> Size :</span><span class="body-2 gray">45m</span></div><div class="media-card__file-data"> <span class="body-1 gray"> Type :</span><span class="body-2 gray">PDF</span></div></div></div><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div>
+                <div class="media-card media-card--file tooltip" title="This is my div's tooltip message!"><span class="material-icons media-card__file-icon">description</span><div class="media-card__content"> <h4 class="text-h4 media-card__file-name">${item.file}</h4><div class="media-card__details"><div class="media-card__file-data"> <span class="body-1 gray"> Size :</span><span class="body-2 gray">${item.size}m</span></div><div class="media-card__file-data"> <span class="body-1 gray"> Type :</span><span class="body-2 gray">PDF</span></div></div></div><div class="media-card__action"><div class="dropdown dropdown__activator"><button class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple"><i class="fas fa-ellipsis-v"></i></button><div class="dropdown__content dropdown-content-width"><div class="list condensed"><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Edit</span></div><div class="list-item__action"></div></a><a class="list-item list-item--one-line list-item--open " href="#"><div class="list-item__avatar"><i class="far fa-copy"></i></div><div class="list-item__content"><span class="body-2 bold">Delete</span></div><div class="list-item__action"></div></a></div></div></div></div></div>
               </div>
             `}
           `
@@ -190,11 +207,11 @@ export default class MediaResource {
 
   dialog(){
     return `
-      <div class="dialog show--dialog" id="media-dialog">
-        <div class="card">
-          <input type="file"/>
+      <div class="dialog media-dialog" id="media-dialog">
+        <div class="card" id="media">
         </div>
       </div>
+      <div id="output"></div>
     `
   }
   
@@ -203,6 +220,7 @@ export default class MediaResource {
 // console.log(this.items);
 console.log('this is from media class');
 // console.log(listingURL);
+
 $('.media-library').each(function(){
   if($(this).length > 0) {
     new MediaResource($(this))

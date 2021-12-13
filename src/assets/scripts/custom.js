@@ -378,7 +378,9 @@ $(document).on("click", "content__item", function () {
 // edit threads
 
 // Drop zone
-$("div#myId").dropzone({url: "/file/post"});
+$("#media").dropzone({url: 'text/test'});
+
+
 
 $(document).on('change', 'input[type="file"]', function (e) {
   // let imageList = $('.image-list')
