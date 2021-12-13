@@ -330,4 +330,5 @@ export default class BaseResource {
 //   mime_type: "text.jpg",
 //   size: 100,
 //   caption: "lorem lorem lorem",
+//   file_path: ""
 // })

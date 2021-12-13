@@ -68,6 +68,10 @@
 			}
 		}
     .course-card__badge{
+      display: none;
+      &:last-of-type{
+        display: block;
+      }
       &.course-card__badge--category{
         transform: translateX(0);
       }
@@ -139,6 +143,9 @@
       height: 24px;
       object-fit: fill;
       float: right;
+    }
+    &:last-of-type{
+      display: none;
     }
   }
   

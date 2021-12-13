@@ -23,6 +23,9 @@ const surveyTemplate = (item) => `
       <div class="course-card__badge">
         <img src="${item.sponsor.cover}" >
       </div>
+      <div class="course-card__badge">
+        <img src="${item.sponsor.inverted_cover}" >
+      </div>
     `: ''}
 	</div>
 </div>
@@ -33,3 +36,4 @@ $(".survey-card-container").each(function (i, item) {
   let data = item.data("data");
   item.html($(surveyTemplate(data)));
 });
+
