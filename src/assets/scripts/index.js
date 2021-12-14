@@ -44,11 +44,6 @@ import './dialog'
 import './jquery.nicescroll.min'
 import './scrollbars'
 
-// import Dropzone from "../vendor/dropzone";
-// const myDropzone = new Dropzone("#media", { url: 'text/text'});
-//   myDropzone.on("addedfile", file => {
-//     console.log("A file has been added");
-//   });
 
 
 

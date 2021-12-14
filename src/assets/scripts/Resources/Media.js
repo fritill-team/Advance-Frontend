@@ -1,4 +1,5 @@
 import { openOverlay } from "../overlay";
+// import Dropzone from "../../vendor/dropzone";
 
 let gettext
 if (typeof window.gettext === 'function')
@@ -39,7 +40,14 @@ export default class MediaResource {
       openOverlay()
       self.$dialog.addClass('dialog--show')
     })
-    
+    // const myDropzone = new Dropzone("#media", { 
+    //   url: this.listingURL+this.appLabel+this.model+this.object_id,
+    //   method: "post",
+    //   // withCredentials: true
+    // });
+    // myDropzone.on("addedfile", file => {
+    //   console.log("A file has been added");
+    // });
 
     // $('.media-dialog').each(function(){
     // })
@@ -208,8 +216,8 @@ export default class MediaResource {
   dialog(){
     return `
       <div class="dialog media-dialog" id="media-dialog">
-        <div class="card" id="media">
-        </div>
+      <form id="upload-widget" method="post" action="${this.listingURL+this.model+this.object_id}" class="dropzone card"></form>
+        
       </div>
       <div id="output"></div>
     `
@@ -228,6 +236,8 @@ $('.media-library').each(function(){
   }
   // console.log(listingURL);
 })
+
+
 
 // const media = $('#media-list')
 //   if(media.length > 0) {

@@ -1,85 +1,84 @@
 .chips-wrapper{
   display: flex;
   flex-wrap: wrap;
-  .chip__item{
-    height: 32px;
-    padding: 0 12px;
-    border-radius: 50px;
-    font-size: 16px;
-    color: $gray;
-    background-color: $white;
-    display: inline-flex;
-    align-items: center;
-    @include normalizeTypo;
-    margin: 0 10px 10px 0;
-    &.chip__item--with-icon{
-      padding: 0 8px;
-    }
-    &.chip__item--with-image{
-
-    }
-    &.chip__item--outline{
-      background-color: transparent;
-      border: 1px solid currentColor;
-    }
-    &.chip__item--primary{
-      background-color: rgba($primary, .2);
-    }
-    &.chip__item--secondary{
-      background-color: rgba($secondary, .2);
-    }
-    &.chip__item--accent{
-      background-color: rgba($accent, .2);
-    }
-    &.chip__item--danger{
-      background-color: rgba($danger, .2);
-    }
-    .material-icons{
-      font-size: inherit;
-      color: inherit;
-      line-height: 32px;
-    }
-    .chip__item-content{
-      margin: 0 8px;
-    }
-    .chip__item-action{
-      color: $gray;
-      margin: 0 8px 0 0;
-      &:last-of-type{
-        margin: 0;
-      }
-    }
-    // &.chip-list__item--with-image{
-
-    // }
+}
+.chip-item{
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 50px;
+  font-size: 16px;
+  color: $gray;
+  background-color: $white;
+  display: inline-flex;
+  align-items: center;
+  @include normalizeTypo;
+  margin: 0 10px 10px 0;
+  &.chip-item--with-icon{
+    padding: 0 8px;
   }
+  &.chip-item--with-image{
+
+  }
+  &.chip-item--sm{
+    font-size: 12px;
+    height: 28px;
+    .material-icons{
+      line-height: 28px;
+    }
+  }
+  &.chip-item--outline{
+    background-color: transparent;
+    border: 1px solid currentColor;
+  }
+  &.chip-item--primary{
+    background-color: rgba($primary, .2);
+  }
+  &.chip-item--secondary{
+    background-color: rgba($secondary, .2);
+  }
+  &.chip-item--accent{
+    background-color: rgba($accent, .2);
+  }
+  &.chip-item--danger{
+    background-color: rgba($danger, .2);
+  }
+  .material-icons{
+    font-size: inherit;
+    color: inherit;
+    line-height: 32px;
+  }
+  .chip-item__content{
+    margin: 0 8px;
+  }
+  .chip-item__action{
+    color: $gray;
+    margin: 0 8px 0 0;
+    &:last-of-type{
+      margin: 0;
+    }
+  }
+  // &.chip-list__item--with-image{
+
+  // }
 }
 
+
 html[dir="rtl"]{
-  .chips-wrapper{
-    .chip__item{
-      margin: 0 0 10px 10px;
-      // &:first-of-type{
-      //   margin: 0;
-      // }
-    }
-    .chip__item-content{
-      // margin: 0 0 0 8px;
-    }
-    .chip__item-action{
-      margin: 0 0 0 8px;
-      &:last-of-type{
-        margin: 0;
-      }
+  .chip-item{
+    margin: 0 0 10px 10px;
+  }
+  
+  .chip-item__action{
+    margin: 0 0 0 8px;
+    &:last-of-type{
+      margin: 0;
     }
   }
 }
 
 .night-mode{
-  .chips-wrapper{
-    .chip__item{
-      background-color: $black;
-      @include whiteTypo;
-    }
+  .chip-item{
+    background-color: $black;
+    @include whiteTypo;
   }
 }

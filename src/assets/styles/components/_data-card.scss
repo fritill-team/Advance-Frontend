@@ -1,0 +1,128 @@
+.data-card{
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: $white;
+  margin: 25px 0;
+  display: flex;
+  @include normalizeTypo;
+  overflow: hidden;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  padding: 16px;
+  & > div{
+    margin: 0 16px 0 0;
+    max-width: 300px;
+    transition: .3s ease all;
+    // min-width: 300px;
+    
+  }
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // transform: translateX(-100%);
+    text-align: right;
+    height: 100%;
+    width: 24px;
+    background-color: $primary;
+    font-family: "Material Icons";
+    content: "\e945";
+    align-items: center;
+    color: $white;
+    font-size: 24px;
+    border-radius: 5px 0 0 5px;
+    display: none;
+    z-index: -1;
+  }
+  &.data-card--draggable{
+    border-radius: 0 5px 5px 0;
+    padding-left: 24px;
+    &::before{
+      display: flex;
+    }
+  }
+  .data-card__navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .data-card__image{
+    display: flex;
+  }
+  .data-card__details{
+    max-width: 500px;
+    width: auto;
+    text-align: left;
+  }
+  .data-card-actions{
+    position: absolute;
+    width: 120px;
+    top: 0;
+    right: 0;
+    transform: translateX(110%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+    transition: .3s ease all;
+    span,i{
+      color: $gray;
+      font-size: 20px;
+    }
+  }
+  &:hover{
+    .data-card-actions{
+      transform: translateX(0);
+    }
+    & > div{
+      &:last-of-type{
+        margin-top: 30px;
+      }
+    }
+  }
+}
+.description{
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  strong{
+    margin: 0 4px;
+  }
+}
+
+.night-mode{
+  .data-card{
+    background-color: $black;
+    @include whiteTypo;
+  }
+}
+
+html[dir="rtl"]{
+  .data-card{
+    & > div{
+      margin: 0 0 0 16px;
+      
+    }
+    &.data-card--draggable{
+      padding: 0 24px 0 0;
+      border-radius: 5px 0 0 5px;
+    }
+    &::before{
+      left: unset;
+      right: 0;
+      transform: translateX(100%);
+      border-radius: 0 5px 5px 0;
+    }
+    
+  }
+  .description{
+    text-align: right;
+  }
+}

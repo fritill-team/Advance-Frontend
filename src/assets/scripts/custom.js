@@ -378,7 +378,7 @@ $(document).on("click", "content__item", function () {
 // edit threads
 
 // Drop zone
-$("#media").dropzone({url: 'text/test'});
+// $("#media").dropzone({url: 'text/test'});
 
 
 

@@ -56,11 +56,11 @@ export default class TagResource extends BaseResource {
   itemTemplate(item) {
     return ` 
       <div class="chips-wrapper">
-        <div class="chip__item">
+        <div class="chip-item">
         <span class="material-icons">tag</span></a>
-          <p class="chip__item-content">${item.name}</p>
+          <p class="chip-item__content">${item.name}</p>
           ${item.actions.length > 1 ? item.actions.map(action => `
-            <a class="chip__item-action ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
+            <a class="chip-item__action ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
           `).join('') : ''}
         </div>
       </div>
