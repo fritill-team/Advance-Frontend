@@ -7,7 +7,7 @@
   background-color: $white;
   margin: 25px 0;
   display: flex;
-  @include normalizeTypo;
+  // @include normalizeTypo;
   overflow: hidden;
   // flex-wrap: wrap;
   // justify-content: space-between;
@@ -16,7 +16,9 @@
     margin: 0 16px 0 0;
     max-width: 300px;
     transition: .3s ease all;
-    // min-width: 300px;
+    &:last-of-type{
+      margin-top: 30px;
+    }
     
   }
   &::before{
@@ -81,17 +83,13 @@
     .data-card-actions{
       transform: translateX(0);
     }
-    & > div{
-      &:last-of-type{
-        margin-top: 30px;
-      }
-    }
   }
 }
 .description{
   display: flex;
   align-items: baseline;
   text-align: left;
+  @include normalizeTypo;
   strong{
     margin: 0 4px;
   }

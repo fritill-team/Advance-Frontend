@@ -16,7 +16,6 @@ const MediaSchema = new Schema({
   uuid: String,
   size: Number,
   file_path: String
-
 })
 
 

@@ -1,5 +1,6 @@
 import { openOverlay } from "../overlay";
-// import Dropzone from "../../vendor/dropzone";
+// const { Dropzone } = require("dropzone");
+
 
 let gettext
 if (typeof window.gettext === 'function')
@@ -25,7 +26,7 @@ export default class MediaResource {
     
     
     this.$container.append(this.containerTemplate())
-    this.$itemsList = $("#media-listing")
+    this.$itemsList = $("#mediaListing")
     this.$itemRules = $("#media-rules")
     this.$dialog = $("#media-dialog")
     this.fetchItems()
@@ -40,11 +41,13 @@ export default class MediaResource {
       openOverlay()
       self.$dialog.addClass('dialog--show')
     })
+   
+    // $("div#media-dialog").dropzone({ url: "/file/post" });
     // const myDropzone = new Dropzone("#media", { 
     //   url: this.listingURL+this.appLabel+this.model+this.object_id,
     //   method: "post",
-    //   // withCredentials: true
     // });
+      // withCredentials: true
     // myDropzone.on("addedfile", file => {
     //   console.log("A file has been added");
     // });
@@ -93,12 +96,13 @@ export default class MediaResource {
       success: function (data) {
         self.items = data
         self.loading = false
+        console.log(this.url);
       },
       error: function (xhr) {
         console.error(xhr)
       }
     })
-    // console.log(url);
+    // console.log(self.url);
   }
 
   confirmDelete() {
@@ -122,7 +126,7 @@ export default class MediaResource {
     return $(`
     ${this.dialog()}
       <div class="container">
-        <div class="row" id="media-listing">
+        <div class="row" id="mediaListing">
           ${this.listingTemplate()}
         </div>
       </div>
@@ -216,10 +220,9 @@ export default class MediaResource {
   dialog(){
     return `
       <div class="dialog media-dialog" id="media-dialog">
-      <form id="upload-widget" method="post" action="${this.listingURL+this.model+this.object_id}" class="dropzone card"></form>
-        
+      <!-- Example of a form that Dropzone can take over -->
+      <form action="http://localhost:3000/api/v1/utils/media/courses/model/3" class="dropzone card" ></form>
       </div>
-      <div id="output"></div>
     `
   }
   

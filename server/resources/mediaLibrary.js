@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const router = express.Router()
 const {
   mapItems,
@@ -58,35 +59,49 @@ router.get('/:app_label/:model/:object_id/', async function (req, res) {
   // list = mapItems(list, 'mediaLibrary')
   try {
     res.send(response);
-    console.log(response);
+    // console.log(response);
   } catch (error) {
     res.status(500).send(error);
   }
 })
 
-router.post('/:app_label/:model/:object_id/', function (req, res) {
-  validator(req.body, validationRules, {}, async (err, status) => {
-    if (!status) {
-      res.status(422).send({
-        ...err.errors
-      });
+router.post('/:app_label/:model/:object_id/', async function (req, res) {
+  // console.log('this is body: '+req.body.name);
+  // try {
+  //   const file = req.files.mFile
+  //   console.log(file);
+  //   const savePath = path.join(__dirname, 'public', 'uploads', file.name)
+  // } catch (error) {
+  //   console.log(error);
+  //   res.send('error upload file')
+  // }
+
+  await Model.create(
+    req.body
+    // parent
+  , function (err, obj) {
+    console.log('this is body: '+obj);
+    if (err) {
+      res.status(400).send(err);
     } else {
-      const {
-        name,
-        parent
-      } = req.body
-      await Model.create({
-        name,
-        parent
-      }, function (err, obj) {
-        if (err) {
-          res.status(400).send(err);
-        } else {
-          res.sendStatus(200);
-        }
-      })
+      res.sendStatus(200);
     }
   })
+
+
+  // validator(req.body, validationRules, {}, async (err, status) => {
+  //   if (!status) {
+  //     res.status(422).send({
+  //       ...err.errors
+  //     });
+  //   } else {
+  //     const {
+  //       name,
+  //       parent
+  //     } = req.body
+      
+  //   }
+  // })
 })
 
 router.get('/:app_label/:model/:object_id/', async function (req, res) {
