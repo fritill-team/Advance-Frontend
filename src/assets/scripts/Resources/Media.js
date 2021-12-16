@@ -41,7 +41,17 @@ export default class MediaResource {
       openOverlay()
       self.$dialog.addClass('dialog--show')
     })
-   
+
+    $(function(){
+      const dropzone = new Dropzone("div#test", { 
+        url: `http://localhost:3000/api/v1/utils/media/courses/model/1`,
+        method: "post"
+      })
+      dropzone.on("addedfile", file => {
+        console.log(this.options.url);
+      });
+      // console.log(dropzone);
+    })
     // $("div#media-dialog").dropzone({ url: "/file/post" });
     // const myDropzone = new Dropzone("#media", { 
     //   url: this.listingURL+this.appLabel+this.model+this.object_id,
@@ -155,7 +165,7 @@ export default class MediaResource {
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <h2 class="title-h2">Media ${itemRules.collection_name}</h2>
-              <a class="btn btn--primary btn--primary btn--rounded add-media" href="#">Add</a>
+              <a class="btn btn--primary btn--primary btn--rounded add-media" href="#">${itemRules.collection_name === "cover"? `${gettext("Set")}`: `${gettext("Add")}`}</a>
             </div>
           </div>
         ${mediaItem.map(item => {
@@ -198,8 +208,16 @@ export default class MediaResource {
             <p class="description__details">${ruleItem.description}</p>
           </div>
           <div class="description">
-            <span class="description__name">${gettext("file")}<strong>:</strong></span>
+            <span class="description__name">${gettext("single")}<strong>:</strong></span>
             <p class="description__details">${ruleItem.single_file}</p>
+          </div>
+          <div class="description">
+            <span class="description__name">${gettext("type")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.allowed_mime_type}</p>
+          </div>
+          <div class="description">
+            <span class="description__name">${gettext("Fallback")}<strong>:</strong></span>
+            <p class="description__details">${ruleItem.fallback}</p>
           </div>
         </div>
       </div>
@@ -221,7 +239,7 @@ export default class MediaResource {
     return `
       <div class="dialog media-dialog" id="media-dialog">
       <!-- Example of a form that Dropzone can take over -->
-      <form action="http://localhost:3000/api/v1/utils/media/courses/model/3" class="dropzone card" ></form>
+      <div id="test" action="" class="my-dropzone card" ></div>
       </div>
     `
   }
@@ -229,8 +247,9 @@ export default class MediaResource {
   
 }
 // console.log(this.items);
-console.log('this is from media class');
-// console.log(listingURL);
+// $('#test').dropzone({url: 'text/text'})
+
+
 
 $('.media-library').each(function(){
   if($(this).length > 0) {

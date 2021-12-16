@@ -17,7 +17,7 @@ const collections = {
   cover: {
     single_file: true,
     max_size: 100,
-    allowed_mime_type: [],
+    allowed_mime_type: ['.jpg'],
     accept: [],
     display_name: "Cover",
     description: "lorem lorem",
@@ -27,17 +27,20 @@ const collections = {
   images: {
     single_file: false,
     max_size: 100,
-    allowed_mime_type: ['text.jpg'],
+    allowed_mime_type: ['.jpg'],
     display_name: "Images",
+    description: "lorem lorem",
     max_number: 6,
     fallback: "dummy image source",
   },
   files: {
     single_file: false,
     max_size: 100,
-    allowed_mime_type: ['text.pdf'],
+    allowed_mime_type: ['.pdf'],
     display_name: "Files",
+    description: "lorem lorem",
     max_number: 6,
+    fallback: "dummy image source"
   }
 }
 // console.log(collections.cover);
