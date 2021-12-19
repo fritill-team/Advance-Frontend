@@ -44,11 +44,11 @@ export default class MediaResource {
 
     $(function(){
       const dropzone = new Dropzone("div#test", { 
-        url: `http://localhost:3000/api/v1/utils/media/courses/model/1`,
+        url: `http://localhost:3000/api/v1/utils/media/files`,
         method: "post"
       })
       dropzone.on("addedfile", file => {
-        console.log(this.options.url);
+        console.log(file.options);
       });
       // console.log(dropzone);
     })
@@ -239,14 +239,15 @@ export default class MediaResource {
     return `
       <div class="dialog media-dialog" id="media-dialog">
       <!-- Example of a form that Dropzone can take over -->
-      <div id="test" action="" class="my-dropzone card" ></div>
+      <div id="test" name="photos" action="" class="my-dropzone card" ></div>
       </div>
-    `
+      `
+      // <input type="file" name="photos" multiple>
+    }
+    
+    
   }
-  
-  
-}
-// console.log(this.items);
+  // console.log(this.items);
 // $('#test').dropzone({url: 'text/text'})
 
 
