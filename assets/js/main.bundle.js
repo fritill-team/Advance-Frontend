@@ -324,6 +324,7 @@ var BaseResource = function () {
           initialRating: 0,
           starSize: 25,
           totalStars: 5,
+          useFullStars: true,
           starShape: '',
           emptyColor: 'lightgray',
           hoverColor: '#f2b01e'
@@ -931,14 +932,12 @@ var MediaResource = function () {
     });
 
     $(function () {
-      var _this = this;
-
       var dropzone = new Dropzone("div#test", {
-        url: 'http://localhost:3000/api/v1/utils/media/courses/model/1',
+        url: 'http://localhost:3000/api/v1/utils/media/files',
         method: "post"
       });
       dropzone.on("addedfile", function (file) {
-        console.log(_this.options.url);
+        console.log(file.options);
       });
       // console.log(dropzone);
     });
@@ -1026,7 +1025,7 @@ var MediaResource = function () {
   }, {
     key: 'listingTemplate',
     value: function listingTemplate() {
-      var _this2 = this;
+      var _this = this;
 
       var mediaItems = this.items;
       console.log(mediaItems);
@@ -1037,7 +1036,7 @@ var MediaResource = function () {
         var mediaItem = item.items;
 
         // loop on items
-        return [_this2.itemTemplate(mediaItem, itemRules), _this2.rulesTemplate(itemRules)].join('');
+        return [_this.itemTemplate(mediaItem, itemRules), _this.rulesTemplate(itemRules)].join('');
       });
     }
   }, {
@@ -1060,7 +1059,8 @@ var MediaResource = function () {
   }, {
     key: 'dialog',
     value: function dialog() {
-      return '\n      <div class="dialog media-dialog" id="media-dialog">\n      <!-- Example of a form that Dropzone can take over -->\n      <div id="test" action="" class="my-dropzone card" ></div>\n      </div>\n    ';
+      return '\n      <div class="dialog media-dialog" id="media-dialog">\n      <!-- Example of a form that Dropzone can take over -->\n      <div id="test" name="photos" action="" class="my-dropzone card" ></div>\n      </div>\n      ';
+      // <input type="file" name="photos" multiple>
     }
   }, {
     key: 'items',
@@ -1221,6 +1221,7 @@ var ReviewResource = function (_BaseResource) {
         initialRating: 0,
         starSize: 25,
         totalStars: 5,
+        useFullStars: true,
         starShape: '',
         emptyColor: 'lightgray',
         hoverColor: '#f2b01e'
@@ -1232,6 +1233,7 @@ var ReviewResource = function (_BaseResource) {
           initialRating: initial,
           starSize: 20,
           totalStars: 5,
+          useFullStars: true,
           starShape: '',
           emptyColor: 'lightgray',
           hoverColor: '#f2b01e'
@@ -1721,19 +1723,6 @@ $(".blog-card-container").each(function (i, item) {
   item = $(item);
   var data = item.data("data");
   item.html($(blogCard(data)));
-});
-$(function () {
-  $('.course-card__author').each(function () {
-    $(this).tooltipster({
-      animation: 'fade',
-      delay: 0,
-      theme: 'tooltipster-default',
-      touchDevices: true,
-      trigger: 'hover',
-      offsetX: '100px',
-      content: $('<div class="card"><p class="body-2">This text is in bold case !</p></div>')
-    });
-  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
@@ -2684,6 +2673,20 @@ $(function () {
 // 	  fontSize: '20px',
 // 	  strokeWidth: 10
 // 	})
+
+$(function () {
+  $('.author').each(function () {
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    });
+  });
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
