@@ -1,6 +1,6 @@
 .panel {
   background: $white;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px;
 
   .panel__loader {
@@ -17,7 +17,28 @@
     &:last-of-type{
       border-bottom: 0;
     }
+    &.card--transparent{
+      padding: 0;
+      margin-bottom: 20px;
+    }
   }
+  .replay-review{
+    padding: 0 0 0 60px;
+  }
+}
+.form-review{
+  margin-bottom: 30px;
+  .form-review__actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
 
-
+html[dir="rtl"]{
+  .panel{
+    .replay-review{
+      padding: 0 60px 0 0;
+    }
+  }
 }

@@ -61,6 +61,7 @@ export default class BaseResource {
             initialRating: 0,
             starSize: 25,
             totalStars: 5,
+            useFullStars: true,
             starShape: '',
             emptyColor: 'lightgray',
             hoverColor: '#f2b01e',

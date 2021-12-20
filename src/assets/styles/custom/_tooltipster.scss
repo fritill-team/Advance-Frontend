@@ -5,8 +5,18 @@
 .tooltipster-sidetip{
   .tooltipster-box{
     background-color: $white;
+    border: 3px solid $primary;
   }
-  .tooltipster-arrow-background{
-    border-top-color: red;
+  .tooltipster-arrow{
+    .tooltipster-arrow-border{
+      border-top-color: $primary;
+
+    }
+    .tooltipster-arrow-background{
+      border-top-color: transparent;
+    }
+  }
+  .tooltipster-content{
+    padding: 0;
   }
 }

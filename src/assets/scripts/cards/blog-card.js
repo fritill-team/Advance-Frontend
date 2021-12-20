@@ -42,7 +42,7 @@ $(function(){
       touchDevices: true,
       trigger: 'hover',
       offsetX: '100px',
-      content: $('<div class="card"><p class="body-2">This text is in bold case !</p></div>')
+      content: $('<div class="user-account"> <img class="image image--profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
 })
