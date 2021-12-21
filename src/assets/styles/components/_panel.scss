@@ -21,10 +21,11 @@
       padding: 0;
       margin-bottom: 20px;
     }
+    &.replay-review{
+      padding: 0 0 0 60px;
+    }
   }
-  .replay-review{
-    padding: 0 0 0 60px;
-  }
+  
 }
 .form-review{
   margin-bottom: 30px;
@@ -37,8 +38,10 @@
 
 html[dir="rtl"]{
   .panel{
-    .replay-review{
-      padding: 0 60px 0 0;
+    .card{
+      &.replay-review{
+        padding: 0 60px 0 0;
+      }
     }
   }
 }

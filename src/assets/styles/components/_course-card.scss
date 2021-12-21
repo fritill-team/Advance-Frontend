@@ -362,6 +362,14 @@ html[dir="rtl"] {
     &::after{
       clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
     }
+    &.course-card--list-view{
+      &::before{
+        clip-path: polygon(0 0,100% 40%,100% 100%,0 100%);
+      }
+      &::after{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+      }
+    }
     .course-card__author{
       right: unset;
       left: 16px;

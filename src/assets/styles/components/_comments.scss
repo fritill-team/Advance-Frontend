@@ -198,6 +198,9 @@ html[dir="rtl"] {
   }
   .review-comment__item{
     @include textRight;
+    &.review-comment__item--replay{
+      margin-right: 80px;
+    }
   }
   .comments__add-comment{
     .add-comment__group .group__textarea{

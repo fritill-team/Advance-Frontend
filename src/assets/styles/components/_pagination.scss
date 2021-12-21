@@ -2,5 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+html[dir="rtl"]{
+  .pagination{
+    i,span.material-icons{
+      transform: translate(-50%,-50%) rotateY(180deg);
+    }
+  }
 }
