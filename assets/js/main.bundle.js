@@ -1724,6 +1724,19 @@ $(".blog-card-container").each(function (i, item) {
   var data = item.data("data");
   item.html($(blogCard(data)));
 });
+$(function () {
+  $('.course-card__author').each(function () {
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      content: $('<div class="user-account"> <img class="image image--profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    });
+  });
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -2681,7 +2694,7 @@ $(function () {
       delay: 0,
       theme: 'tooltipster-default',
       touchDevices: true,
-      trigger: 'hover',
+      trigger: 'click',
       offsetX: '100px',
       content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
