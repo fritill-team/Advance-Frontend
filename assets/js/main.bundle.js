@@ -1716,7 +1716,7 @@ if (typeof window.gettext === 'function') gettext = window.gettext;else gettext 
 };
 
 var blogCard = function blogCard(item) {
-  return "\n<div class=\"course-card course-card--grid-view\">\n  <a href=\"" + item.url + "\" class=\"course-card__preview youtube-activator\">\n    <img src=\"" + item.thumb + "\" alt=\"\" class=\"course-card__preview-cover\">\n    <div class=\"course-card__preview-overlay\"></div>\n  </a>\n\n  <div class=\"course-card__content\">\n    <img title=\"" + item.author_name + "\" src=\"" + item.author.image + "\" class=\"image image--rounded image--xs-small-profile course-card__author\">\n    <div>\n      <span class=\"overline gray\">" + gettext("published at :") + item.published_at + "</span>\n      <a class=\"title-link text-2 semi-bold\" href=\"" + item.url + "\" lang=\"" + item.language + "\">" + gettext(item.title) + "</a>\n    </div>\n    <p class=\"title-link course-card__description body-2 gray\" lang=\"" + item.language + "\" >" + (gettext(item.short_description) ? gettext(item.short_description) : "") + "</p>\n    <div class=\"course-card__meta\">\n      <p class=\"body-2 gray bold\" lang=\"" + item.language + "\">" + (gettext(item.category) ? gettext(item.category) : "") + "</p>\n    </div>\n    <p class=\"overline gray\">" + gettext("status : ") + gettext(item.privacy_status) + "</p>\n\n  </div>\n  </div>\n    ";
+  return "\n<div class=\"course-card course-card--grid-view\">\n  <a href=\"" + item.url + "\" class=\"course-card__preview youtube-activator\">\n    <img src=\"" + item.thumb + "\" alt=\"\" class=\"course-card__preview-cover\">\n    <div class=\"course-card__preview-overlay\"></div>\n  </a>\n\n  <div class=\"course-card__content\">\n    <img title=\"" + item.author_name + "\" src=\"" + item.author + "\" class=\"image image--rounded image--xs-small-profile course-card__author\">\n    <div>\n      <span class=\"overline gray\">" + gettext("published at :") + item.published_at + "</span>\n      <a class=\"title-link text-2 semi-bold\" href=\"" + item.url + "\" lang=\"" + item.language + "\">" + gettext(item.title) + "</a>\n    </div>\n    <p class=\"title-link course-card__description body-2 gray\" lang=\"" + item.language + "\" >" + (gettext(item.short_description) ? gettext(item.short_description) : "") + "</p>\n    <div class=\"course-card__meta\">\n      <p class=\"body-2 gray bold\" lang=\"" + item.language + "\">" + (gettext(item.category) ? gettext(item.category) : "") + "</p>\n    </div>\n    <p class=\"overline gray\">" + gettext("status : ") + gettext(item.privacy_status) + "</p>\n\n  </div>\n  </div>\n    ";
 };
 
 $(".blog-card-container").each(function (i, item) {
@@ -1733,7 +1733,7 @@ $(function () {
       touchDevices: true,
       trigger: 'hover',
       offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+      content: $('<div class="user-account"> <img class="image image--profile image--small-profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   });
 });
