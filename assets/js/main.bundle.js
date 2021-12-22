@@ -2688,15 +2688,15 @@ $(function () {
 // 	})
 
 $(function () {
-  $('.author').each(function () {
+  $('.course-card__author').each(function () {
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
       theme: 'tooltipster-default',
       touchDevices: true,
-      trigger: 'click',
+      trigger: 'hover',
       offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   });
 });
@@ -2773,17 +2773,22 @@ $(document).ready(function () {
 /* WEBPACK VAR INJECTION */(function($) {
 
 var itemTemplate = function itemTemplate(item) {
-  return "<a href='" + (item.has_children ? "javascript:void(0)" : item.url) + "'\n             class='list-item list-item--one-line" + (item.is_active ? " list-item--active" : "") + (item.has_children ? " list-item--parent" : "") + "'>\n    <div class='list-item__icon'><span class=\"material-icons\">" + item.icon + "</span></div>\n    <div class='list-item__content'>\n      <p class='body-2'>" + item.title + "</p>\n    </div>\n    " + (item.has_children ? "<div class='list-item__action'><i class='fas fa-chevron-down'></i></div>" : "") + "\n  </a>\n  " + (item.has_children ? "<div class='list-item-group'>" + item.children.map(function (child) {
+  return "<a href='" + (item.has_children ? "javascript:void(0)" : item.url) + "'\n             class='list-item list-item--one-line" + (item.is_active ? " list-item--active" : "") + (item.has_children ? " list-item--parent" : "") + "' title=\"" + item.title + "\">\n    <div class='list-item__icon' ><span class=\"material-icons\">" + item.icon + "</span></div>\n    <div class='list-item__content'>\n      <p class='body-2'>" + item.title + "</p>\n    </div>\n    " + (item.has_children ? "<div class='list-item__action'><i class='fas fa-chevron-down'></i></div>" : "") + "\n  </a>\n  " + (item.has_children ? "<div class='list-item-group'>" + item.children.map(function (child) {
     return itemTemplate(child);
   }).join("") + "</div>" : "");
 };
+// const tooltipItem = (item) => {
+//   return`
+//     <div class="">${item.title}</div>
+//   `
+// }
 
 var drawerList = function drawerList(items) {
   return items.map(function (item) {
     return itemTemplate(item);
   }).join("");
 };
-
+// const tooltipContent = (items) => items.map((item) => tooltipItem(item)).join("")
 $(".list__sidebar").each(function (i, item) {
   var listItem = $(item),
       data = listItem.data("link");
@@ -2802,6 +2807,23 @@ $(document).on("click", ".toggle-drawer", function () {
   if (!drawer.hasClass("drawer--open")) drawer.addClass("drawer--open");
 
   group.css("display", group.css("display") === "block" ? "none" : "block");
+});
+$(function () {
+  $(".list__sidebar .list-item").each(function (item) {
+
+    // let listItem = $(item),
+    // data = listItem.data("link");
+    // listItem.html($(tooltipContent(data)))
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      position: 'left'
+    });
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
