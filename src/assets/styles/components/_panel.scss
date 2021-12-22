@@ -29,11 +29,11 @@
 }
 .form-review{
   margin-bottom: 30px;
-  .form-review__actions{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+}
+.form-actions{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 html[dir="rtl"]{

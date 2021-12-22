@@ -102,6 +102,16 @@
 }
 .select2 {
   width: 100% !important;
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    border: none !important;
+  }
+  .select2-selection__choice{
+    line-height: 1.1 !important;
+    height: auto !important;
+    .select2-selection__choice__remove{
+      border: none !important;
+    }
+  }
 }
 .field-wrapper__label {
   font-size: 16px;

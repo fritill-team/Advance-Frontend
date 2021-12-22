@@ -9,12 +9,38 @@ block title
 block content
 
 		.container
-			//- div(id='threads-list' data-category-url="http://localhost:3000/categories" data-tags-url="http://localhost:3000/tags" data-user='{"username": "Mahmoud Nasser", "first_name": "Mahmoud", "last_name": "Nasser", "email": "a@a.com", "phone": "123", "image": "../../assets/images/hd_dp.jpg"}' data-create-url="http://localhost:3000/threads/" data-listing-url="http://localhost:3000/threads/" )
 			.row
 				.col-lg-8.offset-lg-2
 					section.section-header
 						h3.title-h3 Threads list
 						p.body-1 lorem
+					form(action="" method="post" class="card")
+						.field-wrapper.field-wrapper--full
+							label.field-wrapper__label Title
+							.field-wrapper__content
+								input.field(type='text' placeholder='Insert your thread title' name='title' value='thread title')
+						.field-wrapper.field-wrapper--full
+							label.field-wrapper__label content
+							.field-wrapper__content
+								textarea#id_thread_content.field(rows='5' name='content' placeholder='Insert your thread content') Thread content
+						.field-wrapper.field-wrapper--full
+							label.field-wrapper__label Select Tag:
+							.field-wrapper__content
+								select.field.select2(multiple='')
+									option(value='tag1') tag1
+									option(value='tag2') tag2
+									option(value='tag3') tag3
+						.field-wrapper.field-wrapper--full
+							label.field-wrapper__label Select Category:
+							.field-wrapper__content
+								select.field.select2(multiple='')
+									option(value='Category1') Category1
+									option(value='Category2') Category2
+									option(value='Category3') Category3
+						.form-actions
+							button.btn.btn--primary.btn--text.no-replacer(type='reset') Cancel
+							button.btn.btn--primary.btn--rounded(type='submit') Add New Thread
+
 				.col-lg-8.offset-lg-2
 					include ../components/thread-card.pug
 				.col-lg-8.offset-lg-2

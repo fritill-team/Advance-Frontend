@@ -15,12 +15,141 @@ block content
 			.col-lg-12
 				.tabs-panels
 					#nav-categories.tab-panel.tab-panel--active
-						div(id='categories-list'
-							data-listing-url="http://localhost:3000/categories/"
-							data-create-url="http://localhost:3000/categories/" )
+						form(class="card" method="post" action="")
+							.field-wrapper.field-wrapper--full 
+								label(class="field-wrapper__label" for="category" ) Category *
+								.field-wrapper__content 
+									input(class="field" type="text" placeholder="Category Name" name="category" id="category")
+							.field-wrapper.field-wrapper--full 
+								label(class="field-wrapper__label" for="parent_category" ) Category Parent
+								.field-wrapper__content
+									select(class="field select2" name="parent_category" id="parent_category" placeholder="select parent")
+										option -- No parent --
+										option Category Parent
+										option Category Parent
+										option Category Parent
+								ul.field-wrapper__messages
+									li select category parent
+
+						ul.list
+							a.list-item(href="#")
+								.list-item__icon
+									span.material-icons category 
+								.list-item__content
+									span.body-2 category
+								.list-item__action
+									span.material-icons.list-item__action edit
+									span.material-icons.list-item__action translate
+									span.material-icons.list-item__action cancel
+							a.list-item(href="#")
+								.list-item__icon
+								.list-item__icon
+									span.material-icons category 
+								.list-item__content
+									span.body-2 category
+								.list-item__action
+									span.material-icons.list-item__action edit
+									span.material-icons.list-item__action translate
+									span.material-icons.list-item__action cancel
+							a.list-item(href="#")
+								.list-item__icon
+								.list-item__icon
+									span.material-icons category 
+								.list-item__content
+									span.body-2 category
+								.list-item__action
+									span.material-icons.list-item__action edit
+									span.material-icons.list-item__action translate
+									span.material-icons.list-item__action cancel
+							a.list-item(href="#")
+								.list-item__icon
+									span.material-icons category 
+								.list-item__content
+									span.body-2 category
+								.list-item__action
+									span.material-icons.list-item__action edit
+									span.material-icons.list-item__action translate
+									span.material-icons.list-item__action cancel
+							a.list-item(href="#")
+								.list-item__icon
+									span.material-icons category 
+								.list-item__content
+									span.body-2 category
+								.list-item__action
+									span.material-icons.list-item__action edit
+									span.material-icons.list-item__action translate
+									span.material-icons.list-item__action cancel
+					
 						//tab 1
 					#nav-tags.tab-panel
-						div(id='tags-list'
-							data-listing-url="http://localhost:3000/tags/"
-							data-create-url="http://localhost:3000/tags/" )
+						.card.chips-wrapper 
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+									
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+									
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag  
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+									
+							.chip-item.chip-item--primary 
+								span.material-icons tag 
+								p.chip-item__content tag name 
+								a.chip-item__action(href="")
+									span.material-icons edit
+								a.chip-item__action(href="")
+									span.material-icons cancel
+
+
+
+						.row 
+							.col-md-8.offset-md-2
+								form(class="" action="" method="")
+									.field-wrapper.field-wrapper--full
+										label(class="field-wrapper__label" for="tag") Tag Name
+										input(class="field" type="text" placeholder="tag name" name="tag_name" id="tag")
 						//tab 2

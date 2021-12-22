@@ -157,7 +157,7 @@ a.list-item {
 
   .list-item__content {
     padding: 16px 10px;
-    width: 100%;
+    // width: 100%;
     // a.content__link {
     //   color: rgba($color: #000000, $alpha: 0.7);
     // }
@@ -373,11 +373,8 @@ a.list-item {
 
   .list-item__action {
     display: flex;
-    flex-direction: column;
     margin-left: auto;
     padding: 10px;
-    // margin-top: 10px;
-    // height: 60px;
     justify-content: center;
 
     i {
