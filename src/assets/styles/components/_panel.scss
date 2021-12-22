@@ -36,6 +36,12 @@
   justify-content: flex-end;
 }
 
+.night-mode{
+  .panel{
+    background-color: $black;
+  }
+}
+
 html[dir="rtl"]{
   .panel{
     .card{

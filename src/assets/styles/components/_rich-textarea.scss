@@ -113,3 +113,9 @@ html[dir="rtl"] {
     text-align: right;
   }
 }
+
+.night-mode{
+  .rich-textarea{
+    @include whiteTypo;
+  }
+}

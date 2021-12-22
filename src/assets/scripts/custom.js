@@ -719,15 +719,15 @@ $(function () {
 // 	})
 
 $(function(){
-  $('.author').each(function(){
+  $('.course-card__author').each(function(){
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
       theme: 'tooltipster-default',
       touchDevices: true,
-      trigger: 'click',
+      trigger: 'hover',
       offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/hd_dp.jpg" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
 })

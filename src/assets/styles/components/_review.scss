@@ -119,7 +119,7 @@
         background-color: #e9ecef;
         border-radius: 0.25rem;
         .progress--progress-bar {
-          background-color: $accent;
+          // background-color: $accent;
           flex-direction: column;
           justify-content: center;
           color: #fff;
@@ -203,6 +203,15 @@ html[dir="rtl"]{
         margin-right: 0;
         margin-left: 5px;
       }
+    }
+  }
+}
+
+.night-mode{
+  .reviews{
+    .reviews__all-reviews{
+      background: $black !important;
+      @include whiteTypo ;
     }
   }
 }

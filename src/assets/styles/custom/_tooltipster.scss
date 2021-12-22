@@ -3,6 +3,21 @@
 }
 
 .tooltipster-sidetip{
+  &.tooltipster-left{
+    .tooltipster-arrow-border{
+      border-top-color: transparent !important;
+      border-left-color: $primary;
+    }
+    .tooltipster-arrow-background{
+      border-top-color: transparent;
+    }
+  }
+  &.tooltipster-bottom{
+    .tooltipster-arrow-border{
+      border-top-color: transparent !important;
+      border-bottom-color: $primary;
+    }
+  }
   .tooltipster-box{
     background-color: $white;
     border: 3px solid $primary;
@@ -13,10 +28,40 @@
 
     }
     .tooltipster-arrow-background{
-      border-top-color: transparent;
+      border-color: transparent;
     }
   }
   .tooltipster-content{
-    padding: 0;
+    padding: 6px;
+    color: $gray;
+  }
+}
+.night-mode{
+  .tooltipster-sidetip{
+    .tooltipster-box{
+      background-color: $black;
+      border-color: $white;
+    }
+    &.tooltipster-top{
+      .tooltipster-arrow-border{
+        border-top-color: $white;
+        // border-left-color: $white;
+      }
+    }
+    &.tooltipster-left{
+      .tooltipster-arrow-border{
+        border-top-color: transparent !important;
+        border-left-color: $white;
+      }
+    }
+    &.tooltipster-bottom{
+      .tooltipster-arrow-border{
+        border-top-color: transparent !important;
+        border-bottom-color: $white;
+      }
+    }
+    .tooltipster-content{
+      color: $white;
+    }
   }
 }

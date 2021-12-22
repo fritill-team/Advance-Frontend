@@ -2,8 +2,8 @@ const itemTemplate = (item) => {
   return `<a href='${item.has_children ? "javascript:void(0)" : item.url}'
              class='list-item list-item--one-line${
                item.is_active ? " list-item--active" : ""
-             }${item.has_children ? " list-item--parent" : ""}'>
-    <div class='list-item__icon'><span class="material-icons">${item.icon}</span></div>
+             }${item.has_children ? " list-item--parent" : ""}' title="${item.title}">
+    <div class='list-item__icon' ><span class="material-icons">${item.icon}</span></div>
     <div class='list-item__content'>
       <p class='body-2'>${item.title}</p>
     </div>
@@ -21,14 +21,20 @@ const itemTemplate = (item) => {
       : ""
   }`;
 };
+// const tooltipItem = (item) => {
+//   return`
+//     <div class="">${item.title}</div>
+//   `
+// }
 
 const drawerList = (items) => items.map((item) => itemTemplate(item)).join("");
-
+// const tooltipContent = (items) => items.map((item) => tooltipItem(item)).join("")
 $(".list__sidebar").each(function (i, item) {
   let listItem = $(item),
     data = listItem.data("link");
   listItem.html($(drawerList(data)));
 });
+
 
 $(document)
   .on("click", ".toggle-drawer", function () {
@@ -46,3 +52,20 @@ $(document)
 
     group.css("display", group.css("display") === "block" ? "none" : "block");
   });
+$(function(){
+  $(".list__sidebar .list-item").each(function(item){
+
+    // let listItem = $(item),
+    // data = listItem.data("link");
+    // listItem.html($(tooltipContent(data)))
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      position: 'left'
+    })
+  })
+})

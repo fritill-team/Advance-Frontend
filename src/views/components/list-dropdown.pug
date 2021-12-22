@@ -1,15 +1,30 @@
 mixin dropdown
 	.dropdown
-		.dropdown__activator.btn--tool
-			block
-		.dropdown__content
-			span.content__item
-				i.item__icon.fas.fa-comment-alt-edit
-				| Edit
-			span.content__item
-				i.item__icon.fas.fa-trash-alt
-				| Delete
-
+		.dropdown.dropdown__activator
+			button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+				block
+			.dropdown__content.dropdown-content-width
+				.list
+					a(href="#" class="list-item list-item--one-line list-item--open ")
+						.list-item__avatar
+							i.far.fa-copy
+						.list-item__content
+							span.body-2.bold Edit
+						.list-item__action
+					a(href="#" class="list-item list-item--one-line list-item--open ")
+						.list-item__avatar
+							i.far.fa-copy
+						.list-item__content
+							span.body-2.bold Delete
+						.list-item__action
+		
+		//- .dropdown__content
+		//- 	span.content__item
+		//- 		i.item__icon.fas.fa-comment-alt-edit
+		//- 		| Edit
+		//- 	span.content__item
+		//- 		i.item__icon.fas.fa-trash-alt
+		//- 		| Delete
 //- .dropdown-menu
 //- 	a.btn--tool
 //- 		i.fas.fa.ellipsis-h
