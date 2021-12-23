@@ -5,7 +5,8 @@
   height: auto;
   border-radius: 5px;
   background-color: $white;
-  margin: 25px 0;
+  // margin: 25px 0;
+  margin-bottom: 16px;
   display: flex;
   // @include normalizeTypo;
   overflow: hidden;
@@ -40,8 +41,8 @@
     z-index: -1;
   }
   &.data-card--draggable{
-    border-radius: 0 5px 5px 0;
-    padding-left: 24px;
+    // border-radius: 0 5px 5px 0;
+    padding-left: 40px;
     &::before{
       display: flex;
     }
@@ -70,7 +71,7 @@
   .data-card-actions{
     position: absolute;
     width: 120px;
-    top: 0;
+    top: 10px;
     right: 0;
     transform: translateX(110%);
     display: flex;
@@ -104,6 +105,11 @@
     background-color: $black;
     @include whiteTypo;
   }
+  .description{
+    strong{
+      color: $white;
+    }
+  }
 }
 
 html[dir="rtl"]{
@@ -120,8 +126,8 @@ html[dir="rtl"]{
       
     }
     &.data-card--draggable{
-      padding: 16px 24px 16px 16px;
-      border-radius: 5px 0 0 5px;
+      padding: 16px 40px 16px 16px;
+      // border-radius: 5px 0 0 5px;
     }
     &::before{
       left: unset;

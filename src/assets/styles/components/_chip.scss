@@ -1,6 +1,9 @@
 .chips-wrapper{
+  padding: 16px 16px 6px 16px;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
+  background-color: $white;
 }
 .chip-item{
   height: 32px;
@@ -13,6 +16,7 @@
   align-items: center;
   @include normalizeTypo;
   margin: 0 10px 10px 0;
+  cursor: pointer;
   &.chip-item--with-icon{
     padding: 0 8px;
   }
@@ -77,8 +81,11 @@ html[dir="rtl"]{
 }
 
 .night-mode{
-  .chip-item{
+  .chips-wrapper{
     background-color: $black;
+  }
+  .chip-item{
+    background-color: rgba($white, .2);
     @include whiteTypo;
   }
 }

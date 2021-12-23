@@ -235,7 +235,7 @@ textarea.field{
   resize: none;
   border: 1px solid #e5e5e5;
   &:focus {
-    color: $input-color;
+    // color: $input-color;
     border-bottom: 1px solid rgba($primary, 0.5);
   }
 }

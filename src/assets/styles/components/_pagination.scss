@@ -4,6 +4,16 @@
   align-items: center;
   margin-top: 20px;
 }
+.night-mode{
+  .pagination{
+    @include whiteTypo;
+    button.btn{
+      &.btn--primary{
+        color: $white;
+      }
+    }
+  }
+}
 html[dir="rtl"]{
   .pagination{
     i,span.material-icons{

@@ -40,9 +40,9 @@
     margin: 0;
     color: rgba(0, 0, 0, .7);
 
+    transition: 0.3s ease all;
     &:hover {
       background-color: rgba($color: $primary, $alpha: 0.2);
-      transition: 0.3s ease color;
     }
   }
 
@@ -561,11 +561,17 @@ a.list-item {
 
     & > a {
       &:hover {
-        background-color: rgba($color: $primary, $alpha: 0.5);
+        background-color: rgba($color: $white, $alpha: 0.2);
       }
     }
   }
-
+  .list-item-group{
+    & > a{
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 0.2);
+      }
+    }
+  }
   .list-item__avatar {
     i {
       color: $accent;
@@ -583,14 +589,24 @@ a.list-item {
       color: #FFF;
     }
   }
+  .list-item{
+    &.list-item--active{
+      background-color: rgba($white, .2);
+    }
+  }
+  .tab-panel{
 
-  .list-item {
-    // background-color: #1d1e13;
-    &.list-item--open {
-      .list-item__action {
-        i {
-          color: $accent;
+    .list-item {
+      background-color: $black;
+      &.list-item--open {
+        .list-item__action {
+          i {
+            color: $accent;
+          }
         }
+      }
+      .list-item__action{
+        @include whiteTypo;
       }
     }
   }

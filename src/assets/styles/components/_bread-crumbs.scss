@@ -76,7 +76,7 @@
 }
 .night-mode{
   .page-header{
-    background-color: #43525c;
+    background-color: lighten($black, 10%);
   }
   .bread-crumbs__link {
     color: #FFF;
