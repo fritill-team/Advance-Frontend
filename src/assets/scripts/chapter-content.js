@@ -3,9 +3,10 @@ const chapterTemplate = item => `
   <h3 class="course-content__title">${item.courseName}</h3>
   <div class="course-content__details">
     <ul class="details__list">
-        <li class="list__list-item"><span class="list--expand-all">Expand all</span></li>
-        <li class="list__list-item"><span class="list--list-content-number">${item.noOfLectures}</span></li>
-        <li class="list__list-item"><span class="list--time-course">${item.totalDuration}</span></li>
+      
+      <li class="list__list-item"><span class="list--expand-all">Expand all</span></li>
+      <li class="list__list-item"><span class="list--list-content-number">${item.noOfLectures}</span></li>
+      <li class="list__list-item"><span class="list--time-course">${item.totalDuration}</span></li>
     </ul>
   </div>
 
@@ -22,7 +23,7 @@ const chapterTemplate = item => `
                 <span class="header-title__title">
                   <i class="fas fa-grip-vertical title__icon handle"></i>
                   <i class="fas fa-layer-group title__icon"></i>
-                  <a href='#' class="title__title-text">${item.title}</a>
+                  <a href='#' class="body-2">${item.title}</a>
                 </span>
               </div>
               <div class="header__header-details">
@@ -33,14 +34,7 @@ const chapterTemplate = item => `
               </div>
             </div>
 
-            <div class="course-list__list-content">
-              <div class="list-content__content-item">
-                <div class="content-item__content-name">
-                  <i class="uil uil-play-circle content-name__icon"></i>
-                  <div class="content-name__top-title">
-                  <div class="top-title__title">Why This Course?</div>
-                </div></div><div class="content-item__details"><a class="details--preview-text" href="#">Preview</a><span class="details__content-summary">07:48</span></div></div>
-            </div>
+            
           </div>
         `))}
     </div>

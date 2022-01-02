@@ -208,3 +208,10 @@
   }
 }
 
+.night-mode{
+  .course-list__header{
+    background-color: $black;
+    @include whiteTypo;
+    border: none;
+  }
+}
