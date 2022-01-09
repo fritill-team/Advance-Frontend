@@ -26,14 +26,14 @@ export default class TagResource extends BaseResource {
       ${this.deleteDialog()}
       <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+      <div class="col-md-8 col-sm-12 offset-md-2">
+        <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
+        ${this.withPagination ? this.paginationTemplate() : ''}
+      </div>
+        <div class="col-md-6 col-sm-12 offset-md-3">
           <div class="card" id="tags-form">
             ${this.formTemplate({}, this.createURL)}
           </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <ul id="${this.prefix}-listing">${this.listingTemplate()}</ul>
-          ${this.withPagination ? this.paginationTemplate() : ''}
         </div>
       </div>
     </div>`)
@@ -42,22 +42,19 @@ export default class TagResource extends BaseResource {
   listingTemplate() {
     // console.log('here')
     // console.log(this.items.length);
-    return `<div class="chips-wrapper" id="${this.prefix}-listing">
-        ${this.items.map(item => this.itemTemplate(item)).join('')}
-      </div>`
-    // if(this.items){
-    //   return `<div class="card list list--condensed" id="${this.prefix}-listing">
-    //   ${this.items.map(item => this.itemTemplate(item)).join('')}
-    //   </div>`
-    // } else {
-    // }
+    if (this.items.length) {
+      return `<div class="chips-wrapper" id="${this.prefix}-listing">
+          ${this.items.map(item => this.itemTemplate(item)).join('')}
+        </div>`
+    }
+    return this.emptyTemplate()
   }
 
   itemTemplate(item) {
     return ` 
-      <div class="chips-wrapper">
+      <div class="">
         <div class="chip-item">
-        <span class="material-icons">tag</span></a>
+          <span class="material-icons">tag</span>
           <p class="chip-item__content">${item.name}</p>
           ${item.actions.length > 1 ? item.actions.map(action => `
             <a class="chip-item__action ${action.class}" href="${action.link}" data-data='${JSON.stringify(item)}'><span class="material-icons">${action.icon}</span></a>
@@ -77,10 +74,7 @@ export default class TagResource extends BaseResource {
         </div>
         <ul class="field-wrapper__messages" id="category-name-messages"></ul>
       </div>
-      <div class="ml-auto d-inline-block">
-        <button class="btn btn--primary btn--text" type="reset">${gettext("Cancel")}</button>
-        <button class="btn btn--primary" type="submit">${gettext("Submit")}</button>
-      </div>
+      
     </form>`
   }
 }

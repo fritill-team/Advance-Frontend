@@ -170,7 +170,7 @@ export default class ReviewResource extends BaseResource {
         self.loading = false
       },
       error: function (xhr) {
-        console.error(xhr)
+        // console.error(xhr)
       }
     })
   }
