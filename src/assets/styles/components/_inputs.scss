@@ -462,7 +462,9 @@ textarea.field{
   //}
 }
 
-
+.dark-mode-toggle{
+  display: none;
+}
 .switch {
   input[type="checkbox"],input[type="radio"]{
     display: none;
