@@ -5,6 +5,7 @@ $(".live_stream").owlCarousel({
   margin: 10,
   nav: true,
   dots: false,
+  rtl: true,
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -20,21 +21,22 @@ $(".live_stream").owlCarousel({
       items: 3,
     },
     1200: {
-      items: 5,
+      items: 6,
     },
     1400: {
-      items: 6,
+      items: 7,
     },
   },
 });
 
 // Featured Courses home
 $(".featured_courses").owlCarousel({
-  items: 10,
+  items: 3,
   loop: false,
   margin: 20,
   nav: true,
   dots: false,
+  rtl: true,
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -50,10 +52,10 @@ $(".featured_courses").owlCarousel({
       items: 1,
     },
     1200: {
-      items: 2,
+      items: 3,
     },
     1400: {
-      items: 3,
+      items: 4,
     },
   },
 });
