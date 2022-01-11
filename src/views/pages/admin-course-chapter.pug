@@ -190,7 +190,24 @@ block content
 
 
 						#nav-reviews.tab-panel
-							include ../components/review-item.pug
+							.card.card--side-col.form-review
+								.card__side-col
+									img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile author")
+								.card__content
+									form(action='' method='post')
+										.field-wrapper.field-wrapper--full
+											label.field-wrapper__label username
+											.field-wrapper__content
+												input.field(type='text' placeholder='Insert your review.' name='review' value='review')
+										.field-wrapper
+											.field-wrapper__content
+												.rate-input
+												input.rate-input-form(type='hidden' value='3.0' name='rate')
+										.form-actions
+											button.btn.btn--primary.btn--text(type='reset') Cancel
+											button.btn.btn--primary.btn--rounded Save
+							.panel
+								include ../components/review-item.pug
 							//- .d-flex.justify-content-between.align-items-center.w-100
 								h3.course-content__title.mb-0 Thread Chapter content
 								button.btn.btn--primary.btn--rounded create thread

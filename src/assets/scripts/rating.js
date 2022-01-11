@@ -9,6 +9,7 @@ export const initializeRateInput = () => {
       starShape: '',
       emptyColor: 'lightgray',
       hoverColor: '#f2b01e',
+      // useFullStars: true
     })
 
 

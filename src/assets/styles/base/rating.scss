@@ -15,6 +15,10 @@ body {
 .rate-display{
   display: flex;
   flex-wrap: nowrap;
+  .jq-star {
+    transform: scale(-1, 1) !important;
+    cursor: auto !important; 
+  }
 }
 .rating-box {
   color: $star-default-color;

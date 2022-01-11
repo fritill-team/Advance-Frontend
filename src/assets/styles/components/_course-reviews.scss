@@ -141,6 +141,9 @@
 
   .rate-display{
     display: flex;
+    .jq-star {
+      cursor: auto !important; 
+    }
   }
 
   .total-rating__rating-box {
