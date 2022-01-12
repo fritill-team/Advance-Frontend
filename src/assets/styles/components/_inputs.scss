@@ -592,3 +592,13 @@ html[dir="rtl"] {
     margin: 0 16px 0 0;
   }
 }
+.rate-input{ 
+  .jq-star{
+    transform: rotateY(180deg);
+  }
+}
+.rate-display{
+  .jq-star{
+    cursor: auto;
+  }
+}
