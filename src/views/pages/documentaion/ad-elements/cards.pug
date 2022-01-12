@@ -781,7 +781,7 @@ block content
 		//    code.language-html
 		//      <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
 		//
-
+				
 					.user-image
 						img(src="../../assets/images/hd_dp.jpg" alt="")
 						i.uil.uil-check-circle
@@ -841,10 +841,10 @@ block content
 									a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
 									a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
 								.card__header-multiline
-									a(href='#' class="primary bold")
+									a(href='#' class="body-2 primary bold")
 										| Jose Portilla
 										i.fa.fa-check-circle.ml-1
-									time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+									time.overline.gray Jan 15 &apos;18 at 13:56
 
 					.card.card--transparent
 						.card__header
@@ -859,7 +859,7 @@ block content
 									a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
 									a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
 								.card__header-multiline
-									a(href='#' class="primary bold")
+									a(href='#' class="body-2 primary bold")
 										| Jose Portilla
 										i.fa.fa-check-circle.ml-1
 									time.subtitle-2.gray Jan 15 &apos;18 at 13:56
@@ -867,8 +867,23 @@ block content
 
 
 					.panel__loader
-						a(href='javascript:void(0);' class="gray bold") See More Reviews
-
+						a(href='javascript:void(0);' class="body-2 gray bold") See More Reviews
+			//- .col-6
+				.card.card--show-on-hover
+					.card__content
+						.user-image
+							img(src="../../assets/images/hd_dp.jpg" alt="")
+							i.uil.uil-check-circle
+						.card__body
+							.card__content-header
+								.user-data
+									a.text-2(href="#") Jose Portilla
+									a.text-3.gray test@test.com
+									a.text-3.gray(href="#") Bio test test
+								//include ../../../components/list-dropdown.pug
+							.card__content--details
+								p.text-1 lorem ipsum dolor sit amet
+			
 			//- .card.card--thread
 				.card__content
 					.card__body

@@ -123,10 +123,12 @@
   text-align: left;
   font-weight: 400;
   color: $darkGray;
+  padding-right: 80px;
 }
 .item__actions {
   display: flex;
   @include normalizeTypo;
+  padding-right: 80px;
   .action__report {
     display: flex;
     align-items: center;

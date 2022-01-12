@@ -87,6 +87,11 @@ aside{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  *{
+    margin-bottom: 0;
+  }
+  // @include normalizeTypo;
+  
 }
 .section--with-bg {
   background-color: rgba(#333, .06);

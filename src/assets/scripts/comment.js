@@ -7,7 +7,6 @@ const commentForm = function(form) {
         </div>
         <textarea class="group__textarea" placeholder="Add a public comment"></textarea>
       </div>
-      <button class="btn btn--primary btn--rounded" type="submit"> Comment</button>
     </div>
   `;
 }

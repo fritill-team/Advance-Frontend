@@ -10,9 +10,11 @@
   display: flex;
   // @include normalizeTypo;
   overflow: hidden;
-  // flex-wrap: wrap;
   // justify-content: space-between;
   padding: 16px;
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
   & > div{
     margin: 0 16px 0 0;
     max-width: 300px;
@@ -59,6 +61,9 @@
   }
   .data-card__image{
     display: flex;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
   }
   .data-card__details{
     .overline{
@@ -94,6 +99,7 @@
   display: flex;
   align-items: baseline;
   text-align: left;
+  white-space: nowrap;
   @include normalizeTypo;
   strong{
     margin: 0 4px;
