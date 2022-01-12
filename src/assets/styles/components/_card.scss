@@ -330,6 +330,7 @@
   }
 
   &.card--centered {
+    
 
     .card__content-header {
       flex-direction: column;
@@ -363,7 +364,7 @@
     .user-image {
       display: flex;
       justify-content: center;
-
+      margin: 0;
       img {
         max-width: 60px;
         min-width: 60px;
@@ -1188,13 +1189,21 @@ html[dir="rtl"] {
       padding: 0 10px 0 0;
       @include textRight;
     }
-
+    
     .user-image {
-      margin-left: 10px;
+      // margin-left: 10px;
       flex-direction: column;
 
       i {
         right: 8px;
+      }
+    }
+
+    &.card--live-section{
+      // .card__content{
+      // }
+      .user-data{
+        margin-left: 0 !important;
       }
     }
 

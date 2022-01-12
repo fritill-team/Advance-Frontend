@@ -125,6 +125,11 @@ aside{
   .section--partners {
     background-color: lighten($black, 10%);
   }
+  .section__header{
+    *{
+      color: $white;
+    }
+  }
 }
 
 
