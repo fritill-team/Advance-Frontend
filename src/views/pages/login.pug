@@ -11,7 +11,7 @@ block content
 		#tab1.tab-panel.tab-panel--active
 			form(action='register/')
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Course Title
+					label.field-wrapper__label Username
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
@@ -23,10 +23,10 @@ block content
 							value=''
 							)
 						span.material-icons.field-wrapper__icon mail_outline
-					ul.field-wrapper__messages
+					//- ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Course Title
+					label.field-wrapper__label Password
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
@@ -38,7 +38,7 @@ block content
 							required
 							)
 						span.material-icons.field-wrapper__icon key
-					ul.field-wrapper__messages
+					//- ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper.field-wrapper--full
 					div.check-field
@@ -46,16 +46,16 @@ block content
 							input(class="check-field__input" type="checkbox" id="checkbox-1" name="checkname")
 							label(for="checkbox-1")
 							span
-						label.check-field__label Lorem ipsum dolor.
+						label.check-field__label Remember me.
 					//- div
 						input(class="field" type="checkbox" id="checkbox-1" name="checkname")
 						label(for="checkbox-1") Lorem ipsum dolor.
 				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
+					button(class="btn btn--primary btn--ripple btn--rounded" type="submit")  Sign in
 		#tab2.tab-panel
 			form
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Course Title
+					label.field-wrapper__label Phone Number
 						abbr(title="required") *
 					.field-wrapper__content.w-100
 						input(
@@ -64,11 +64,11 @@ block content
 							type="number"
 							name="phone"
 							)
-					ul.field-wrapper__messages
+					//- ul.field-wrapper__messages
 						li Invalid phone number.
 				.field-wrapper.field-wrapper--full
 					label.field-wrapper__label
-						|	Course Title
+						|	Password
 						abbr(title="required") *
 					.field-wrapper__content
 						input(
@@ -80,7 +80,7 @@ block content
 							required
 							)
 						span.material-icons.field-wrapper__icon key
-					ul.field-wrapper__messages
+					//- ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper.field-wrapper--full
 					div.check-field
@@ -88,12 +88,12 @@ block content
 							input(class="check-field__input" type="checkbox" id="checkbox-2" name="checkname")
 							label(for="checkbox-2")
 							span
-						label.check-field__label Lorem ipsum dolor.
+						label.check-field__label Remember me .
 					//- div
 						input(class="field" type="checkbox" id="checkbox-2" name="checkname")
 						label(for="checkbox-2") Lorem ipsum dolor.
 				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--ripple btn--sm btn--rounded" type="submit")  Sign Up
+					button(class="btn btn--primary btn--ripple btn--rounded" type="submit")  Sign in
 
 	p.title-2
 		a(href="forget.html" class="")  Forgot Password
@@ -104,8 +104,8 @@ block content
 	.socialMedia.d-flex.justify-content-center
 		a(href="#" class="social-icon__link social-icon--fa-bg social-icon--ml")
 			i.fab.fa-facebook-f
-		a(href="#" class="social-icon__link social-icon--tw-bg social-icon--ml")
-			i.fab.fa-twitter
+		//- a(href="#" class="social-icon__link social-icon--tw-bg social-icon--ml")
+		//- 	i.fab.fa-twitter
 		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
 			i.fab.fa-google
 	p.title-2 Don't have an account ?
