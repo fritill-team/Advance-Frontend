@@ -1310,7 +1310,7 @@ var ReviewResource = function (_BaseResource) {
           self.loading = false;
         },
         error: function error(xhr) {
-          console.error(xhr);
+          // console.error(xhr)
         }
       });
     }
@@ -1427,7 +1427,7 @@ var TagResource = function (_BaseResource) {
   _createClass(TagResource, [{
     key: 'containerTemplate',
     value: function containerTemplate(data) {
-      return $('\n      ' + this.deleteDialog() + '\n      <div class="container">\n      <div class="row">\n        <div class="col-md-6 col-sm-12">\n          <div class="card" id="tags-form">\n            ' + this.formTemplate({}, this.createURL) + '\n          </div>\n        </div>\n        <div class="col-md-6 col-sm-12">\n          <ul id="' + this.prefix + '-listing">' + this.listingTemplate() + '</ul>\n          ' + (this.withPagination ? this.paginationTemplate() : '') + '\n        </div>\n      </div>\n    </div>');
+      return $('\n      ' + this.deleteDialog() + '\n      <div class="container">\n      <div class="row">\n      <div class="col-md-8 col-sm-12 offset-md-2">\n        <ul id="' + this.prefix + '-listing">' + this.listingTemplate() + '</ul>\n        ' + (this.withPagination ? this.paginationTemplate() : '') + '\n      </div>\n        <div class="col-md-6 col-sm-12 offset-md-3">\n          <div class="card" id="tags-form">\n            ' + this.formTemplate({}, this.createURL) + '\n          </div>\n        </div>\n      </div>\n    </div>');
     }
   }, {
     key: 'listingTemplate',
@@ -1436,20 +1436,17 @@ var TagResource = function (_BaseResource) {
 
       // console.log('here')
       // console.log(this.items.length);
-      return '<div class="chips-wrapper" id="' + this.prefix + '-listing">\n        ' + this.items.map(function (item) {
-        return _this2.itemTemplate(item);
-      }).join('') + '\n      </div>';
-      // if(this.items){
-      //   return `<div class="card list list--condensed" id="${this.prefix}-listing">
-      //   ${this.items.map(item => this.itemTemplate(item)).join('')}
-      //   </div>`
-      // } else {
-      // }
+      if (this.items.length) {
+        return '<div class="chips-wrapper" id="' + this.prefix + '-listing">\n          ' + this.items.map(function (item) {
+          return _this2.itemTemplate(item);
+        }).join('') + '\n        </div>';
+      }
+      return this.emptyTemplate();
     }
   }, {
     key: 'itemTemplate',
     value: function itemTemplate(item) {
-      return ' \n      <div class="chips-wrapper">\n        <div class="chip-item">\n        <span class="material-icons">tag</span></a>\n          <p class="chip-item__content">' + item.name + '</p>\n          ' + (item.actions.length > 1 ? item.actions.map(function (action) {
+      return ' \n      <div class="">\n        <div class="chip-item">\n          <span class="material-icons">tag</span>\n          <p class="chip-item__content">' + item.name + '</p>\n          ' + (item.actions.length > 1 ? item.actions.map(function (action) {
         return '\n            <a class="chip-item__action ' + action.class + '" href="' + action.link + '" data-data=\'' + JSON.stringify(item) + '\'><span class="material-icons">' + action.icon + '</span></a>\n          ';
       }).join('') : '') + '\n        </div>\n      </div>\n    ';
     }
@@ -1459,7 +1456,7 @@ var TagResource = function (_BaseResource) {
       var item = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
-      return '<form action="' + action + '" method="post">\n      <div class="field-wrapper field-wrapper--full">\n        <label class="field-wrapper__label" for="' + this.prefix + '-name">' + gettext("Name") + ' <abbr>*</abbr></label>\n        <div class="field-wrapper__content">\n          <input class="field" type="text" placeholder="' + gettext("Tag Name") + '" name="name" id="' + this.prefix + '-name"\n             required value="' + (item.name ? item.name : '') + '">\n        </div>\n        <ul class="field-wrapper__messages" id="category-name-messages"></ul>\n      </div>\n      <div class="ml-auto d-inline-block">\n        <button class="btn btn--primary btn--text" type="reset">' + gettext("Cancel") + '</button>\n        <button class="btn btn--primary" type="submit">' + gettext("Submit") + '</button>\n      </div>\n    </form>';
+      return '<form action="' + action + '" method="post">\n      <div class="field-wrapper field-wrapper--full">\n        <label class="field-wrapper__label" for="' + this.prefix + '-name">' + gettext("Name") + ' <abbr>*</abbr></label>\n        <div class="field-wrapper__content">\n          <input class="field" type="text" placeholder="' + gettext("Tag Name") + '" name="name" id="' + this.prefix + '-name"\n             required value="' + (item.name ? item.name : '') + '">\n        </div>\n        <ul class="field-wrapper__messages" id="category-name-messages"></ul>\n      </div>\n      \n    </form>';
     }
   }]);
 
@@ -1911,7 +1908,7 @@ $(".chapter").each(function (i, item) {
 /* WEBPACK VAR INJECTION */(function($) {
 
 var commentForm = function commentForm(form) {
-  return '\n    <div class="comments__add-comment">\n      <div class="add-comment__group">\n        <div class="group__img-wrapper">\n          <img class="group__img" src="../../assets/images/hd_dp.jpg" alt="">\n        </div>\n        <textarea class="group__textarea" placeholder="Add a public comment"></textarea>\n      </div>\n      <button class="btn btn--primary btn--rounded" type="submit"> Comment</button>\n    </div>\n  ';
+  return '\n    <div class="comments__add-comment">\n      <div class="add-comment__group">\n        <div class="group__img-wrapper">\n          <img class="group__img" src="../../assets/images/hd_dp.jpg" alt="">\n        </div>\n        <textarea class="group__textarea" placeholder="Add a public comment"></textarea>\n      </div>\n    </div>\n  ';
 };
 // $('.comment-form').html($(commentForm))
 $('.comment-form').each(function (i, item) {
@@ -2697,6 +2694,29 @@ $(function () {
       trigger: 'hover',
       offsetX: '100px',
       content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    });
+  });
+  $('.author').each(function () {
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      offsetX: '100px',
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    });
+  });
+  $('.user').each(function () {
+    $(this).tooltipster({
+      animation: 'fade',
+      delay: 0,
+      theme: 'tooltipster-default',
+      touchDevices: true,
+      trigger: 'hover',
+      interactive: true,
+      offsetX: '100px',
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">Web Developer, Designer, and Teacher Jose</p><p class="body-2" >615K Students</p><p class="body-2" >12 Courses</p></p></div></div>')
     });
   });
 });
@@ -4057,6 +4077,7 @@ $(".live_stream").owlCarousel({
   margin: 10,
   nav: true,
   dots: false,
+  rtl: true,
   navText: ["<i class='fas fa-angle-left fa-xs'></i>", "<i class='fas fa-angle-right fa-xs'></i>"],
   responsive: {
     0: {
@@ -4069,21 +4090,22 @@ $(".live_stream").owlCarousel({
       items: 3
     },
     1200: {
-      items: 5
+      items: 6
     },
     1400: {
-      items: 6
+      items: 7
     }
   }
 });
 
 // Featured Courses home
 $(".featured_courses").owlCarousel({
-  items: 10,
+  items: 3,
   loop: false,
   margin: 20,
   nav: true,
   dots: false,
+  rtl: true,
   navText: ["<i class='fas fa-angle-left fa-xs'></i>", "<i class='fas fa-angle-right fa-xs'></i>"],
   responsive: {
     0: {
@@ -4096,10 +4118,10 @@ $(".featured_courses").owlCarousel({
       items: 1
     },
     1200: {
-      items: 2
+      items: 3
     },
     1400: {
-      items: 3
+      items: 4
     }
   }
 });
@@ -4305,6 +4327,7 @@ var initializeRateInput = exports.initializeRateInput = function initializeRateI
       starShape: '',
       emptyColor: 'lightgray',
       hoverColor: '#f2b01e'
+      // useFullStars: true
     });
   }
 };
