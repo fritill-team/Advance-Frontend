@@ -11,14 +11,14 @@ block content
 		#tab1.tab-panel.tab-panel--active
 			form(action='register/')
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Username
-						abbr(title="required") *
+					label(class="field-wrapper__label" for="email")
 					.field-wrapper__content
 						input(
 							class="field field--with-icon"
 							type='email'
 							placeholder='Email Address'
 							name='email address'
+							id="email"
 							maxlength=''
 							value=''
 							)
@@ -26,12 +26,12 @@ block content
 					//- ul.field-wrapper__messages
 						li Please provide a valid city.
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Password
-						abbr(title="required") *
+					label(class="field-wrapper__label" for="password")
 					.field-wrapper__content
 						input(
 							class="field field--with-icon"
 							type='Password'
+							id='password'
 							placeholder='Password'
 							name='Password'
 							maxlength=''
@@ -46,34 +46,33 @@ block content
 							input(class="check-field__input" type="checkbox" id="checkbox-1" name="checkname")
 							label(for="checkbox-1")
 							span
-						label.check-field__label Remember me.
+						label.check-field__label Remember me .
 					//- div
 						input(class="field" type="checkbox" id="checkbox-1" name="checkname")
 						label(for="checkbox-1") Lorem ipsum dolor.
-				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--ripple btn--rounded" type="submit")  Sign in
+				//- .d-flex.justify-content-around
+				button(class="btn btn--primary btn--ripple btn--block" type="submit")  Sign in
 		#tab2.tab-panel
 			form
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label Phone Number
-						abbr(title="required") *
+					label(class="field-wrapper__label" for="phone")
 					.field-wrapper__content.w-100
 						input(
 							id="phone"
 							class="field field--with-icon"
 							type="number"
 							name="phone"
+							dir="ltr"
 							)
 					//- ul.field-wrapper__messages
 						li Invalid phone number.
 				.field-wrapper.field-wrapper--full
-					label.field-wrapper__label
-						|	Password
-						abbr(title="required") *
+					label.field-wrapper__label(class="" for="password")
 					.field-wrapper__content
 						input(
 							class ="field field--with-icon"
 							type='Password'
+							id="password"
 							placeholder='Password'
 							name='Password'
 							maxlength=''
@@ -92,16 +91,14 @@ block content
 					//- div
 						input(class="field" type="checkbox" id="checkbox-2" name="checkname")
 						label(for="checkbox-2") Lorem ipsum dolor.
-				.d-flex.justify-content-around
-					button(class="btn btn--primary btn--ripple btn--rounded" type="submit")  Sign in
-
+				button(class="btn btn--primary btn--ripple btn--block" type="submit")  Sign in
 	p.title-2
 		a(href="forget.html" class="")  Forgot Password
-	.middle-or.d-flex
+	//- .middle-or.d-flex
 		hr
 		p.text-2  Or
 		hr
-	.socialMedia.d-flex.justify-content-center
+	//- .socialMedia.d-flex.justify-content-center
 		a(href="#" class="social-icon__link social-icon--fa-bg social-icon--ml")
 			i.fab.fa-facebook-f
 		//- a(href="#" class="social-icon__link social-icon--tw-bg social-icon--ml")
@@ -109,4 +106,4 @@ block content
 		a(href="#" class="social-icon__link social-icon--go-bg social-icon--ml")
 			i.fab.fa-google
 	p.title-2 Don't have an account ?
-		a(href="signup.html" class="text-3")  Sign Up
+		a(href="signup.html" class="")  Sign Up

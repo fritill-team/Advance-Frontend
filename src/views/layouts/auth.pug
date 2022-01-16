@@ -33,9 +33,9 @@ html(lang='en' dir="rtl" class="")
 	body
 		div.page
 			.page__content.page__content--auth
-				img.auth__bg(src="../../assets/images/sign.svg", alt="")
-				div.container
-					div.row.justify-content-lg-center.justify-content-md-center
+				img.auth__bg(src="../../assets/images/Pattern_4.svg", alt="")
+				//- div.container
+					div.row.justify-content-center
 						.col-lg-12
 							input(class="dark-mode-toggle" id="dark-mode-toggle" type="checkbox")
 							//- div.header-title
@@ -44,15 +44,13 @@ html(lang='en' dir="rtl" class="")
 							//- 	h1.title-1 Itqadem
 								//- a(href='index.html')
 								//-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
-						div.col-lg-6.col-md-12
-							.wrapper-content
-								.switch
-									//- input(id="dark-mode-toggle" type="checkbox")
-								div.header-title
-									a(href='index.html')
-										img(src='../../assets/images/Etqadem_Icon_Yellow.png' alt='')
-									h1 Itqadem
-								block content
+						div.col-lg-6.col-sm-8
+				.auth-form
+					//- .switch
+						//- input(id="dark-mode-toggle" type="checkbox")
+					div.auth-form__logo
+						img(src='../../assets/images/Etqadem_Logo1.svg' alt='')
+					block content
 						//- .footer.footer--auth
 						//- 	| &copy; 2020
 						//- 	strong  Advance

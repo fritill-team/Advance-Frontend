@@ -1,10 +1,11 @@
 .wrapper-content {
   background: #fff;
   border-radius: 10px;
-  padding: 30px 50px;
+  padding: 30px;
   box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
   width: 100%;
-  margin-top: auto;
+  margin: 0 auto;
+  // margin-top: auto;
   // transform: scale(.8);
   h2 {
     text-align: center;
@@ -16,9 +17,71 @@
     margin: 15px 0px;
   }
   .field-wrapper{
-    margin-bottom: 0;
+    margin-bottom: 8px;
+    .field-wrapper__label{
+      line-height: 2;
+    }
+    .check-field{
+      align-items: center;
+      margin: 0 8px;
+      .check-field__control{
+        margin-top: 0;
+      }
+    }
   }
 }
+
+.auth-form {
+  max-width: 400px;
+  z-index: 6;
+  padding: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: -.08333in .5pc 1.125pc -7px rgba(25, 42, 70, .13);
+  width: 100%;
+  // margin-top: auto;
+  .auth-form__logo {
+    display: block;
+    text-align: center;
+    img{
+      height: 60px;
+    }
+  }
+  p {
+    text-align: center;
+    margin: 15px 0px;
+  }
+  .field-wrapper{
+    margin-bottom: 8px;
+    .field-wrapper__label{
+      line-height: 2;
+    }
+    .check-field{
+      align-items: center;
+      margin: 0 8px;
+      .check-field__control{
+        margin-top: 0;
+      }
+    }
+  }
+  .btn{
+    &:last-of-type{
+      margin: 16px 0;
+    }
+  }
+}
+
+#phone{
+  text-align: right;
+}
+
+
+
+
 .middle-or {
   align-items: center;
   justify-content: center;
@@ -40,7 +103,15 @@
   width: 100%;
 }
 .tabs{
-  margin-bottom: 0;
+  margin-bottom: 16px;
+  &::after{
+    z-index: 0;
+  }
+  .tab{
+    &::after{
+      z-index: 0;
+    }
+  }
 }
 /*  reset password    */
 .verification {
@@ -69,8 +140,8 @@
 
   a {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 0;
   }
 
@@ -86,10 +157,31 @@
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 992px){
   //start wrapper card auth style media query
   .wrapper-content{
-    padding: 50px 20px 30px;
+    padding: 16px;
+    transform: scale(.9);
+    p, a, label, input{
+      font-size: 90%;
+    }
+  }
+}
+
+#phone{
+  text-align: left;
+}
+
+html[dir="rtl"]{
+  .auth-form{
+    .btn{
+      &:last-of-type{
+        margin: 16px 0;
+      }
+    }
+  }
+  #phone{
+    text-align: right;
   }
 }
 
@@ -99,6 +191,7 @@
   //start wrapper card auth style night-mode
   .wrapper-content {
     background-color: #394851;
-    box-shadow: 0px 2px 8px 5px #0d758e;
+    // box-shadow: 0px 2px 8px 5px #0d758e;
+    // box-shadow: 1px 3px 5px rgba($color: #fff, $alpha: .2);
   } 
 }

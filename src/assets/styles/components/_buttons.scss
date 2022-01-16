@@ -63,6 +63,10 @@ input[type="button"].btn {
   &.btn--rounded {
     border-radius: 20px;
   }
+  &.btn--block{
+    display: block;
+    width: 100%;
+  }
 
   &.btn--text {
     border: none;

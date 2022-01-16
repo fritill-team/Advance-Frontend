@@ -10,13 +10,12 @@ block content
 	form.form
 		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
-				|	Full Name
-				abbr(title="required") *
+				
 			.field-wrapper__content
 				input(
 					class="field"
 					type='text'
-					placeholder='fullName'
+					placeholder='Full Name'
 					name='fullName'
 					maxlength=''
 					required
@@ -25,8 +24,7 @@ block content
 				li Please provide a valid city.
 		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
-				|	Email
-				abbr(title="required") *
+				
 			.field-wrapper__content
 				input(
 					class="field"
@@ -40,8 +38,7 @@ block content
 				li Please provide a valid city.
 		.field-wrapper.field-wrapper--full
 			label.field-wrapper__label
-				|	Password
-				abbr(title="required") *
+				
 			.field-wrapper__content
 				input(
 					class="field"
@@ -61,8 +58,9 @@ block content
 					span
 				label.check-field__label I’m in for emails with exciting discounts and personalized recommendations 
 			
-		.d-flex.justify-content-around
-			button(type="submit" class="btn btn--primary btn--ripple btn--rounded")  Sign Up
+		//- .d-flex.justify-content-around
+		button(class="btn btn--primary btn--ripple btn--block" type="submit")  Sign up
+			//- button(type="submit" class="btn btn--primary btn--ripple btn--rounded")  Sign Up
 	p.title-2.terms-link  By signing up, you agree to our
 		a(href="terms_of_use.html" class="text-3")    Terms of Use  and
 		a(href="terms_of_use.html" class="text-3")   Privacy Policy .

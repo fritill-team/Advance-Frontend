@@ -10,7 +10,6 @@ import './night-mode.js'
 import './login.js'
 
 import './toaster'
-import './handleDarkMode'
 
 import './tabs.js'
 import './survey.js'
@@ -44,6 +43,7 @@ import './dialog'
 import './jquery.nicescroll.min'
 import './scrollbars'
 
+// import './handleDarkMode'
 
 
 
