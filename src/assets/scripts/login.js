@@ -68,11 +68,34 @@ if ("intlTelInput" in window) {
 
     if (phoneInput.isValidNumber()) {
       info.style.display = "";
-      info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+      info.classList.add('primary')
+      info.innerHTML = `Phone number in correct format: <strong>${phoneNumber}</strong>`;
     } else {
       error.style.display = "";
+      info.classList.remove('primary')
+      error.classList.add('danger')
       error.innerHTML = `Invalid phone number.`;
     }
   })
 }
  
+// text validation
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  });
+}
+
+setInputFilter(document.getElementById("phone"), function(value) {
+  return /^-?\d*$/.test(value); });
