@@ -96,6 +96,7 @@ function setInputFilter(textbox, inputFilter) {
     });
   });
 }
-
-setInputFilter(document.getElementById("phone"), function(value) {
-  return /^-?\d*$/.test(value); });
+if(document.getElementById("phone")){
+  setInputFilter(document.getElementById("phone"), function(value) {
+    return /^-?\d*$/.test(value); });
+}

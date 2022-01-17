@@ -7,7 +7,6 @@ import './drawer.js'
 import './custom.js'
 import './night-mode.js'
 
-import './login.js'
 
 import './toaster'
 
@@ -42,6 +41,7 @@ import './overlay'
 import './dialog'
 import './jquery.nicescroll.min'
 import './scrollbars'
+import './login.js'
 
 // import './handleDarkMode'
 

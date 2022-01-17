@@ -75,6 +75,31 @@
   }
 }
 
+
+body{
+  position: unset !important;
+}
+.iti--container{
+  position: fixed !important;
+  top: 50% !important;
+  left: 36% !important;
+  right: 36% !important;
+  // transform: translateY(-50%) !important;
+}
+.iti__country{
+  display: flex;
+  align-items: center;
+}
+.iti-mobile .iti--container{
+  width: 300px !important;
+  height: 300px !important;
+  // position: unset;
+//   .iti__country-list {
+//     width: 300px;
+//     height: 300px;
+//   }
+}
+
 #phone{
   text-align: right;
   position: relative;
@@ -183,6 +208,9 @@ html[dir="rtl"]{
   }
   #phone{
     text-align: right;
+  }
+  .iti__country{
+    flex-direction: row-reverse;
   }
 }
 
