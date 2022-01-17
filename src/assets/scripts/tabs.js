@@ -69,7 +69,6 @@ $('.chapters-tabs').each(function (tabs) {
 });
 
 if($('.tabs')){
-
   let hash = window.location.href.split("#");
   let id = hash[1];
   $('.tab').each(function() {

@@ -97,7 +97,17 @@ aside{
   background-color: rgba(#333, .06);
   padding: 50px 0;
 }
-
+.section--full{
+  min-height: 100vh;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.authorization{
+  h4{
+    text-align: center;
+  }
+}
 .section--partners {
   padding: 80px 0;
   // margin-bottom: 80px;
