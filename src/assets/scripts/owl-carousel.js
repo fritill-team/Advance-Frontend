@@ -163,6 +163,37 @@ $(".top_instrutors").owlCarousel({
 });
 
 let direction = $("html").attr("dir") === "rtl" ? true : false;
+
+$(".display-4").owlCarousel({
+  items: 10,
+  loop: false,
+  margin: 20,
+  nav: true,
+  dots: false,
+  rtl: direction,
+  navText: [
+    "<i class='fas fa-angle-left fa-xs'></i>",
+    "<i class='fas fa-angle-right fa-xs'></i>",
+  ],
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+    1200: {
+      items: 3,
+    },
+    1400: {
+      items: 4,
+    },
+  },
+});
+
 $(".plans").owlCarousel({
   items: 10,
   loop: false,

@@ -74,6 +74,10 @@
   .card {
     margin-bottom: 30px;
   }
+  &.section--with-margins{
+    text-align: unset;
+    margin: 40px 0;
+  }
 }
 aside{
   margin-top: 40px;

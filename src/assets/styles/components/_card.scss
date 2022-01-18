@@ -82,9 +82,24 @@
   margin-bottom: 15px;
   padding: 20px;
   position: relative;
+  .card__title{
+    padding-bottom: 16px;
+    margin: 0 0 16px 0;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 60px;
+      height: 2px;
+      background-color: $primary;
+      bottom: 0;
+      left: 0;
+    }
+  }
   &.card--plan{
     border: 1px solid $primary;
     margin-top: 50px;
+    margin-bottom: 0;
     .card__content-header{
       margin-bottom: 16px;
       img{
@@ -106,26 +121,34 @@
     .card__content{
       padding: 0;
     }
-    .plan-item{
-      @include normalizeTypo;
-      display: flex;
-      margin-bottom: 16px;
-      .material-icons{
-        color: $black;
-        margin: 0 8px;
-      }
-    }
-    .btn{
+    
+    a.btn{
       display: inherit;
       margin: 0 auto ;
     }
     &.plan--card-recommended{
       border: 3px solid $primary;
+      padding: 50px 16px 16px 16px;
       .card__content-header{
         img{
+          width: 100px;
+          height: 100px;
           border: 3px solid $primary;
         }
       }
+    }
+  }
+  .plan-item{
+    @include normalizeTypo;
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    .material-icons{
+      color: $black;
+      margin: 0 8px;
+    }
+    .plan-item__actions{
+      margin-right: auto;
     }
   }
   // overflow: hidden;
@@ -1211,7 +1234,12 @@ html[dir="rtl"] {
       left: unset;
       right: 0;
     }
-
+    .card__title{
+      &::after{
+        left: unset;
+        right: 0;
+      }
+    }
     .card__content {
       text-align: right;
     }
@@ -1229,7 +1257,8 @@ html[dir="rtl"] {
           left: 20px;
         }
       }
-      .btn{
+      a.btn{
+        text-align: center;
         margin: 0 auto;
       }
       .plan-item .material-icons{

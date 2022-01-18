@@ -9,7 +9,8 @@
     height: 50px;
   }
   &.image--xs-small-profile {
-    width: 36px;
+    max-width: 36px;
+    min-width: 36px;
     height: 36px;
   }
 

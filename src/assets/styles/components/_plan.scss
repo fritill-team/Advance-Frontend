@@ -1,0 +1,18 @@
+.assessment{
+  &.plan{
+    background-color: rgba($color: $gray, $alpha: .05);
+    margin-bottom: 40px;
+  }
+}
+
+.checkout{
+  .tabs-panels{
+    margin-bottom: 30px;
+  }
+  .field-wrapper{
+    min-width: unset;
+  }
+
+  
+
+}

@@ -29,3 +29,17 @@ html[dir="rtl"]{
     }
   }
 }
+
+.plans{
+  .owl-stage{
+    display: flex;
+    align-items: flex-end;
+  }
+  .owl-nav{
+    top: 55%;
+    transform: unset;
+  }
+  &.owl-carousel .owl-item img{
+    // width: unset;
+  }
+}

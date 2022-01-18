@@ -1,0 +1,91 @@
+extends ../layouts/site.pug
+
+block title
+	title checkout
+block content
+	section.assessment.plan
+		.container
+			.row.justify-content-between
+				.col-md-8.col-sm-6 
+					.assessment__title
+						h3 plane name 
+						p.body-1 $49/month
+						p.body-2 Details about this plan Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero rem beatae sunt possimus eius quas magnam? Maiores eaque deserunt, alias officia, itaque ea dolores adipisci soluta distinctio unde dolorum.
+				//- .col-md-4.col-sm-6 
+				img(class="image preview" src="../../assets/images/icon-1.svg", alt="")
+	.container 
+		.row 
+			.col-md-8
+				.card.checkout
+					.tabs
+						a(href="#method1" class="tab tab--active ") Credit/Debit Card
+						a(href="#method2" class="tab") Bank Transfer
+					.tabs-panels
+						#method1.tab-panel.tab-panel--active
+							form.form
+								.row 
+									.col-sm-6 
+										.field-wrapper
+											label.field-wrapper__label Full name
+											.field-wrapper__content
+												input(class="field" type='text' placeholder='enter your full name' name='fullname' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									.col-sm-6
+										.field-wrapper
+											label.field-wrapper__label Card Number
+											.field-wrapper__content
+												input(class="field" type='text' placeholder='Insert your card number' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									.col-sm-4 
+										.field-wrapper
+											label.field-wrapper__label Expiration month
+											.field-wrapper__content
+												select.field
+													option(value='') Select option
+													option(value='1') option 1
+													option(value='2') option 2
+													option(value='3') option 3
+													option(value='4') option 4
+													option(value='5') option 5
+									.col-sm-4 
+										.field-wrapper
+											label.field-wrapper__label Expiration Year
+											.field-wrapper__content
+												input(class="field" type='text' placeholder='Year' name='year' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									.col-sm-4 
+										.field-wrapper
+											label.field-wrapper__label CVC
+											.field-wrapper__content
+												input(class="field" type='text' placeholder='CVC' name='cvc' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+						#method2.tab-panel
+							p method2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ducimus ab harum neque alias nisi nulla, consectetur voluptatum ratione cumque eum in perspiciatis non rerum unde minima? Illo, modi placeat.
+					
+					//- .divider
+					h4.card__title Order Summary
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					.divider
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					.divider
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					//- .divider
+			.col-md-4
+				.card
+					h4.card__title Order Summary
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					.divider
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					.divider
+					.plan-item
+						p.body-1 Feature One Feature
+						p.body-1.plan-item__actions $24
+					button.btn.btn--primary Checkout
+					//- .divider
+				//- p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi omnis adipisci magni eum obcaecati, quia vel possimus at porro pariatur illum blanditiis numquam minima rem minus aliquid aliquam? Consectetur, impedit?
