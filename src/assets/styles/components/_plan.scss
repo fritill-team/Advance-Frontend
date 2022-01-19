@@ -1,7 +1,19 @@
 .assessment{
   &.plan{
     background-color: rgba($color: $gray, $alpha: .05);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    img{
+      margin-top: auto;
+      transform: translateY(80px);
+    }
+    .plan__left-side{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .btn{
+      text-align: center;
+    }
   }
 }
 
@@ -13,6 +25,56 @@
     min-width: unset;
   }
 
-  
-
 }
+
+.display-5{
+  margin-bottom: 50px;
+}
+.display-4{
+  margin-bottom: 30px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+.box{
+  max-width: 200px;
+  width: 100%;
+  min-height: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+  // div#sourceFields {
+  // display: none;
+  // }
+  // div#fieldChooser {
+  // width: 350px;
+  // }
+  // .fc-field {
+  // margin: 0 0 0 0;
+  // padding: 5px;
+  // font-size: 1.2em;
+  // width: 120px;
+  // outline: #777777 ridge thin;
+  // background-color: #cccccc;
+  // }
+  // .fc-selected {
+  // background-color: #999999;
+  // }
+  // .fc-field-list {
+  // margin: 0;
+  // padding: 3px 3px 3px 3px;
+  // margin-right: 10px;
+  // outline: #333333 solid thin;
+  // height: 600px;
+  // width: 150px;
+  // overflow: scroll;
+  // }
+  // .fc-source-fields {
+  // float: left;
+  // }
+  // .fc-destination-fields {
+  // float: right;
+  // }

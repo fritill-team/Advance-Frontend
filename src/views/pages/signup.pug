@@ -5,7 +5,7 @@ block title
 	title sign-up
 
 block content
-	//- h2.title-h4.semi-bold  Welcome Back
+	h5.semi-bold.text--center  Sign up
 	//- p Log In to Your Edututs+ Account!
 	form.form
 		.field-wrapper.field-wrapper--full
@@ -15,11 +15,45 @@ block content
 				input(
 					class="field"
 					type='text'
-					placeholder='Full Name'
-					name='fullName'
+					placeholder='First Name'
+					name='first_name'
 					maxlength=''
 					required
 					)
+		.field-wrapper.field-wrapper--full
+			label.field-wrapper__label
+				
+			.field-wrapper__content
+				input(
+					class="field"
+					type='text'
+					placeholder='Last Name'
+					name='lastName'
+					maxlength=''
+					required
+					)
+		.field-wrapper.field-wrapper--full
+			label.field-wrapper__label
+				
+			.field-wrapper__content
+				input(
+					class="field"
+					type='date'
+					placeholder='Birth date'
+					name='birthDate'
+					required
+					)
+		.field-wrapper
+			label.field-wrapper__label 
+			.field-wrapper__content
+				select.field
+					option(value='') Select Gender
+					option(value='1') Male
+					option(value='2') Female
+					
+			ul.field-wrapper__messages
+				li
+					| Please provide a valid city.
 			//- ul.field-wrapper__messages
 				li Please provide a valid city.
 		.field-wrapper.field-wrapper--full

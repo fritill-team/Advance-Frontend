@@ -4,6 +4,11 @@
   margin-bottom: 8px;
   max-width: 600px;
   min-width: 300px;
+  &:focus-within{
+    .field-wrapper__messages{
+      display: block;
+    }
+  }
   @media (max-width: 768px) {
     min-width: unset;
   }
@@ -139,6 +144,7 @@
 }
 
 .field-wrapper__messages {
+  display: none;
   li {
     font-size: 14px;
     font-weight: 600;
@@ -259,7 +265,7 @@ textarea.field{
     height: 36px;
     text-align: center;
     border-radius: 50%;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .check-field__input {

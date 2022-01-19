@@ -383,8 +383,9 @@ $(document).on("click", "content__item", function () {
 
 
 $(document).on('change', 'input[type="file"]', function (e) {
-  // let imageList = $('.image-list')
-  let imageList = $('.' + $(this).name + '-image-list')
+  console.log(this);
+  let imageList = $('.image-list')
+  // let imageList = $('.' + $(this).name + '-image-list')
   var images = [];
   for (var i = 0; i < $(this).get(0).files.length; ++i) {
     // images.push($(this).get(0).files[i].name);
@@ -392,7 +393,7 @@ $(document).on('change', 'input[type="file"]', function (e) {
     images.push(srcArray)
   }
   console.log(srcArray);
-  console.log(images);
+  // console.log(images);
 
   function image() {
     return `
@@ -401,8 +402,12 @@ $(document).on('change', 'input[type="file"]', function (e) {
       `)}
     `
   }
-
   imageList.append(image())
+  if (images.length === 0) {
+  } else {
+
+  }
+  // images = [];
 })
 //venobox
 $(document).ready(function () {

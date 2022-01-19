@@ -2,7 +2,26 @@
   display: flex;
   font-weight: bold;
   font-size: 14px;
-
+  &.tabs--list{
+    flex-direction: column;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    &::after{
+      display: none;
+    }
+    .tab{
+      text-align: unset;
+      border-radius: 5px;
+      margin-bottom: 16px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &.tab--active::after{
+        display: none;
+      }
+    }
+  }
   &.tabs--center {
     justify-content: center;
     // margin-bottom: 20px;
