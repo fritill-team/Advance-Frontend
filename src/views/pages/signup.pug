@@ -8,89 +8,97 @@ block content
 	h5.semi-bold.text--center  Sign up
 	//- p Log In to Your Edututs+ Account!
 	form.form
-		.field-wrapper.field-wrapper--full
-			label.field-wrapper__label
-				
-			.field-wrapper__content
-				input(
-					class="field"
-					type='text'
-					placeholder='First Name'
-					name='first_name'
-					maxlength=''
-					required
-					)
-		.field-wrapper.field-wrapper--full
-			label.field-wrapper__label
-				
-			.field-wrapper__content
-				input(
-					class="field"
-					type='text'
-					placeholder='Last Name'
-					name='lastName'
-					maxlength=''
-					required
-					)
-		.field-wrapper.field-wrapper--full
-			label.field-wrapper__label
-				
-			.field-wrapper__content
-				input(
-					class="field"
-					type='date'
-					placeholder='Birth date'
-					name='birthDate'
-					required
-					)
-		.field-wrapper
-			label.field-wrapper__label 
-			.field-wrapper__content
-				select.field
-					option(value='') Select Gender
-					option(value='1') Male
-					option(value='2') Female
-					
-			ul.field-wrapper__messages
-				li
-					| Please provide a valid city.
+		.row 
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label
+						
+					.field-wrapper__content
+						input(
+							class="field"
+							type='text'
+							placeholder='First Name'
+							name='first_name'
+							maxlength=''
+							required
+							)
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label
+						
+					.field-wrapper__content
+						input(
+							class="field"
+							type='text'
+							placeholder='Last Name'
+							name='lastName'
+							maxlength=''
+							required
+							)
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label
+						
+					.field-wrapper__content
+						input(
+							class="field"
+							type='date'
+							placeholder='Birth date'
+							name='birthDate'
+							required
+							)
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label 
+					.field-wrapper__content
+						select.field
+							option(value='') Select Gender
+							option(value='1') Male
+							option(value='2') Female
+							
+					ul.field-wrapper__messages
+						li
+							| Please provide a valid city.
 			//- ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper.field-wrapper--full
-			label.field-wrapper__label
-				
-			.field-wrapper__content
-				input(
-					class="field"
-					type='email'
-					placeholder='Email Address'
-					name='emailAddress'
-					maxlength=''
-					required
-					)
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label
+						
+					.field-wrapper__content
+						input(
+							class="field"
+							type='email'
+							placeholder='Email Address'
+							name='emailAddress'
+							maxlength=''
+							required
+							)
 			//- ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper.field-wrapper--full
-			label.field-wrapper__label
-				
-			.field-wrapper__content
-				input(
-					class="field"
-					type='Password'
-					placeholder='Password'
-					name='Password'
-					maxlength=''
-					required
-					)
+			.col-md-6
+				.field-wrapper
+					label.field-wrapper__label
+						
+					.field-wrapper__content
+						input(
+							class="field"
+							type='Password'
+							placeholder='Password'
+							name='Password'
+							maxlength=''
+							required
+							)
 			//- ul.field-wrapper__messages
 				li Please provide a valid city.
-		.field-wrapper.field-wrapper--full
-			div.check-field
-				div.check-field__control
-					input(class="check-field__input" type="checkbox" id="checkbox-11" name="checkname")
-					label(for="checkbox-11")
-					span
-				label.check-field__label I’m in for emails with exciting discounts and personalized recommendations 
+			.col-md-12
+				.field-wrapper
+					div.check-field
+						div.check-field__control
+							input(class="check-field__input" type="checkbox" id="checkbox-11" name="checkname")
+							label(for="checkbox-11")
+							span
+						label.check-field__label I’m in for emails with exciting discounts and personalized recommendations 
 			
 		//- .d-flex.justify-content-around
 		button(class="btn btn--primary btn--ripple btn--block" type="submit")  Sign up
