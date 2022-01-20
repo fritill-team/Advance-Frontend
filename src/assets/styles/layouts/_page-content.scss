@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-	transition: .3s ease all;
+  transition: 0.3s ease all;
   min-height: calc(100vh - 60px);
   //overflow-y: auto; // we need this to prevent scrolling of drawer
   // @include arabicTypo;
@@ -26,7 +26,7 @@
   .page__content-fit-window {
     height: 100%;
   }
-  .footer{
+  .footer {
     margin-top: auto;
   }
 }
@@ -39,33 +39,30 @@
   &.drawer--partially-closed.drawer--open + .page,
   &.drawer--open + .page {
     padding-left: 300px;
-		@media (max-width: 768px) {
-			padding-left: 0;
-		}
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
   }
-	&.drawer--open,&.drawer--partially-closed + .page {
-		@media (max-width: 768px) {
-			padding-left: 0;
-		}
-	}
+  &.drawer--open,
+  &.drawer--partially-closed + .page {
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
+  }
 }
-
-
-
 
 .auth__bg {
-	background: rgba(#fff, 0.3) !important;
-	position: absolute;
-	z-index: 0;
-	background-repeat: no-repeat;
-	background-position-y: center;
-	background-size: cover;
-	object-fit: cover;
-	opacity: 0.06;
-	width: 100%;
-	height: 100%;
+  background: rgba(#fff, 0.3) !important;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: cover;
+  object-fit: cover;
+  opacity: 0.06;
+  width: 100%;
+  height: 100%;
 }
-
 
 .section {
   margin-bottom: 80px;
@@ -75,41 +72,41 @@
   .card {
     margin-bottom: 30px;
   }
-  &.section--with-margins{
+  &.section--with-margins {
     text-align: unset;
     margin: 40px 0;
   }
 }
-aside{
+aside {
   margin-top: 40px;
   @media (max-width: 992px) {
     display: none;
   }
 }
-.section__header{
+.section__header {
   width: 100%;
   padding: 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  *{
+  * {
     margin-bottom: 0;
   }
   // @include normalizeTypo;
-  
 }
 .section--with-bg {
-  background-color: rgba(#333, .06);
+  background-color: rgba(#333, 0.06);
   padding: 50px 0;
 }
-.section--full{
+.section--full {
   min-height: 100vh;
   margin-bottom: 0;
   display: flex;
   align-items: center;
 }
-.authorization{
-  h4,h5{
+.authorization {
+  h4,
+  h5 {
     margin-top: 0;
     text-align: center;
   }
@@ -132,7 +129,8 @@ aside{
     // background-color: $white;
     border-radius: 5px;
 
-    img,svg {
+    img,
+    svg {
       width: 100%;
       height: 100%;
     }
@@ -146,34 +144,33 @@ aside{
   .section--partners {
     background-color: lighten($black, 10%);
   }
-  .section__header{
-    *{
+  .section__header {
+    * {
       color: $white;
     }
   }
 }
 
-
 html[dir="rtl"] {
   .drawer {
-		@media (max-width: 768px) {
-			padding-left: 0;
-		}
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
     &.drawer--partially-closed + .page {
       padding-left: unset;
       padding-right: 60px;
-			@media (max-width: 768px) {
-				padding-right: 0;
-			}
+      @media (max-width: 768px) {
+        padding-right: 0;
+      }
     }
 
     &.drawer--partially-closed.drawer--open + .page,
     &.drawer--open + .page {
       padding-left: unset;
       padding-right: 300px;
-			@media (max-width: 768px) {
-				padding-right: 0;
-			}
+      @media (max-width: 768px) {
+        padding-right: 0;
+      }
     }
   }
 }
