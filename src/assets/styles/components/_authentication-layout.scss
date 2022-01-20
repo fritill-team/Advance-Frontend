@@ -16,15 +16,15 @@
     text-align: center;
     margin: 15px 0px;
   }
-  .field-wrapper{
+  .field-wrapper {
     margin-bottom: 8px;
-    .field-wrapper__label{
+    .field-wrapper__label {
       // line-height: 2;
     }
-    .check-field{
+    .check-field {
       // align-items: center;
       margin: 0 8px;
-      .check-field__control{
+      .check-field__control {
         margin-top: 0;
       }
     }
@@ -36,6 +36,7 @@
   max-width: 70vw;
   width: 100%;
   max-height: 80vh;
+  height: 100%;
   overflow-y: auto;
   z-index: 6;
   position: absolute;
@@ -44,12 +45,12 @@
   transform: translateX(-50%) translateY(-50%);
   background: #fff;
   border-radius: 5px;
-  box-shadow: -.08333in .5pc 1.125pc -7px rgba(25, 42, 70, .13);
+  box-shadow: -0.08333in 0.5pc 1.125pc -7px rgba(25, 42, 70, 0.13);
   display: flex;
   @media (max-width: 600px) {
     max-width: 95vw;
   }
-  .auth-form__image{
+  .auth-form__image {
     min-width: 40%;
     max-width: 40%;
     width: 100%;
@@ -60,33 +61,34 @@
     position: relative;
     background-color: $primary;
     @include whiteTypo;
-    img{
+    img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: .2;
+      opacity: 0.2;
     }
     @media (max-width: 992px) {
       display: none;
     }
   }
-  .auth-form__content{
+  .auth-form__content {
     padding: 16px;
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
   }
-  
+
   .auth-form__logo {
     display: inline-flex;
     margin-top: 20px;
     // justify-content: center;
     width: 90%;
     // text-align: center;
-    img{
+    img {
       opacity: 1;
       // height: 60px;
       position: relative;
@@ -99,68 +101,64 @@
     text-align: center;
     margin: 15px 0px;
   }
-  .field-wrapper{
+  .field-wrapper {
     margin-bottom: 8px;
     min-width: auto;
     max-width: auto;
-    .field-wrapper__label{
+    .field-wrapper__label {
       line-height: 2;
     }
-    .check-field{
+    .check-field {
       // align-items: center;
       margin: 0 8px;
-      .check-field__control{
+      .check-field__control {
         margin-top: 0;
       }
-      .check-field__control + .check-field__label{
+      .check-field__control + .check-field__label {
         padding: 0 8px;
       }
     }
   }
-  .btn{
-    &:last-of-type{
+  .btn {
+    &:last-of-type {
       margin: 16px 0;
     }
   }
 }
 
-
-body{
+body {
   position: unset !important;
 }
-.iti--container{
+.iti--container {
   position: fixed !important;
   top: 50% !important;
   left: 36% !important;
   right: 36% !important;
   // transform: translateY(-50%) !important;
 }
-.iti__country{
+.iti__country {
   display: flex;
   align-items: center;
 }
-.iti-mobile .iti--container{
+.iti-mobile .iti--container {
   width: 300px !important;
   height: 300px !important;
   // position: unset;
-//   .iti__country-list {
-//     width: 300px;
-//     height: 300px;
-//   }
+  //   .iti__country-list {
+  //     width: 300px;
+  //     height: 300px;
+  //   }
 }
 
-#phone{
+#phone {
   text-align: right;
   position: relative;
 }
 
-
-
-
 .middle-or {
   align-items: center;
   justify-content: center;
-  p{
+  p {
     // margin: 0;
   }
   hr {
@@ -174,16 +172,16 @@ body{
 }
 
 // input library
-.iti{
+.iti {
   width: 100%;
 }
-.tabs{
+.tabs {
   margin-bottom: 16px;
-  &::after{
+  &::after {
     z-index: 0;
   }
-  .tab{
-    &::after{
+  .tab {
+    &::after {
       z-index: 0;
     }
   }
@@ -211,7 +209,7 @@ body{
   align-items: center;
   justify-content: center;
   // padding: 40px 0;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
   z-index: 1;
 
   a {
@@ -224,7 +222,7 @@ body{
   img {
     width: 100%;
     height: 100%;
-    opacity: 1; 
+    opacity: 1;
   }
 
   h1 {
@@ -233,33 +231,36 @@ body{
   }
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
   //start wrapper card auth style media query
-  .wrapper-content{
+  .wrapper-content {
     padding: 16px;
-    transform: scale(.9);
-    p, a, label, input{
+    transform: scale(0.9);
+    p,
+    a,
+    label,
+    input {
       font-size: 90%;
     }
   }
 }
 
-#phone{
+#phone {
   text-align: left;
 }
 
-html[dir="rtl"]{
-  .auth-form{
-    .btn{
-      &:last-of-type{
+html[dir="rtl"] {
+  .auth-form {
+    .btn {
+      &:last-of-type {
         margin: 16px 0;
       }
     }
   }
-  #phone{
+  #phone {
     text-align: right;
   }
-  .iti__country{
+  .iti__country {
     flex-direction: row-reverse;
   }
 }
@@ -272,5 +273,5 @@ html[dir="rtl"]{
     background-color: #394851;
     // box-shadow: 0px 2px 8px 5px #0d758e;
     // box-shadow: 1px 3px 5px rgba($color: #fff, $alpha: .2);
-  } 
+  }
 }
