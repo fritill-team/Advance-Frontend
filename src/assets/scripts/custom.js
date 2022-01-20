@@ -746,16 +746,16 @@ $(function(){
       content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
-  $('.user').each(function(){
+  $('.input').each(function(){
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
       theme: 'tooltipster-default',
       touchDevices: true,
-      trigger: 'hover',
+      trigger: 'click',
       interactive: true,
       offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">Web Developer, Designer, and Teacher Jose</p><p class="body-2" >615K Students</p><p class="body-2" >12 Courses</p></p></div></div>')
+      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
 })
