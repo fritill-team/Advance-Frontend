@@ -11,7 +11,7 @@ block content
 			.col-md-6.col-12.offset-md-3 
 				.card 
 					h5.card__title Add Item 
-					form
+					form.add-item
 						.field-wrapper
 							label.field-wrapper__label Start Select :
 							.field-wrapper__content
@@ -35,3 +35,9 @@ block content
 								ul.field-wrapper__messages
 									li
 										| Please provide a valid city.
+
+						.add-item__actions
+							button.btn.btn--primary Save & finish
+							button.btn.btn--primary Save & new
+							a.btn.btn--text.btn--danger Cancel
+						
