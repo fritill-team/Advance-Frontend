@@ -17,7 +17,7 @@
 		if (!('localStorage' in window)) return;
 
 		// Get our newly insert toggle
-		var nightMode = document.querySelector('#night-mode');
+		var nightMode = document.querySelector('#dark-mode-toggle');
 		if (!nightMode) return;
 
 		// When clicked, toggle night mode on or off
