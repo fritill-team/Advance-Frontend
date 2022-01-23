@@ -186,10 +186,10 @@ $(".display-5").owlCarousel({
       items: 3,
     },
     1200: {
-      items: 4,
+      items: 3,
     },
     1400: {
-      items: 5,
+      items: 3,
     },
   },
 });

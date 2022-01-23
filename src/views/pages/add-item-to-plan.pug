@@ -1,0 +1,55 @@
+extends ../layouts/admin.pug
+block title
+	title Admin plan
+
+
+block content
+	include ../components/bread-crumbs.pug
+	+pageTitle
+	.container 
+		.row 
+			.col-md-8.col-12.offset-md-2
+				.card 
+					h5.card__title Add Item 
+					form.add-item
+						.row 
+							.col-md-6
+								.field-wrapper
+									label.field-wrapper__label Content Type
+									.field-wrapper__content
+										select.select2.field
+											option(value='AL') Course
+											option(value='AL') Assessment
+											option(value='AL') Blog
+											option(value='AL') Thread
+											option(value='AL') Activity
+							.col-md-6
+								.field-wrapper
+									label.field-wrapper__label Content List
+									.field-wrapper__content
+										select#SelectPeriode.field
+											option(value='AL') Alabama
+											option(value='AL') Alabama
+											option(value='AL') Alabama
+											option(value='AL') Alabama
+
+						div.check-field
+							div.check-field__control
+								input(class="check-field__input" type="checkbox" id="is_limited" name="checkname")
+								label(for="is_limited")
+								span
+							label.check-field__label Is Life Time
+						
+						.field-wrapper
+							label.field-wrapper__label number of usage*
+							.field-wrapper__content
+								input(class="field" id="no_of_usage" type='number' placeholder='number of usage' name='title' data-purpose='edit-course-title' maxlength='' value='')
+							ul.field-wrapper__messages
+								li
+									| Please provide a valid city.
+
+						.add-item__actions
+							a(href='#' class='btn btn--primary') Save & finish
+							a(href='#' class='btn btn--primary') Save & new
+							a(href='#' class='btn btn--text btn--danger') Cancel
+						

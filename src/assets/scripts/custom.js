@@ -737,6 +737,17 @@ $(function () {
 // 	})
 
 $(function () {
+  $('#is_limited').each(function () {
+    $(this).on('change', function () {
+      if ($(this).is(":checked")) {
+        // console.log($(this).parent().parent().next());
+        $('#no_of_usage').attr("disabled", true).val('');
+      } else {
+        $('#no_of_usage').attr("disabled", false);
+        // console.log('unchecked');
+      }
+    })
+  })
   $('.course-card__author').each(function () {
     $(this).tooltipster({
       animation: 'fade',

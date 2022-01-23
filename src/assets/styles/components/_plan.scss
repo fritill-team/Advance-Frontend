@@ -4,7 +4,7 @@
     margin-bottom: 60px;
     img {
       margin-top: auto;
-      transform: translateY(80px);
+      transform: translateY(60px);
     }
     .plan__left-side {
       display: flex;
@@ -47,21 +47,35 @@
 }
 
 .select2-container {
+  .select2-selection .select2-selection--single {
+  }
   .select2-selection__rendered {
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 16px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 42px !important;
+    height: 42px;
     & > span {
       display: flex !important;
       align-items: center !important;
-      padding: 8px !important;
+      // padding: 6px 0 !important;
       img {
         margin: 0 10px;
       }
     }
   }
+  .select2-results__option--highlighted {
+    background-color: rgba($color: $primary, $alpha: 0.6) !important;
+  }
   .select2-results__option {
     & > span {
       display: flex !important;
       align-items: center !important;
-      padding: 8px !important;
+      padding: 0 !important;
       img {
         margin: 0 10px;
       }
@@ -76,6 +90,10 @@
   }
 }
 .add-item {
+  input[type="number"].field {
+    max-width: 320px;
+    min-width: 320px;
+  }
   .add-item__actions {
     display: flex;
     align-items: center;
