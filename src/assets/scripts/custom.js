@@ -50,7 +50,9 @@ if (
       if (windowScrollTop > iframeBottom) {
         iframeWrap.height(iframeHeight);
         iframe.addClass("stuck");
-        jQuery(".scrolldown").css({display: "none"});
+        jQuery(".scrolldown").css({
+          display: "none"
+        });
       } else {
         iframeWrap.height("auto");
         iframe.removeClass("stuck");
@@ -403,8 +405,7 @@ $(document).on('change', 'input[type="file"]', function (e) {
     `
   }
   imageList.append(image())
-  if (images.length === 0) {
-  } else {
+  if (images.length === 0) {} else {
 
   }
   // images = [];
@@ -469,7 +470,9 @@ $(document).on("click", function () {
 $(".course-list__item").each(function () {
   $(this).on("click", function () {
     console.log("text");
-    $(this).children("course-list__list-content").css({display: "none"});
+    $(this).children("course-list__list-content").css({
+      display: "none"
+    });
     // $(this).next().css({"display": "none"})
   });
 });
@@ -488,7 +491,10 @@ $(function () {
         // store the updated positions and their id
         let positions = []
         $('.updated-order').each(function () {
-          positions.push({"itemId":$(this).attr('data-id'),"itemOrder": $(this).attr('data-order')});
+          positions.push({
+            "itemId": $(this).attr('data-id'),
+            "itemOrder": $(this).attr('data-order')
+          });
           $(this).removeClass('updated-order');
         });
 
@@ -497,7 +503,9 @@ $(function () {
           url: $("#table-body").attr('data-order-url'),
           method: 'POST',
           dataType: 'text',
-          headers: {'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')},
+          headers: {
+            'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')
+          },
           data: {
             positions: positions
           },
@@ -565,7 +573,10 @@ $(function () {
         // store the updated positions and their id
         let positions = []
         $('.updated-order').each(function () {
-          positions.push({"itemId":$(this).attr('data-id'),"itemOrder": $(this).attr('data-order')});
+          positions.push({
+            "itemId": $(this).attr('data-id'),
+            "itemOrder": $(this).attr('data-order')
+          });
           $(this).removeClass('updated-order');
         });
 
@@ -574,7 +585,9 @@ $(function () {
           url: $("#sortable-chapters").attr('data-order-url'),
           method: 'POST',
           dataType: 'text',
-          headers: {'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')},
+          headers: {
+            'X-CSRFToken': $('meta[name="csrf-token"]').prop('content')
+          },
           data: {
             positions: positions
           },
@@ -723,8 +736,8 @@ $(function () {
 // 	  strokeWidth: 10
 // 	})
 
-$(function(){
-  $('.course-card__author').each(function(){
+$(function () {
+  $('.course-card__author').each(function () {
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
@@ -735,7 +748,7 @@ $(function(){
       content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
-  $('.author').each(function(){
+  $('.author').each(function () {
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
@@ -746,7 +759,9 @@ $(function(){
       content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     });
   })
-  $('.input').each(function(){
+  $('.input').each(function () {
+    let message = $(this).parent().next().html();
+    console.log(message);
     $(this).tooltipster({
       animation: 'fade',
       delay: 0,
@@ -755,7 +770,9 @@ $(function(){
       trigger: 'click',
       interactive: true,
       offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+      position: 'left',
+      // content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+      content: $(`<ul class="user-account flex-column field-wrapper__messages">${message}</ul>`)
     });
   })
 })

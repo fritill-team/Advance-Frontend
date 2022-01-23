@@ -19,8 +19,13 @@ block content
 							.field-wrapper
 								label.field-wrapper__label Course Title*
 								.field-wrapper__content
-									input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+									input(class="field input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
+								//- .message Please provide a valid city.
 								ul.field-wrapper__messages
+									li
+										| Please provide a valid city.
+									li
+										| Please provide a valid city.
 									li
 										| Please provide a valid city.
 							// input Default

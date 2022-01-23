@@ -129,21 +129,16 @@
     }
   }
 }
-.field-wrapper {
+
+.dropdown {
   &.lang {
-    min-width: unset;
-    width: auto;
-    display: flex;
-    align-items: center;
     position: fixed;
     top: 20px;
     left: 20px;
-    @include normalizeTypo;
-    .body-2 {
-      margin: 0 20px;
-    }
+    // @include normalizeTypo;
   }
 }
+
 body {
   position: unset !important;
 }

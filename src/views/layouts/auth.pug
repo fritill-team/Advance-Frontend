@@ -34,7 +34,23 @@ html(lang='en' dir="rtl" class="")
 		div.page
 			.page__content.page__content--auth
 				img.auth__bg(src="../../assets/images/Pattern_4.svg", alt="")
-				
+				.dropdown.lang
+					a.notification__item.dropdown__activator(href="javascript:void(0)" title='language')
+						span.notification__icon.material-icons language
+					.dropdown__content
+						.card-list
+							.card__content
+								.list
+									.list-item.list-item
+										.list-item__content
+											p.subtitle-1.gray English
+										.list-item__action
+											
+									.list-item.list-item
+										.list-item__content
+											p.subtitle-1.gray Arabic
+										.list-item__action
+	
 				//- div.container
 					div.row.justify-content-center
 						.col-lg-12
@@ -56,12 +72,6 @@ html(lang='en' dir="rtl" class="")
 							| . All Rights Reserved.
 					.auth-form__content
 						.container
-							.field-wrapper.lang
-								span.body-2 ar
-								.switch
-									input#switch(class="field" type="checkbox", name="")
-									label(for="switch")
-								span.body-2 en
 							//- .switch
 								//- input(id="dark-mode-toggle" type="checkbox")
 							block content
