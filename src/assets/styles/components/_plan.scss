@@ -91,14 +91,16 @@
 }
 .add-item {
   input[type="number"].field {
-    max-width: 320px;
-    min-width: 320px;
+    max-width: 280px;
+    min-width: 250px;
   }
   .add-item__actions {
     display: flex;
     align-items: center;
     margin-top: 30px;
+    flex-wrap: wrap;
     .btn {
+      margin-bottom: 8px;
       &:last-of-type {
         margin-left: 14px;
       }

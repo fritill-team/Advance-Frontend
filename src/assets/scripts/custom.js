@@ -741,9 +741,9 @@ $(function () {
     $(this).on('change', function () {
       if ($(this).is(":checked")) {
         // console.log($(this).parent().parent().next());
-        $('#no_of_usage').attr("disabled", true).val('');
-      } else {
         $('#no_of_usage').attr("disabled", false);
+      } else {
+        $('#no_of_usage').attr("disabled", true).val('');
         // console.log('unchecked');
       }
     })
