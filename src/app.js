@@ -18,6 +18,7 @@ import "./assets/vendor/star/jquery.star-rating-svg"
 import "./assets/vendor/venobox.min.js"
 import "./assets/vendor/select2.min.js"
 import "./assets/vendor/sortable.js"
+import "./assets/vendor/bootstrap/js/bootstrap"
 // js
 import "./assets/scripts/index"
 // import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle"
@@ -43,7 +44,6 @@ let x = {
     this.countListener(value)
   },
   countListener(v) {
-    // console.log(v)
     countable.val(v)
   }
 }

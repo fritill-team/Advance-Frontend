@@ -42,7 +42,7 @@
       color: $danger;
     }
 
-    .check-field .check-field__input[type='radio']:checked + label:after {
+    .check-field .check-field__input[type="radio"]:checked + label:after {
       background-color: $danger;
     }
 
@@ -98,7 +98,7 @@
       height: 10;
       border-bottom: 1px solid currentColor;
       border-right: 1px solid currentColor;
-      transition: .3s ease all;
+      transition: 0.3s ease all;
     }
 
     .field-wrapper__content:focus-within::after {
@@ -148,6 +148,19 @@
   width: 100%;
 }
 
+.field-wrapper__content-inline {
+  .field {
+    position: relative;
+    padding-left: 36px;
+  }
+
+  .field + .btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
+}
+
 .field-wrapper__icon {
   position: absolute;
   color: #aaaaaa;
@@ -181,7 +194,7 @@
   @include inputs;
 
   &:disabled {
-    background-color: rgba(0, 0, 0, .06);
+    background-color: rgba(0, 0, 0, 0.06);
   }
 
   &.field--with-icon {
@@ -197,7 +210,6 @@
       border-bottom: 1px solid rgba($primary, 0.5);
     }
   }
-
 
   &[type="file"] {
     display: none;
@@ -264,10 +276,7 @@ textarea.field {
   }
 }
 
-
 .check-field-group {
-
-
   &.check-field-group--horizontal {
     display: flex;
     align-items: center;
@@ -317,7 +326,6 @@ textarea.field {
     }
 
     &:checked + label {
-
       &:before {
         color: $primary;
         background-color: currentColor;
@@ -368,7 +376,6 @@ textarea.field {
           border-radius: 50%;
         }
       }
-
     }
 
     & ~ span {
@@ -380,12 +387,12 @@ textarea.field {
       left: -9px;
       opacity: 0;
       border-radius: 50%;
-      transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
       background-color: currentColor;
     }
 
     &:checked ~ span {
-      color: $primary
+      color: $primary;
     }
 
     &:hover ~ span {
@@ -407,7 +414,8 @@ textarea.field {
 }
 
 .switch {
-  input[type="checkbox"], input[type="radio"] {
+  input[type="checkbox"],
+  input[type="radio"] {
     display: none;
   }
 
@@ -456,7 +464,6 @@ textarea.field {
     }
   }
 }
-
 
 .night-mode {
   .field-wrapper {
@@ -522,7 +529,6 @@ html[dir="rtl"] {
     }
   }
 
-
   .check-field {
     padding-left: unset;
     padding-right: 16px;
@@ -561,6 +567,20 @@ html[dir="rtl"] {
       line-height: 1.2;
     }
   }
+
+
+.field-wrapper__content-inline {
+  .field {
+    padding-right: 36px;
+    padding-left: 16px;
+  }
+  .field + .btn {
+    position: absolute;
+    right:unset;
+    left: 3px;
+    transform: rotateY(180deg);
+  }
+}
 }
 
 .rate-input {

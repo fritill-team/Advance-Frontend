@@ -1,22 +1,21 @@
 mixin dropdown
 	.dropdown
-		.dropdown.dropdown__activator
-			button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-				block
-			.dropdown__content.dropdown-content-width
-				.list
-					a(href="#" class="list-item list-item--one-line list-item--open ")
-						.list-item__avatar
-							i.far.fa-copy
-						.list-item__content
-							span.body-2.bold Edit
-						.list-item__action
-					a(href="#" class="list-item list-item--one-line list-item--open ")
-						.list-item__avatar
-							i.far.fa-copy
-						.list-item__content
-							span.body-2.bold Delete
-						.list-item__action
+		button(class="btn dropdown__activator btn--primary btn--text btn--sm btn--icon")
+			block
+		div(class="dropdown-menu dropdown__content" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" )
+			.list.list--condensed
+				a(href="#" class="list-item list-item--one-line list-item--condensed list-item--open ")
+					.list-item__avatar
+						i.far.fa-copy
+					.list-item__content
+						span.body-2.bold Edit
+					.list-item__action
+				a(href="#" class="list-item list-item--one-line  list-item--condensed list-item--open ")
+					.list-item__avatar
+						i.far.fa-copy
+					.list-item__content
+						span.body-2.bold Delete
+					.list-item__action
 		
 		//- .dropdown__content
 		//- 	span.content__item

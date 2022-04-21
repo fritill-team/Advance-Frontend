@@ -132,10 +132,47 @@ block content
 						p.text-2
 							| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
 							| sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
-
-
+			.col-md-6
+				h2.title-2.my-3 Chat
+					p.text-2.mb-1
+						| we use
+						code .card
+				.card.card--side-col.card--transparent.p-0
+					.card__side-col
+						img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile image--xs-small-profile")
+					.card__content
+						.card__header
+							.card__header-multiline
+								a(href='#')
+									| Jose Portilla
+								time.overline.gray Jan 15 &apos;18 at 13:56
+							.card__tools
+								+dropdown
+									i.fas.fa-ellipsis-h
+						p.text-2
+							| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+				.card.card--side-col.card--transparent.p-0
+					.card__side-col
+						img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile image--xs-small-profile")
+					.card__content
+						.card__header
+							.card__header-multiline
+								a(href='#')
+									| Jose Portilla
+								time.overline.gray Jan 15 &apos;18 at 13:56
+							.card__tools
+								+dropdown
+									i.fas.fa-ellipsis-h
+						p.text-2
+							| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
+				form(action='' method='post')
+					.field-wrapper.field-wrapper--full
+						.field-wrapper__content.field-wrapper__content-inline
+							input.field(type='text' placeholder='Insert your review.' name='review' value='review')
+							button.btn.btn--primary.btn--icon.btn--text
+								i.material-icons send
 		
-		//- .col-lg-12
+		.col-lg-12
 			h2.title-2.my-3 Default card
 			p
 				| we use
@@ -169,12 +206,12 @@ block content
 		//-Thread questions
 
 
-		//- .col-lg-12
+		.col-lg-12
 			h2.title-2.my-3 Thread card questions
-			//p.text-2.mb-1
+			p.text-2.mb-1
 				| we use
 				code .card
-		//- .col-lg-12
+		.col-lg-12
 			.card.card--horizontal
 				.card__content
 					.user-image
@@ -208,12 +245,12 @@ block content
 								.tags__item #Development
 								.tags__item #Development
 		//-Thread answer
-		//- .col-lg-12
+		.col-lg-12
 			h2.title-2.my-3 Thread card questions
 			//p.text-2.mb-1
 				| we use
 				code .card
-		//- .col-lg-12
+		.col-lg-12
 			.card.card--side-col
 				.card__content
 					.user-image
@@ -245,12 +282,12 @@ block content
 								i mostafa
 
 		//- card comments
-		//- .col-lg-12
+		.col-lg-12
 			h2.title-2.my-3 Default card comments
 			p.text-2.mb-1
 				| we use
 				code .card .card--transparent
-		//- .col-lg-12
+		.col-lg-12
 			.comments-list
 				//- component 1 add class transparent (no-background)
 				.card.card--transparent

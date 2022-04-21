@@ -1,10 +1,11 @@
 .dropdown {
-  position: relative;
+  // position: relative;
   display: inline-block;
 
-  &.dropdown--active .dropdown__content {
+  &.dropdown--active .dropdown__content ,
+  &.show .dropdown__content  {
     display: block;
-    transform: perspective(400px) rotateX(0deg);
+    // transform: perspective(400px) rotateX(0deg);
   }
 
   &.btn--dropdown {
@@ -14,14 +15,16 @@
   .dropdown__content {
     position: absolute;
     top: 100%;
-    right: 0;
-    z-index: 3;
+    left: 0;
+    display: none;
+    z-index: 1000;
     border-radius: 5px;
     transform-origin: top;
     background-color: $white;
     transition: all 100ms ease;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: perspective(400px) rotateX(-90deg);
+    // transform: perspective(400px) rotateX(-90deg);
+    min-width: 150px;
     width: fit-content;
 
     .content__link {
@@ -71,7 +74,7 @@
       line-height: 16px;
     }
     .dropdown__content {
-      width: 300px;
+      // width: 300px;
     }
   }
   @media (max-width: 768px){
@@ -87,8 +90,8 @@
 html[dir="rtl"] {
   .dropdown {
     .dropdown__content {
-      right: unset;
-      left: 0;
+      left: unset;
+      right: 0;
     }
     &.dropdown--header {
       margin-left: 25px;
