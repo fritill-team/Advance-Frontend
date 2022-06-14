@@ -1,22 +1,3 @@
-// === Dropdown === //
-
-// $(".ui.dropdown").dropdown();
-
-// === Model === //
-// $(".ui.modal")
-//   .modal({
-//     blurring: true
-//   })
-//   .modal("show");
-
-// === Tab === //
-// $(".menu .item").tab();
-
-// === checkbox Toggle === //
-// $('.ui.checkbox')
-//   .checkbox()
-//   ;
-
 // === Toggle === //
 $(".enable.button").on("click", function () {
   $(this).nextAll(".checkbox").checkbox("enable");
@@ -111,30 +92,6 @@ $(".toggle-filter").on("click", function () {
   }
 });
 
-$("#list").on("click", function () {
-  $(".course-card--grid-view")
-    .removeClass("course-card--grid-view")
-    .addClass("course-card--list-view");
-  $(this).addClass("active").siblings().removeClass("active");
-  $(".course-card--list-view")
-    .parent()
-    .parent()
-    .removeClass("col-lg-3 col-md-6")
-    .addClass("col-lg-12");
-  $(".course-card-container").addClass("course-card-container--list-view");
-});
-$("#grid").on("click", function () {
-  $(".course-card--list-view")
-    .removeClass("course-card--list-view")
-    .addClass("course-card--grid-view");
-  $(this).addClass("active").siblings().removeClass("active");
-  $(".course-card--grid-view")
-    .parent()
-    .parent()
-    .removeClass("col-lg-12")
-    .addClass("col-lg-3 col-md-6");
-  $(".course-card-container").removeClass("course-card-container--list-view");
-});
 
 // $(".menu--item .menu--link").each(function() {
 //   $(this).on("click", function(e) {
@@ -383,7 +340,6 @@ $(document).on("click", "content__item", function () {
 // $("#media").dropzone({url: 'text/test'});
 
 
-
 $(document).on('change', 'input[type="file"]', function (e) {
   console.log(this);
   let imageList = $('.image-list')
@@ -395,6 +351,7 @@ $(document).on('change', 'input[type="file"]', function (e) {
     images.push(srcArray)
   }
   console.log(srcArray);
+
   // console.log(images);
 
   function image() {
@@ -404,8 +361,10 @@ $(document).on('change', 'input[type="file"]', function (e) {
       `)}
     `
   }
+
   imageList.append(image())
-  if (images.length === 0) {} else {
+  if (images.length === 0) {
+  } else {
 
   }
   // images = [];
@@ -748,42 +707,42 @@ $(function () {
       }
     })
   })
-  $('.course-card__author').each(function () {
-    $(this).tooltipster({
-      animation: 'fade',
-      delay: 0,
-      theme: 'tooltipster-default',
-      touchDevices: true,
-      trigger: 'hover',
-      offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
-    });
-  })
-  $('.author').each(function () {
-    $(this).tooltipster({
-      animation: 'fade',
-      delay: 0,
-      theme: 'tooltipster-default',
-      touchDevices: true,
-      trigger: 'hover',
-      offsetX: '100px',
-      content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
-    });
-  })
+  // $('.course-card__author').each(function () {
+  // $(this).tooltipster({
+  //   animation: 'fade',
+  //   delay: 0,
+  //   theme: 'tooltipster-default',
+  //   touchDevices: true,
+  //   trigger: 'hover',
+  //   offsetX: '100px',
+  //   content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+  // });
+  // })
+  // $('.author').each(function () {
+    // $(this).tooltipster({
+    //   animation: 'fade',
+    //   delay: 0,
+    //   theme: 'tooltipster-default',
+    //   touchDevices: true,
+    //   trigger: 'hover',
+    //   offsetX: '100px',
+    //   content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    // });
+  // })
   $('.input').each(function () {
     let message = $(this).parent().next().html();
     console.log(message);
-    $(this).tooltipster({
-      animation: 'fade',
-      delay: 0,
-      theme: 'tooltipster-default',
-      touchDevices: true,
-      trigger: 'click',
-      interactive: true,
-      offsetX: '100px',
-      position: 'left',
-      // content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
-      content: $(`<ul class="user-account flex-column field-wrapper__messages">${message}</ul>`)
-    });
+    // $(this).tooltipster({
+    //   animation: 'fade',
+    //   delay: 0,
+    //   theme: 'tooltipster-default',
+    //   touchDevices: true,
+    //   trigger: 'click',
+    //   interactive: true,
+    //   offsetX: '100px',
+    //   position: 'left',
+    //   // content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    //   content: $(`<ul class="user-account flex-column field-wrapper__messages">${message}</ul>`)
+    // });
   })
 })

@@ -2,10 +2,6 @@
   "name": "advance",
   "version": "0.0.1",
   "description": "Advance",
-  "author": {
-    "name": "Mohammed Ibraheem zaki",
-    "email": "zakiz0054@gmail.com"
-  },
   "main": "app.js",
   "repository": "git@github.com:my-user/my-repo.git",
   "license": "MIT",

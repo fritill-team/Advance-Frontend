@@ -5006,7 +5006,7 @@ html[dir="rtl"] .user-img__img {
   font-size: 30px;
 }
 
-.category-results {
+.listing-results {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5017,7 +5017,7 @@ html[dir="rtl"] .user-img__img {
   background-color: #fff;
 }
 
-.category-results .item_title {
+.listing-results .item_title {
   font-size: 18px;
   color: #333;
   text-align: left;

@@ -27,13 +27,13 @@ const getBreakpoint = () => {
     return colClass
       ? colClass
       : colClasses.find(
-          (className) =>
-            className.indexOf(
-              colClasses
-                .map((colClass) => colClass.split("-")[1])
-                .reduce((a, b) => (breakpoints[a] < breakpoints[b] ? a : b))
-            ) !== -1
-        );
+        (className) =>
+          className.indexOf(
+            colClasses
+              .map((colClass) => colClass.split("-")[1])
+              .reduce((a, b) => (breakpoints[a] < breakpoints[b] ? a : b))
+          ) !== -1
+      );
   };
 
 let NoOfCols = 0,
@@ -106,8 +106,8 @@ const courseTemplate = function (course) {
       <div class="course-card__content">
 				<a class="title-link text-2 semi-bold" href="${course.url}" lang="${course.language}" >${gettext(course.title)}</a>
 				<p class="title-link course-card__description body-2 gray" lang="${course.language}">${
-          gettext(course.short_description) ? gettext(course.short_description) : ""
-        }</p>
+    gettext(course.short_description) ? gettext(course.short_description) : ""
+  }</p>
 				<div class="course-card__meta">
 					<p class="body-2 gray bold" lang="${course.language}">${gettext(course.category)}</p>
         </div>
@@ -119,8 +119,11 @@ const courseTemplate = function (course) {
     </div>`;
 };
 
-$(".course-card-container").each(function (i, item) {
-  let course = $(item),
-    data = course.data("data");
-  course.html($(courseTemplate(data)));
-});
+let courseCards = $(".course-card-container")
+if (courseCards.length)
+  courseCards.each(function (i, item) {
+    let course = $(item),
+      data = course.data("data");
+    if (data)
+      course.html($(courseTemplate(data)));
+  });

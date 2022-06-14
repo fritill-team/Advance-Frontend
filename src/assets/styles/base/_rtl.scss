@@ -770,55 +770,7 @@ html[dir="rtl"] {
   .interactions-course {
     float: left;
   }
-  //start page chapter
-  // start comments component
-  .comments {
-    float: right;
-    .comments__header {
-      float: right;
-      .header__title {
-        float: right;
-        .title__name {
-          text-align: right;
-          float: right;
-        }
-      }
-    }
-    .comments__add-comment {
-      float: right;
-      .add-comment__group {
-        display: flex;
-        .group__textarea {
-          margin-right: 20px;
-        }
-      }
-    }
-    .btn {
-      float: left;
-    }
-    .comment__review-comment {
-      float: right;
-      .review-comment__item,
-      .review_reply {
-        .review-comment__comment {
-          text-align: right;
-        }
-        .item__actions {
-          .action__report {
-            margin-right: 5px;
-          }
-        }
-      }
-      .review_reply {
-        padding-left: 0;
-        padding: 0px 20px;
-        .review_item {
-          padding-left: 0;
-          padding-right: 20px;
-        }
-      }
-    }
-  }
+
   // start list-dropdown
   .more-dropdown {
     position: relative;
@@ -1158,7 +1110,7 @@ html[dir="rtl"] {
     }
   }
   //header-player
- 
+
   .playlist {
     right: -285px;
   }

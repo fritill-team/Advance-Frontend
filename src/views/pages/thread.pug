@@ -1,37 +1,56 @@
 extends ../layouts/site.pug
 block title
-	title Single thread
+  title Single thread
 
 
 block content
-	.page-header 
-		.container 
-			.row 
-				.col-12
-					include ../components/general-component/user-account.pug
-					+account-review("../../assets/images/hd_dp.jpg","John Doe", "2 hour ago")
-				.col-12
-					.page-header__content
-						h1 This is thread question ?
-				.col-12
-					.page-header__info
-						span.body-1
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at beatae, commodi iste
-							| magnam numquam placeat reiciendis! Animi architecto cumque dolorum ea eos eveniet,
-							| nesciunt perspiciatis, placeat quaerat quia quibusdam!
-					
-	.container
-		.row
-			.col-12 
-				.comment-form
-			.col-12
-				.comment-container
-			.col-12
-				.comment-form
-			.col-12
-				.comment-container
-			.col-12
-				.comment-form
-			.col-12
-				.comment-container
-				.comment-form
+  .container.mt-5
+    .row
+      .col-sm-12
+        include ../components/thread-question-card
+        .comments
+          .comments__header
+            .comments__title
+              p comments
+            a(href="#" class="comments__header-more")
+              i.material-icons expand_more
+              | Show All Comments (20 comments)
+          .comment
+            .comment__avatar
+              img(src='../../assets/images/hd_dp.jpg' alt='')
+            .comment__content
+              .comment__header
+                a(href='#' class="comment__username")
+                  | Sohype Khaled
+                  i.fa.fa-check-circle.ml-1
+                time.comment__date May 11, 2022, 2:12 pm
+              .comment__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid aperiam, assumenda corporis dolor, ea error est eum incidunt minus odio pariatur perferendis quos recusandae sunt tempora totam ullam unde!
+            include ../components/list-dropdown.pug
+            +dropdown
+              i.fas.fa-ellipsis-h
+
+          .comment
+            .comment__avatar
+              img(src='../../assets/images/hd_dp.jpg' alt='')
+            .comment__content
+              .comment__header
+                a(href='#' class="comment__username")
+                  | Sohype Khaled
+                  i.fa.fa-check-circle.ml-1
+                time.comment__date May 11, 2022, 2:12 pm
+              .comment__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid aperiam, assumenda corporis dolor, ea error est eum incidunt minus odio pariatur perferendis quos recusandae sunt tempora totam ullam unde!
+            include ../components/list-dropdown.pug
+            +dropdown
+              i.fas.fa-ellipsis-h
+          form.comment
+            .comment__avatar
+              img(src='../../assets/images/hd_dp.jpg' alt='')
+            .comment__content.comment__content-form
+              input(type='hidden' name='thread_id' value='1')
+              .field-wrapper.field-wrapper--full
+                .field-wrapper__content.field-wrapper__content-inline.field-wrapper--sm
+                  input.field(type='text' placeholder='اكتب التعليق هنا' name='content')
+                  button.btn.btn--primary.btn--icon.btn--text(type='submit')
+                    span.material-icons.md-18 send

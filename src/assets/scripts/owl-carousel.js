@@ -5,7 +5,7 @@ $(".live_stream").owlCarousel({
   margin: 10,
   nav: true,
   dots: false,
-  rtl: true,
+  rtl: $(document).attr('dir') === 'rtl',
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -36,28 +36,28 @@ $(".featured_courses").owlCarousel({
   margin: 20,
   nav: true,
   dots: false,
-  rtl: true,
+  rtl: $(document).attr('dir') === 'rtl',
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
   ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 2,
-    },
-    1000: {
-      items: 1,
-    },
-    1200: {
-      items: 3,
-    },
-    1400: {
-      items: 4,
-    },
-  },
+  // responsive: {
+  //   0: {
+  //     items: 1,
+  //   },
+  //   600: {
+  //     items: 2,
+  //   },
+  //   1000: {
+  //     items: 1,
+  //   },
+  //   1200: {
+  //     items: 3,
+  //   },
+  //   1400: {
+  //     items: 4,
+  //   },
+  // },
 });
 // related courses
 $(".related_courses").owlCarousel({
@@ -100,11 +100,11 @@ $(".related_courses").owlCarousel({
 // Featured Courses home
 $(".category_courses").owlCarousel({
   items: 10,
-  loop: false,
+  loop: true,
   margin: 20,
   nav: true,
   dots: false,
-  rtl: true,
+  rtl: $(document).attr('dir') === 'rtl',
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",
@@ -259,7 +259,7 @@ $(".Student_says").owlCarousel({
   margin: 30,
   nav: true,
   dots: false,
-  rtl: true,
+  rtl: $(document).attr('dir') === 'rtl',
   navText: [
     "<i class='fas fa-angle-left fa-xs'></i>",
     "<i class='fas fa-angle-right fa-xs'></i>",

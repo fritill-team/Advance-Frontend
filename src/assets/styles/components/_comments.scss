@@ -1,22 +1,158 @@
 .threads {
   padding: 30px 10px;
 }
-.comment-container{
+
+.comment-container {
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 16px;
-  &.comment-container--replay{
+
+  &.comment-container--replay {
     background-color: transparent;
     border-radius: 0;
     border-bottom: 1px solid #333;
   }
 }
+
 .comments {
-  float: left;
   width: 100%;
-  // margin-top: 30px;
   margin-bottom: 20px;
+  padding-left: 80px;
+
+  .comments__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .comments__title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: start;
+
+      p {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    .comments__header-more {
+      color: $gray;
+      letter-spacing: 0;
+      font-size: 12px;
+      margin: 0;
+
+      .material-icons {
+        font-size: 12px;
+      }
+    }
+  }
 }
+
+.comment {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+
+  .comment__avatar {
+    padding: 0 4px;
+
+    img {
+      border-radius: 50%;
+      max-width: 36px;
+      min-width: 36px;
+      height: 36px;
+    }
+  }
+
+  .comment__content {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+
+    &.comment__content-form {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .comment__header {
+      display: flex;
+      padding: 4px 0;
+
+      .comment__user {
+        display: flex;
+      }
+
+      .comment__username {
+        font-weight: 700;
+        color: $primary;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .comment__date {
+        color: $gray;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: 600;
+        margin-left: 4px;
+      }
+
+    }
+
+    .comment__text p {
+      margin-top: 0;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+}
+
+
+html[dir="rtl"] {
+  .comments {
+    padding-right: 80px;
+    padding-left: unset;
+  }
+
+  .comment {
+    .comment__content {
+
+      .comment__header {
+        .comment__date {
+          margin-left: unset;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .user-img__img {
+    margin-left: 15px;
+  }
+
+  .review-comment__item {
+    @include textRight;
+
+    &.review-comment__item--replay {
+      margin-right: 80px;
+    }
+  }
+
+  .comments__add-comment {
+    .add-comment__group .group__textarea {
+      margin: 0 16px 0 0;
+    }
+
+    .btn {
+      float: left;
+    }
+  }
+}
+
 .comment__review-comment {
   float: left;
   width: 100%;
@@ -25,20 +161,20 @@
 
   .review_reply {
     padding: 0px 20px 0px 20px;
+
     .review_item {
       padding-right: 0;
     }
   }
 }
-.comments__header {
-  float: left;
-  width: 100%;
-}
+
+
 .header__title {
   float: left;
   width: 100%;
   margin-bottom: 30px;
 }
+
 .title__name {
   font-size: 20px;
   font-weight: 500;
@@ -47,6 +183,7 @@
   color: $black;
   float: left;
 }
+
 .comments__add-comment {
   float: left;
   width: 100%;
@@ -54,8 +191,10 @@
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 20px;
+
   .add-comment__group {
     display: flex;
+
     .group__img-wrapper {
       .group__img {
         width: 40px;
@@ -66,6 +205,7 @@
         margin-bottom: 0;
       }
     }
+
     .group__textarea {
       height: 40px;
       font-size: 14px;
@@ -82,40 +222,49 @@
       background: $light-white;
     }
   }
+
   .btn {
     float: right;
   }
+
   &.comment--remov-mb {
     margin-bottom: 0;
   }
+
   &.create--threads {
     margin-bottom: 0;
     padding-left: 0px;
     padding: 10px;
     padding-bottom: 0px;
+
     .group__textarea {
       margin-left: 0px;
       margin-bottom: 10px;
     }
   }
 }
-.review-comment__item{
+
+.review-comment__item {
   padding: 20px;
-  &.review-comment__item--replay{
+
+  &.review-comment__item--replay {
     margin-left: 80px;
     border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
-    &:last-of-type{
+
+    &:last-of-type {
       border: none;
     }
   }
-// .review_reply {
-//   padding: 20px;
-//   border-bottom: 1px solid $light-white;
-//   .item__wrapper {
-//     display: flex;
-//     justify-content: space-between;
-//   }
+
+  // .review_reply {
+  //   padding: 20px;
+  //   border-bottom: 1px solid $light-white;
+  //   .item__wrapper {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
 }
+
 .review-comment__comment {
   font-size: 14px;
   margin: 17px 0px;
@@ -125,10 +274,12 @@
   color: $darkGray;
   padding-right: 80px;
 }
+
 .item__actions {
   display: flex;
   @include normalizeTypo;
   padding-right: 80px;
+
   .action__report {
     display: flex;
     align-items: center;
@@ -138,19 +289,23 @@
     line-height: 24px;
     margin-left: 5px;
     cursor: pointer;
+
     .report__icon {
       font-size: 130%;
       padding: 0 5px;
       color: #686f7a;
     }
+
     &:hover {
       color: $primary !important;
     }
   }
+
   &.thread--actions {
     margin-top: 10px;
   }
 }
+
 // comment no background
 .create-comment {
   float: left;
@@ -162,10 +317,12 @@
   display: flex;
   align-items: center;
   padding-left: 0;
+
   .form__action {
     width: 100%;
   }
 }
+
 .user-img__img {
   width: 50px !important;
   height: 50px !important;
@@ -174,6 +331,7 @@
   margin-right: 15px;
   border: 2px solid $white;
 }
+
 .group__textarea {
   height: 40px;
   font-size: 14px;
@@ -187,41 +345,23 @@
   padding: 12px;
   border-radius: 10px;
   background: $light-white;
+
   &.textarea--thread {
     resize: none;
   }
 }
-html[dir="rtl"] {
-  .create-comment {
-    float: right;
-  }
-  .user-img__img {
-    margin-left: 15px;
-  }
-  .review-comment__item{
-    @include textRight;
-    &.review-comment__item--replay{
-      margin-right: 80px;
-    }
-  }
-  .comments__add-comment{
-    .add-comment__group .group__textarea{
-      margin: 0 16px 0 0;
-    }
-    .btn{
-      float: left;
-    }
-  }
-}
 
-.night-mode{
-  .comment-container{
+
+.night-mode {
+  .comment-container {
     background-color: $black;
   }
-  .review-comment__item{
+
+  .review-comment__item {
     @include whiteTypo;
   }
-  .comments__add-comment{
+
+  .comments__add-comment {
     background-color: $white;
   }
 }

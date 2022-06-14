@@ -9,6 +9,8 @@ import "./assets/vendor/jquery-3.3.1.min.js"
 import "./assets/vendor/OwlCarousel/owl.carousel.js"
 // import "./assets/vendor/dropzone.js"
 import "./assets/vendor/jquery-ui.min.js"
+import "./assets/vendor/jquery.nicescroll/dist/jquery.nicescroll"
+import './assets/vendor/tooltipster.bundle.min'
 
 
 // import "./assets/vendor/bootstrap/js/bootstrap.min.js"
@@ -23,32 +25,3 @@ import "./assets/vendor/bootstrap/js/bootstrap"
 import "./assets/scripts/index"
 // import {input} from "./assets/vendor/bootstrap/js/tests/integration/rollup.bundle"
 
-
-let up = $('.count-up'),
-  down = $('.count-down'),
-  countable = $('.countable')
-
-
-let x = {
-  localCount: 0,
-  get count() {
-    return this.localCount
-  },
-  set count(v) {
-    let value = v
-    // if (v >= 5)
-    //   value = 5
-    // if (v <= 0)
-    //   value = 0
-    this.localCount = value
-    this.countListener(value)
-  },
-  countListener(v) {
-    countable.val(v)
-  }
-}
-
-
-up.on('click', (v) => x.count++)
-down.on('click', (v) => x.count--)
-countable.on('input', v => x.count = v.target.value)

@@ -12,14 +12,14 @@ $(document)
     closeOverlay()
     $(this).closest('.dialog').removeClass('dialog--show')
   })
-  .mouseup(function (e) {
-    if(!$(event.target).closest(".dialog").length){
-      closeOverlay()
-      $('.dialog').each(function () {
-        $(this).removeClass('dialog--show')
-      })
-    }
-  })
+  // .mouseup(function (e) {
+  //   if(!$(event.target).closest(".dialog").length){
+  //     closeOverlay()
+  //     $('.dialog').each(function () {
+  //       $(this).removeClass('dialog--show')
+  //     })
+  //   }
+  // })
   .on('keyup', function(e) {
     if (e.key === "Escape") {
       closeOverlay()

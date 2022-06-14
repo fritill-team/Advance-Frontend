@@ -22,11 +22,11 @@ $(document)
     closeOverlay()
     $(this).closest('.dialog').removeClass('dialog--show')
   })
-  .mouseup(function (e) {
-    if(!$(event.target).closest(".mega-menu").length){
-      closeOverlay()
-    }
-  })
+  // .mouseup(function (e) {
+  //   if(!$(event.target).closest(".mega-menu").length){
+  //     closeOverlay()
+  //   }
+  // })
   .on('keyup', function(e) {
     if (e.key === "Escape") {
       closeOverlay()

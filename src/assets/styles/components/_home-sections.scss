@@ -1,0 +1,37 @@
+.home-section {
+  padding: 80px 0;
+
+  &.home-section--lighten {
+    background-color: $white;
+  }
+}
+
+.night-mode {
+  .home-section {
+    background-color: $black;
+
+    &.home-section--lighten {
+      background-color: lighten($black, 5%);
+    }
+  }
+}
+
+
+.partners {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner {
+  width: 200px;
+  text-align: center;
+  margin: 16px;
+
+  img {
+    width: 100%;
+    height: 50px;
+  }
+}

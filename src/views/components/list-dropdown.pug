@@ -1,8 +1,8 @@
 mixin dropdown
 	.dropdown
-		button(class="btn dropdown__activator btn--primary btn--text btn--sm btn--icon")
+		button(class="btn dropdown__activator btn--primary btn--text btn--sm btn--icon" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown")
 			block
-		div(class="dropdown-menu dropdown__content" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" )
+		div(class="dropdown-menu dropdown__content")
 			.list.list--condensed
 				a(href="#" class="list-item list-item--one-line list-item--condensed list-item--open ")
 					.list-item__avatar
@@ -16,22 +16,5 @@ mixin dropdown
 					.list-item__content
 						span.body-2.bold Delete
 					.list-item__action
-		
-		//- .dropdown__content
-		//- 	span.content__item
-		//- 		i.item__icon.fas.fa-comment-alt-edit
-		//- 		| Edit
-		//- 	span.content__item
-		//- 		i.item__icon.fas.fa-trash-alt
-		//- 		| Delete
-//- .dropdown-menu
-//- 	a.btn--tool
-//- 		i.fas.fa.ellipsis-h
-//- 	ul.dropdown__list
-//- 		li.dropdown__item
-//- 			i.item__icon.uil.uil-comment-alt-edit
-//- 			| Edit
-//- 		li.dropdown__item
-//- 			i.item__icon.uil.uil-trash-alt
-//- 			| Delete
+
 
