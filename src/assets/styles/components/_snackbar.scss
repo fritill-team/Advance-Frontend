@@ -1,0 +1,184 @@
+#snackbars {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  width: 500px;
+  overflow: auto;
+  height: calc(100% - 120px);
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.snackbar {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  z-index: 1;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  color: $primary;
+  //opacity: 0;
+
+  &.snackbar--multiline {
+    flex-flow: wrap;
+
+    .snackbar__icon,
+    .snackbar__content {
+      align-self: flex-start;
+      justify-self: flex-start;
+    }
+
+    .snackbar__icon {
+      padding-bottom: 0;
+    }
+
+    .snackbar__content {
+      flex: 0 1 85%;
+      padding-top: 8px;
+    }
+
+    .snackbar__action {
+      margin-left: auto;
+    }
+  }
+
+  &.snackbar--success {
+    color: $success;
+  }
+
+  &.snackbar--info {
+    color: $info;
+  }
+
+  &.snackbar--danger {
+    color: $danger
+  }
+
+  &.snackbar--warning {
+    color: $warning;
+  }
+
+  &.snackbar--accent {
+    color: $accent
+  }
+
+  .snackbar__icon {
+    padding: 8px;
+    align-self: center;
+    color: inherit;
+
+    i {
+      color: inherit;
+    }
+  }
+
+  .snackbar__content {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgba($black, 0.8);
+    line-height: 0.8;
+
+    &:only-child {
+      padding: 8px
+    }
+  }
+
+  .snackbar__action {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    display: block;
+    padding: 8px;
+    text-transform: uppercase;
+    align-self: center;
+    position: relative;
+    line-height: 1;
+    color: inherit;
+
+    &:hover:before {
+      opacity: 0.15;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      pointer-events: none;
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      color: inherit;
+      background-color: currentColor;
+      transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+    }
+
+    &:focus {
+      outline: none;
+
+      &:before {
+        opacity: 0.24;
+      }
+    }
+  }
+}
+
+.night-mode {
+  .snackbar {
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: currentColor;
+      opacity: 0.1;
+    }
+  }
+}
+
+
+html[dir="rtl"] {
+  #snackbars {
+    left: 16px;
+    right: unset;
+
+    @media (max-width: 575.98px) {
+      width: 100%;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .snackbar {
+    &.snackbar--multiline {
+      .snackbar__action {
+        margin-left: unset;
+        margin-right: auto;
+      }
+    }
+  }
+}

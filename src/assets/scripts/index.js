@@ -8,8 +8,7 @@ import './custom.js'
 import './night-mode.js'
 
 
-import './toaster'
-
+import './snackbar'
 import './tabs.js'
 import './survey.js'
 import './ripple.js'
@@ -32,10 +31,9 @@ import '../vendor/fieldChooser.min'
 import './drag-drop-multifield'
 import './backend_scripts/panel-loader'
 import './multi-select'
-import './hero'
+import './home-sections'
 // import "./recommendationTemplate"
-import './resourceBuilder'
-import './Resources/Media'
+// import './resourceBuilder'
 // import './content-height'
 import './overlay'
 import './listing'

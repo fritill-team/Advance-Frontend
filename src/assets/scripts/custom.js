@@ -341,7 +341,6 @@ $(document).on("click", "content__item", function () {
 
 
 $(document).on('change', 'input[type="file"]', function (e) {
-  console.log(this);
   let imageList = $('.image-list')
   // let imageList = $('.' + $(this).name + '-image-list')
   var images = [];
@@ -350,9 +349,6 @@ $(document).on('change', 'input[type="file"]', function (e) {
     var srcArray = URL.createObjectURL(this.files[i]);
     images.push(srcArray)
   }
-  console.log(srcArray);
-
-  // console.log(images);
 
   function image() {
     return `

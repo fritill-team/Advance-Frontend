@@ -1,6 +1,7 @@
 a.btn,
 button.btn,
-input[type="button"].btn {
+input[type="button"].btn,
+input[type="submit"].btn {
   position: relative;
   padding: 0 16px;
   height: 36px;
@@ -16,8 +17,7 @@ input[type="button"].btn {
   cursor: pointer;
   letter-spacing: 1.25px;
   transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
-  margin: 0 14px 0 0;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
 
   &:last-of-type {
     margin-right: 0;

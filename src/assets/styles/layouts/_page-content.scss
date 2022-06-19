@@ -13,6 +13,10 @@
     width: 100%;
     transition: all 0.3s ease-out;
     margin-bottom: 120px;
+    position: relative;
+
+
+
     &.page__content--auth {
       padding: 0;
       height: 100%;

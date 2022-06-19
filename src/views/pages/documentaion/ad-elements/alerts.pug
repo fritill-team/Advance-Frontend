@@ -1,0 +1,10 @@
+extends ../../../layouts/admin.pug
+block title
+  title Tabs
+
+block content
+  .container
+    .row
+      .col-lg-12.py-5
+        button.btn.btn--primary#toggle-message(onclick="snackbar({status: 'success', text: 'This Is A message', icon: 'done', close: true, autoHide: true})") Toggle Message
+

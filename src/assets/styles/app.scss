@@ -7,7 +7,6 @@
 @import "layouts/_header";
 @import "layouts/_footer";
 @import "utils/mixins";
-@import "./custom/toastr";
 @import "./components/_tabs.scss";
 @import "./custom/_owl-slider.scss";
 @import "./custom/_tooltipster.scss";
@@ -40,8 +39,7 @@
 @import "./components/_tags";
 @import "./components/_info";
 @import "./components/_video-player";
-@import "./components/_hero";
-@import "components/home-sections";
+@import "components/_home-sections";
 @import "./components/_single-blog";
 @import "./components/_status";
 @import "./components/_assessment";
@@ -79,6 +77,7 @@
 @import "./components/survey-fields";
 @import "./components/loader";
 @import "./components/_data-card";
+@import "./components/_snackbar";
 /* TODO DELETE */
 @import "./base/_rtl.scss";
 // @import "./base/darg-drop-field.css";

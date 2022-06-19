@@ -1,475 +1,463 @@
 extends ../layouts/admin.pug
 block title
-	title Media-library
+  title Media-library
 
 block content
-	include ../components/bread-crumbs.pug
-	+pageTitle()
-	div(id='media-list' class="media-library"
-		data-app_label="/courses"
-		data-model="/model"
-		data-object_id="/3"
-		)
+  include ../components/bread-crumbs.pug
+  +pageTitle()
+  .container
+    .row
+      .col-lg-12
+        .d-flex.flex-column
+          .d-flex.justify-content-between.align-items-center
+            h2 Media Library
+            a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
+    .row
 
-	//- form.card#media
-	
-	//- div#output
-	.container
-		//- .row
-		//- 	.col-lg-12
-		//- 		.d-flex.flex-column.my-3
-		//- 			.d-flex.justify-content-between.align-items-center
-		//- 				h1.mb-0 Media
-		.row
-			.col-lg-12
-				.d-flex.flex-column
-					.d-flex.justify-content-between.align-items-center
-						h2 Media Library
-						a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
-		.row
+      .col-lg-9
+        .row
+          .col-lg-4.col-md-4
+                
+            //.media-card(id="tool" title="this is title from tooltipster")
+            //  .media-card__image
+            //    a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
+            //      img(src='../../assets/images/get_img.jpg' alt='')
+            //    //- a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
+            //    .media-card__action
+            //      .dropdown.dropdown__activator
+            //        button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+            //          i.fas.fa-ellipsis-v
+            //        .dropdown__content.dropdown-content-width
+            //          .list
+            //            a(href="#" class="list-item list-item--one-line list-item--open ")
+            //              .list-item__avatar
+            //                i.far.fa-copy
+            //              .list-item__content
+            //                span.body-2.bold Edit
+            //              .list-item__action
+            //            a(href="#" class="list-item list-item--one-line list-item--open ")
+            //              .list-item__avatar
+            //                i.far.fa-copy
+            //              .list-item__content
+            //                span.body-2.bold Delete
+            //              .list-item__action
+            //
+            //  .media-card__description
+            //    p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          .col-lg-4.col-md-4
+            .media-card
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
 
-			.col-lg-9
-				.row
-					.col-lg-4.col-md-4
-						.media-card(id="tool" title="this is title from tooltipster")
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								//- a.example-image-link(href='http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg' data-lightbox='example-set' data-title='Click the right half of the image to move forward.')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          .col-lg-4.col-md-4
+            .media-card
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          .col-lg-4.col-md-4
+            .media-card
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          .col-lg-4.col-md-4
+            .media-card
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          .col-lg-4.col-md-4
+            .media-card
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					.col-lg-4.col-md-4
-						.media-card
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
 
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					.col-lg-4.col-md-4
-						.media-card
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					.col-lg-4.col-md-4
-						.media-card
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					.col-lg-4.col-md-4
-						.media-card
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					.col-lg-4.col-md-4
-						.media-card
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="img" data-gall="myGallery" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        // cover bg or video
+      .col-lg-3
+        .card.card--data
+          .card__content
+            .description
+              span.description__name Id
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+    .row
+      .col-lg-12
+        .d-flex.flex-column
+          .d-flex.justify-content-between.align-items-center
+            h2.mt-0 Media Library
+            a(class="btn btn--primary btn--primary btn--rounded" href="#") Set
+    .row
+      .col-lg-9
+        .row
+          .col-lg-12
+            .media-card.media-card--cover
+              .media-card__image
+                a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
+                  img(src='../../assets/images/get_img.jpg' alt='')
+                .media-card__action
+                  .dropdown.dropdown__activator
+                    button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                      i.fas.fa-ellipsis-v
+                    .dropdown__content.dropdown-content-width
+                      .list.condensed
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Edit
+                          .list-item__action
+                        a(href="#" class="list-item list-item--one-line list-item--open ")
+                          .list-item__avatar
+                            i.far.fa-copy
+                          .list-item__content
+                            span.body-2.bold Delete
+                          .list-item__action
+              .media-card__description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      .col-lg-3
+        .card.card--data
+          .card__content
+            .description
+              span.description__name Id
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
 
-			
-				// cover bg or video
-			.col-lg-3
-				.card.card--data
-					.card__content
-						.description
-							span.description__name Id
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-		.row
-			.col-lg-12
-				.d-flex.flex-column
-					.d-flex.justify-content-between.align-items-center
-						h2.mt-0 Media Library
-						a(class="btn btn--primary btn--primary btn--rounded" href="#") Set
-		.row
-			.col-lg-9
-				.row
-					.col-lg-12
-						.media-card.media-card--cover
-							.media-card__image
-								a(class="venobox" data-autoplay="true" data-vbtype="iframe" data-gall="myGallery" href="https://www.youtube.com/embed/3ULUohpQqMU")
-									img(src='../../assets/images/get_img.jpg' alt='')
-								.media-card__action
-									.dropdown.dropdown__activator
-										button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-											i.fas.fa-ellipsis-v
-										.dropdown__content.dropdown-content-width
-											.list.condensed
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Edit
-													.list-item__action
-												a(href="#" class="list-item list-item--one-line list-item--open ")
-													.list-item__avatar
-														i.far.fa-copy
-													.list-item__content
-														span.body-2.bold Delete
-													.list-item__action
-							.media-card__description
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			.col-lg-3
-				.card.card--data
-					.card__content
-						.description
-							span.description__name Id
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
+    .row
+      .col-lg-12
+        .d-flex.flex-column
+          .d-flex.justify-content-between.align-items-center
+            h2 Download File
+            a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
+    .row
+      .col-lg-9
+        .row
+          .col-md-6
+            .media-card.media-card--file
+              span.material-icons.media-card__file-icon description
+              .media-card__content
+                h4.text-h4.media-card__file-name file Item
+                .media-card__details
+                  .media-card__file-data
+                    span.body-1.gray  Size :
+                    span.body-2.gray 45m
+                  .media-card__file-data
+                    span.body-1.gray  Type :
+                    span.body-2.gray PDF
+              .media-card__action
+                .dropdown.dropdown__activator
+                  button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                    i.fas.fa-ellipsis-v
+                  .dropdown__content.dropdown-content-width
+                    .list.condensed
+                      a(href="#" class="list-item list-item--one-line list-item--open ")
+                        .list-item__avatar
+                          i.far.fa-copy
+                        .list-item__content
+                          span.body-2.bold Edit
+                        .list-item__action
+                      a(href="#" class="list-item list-item--one-line list-item--open ")
+                        .list-item__avatar
+                          i.far.fa-copy
+                        .list-item__content
+                          span.body-2.bold Delete
+                        .list-item__action
+          .col-md-6
+            .media-card.media-card--file
+              span.material-icons.media-card__file-icon description
+              .media-card__content
+                h4.text-h4.media-card__file-name file Item
+                .media-card__details
+                  .media-card__file-data
+                    span.body-1.gray  Size :
+                    span.body-2.gray 45m
+                  .media-card__file-data
+                    span.body-1.gray  Type :
+                    span.body-2.gray PDF
+              .media-card__action
+                .dropdown.dropdown__activator
+                  button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+                    i.fas.fa-ellipsis-v
+                  .dropdown__content.dropdown-content-width
+                    .list.condensed
+                      a(href="#" class="list-item list-item--one-line list-item--open ")
+                        .list-item__avatar
+                          i.far.fa-copy
+                        .list-item__content
+                          span.body-2.bold Edit
+                        .list-item__action
+                      a(href="#" class="list-item list-item--one-line list-item--open ")
+                        .list-item__avatar
+                          i.far.fa-copy
+                        .list-item__content
+                          span.body-2.bold Delete
+                        .list-item__action
+          //- .col-lg-6
+          //- 	.card.card--side-col
+          //- 		.file-card
+          //- 			i.far.fa-file-pdf.file-icon.gray
+          //- 		.card__content
+          //- 			.card__body
+          //- 				.card__content-header
+          //- 					.user-data
+          //- 						h3.text-h3 file Item
+          //- 				.card__content--details
+          //- 					.card__info
+          //- 						h4.text-3  Size :
+          //- 						span.text-3.gray 45m
+          //- 					.card__info
+          //- 						h4.text-3  Type :
+          //- 						span.text-3.gray Pdf
+          //- 		.media-card__action
+          //- 			.dropdown.dropdown__activator
+          //- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+          //- 					i.fas.fa-ellipsis-v
+          //- 				.dropdown__content.dropdown-content-width
+          //- 					.list.condensed
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Edit
+          //- 							.list-item__action
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Delete
+          //- 							.list-item__action
+          //- .col-lg-6
+          //- 	.card.card--card-file
+          //- 		.card__content
+          //- 			.file-card
+          //- 				i.far.fa-file-pdf.file-icon.gray
+          //- 			.card__body
+          //- 				.card__content-header
+          //- 					.user-data
+          //- 						h3.text-h3 file Item
+          //- 				.card__content--details
+          //- 					.card__info
+          //- 						h4.text-3  Size :
+          //- 						span.text-3.gray 45m
+          //- 					.card__info
+          //- 						h4.text-3  Type :
+          //- 						span.text-3.gray Pdf
+          //- 		.media-card__action
+          //- 			.dropdown.dropdown__activator
+          //- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+          //- 					i.fas.fa-ellipsis-v
+          //- 				.dropdown__content.dropdown-content-width
+          //- 					.list.condensed
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Edit
+          //- 							.list-item__action
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Delete
+          //- 							.list-item__action
+          //- .col-lg-6
+          //- 	.card.card--card-file
+          //- 		.card__content
+          //- 			.file-card
+          //- 				i.far.fa-file-pdf.file-icon.gray
+          //- 			.card__body
+          //- 				.card__content-header
+          //- 					.user-data
+          //- 						h3.text-h3 file Item
+          //- 				.card__content--details
+          //- 					.card__info
+          //- 						h4.text-3  Size :
+          //- 						span.text-3.gray 45m
+          //- 					.card__info
+          //- 						h4.text-3  Type :
+          //- 						span.text-3.gray Pdf
+          //- 		.media-card__action
+          //- 			.dropdown.dropdown__activator
+          //- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+          //- 					i.fas.fa-ellipsis-v
+          //- 				.dropdown__content.dropdown-content-width
+          //- 					.list.condensed
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Edit
+          //- 							.list-item__action
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Delete
+          //- 							.list-item__action
+          //- .col-lg-6
+          //- 	.card.card--card-file
+          //- 		.card__content
+          //- 			.file-card
+          //- 				i.far.fa-file-pdf.file-icon.gray
+          //- 			.card__body
+          //- 				.card__content-header
+          //- 					.user-data
+          //- 						h3.text-h3 file Item
+          //- 				.card__content--details
+          //- 					.card__info
+          //- 						h4.text-3  Size :
+          //- 						span.text-3.gray 45m
+          //- 					.card__info
+          //- 						h4.text-3  Type :
+          //- 						span.text-3.gray Pdf
+          //- 		.media-card__action
+          //- 			.dropdown.dropdown__activator
+          //- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
+          //- 					i.fas.fa-ellipsis-v
+          //- 				.dropdown__content.dropdown-content-width
+          //- 					.list.condensed
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Edit
+          //- 							.list-item__action
+          //- 						a(href="#" class="list-item list-item--one-line list-item--open ")
+          //- 							.list-item__avatar
+          //- 								i.far.fa-copy
+          //- 							.list-item__content
+          //- 								span.body-2.bold Delete
+          //- 							.list-item__action
+      .col-lg-3
+        .card.card--data
+          .card__content
+            .description
+              span.description__name Id
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
+            .description
+              span.description__name Author
+                strong :
+              p.description__details Lorem ipsum, dolor sit amet consectetur
 
-		.row
-			.col-lg-12
-				.d-flex.flex-column
-					.d-flex.justify-content-between.align-items-center
-						h2 Download File
-						a(class="btn btn--primary btn--primary btn--rounded" href="#") Add
-		.row
-			.col-lg-9
-				.row
-					.col-md-6 
-						.media-card.media-card--file
-							span.material-icons.media-card__file-icon description
-							.media-card__content 
-								h4.text-h4.media-card__file-name file Item
-								.media-card__details
-									.media-card__file-data 
-										span.body-1.gray  Size :
-										span.body-2.gray 45m
-									.media-card__file-data 
-										span.body-1.gray  Type :
-										span.body-2.gray PDF
-							.media-card__action
-								.dropdown.dropdown__activator
-									button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-										i.fas.fa-ellipsis-v
-									.dropdown__content.dropdown-content-width
-										.list.condensed
-											a(href="#" class="list-item list-item--one-line list-item--open ")
-												.list-item__avatar
-													i.far.fa-copy
-												.list-item__content
-													span.body-2.bold Edit
-												.list-item__action
-											a(href="#" class="list-item list-item--one-line list-item--open ")
-												.list-item__avatar
-													i.far.fa-copy
-												.list-item__content
-													span.body-2.bold Delete
-												.list-item__action
-					.col-md-6 
-						.media-card.media-card--file
-							span.material-icons.media-card__file-icon description
-							.media-card__content 
-								h4.text-h4.media-card__file-name file Item
-								.media-card__details
-									.media-card__file-data 
-										span.body-1.gray  Size :
-										span.body-2.gray 45m
-									.media-card__file-data 
-										span.body-1.gray  Type :
-										span.body-2.gray PDF
-							.media-card__action
-								.dropdown.dropdown__activator
-									button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-										i.fas.fa-ellipsis-v
-									.dropdown__content.dropdown-content-width
-										.list.condensed
-											a(href="#" class="list-item list-item--one-line list-item--open ")
-												.list-item__avatar
-													i.far.fa-copy
-												.list-item__content
-													span.body-2.bold Edit
-												.list-item__action
-											a(href="#" class="list-item list-item--one-line list-item--open ")
-												.list-item__avatar
-													i.far.fa-copy
-												.list-item__content
-													span.body-2.bold Delete
-												.list-item__action
-					//- .col-lg-6
-					//- 	.card.card--side-col
-					//- 		.file-card
-					//- 			i.far.fa-file-pdf.file-icon.gray
-					//- 		.card__content
-					//- 			.card__body
-					//- 				.card__content-header
-					//- 					.user-data
-					//- 						h3.text-h3 file Item
-					//- 				.card__content--details
-					//- 					.card__info
-					//- 						h4.text-3  Size :
-					//- 						span.text-3.gray 45m
-					//- 					.card__info
-					//- 						h4.text-3  Type :
-					//- 						span.text-3.gray Pdf
-					//- 		.media-card__action
-					//- 			.dropdown.dropdown__activator
-					//- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-					//- 					i.fas.fa-ellipsis-v
-					//- 				.dropdown__content.dropdown-content-width
-					//- 					.list.condensed
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Edit
-					//- 							.list-item__action
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Delete
-					//- 							.list-item__action
-					//- .col-lg-6
-					//- 	.card.card--card-file
-					//- 		.card__content
-					//- 			.file-card
-					//- 				i.far.fa-file-pdf.file-icon.gray
-					//- 			.card__body
-					//- 				.card__content-header
-					//- 					.user-data
-					//- 						h3.text-h3 file Item
-					//- 				.card__content--details
-					//- 					.card__info
-					//- 						h4.text-3  Size :
-					//- 						span.text-3.gray 45m
-					//- 					.card__info
-					//- 						h4.text-3  Type :
-					//- 						span.text-3.gray Pdf
-					//- 		.media-card__action
-					//- 			.dropdown.dropdown__activator
-					//- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-					//- 					i.fas.fa-ellipsis-v
-					//- 				.dropdown__content.dropdown-content-width
-					//- 					.list.condensed
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Edit
-					//- 							.list-item__action
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Delete
-					//- 							.list-item__action
-					//- .col-lg-6
-					//- 	.card.card--card-file
-					//- 		.card__content
-					//- 			.file-card
-					//- 				i.far.fa-file-pdf.file-icon.gray
-					//- 			.card__body
-					//- 				.card__content-header
-					//- 					.user-data
-					//- 						h3.text-h3 file Item
-					//- 				.card__content--details
-					//- 					.card__info
-					//- 						h4.text-3  Size :
-					//- 						span.text-3.gray 45m
-					//- 					.card__info
-					//- 						h4.text-3  Type :
-					//- 						span.text-3.gray Pdf
-					//- 		.media-card__action
-					//- 			.dropdown.dropdown__activator
-					//- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-					//- 					i.fas.fa-ellipsis-v
-					//- 				.dropdown__content.dropdown-content-width
-					//- 					.list.condensed
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Edit
-					//- 							.list-item__action
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Delete
-					//- 							.list-item__action
-					//- .col-lg-6
-					//- 	.card.card--card-file
-					//- 		.card__content
-					//- 			.file-card
-					//- 				i.far.fa-file-pdf.file-icon.gray
-					//- 			.card__body
-					//- 				.card__content-header
-					//- 					.user-data
-					//- 						h3.text-h3 file Item
-					//- 				.card__content--details
-					//- 					.card__info
-					//- 						h4.text-3  Size :
-					//- 						span.text-3.gray 45m
-					//- 					.card__info
-					//- 						h4.text-3  Type :
-					//- 						span.text-3.gray Pdf
-					//- 		.media-card__action
-					//- 			.dropdown.dropdown__activator
-					//- 				button(class="btn btn--primary btn--text btn--default icon--hover btn--lg btn--ripple")
-					//- 					i.fas.fa-ellipsis-v
-					//- 				.dropdown__content.dropdown-content-width
-					//- 					.list.condensed
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Edit
-					//- 							.list-item__action
-					//- 						a(href="#" class="list-item list-item--one-line list-item--open ")
-					//- 							.list-item__avatar
-					//- 								i.far.fa-copy
-					//- 							.list-item__content
-					//- 								span.body-2.bold Delete
-					//- 							.list-item__action
-			.col-lg-3
-				.card.card--data
-					.card__content
-						.description
-							span.description__name Id
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-						.description
-							span.description__name Author
-								strong :
-							p.description__details Lorem ipsum, dolor sit amet consectetur
-block scripts 
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js')
+block scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js')
