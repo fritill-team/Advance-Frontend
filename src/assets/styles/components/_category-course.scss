@@ -19,7 +19,7 @@
   .listing-header__title {
     font-size: 16px;
     margin: 0;
-    color: $primary;
+    color: var(--color-primary);
   }
 
   .listing-header__actions {
@@ -77,7 +77,7 @@
   border-radius: 5px;
 
   .filter-panel__header {
-    color: $primary
+    color: var(--color-primary)
   }
 
   .filter-panel__content {

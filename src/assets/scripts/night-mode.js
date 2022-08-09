@@ -5,6 +5,7 @@
 		var nightMode = localStorage.getItem('gmtNightMode');
 		if (nightMode) {
 			document.documentElement.className += ' night-mode';
+      document.documentElement.setAttribute('data-theme', 'dark')
 		}
 	})(window, document);
 
@@ -23,7 +24,9 @@
 		// When clicked, toggle night mode on or off
 		nightMode.addEventListener('click', function (event) {
 			event.preventDefault();
+      let isNightMode = document.documentElement.classList.contains('night-mode')
 			document.documentElement.classList.toggle('night-mode');
+      document.documentElement.setAttribute('data-theme', document.documentElement.classList.contains('night-mode')? 'dark': 'light')
 			if (document.documentElement.classList.contains('night-mode')) {
 				localStorage.setItem('gmtNightMode', true);
 				return;

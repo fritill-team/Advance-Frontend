@@ -37,7 +37,7 @@
     }
 
     .comments__header-more {
-      color: $gray;
+      color: var(--color-gray);
       letter-spacing: 0;
       font-size: 12px;
       margin: 0;
@@ -88,13 +88,13 @@
 
       .comment__username {
         font-weight: 700;
-        color: $primary;
+        color: var(--color-primary);
         font-size: 14px;
         margin: 0;
       }
 
       .comment__date {
-        color: $gray;
+        color: var(--color-gray);
         letter-spacing: 0;
         font-size: 10px;
         font-weight: 600;
@@ -135,7 +135,7 @@ html[dir="rtl"] {
   }
 
   .review-comment__item {
-    @include textRight;
+    //@include textRight;
 
     &.review-comment__item--replay {
       margin-right: 80px;
@@ -277,7 +277,7 @@ html[dir="rtl"] {
 
 .item__actions {
   display: flex;
-  @include normalizeTypo;
+  //@include normalizeTypo;
   padding-right: 80px;
 
   .action__report {
@@ -297,7 +297,7 @@ html[dir="rtl"] {
     }
 
     &:hover {
-      color: $primary !important;
+      color: var(--color-primary) !important;
     }
   }
 
@@ -358,7 +358,7 @@ html[dir="rtl"] {
   }
 
   .review-comment__item {
-    @include whiteTypo;
+    //@include whiteTypo;
   }
 
   .comments__add-comment {

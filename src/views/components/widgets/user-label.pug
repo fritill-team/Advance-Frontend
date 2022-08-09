@@ -1,0 +1,27 @@
+
+
+
+mixin user-label(color, grid=false, inline=false, overline='user info', title='User Name', subtitle='Lorem ipsum dolor sit amet, consectetur.', image='../../assets/images/profile.png', size=false)
+  - var colorClass = ''
+  - var gridClass = ''
+  - var inlineClass = ''
+  - var sizeClass = ''
+
+  if size
+    - sizeClass = ' user-label--' + size
+  if color
+    - colorClass = ' user-label--' + color
+  if grid
+    - gridClass = ' user-label--gird'
+  if inline
+    - inlineClass = ' user-label--inline'
+
+  div(class="user-label " + colorClass + gridClass + inlineClass + sizeClass)
+    .user-label__inner
+      .user-label__image
+        block image
+          img(src=image)
+      .user-label__content
+        p.overline.bold= overline
+        a(href="" class="body-1 bold")= title
+        p.subtitle-2= subtitle

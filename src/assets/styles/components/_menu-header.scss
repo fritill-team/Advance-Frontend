@@ -106,7 +106,7 @@ html[dir="rtl"]{
     }
     &:hover {
       &:before {
-        border-top: 5px solid $accent;
+        border-top: 5px solid var(--color-accent);
       }
     }
   }
@@ -114,7 +114,7 @@ html[dir="rtl"]{
     color: #FFF;
     &:hover {
       background: transparent;
-      color: $accent;
+      color: var(--RGB-color-accent);
     }
   }
   .menu__date{

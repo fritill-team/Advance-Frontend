@@ -32,59 +32,6 @@ $('.enable.button')
 	})
 	;
 
-// Featured Courses home
-$('.courses_performance').owlCarousel({
-	items: 10,
-	loop: false,
-	margin: 30,
-	nav: true,
-	dots: false,
-	navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
-	responsive: {
-		0: {
-			items: 1
-		},
-		600: {
-			items: 1
-		},
-		1000: {
-			items: 1
-		},
-		1200: {
-			items: 1
-		},
-		1400: {
-			items: 1
-		}
-	}
-})
-
-// Latest News Dashboard
-$('.edututs_news').owlCarousel({
-	items: 10,
-	loop: false,
-	margin: 30,
-	nav: true,
-	dots: false,
-	navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
-	responsive: {
-		0: {
-			items: 1
-		},
-		600: {
-			items: 1
-		},
-		1000: {
-			items: 1
-		},
-		1200: {
-			items: 1
-		},
-		1400: {
-			items: 1
-		}
-	}
-})
 
 
 /*Floating Code for Iframe Start*/
@@ -156,7 +103,7 @@ $('input[name="paymentmethod"]').on('click', function () {
 	$('[data-method="' + $value + '"]').slideDown();
 });
 
-// sidebar fillter 
+// sidebar fillter
 // var filter = document.querySelector('.filter');
 
 // querySelector('.filter__button-wrapper').onclick = function () {

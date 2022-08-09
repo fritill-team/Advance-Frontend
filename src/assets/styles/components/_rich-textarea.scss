@@ -1,5 +1,4 @@
-$linkColor: #333;
-$pColor: #686f7a;
+
 @mixin bg-property($path-image) {
   background-image: url($path-image);
   background-size: cover;
@@ -116,6 +115,6 @@ html[dir="rtl"] {
 
 .night-mode{
   .rich-textarea{
-    @include whiteTypo;
+    // @include whiteTypo;
   }
 }

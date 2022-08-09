@@ -1,5 +1,5 @@
 .assessment-sidebar {
-  @include normalizeTypo;
+  // @include normalizeTypo;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -19,7 +19,7 @@
   .assessment-sidebar__progress{
     width: 200px;
     height: 200px;
-    background-color: $gray;
+    background-color: var(--color-gray);
     margin: 0 auto;
     border-radius: 50%;
   }

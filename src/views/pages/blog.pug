@@ -1,116 +1,207 @@
 extends ../layouts/site.pug
+include ../components/widgets/user-label
 
 block title
-	title single blog
+  title single blog
 
 block content
-	.container 
-		.row 
-			.col-md-8 
-				.blog 
-					.blog__header 
-						p.body-2 published at ....
-						h2.title-2 Blog title here 
-						p.body-1 category here
-					.blog__media.owl-carousel.owl-theme
-						.item
-							img(src="../../assets/images/hero_bg.jpg", alt="")
-						.item
-							img(src="../../assets/images/hero_bg.jpg", alt="")
-						.item
-							img(src="../../assets/images/hero_bg.jpg", alt="")
-					.blog__content 
-						p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-						p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-						p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-						p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-						p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-					.blog__tags
-						a(class="body-2" href="#") 
-							| tag1
-						a(class="body-2" href="#")
-							| tag2
-					.blog__author
-						img(src="../../assets/images/profile.jpg", alt="")
-						div 
-							h5.title-h5 author name
-							p.body-1 this line about author
-					
-			.col-md-4
-				.list.list--with-top-space
-					.list-title.list-title--lg
-						p Related articles 
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
+  .page__cover
+    img(src="../../assets/images/hero_bg.jpg")
+  .container
+    .card.card--lifted-up-264.pb-0
+      .card__header
+        .card__title
+          p.overline.overline--xl
+            | Category:
+            | !{' '}
+            a(href="#") Autism
+          h1 Lorem ipsum dolor sit.
+          p.subtitle-1
+            strong
+              | Published At:
+              | !{' '}
+            | يوليو 13, 2022, 7:28 ص
+      .card__content
+        .row
+          .col-sm-12.col-md-8.col-lg-9.d-flex.flex-column
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur delectus eligendi odio temporibus! Animi assumenda beatae earum et hic ipsam laboriosam necessitatibus, pariatur perspiciatis velit voluptate voluptates! Fugit, mollitia.
+            p
+              strong Starts At:
+              | !{' '}
+              |يوليو 13, 2022, 7:28 ص
+            p
+              strong Ends At:
+              | !{' '}
+              | يوليو 13, 2022, 7:28 ص
+            p
+              strong Privacy Status:
+              | !{' '}
+              | Private
 
-				.list.list--with-top-space
-					.list-title.list-title--lg
-						p Related courses 
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-				
-				.list.list--with-top-space
-					.list-title.list-title--lg
-						p Related surveys 
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-					.list-item.list-item--multiple.list-item--with-border
-						.list-item__avatar
-							img(class="image image--list-item" src="../../assets/images/get_img.jpg")
-						.list-item__content
-							span.overline lorem lorem
-							a(href="#" class="body-2 bold") Jose Portilla
-							p.subtitle-1.gray Jose_Portilla@test.com
-							
-										
-					
+            .d-flex.mt-auto.mb-3
+              a.chip.chip--primary(href="#")
+                .chip__lead
+                  i.material-icons tag
+                p.chip__content tag name
+              .chip.chip--primary
+                .chip__lead
+                  img(src="../../assets/images/profile.jpg")
+                p.chip__content tag name 2
+              .chip.chip--primary
+                .chip__lead
+                  i.material-icons tag
+                p.chip__content tag name 2
+              .chip.chip--primary
+                p.chip__content tag name 3
+              .chip.chip--primary.chip--outlined
+                .chip__lead
+                  i.material-icons tag
+                p.chip__content tag name 2
+
+          .col-sm-12.col-md-4.col-lg-3
+            .d-flex.flex-column.align-items-center
+              img(class="image image--user-lg image--rounded" src="../../assets/images/profile.jpg")
+              p.overline Specialist
+              p Sohype Khaled
+              p.subtitle-1 sohype@mail.com
+
+        .tabs.tabs--center.mb-0
+          a.tab.tab--active Content
+          a.tab Discussions
+    .row
+      .col-sm-12.col-md-7.col-lg-8
+        .card
+          .card__content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta illum ipsum nemo nihil odio officiis placeat quas. Autem error hic ipsum iusto, magni nam provident quaerat quidem similique vel.
+
+      .col-sm-12.col-md-5.col-lg-4
+        .card
+          .card__header
+            h3.card__title Location
+          .card__content
+            .iframe-container
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13820.185249524491!2d31.296966849999993!3d30.00682655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145838d1664acd65%3A0x223d887384c73a9!2sMokattam%20Sporting%20Club!5e0!3m2!1sen!2seg!4v1657704792459!5m2!1sen!2seg' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+        h3 Attendance
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+        +user-label('primary', false, false, "Grid", 'user-label--grid')
+  //.container
+    .row
+      .col-md-8
+        .blog
+          .blog__header
+            p.body-2 published at ....
+            h2 Blog title here
+            p.body-1 category here
+          .carousel.owl-carousel
+            .item
+              img(src="../../assets/images/hero_bg.jpg", alt="")
+            .item
+              img(src="../../assets/images/hero_bg.jpg", alt="")
+            .item
+              img(src="../../assets/images/hero_bg.jpg", alt="")
+          .blog__content
+            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
+            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
+            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
+            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
+            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
+          .blog__tags
+            a(class="body-2" href="#")
+              | tag1
+            a(class="body-2" href="#")
+              | tag2
+          .blog__author
+            img(src="../../assets/images/profile.jpg", alt="")
+            div
+              h5.title-h5 author name
+              p.body-1 this line about author
+
+      .col-md-4
+        .list.list--with-top-space
+          .list-title.list-title--lg
+            p Related articles
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+
+        .list.list--with-top-space
+          .list-title.list-title--lg
+            p Related courses
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+
+        .list.list--with-top-space
+          .list-title.list-title--lg
+            p Related surveys
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+          .list-item.list-item--multiple.list-item--with-border
+            .list-item__avatar
+              img(class="image image--list-item" src="../../assets/images/get_img.jpg")
+            .list-item__content
+              span.overline lorem lorem
+              a(href="#" class="body-2 bold") Jose Portilla
+              p.subtitle-1.gray Jose_Portilla@test.com
+
+

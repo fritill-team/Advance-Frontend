@@ -43,7 +43,7 @@ export default class TagResource extends BaseResource {
     // console.log('here')
     // console.log(this.items.length);
     if (this.items.length) {
-      return `<div class="chips-wrapper" id="${this.prefix}-listing">
+      return `<div class=".d-flex" id="${this.prefix}-listing">
           ${this.items.map(item => this.itemTemplate(item)).join('')}
         </div>`
     }
@@ -51,7 +51,7 @@ export default class TagResource extends BaseResource {
   }
 
   itemTemplate(item) {
-    return ` 
+    return `
       <div class="">
         <div class="chip-item">
           <span class="material-icons">tag</span>
@@ -74,7 +74,7 @@ export default class TagResource extends BaseResource {
         </div>
         <ul class="field-wrapper__messages" id="category-name-messages"></ul>
       </div>
-      
+
     </form>`
   }
 }

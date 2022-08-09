@@ -377,8 +377,8 @@
 	color: $white;
 	font-size: 16px;
 	font-weight: 500;
-	background: $primaryLight;
-	border: 1px solid $primaryLight;
+	background: var(--color-primary);
+	border: 1px solid var(--color-primary);
 	margin-right: 6px;
 
 	&:hover {

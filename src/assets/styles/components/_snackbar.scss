@@ -35,7 +35,7 @@
   padding: 8px;
   cursor: pointer;
   position: relative;
-  color: $primary;
+  color: var(--color-primary);
   //opacity: 0;
 
   &.snackbar--multiline {
@@ -78,7 +78,7 @@
   }
 
   &.snackbar--accent {
-    color: $accent
+    color: var(--color-accent)
   }
 
   .snackbar__icon {

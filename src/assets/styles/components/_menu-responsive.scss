@@ -21,7 +21,7 @@
 //     cursor: pointer;
 //     float: left;
 //     &:hover {
-//       color: $primaryLight;
+//       color: var(--color-primary);
 //     }
 //   }
 // }
@@ -82,12 +82,12 @@
             }
             &:hover {
               background: #ffecec;
-              color: $primaryLight !important;
+              color: var(--color-primary) !important;
             }
           }
           .active {
             background: #ffecec;
-            color: $primaryLight;
+            color: var(--color-primary);
           }
         }
         .menu--item__has_sub_menu {
@@ -122,7 +122,7 @@
                 color: #333;
                 text-decoration: none;
                 &:hover {
-                  color: $primaryLight !important;
+                  color: var(--color-primary) !important;
                   background: #ffecec;
                 }
               }
@@ -181,7 +181,7 @@
             padding: 0 3px;
             color: #333;
             &:hover {
-              color: $primaryLight !important;
+              color: var(--color-primary) !important;
             }
           }
         }
@@ -218,7 +218,7 @@
     height: 60px;
     padding: 0;
     border: 0;
-    background: $primaryLight;
+    background: var(--color-primary);
     color: $white;
     font-size: 30px;
     margin: 0;
@@ -313,7 +313,7 @@
       cursor: pointer;
       float: left;
       &:hover {
-        color: $primaryLight;
+        color: var(--color-primary);
       }
     }
   }

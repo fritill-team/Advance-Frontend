@@ -43,8 +43,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include normalizeTypo;
-    @include noLineHeight;
+    //@include normalizeTypo;
+    //@include noLineHeight;
     *{
       white-space: nowrap;
     }
@@ -58,19 +58,19 @@
     font-size: 12px;
   }
   &.label--primary{
-    color: $primary;
+    color: var(--color-primary);
   }
   &.label--success{
     color: $success;
   }
   &.label--error{
-   color: $danger; 
+   color: $danger;
   }
   &.label--info{
     color: $info;
   }
   &.label--accent{
-    color: $accent
+    color: var(--color-accent)
   }
   &.label--active{
     border: 1px solid currentColor;
@@ -88,7 +88,7 @@ a.label{
   }
   &.label--primary{
     &:hover{
-      @include labelBg($primary);
+      @include labelBg(var(--color-primary));
     }
   }
   &.label--success{
@@ -130,8 +130,8 @@ html[dir="rtl"]{
 .night-mode{
   .label{
     background-color: $black;
-    @include whiteTypo;
-    
+    //@include whiteTypo;
+
   }
 }
 

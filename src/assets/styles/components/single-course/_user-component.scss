@@ -84,7 +84,7 @@
   background-color: $white;
   max-width: 400px;
   width: auto;
-  @include normalizeTypo;
+  // @include normalizeTypo;
   .image{
     margin: 0 8px 0 0;
     border-radius: 50%;
@@ -95,7 +95,7 @@
 }
 .night-mode{
   .user-account{
-    @include whiteTypo;
+    // @include whiteTypo;
     background-color: #1c282c;
   }
 }

@@ -15,9 +15,9 @@ const blogCard = (item) => `
     <img title="${item.author.username}" src="${item.author.image}" class="image image--rounded image--xs-small-profile course-card__author">
     <div>
       <span class="overline gray">${gettext("published at :")}${item.published_at}</span>
-      <a class="title-link text-2 semi-bold" href="${item.url}" lang="${item.language}">${gettext(item.title)}</a>
+      <a class=" text-2 semi-bold" href="${item.url}" lang="${item.language}">${gettext(item.title)}</a>
     </div>
-    <p class="title-link course-card__description body-2 gray" lang="${item.language}" >${gettext(item.short_description) ? gettext(item.short_description) : ""}</p>
+    <p class=" course-card__description body-2 gray" lang="${item.language}" >${gettext(item.short_description) ? gettext(item.short_description) : ""}</p>
     <div class="course-card__meta">
       <p class="body-2 gray bold" lang="${item.language}">${gettext(item.category) ? gettext(item.category) : ""}</p>
     </div>

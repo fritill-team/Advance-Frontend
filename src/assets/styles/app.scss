@@ -1,35 +1,41 @@
 @import "./base/_variables.scss";
+@import "utils/mixins";
+
 @import "./base/_bootstrap-grid-rtl.scss";
 @import "layouts/_normalize.scss";
-
 @import "layouts/_base";
+@import "./base/_typography";
+
 @import "layouts/_page-content";
 @import "layouts/_header";
 @import "layouts/_footer";
-@import "utils/mixins";
+
 @import "./components/_tabs.scss";
-@import "./custom/_owl-slider.scss";
+@import "./components/_carousels";
 @import "./custom/_tooltipster.scss";
+// TODO CHECK THIS
 @import "./components/_menu-responsive";
 @import "./components/_course-list";
 @import "./components/_about-list";
 @import "./components/_course-video";
 @import "./components/_content_list";
 @import "./components/_course-reviews";
+@import "./components/_category-course";
+// END TODO CHECK
 @import "./components/_review.scss";
 @import "./components/_comments";
-@import "./components/_category-course";
 @import "./components/_pagination.scss";
 @import "layouts/drawer";
 @import "./components/category-list";
 @import "./components/_chip";
 
 @import "./components/_list-dropdown";
-@import "./components/_course-card.scss";
+@import "./components/_display-card.scss";
 @import "./components/_enroll-card";
 @import "./components/_description-enroll";
 @import "./components/_filter";
 @import "./components/_card";
+@import "./components/exam";
 @import "./components/_label";
 @import "./components/_buttons";
 @import "./components/_card-collapse";
@@ -42,6 +48,7 @@
 @import "components/_home-sections";
 @import "./components/_single-blog";
 @import "./components/_status";
+@import "./components/_iframe-container";
 @import "./components/_assessment";
 @import "./components/_plan";
 //TODO Remove this file
@@ -67,10 +74,8 @@
 @import "./components/single-course/user-component";
 @import "./components/single-course/user-item";
 @import "./components/exam/exam.scss";
-@import "./base/typography";
 
 @import "./components/_images";
-// @import "./base/night-mode.css";
 @import "./components/_list.scss";
 @import "./components/_panel.scss";
 @import "./components/_survey.scss";
@@ -79,6 +84,9 @@
 @import "./components/_data-card";
 @import "./components/_snackbar";
 /* TODO DELETE */
-@import "./base/_rtl.scss";
+//@import "./base/_rtl.scss";
 // @import "./base/darg-drop-field.css";
 // @import "./base/style";
+
+// components
+@import "components/_user.scss";

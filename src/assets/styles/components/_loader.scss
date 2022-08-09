@@ -11,7 +11,7 @@
   }
 }
 .loader {
-	border: 1px solid $primary;
+	border: 1px solid var(--color-primary);
 	border-radius: 50%;
 	animation: 4s loader linear infinite;
 	position: relative;
@@ -25,7 +25,7 @@
 		position: absolute;
 		top: -.4em;
 		left: 50%;
-		border: .5em solid $primary;
+		border: .5em solid var(--color-primary);
 		border-radius: 50%;
 	}
 }
@@ -85,7 +85,7 @@
       overflow: hidden;
       position: relative;
     }
-  
+
     .name {
       height: 10px;
       width: 150px;
@@ -94,7 +94,7 @@
         left: 0;
       }
     }
-  
+
     .about {
       height: 10px;
       width: 100px;
@@ -124,26 +124,26 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, rgba($primary, .4) 0%, rgba(0, 0, 0, 0.05) 20%, rgba($primary, .4) 40%, rgba($primary, .4) 100%);
+    background-image: linear-gradient(to right, rgba(var(--RGB-color-primary), .4) 0%, rgba(0, 0, 0, 0.05) 20%, rgba(var(--RGB-color-primary), .4) 40%, rgba(var(--RGB-color-primary), .4) 100%);
     background-repeat: no-repeat;
     background-size: 450px 400px;
     animation: shimmer 4s linear infinite;
   }
-  
+
   .video-item-loader__header .img::before {
     background-size: 650px 600px;
   }
-  
+
   .details span::before {
     animation-delay: 0.2s;
   }
-  
-  
+
+
   @keyframes shimmer {
     0% {
       background-position: -450px 0;
     }
-  
+
     100% {
       background-position: 450px 0;
     }

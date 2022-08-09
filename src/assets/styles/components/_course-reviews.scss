@@ -81,7 +81,7 @@
   font-weight: 500;
   text-align: left;
   margin-bottom: 20px;
-  color: $primary;
+  color: var(--color-primary);
 }
 
 .rating__progress {
@@ -95,7 +95,7 @@
   border-radius: 0.25rem;
 
   .progress--progress-bar {
-    background-color: $accent;
+    background-color: var(--color-accent);
     flex-direction: column;
     justify-content: center;
     color: $white;
@@ -142,7 +142,7 @@
   .rate-display{
     display: flex;
     .jq-star {
-      cursor: auto !important; 
+      cursor: auto !important;
     }
   }
 
@@ -278,7 +278,7 @@
         border: 0;
         height: 26px;
         width: 26px;
-        background: $primaryLight;
+        background: var(--color-primary);
         color: $white;
         font-size: 14px;
       }
@@ -420,7 +420,7 @@
             }
 
             input[type="radio"]:checked + .item__radio-label:before {
-              background-color: $primaryLight;
+              background-color: var(--color-primary);
               box-shadow: inset 0 0 0 2px $light-white;
             }
           }

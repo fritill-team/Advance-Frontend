@@ -1,12 +1,12 @@
-// import "jquery";
-// import "./jquery-3.3.1.min.js";
-// import 'owl.carousel';
-
+import './utils'
 import '../scripts/login'
 import './drawer.js'
 import './custom.js'
 import './night-mode.js'
+import './switch-locale'
 
+import './carousels'
+import './display-card'
 
 import './snackbar'
 import './tabs.js'
@@ -15,10 +15,10 @@ import './ripple.js'
 import './select2'
 import './convertable'
 import './rating'
-import './owl-carousel'
+
 import './accordion'
 import './playlist-video'
-import './cards/course-card'
+import './cards/display-card'
 import './comment'
 import './list-dropdown'
 import './course-content'
@@ -31,7 +31,7 @@ import '../vendor/fieldChooser.min'
 import './drag-drop-multifield'
 import './backend_scripts/panel-loader'
 import './multi-select'
-import './home-sections'
+
 // import "./recommendationTemplate"
 // import './resourceBuilder'
 // import './content-height'

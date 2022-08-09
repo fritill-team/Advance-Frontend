@@ -9,7 +9,7 @@
   overflow: hidden;
   position: relative;
   background-color: $white;
-  color: $gray;
+  color: var(--color-gray);
   // position: relative;
 
   .media-card__image {
@@ -48,7 +48,7 @@
     flex-direction: row;
     align-items: center;
     overflow: visible;
-    @include normalizeTypo;
+    //@include normalizeTypo;
 
     .media-card__file-name {
       line-height: 1;
@@ -111,10 +111,10 @@
 .night-mode {
   .media-card {
     background-color: $black;
-    @include whiteTypo;
+    // @include whiteTypo;
 
     &.media-card--file {
-      @include whiteTypo;
+      // @include whiteTypo;
     }
   }
 }

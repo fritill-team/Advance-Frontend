@@ -43,7 +43,7 @@
 			i{
 				margin: 2px 0 0 5px;
 			}
-		}	
+		}
 	}
 }
 .survey__check-field-group {
@@ -66,13 +66,13 @@
 	display: inline-block;
 	margin: 10px 20px;
   &.survey__check-field--primary {
-    color: $primary;
+    color: var(--color-primary);
   }
 	&.survey__check-field--secondary {
     color: $secondary;
   }
   &.survey__check-field--accent{
-    color: $accent;
+    color: var(--color-accent);
   }
   &.survey__check-field--danger{
     color: $danger;
@@ -85,9 +85,9 @@
   }
 
   input:checked + .survey__check-field-label {
-    border: 3px solid $accent;
+    border: 3px solid var(--color-accent);
 		& + *{
-			color: $accent;
+			color: var(--color-accent);
 		}
   }
 
@@ -100,7 +100,7 @@
   //     // color: currentColor;
   //     border-color: currentColor;
   //     // & + * {
-  //     //   color: $accent;
+  //     //   color: var(--color-accent);
   //     // }
 
   //   }
@@ -129,7 +129,7 @@
       bottom: 0;
       opacity: 0;
       color: inherit;
-      background-color: $accent;
+      background-color: var(--color-accent);
       transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
     }
 
@@ -137,9 +137,9 @@
       opacity: 0.15;
     }
 		&:hover{
-			border-color: $accent;
+			border-color: var(--color-accent);
 			& + *{
-				color: $accent;
+				color: var(--color-accent);
 			}
 		}
     &:focus:before {
@@ -171,7 +171,7 @@
 				left: unset;
 				transform: unset;
 				top: unset;
-				
+
       }
     }
 		@media (max-width: 768.98px) {

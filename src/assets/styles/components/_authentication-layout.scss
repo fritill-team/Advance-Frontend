@@ -66,10 +66,10 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: $primary;
+    background-color: var(--color-primary);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    @include whiteTypo;
+    // @include whiteTypo;
 
     img {
       position: absolute;

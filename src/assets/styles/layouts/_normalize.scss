@@ -11,35 +11,40 @@
 html {
   //line-height: 1.15; /* 1 */
   //-webkit-text-size-adjust: 100%; /* 2 */
-  font-family: unquote("Quicksand"), "Roboto", "sans-serif";
+  font-family: unquote("Quicksand"), "Roboto", unquote("Noto Kufi Arabic"), "sans-serif";
 }
-html[dir="rtl"]{
-  font-family: unquote("Noto Kufi Arabic"), "sans-serif";
-  
-  span.material-icons{
+
+html[dir="rtl"] {
+  font-family: unquote("Noto Kufi Arabic"), unquote("Quicksand"), "Roboto", "sans-serif";
+
+  span.material-icons {
     font-family: 'Material Icons';
     transform: rotateY(180deg);
   }
 }
 
-div[id^="cke_id_"]{
+div[id^="cke_id_"] {
   width: 100% !important;
 }
 
-.django-ckeditor-widget{
+.django-ckeditor-widget {
   width: 100% !important;
 }
-.text--right{
+
+.text--right {
   font-family: unquote("Noto Kufi Arabic"), "sans-serif";
   text-align: right;
 }
-.text--left{
+
+.text--left {
   font-family: unquote("Quicksand"), "Roboto", "sans-serif";
   text-align: left;
 }
-.text--center{
+
+.text--center {
   text-align: center;
 }
+
 /* Sections
    ========================================================================== */
 
@@ -285,17 +290,20 @@ progress {
 textarea {
   overflow: auto;
 }
+
 input:focus,
 textarea:focus {
   outline: 0;
-  border: 1px solid rgba($primary, 0.5);
+  border: 1px solid rgba(var(--RGB-color-primary), 0.5);
 }
+
 input:focus-visible,
 textarea:focus-visible,
 label:focus-visible {
   outline: 0;
-  border: 1px solid rgba($primary, 0.5);
+  border: 1px solid rgba(var(--RGB-color-primary), 0.5);
 }
+
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: $input-color;
@@ -306,9 +314,11 @@ textarea::placeholder {
   color: $input-color;
   opacity: 1; /* Firefox */
 }
+
 textarea[disabled="disabled"] {
   background-color: rgba(0, 0, 0, 0.06);
 }
+
 input[type="file"] {
   &[disabled="disabled"] {
     background-color: rgba(0, 0, 0, 0.06);
@@ -316,7 +326,7 @@ input[type="file"] {
 }
 
 select:focus-visible {
-  border: 1px solid rgba($primary, 0.5);
+  border: 1px solid rgba(var(--RGB-color-primary), 0.5);
   outline: none;
 }
 
@@ -330,6 +340,7 @@ select:focus-visible {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
+
 // textarea {
 //   width: 100%;
 //   height: 150px;
@@ -345,7 +356,7 @@ select:focus-visible {
 
 //   &:focus {
 //     color: $input-color;
-//     border-bottom: 1px solid rgba($primary, 0.5);
+//     border-bottom: 1px solid rgba(var(--RGB-color-primary), 0.5);
 //   }
 // }
 // .field-wrapper{
@@ -453,46 +464,55 @@ ul {
   textarea:focus::-webkit-input-placeholder {
     color: #fff;
   }
+
   input::placeholder,
   textarea::placeholder {
     color: #fff;
     opacity: 1; /* Firefox */
   }
+
   input:focus,
   textarea:focus {
     outline: 0;
     // box-shadow: 0 0 4px 0 rgba(#FFF, 0.5);
     border: 1px solid rgba(#fff, 0.5);
   }
+
   input:focus,
   textarea:focus {
     outline: 0;
     box-shadow: none;
     border: none;
   }
+
   input::placeholder,
   textarea::placeholder {
     color: #FFF;
   }
+
   textarea {
     background: #576874;
     box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
+
     &:focus {
       color: #FFF;
       box-shadow: 0 0 4px 0 rgba(#576874, 0.1);
     }
-    @media(max-width: 576px){
+
+    @media(max-width: 576px) {
       font-size: 14px;
     }
   }
-  .field-wrapper{
-    &.field-wrapper--error{
+
+  .field-wrapper {
+    &.field-wrapper--error {
       input:focus,
       textarea:focus {
         outline: 0;
         box-shadow: none;
         border: none;
       }
+
       input::placeholder,
       textarea::placeholder {
         color: #FFF;

@@ -11,7 +11,7 @@
 
   .exam__content {
     .card__header {
-      @include normalizeTypo;
+      // @include normalizeTypo;
       margin-bottom: 16px;
     }
   }
@@ -24,7 +24,7 @@
   justify-content: center;
 
   i {
-    color: $primary;
+    color: var(--color-primary);
     font-size: 18px;
   }
 }
@@ -42,15 +42,9 @@
     }
   }
 
-  .question__type {
-    & + .select2 {
-      width: 180px !important;
-    }
-  }
-
   &.question--active {
     .card--drag-vertical {
-      color: $accent;
+      color: var(--color-accent);
       background-color: $info;
     }
   }
@@ -133,7 +127,7 @@
         height: 18px;
         position: relative;
         border-radius: 3px;
-        border: 1px solid $primary;
+        border: 1px solid var(--RGB-color-primary);
         transition: 0.3s ease all;
         cursor: pointer;
 
@@ -143,7 +137,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 12px;
-          color: $primary;
+          color: var(--RGB-color-primary);
           // opacity: 0;
         }
 
@@ -161,7 +155,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $primary;
+            background-color: var(--color-primary);
           }
         }
       }
@@ -170,7 +164,7 @@
     .exam__icon {
       display: inline-block;
       margin: auto 10px auto 0;
-      color: $primary;
+      color: var(--color-primary);
       transition: 0.3s ease all;
       font-size: 18px;
     }
@@ -198,7 +192,7 @@
     display: block;
 
     i {
-      color: $primary;
+      color: var(--color-primary);
       font-size: 32px;
       cursor: pointer;
     }
@@ -214,11 +208,11 @@
     width: 28%;
   }
 
-  .question__type {
+  /*.question__type {
     & + .select2 {
       margin: 0 10px 10px 0;
     }
-  }
+  }*/
 }
 
 .question--dragging {
@@ -253,10 +247,10 @@
   left: 0px;
   justify-content: center;
   font-size: 14px;
-  color: $primary;
+  color: var(--color-primary);
   height: 100%;
   width: 20px;
-  background-color: $default;
+  background-color: var(--color-default);
   align-items: center;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -271,38 +265,38 @@
   border: 1px solid #e5e5e5 !important;
   border-radius: 5px;
   width: 100%;
-  color: $primary;
+  color: var(--color-primary);
   padding: 0 0 0 12px;
 
   &:focus {
     outline: none;
   }
 
-  & + .select2 {
-    height: fit-content;
-
-    .select2-search {
-      &.select2-search--dropdown {
-        display: none !important;
-      }
-    }
-
-    .select2-selection {
-      height: 40px;
-      box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1) !important;
-      border: 1px solid #e5e5e5 !important;
-      border-radius: 5px;
-    }
-  }
-
-  .select2-selection__rendered {
-    line-height: 38px;
-  }
-
-  .select2-selection__arrow {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  //& + .select2 {
+  //  height: fit-content;
+  //
+  //  .select2-search {
+  //    &.select2-search--dropdown {
+  //      display: none !important;
+  //    }
+  //  }
+  //
+  //  .select2-selection {
+  //    height: 40px;
+  //    box-shadow: inset 0 1px 4px rgba(17, 14, 14, 0.1) !important;
+  //    border: 1px solid #e5e5e5 !important;
+  //    border-radius: 5px;
+  //  }
+  //}
+  //
+  //.select2-selection__rendered {
+  //  line-height: 38px;
+  //}
+  //
+  //.select2-selection__arrow {
+  //  top: 50%;
+  //  transform: translateY(-50%);
+  //}
 }
 
 // .switch {
@@ -352,7 +346,7 @@
 //       transform: translateY(-50%);
 //       left: 2px;
 //       border-radius: 50%;
-//       background-color: $primary;
+//       background-color: var(--color-primary);
 //       transition: 0.5s ease all;
 //     }
 //   }
@@ -361,12 +355,12 @@
 // Answer Style
 .assessment{
   padding: 20px;
-  color: $gray;
-  background: rgba($gray, 0.2);
+  color: var(--color-gray);
+  background: rgba(var(--RGB-color-gray), 0.2);
   .assessment__title{
-    @include normalizeTypo;
+    // @include normalizeTypo;
     h1,h3{
-      color: rgba($gray, .7);
+      color: rgba(var(--RGB-color-gray), .7);
       margin-bottom: 16px;
     }
   }
@@ -383,7 +377,7 @@
     // height: 150px;
   }
   &.assessment--section{
-    background: rgba($gray, 0.1);
+    background: rgba(var(--RGB-color-gray), 0.1);
   }
 }
 .assessment-item{
@@ -425,9 +419,9 @@
     margin-bottom: 16px;
   }
   .questions-header {
-    
+
     padding: 20px;
-    background: rgba($gray, 0.2);
+    background: rgba(var(--RGB-color-gray), 0.2);
 
     .questions-header__title {
       // width: 50%;
@@ -436,14 +430,14 @@
         margin: 0;
         margin-bottom: 5px;
         word-wrap: break-word;
-        color: rgba($gray, 1);
+        color: rgba(var(--RGB-color-gray), 1);
         // color: $input-color;
       }
     }
 
     .questions-header__info {
       p {
-        color: rgba($gray, .9);
+        color: rgba(var(--RGB-color-gray), .9);
         margin: 5px 0;
         margin-top: 5px;
       }
@@ -453,7 +447,7 @@
   .questions-name {
     padding: 15px;
     margin-bottom: 25px;
-    background: rgba($gray, 0.1);
+    background: rgba(var(--RGB-color-gray), 0.1);
     // background: rgba($secondary, 0.3);
   }
 
@@ -472,17 +466,17 @@
   padding: 15px;
   margin: 10px 0;
   border-radius: 6px;
-  color: rgba($gray, .8);
+  color: rgba(var(--RGB-color-gray), .8);
 
   h3 {
     margin: 0;
     margin-bottom: 5px;
-    color: rgba($gray, .8);
+    color: rgba(var(--RGB-color-gray), .8);
   }
 
   .question-title__info {
     p {
-      color: rgba($gray, .8);
+      color: rgba(var(--RGB-color-gray), .8);
       margin: 0;
     }
   }
@@ -497,7 +491,7 @@
   margin-bottom: 1em;
   // background-color: #fff;
   // border-radius: 10px;
-  // border-bottom: 1px solid rgba($primary, 0.4);
+  // border-bottom: 1px solid rgba(var(--RGB-color-primary), 0.4);
 
   &.question--no-line {
     border-bottom: none;
@@ -511,7 +505,7 @@
     width: 100%;
 
     h3 {
-      color: rgba($gray, .8);
+      color: rgba(var(--RGB-color-gray), .8);
     }
   }
 
@@ -590,7 +584,7 @@
   .card__footer {
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba($primary, 0.4);
+    border-top: 1px solid rgba(var(--RGB-color-primary), 0.4);
     padding-top: 10px;
     margin-top: 10px;
   }
@@ -772,7 +766,7 @@ html[dir="rtl"] {
 
 .night-mode {
   .assessment{
-    @include whiteTypo;
+    // @include whiteTypo;
     background: rgba($black, 0.4);
     &.assessment--section{
       background: rgba($black, 0.2);
@@ -791,7 +785,7 @@ html[dir="rtl"] {
     }
 
     .card__footer {
-      border-top: 1px solid rgba($primary, 0.4);
+      border-top: 1px solid rgba(var(--RGB-color-primary), 0.4);
     }
   }
 

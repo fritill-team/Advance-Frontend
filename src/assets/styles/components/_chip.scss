@@ -1,91 +1,144 @@
-.chips-wrapper{
-  padding: 16px 16px 6px 16px;
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $white;
-}
-.chip-item{
-  height: 32px;
-  padding: 0 12px;
-  border-radius: 50px;
-  font-size: 16px;
-  color: $gray;
-  background-color: $white;
+.chip {
+  height: 28px;
+  padding: 0;
+  border-radius: 14px;
+  line-height: 1;
+  color: var(--color-gray);
   display: inline-flex;
   align-items: center;
-  @include normalizeTypo;
-  margin: 0 10px 10px 0;
-  cursor: pointer;
-  &.chip-item--with-icon{
-    padding: 0 8px;
-  }
-  &.chip-item--with-image{
+  margin: 0 4px 4px 0;
+  background-color: var(--color-default);
 
+  &:hover {
+    color: currentColor;
   }
-  &.chip-item--sm{
-    font-size: 12px;
-    height: 28px;
-    .material-icons{
-      line-height: 28px;
+
+  .chip__lead {
+    width: 28px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(var(--RGB-color-gray), 0.4);
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 18px;
+      margin: 4px 4px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 50%;
     }
   }
-  &.chip-item--outline{
+
+  .chip__content {
+    margin: 0 8px 0 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: inherit;
+
+    &:only-child {
+      margin: 0 8px !important;
+    }
+
+
+  }
+
+  &.chip--outlined {
     background-color: transparent;
     border: 1px solid currentColor;
-  }
-  &.chip-item--primary{
-    background-color: rgba($primary, .2);
-  }
-  &.chip-item--secondary{
-    background-color: rgba($secondary, .2);
-  }
-  &.chip-item--accent{
-    background-color: rgba($accent, .2);
-  }
-  &.chip-item--danger{
-    background-color: rgba($danger, .2);
-  }
-  .material-icons{
-    font-size: inherit;
-    color: inherit;
-    line-height: 32px;
-  }
-  .chip-item__content{
-    margin: 0 8px;
-  }
-  .chip-item__action{
-    color: $gray;
-    margin: 0 8px 0 0;
-    &:last-of-type{
-      margin: 0;
+
+    .chip__lead {
+      background-color: transparent;
+    }
+
+    .chip__content {
+      margin: 0 8px 0 0;
     }
   }
-  // &.chip-list__item--with-image{
 
-  // }
+  &.chip--primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &.chip--outlined {
+      color: var(--color-primary);
+      background-color: transparent;
+    }
+  }
+
+  &.chip--secondary {
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+
+    &.chip--outlined {
+      color: var(--color-secondary);
+      background-color: transparent;
+    }
+  }
+
+  &.chip--accent {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+
+    &.chip--outlined {
+      color: var(--color-accent);
+      background-color: transparent;
+    }
+  }
+
+  &.chip--danger {
+    color: var(--color-white);
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+
+    &.chip--outlined {
+      color: var(--color-danger);
+      background-color: transparent;
+    }
+  }
+
+  &.chip--warning {
+    color: var(--color-white);
+    background-color: var(--color-warning);
+    border-color: var(--color-warning);
+
+    &.chip--outlined {
+      color: var(--color-warning);
+      background-color: transparent;
+    }
+  }
 }
 
 
-html[dir="rtl"]{
-  .chip-item{
-    margin: 0 0 10px 10px;
+html[dir="rtl"] {
+  .chip {
+    margin: 0 4px 0 4px;
+
+    .chip__content {
+      margin: 0 4px 0 8px;
+    }
+
+    &.chip--outlined {
+      .chip__content {
+        margin: 0 0 0 8px;
+      }
+    }
   }
-  
-  .chip-item__action{
+
+  .chip__action {
     margin: 0 0 0 8px;
-    &:last-of-type{
+
+    &:last-of-type {
       margin: 0;
     }
-  }
-}
-
-.night-mode{
-  .chips-wrapper{
-    background-color: $black;
-  }
-  .chip-item{
-    background-color: rgba($white, .2);
-    @include whiteTypo;
   }
 }

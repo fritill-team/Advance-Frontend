@@ -1,0 +1,17 @@
+mixin home-slide(image)
+  .slide
+    .slide__background(style="background: url(../../assets/images/Pattern_4.svg)")
+    .slide__content
+      .slide__image
+        img(src=image class="slide__image")
+      .slide__details
+        h1.text-weight-500.text-primary Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti inventore nihil quae.
+        button.btn.btn--primary.btn--outlined.btn--rounded Register Now
+
+mixin home-main-slider
+  .slider.owl-carousel.home-main-slider
+    +home-slide('../../assets/images/heroSliders/1.svg')
+    +home-slide('../../assets/images/heroSliders/2.svg')
+    +home-slide('../../assets/images/heroSliders/3.svg')
+    +home-slide('../../assets/images/heroSliders/4.svg')

@@ -1,4 +1,62 @@
-$bgcolor: #EDF4FD;
+:root {
+  --pg-color: #fff; // #EDF4FD;
+  --RGB-pg-color: 255, 255, 255; // 237, 244, 253;
+  --color-default: #D3D9E1;
+  --RGB-color-default: 211, 217, 225;
+  --color-primary: #0D9BBD;
+  --RGB-color-primary: 13, 155, 189;
+  --color-accent: #FFCE06;
+  --RGB-color-accent: 255, 206, 6;
+  --color-secondary: #2FBEBD;
+  --RGB-color-secondary: 47, 190, 189;
+  --color-white: #fff;
+  --RGB-color-white: 255, 255, 255;
+  --color-black: #1c282c;
+  --RGB-color-black: 28, 40, 44;
+  --color-gray: #626262;
+  --RGB-color-gray: 98, 98, 98;
+  --color-success: #2BEE38;
+  --RGB-color-success: 43, 238, 56;
+  --color-info: #1FCAFF;
+  --RGB-color-info: 31, 202, 255;
+  --color-danger: #dc3545;
+  --RGB-color-danger: 220, 53, 69;
+  --color-warning: #F04E29;
+  --RGB-color-warning: 240, 78, 41;
+  --color-disabled: #a8a8a8;
+  --RGB-color-disabled: 168, 168, 168;
+  --box-shadow: 0 4px 12px 0 rgba(var(--RGB-color-gray), 0.2);
+}
+
+[data-theme='dark'] {
+  --pg-color: #EDF4FD;
+  --RGB-pg-color: 237, 244, 253;
+  --color-default: #D3D9E1;
+  --RGB-color-default: 242, 176, 30;
+  --color-primary: #f2b01e;
+  --RGB-color-primary: 242, 176, 30;
+  --color-accent: #d36565;
+  --RGB-color-accent: 211, 101, 101;
+  --color-secondary: #2FBEBD;
+  --RGB-color-secondary: 47, 190, 189;
+  --color-white: #1c282c;
+  --RGB-color-white: 28, 40, 44;
+  --color-black: #fff;
+  --RGB-color-black: 255, 255, 255;
+  --color-gray: #d7d4d4;
+  --RGB-color-gray: 215, 212, 212;
+  --color-success: #2BEE38;
+  --RGB-color-success: 43, 238, 56;
+  --color-info: #1FCAFF;
+  --RGB-color-info: 31, 202, 255;
+  --color-danger: #dc3545;
+  --RGB-color-danger: 220, 53, 69;
+  --color-warning: #F04E29;
+  --RGB-color-warning: 240, 78, 41;
+  --color-disabled: #a8a8a8;
+  --RGB-color-disabled: 168, 168, 168;
+}
+
 $default: #D3D9E1;
 $primary: #0D9BBD;
 $accent: #FFCE06;
@@ -28,7 +86,6 @@ $secondary-darkmode: #43515c;
 $primary-light-darkmode: #38454d;
 
 // TODO DELETE
-$primaryLight: #ed2a26;
 $light-white: #efefef;
 $blue: #0d6efd;
 
@@ -52,3 +109,5 @@ $mint-green: #d1ecf1;
 
 $danger-light: #f8d7da;
 $danger-medium: #f5c6cb;
+$linkColor: #333;
+$pColor: #686f7a;

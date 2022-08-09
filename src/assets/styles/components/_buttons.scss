@@ -8,8 +8,8 @@ input[type="submit"].btn {
   line-height: 37px;
   border-radius: 5px;
   border: none;
-  background-color: $default;
-  color: $gray;
+  background-color: var(--color-default);
+  color: var(--color-gray);
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -100,85 +100,85 @@ input[type="submit"].btn {
   }
 
   &.btn--primary {
-    color: $white;
-    background-color: $primary; //#0d758e // #3D5467
-    border-color: $primary;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 
     &.btn--text,
     &.btn--outlined {
-      color: $primary;
+      color: var(--color-primary);
       background-color: transparent;
     }
   }
 
   &.btn--accent {
-    color: $white;
-    background-color: $accent; //#0d758e // #3D5467
-    border-color: $accent;
+    color: var(--color-white);
+    background-color: var(--color-accent); //#0d758e // #3D5467
+    border-color: var(--color-accent);
 
     &.btn--text,
     &.btn--outlined {
-      color: $accent;
+      color: var(--color-accent);
       background-color: transparent;
     }
   }
 
   &.btn--secondary {
-    color: $white;
-    background-color: $secondary; //#0d758e // #3D5467
-    border-color: $secondary;
+    color: var(--color-white);
+    background-color: var(--color-secondary); //#0d758e // #3D5467
+    border-color: var(--color-secondary);
 
     &.btn--text,
     &.btn--outlined {
-      color: $secondary;
+      color: var(--color-secondary);
       background-color: transparent;
     }
   }
 
   &.btn--success {
-    color: $white;
-    background-color: $success; //#0d758e // #3D5467
-    border-color: $success;
+    color: var(--color-white);
+    background-color: var(--color-success); //#0d758e // #3D5467
+    border-color: var(--color-success);
 
     &.btn--text,
     &.btn--outlined {
-      color: $success;
+      color: var(--color-success);
       background-color: transparent;
     }
   }
 
   &.btn--info {
-    color: $white;
-    background-color: $info; //#0d758e // #3D5467
-    border-color: $info;
+    color: var(--color-white);
+    background-color: var(--color-info); //#0d758e // #3D5467
+    border-color: var(--color-info);
 
     &.btn--text,
     &.btn--outlined {
-      color: $info;
+      color: var(--color-info);
       background-color: transparent;
     }
   }
 
   &.btn--warning {
-    color: $white;
-    background-color: $warning; //#0d758e // #3D5467
-    border-color: $warning;
+    color: var(--color-white);
+    background-color: var(--color-warning); //#0d758e // #3D5467
+    border-color: var(--color-warning);
 
     &.btn--text,
     &.btn--outlined {
-      color: $warning;
+      color: var(--color-warning);
       background-color: transparent;
     }
   }
 
   &.btn--danger {
-    color: $white;
-    background-color: $danger; //#0d758e // #3D5467
-    border-color: $danger;
+    color: var(--color-white);
+    background-color: var(--color-danger); //#0d758e // #3D5467
+    border-color: var(--color-danger);
 
     &.btn--text,
     &.btn--outlined {
-      color: $danger;
+      color: var(--color-danger);
       background-color: transparent;
     }
   }
@@ -276,7 +276,7 @@ input[type="submit"].btn {
   &.btn--player {
     width: 50px;
     height: 50px;
-    color: $accent;
+    color: var(--color-accent);
     position: relative;
     background-color: transparent;
     border-radius: 50%;
@@ -294,7 +294,7 @@ input[type="submit"].btn {
       cursor: pointer;
 
       &::after {
-        background-color: rgba($color: $primary, $alpha: .3);
+        background-color: rgba($color: var(--RGB-color-primary), $alpha: .3);
       }
     }
 
@@ -326,7 +326,7 @@ a.btn {
   overflow: hidden;
 
   &.btn-group--outlined {
-    border: 1px solid $primary;
+    border: 1px solid var(--color-primary);
 
     .btn {
       border: none;
@@ -372,20 +372,6 @@ html[dir="rtl"] {
   }
 }
 
-
-.night-mode {
-  .btn {
-    background-color: #39444f;
-    //border: 1px solid #39444f;
-    color: #fff;
-  }
-
-  a.btn {
-    &:hover {
-      color: #fff;
-    }
-  }
-}
 
 @media (max-width: 768.98px) {
   .btn--player {

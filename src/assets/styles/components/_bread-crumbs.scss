@@ -23,13 +23,13 @@
   margin: 10px 0;
 }
 .page-header__info {
-  color: $primary;
+  color: var(--color-primary);
 }
 .bread-crumbs{
   display: flex;
   align-items: center;
    i{
-    // color: $primary;
+    // color: var(--color-primary);
     margin-right: 10px;
     font-size: 16px;
   }
@@ -115,9 +115,9 @@ html[dir="rtl"] {
       left: 0;
       transform: translateX(-6px);
     }
-    
+
   }
-  
+
           //     i{
 //       transform: rotate(
 //         177deg

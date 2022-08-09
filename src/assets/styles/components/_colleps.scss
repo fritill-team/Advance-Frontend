@@ -35,11 +35,11 @@
     }
     &:hover {
       .list--link {
-        color: $primary;
+        color: var(--color-primary);
         transition: none;
       }
       background-color: $light-white;
-      color: $primary;
+      color: var(--color-primary);
     }
   }
 }

@@ -110,7 +110,7 @@
 //     color: $darkBlack;
 //     &:hover {
 //       & > * {
-//         color: $primaryLight;
+//         color: var(--color-primary);
 //       }
 //     }
 //   }
@@ -147,7 +147,7 @@
 //       color: $darkBlack;
 //       &:hover {
 //         & > * {
-//           color: $primaryLight;
+//           color: var(--color-primary);
 //         }
 //       }
 //     }

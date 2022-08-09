@@ -123,10 +123,14 @@ block content
                   p.body-2 1- inputs field type=(file) sm
                   .field-wrapper.field-wrapper--sm
                     label.field-wrapper__label File*
+                    .image-list
+                      div
+                        img(src="../../assets/images/sign.svg" class="image preview" alt="")
+
                     .input-group.field-field-group
                       .file-input
-                        input(id="inputGroupFile06" class="field" type='file')
-                        label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
+                        input(id="inputGroupFile07" class="field" type='file')
+                        label(class="file-input__label" for='inputGroupFile07') No Choose file - (Pdf, Video)
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
@@ -141,8 +145,8 @@ block content
 
                     .input-group.field-field-group
                       .file-input
-                        input(id="inputGroupFile06" class="field" type='file')
-                        label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
+                        input(id="inputGroupFile08" class="field" type='file')
+                        label(class="file-input__label" for='inputGroupFile08') No Choose file - (Pdf, Video)
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
@@ -151,25 +155,33 @@ block content
                   p.body-2 1- inputs field type=(file) LG
                   .field-wrapper.field-wrapper--lg
                     label.field-wrapper__label File*
+                    .image-list
+                      div
+                        img(src="../../assets/images/sign.svg" class="image preview" alt="")
+
                     .input-group.field-field-group
                       .file-input
-                        input(id="inputGroupFile06" class="field" type='file')
-                        label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
+                        input(id="inputGroupFile09" class="field" type='file')
+                        label(class="file-input__label" for='inputGroupFile09') No Choose file - (Pdf, Video)
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
-                //- .col-lg-6.col-md-12.col-sm-12
-                //-   // input field type file disabled
-                //-   p.body-2 1- inputs field type=(file) disabled
-                //-   .field-wrapper
-                //-     label.field-wrapper__label File*
-                //-     .input-group.field-field-group
-                //-       .file-input
-                //-         input(id="inputGroupFile06" disabled="disabled" class="field" type='file')
-                //-         label(class="file-input__label" for='inputGroupFile06') No Choose file - (Pdf, Video)
-                //-     ul.field-wrapper__messages
-                //-       li
-                //-         | Please provide a valid city.
+                .col-lg-6.col-md-12.col-sm-12
+                  // input field type file disabled
+                  p.body-2 1- inputs field type=(file) disabled
+                  .field-wrapper
+                    label.field-wrapper__label File*
+                    .image-list
+                      div
+                        img(src="../../assets/images/sign.svg" class="image preview" alt="")
+
+                    .input-group.field-field-group
+                      .file-input
+                        input(id="inputGroupFile10" disabled="disabled" class="field" type='file')
+                        label(class="file-input__label" for='inputGroupFile10') No Choose file - (Pdf, Video)
+                    ul.field-wrapper__messages
+                      li
+                        | Please provide a valid city.
 
         // input checkbox
       .row
@@ -536,6 +548,33 @@ block content
                     ul.field-wrapper__messages
                       li
                         | Please provide a valid city.
+                .col-md-12.col-sm-12
+                  // input checkbox type disabled
+                  p.body-2 3- Select2
+                  .field-wrapper
+                    label.field-wrapper__label Start Select :
+                    .field-wrapper__content
+                      select.select2.field
+                        option(value='') Select option
+                        option(value='1') option 1
+                        option(value='2') option 2
+                        option(value='3') option 3
+                        option(value='4') option 4
+                        option(value='5') option 5
+                .col-md-12.col-sm-12
+                  // input checkbox type disabled
+                  p.body-2 3- Select2
+                  .field-wrapper
+                    label.field-wrapper__label Start Select :
+                    .field-wrapper__content
+                      select(class="select2 field" multiple="multiple")
+                        option(value='') Select option
+                        option(value='1') option 1
+                        option(value='2') option 2
+                        option(value='3') option 3
+                        option(value='4') option 4
+                        option(value='5') option 5
+
       .row
         .col-12
           .card.my-4

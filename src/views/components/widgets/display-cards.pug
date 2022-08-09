@@ -1,0 +1,61 @@
+mixin blog-card(title, desc, category='', type='')
+  - var categoryText = "Autism"
+  - var typeText = "Article"
+  if category
+    - categoryText = category
+  if type
+    - typeText = type
+  .display-card
+    a(class="display-card__link" href="/blog.html")
+    .display-card__thumbnail-box
+      img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
+    .display-card__content
+      a.display-card__user-box(href="/user.html")
+        img(src="../../assets/images/profile.png" class="display-card__user-avatar")
+        .display-card__user-data
+          span User Type
+          p User Name
+      p.display-card__category
+        | In
+        | !{' '}
+        a(href="/category.html")= categoryText
+      h4.display-card__title= title
+      p.display-card__description= desc
+
+      .display-card__type= typeText
+
+      span.display-card__date Published At July 19, 2022, 1:41 a.m.
+
+
+
+
+mixin course-card(title, desc, category='')
+  - var categoryText = "Autism"
+  - var typeText = "Article"
+  if category
+    - categoryText = category
+
+  .display-card
+    a(class="display-card__link" href="/blog.html")
+    .display-card__thumbnail-box
+      img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
+    .display-card__content
+      a.display-card__user-box(href="/user.html")
+        img(src="../../assets/images/profile.png" class="display-card__user-avatar")
+        .display-card__user-data
+          span User Type
+          p User Name
+      p.display-card__category
+        | In
+        | !{' '}
+        a(href="/category.html")= categoryText
+      h4.display-card__title= title
+      p.display-card__description= desc
+
+
+
+      span.display-card__date Published At July 19, 2022, 1:41 a.m.
+
+
+
+

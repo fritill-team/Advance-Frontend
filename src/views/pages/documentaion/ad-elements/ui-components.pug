@@ -1,0 +1,53 @@
+extends ../../../layouts/site
+include ../../../components/widgets/user-label
+
+block title
+  title Results
+
+block content
+  .container-fluid
+    .row
+      .col-sm-12
+        h2.bold User Label
+
+      .col-sm-12
+        +user-label(null,null,null,'Default','Default Label')
+      .col-sm-12
+        +user-label('primary', false, true, "Secondary", 'user-label--secondary')
+        +user-label('secondary',false, true, "Secondary", 'user-label--secondary')
+        +user-label('accent', false, true, "Accent", 'user-label--accent')
+        +user-label('success', false, true, "Success", 'user-label--success')
+        +user-label('info', false, true, "Info", 'user-label--info')
+        +user-label('warning', false, true, "Warning", 'user-label--warning')
+        +user-label('danger', false, true, "Danger", 'user-label--danger')
+
+      .col-sm-12
+        h4.bold user-label--inline
+      .col-sm-12
+        +user-label('primary', false, true, "Inline", 'user-label--inline')
+        +user-label('secondary', false, true, "Inline", 'user-label--inline')
+        +user-label('accent', false, true, "Inline", 'user-label--inline')
+
+      .col-sm-12
+        h4.bold user-label--gird
+      .col-sm-12
+        +user-label('primary', true, true, "Grid", 'user-label--grid')
+        +user-label('secondary', true, true, "Grid", 'user-label--grid')
+        +user-label('accent', true, true, "Grid", 'user-label--grid')
+
+      .col-sm-12
+        h4.bold user-label--gird
+      .col-sm-12
+        +user-label('secondary', true, true, " ", 'Small' ,' ', ' ', 'sm')
+        +user-label('primary', true, true, " ", 'Default', " ", false)
+        +user-label('secondary', true, true, " ", 'Small' ,' ', ' ', 'lg')
+      .col-sm-12
+        +user-label('secondary', false, true, " ", 'Small' ,'', '', 'sm')
+        +user-label('primary', false, true, " ", 'Default', " ", false)
+        +user-label('secondary', false, true, " ", 'Small' ,'', '', 'lg')
+
+
+
+
+
+

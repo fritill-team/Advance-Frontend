@@ -9,7 +9,7 @@ block content
         .details-card
           .details-card__header
             p.body-2 published at ....
-            h2.title-2 Blog title here
+            h2 Blog title here
             p.body-1 category here
           .details-card__media
             img(src="../../assets/images/hero_bg.jpg", alt="")
@@ -66,8 +66,8 @@ block content
     .row
       .col-md-6
         section.px-3.py-
-          h2.title-2.my-3 Thread card questions
-            p.text-2.mb-1
+          h2.my-3 Thread card questions
+            p.mb-1
               | we use
               code .card
         include ../../../components/thread-question-card
@@ -112,8 +112,8 @@ block content
         //      .tags__item #Development
         //      .tags__item #Development
       .col-md-6
-        h2.title-2.my-3 Review
-          p.text-2.mb-1
+        h2.my-3 Review
+          p.mb-1
             | we use
             code .card
         .card.card--side-col.card--transparent
@@ -130,12 +130,12 @@ block content
               .card__tools
                 +dropdown
                   i.fas.fa-ellipsis-h
-            p.text-2
+            p
               | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
               | sint aut laudantium enim iste quod ad obcaecati error quisquam sequi eos, culpa, neque officiis modi?
       .col-md-6
-        h2.title-2.my-3 Chat
-          p.text-2.mb-1
+        h2.my-3 Chat
+          p.mb-1
             | we use
             code .card
         .card.card--side-col.card--transparent.p-0
@@ -150,7 +150,7 @@ block content
               .card__tools
                 +dropdown
                   i.fas.fa-ellipsis-h
-            p.text-2
+            p
               | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
         .card.card--side-col.card--transparent.p-0
           .card__side-col
@@ -164,7 +164,7 @@ block content
               .card__tools
                 +dropdown
                   i.fas.fa-ellipsis-h
-            p.text-2
+            p
               | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
         form(action='' method='post')
           .field-wrapper.field-wrapper--full
@@ -174,7 +174,7 @@ block content
                 i.material-icons send
 
     .col-lg-12
-      h2.title-2.my-3 Default card
+      h2.my-3 Default card
       p
         | we use
         code .card
@@ -190,14 +190,14 @@ block content
           .card__body
             .card__content-header
               .user-data
-                a.text-2(href="#") Jose Portilla
-                p.text-3.gray Jose Portilla Jose Portilla Jose
+                a(href="#") Jose Portilla
+                p.gray Jose Portilla Jose Portilla Jose
                 a.text-3.gray(href="#") Jose Portilla
               // start of list
                 include ../../../components/list-dropdown.pug
               // end of list
             .card__content--details
-              p.text-1 lorem ipsum dolor sit amet
+              p lorem ipsum dolor sit amet
             // start tags
               .tags
                 a(href='#').tags__item #Development
@@ -208,8 +208,8 @@ block content
 
 
     .col-lg-12
-      h2.title-2.my-3 Thread card questions
-      p.text-2.mb-1
+      h2.my-3 Thread card questions
+      p.mb-1
         | we use
         code .card
     .col-lg-12
@@ -221,7 +221,7 @@ block content
           .card__body
             .card__content-header
               .user-data
-                a.text-2(href="#") Jose Portilla
+                a(href="#") Jose Portilla
                 time.text-3.gray Jan 15 '18 at 13:56
                 //- a.text-3.gray(href="#") Jose Portilla
               +dropdown
@@ -247,8 +247,8 @@ block content
                 .tags__item #Development
     //-Thread answer
     .col-lg-12
-      h2.title-2.my-3 Thread card questions
-      //p.text-2.mb-1
+      h2.my-3 Thread card questions
+      //p.mb-1
         | we use
         code .card
     .col-lg-12
@@ -260,7 +260,7 @@ block content
           .card__body
             .card__content-header
               .user-data
-                a.text-2(href="#") Jose Portilla
+                a(href="#") Jose Portilla
                 time.text-3.gray Jan 15 '18 at 13:56
                 //- a.text-3.gray(href="#") Jose Portilla
                 +dropdown
@@ -284,8 +284,8 @@ block content
 
     //- card comments
     .col-lg-12
-      h2.title-2.my-3 Default card comments
-      p.text-2.mb-1
+      h2.my-3 Default card comments
+      p.mb-1
         | we use
         code .card .card--transparent
     .col-lg-12
@@ -299,13 +299,13 @@ block content
             .card__body
               .card__content-header
                 .user-data
-                  a.text-2(href="#") Jose Portilla
+                  a(href="#") Jose Portilla
                   time.text-3.gray Jan 15 '18 at 13:56
 
                   +dropdown
                     i.fas.fa-ellipsis-h
               .card__content--details
-                p.text-1 lorem ipsum dolor sit amet
+                p lorem ipsum dolor sit amet
         //- comment 2
         .card.card--transparent
 
@@ -320,12 +320,12 @@ block content
       .card__body
         .card__content-header
           .user-data
-            a.text-2(href="#") Jose Portilla
+            a(href="#") Jose Portilla
             a.text-3.gray test@test.com
             a.text-3.gray(href="#") Bio test test
           //include ../../../components/list-dropdown.pug
         .card__content--details
-          p.text-1 lorem ipsum dolor sit amet
+          p lorem ipsum dolor sit amet
     //- .col-lg-12
       .card
         .card__content
@@ -392,24 +392,24 @@ block content
     .col-lg-12
       .row
         .col-12
-          h2.title-2.my-3 grid card
+          h2.my-3 grid card
         .col-sm-12.col-md-6.col-lg-4
-          div(class="course-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
+          div(class="display-card-container" data-count="1" data-data='{"id":1,"cover":"../../assets/images/get_img.jpg","video_id": "S7YqVez2sUw","title": "Complete Python Bootcamp1","url":"/course.html","category": "Web Development | Python","subscribers": "1 subscriber","total_rate": 4.5,"is_favorite":true,"duration": "4 minutes","actions": {"action": "enroll","url": "#"}}')
         .col-12
-          h2.title-2.my-3 list card
+          h2.my-3 list card
         .col-12
-          .course-card.course-card--list-view
-            a.course-card__preview.youtube-activator(href='/course.html')
-              img.course-card__preview-cover(src='../../assets/images/get_img.jpg' alt='Complete Python Bootcamp1')
-              #course-1.course-card__preview-video.youtube-player(data-video-id='S7YqVez2sUw')
-              .course-card__preview-overlay
-            .course-card__content
-              a.title-link.text-2.semi-bold(href='/course.html') Complete Python Bootcamp1
-              p.title-link.course-card__description.body-2.gray
+          .display-card.display-card--list-view
+            a.display-card__preview.youtube-activator(href='/course.html')
+              img.display-card__preview-cover(src='../../assets/images/get_img.jpg' alt='Complete Python Bootcamp1')
+              #course-1.display-card__preview-video.youtube-player(data-video-id='S7YqVez2sUw')
+              .display-card__preview-overlay
+            .display-card__content
+              a.title-link.semi-bold(href='/course.html') Complete Python Bootcamp1
+              p.title-link.display-card__description.body-2.gray
                 | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
-              .course-card__meta
+              .display-card__meta
                 p.body-2.gray Web Development | Python
-                p.body-2.course-card__rate
+                p.body-2.display-card__rate
                   i.fa.fa-star
                   | 4.5
     //- .col-lg-12
@@ -417,7 +417,7 @@ block content
         code.language-html
           <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
     .col-12
-      h2.title-2.my-3 live session card
+      h2.my-3 live session card
     .col-lg-3
       .card.card--centered.card--live-section
         .card__content
@@ -427,11 +427,11 @@ block content
             .card__content-header
               .user-data
                 a.text-3.semi-bold(href="#") Jose Portilla
-                p.text-3.white
+                p.white
                   span
                   | Live
     .col-12
-      h2.title-2.my-3 Data card
+      h2.my-3 Data card
     .col-12
       include ../../../components/data-card.pug
     //- welcom card
@@ -440,8 +440,8 @@ block content
     //- 		h1.title-h1 welome back person name
     ////-Thread answer
     //.col-lg-12
-    //  h2.title-2.my-3 Thread card questions
-    //  //p.text-2.mb-1
+    //  h2.my-3 Thread card questions
+    //  //p.mb-1
     //    | we use
     //    code .card
     //.col-lg-12
@@ -453,7 +453,7 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
+    //            a(href="#") Jose Portilla
     //            time.text-3.gray Jan 15 '18 at 13:56
     //            //- a.text-3.gray(href="#") Jose Portilla
     //          include ../../../components/list-dropdown.pug
@@ -476,8 +476,8 @@ block content
     //
     ////- card comments
     //.col-lg-12
-    //  h2.title-2.my-3 Default card comments
-    //  p.text-2.mb-1
+    //  h2.my-3 Default card comments
+    //  p.mb-1
     //    | we use
     //    code .card .card--transparent
     //.col-lg-12
@@ -491,11 +491,11 @@ block content
     //        .card__body
     //          .card__content-header
     //            .user-data
-    //              a.text-2(href="#") Jose Portilla
+    //              a(href="#") Jose Portilla
     //              time.text-3.gray Jan 15 '18 at 13:56
     //            include ../../../components/list-dropdown.pug
     //          .card__content--details
-    //            p.text-1 lorem ipsum dolor sit amet
+    //            p lorem ipsum dolor sit amet
     //    //- comment 2
     //    .card.card--transparent
     //      .card__content
@@ -505,11 +505,11 @@ block content
     //        .card__body
     //          .card__content-header
     //            .user-data
-    //              a.text-2(href="#") Jose Portilla
+    //              a(href="#") Jose Portilla
     //              time.text-3.gray Jan 15 '18 at 13:56
     //            include ../../../components/list-dropdown.pug
     //          .card__content--details
-    //            p.text-1 lorem ipsum dolor sit amet
+    //            p lorem ipsum dolor sit amet
     //    //- comment 3
     //    .card.card--transparent
     //      .card__content
@@ -519,11 +519,11 @@ block content
     //        .card__body
     //          .card__content-header
     //            .user-data
-    //              a.text-2(href="#") Jose Portilla
+    //              a(href="#") Jose Portilla
     //              time.text-3.gray Jan 15 '18 at 13:56
     //            include ../../../components/list-dropdown.pug
     //          .card__content--details
-    //            p.text-1 lorem ipsum dolor sit amet
+    //            p lorem ipsum dolor sit amet
     //    .create-comment
     //      .create-comment__content
     //        .content__user-img
@@ -532,8 +532,8 @@ block content
     //        input.group__textarea.textarea--thread(placeholder="Add a public comment")
     ////- .card--with-title
     //.col-lg-12
-    //  h2.title-2.my-3 Card with title with centered components
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with title with centered components
+    //  p.mb-1
     //    | we use
     //    code .card--with-title .card--centered
     //.col-lg-3
@@ -547,15 +547,15 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
-    //            p.text-3.gray Jose Portilla Jose Portilla Jose
+    //            a(href="#") Jose Portilla
+    //            p.gray Jose Portilla Jose Portilla Jose
     //            a.text-3.gray(href="#") Jose Portilla
     //        .card__content--details
-    //          p.text-1 lorem ipsum dolor sit amet
+    //          p lorem ipsum dolor sit amet
     ////- .card--with-title live Streaming
     //.col-lg-12
-    //  h2.title-2.my-3 Card with title with centered components
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with title with centered components
+    //  p.mb-1
     //    | we use
     //    code .card--with-title .card--centered .card--live-stream
     //.col-lg-3
@@ -569,15 +569,15 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            p.text-3.gray Set up your channel and stream live to your students
+    //            p.gray Set up your channel and stream live to your students
     //            .card__btn
     //              a(href="#").btn.btn--primary.btn--rounded.my-2  Get Started
     //        .card__content--details
-    //          p.text-2.gray Info : This feature only for 'Instructors'.
+    //          p.gray Info : This feature only for 'Instructors'.
     ////- .card--with-title .card--top-category
     //.col-lg-12
-    //  h2.title-2.my-3 Card with title with  category
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with title with  category
+    //  p.mb-1
     //    | we use
     //    code .card--with-title .card--top-category
     //.col-lg-3
@@ -606,8 +606,8 @@ block content
     //                | Design
     ////- .card--with-btn
     //.col-lg-12
-    //  h2.title-2.my-3 Card with title with centered components no img
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with title with centered components no img
+    //  p.mb-1
     //    | we use
     //    code .card--centered .card--no-bg
     //.col-lg-3
@@ -616,14 +616,14 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            h2.text-2 Become an Instructor
-    //            p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
+    //            h2 Become an Instructor
+    //            p.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
     //            .card__btn
     //              a(href="#").btn.btn--primary.btn--rounded.my-2 Start Teaching
     ////- .card--with-bg
     //.col-lg-12
-    //  h2.title-2.my-3 Card with title with centered components no img
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with title with centered components no img
+    //  p.mb-1
     //    | we use
     //    code .card--centered .card--bg
     //.col-lg-3
@@ -633,14 +633,14 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            h2.text-2 Become an Instructor
-    //            p.text-3.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
+    //            h2 Become an Instructor
+    //            p.gray Set up your channel and stream live to your students Set up your channel and stream live to your students
     //            .card__btn
     //              a(href="#").btn.btn--primary.btn--rounded.my-2  Get Started
     ////- .card--live-section
     //.col-lg-12
-    //  h2.title-2.my-3 Card with centered components
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with centered components
+    //  p.mb-1
     //    | we use
     //    code .card--centered .card--live-seindexction
     //.col-lg-3
@@ -652,13 +652,13 @@ block content
     //        .card__content-header
     //          .user-data
     //            a.text-3.semi-bold(href="#") Jose Portilla
-    //            p.text-3.gray
+    //            p.gray
     //              span
     //              | Live
     ////- .card--centered .card--icon
     //.col-lg-12
-    //  h2.title-2.my-3 Card with centered components and img to icon
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with centered components and img to icon
+    //  p.mb-1
     //    | we use
     //    code .card--centered .card--icon
     //.col-lg-6
@@ -671,17 +671,17 @@ block content
     //          .user-data
     //            p.title-h6.semi-bold 100,000 online courses
     //        .card__content--details
-    //          p.text-1.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
+    //          p.gray lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet
     ////- card testimonial
     //.col-lg-12
-    //  h2.title-2.my-3 Default card
-    //  p.text-2.mb-1
+    //  h2.my-3 Default card
+    //  p.mb-1
     //    | we use
     //    code .card .card__testimonial
     //.col-lg-6
     //  .card.card__testimonial
     //    .card__title
-    //      p.text-2.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
+    //      p.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
     //    .card__content
     //      .user-image
     //        img(src="../../assets/images/hd_dp.jpg" alt="")
@@ -692,8 +692,8 @@ block content
     //            h2.title-h6.semi-bold Jose Portilla
     ////- .card--centered
     //.col-lg-12
-    //  h2.title-2.my-3 Card with centered components
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with centered components
+    //  p.mb-1
     //    | we use
     //    code .card--centered
     //.col-lg-3
@@ -705,16 +705,16 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
-    //            p.text-3.gray Jose Portilla Jose Portilla Jose
+    //            a(href="#") Jose Portilla
+    //            p.gray Jose Portilla Jose Portilla Jose
     //            a.text-3.gray(href="#") Jose Portilla
     //          //include ../../../components/list-dropdown.pug
     //        .card__content--details
-    //          p.text-1 lorem ipsum dolor sit amet
+    //          p lorem ipsum dolor sit amet
     ////- .card--centered
     //.col-lg-12
-    //  h2.title-2.my-3 Card with centered components user
-    //  p.text-2.mb-1
+    //  h2.my-3 Card with centered components user
+    //  p.mb-1
     //    | we use
     //    code .card--centered .card--user
     //.col-lg-3
@@ -726,9 +726,9 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-1.semi-bold(href="#") Jose Portilla
+    //            a.semi-bold(href="#") Jose Portilla
     //              i.uil.uil-check-circle
-    //            p.text-3.gray.my-3 Web Developer, Designer, and Teacher Jose
+    //            p.gray.my-3 Web Developer, Designer, and Teacher Jose
     //            ul.social-icon
     //              li.social-icon__list
     //                a.social-icon__link.social-icon--fa-bg(href="#")
@@ -745,13 +745,13 @@ block content
     //            .details
     //              span.total-students 615K Students
     //              span.total-course 12 Courses
-    //            a.text-2.medium.mt-3(href="#") Go To Profile
+    //            a.medium.mt-3(href="#") Go To Profile
     //          //include ../../../components/list-dropdown.pug
-    //          //- p.text-1 lorem ipsum dolor sit amet
+    //          //- p lorem ipsum dolor sit amet
     ////- card--interactive
     //.col-lg-12
-    //  h2.title-2.my-3 Trusted answer
-    //  p.text-2.mb-1
+    //  h2.my-3 Trusted answer
+    //  p.mb-1
     //    | we use
     //    code .card--trusted
     //.col-lg-12
@@ -763,15 +763,15 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
-    //            p.text-3.gray Jose Portilla Jose Portilla Jose
+    //            a(href="#") Jose Portilla
+    //            p.gray Jose Portilla Jose Portilla Jose
     //            a.text-3.gray(href="#") Jose Portilla
     //          //include ../../../components/list-dropdown.pug
     //        .card__content--details
-    //          p.text-1 lorem ipsum dolor sit amet
+    //          p lorem ipsum dolor sit amet
     //.col-lg-12
-    //  h2.title-2.my-3 Reverced Card
-    //  p.text-2.mb-1
+    //  h2.my-3 Reverced Card
+    //  p.mb-1
     //    | we use
     //    code .card--reversed
     //.col-lg-12
@@ -783,18 +783,18 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
-    //            p.text-3.gray Jose Portilla Jose Portilla Jose
+    //            a(href="#") Jose Portilla
+    //            p.gray Jose Portilla Jose Portilla Jose
     //            a.text-3.gray(href="#") Jose Portilla
     //          //include ../../../components/list-dropdown.pug
     //        .card__content--details
-    //          p.text-1 lorem ipsum dolor sit amet
+    //          p lorem ipsum dolor sit amet
     ////- card--with-actions
     //
     ////- card--shows-on-hover
     //.col-lg-12
-    //  h2.title-2.my-3 This card shows up when any user account hovered
-    //  p.text-2.mb-1
+    //  h2.my-3 This card shows up when any user account hovered
+    //  p.mb-1
     //    | we use
     //    code .card--horizontal
     //.col-lg-6
@@ -806,12 +806,12 @@ block content
     //      .card__body
     //        .card__content-header
     //          .user-data
-    //            a.text-2(href="#") Jose Portilla
+    //            a(href="#") Jose Portilla
     //            a.text-3.gray test@test.com
     //            a.text-3.gray(href="#") Bio test test
     //          //include ../../../components/list-dropdown.pug
     //        .card__content--details
-    //          p.text-1 lorem ipsum dolor sit amet
+    //          p lorem ipsum dolor sit amet
     //
     //
     //.col-lg-12
@@ -826,12 +826,12 @@ block content
           .card__body
             .card__content-header
               .user-data
-                a.text-2(href="#") Jose Portilla
+                a(href="#") Jose Portilla
                 a.text-3.gray test@test.com
                 a.text-3.gray(href="#") Bio test test
               include ../../../components/list-dropdown.pug
             .card__content--details
-              p.text-1 lorem ipsum dolor sit amet
+              p lorem ipsum dolor sit amet
     //- .col-lg-12
       .card
         .card__content
@@ -861,8 +861,8 @@ block content
                 time.text-3.gray Jan 15 '18 at 13:56
     .row
       .col-md-8
-        h2.title-2.my-3 Thread Listing
-          p.text-2.mb-1
+        h2.my-3 Thread Listing
+          p.mb-1
             | we use
             code .card
         .panel
@@ -915,12 +915,12 @@ block content
             .card__body
               .card__content-header
                 .user-data
-                  a.text-2(href="#") Jose Portilla
+                  a(href="#") Jose Portilla
                   a.text-3.gray test@test.com
                   a.text-3.gray(href="#") Bio test test
                 //include ../../../components/list-dropdown.pug
               .card__content--details
-                p.text-1 lorem ipsum dolor sit amet
+                p lorem ipsum dolor sit amet
 
       //- .card.card--thread
         .card__content

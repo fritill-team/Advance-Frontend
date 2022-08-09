@@ -29,7 +29,7 @@
 .filter__selector {
   float: right;
   font-size: 14px;
-  color: $primary;
+  color: var(--color-primary);
   font-weight: 400;
   .selector--dropdown {
     cursor: pointer;
@@ -204,7 +204,7 @@
   }
   &::after {
     opacity: 1;
-    color: $primaryLight !important;
+    color: var(--color-primary) !important;
     font-size: 10px !important;
     border-radius: 100%;
     margin-top: 0;

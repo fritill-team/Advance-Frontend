@@ -5,12 +5,12 @@ const contentTemplate = (item) => `
 		</a>
 		<div class="content-list-item__content">
 			<div class="content-list-item__content-header">
-        <a class="title-5" href="${item.enabled ? item.url : 'javascript:void(0)'}">${item.title}</a>
+        <a class="5" href="${item.enabled ? item.url : 'javascript:void(0)'}">${item.title}</a>
 				${
           item.type === "video"
-            ? `<span class="title-5">${item.duration}</span>`
+            ? `<span class="5">${item.duration}</span>`
             : item.type === "exam" && item.enabled
-            ? `<span class="title-5">${item.progress}</span>`
+            ? `<span class="5">${item.progress}</span>`
             : ""
         }
 			</div>
@@ -29,8 +29,8 @@ const contentTemplate = (item) => `
 const chapterTemplate = (item) => `
   <h3 class="chapter-item__title">${item.title}</h3>
   <div class="chapter-item__details">
-    <span class="title-5">${item.progress.progress}<span>lectures</span></span>
-    <span class="title-5">${item.duration}</span>
+    <span class="5">${item.progress.progress}<span>lectures</span></span>
+    <span class="5">${item.duration}</span>
   </div>`;
 
 $(".content-list-item").each(function (i, item) {

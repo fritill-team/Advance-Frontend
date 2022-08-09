@@ -17,7 +17,7 @@
       & + .item__label {
         .play-list__check {
           opacity: 1;
-          background: $accent;
+          background: var(--color-accent);
           color: #fff;
           font-size: 14px;
           width: 22px;
@@ -61,16 +61,16 @@
       margin: 0;
       font-size: 14px;
       font-weight: 400;
-      color: $primary;
+      color: var(--color-primary);
       // max-height: 10px;
       &:hover {
-        color: $accent;
+        color: var(--color-accent);
       }
     }
     .playlist-info {
       font-size: 12px;
       line-height: 1px;
-      color: $primary;
+      color: var(--color-primary);
     }
   }
   .play-list__info {

@@ -38,7 +38,7 @@
   &.drawer--partially-closed {
     max-width: 60px;
 		transform: translateX(0);
-		@include noWrap;
+		//@include noWrap;
     @media (max-width: 760px) {
       max-width: 0;
     }

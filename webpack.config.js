@@ -48,7 +48,7 @@ module.exports = env => ({
             loader: "css-loader",
             options: {url: false, importLoaders: 1, sourceMap: true, minimize: true, colormin: false}
           },
-          "postcss-loader",
+          // "postcss-loader",
           "sass-loader"
         ],
         // include: path.resolve(__dirname, 'src/assets/styles/*.css')

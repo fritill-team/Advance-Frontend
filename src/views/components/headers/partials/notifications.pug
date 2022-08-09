@@ -5,30 +5,20 @@
       title='language'
       data-toggle="dropdown"
       data-offset="0,18"
-      )
-        span.notification__icon.material-icons language
+    )
+      span.notification__icon.material-icons language
     .dropdown__content.dropdown-menu
-      .card-list
-        .card__content
-          .list
-            .list-item.list-item
-              .list-item__content
-                p.subtitle-1.gray English
-              .list-item__action
-                //- .field-wrapper
-                  div
-                    input(class="field" type="checkbox" id="en" name="checkname" checked)
-                    label(for="en")
-                      span
-            .list-item.list-item
-              .list-item__content
-                p.subtitle-1.gray Arabic
-              .list-item__action
-                //- .field-wrapper
-                  div
-                    input(class="field" type="checkbox" id="ar" name="checkname")
-                    label(for="ar")
-                      span
+      .list
+        a.list-item.list-item--one-line.toggle-dir(data-dir="ltr")
+          .list-item__content
+            p.subtitle-1.gray English
+          .list-item__action
+            i.fa.fa-check primary
+        a.list-item.list-item--one-line.toggle-dir(data-dir="rtl")
+          .list-item__content
+            p.subtitle-1.gray Arabic
+          .list-item__action
+            i.fa.fa-check primary
   .dropdown.dropdown--header
     a.notification__item.dropdown__activator(href="javascript:void(0)" data-toggle="dropdown" data-offset="0,18" title='Messages')
       i.notification__icon.material-icons email
@@ -119,7 +109,7 @@
               .list-item__action
   .dropdown.dropdown--header
     img(src='../../assets/images/profile.png' alt='' class="dropdown__activator profile-link__img image image--xs-small-profile image--rounded"
-    aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" data-offset="0,16")
+      aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" data-offset="0,16")
     .dropdown__content.dropdown-menu
       .list.list--condensed
         .list-item.list-item--one-line

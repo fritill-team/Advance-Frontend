@@ -6,7 +6,7 @@
 }
 .night-mode{
   .pagination{
-    @include whiteTypo;
+    //@include whiteTypo;
     button.btn{
       &.btn--primary{
         color: $white;

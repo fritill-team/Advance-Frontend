@@ -22,7 +22,7 @@
     &:last-of-type{
       margin-top: 30px;
     }
-    
+
   }
   &::before{
     position: absolute;
@@ -32,7 +32,7 @@
     text-align: right;
     height: 100%;
     width: 24px;
-    background-color: $primary;
+    background-color: var(--color-primary);
     font-family: "Material Icons";
     content: "\e945";
     align-items: center;
@@ -85,7 +85,7 @@
     margin-bottom: 16px;
     transition: .3s ease all;
     span,i{
-      color: $gray;
+      color: var(--color-gray);
       font-size: 20px;
     }
   }
@@ -100,7 +100,7 @@
   align-items: baseline;
   text-align: left;
   white-space: nowrap;
-  @include normalizeTypo;
+  // @include normalizeTypo;
   strong{
     margin: 0 4px;
   }
@@ -109,7 +109,7 @@
 .night-mode{
   .data-card{
     background-color: $black;
-    @include whiteTypo;
+    // @include whiteTypo;
   }
   .description{
     strong{
@@ -121,15 +121,15 @@
 html[dir="rtl"]{
   .data-card{
     .data-card__details{
-      @include textRight;
+      // @include textRight;
     }
-    
+
     & > div{
       margin: 0 0 0 16px;
       &:last-of-type{
         margin-top: 30px;
       }
-      
+
     }
     &.data-card--draggable{
       padding: 16px 40px 16px 16px;
@@ -151,7 +151,7 @@ html[dir="rtl"]{
         transform: translateX(0);
       }
     }
-  
+
   }
   .description{
     text-align: right;

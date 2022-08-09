@@ -14,7 +14,7 @@
   th {
     background-color: #1dbae626;
     font-weight: 600;
-    color: $primary;
+    color: var(--color-primary);
   }
   th,
   td {
@@ -41,7 +41,7 @@
   }
 
   i[class*="fa-"] {
-    color: $primary;
+    color: var(--color-primary);
     font-size: 14px;
     padding: 4px;
   }

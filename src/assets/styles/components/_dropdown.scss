@@ -36,7 +36,7 @@
       margin: 0 0;
       white-space: nowrap;
       &:hover {
-        background-color: rgba($primary, 0.2);
+        background-color: rgba(var(--RGB-color-primary), 0.2);
       }
     }
 
@@ -63,7 +63,7 @@
     }
     .notification__number {
       position: absolute;
-      background-color: $accent;
+      background-color: var(--color-accent);
       width: 16px;
       height: 16px;
       border-radius: 50%;

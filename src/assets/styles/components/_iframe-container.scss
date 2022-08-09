@@ -1,0 +1,14 @@
+.iframe-container {
+  width: 100%;
+
+  iframe {
+    width: 100% !important;
+    height: 264px;
+  }
+
+  &.iframe-container--lg {
+    iframe {
+      height: 400px;
+    }
+  }
+}

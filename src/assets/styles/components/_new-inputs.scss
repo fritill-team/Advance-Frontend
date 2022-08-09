@@ -1,86 +1,6 @@
 .field-wrapper {
-  width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  margin-bottom: 10px;
-  .select2 {
-    width: 100% !important;
-  }
 
-  // field wrapper Error case (1)
-  &.field-wrapper--error {
-    .field-wrapper__label {
-      color: #dc3545;
-    }
 
-    .field-wrapper__messages {
-      li {
-        color: #dc3545;
-      }
-    }
-
-    .field {
-      border: 1px solid #dc3545;
-
-      &[type="checkbox"],
-      &[type="radio"] {
-        & + label:before {
-          border: 1px solid #dc3545;
-          background: #fff;
-        }
-
-        & + label {
-          color: #dc3545;
-        }
-      }
-
-      &[type="checkbox"] {
-        &:checked + label:after {
-          border-bottom: 3px solid #dc3545;
-          border-right: 3px solid #dc3545;
-        }
-
-        & + label {
-          color: #dc3545;
-
-          span {
-            background-color: #dc3545;
-          }
-        }
-      }
-
-      &[type="radio"] {
-        &:not(:checked) + label:after {
-          opacity: 0;
-        }
-
-        &:checked + label:after {
-          border: 6px solid #dc3545;
-        }
-
-        & + label {
-          span {
-            background-color: #dc3545;
-          }
-        }
-      }
-
-      &[type="file"] {
-        & + label {
-          color: #dc3545;
-
-          &:after {
-            background-color: #dc3545;
-          }
-        }
-      }
-
-      &.field--underline {
-        border: none;
-        border-bottom: 1px solid rgba(#dc3545, 1);
-      }
-    }
-  }
 
   // field wrapper smaller case (2)
   &.field-wrapper--sm {
@@ -221,12 +141,12 @@
     &:checked {
       & + label {
         &:before {
-          background-color: rgba($color: $primary, $alpha: 0.3);
+          background-color: rgba($color: var(--RGB-color-primary), $alpha: 0.3);
         }
 
         &:after {
           left: 18px;
-          background-color: $primary;
+          background-color: var(--color-primary);
         }
       }
     }
@@ -307,7 +227,7 @@
   font-size: 16px;
   font-weight: 600;
   padding: 6px 16px;
-  color: $primary;
+  color: var(--color-primary);
 }
 
 .field-wrapper__messages {
@@ -318,7 +238,7 @@
     font-size: 14px;
     font-weight: 600;
     padding: 6px 16px;
-    color: $primary;
+    color: var(--color-primary);
   }
 }
 textarea.field{
@@ -345,13 +265,13 @@ textarea.field{
       font-size: 14px;
       line-height: 1;
       cursor: pointer;
-      color: $gray;
+      color: var(--color-gray);
       margin: 7px 0px;
       padding-left: 30px;
 
       span {
         position: absolute;
-        background-color: $primary;
+        background-color: var(--color-primary);
         left: -11px;
         top: 8px;
         transform: translateY(-50%);
@@ -377,7 +297,7 @@ textarea.field{
       top: 0;
       width: 18px;
       height: 18px;
-      border: 1px solid $gray;
+      border: 1px solid var(--color-gray);
       background: #fff;
       transition: all 275ms;
       z-index: 1;
@@ -414,8 +334,8 @@ textarea.field{
       left: 6px;
       top: 2px;
       width: 6px;
-      border-bottom: 3px solid $primary;
-      border-right: 3px solid $primary;
+      border-bottom: 3px solid var(--color-primary);
+      border-right: 3px solid var(--color-primary);
     }
   }
 
@@ -434,7 +354,7 @@ textarea.field{
       left: 3px;
       top: 2px;
       width: 12px;
-      background-color: $primary;
+      background-color: var(--color-primary);
       border-radius: 50%;
     }
   }
@@ -452,7 +372,7 @@ textarea.field{
       padding: 1.25rem 0.9rem;
       font-weight: 400;
       line-height: 0;
-      color: $primary;
+      color: var(--color-primary);
       background-color: $white;
       border: 1px solid #efefef;
       border-radius: 6px;
@@ -466,7 +386,7 @@ textarea.field{
         padding: 1.25rem 1rem;
         color: $white;
         content: "Upload File";
-        background-color: $primary;
+        background-color: var(--color-primary);
         border-left: inherit;
         border-radius: 0 5px 5px 0;
       }
@@ -479,7 +399,7 @@ textarea.field{
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 
     &:focus {
-      border-bottom: 1px solid rgba($primary, 0.5);
+      border-bottom: 1px solid rgba(var(--RGB-color-primary), 0.5);
     }
   }
 
@@ -512,17 +432,17 @@ textarea.field{
   &.field--accent {
     &[type="checkbox"] {
       & + label:before {
-        border: 1px solid $accent;
+        border: 1px solid var(--color-accent);
       }
 
       &:checked + label:after {
-        border-bottom: 3px solid $accent;
-        border-right: 3px solid $accent;
+        border-bottom: 3px solid var(--color-accent);
+        border-right: 3px solid var(--color-accent);
       }
 
       & + label {
         span {
-          background-color: $accent;
+          background-color: var(--color-accent);
         }
       }
     }
@@ -550,8 +470,8 @@ textarea.field{
           opacity: 1;
 
           &:before {
-            background: $primary;
-            border: 1px solid $primary;
+            background: var(--color-primary);
+            border: 1px solid var(--color-primary);
           }
 
           &:after {
@@ -669,7 +589,7 @@ textarea.field{
             opacity: 1;
 
             &:before {
-              border: 1px solid $primary;
+              border: 1px solid var(--color-primary);
             }
 
             &:after {
@@ -740,12 +660,12 @@ textarea.field{
       &.field--accent {
         &[type="checkbox"] {
           & + label:before {
-            border: 1px solid $accent;
+            border: 1px solid var(--color-accent);
           }
 
           &:checked + label:after {
-            border-bottom: 3px solid $accent;
-            border-right: 3px solid $accent;
+            border-bottom: 3px solid var(--color-accent);
+            border-right: 3px solid var(--color-accent);
           }
         }
       }
@@ -758,8 +678,8 @@ textarea.field{
           }
 
           &:checked + label:after {
-            border-bottom: 3px solid $primary;
-            border-right: 3px solid $primary;
+            border-bottom: 3px solid var(--color-primary);
+            border-right: 3px solid var(--color-primary);
           }
         }
       }

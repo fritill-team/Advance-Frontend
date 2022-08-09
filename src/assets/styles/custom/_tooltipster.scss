@@ -6,7 +6,7 @@
   &.tooltipster-left{
     .tooltipster-arrow-border{
       border-top-color: transparent !important;
-      border-left-color: $primary;
+      border-left-color: var(--color-primary);
     }
     .tooltipster-arrow-background{
       border-top-color: transparent;
@@ -15,16 +15,16 @@
   &.tooltipster-bottom{
     .tooltipster-arrow-border{
       border-top-color: transparent !important;
-      border-bottom-color: $primary;
+      border-bottom-color: var(--color-primary);
     }
   }
   .tooltipster-box{
     background-color: $white;
-    border: 3px solid $primary;
+    border: 3px solid var(--color-primary);
   }
   .tooltipster-arrow{
     .tooltipster-arrow-border{
-      border-top-color: $primary;
+      border-top-color: var(--color-primary);
 
     }
     .tooltipster-arrow-background{
@@ -33,7 +33,7 @@
   }
   .tooltipster-content{
     padding: 6px;
-    color: $gray;
+    color: var(--color-gray);
   }
 }
 .night-mode{
