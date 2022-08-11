@@ -7,7 +7,7 @@ import "./assets/vendor/jquery-3.3.1.min.js"
 import "./assets/vendor/OwlCarousel/owl.carousel.js"
 import "./assets/vendor/Scrollify/jquery.scrollify"
 import "./assets/vendor/jquery-ui.min.js"
-import "./assets/vendor/nicescroll/dist/jquery.nicescroll"
+import "./assets/vendor/nicescroll/jquery.nicescroll"
 import './assets/vendor/tooltipster.bundle.min'
 import "./assets/vendor/popper.min.js"
 import "./assets/vendor/lightbox.min.js"

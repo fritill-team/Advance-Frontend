@@ -1,13 +1,13 @@
 :root {
   --pg-color: #fff; // #EDF4FD;
   --RGB-pg-color: 255, 255, 255; // 237, 244, 253;
-  --color-default: #D3D9E1;
+  --color-default: #d3d9e1;
   --RGB-color-default: 211, 217, 225;
-  --color-primary: #0D9BBD;
+  --color-primary: #0d9bbd;
   --RGB-color-primary: 13, 155, 189;
-  --color-accent: #FFCE06;
+  --color-accent: #ffce06;
   --RGB-color-accent: 255, 206, 6;
-  --color-secondary: #2FBEBD;
+  --color-secondary: #2fbebd;
   --RGB-color-secondary: 47, 190, 189;
   --color-white: #fff;
   --RGB-color-white: 255, 255, 255;
@@ -15,29 +15,30 @@
   --RGB-color-black: 28, 40, 44;
   --color-gray: #626262;
   --RGB-color-gray: 98, 98, 98;
-  --color-success: #2BEE38;
+  --color-success: #2bee38;
   --RGB-color-success: 43, 238, 56;
-  --color-info: #1FCAFF;
+  --color-info: #1fcaff;
   --RGB-color-info: 31, 202, 255;
   --color-danger: #dc3545;
   --RGB-color-danger: 220, 53, 69;
-  --color-warning: #F04E29;
+  --color-warning: #f04e29;
   --RGB-color-warning: 240, 78, 41;
   --color-disabled: #a8a8a8;
   --RGB-color-disabled: 168, 168, 168;
   --box-shadow: 0 4px 12px 0 rgba(var(--RGB-color-gray), 0.2);
+  --light: #f4f4f4;
 }
 
-[data-theme='dark'] {
-  --pg-color: #EDF4FD;
+[data-theme="dark"] {
+  --pg-color: #edf4fd;
   --RGB-pg-color: 237, 244, 253;
-  --color-default: #D3D9E1;
+  --color-default: #d3d9e1;
   --RGB-color-default: 242, 176, 30;
   --color-primary: #f2b01e;
   --RGB-color-primary: 242, 176, 30;
   --color-accent: #d36565;
   --RGB-color-accent: 211, 101, 101;
-  --color-secondary: #2FBEBD;
+  --color-secondary: #2fbebd;
   --RGB-color-secondary: 47, 190, 189;
   --color-white: #1c282c;
   --RGB-color-white: 28, 40, 44;
@@ -45,22 +46,23 @@
   --RGB-color-black: 255, 255, 255;
   --color-gray: #d7d4d4;
   --RGB-color-gray: 215, 212, 212;
-  --color-success: #2BEE38;
+  --color-success: #2bee38;
   --RGB-color-success: 43, 238, 56;
-  --color-info: #1FCAFF;
+  --color-info: #1fcaff;
   --RGB-color-info: 31, 202, 255;
   --color-danger: #dc3545;
   --RGB-color-danger: 220, 53, 69;
-  --color-warning: #F04E29;
+  --color-warning: #f04e29;
   --RGB-color-warning: 240, 78, 41;
   --color-disabled: #a8a8a8;
   --RGB-color-disabled: 168, 168, 168;
+  --light: #55656e;
 }
 
-$default: #D3D9E1;
-$primary: #0D9BBD;
-$accent: #FFCE06;
-$secondary: #2FBEBD;
+$default: #d3d9e1;
+$primary: #0d9bbd;
+$accent: #ffce06;
+$secondary: #2fbebd;
 
 $default-night-mode: #f1edee;
 $primary-night-mode: #c8cdce;
@@ -69,14 +71,14 @@ $secondary-night-mode: rgb(21, 151, 187); //#1597BB ;
 
 // default colors
 $white: #fff;
-$gray: rgba(0, 0, 0, .6);
+$gray: rgba(0, 0, 0, 0.6);
 $black: #1c282c;
 $input-color: #686f7a;
 // status
-$success: #2BEE38;
-$info: #1FCAFF;
+$success: #2bee38;
+$info: #1fcaff;
 $danger: #dc3545;
-$warning: #F04E29;
+$warning: #f04e29;
 $disabled: #a8a8a8;
 
 // night-mode

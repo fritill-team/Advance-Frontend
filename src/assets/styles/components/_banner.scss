@@ -1,0 +1,57 @@
+.banner {
+  position: relative;
+  background-color: var(--light);
+  border-radius: 5px;
+  &__image {
+    height: 390px;
+    img {
+      height: 390px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    * {
+      z-index: 10;
+    }
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 1rem;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      text-align: end;
+      align-items: flex-end;
+    }
+
+    p {
+      width: 80%;
+      text-align: end;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 617px;
+      background: $accent;
+      left: 0;
+      right: 0;
+      transform: perspective(430px) rotateX(20deg);
+
+      [dir="ltr"] & {
+        border-radius: 20px 5px 5px 30px;
+        transform-origin: 100% 100%;
+      }
+
+      [dir="rtl"] & {
+        border-radius: 5px 20px 20px 5px;
+        transform-origin: 0 100%;
+      }
+    }
+  }
+}
