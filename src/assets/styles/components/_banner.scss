@@ -38,7 +38,7 @@
       position: absolute;
       bottom: 0;
       height: 617px;
-      background: $accent;
+      background: var(--color-accent);
       left: 0;
       right: 0;
       transform: perspective(430px) rotateX(20deg);
