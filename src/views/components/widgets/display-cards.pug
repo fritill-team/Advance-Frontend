@@ -1,3 +1,5 @@
+include ../general-component/progress.pug
+
 mixin blog-card(title, desc, category='', type='')
   - var categoryText = "Autism"
   - var typeText = "Article"
@@ -9,7 +11,7 @@ mixin blog-card(title, desc, category='', type='')
     a(class="display-card__link" href="/blog.html")
     .display-card__thumbnail-box
       img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
-    .display-card__content
+    .display-card__body
       a.display-card__user-box(href="/user.html")
         img(src="../../assets/images/profile.png" class="display-card__user-avatar")
         .display-card__user-data
@@ -24,12 +26,13 @@ mixin blog-card(title, desc, category='', type='')
 
       .display-card__type= typeText
 
+    .display-card__footer
       span.display-card__date Published At July 19, 2022, 1:41 a.m.
 
 
 
 
-mixin course-card(title, desc, category='', subscribe= false, live= false)
+mixin course-card(title, desc, category='', isSubscribe= false, live= false)
   - var categoryText = "Autism"
   - var typeText = "Article"
   if category
@@ -39,34 +42,38 @@ mixin course-card(title, desc, category='', subscribe= false, live= false)
   .display-card
     a(class="display-card__link" href="/blog.html")
 
-    .display-card__hover-card-action
-      if subscribe
-        .subscribe
-          button.btn.btn--danger subscribe now
-      else
-        .watch
-          button.btn.btn--primary
-            i.fas.fa-eye
-            span   continue watching
     if live
       .display-card__ribbon
         span.badge.badge--danger live
 
     .display-card__thumbnail-box
       img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
-    .display-card__content
-      a.display-card__user-box(href="/user.html")
-        img(src="../../assets/images/profile.png" class="display-card__user-avatar")
-        .display-card__user-data
-          span User Type
-          p User Name
-      p.display-card__category
-        | In
-        | !{' '}
-        a(href="/category.html")= categoryText
-      h4.display-card__title= title
-      p.display-card__description= desc
+      if isSubscribe
+        .display-card__progress.mb-3.ms-n2
+          +progress("progress--height","w-70", "70" , "0", "100")
 
+      .display-card__card-action.display-card__card-action--hover
+        if isSubscribe
+          .watch
+              button.btn.btn--primary.btn--rounded
+                i.material-icons play_circle
+                span   continue watching
+        else
+          .subscribe
+            button.btn.btn--danger.btn--rounded subscribe now
 
+    .display-card__body
+        a.display-card__user-box(href="/user.html")
+          img(src="../../assets/images/profile.png" class="display-card__user-avatar")
+          .display-card__user-data
+            span User Type
+            p User Name
+        p.display-card__category
+          | In
+          | !{' '}
+          a(href="/category.html")= categoryText
+        h4.display-card__title= title
+        p.display-card__description= desc
 
+    .display-card__footer
       span.display-card__date Published At July 19, 2022, 1:41 a.m.
