@@ -1,0 +1,10 @@
+mixin service-excerpt(title, desc, action)
+  section.service-excerpt.d-md-flex
+    div.service-excerpt__image
+      img(src="../../../assets/images/become_instructor_banner.jpg", alt="", srcset="", class="service-excerpt__image__section-img")
+      img(src="../../../assets//images/nbe.png", alt="nbe bank", srcset="", class="service-excerpt__image__small-img")
+    .service-excerpt__content
+      h2.text-primary.text-weight-500= title
+      p.partners__details= desc
+      div.d-flex.justify-content-center
+        button.btn.btn--primary.btn--lg.mt-3= action

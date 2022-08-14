@@ -47,7 +47,7 @@
 
   .display-card__user-avatar {
     position: relative;
-    width: 40px;
+    width: 40px !important;
     height: 40px;
     margin-right: 8px;
     border-radius: 50%;
@@ -63,6 +63,10 @@
       height: 100%;
       width: 100%;
       background-color: rgba(var(--RGB-color-primary), 0.2);
+    }
+    [dir="rtl"] & {
+      margin-right: unset;
+      margin-left: 8px;
     }
   }
 
@@ -162,24 +166,14 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
+    [dir="rtl"] & {
+      margin: 0 auto 4px 0;
+    }
   }
 
   .display-card__date {
     font-size: 12px;
     color: var(--color-gray);
     width: fit-content;
-  }
-}
-
-html[dir="rtl"] {
-  .display-card {
-    .display-card__user-avatar {
-      margin-right: unset;
-      margin-left: 8px;
-    }
-
-    .display-card__type {
-      margin: 0 auto 4px 0;
-    }
   }
 }
