@@ -2,56 +2,88 @@
   position: relative;
   background-color: var(--light);
   border-radius: 5px;
+  height: 256px;
+  display: flex;
+  color: var(--color-default);
+
   &__image {
-    height: 390px;
+    flex: 0 0 70%;
     img {
-      height: 390px;
+      height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
 
   &__content {
-    * {
-      z-index: 10;
-    }
-    height: 390px;
+    flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    padding: 0 1rem;
-    position: relative;
+    align-items: center;
+    background: currentColor;
+    padding: 0 16px;
+
+    [dir="ltr"] & {
+      clip-path: polygon(35% 0, 100% 0%, 100% 100%, 0% 100%);
+      border-radius: 20px 5px 5px 30px;
+      transform-origin: 100% 100%;
+    }
+
+    [dir="rtl"] & {
+      clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%);
+      border-radius: 5px 20px 20px 5px;
+    }
 
     @media screen and (max-width: 992px) {
       text-align: end;
       align-items: flex-end;
     }
 
-    p {
-      width: 80%;
-      text-align: end;
+    h3 {
+      [dir="rtl"] & {
+        margin-right: 58px;
+      }
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      height: 617px;
-      background: var(--color-accent);
-      left: 0;
-      right: 0;
-      transform: perspective(430px) rotateX(20deg);
-
+    p {
+      line-height: 1.5;
       [dir="ltr"] & {
-        border-radius: 20px 5px 5px 30px;
-        transform-origin: 100% 100%;
+        margin-left: 98px;
       }
 
       [dir="rtl"] & {
-        border-radius: 5px 20px 20px 5px;
-        transform-origin: 0 100%;
+        margin-right: 98px;
       }
     }
+  }
+
+  // banner color
+  &--primary {
+    color: var(--color-primary);
+  }
+
+  &--secondary {
+    color: var(--color-secondary);
+  }
+
+  &--accent {
+    color: var(--color-accent);
+  }
+
+  &--success {
+    color: var(--color-success);
+  }
+
+  &--warning {
+    color: var(--color-warning);
+  }
+
+  &--info {
+    color: var(--color-info);
+  }
+
+  &--danger {
+    color: var(--color-danger);
   }
 }

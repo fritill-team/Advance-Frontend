@@ -1,0 +1,7 @@
+mixin default-banner(title, desc, color)
+  section.banner(class= color)
+    .banner__image
+      img(src="../../../assets/images/articles.png", alt="", srcset="")
+    .banner__content
+      h3.my-0.text-white= title
+      p.text-white.mt-2= desc

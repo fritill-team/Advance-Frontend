@@ -1,0 +1,39 @@
+extends ../../../layouts/site.pug
+include ../../../components/banners
+
+block title
+  title banners
+
+
+block content
+  .container
+    h1 banners
+
+    h2 default banner
+    h3 English
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores")
+
+    h3 Arabic
+    +default-banner("اعلى المقالات", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه")
+
+    h3 color
+    h4 primary
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--primary")
+
+    h4 secondary
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--secondary")
+
+    h4 accent
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--accent")
+
+    h4 success
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--success")
+
+    h4 warning
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--warning")
+
+    h4 info
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--info")
+
+    h4 danger
+    +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "banner--danger")

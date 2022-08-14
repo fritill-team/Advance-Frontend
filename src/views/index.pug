@@ -1,6 +1,7 @@
 extends ./layouts/site.pug
 include ./components/widgets/display-cards
 include ./components/widgets/sliders
+include ./components/banners
 
 block title
   title My Page - Home
@@ -51,9 +52,7 @@ block content
 
   section.home-section
     .container
-      h2.text-primary.text-weight-500 Article
-      p.partners__details Lorem ipsum dolor sit amet
-      include ./components/banner.pug
+      +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti inventore nihil quae.")
 
   section.home-section
     .container
