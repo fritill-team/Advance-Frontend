@@ -1,0 +1,36 @@
+@mixin badge($name, $color) {
+  .badge--#{$name} {
+    background-color: $color;
+    color: #fff;
+
+    &.badge--outlined {
+      background-color: transparent;
+      color: $color;
+    }
+  }
+}
+
+.badge {
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  padding: 4px 26px;
+  font-weight: 500;
+}
+
+@include badge("primary", var(--color-primary));
+
+@include badge("accent", var(--color-accent));
+
+@include badge("secondary", var(--color-secondary));
+
+@include badge("success", var(--color-success));
+
+@include badge("success", var(--color-info));
+
+@include badge("warning", var(--color-warning));
+
+@include badge("danger", var(--color-danger));

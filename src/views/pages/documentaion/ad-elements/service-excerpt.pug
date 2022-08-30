@@ -1,0 +1,17 @@
+extends ../../../layouts/site.pug
+include ../../../components/service-excerpt
+
+block title
+  title service-excerpt
+
+
+block content
+  .container
+    h1 service excerpt
+
+    h2 service-excerpt
+    h3 English
+    +service-excerpt("Occupational preference survey", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "Take survey")
+
+    h3 Arabic
+    +service-excerpt("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع")
