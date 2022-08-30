@@ -1,6 +1,8 @@
 extends ./layouts/site.pug
 include ./components/widgets/display-cards
 include ./components/widgets/sliders
+include ./components/banners
+include ./components/service-excerpt
 
 block title
   title My Page - Home
@@ -36,18 +38,26 @@ block content
         .col-sm-6.col-md-8
         .col-sm-12
           .carousel.owl-carousel
-            +blog-card
-            +blog-card
-            +blog-card
-            +blog-card
-            +blog-card
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course 2", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,", "book")
+            +blog-card("title course 3", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course 4", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course5", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
         .col-sm-12
           .carousel.owl-carousel
-            +blog-card
-            +blog-card
-            +blog-card
-            +blog-card
-            +blog-card
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+            +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+
+  section.home-section
+    .container
+      +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti inventore nihil quae.")
+
+  section.home-section
+    .container
+      +service-excerpt("Occupational preference survey","Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry", "Take survey")
 
   //section.home-section
   //  .container
