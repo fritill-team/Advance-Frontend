@@ -1,0 +1,30 @@
+.filter-list {
+  background-color: $white;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  padding: 16px;
+  box-shadow: var(--box-shadow);
+
+  &__title {
+    position: relative;
+    &::after {
+      content: "";
+      height: 4px;
+      background-color: var(--color-primary);
+      position: absolute;
+      padding: 0 20px;
+      border-radius: 5px;
+      bottom: -14px;
+      [dir="rtl"] & {
+        right: 0;
+      }
+      [dir="ltr"] & {
+        left: 0;
+      }
+    }
+  }
+
+  &__action {
+    width: 100%;
+  }
+}

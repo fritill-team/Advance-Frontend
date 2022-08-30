@@ -16,7 +16,7 @@ input[type="submit"].btn {
   white-space: nowrap;
   cursor: pointer;
   letter-spacing: 1.25px;
-  transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
   margin: 0 5px 0 0;
 
   &:last-of-type {
@@ -28,7 +28,7 @@ input[type="submit"].btn {
   }
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     pointer-events: none;
     border-radius: inherit;
@@ -40,7 +40,7 @@ input[type="submit"].btn {
     opacity: 0;
     color: inherit;
     background-color: currentColor;
-    transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
   }
 
   &:focus {
@@ -52,18 +52,19 @@ input[type="submit"].btn {
   }
 
   &.btn--with-icon {
-    .material-icons{
+    .material-icons {
       font-size: inherit;
     }
   }
-  i,span {
+  i,
+  span {
     margin: 0 4px;
   }
 
   &.btn--rounded {
     border-radius: 20px;
   }
-  &.btn--block{
+  &.btn--block {
     display: block;
     width: 100%;
   }
@@ -87,7 +88,7 @@ input[type="submit"].btn {
 
   &.btn--disabled,
   &:disabled {
-    color: rgba(#000000, .26);
+    color: rgba(#000000, 0.26);
     cursor: not-allowed;
 
     &:focus:before {
@@ -254,12 +255,15 @@ input[type="submit"].btn {
     }
 
     svg,
-    i, span {
+    i,
+    span {
       margin: 0;
       position: absolute;
       top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
+      [dir="rtl"] & {
+        left: 50%;
+      }
     }
   }
 
@@ -270,7 +274,7 @@ input[type="submit"].btn {
   }
 
   &.btn--white {
-    color: #FFF;
+    color: #fff;
   }
 
   &.btn--player {
@@ -280,7 +284,7 @@ input[type="submit"].btn {
     position: relative;
     background-color: transparent;
     border-radius: 50%;
-    transition: .3s ease all;
+    transition: 0.3s ease all;
 
     * {
       position: absolute;
@@ -294,7 +298,7 @@ input[type="submit"].btn {
       cursor: pointer;
 
       &::after {
-        background-color: rgba($color: var(--RGB-color-primary), $alpha: .3);
+        background-color: rgba($color: var(--RGB-color-primary), $alpha: 0.3);
       }
     }
 
@@ -317,7 +321,6 @@ input[type="submit"].btn {
 a.btn {
   display: inline-block;
 }
-
 
 .btn-group {
   margin: 5px;
@@ -350,16 +353,14 @@ a.btn {
     border: none;
     border-radius: 0 !important;
   }
-
 }
 
 html[dir="rtl"] {
-
   .btn-group {
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: right;
-    .btn{
+    .btn {
       margin: 0;
     }
   }
@@ -371,7 +372,6 @@ html[dir="rtl"] {
     }
   }
 }
-
 
 @media (max-width: 768.98px) {
   .btn--player {
