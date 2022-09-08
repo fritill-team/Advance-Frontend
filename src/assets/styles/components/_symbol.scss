@@ -1,0 +1,61 @@
+$increments: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160, 175, 200);
+
+
+.symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 8px;
+
+  @each $increment in $increments {
+    &.symbol--#{$increment}px {
+      .symbol__label {
+        height: #{$increment}px;
+        width: #{$increment}px;
+      }
+    }
+  }
+
+  &.symbol--100 {
+    .symbol__label {
+      width: 100% !important;
+    }
+  }
+
+  &.symbol--shadow {
+
+    .symbol__label {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 25%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(6, 6, 6, 0), rgba(0, 0, 0, .84));
+        border-radius: inherit;
+      }
+    }
+  }
+
+  .symbol__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.475rem;
+
+    * {
+      z-index: 1;
+    }
+  }
+}
+

@@ -37,21 +37,13 @@ module.exports = env => ({
       {
         test: /\.(s?)css$/,
         use: [
-          // "style-loader", "css-loader", "postcss-loader",
-          // env === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
-          // {
-          //   loader: "css-loader",
-          //   options: {url: false, importLoaders: 1, sourceMap: true, minimize: true, colormin: false}
-          // }
           env === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {url: false, importLoaders: 1, sourceMap: true, minimize: true, colormin: false}
           },
-          // "postcss-loader",
           "sass-loader"
         ],
-        // include: path.resolve(__dirname, 'src/assets/styles/*.css')
       },
       /*   {
            test: /\.scss$/,

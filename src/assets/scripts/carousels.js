@@ -44,15 +44,24 @@ if ($carousels.length) {
 
 
 if ($slider.length) {
-  $slider.owlCarousel({
-    items: 1,
-    rtl: $(document).attr('dir') === 'rtl',
-    loop: true,
-    nav: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
+  $slider.each(function () {
+    let $this = $(this),
+      loop = $this.data('loop') ? $this.data('loop') === 'true' : false,
+      autoplay = $this.data('autoplay') ? $this.data('autoplay') === 'true' : false,
+      autoplayTimeout = $this.data('timeout') ? Number($this.data('timeout')) : 5000
+
+    $slider.owlCarousel({
+      items: 1,
+      rtl: $(document).attr('dir') === 'rtl',
+      loop,
+      nav: true,
+      autoplay,
+      autoplayTimeout,
+      autoplayHoverPause: true,
+    })
+
   })
+
 }
 
 

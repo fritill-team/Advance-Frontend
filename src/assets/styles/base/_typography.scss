@@ -154,6 +154,7 @@ a {
   font-weight: 400;
   line-height: 1.1;
   color: var(--color-primary);
+  cursor: pointer;
 
   &:hover, &:active {
     color: var(--color-primary);

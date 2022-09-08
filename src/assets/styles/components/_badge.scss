@@ -11,14 +11,24 @@
 }
 
 .badge {
-  border-radius: 15px 5px 15px 5px;
-  font-size: 14px;
+  //border-radius: 15px 5px 15px 5px;
+  border-radius: 6px;
+  padding: 0 8px;
   display: inline-block;
-  font-size: 14px;
   text-align: center;
-  font-weight: 500;
-  padding: 4px 26px;
-  font-weight: 500;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+
+  &.badge--lg {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 0 16px;
+    vertical-align: middle;
+  }
+
 }
 
 @include badge("primary", var(--color-primary));

@@ -1,22 +1,25 @@
 @import "./base/_variables.scss";
 @import "utils/mixins";
+@import "utils/_opacity";
+@import "utils/_utils";
+@import "custom/_bootstrap-override";
 
 @import "./base/_bootstrap-grid-rtl.scss";
 @import "layouts/_normalize.scss";
 @import "layouts/_base";
 @import "./base/_typography";
 
-@import "layouts/_page-content";
+@import "layouts/_page";
 @import "layouts/_header";
 @import "layouts/_footer";
+@import "layouts/drawer";
 
-@import "./components/_tabs.scss";
-@import "./components/_carousels";
+@import "./components/_rich-textarea";
+
 @import "./custom/_tooltipster.scss";
 // TODO CHECK THIS
-@import "./components/_menu-responsive";
+
 @import "./components/_course-list";
-@import "./components/_about-list";
 @import "./components/_course-video";
 @import "./components/_content_list";
 @import "./components/_course-reviews";
@@ -25,53 +28,34 @@
 @import "./components/_review.scss";
 @import "./components/_comments";
 @import "./components/_pagination.scss";
-@import "layouts/drawer";
 @import "./components/category-list";
-@import "./components/_chip";
 
 @import "./components/_list-dropdown";
 @import "./components/_display-card.scss";
-@import "./components/_enroll-card";
 @import "./components/_description-enroll";
 @import "./components/_filter";
-@import "./components/_card";
 @import "./components/exam";
-@import "./components/_label";
-@import "./components/_buttons";
-@import "./components/_card-collapse";
-@import "./components/_media-card";
 @import "./components/_thread";
-@import "./components/_social-icons";
-@import "./components/_tags";
-@import "./components/_info";
+
 @import "./components/_video-player";
 @import "components/_home-sections";
-@import "./components/_single-blog";
-@import "./components/_status";
+
 @import "./components/_iframe-container";
 @import "./components/_assessment";
 @import "./components/_plan";
 
-@import "./components/_courses";
+//@import "./components/_courses";
 @import "./components/_filter-list";
-@import "./components/_banner";
 @import "./components/_service-excerpt";
-@import "./components/_badge";
 
 //TODO Remove this file
 @import "./components/authentication-layout";
 
 // @import "./components/new-inputs";
-@import "./components/inputs";
-@import "./components/_general-wrapper";
-@import "./components/_table";
-@import "./components/_rich-textarea";
 @import "./components/_general-playlist";
 @import "./components/_colleps";
-@import "./components/_dropdown.scss";
 @import "./components/menu-header.scss";
 @import "./components/toggle-sidebar";
-@import "./components/dialog";
 @import "./components/toolbar";
 @import "./components/_bread-crumbs";
 @import "./components/_recommendation.scss";
@@ -82,18 +66,32 @@
 @import "./components/single-course/user-item";
 @import "./components/exam/exam.scss";
 
-@import "./components/_images";
-@import "./components/_list.scss";
-@import "./components/_panel.scss";
 @import "./components/_survey.scss";
 @import "./components/survey-fields";
 @import "./components/loader";
-@import "./components/_data-card";
-@import "./components/_snackbar";
-/* TODO DELETE */
-//@import "./base/_rtl.scss";
-// @import "./base/darg-drop-field.css";
-// @import "./base/style";
 
 // components
-@import "components/_user.scss";
+@import "components/_user.scss"; // TODO Delete or Use
+@import "components/_post.scss";
+@import "./components/_tabs.scss";
+@import "./components/_carousels";
+@import "./components/_chip";
+@import "./components/_snackbar";
+@import "./components/_list.scss";
+@import "./components/_images";
+@import "./components/_table";
+@import "./components/inputs";
+@import "./components/dialog";
+@import "./components/_dropdown.scss";
+@import "./components/_card";
+@import "./components/_badge";
+@import "./components/_banner";
+@import "./components/_buttons";
+@import "./components/_label";
+@import "./components/_symbol";
+@import "./components/_gallery";
+@import "./components/_progress";
+
+
+// pages
+@import "pages/_checkout";

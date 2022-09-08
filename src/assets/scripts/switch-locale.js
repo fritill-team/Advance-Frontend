@@ -22,5 +22,6 @@
       DIR = $this.data('dir')
     $(document).attr('dir', DIR)
     localStorage.setItem('gmtDIR', DIR);
+    location.reload()
   })
 })(window, document);

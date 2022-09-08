@@ -1,5 +1,5 @@
 extends ../../../layouts/site.pug
-include ../../../components/service-excerpt
+include ../../../components/widgets/service-excerpt
 
 block title
   title service-excerpt
@@ -15,3 +15,6 @@ block content
 
     h3 Arabic
     +service-excerpt("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع")
+
+    h3 Inverted
+      +service-excerpt-inverted("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع")

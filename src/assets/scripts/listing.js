@@ -2,7 +2,33 @@ import {openOverlay, closeOverlay} from "./overlay";
 
 let filtersHTML = '',
   filters = $('#filters'),
-  filtersMobile = $('#filters-mobile')
+  filtersMobile = $('#filters-mobile'),
+  filterGroups = $(".filter-list .check-field-group"),
+  filterLabels = $(".filter-list .field-wrapper__label"),
+  scrollOptions = {
+    autohidemode: false,
+    horizrailenabled: false,
+    railalign: localStorage.getItem('gmtDIR') === 'rtl' ? 'left' : 'right',
+    rtlmode: localStorage.getItem('gmtDIR') === 'rtl',
+    cursorcolor: "#0D9BBD"
+  }
+
+
+filterGroups.niceScroll(scrollOptions)
+
+filterLabels.on('click', function () {
+  let $this = $(this),
+    $wrapper = $this.closest('.field-wrapper'),
+    $checkFieldGroup = $wrapper.find('.check-field-group')
+
+  if ($wrapper.hasClass('field-wrapper--collapsed')) {
+    $wrapper.removeClass('field-wrapper--collapsed')
+    $checkFieldGroup.niceScroll(scrollOptions)
+  } else {
+    $wrapper.addClass('field-wrapper--collapsed')
+    $checkFieldGroup.getNiceScroll().remove()
+  }
+})
 
 const swapFilters = function () {
   if (window.innerWidth <= 768) {
@@ -41,13 +67,6 @@ $(".switch-view").on('click', function () {
   })
 })
 
-$('.filter-panel__content').niceScroll({
-  autohidemode: false,
-  horizrailenabled: false,
-  railalign: document.dir === 'rtl' ? 'left' : 'right',
-  rtlmode: document.dir === 'rtl',
-  cursorcolor: "#0D9BBD"
-})
 
 $('.filters-toggle').on('click', function () {
   filtersMobile.addClass('listing-filters--active')

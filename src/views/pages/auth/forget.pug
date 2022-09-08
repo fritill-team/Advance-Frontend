@@ -1,0 +1,28 @@
+extends ../../layouts/auth.pug
+block title
+	title forget
+block content
+	h5.semi-bold.text--center Request a Password Reset
+	form.form
+		.field-wrapper
+			label.field-wrapper__label
+			.field-wrapper__content
+				input(
+					class="field field--with-icon"
+					type='email'
+					placeholder='Email Address'
+					name='email address'
+					maxlength=''
+					value=''
+					)
+				span.material-icons.field-wrapper__icon mail_outline
+			//- ul.field-wrapper__messages
+				li Please provide a valid city.
+		button(class="btn btn--primary btn--ripple btn--block" type="submit")  Reset password
+		//- .d-flex.justify-content-around
+			button(class="btn btn--primary btn--ripple btn--rounded" type="submit")  Reset Password
+	p Go Back
+		a(href="login.html" class="text-3") Sign In
+
+
+

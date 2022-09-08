@@ -1,0 +1,20 @@
+mixin gallery-item(src, group="g-1")
+  .gallery__item
+    a(href=src data-lightbox=group data-title="My caption")
+      img(src=src alt='Mountain reflection on lake')
+
+mixin gallery(title)
+  .gallery
+    h4.gallery__title= title
+    .gallery__content
+      +gallery-item('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250')
+      +gallery-item('https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+      +gallery-item('https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+
+
+

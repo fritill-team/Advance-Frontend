@@ -10,6 +10,7 @@ import './display-card'
 
 import './snackbar'
 import './tabs.js'
+import './collapse.js'
 import './survey.js'
 import './ripple.js'
 import './select2'
@@ -32,16 +33,13 @@ import './drag-drop-multifield'
 import './backend_scripts/panel-loader'
 import './multi-select'
 
-// import "./recommendationTemplate"
-// import './resourceBuilder'
-// import './content-height'
+
 import './overlay'
 import './listing'
 import './dialog'
 import './scrollbars'
 import './login.js'
 
-// import './handleDarkMode'
 
 
 

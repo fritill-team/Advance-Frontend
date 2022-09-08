@@ -1,0 +1,29 @@
+mixin chip-icon(link=false, color='primary')
+  - var colorClass = "chip--" + color
+  if link
+    a(href="#", class="chip " + colorClass)
+  else
+    div(class="chip " + colorClass)
+      .chip__lead
+        i.material-icons tag
+      p.chip__content tag name
+
+mixin chip-image(link=false, color='primary')
+  - var colorClass = "chip--" + color
+  if link
+    a(href="#", class="chip " + colorClass)
+  else
+      .chip__lead
+        img(src="../../assets/images/profile.jpg")
+      p.chip__content tag name 2
+
+//.chip.chip--primary
+//  .chip__lead
+//    i.material-icons tag
+//  p.chip__content tag name 2
+//.chip.chip--primary
+//  p.chip__content tag name 3
+//.chip.chip--primary.chip--outlined
+//  .chip__lead
+//    i.material-icons tag
+//  p.chip__content tag name 2

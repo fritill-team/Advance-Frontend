@@ -1,0 +1,128 @@
+- var withLabel = ' card--with-label'
+- var dragging = ' card--dragging'
+- var active = 'card--active'
+
+mixin card(modifier)
+  div.card(class=modifier)
+    .card__header
+      block header
+    .card__content
+      block content
+    .card__footer
+      block footer
+
+
+mixin assessment-card(modifier)
+  div.card(class=modifier)
+    if modifier === withLabel || dragging + withLabel || active + withLabel
+      .card__label
+        div.card__label-inner
+          p section 1 of 3
+        div.body-2.card__label-outer
+          p after section 1
+          .dropdown.dropdown__activator
+            button.btn.btn--text.dropdown--btn
+              | next
+              i.fas.fa-chevron-down
+            .dropdown__content
+              a.content__link(href="#") lorem 1
+              a.content__link(href="#") lorem 2
+              a.content__link(href="#") lorem 3
+      .card--drag-vertical
+        i.fas.fa-grip-vertical
+    block
+    .card__header
+      block header
+    .card__content
+      block content
+    .card__footer
+      block footer
+
+
+mixin default-card()
+  .card
+    .card__header
+      h4.card__title This is a card title
+      .card__header-actions
+        button.btn.btn--primary.btn--icon
+          i.fa.fa-check
+    .card__content
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
+        | distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
+    .card__footer
+      .card__footer-actions
+        .card__header-actions
+          button.btn.btn--primary finish
+
+
+mixin side-col-card()
+  .card.card--side-col
+    .card__side-col
+      img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
+    .card__inner
+      .card__header
+        h4.card__title This is a card title
+        .card__header-actions
+          button.btn.btn--primary.btn--icon
+            i.fa.fa-check
+      .card__content
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
+          | distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
+      .card__footer
+        .card__footer-actions
+          .card__header-actions
+            button.btn.btn--primary finish
+
+mixin author-card()
+  .card.card--centered
+    .card__content
+      img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
+      a(href="#" class="text-center") Jose Portilla
+        i.far.fa-check-circle.pl-1
+      p.text-center.text-gray Web Developer, Designer, and Teacher Jose
+
+
+mixin card-group()
+  .card-group
+    .card.card--transparent
+      .card__header
+        a(href="javascript:void(0);" class="bold") Lorem ipsum dolor sit amet consectetur adipisici?
+      .card__content.p-0
+        p.body-2
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ex hic laboriosam magnam mollitia
+          | odio tempora. Aliquam assumenda deleniti enim eum fugit hic incidunt. Hic mollitia nam
+          | quasi quibusdam unde.
+        .d-flex.justify-content-between
+          div
+            a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
+            a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
+          .card__header-multiline
+            a(href='#' class="body-2 primary bold")
+              | Jose Portilla
+              i.fa.fa-check-circle.ml-1
+            time.overline.gray Jan 15 &apos;18 at 13:56
+
+    .card.card--transparent
+      .card__header
+        a(href="javascript:void(0);" class="bold") Lorem ipsum dolor sit amet consectetur adipisici?
+      .card__content.p-0
+        p.body-2
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ex hic laboriosam magnam mollitia
+          | odio tempora. Aliquam assumenda deleniti enim eum fugit hic incidunt. Hic mollitia nam
+          | quasi quibusdam unde.
+        .d-flex.justify-content-between
+          div
+            a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
+            a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
+          .card__header-multiline
+            a(href='#' class="body-2 primary bold")
+              | Jose Portilla
+              i.fa.fa-check-circle.ml-1
+            time.overline.gray Jan 15 &apos;18 at 13:56
+
+
+
+    .card-group__loader
+      a(href='javascript:void(0);' class="body-2 gray bold") See More Reviews

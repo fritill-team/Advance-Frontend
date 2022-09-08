@@ -1,0 +1,98 @@
+extends ../layouts/admin
+
+
+
+block title
+  title single blog
+
+block content
+  include ../components/widgets/chips
+  include ../components/widgets/cards
+  include ../components/widgets/lists
+
+
+  .page__cover
+    img(src="../../assets/images/hero_bg.jpg")
+    .container.my-auto
+      .row
+        .col-8.offset-2
+          h1.text-center.text-white.text-weight-700 Lorem ipsum dolor sit amet.
+          .d-flex.justify-content-between.text-center.flex-column.flex-md-row
+            p.text-white
+              | Author
+              | !{' '}
+              a.text-white Sohyper
+
+            p.text-white
+              | In
+              | !{' '}
+              a.text-white Autsim
+            p.text-white يوليو 13, 2022, 7:28 ص
+
+  .container
+    .post
+      .row
+        .col-12.col-md-8
+          .post__cover
+            img(src="../../assets/images/hero_bg.jpg")
+          p.post__excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, doloremque facilis fugit id inventore labore libero odit, quasi ratione repudiandae ullam. Aperiam asperiores aspernatur cum cupiditate ipsam laboriosam optio?
+
+          .mb-5
+            h1
+              strong Five things I wish I knew before I switched to the Apple Ecosystem.
+            p
+              | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
+              | year. There are definitely many positives in the switch, but there are some things I wish I had known.
+            p Photo by Tianyi Ma on Unsplash
+            h2
+              em 1. Not all devices play as nicely together.
+            p
+              | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
+              | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
+              | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
+              | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
+              | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
+              | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
+              | issues, but a few just handle things differently.
+
+          .d-flex.mt-auto.mb-3
+            +chip-icon
+            +chip-icon
+            +chip-icon
+            +chip-icon
+
+
+
+          .divider
+
+          //include ../components/comments
+
+
+
+        .col-12.col-md-4
+          +author-card
+          .card
+            .card__header
+              h4.card__title Related Articles
+            .card__content.p-0
+              +list
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص

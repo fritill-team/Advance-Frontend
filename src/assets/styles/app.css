@@ -6595,7 +6595,7 @@ html[dir="rtl"] .course-card .course-card__card-media .card-media__card-content 
   margin-bottom: 15px;
 }
 
-.card.card--icon .user-image .card--user-icon {
+.card.card--icon .user-image  {
   font-size: 35px;
   left: 8px;
   bottom: -30px;
@@ -6607,15 +6607,15 @@ html[dir="rtl"] .course-card .course-card__card-media .card-media__card-content 
   height: 100%;
 }
 
-.card.card--user .details {
+.card .details {
   margin-top: 0;
 }
 
-.card.card--user .card--centered .card--centered {
+.card .card--centered .card--centered {
   font-size: 18px;
 }
 
-.card.card--user .card__content {
+.card .card__content {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -6623,7 +6623,7 @@ html[dir="rtl"] .course-card .course-card__card-media .card-media__card-content 
 
 
 
-.card.card--user .social-icon {
+.card .social-icon {
   margin-bottom: 10px;
 }
 

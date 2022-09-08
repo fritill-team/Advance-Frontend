@@ -1,0 +1,308 @@
+extends ../layouts/admin.pug
+
+
+block title
+  title Course
+
+block content
+  include ../components/widgets/chips
+  include ../components/widgets/cards
+  include ../components/widgets/lists
+
+
+  .page__cover
+    img(src="../../assets/images/hero_bg.jpg")
+    .container.mt-auto
+      .row.align-items-end
+        .col-8
+          h1.text-white.text-weight-700
+            | Lorem ipsum dolor sit amet.
+            span.badge.badge--danger.badge--lg.mx-3 Live
+          p.subtitle-1.text-white.mt-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto assumenda atque dolore, exercitationem fugiat maxime modi odit possimus velit?
+
+          p.text-white.mt-5
+            | In
+            | !{' '}
+            a.text-white.m-0 Autism
+
+          .d-flex.justify-content-start.align-items-center
+            .rate-display(data-rate="3")
+            span.badge.badge--primary.mx-2 5.00
+            span.text-white.body-2.my-0.mx-1 (1 Rating)
+
+          p.text-white
+            | Author
+            | !{' '}
+            a.text-white Sohyper
+
+
+  .container
+    .post
+      .row
+        .col-12.col-md-8
+          .tabs
+            a(href="#tab1" class="tab tab--active ") Overview
+            a(href="#tab2" class="tab") Content
+            a(href="#tab3" class="tab") Reviews
+          .tabs-panels
+            #tab1.tab-panel.tab-panel--active
+              .mb-5
+                h1
+                  strong Five things I wish I knew before I switched to the Apple Ecosystem.
+                p
+                  | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
+                  | year. There are definitely many positives in the switch, but there are some things I wish I had known.
+                p Photo by Tianyi Ma on Unsplash
+                h2
+                  em 1. Not all devices play as nicely together.
+                p
+                  | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
+                  | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
+                  | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
+                  | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
+                  | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
+                  | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
+                  | issues, but a few just handle things differently.
+
+              .d-flex.mt-auto.mb-3
+                +chip-icon
+                +chip-icon
+                +chip-icon
+                +chip-icon
+
+              .divider
+
+
+            #tab2.tab-panel
+              .card
+                .card__header
+                  p.m-0 Chapter 1
+                  .card__header-actions
+                    button.btn.btn--icon.btn--primary.btn--text(data-toggle="collapse" data-target="#chapter-1" role="button" aria-expanded="false" aria-controls="chapter-1")
+                      i.material-icons expand_more
+                .collapse.mt-3#chapter-1
+                  .card__content
+                    .card
+                      .card__header
+                        p.m-0 Content 1
+                        .card__header-actions
+                          button.btn.btn--icon.btn--primary.btn--text(data-toggle="collapse" data-target="#content-1" role="button" aria-expanded="false" aria-controls="content-1")
+                            i.material-icons expand_more
+                      .collapse.mt-3#content-1
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad dicta enim error eveniet in magnam maxime numquam odio quasi, qui repudiandae similique vitae! Fugit hic incidunt nisi omnis quod?
+                        .d-flex.justify-content-between.align-items-center
+                          div.d-flex
+                            .post__content-label
+                              i.material-icons play_arrow
+                              span.post__content-label-text Video
+                            .post__content-label
+                              i.material-icons timer
+                              span.post__content-label-text 1h 30m
+
+                          a(href="#" class="btn btn--disabled") Finished
+
+                    .card
+                      .card__header
+                        p.m-0 Content 1
+                        .card__header-actions
+                          button.btn.btn--icon.btn--primary.btn--text(data-toggle="collapse" data-target="#content-2" role="button" aria-expanded="false" aria-controls="content-2")
+                            i.material-icons expand_more
+                      .collapse.mt-3#content-2
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad dicta enim error eveniet in magnam maxime numquam odio quasi, qui repudiandae similique vitae! Fugit hic incidunt nisi omnis quod?
+                        .d-flex.justify-content-between.align-items-center
+                          div.d-flex
+                            .post__content-label
+                              i.material-icons play_arrow
+                              span.post__content-label-text Video
+                            .post__content-label
+                              i.material-icons timer
+                              span.post__content-label-text 1h 30m
+
+                          a(href="#" class="btn btn--disabled") Finished
+
+            #tab3.tab-panel
+
+
+
+
+
+          //include ../components/comments
+
+
+
+        .col-12.col-md-4
+          .card.card--centered.post__content-card
+            .post__content-card-cover
+              img(src="../../assets/images/thumbnails/video-blog.png" class="post__content-card-cover-img")
+              a(href="../../assets/images/thumbnails/video-blog.png" class="btn btn--xl btn--icon btn--white-primary" data-lightbox='group' data-title="My caption")
+                i.material-icons.text-primary play_arrow
+            .card__content
+              .post__content-card-price 50 L.E.
+
+              a.btn.btn--block.btn--lg.btn--primary(href="/checkout.html") Subscribe Now
+
+              p.text-primary.align-self-start.mt-4.text-weight-600 This Course Includes
+              .row
+                .col-12.col-md-6
+                  p.text-gray.text-weight-600.text-left Duration
+                .col-12.col-md-6
+                  p.text-gray.text-left 52h 20m
+
+                .col-12.col-md-6
+                  p.text-gray.text-weight-600.text-left Live Classes
+                .col-12.col-md-6
+                  p.text-gray.text-left 4
+
+                .col-12.col-md-6
+                  p.text-gray.text-weight-600.text-left Video Lessons
+                .col-12.col-md-6
+                  p.text-gray.text-left 20
+
+                .col-12.col-md-6
+                  p.text-gray.text-weight-600.text-left Exams
+                .col-12.col-md-6
+                  p.text-gray.text-left 3
+
+                .col-12.col-md-6
+                  p.text-gray.text-weight-600.text-left Exams
+                .col-12.col-md-6
+                  p.text-gray.text-left 3
+
+
+
+
+
+
+          +author-card
+          .card
+            .card__header
+              h4.card__title Related Articles
+            .card__content.p-0
+              +list
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+
+
+
+
+  //section(class="course-video ")
+  //  .video__wrapper
+  //    .video--youtube
+  //      iframe(width='560' height='315' src='https://www.youtube.com/embed/f54g9F05ld8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+  //    .course-video__bg
+  //      img(src="../../assets/images/get_img.jpg", alt="", srcset="")
+  //  .container
+  //    .row
+  //      .col-md-6
+  //        //start video content
+  //        .video-content
+  //          h2.mt-0.white.mb-2 The Web Developer Bootcamp
+  //          .video-content__details
+  //            span.white
+  //              | The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+  //            .video-content__review
+  //              .video-content__wrapper-icon
+  //                i.far.fa-star.wrapper-icon__icon
+  //                | 4.5
+  //              | (81,665 ratings)
+  //            p.white.mt-0
+  //              | 114,521 students enrolled
+  //            .video-content__language
+  //              .language__lang
+  //                span.white.mt-0
+  //                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mx-1
+  //                  | English
+  //              .language__more-lang
+  //                span.white.mt-0
+  //                  i.far.fa-closed-captioning.icons__fa.d-inline-block.mx-1
+  //                span.more-lang__tooltip
+  //                  | English, Dutch
+  //                  span.tooltip__caption-tooltip
+  //                    | 12 more
+  //                    span.tooltip__caption-content
+  //                      span.caption-content__lang-item French
+  //                      span.caption-content__lang-item Hindi
+  //                      span.caption-content__lang-item German [Auto-generated]
+  //                      span.caption-content__lang-item Indonesian [Auto-generated]
+  //                      span.caption-content__lang-item Italian [Auto-generated]
+  //                      span.caption-content__lang-item Japanese [Auto-generated]
+  //                      span.caption-content__lang-item Korean
+  //                      span.caption-content__lang-item Polish
+  //                      span.caption-content__lang-item Portuguese [Auto-generated]
+  //                      span.caption-content__lang-item Spanish [Auto-generated]
+  //                      span.caption-content__lang-item Traditional Chinese
+  //                      span.caption-content__lang-item Turkish [Auto-generated]
+  //            .video-content__last-update
+  //              | Last updated 1/2020
+  //            //- li.btn-list__list-item
+  //            //-   button.list-item--btn-Enrole-childe Enrol Chiled
+  //            p.white
+  //              | 30-Day Money-Back Guarantee
+  //          ul.video-content__btn-list
+  //            li
+  //              include ../components/general-component/btn.pug
+  //              +btn-link('btn btn--info btn--rounded btn--lg', 'Enroll' , "#")
+  //              +btn-link('btn btn--lg btn--white btn--outlined btn--rounded', 'Buy Now' ,"#")
+  //
+  //      .col-md-6.d-flex.align-items-end.justify-content-end
+  //        button(type="button" class="btn btn--player btn--lg btn--double-line")
+  //          img(src="../../assets/images/replay.svg" alt="player toggle")
+  //
+  //          //- i.fas.fa-play
+  //section
+  //  .container
+  //    .row
+  //      .col-lg-8
+  //
+  //
+  //        .tabs-panels
+  //          #tab1.tab-panel.tab-panel--active
+  //
+  //
+  //          #tab2.tab-panel
+  //            h1 content HERe
+  //          #tab3.tab-panel
+  //            .card.card--side-col.form-review
+  //              .card__side-col
+  //                img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile author")
+  //              .card__content
+  //                form(action='' method='post')
+  //                  .field-wrapper.field-wrapper--full
+  //                    label.field-wrapper__label username
+  //                    .field-wrapper__content
+  //                      input.field(type='text' placeholder='Insert your review.' name='review' value='review')
+  //                  .field-wrapper
+  //                    .field-wrapper__content
+  //                      .rate-input
+  //                      input.rate-input-form(type='hidden' value='3.0' name='rate')
+  //                  .form-actions
+  //                    button.btn.btn--primary.btn--text(type='reset') Cancel
+  //                    button.btn.btn--primary.btn--rounded Save
+  //            .panel
+  //              include ../components/review-item.pug
+  //
+  //      .col-lg-4
+  //        include ../components/review.pug
+  //
+
+
+
+

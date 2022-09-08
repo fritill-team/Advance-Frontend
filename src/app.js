@@ -10,6 +10,7 @@ import "./assets/vendor/jquery-ui.min.js"
 import "./assets/vendor/nicescroll/jquery.nicescroll"
 import './assets/vendor/tooltipster.bundle.min'
 import "./assets/vendor/popper.min.js"
+import "./assets/vendor/lightbox.min.css"
 import "./assets/vendor/lightbox.min.js"
 import "./assets/vendor/star/jquery.star-rating-svg"
 import "./assets/vendor/venobox.min.js"

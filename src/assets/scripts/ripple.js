@@ -1,4 +1,4 @@
-$(document).on("click", ".btn, a.label, .tab, a.list-item, .snackbar__action", function (evt) {
+$(document).on("click", ".btn, a.label, .tab, a.list-item, .snackbar__action, .ripple", function (evt) {
   let targetElement = $(evt.currentTarget);
   let x = evt.pageX - targetElement.offset().left;
   let y = evt.pageY - targetElement.offset().top;

@@ -6,6 +6,10 @@
 
   .home-main-slider {
     min-height: calc(60vh - var(--header-height, 60px));
+
+    .slide {
+      padding: 54px 0;
+    }
   }
 
   &:first-child {

@@ -1,68 +1,27 @@
 extends ../../../layouts/site.pug
+
+
 block title
   title cards
 
 block content
+  include ../../../components/widgets/cards
+
   .container
+    h1 Cards
     .row
-      //- .col-12
-        .details-card
-          .details-card__header
-            p.body-2 published at ....
-            h2 Blog title here
-            p.body-1 category here
-          .details-card__media
-            img(src="../../assets/images/hero_bg.jpg", alt="")
-          .details-card__content
-            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-            p.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloremque ab ipsa assumenda labore laborum accusamus quis! Sed, eaque, atque at sapiente ipsa cumque explicabo harum quidem nobis possimus aliquam.
-
-
-      // default card start
       .col-md-6
-        section.px-3.py-3
-          h2 Default Card
-          p
-            | we use
-            code .card
-          .card
-            .card__header
-              p.subtitle-1 This is a card title
-              .card__tools
-                button.btn.btn--primary.btn--icon
-                  i.fa.fa-check
+        +default-card
 
-            .card__content
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
-                | distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
-            .card__footer
-              .card__footer-actions
-                div test
-      // default card end
-
-      //- card side-col start
       .col-md-6
-        section.px-3.py-3
-          //- h2 Side Column Card
-          p
-            | we use
-            code .card.card--side-col>.card__side-col+.card__content>.card__header
-          .card.card--side-col
-            .card__side-col
-              img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
-            .card__content
-              .card__header
-                p This is a card title
-                .card__tools
-                  button.btn.btn--primary.btn--icon
-                    i.fa.fa-check
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium commodi deserunt,
-                | distinctio eos exercitationem fugit hic, itaque nisi quisquam ullam vero! Cumque ducimus eum fuga nesciunt nulla porro?
-      //- card side-col end
+        +side-col-card
+
+      .col-md-6
+        +author-card
+
+      .col-md-6
+        +card-group
+
     .row
       .col-md-6
         section.px-3.py-
@@ -71,46 +30,46 @@ block content
               | we use
               code .card
         include ../../../components/thread-question-card
-        //.card.card--side-col
-        //  .card__side-col
-        //    img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
-        //  .card__content
-        //    .card__header
-        //      .card__header-multiline.card__header-2-lines
-        //        a(href='#' class="primary bold")
-        //          | Jose Portilla
-        //          i.fa.fa-check-circle.ml-1
-        //        time.subtitle-2.gray Jan 15 &apos;18 at 13:56
-        //        //.item__rating-box
-        //        //  span.rating-box__rating-star.rating-box--full-star
-        //        //  span.rating-box__rating-star.rating-box--full-star
-        //        //  span.rating-box__rating-star.rating-box--half-star
-        //        //  span.rating-box__rating-star.rating-box--empty-star
-        //        //  span.rating-box__rating-star.rating-box--empty-star
-        //      .card__tools
-        //        include ../../../components/list-dropdown.pug
-        //        +dropdown
-        //          i.fas.fa-ellipsis-h
-        //    div.card-text
-        //      h1
-        //        strong Five things I wish I knew before I switched to the Apple Ecosystem.
-        //      p
-        //        | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
-        //        | year. There are definitely many positives in the switch, but there are some things I wish I had known.
-        //      p Photo by Tianyi Ma on Unsplash
-        //      h2
-        //        em 1. Not all devices play as nicely together.
-        //      p
-        //        | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
-        //        | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
-        //        | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
-        //        | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
-        //        | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
-        //        | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
-        //        | issues, but a few just handle things differently.
-        //    .tags
-        //      .tags__item #Development
-        //      .tags__item #Development
+        .card.card--side-col
+          .card__side-col
+            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
+          .card__content
+            .card__header
+              .card__header-multiline.card__header-2-lines
+                a(href='#' class="primary bold")
+                  | Jose Portilla
+                  i.fa.fa-check-circle.ml-1
+                time.subtitle-2.gray Jan 15 &apos;18 at 13:56
+                //.item__rating-box
+                //  span.rating-box__rating-star.rating-box--full-star
+                //  span.rating-box__rating-star.rating-box--full-star
+                //  span.rating-box__rating-star.rating-box--half-star
+                //  span.rating-box__rating-star.rating-box--empty-star
+                //  span.rating-box__rating-star.rating-box--empty-star
+              .card__tools
+                include ../../../components/list-dropdown.pug
+                +dropdown
+                  i.fas.fa-ellipsis-h
+            div.card-text
+              h2
+                strong Five things I wish I knew before I switched to the Apple Ecosystem.
+              p
+                | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
+                | year. There are definitely many positives in the switch, but there are some things I wish I had known.
+              p Photo by Tianyi Ma on Unsplash
+              h2
+                em 1. Not all devices play as nicely together.
+              p
+                | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
+                | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
+                | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
+                | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
+                | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
+                | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
+                | issues, but a few just handle things differently.
+            .tags
+              .tags__item #Development
+              .tags__item #Development
       .col-md-6
         h2.my-3 Review
           p.mb-1
@@ -430,10 +389,7 @@ block content
                 p.white
                   span
                   | Live
-    .col-12
-      h2.my-3 Data card
-    .col-12
-      include ../../../components/data-card.pug
+
     //- welcom card
     //- .col-12
     //- 	.card.card--welcome
@@ -665,7 +621,7 @@ block content
     //  .card.card--centered.card--icon
     //    .card__content
     //      .user-image
-    //        i.uil.uil-history.card--user-icon
+    //        i.uil.uil-history
     //      .card__body
     //        .card__content-header
     //          .user-data
@@ -716,9 +672,9 @@ block content
     //  h2.my-3 Card with centered components user
     //  p.mb-1
     //    | we use
-    //    code .card--centered .card--user
+    //    code .card--centered
     //.col-lg-3
-    //  .card.card--centered.card--user
+    //  .card.card--centered
     //    .card__content
     //      .user-image
     //        img(src="../../assets/images/hd_dp.jpg" alt="")
@@ -859,53 +815,8 @@ block content
               .card__content--details
                 a(class="btn btn--secondary btn--text" href="#") Jose Portilla
                 time.text-3.gray Jan 15 '18 at 13:56
-    .row
-      .col-md-8
-        h2.my-3 Thread Listing
-          p.mb-1
-            | we use
-            code .card
-        .panel
-          .card.card--transparent
-            .card__header
-              a(href="javascript:void(0);" class="bold") Lorem ipsum dolor sit amet consectetur adipisici?
-            .card__content.p-0
-              p.body-2
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ex hic laboriosam magnam mollitia
-                | odio tempora. Aliquam assumenda deleniti enim eum fugit hic incidunt. Hic mollitia nam
-                | quasi quibusdam unde.
-              .d-flex.justify-content-between
-                div
-                  a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
-                  a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
-                .card__header-multiline
-                  a(href='#' class="body-2 primary bold")
-                    | Jose Portilla
-                    i.fa.fa-check-circle.ml-1
-                  time.overline.gray Jan 15 &apos;18 at 13:56
-
-          .card.card--transparent
-            .card__header
-              a(href="javascript:void(0);" class="bold") Lorem ipsum dolor sit amet consectetur adipisici?
-            .card__content.p-0
-              p.body-2
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ex hic laboriosam magnam mollitia
-                | odio tempora. Aliquam assumenda deleniti enim eum fugit hic incidunt. Hic mollitia nam
-                | quasi quibusdam unde.
-              .d-flex.justify-content-between
-                div
-                  a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
-                  a(href="javascript:void(0);" class="subtitle-2") #Lorem_ipsum
-                .card__header-multiline
-                  a(href='#' class="body-2 primary bold")
-                    | Jose Portilla
-                    i.fa.fa-check-circle.ml-1
-                  time.overline.gray Jan 15 &apos;18 at 13:56
 
 
-
-          .panel__loader
-            a(href='javascript:void(0);' class="body-2 gray bold") See More Reviews
       //- .col-6
         .card.card--show-on-hover
           .card__content

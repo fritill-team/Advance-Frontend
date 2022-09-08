@@ -1,0 +1,110 @@
+extends ../layouts/admin
+
+
+
+block title
+  title Single Event
+
+block content
+  include ../components/widgets/chips
+  include ../components/widgets/cards
+  include ../components/widgets/lists
+  include ../components/widgets/gallery
+
+
+  .page__cover
+    img(src="../../assets/images/hero_bg.jpg")
+    .container.mt-auto
+      .row.align-items-end
+        .col-12.col-md-8
+          h1.text-white.text-weight-700 Lorem ipsum dolor sit amet.
+          p.text-white
+            | Author
+            | !{' '}
+            a.text-white Sohyper
+
+          p.text-white
+            | In
+            | !{' '}
+            a.text-white Autsim
+          p.text-white يوليو 13, 2022, 7:28 ص
+        .col-12.col-md-4
+          .mb-5
+            button.btn.btn--primary.btn--lg.btn--rounded Join Event
+
+  .container
+    .post
+      .row
+        .col-12.col-md-8
+          .post__cover
+            img(src="../../assets/images/hero_bg.jpg")
+          p.post__excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, doloremque facilis fugit id inventore labore libero odit, quasi ratione repudiandae ullam. Aperiam asperiores aspernatur cum cupiditate ipsam laboriosam optio?
+
+          .mb-5
+            h1
+              strong Five things I wish I knew before I switched to the Apple Ecosystem.
+            p
+              | I made the switch from Samsung to Apple in late 2019, I, also, made the switch from Windows to Mac earlier this
+              | year. There are definitely many positives in the switch, but there are some things I wish I had known.
+            p Photo by Tianyi Ma on Unsplash
+            h2
+              em 1. Not all devices play as nicely together.
+            p
+              | Bluetooth works in most situations, regardless of what phone you use. Earbuds pair, watches still pass some data,
+              | but some devices just don&rsquo;t play as nicely. For example, I have a smart in-window air conditioner. While still
+              | on Android, I had no issues pairing, updating, or controlling it, it just works. When I switched to iOS, I was going
+              | through and pair all my smart devices, this air conditioner though it supports HomeKit has issues. Frequent
+              | communication drops, updating just doesn&rsquo;t work, and while the control scheme is much nicer in the Home app on
+              | iPhone, the communication drops make it impractical. This is an isolated issue, 90% of my devices paired up with no
+              | issues, but a few just handle things differently.
+
+          .d-flex.mt-auto.mb-3
+            +chip-icon
+            +chip-icon
+            +chip-icon
+            +chip-icon
+
+
+
+          .divider
+
+          //include ../components/comments
+
+
+
+        .col-12.col-md-4
+          .card
+            .card__header
+              h4.card__title Location
+            .card__content.p-0
+              .post__map
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13820.185249524491!2d31.296966849999993!3d30.00682655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458393ad1b50475%3A0x94390f5c7781c459!2sBazooka%20Fried%20Chicken!5e0!3m2!1sen!2seg!4v1657884627458!5m2!1sen!2seg' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+
+          +author-card
+          .card
+            .card__header
+              h4.card__title Related Articles
+            .card__content.p-0
+              +list
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+                .divider
+                .list-item.list-item--two-lines
+                  div(class="symbol symbol--75px")
+                    div(style="background-image: url('../../assets/images/hero_bg.jpg')" class="symbol__label")
+                  .list-item__content
+                    a(href='./details-blog.html' class="text-primary") Lorem ipsum dolor sit amet, consectetur.
+                    p يوليو 13, 2022, 7:28 ص
+          +gallery("Event Photos")

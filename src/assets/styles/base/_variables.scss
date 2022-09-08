@@ -26,7 +26,8 @@
   --color-disabled: #a8a8a8;
   --RGB-color-disabled: 168, 168, 168;
   --box-shadow: 0 4px 12px 0 rgba(var(--RGB-color-gray), 0.2);
-  --light: #f4f4f4;
+  --color-light: #f4f4f4;
+  --RGB-color-light: 244, 244, 244;
 }
 
 [data-theme="dark"] {
@@ -56,7 +57,8 @@
   --RGB-color-warning: 240, 78, 41;
   --color-disabled: #a8a8a8;
   --RGB-color-disabled: 168, 168, 168;
-  --light: #55656e;
+  --color-light: #55656e;
+  --RGB-color-light: 85, 101, 110;
 }
 
 $default: #d3d9e1;

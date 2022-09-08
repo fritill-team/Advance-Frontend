@@ -1,0 +1,46 @@
+mixin checkfield(type, label, id, name)
+  .check-field
+    .check-field__control
+      input(class="check-field__input" type=type id=id name=name)
+      label(for=id)
+      span
+    if label
+      label(class="check-field__label" for=id)= label
+
+
+mixin checkbox(label, id, name)
+  +checkfield("checkbox", label, id, name)
+
+mixin radio(label, id, name)
+  +checkfield("radio", label, id, name)
+
+
+mixin checkfield-group(type, name, values, horizonal=false)
+  - var fieldWrapperClass = "check-field-group"
+  if horizonal
+    - fieldWrapperClass += " check-field-group--horizontal"
+
+  div(class=fieldWrapperClass)
+    each val in values
+      if type === 'checkbox'
+        +checkbox(val, val, name)
+      else if type === 'radio'
+        +radio(val, val, name)
+
+
+mixin group-check-field-wrapper(type, label, id, name, values, horizonal=false)
+  .field-wrapper
+    label(class="field-wrapper__label" for=id)= label
+    +checkfield-group(type, name, values, horizonal)
+
+mixin check-field-wrapper(type, label, id, name)
+  .field-wrapper
+    label(class="field-wrapper__label" for=id)= label
+    .field-wrapper__content
+      if type === 'checkbox'
+        +checkbox(label, id, name)
+      else if type === 'radio'
+        +radio(label, id, name)
+
+mixin switch()
+  .field-wrapper

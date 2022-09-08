@@ -1,0 +1,20 @@
+mixin list(modifier='')
+  div(class='list ' + modifier)
+    block
+
+
+mixin list-item()
+  .list-item
+    block avatar
+    block icon
+    .list-item__content
+      block
+    block action
+
+mixin list-item-avatar(src, symbolSize='50')
+  .list-item
+    div(class="symbol symbol--"+ symbolSize +"px")
+      div(style="background-image: url(" + src + ")" class="symbol__label")
+    .list-item__content
+      block
+

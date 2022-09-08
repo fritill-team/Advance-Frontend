@@ -15,3 +15,25 @@ mixin home-main-slider
     +home-slide('../../assets/images/heroSliders/2.svg')
     +home-slide('../../assets/images/heroSliders/3.svg')
     +home-slide('../../assets/images/heroSliders/4.svg')
+
+
+mixin iframe-slide()
+  .slide
+    .slide__content
+      .slide__image
+        iframe(width='560' height='315' src='https://www.youtube.com/embed/p5M1sWA0J0Y' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+
+mixin video-slide()
+  .slide
+    .slide__content
+      .slide__image
+        iframe(src='https://www.youtube.com/embed/p5M1sWA0J0Y' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+
+mixin videos-slider()
+  .slider.owl-carousel
+    +video-slide
+    +iframe-slide
+    +video-slide
+    +iframe-slide

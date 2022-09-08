@@ -62,7 +62,6 @@
 .slide {
   position: relative;
   height: 100%;
-  padding: 54px 0;
 
   .slide__background {
     position: absolute;
@@ -83,13 +82,37 @@
   }
 
   .slide__image {
+    position: relative;
     width: 100%;
     height: 100%;
     flex: 1 0 40%;
+    border-radius: 16px;
+
+
+    //&:after{
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  height: 100%;
+    //  width: 100%;
+    //  background-color: var(--color-light);
+    //  opacity: 0.4;
+    //  border-radius: inherit;
+    //  z-index: -1;
+    //}
 
     img {
       object-fit: contain;
       object-position: 50% 50%;
+    }
+
+    video,
+    .iframe-parent-class,
+    iframe {
+      border-radius: 16px;
+      width: 100% !important;
+      height: 100% !important;
     }
   }
 
