@@ -7,7 +7,16 @@ include ./components/widgets/service-excerpt
 block title
   title My Page - Home
 
+
+block right
+  include components/layout_partials/sidebar
+  +home-sidebar
+
 block content
+  .position-fixed.bottom-100.left-30.z-3
+    button(class="toggle-drawer btn btn--accent btn--icon btn--lg" data-target="#quick-sidebar")
+      i.material-icons-outlined widgets
+
   section.home-section
     .container
       +home-main-slider

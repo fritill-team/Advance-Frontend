@@ -1,8 +1,8 @@
 .list {
-  display: flex;
-  background-color: var(--color-white);
-  flex-flow: column nowrap;
-  padding: 6px 0;
+  //display: flex;
+  //background-color: var(--color-white);
+  //flex-flow: column nowrap;
+  //padding: 6px 0;
 
   &.list--condensed {
     padding: 0;
@@ -19,10 +19,6 @@
         width: 40px;
         height: 40px;
       }
-    }
-
-    .list-item__content {
-      padding: 6px 8px;
     }
 
     .list-item__action {
@@ -65,6 +61,9 @@ a.list-item {
 .list-item {
   display: flex;
   align-items: center;
+  padding: 4px 8px;
+
+  margin-bottom: 8px;
 
   .list-item__icon {
     display: flex;
@@ -78,18 +77,21 @@ a.list-item {
     i, span {
       color: #43525c;
     }
-
-    & + .list-item__content {
-      padding: 16px 10px 16px 0;
-    }
   }
 
-  .list-item__content {
+  &__content {
     flex-grow: 1;
-    padding: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+
+    [dir=ltr] & {
+      padding-left: 8px;
+    }
+
+    [dir=rtl] & {
+      padding-right: 8px;
+    }
   }
 
   .list-item__actions {
@@ -150,10 +152,6 @@ a.list-item {
       &::after {
         width: calc(100% - 76px);
       }
-    }
-
-    .list-item__content {
-      justify-content: center;
     }
 
     .list-item__action {
@@ -250,24 +248,6 @@ a.list-item {
     }
   }
 
-  &.list-item--condensed {
-    .title-h5 {
-      padding: 5px;
-    }
-
-    .list-item__avatar {
-      padding: 5px;
-    }
-
-
-    .list-item__content {
-      padding: 5px;
-    }
-
-    .list-item__action {
-      padding: 5px;
-    }
-  }
 
   .arrow-icon {
     transition: all 0.4s ease-in-out;
@@ -323,174 +303,4 @@ a.list-item {
   }
 }
 
-//night mood
-.night-mode {
-  .list {
-    background-color: #1d1e13;
-
-    & > a {
-      &:hover {
-        background-color: rgba($color: $white, $alpha: 0.2);
-      }
-    }
-  }
-
-  .list-title {
-    background-color: #2f3237;
-
-    &.list-title--lg {
-      background-color: #1d1e13;
-    }
-  }
-
-  .list-item-group {
-    & > a {
-      &:hover {
-        background-color: rgba($color: $white, $alpha: 0.2);
-      }
-    }
-  }
-
-  .list-item__avatar {
-    i {
-      color: var(--color-accent);
-    }
-  }
-
-  .list-item__content {
-    .body-2 {
-      color: #FFF;
-    }
-  }
-
-  .list-item__action {
-    i {
-      color: #FFF;
-    }
-  }
-
-  .list-item {
-    &.list-item--active {
-      background-color: rgba($white, .2);
-    }
-  }
-
-  .tab-panel {
-
-    .list-item {
-      background-color: $black;
-
-      &.list-item--open {
-        .list-item__action {
-          i {
-            color: var(--color-accent);
-          }
-        }
-      }
-
-      .list-item__action {
-        // @include whiteTypo;
-      }
-    }
-  }
-
-  .card-list {
-    background-color: #43525c;
-    border: 1px solid rgba($color: #fff, $alpha: 0.3);
-  }
-
-  .list {
-    background-color: transparent;
-
-    .title-h5 {
-      color: $white;
-    }
-  }
-
-  .list-item {
-    &.list-item--space {
-      border-bottom: 1px solid rgba($light-gray, 0.1);;
-    }
-
-    &.list-item--border-bottom {
-      border-bottom: 1px solid rgba($light-gray, 0.1);
-    }
-
-    &.list-item--hover {
-      &:hover {
-        background-color: rgba($color: var(--RGB-color-default), $alpha: 0.2);
-      }
-    }
-
-    .list-item__avatar, .list-item__action {
-      i, svg {
-        color: $white;
-      }
-    }
-
-    .list-item__content {
-      * {
-        color: $white;
-      }
-
-      a.content__link {
-        color: rgba($color: $white, $alpha: 0.7);
-      }
-    }
-
-    .list-item__icon {
-      background-color: transparent;
-
-      i, span {
-        color: rgba($color: var(--RGB-color-accent), $alpha: 0.7);
-      }
-    }
-  }
-
-  .divider {
-    border-bottom: 1px solid rgba($white, 0.1);
-  }
-}
-
-// rtl
-html[dir="rtl"] {
-  .list-item {
-
-    .list-item__action {
-      margin-right: auto;
-      margin-left: inherit;
-
-      .arrow-right {
-        transform: rotate(180deg);
-      }
-    }
-
-    .list-item__icon {
-      & + .list-item__content {
-        padding: 16px 0 16px 10px;
-      }
-    }
-
-    &.list-item--open {
-      .list-item__action {
-        .arrow-right {
-          transform: rotate(0deg);
-        }
-      }
-    }
-  }
-
-  .action-switch {
-    span.switch {
-      right: -35px;
-    }
-  }
-
-  .avatar__video-preview {
-    .video-preview__checkbox {
-      top: 20px;
-      right: 6px;
-    }
-  }
-}
 

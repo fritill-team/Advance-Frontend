@@ -44,3 +44,64 @@ mixin check-field-wrapper(type, label, id, name)
 
 mixin switch()
   .field-wrapper
+
+
+mixin text-field(type, label, id, name, placeholder, error=false, messages=[])
+  - var wrapperClass = 'field-wrapper'
+  if (error)
+    - wrapperClass += ' field-wrapper--error'
+
+  div(class=wrapperClass)
+    label.field-wrapper__label= label
+    .field-wrapper__content
+      input(class="field" type=type placeholder=placeholder name=name id=id)
+    ul.field-wrapper__messages
+      each message in messages
+        li= message
+
+
+mixin text-field-sm(type, label, id, name, placeholder, error=false, messages=[])
+  - var wrapperClass = 'field-wrapper field-wrapper--sm'
+  if (error)
+    - wrapperClass += ' field-wrapper--error'
+
+  div(class=wrapperClass)
+    label.field-wrapper__label= label
+    .field-wrapper__content
+      input(class="field" type=type placeholder=placeholder name=name id=id)
+    ul.field-wrapper__messages
+      each message in messages
+        li= message
+
+
+mixin text-field-lg(type, label, id, name, placeholder, error=false, messages=[])
+  - var wrapperClass = 'field-wrapper field-wrapper--lg'
+  if (error)
+    - wrapperClass += ' field-wrapper--error'
+
+  div(class=wrapperClass)
+    label.field-wrapper__label= label
+    .field-wrapper__content
+      input(class="field" type=type placeholder=placeholder name=name id=id)
+    ul.field-wrapper__messages
+      each message in messages
+        li= message
+
+
+mixin text-field-underline(type, label, id, name, placeholder, error=false, messages=[])
+  .field-wrapper
+    label.field-wrapper__label= label
+    .field-wrapper__content
+      input(class="field field--underline" type=type placeholder=placeholder name=name id=id)
+      ul.field-wrapper__messages
+        each message in messages
+          li= message
+
+mixin text-field-disabled(type, label, id, name, placeholder, error=false, messages=[])
+  .field-wrapper
+    label.field-wrapper__label= label
+    .field-wrapper__content
+      input(class="field field--underline" disabled type=type placeholder=placeholder name=name id=id)
+    ul.field-wrapper__messages
+      each message in messages
+        li= message

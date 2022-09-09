@@ -1,67 +1,89 @@
-.tooltipster-content{
-  // background-color: red;
-}
+//.tooltipster-content {
+//  background-color: var(--color-white);
+//  border: 3px solid var(--color-primary);
+//}
 
-.tooltipster-sidetip{
-  &.tooltipster-left{
-    .tooltipster-arrow-border{
+
+.tooltipster-sidetip {
+  &.tooltipster-left {
+    .tooltipster-arrow-border {
       border-top-color: transparent !important;
       border-left-color: var(--color-primary);
     }
-    .tooltipster-arrow-background{
+
+    .tooltipster-arrow-background {
       border-top-color: transparent;
     }
   }
-  &.tooltipster-bottom{
-    .tooltipster-arrow-border{
+
+  &.tooltipster-right {
+    .tooltipster-arrow-border {
+      border-top-color: transparent !important;
+      border-right-color: var(--color-primary);
+    }
+
+    .tooltipster-arrow-background {
+      border-top-color: transparent;
+    }
+  }
+
+  &.tooltipster-bottom {
+    .tooltipster-arrow-border {
       border-top-color: transparent !important;
       border-bottom-color: var(--color-primary);
     }
   }
-  .tooltipster-box{
-    background-color: $white;
+
+  .tooltipster-box {
+    background-color: var(--color-white);
     border: 3px solid var(--color-primary);
   }
   .tooltipster-arrow{
     .tooltipster-arrow-border{
       border-top-color: var(--color-primary);
-
     }
-    .tooltipster-arrow-background{
+
+    .tooltipster-arrow-background {
       border-color: transparent;
     }
   }
-  .tooltipster-content{
+
+  .tooltipster-content {
     padding: 6px;
     color: var(--color-gray);
   }
 }
-.night-mode{
-  .tooltipster-sidetip{
-    .tooltipster-box{
-      background-color: $black;
-      border-color: $white;
-    }
-    &.tooltipster-top{
-      .tooltipster-arrow-border{
-        border-top-color: $white;
-        // border-left-color: $white;
-      }
-    }
-    &.tooltipster-left{
-      .tooltipster-arrow-border{
-        border-top-color: transparent !important;
-        border-left-color: $white;
-      }
-    }
-    &.tooltipster-bottom{
-      .tooltipster-arrow-border{
-        border-top-color: transparent !important;
-        border-bottom-color: $white;
-      }
-    }
-    .tooltipster-content{
-      color: $white;
-    }
-  }
-}
+
+//.night-mode {
+//  .tooltipster-sidetip {
+//    .tooltipster-box {
+//      background-color: var(--color-black);
+//      border-color: var(--color-white);
+//    }
+//
+//    &.tooltipster-top {
+//      .tooltipster-arrow-border {
+//        border-top-color: var(--color-white);
+//        // border-left-color: var(--color-white;
+//      }
+//    }
+//
+//    &.tooltipster-left {
+//      .tooltipster-arrow-border {
+//        border-top-color: transparent !important;
+//        border-left-color: var(--color-white);
+//      }
+//    }
+//
+//    &.tooltipster-bottom {
+//      .tooltipster-arrow-border {
+//        border-top-color: transparent !important;
+//        border-bottom-color: var(--color-white);
+//      }
+//    }
+//
+//    .tooltipster-content {
+//      color: var(--color-white);
+//    }
+//  }
+//}

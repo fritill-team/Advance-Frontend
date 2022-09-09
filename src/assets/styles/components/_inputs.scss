@@ -18,10 +18,10 @@
   }
 
   &.field-wrapper--error {
-    color: $danger;
+    color: var(--color-danger);
 
     .field {
-      border-color: $danger;
+      border-color: var(--color-danger);
 
       &[type="checkbox"],
       &[type="radio"] {
@@ -83,27 +83,37 @@
     }
 
     .field[type="file"] + label {
-      color: $danger;
+      color: var(--color-danger);
     }
 
     .field[type="file"] + label::after {
-      background-color: $danger;
+      background-color: var(--color-danger);
     }
 
-    .check-field .check-field__input + label::before {
-      color: $danger;
-    }
+    .check-field {
+      &__input + label::before {
+        color: var(--color-danger);
+      }
 
-    .check-field .check-field__label {
-      color: $danger;
-    }
+      &__label {
+        color: var(--color-danger);
+      }
 
-    .check-field .check-field__input[type="radio"]:checked + label:after {
-      background-color: $danger;
-    }
+      &__input[type="radio"]:checked + label:after {
+        background-color: var(--color-danger);
+      }
 
-    .check-field .check-field__input:checked ~ span {
-      color: $danger;
+      &__input[type="checkbox"]:checked + label:after {
+        border-color: var(--color-danger);
+      }
+
+      &__input[type="checkbox"]:checked + label:before {
+        background-color: transparent;
+      }
+
+      &__input:checked ~ span {
+        color: var(--color-danger);
+      }
     }
 
     .field-wrapper__label {
@@ -268,7 +278,7 @@
       font-weight: 400;
       line-height: 42px;
       color: var(--color-gray);
-      background-color: $white;
+      background-color: var(--color-white);
       border: 1px solid #efefef;
       border-radius: 5px;
       position: relative;
@@ -286,7 +296,7 @@
       display: block;
       padding: 0 16px;
       line-height: 42px;
-      color: $white;
+      color: var(--color-white);
       content: "Upload File";
       background-color: var(--color-primary);
       border-left: inherit;
@@ -350,13 +360,13 @@
           line-height: 1;
           margin: 4px 2px;
           background-color: rgba(var(--RGB-color-primary), 0.8);
-          color: $white;
+          color: var(--color-white);
           border-radius: 20px;
           border: none;
           padding: 4px 8px;
 
           .select2-selection__choice__remove {
-            color: $white;
+            color: var(--color-white);
             position: unset;
             border: none;
             top: unset;
@@ -381,8 +391,8 @@ textarea.field {
   margin: 0;
   outline: none;
   font-size: 1em;
-  background: $white;
-  color: $input-color;
+  background: var(--color-white);
+  color: var(--color-gray);
   border-radius: 5px;
   padding: 1em;
   resize: none;
@@ -395,52 +405,54 @@ textarea.field {
 }
 
 .check-field-group {
+  display: flex;
+  flex-flow: column nowrap;
+
   &.check-field-group--horizontal {
-    display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    //align-items: center;
   }
 }
 
 .check-field {
   display: flex;
   flex-flow: row nowrap;
-  padding-left: 16px;
-  margin: 16px 0;
-  width: 100%;
+  align-items: center;
 
-  .check-field__control {
+  &__control {
+    align-self: flex-start !important;
     position: relative;
+    min-width: 36px;
+    line-height: 36px;
+    min-height: 36px;
   }
 
-  .check-field__input {
+  &__input {
     opacity: 0;
-    //width: 100%;
-    //height: 100%;
 
     & + label {
-      position: absolute;
-      top: 0;
-      left: 0;
-
       &:before {
         content: "";
         display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 18px;
-        height: 18px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
         color: var(--color-gray);
         border: 2px solid currentColor;
         border-radius: 4px;
         background: transparent;
         transition: all 275ms;
         z-index: 1;
+
       }
     }
 
     &:not(:checked) + label:after {
       opacity: 0;
+      background-color: transparent;
     }
 
     &:checked + label {
@@ -452,16 +464,17 @@ textarea.field {
       &:after {
         content: "";
         position: absolute;
-        height: 12px;
-        transform: rotate(45deg);
+        height: 10px;
+        transform: translate(-50%, -50%) rotate(45deg);
         opacity: 1;
         z-index: 2;
       }
     }
 
     &[type="checkbox"]:checked + label:after {
-      left: calc(50% + 6px);
-      top: calc(50% + 1px);
+      left: 50%;
+      top: calc(50% - 1px);
+      transform: translate(-50%, -50%) rotate(45deg);
       width: 6px;
       border-bottom: 2px solid #fff;
       border-right: 2px solid #fff;
@@ -471,8 +484,8 @@ textarea.field {
       & + label {
         &:before {
           border-radius: 50%;
-          width: 18px;
-          height: 18px;
+          width: 20px;
+          height: 20px;
         }
       }
 
@@ -486,10 +499,10 @@ textarea.field {
         }
 
         &:after {
-          left: calc(50% + 5px);
-          top: calc(50% + 5px);
-          width: 8px;
-          height: 8px;
+          left: 50%;
+          top: 50%;
+          width: 12px;
+          height: 12px;
           background-color: var(--color-primary);
           border-radius: 50%;
         }
@@ -501,8 +514,9 @@ textarea.field {
       width: 36px;
       height: 36px;
       position: absolute;
-      top: -9px;
-      left: -9px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       opacity: 0;
       border-radius: 50%;
       transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
@@ -522,13 +536,20 @@ textarea.field {
     }
   }
 
-  .check-field__label {
-    padding-left: 16px;
-  }
-}
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
 
-.dark-mode-toggle {
-  display: none;
+    [dir=ltr] & {
+      padding-left: 2px;
+      margin-right: 8px;
+    }
+
+    [dir=rtl] & {
+      padding-right: 2px;
+      margin-left: 8px;
+    }
+  }
 }
 
 .switch {
@@ -561,8 +582,8 @@ textarea.field {
       top: 50%;
       transform: translateY(-50%);
       left: 2px;
-      background-color: rgba($color: #a9a9a9, $alpha: 0.3);
-      box-shadow: 0 0 3px rgba($color: #a9a9a9, $alpha: 0.7);
+      background-color: rgba(#a9a9a9, 0.3);
+      box-shadow: 0 0 3px rgba(#a9a9a9, 0.7);
       border-radius: 25px;
       transition: 0.5s ease all;
       z-index: 0;
@@ -637,12 +658,12 @@ textarea.field {
 
         &.select2-results__option--selected {
           background-color: rgba(var(--RGB-color-primary), 0.7);
-          color: $white;
+          color: var(--color-white);
         }
 
         &.select2-results__option--highlighted {
-          background-color: rgba($secondary, 0.3);
-          color: $white;
+          background-color: rgba(var(--RGB-color-secondary), 0.3);
+          color: var(--color-white);
         }
       }
     }
@@ -660,7 +681,7 @@ textarea.field {
 
   .field {
     background: #576874;
-    color: $white;
+    color: var(--color-white);
 
     &[type="file"] + label {
       border: none;
@@ -669,44 +690,32 @@ textarea.field {
 
     & ~ .select2-container .select2-selection {
       background: #576874;
-      color: $white;
+      color: var(--color-white);
 
       &.select2-selection--single {
         .select2-selection__arrow,
         .select2-selection__rendered {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
       &.select2-selection--multiple {
 
         .select2-search.select2-search--inline .select2-search__field {
-          color: $white;
+          color: var(--color-white);
         }
 
         .select2-selection__rendered {
           .select2-selection__choice {
-            background-color: rgba($primary-darkmode, 0.8);
-            color: $white;
+            background-color: rgba(var(--RGB-color-primary), 0.8);
+            color: var(--color-white);
 
             .select2-selection__choice__remove {
-              color: $white;
+              color: var(--color-white);
             }
           }
         }
       }
-    }
-
-
-  }
-
-  .check-field__control {
-    & > label::before {
-      background-color: $white;
-    }
-
-    div {
-      background-color: #576874;
     }
   }
 
@@ -717,7 +726,7 @@ textarea.field {
 
       .select2-search__field {
         background: #576874;
-        color: $white;
+        color: var(--color-white);
       }
     }
 
@@ -726,14 +735,14 @@ textarea.field {
       }
 
       .select2-results__option {
-        color: $white;
+        color: var(--color-white);
 
         &.select2-results__option--selected {
-          background-color: rgba($primary-darkmode, 0.7);
+          background-color: rgba(var(--RGB-color-primary), 0.7);
         }
 
         &.select2-results__option--highlighted {
-          background-color: rgba($secondary-darkmode, 0.3);
+          background-color: rgba(var(--RGB-color-secondary), 0.3);
         }
       }
     }
@@ -784,46 +793,6 @@ html[dir="rtl"] {
       border-radius: 5px 0 0 5px;
     }
   }
-
-  .check-field {
-    padding-left: unset;
-    padding-right: 16px;
-
-    .check-field__control {
-      label {
-        right: 0;
-        left: unset;
-
-        &:before {
-          left: unset;
-          right: 0;
-        }
-      }
-
-      input {
-        &[type="checkbox"]:checked + label:after {
-          left: unset;
-          right: calc(50% + 6px);
-        }
-
-        &[type="radio"]:checked + label:after {
-          left: unset;
-          right: calc(50% + 5px);
-        }
-      }
-
-      span {
-        right: -9px;
-      }
-    }
-
-    .check-field__label {
-      padding-right: 16px;
-      padding-left: unset;
-      line-height: 1.2;
-    }
-  }
-
 
   .field-wrapper__content-inline {
     .field {

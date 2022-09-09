@@ -40,6 +40,8 @@ import './dialog'
 import './scrollbars'
 import './login.js'
 
+import "./apps/checkout"
+
 
 
 

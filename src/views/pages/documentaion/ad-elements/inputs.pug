@@ -9,91 +9,24 @@ block title
 block content
   form
     .container
-      .row
-        //.col-12
-          .card.my-4
-            .card__title
-              h4 inputs field
+      .row.my-5
+        .col-12.col-md-6
+          .card
+            .card__header
+              h3.card__title inputs field
             .card__content
+              +text-field('text', 'Default','text-field-default', 'name', 'Add Name')
+              +text-field('text', 'Field With Help Text','text-field-help', 'name', 'Add Name', false, ['Use Capitalized Words'])
+              +text-field('text', 'Field With Errors','text-field-with-errors', 'name', 'Add Name', true, ['this field is required'])
+
+              +text-field-sm('text', 'Field sm','text-field-sm', 'name', 'Add Name')
+              +text-field-lg('text', 'Field lg','text-field-lg', 'name', 'Add Name')
+              +text-field-underline('text', 'Field Underlined','text-field-underlined', 'name', 'Add Name')
+
+              +text-field-disabled('text', 'Disabled','text-field-disabled', 'name', 'Add Name')
+
               // input Default
-              p.body-2 1- inputs Default class=(field-wrapper)
-              .field-wrapper
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field input" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                //- .message Please provide a valid city.
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-                  li
-                    | Please provide a valid city.
-                  li
-                    | Please provide a valid city.
-              // input Default
-              p.body-2 1- inputs Default class=(field-wrapper)
-              .field-wrapper.field-wrapper--arrow
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input smaller
-              p.body-2 2- inputs field sm class=(field-wrapper--sm)
-              .field-wrapper.field-wrapper--sm
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input large
-              p.body-2 3- inputs field lg class=(field-wrapper--lg)
-              .field-wrapper.field-wrapper--lg
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input underline
-              p.body-2 4- inputs field underline class=(field--underline) in input
-              .field-wrapper
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field field--underline" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input field-wrapper--error
-              p.body-2 5- inputs field error class=(field-wrapper--error)
-              .field-wrapper.field-wrapper--error
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input field-wrapper--error
-              //- p.body-2 5- inputs field error class=(field--arrow)
-              //- .field-wrapper
-              //- 	label.field-wrapper__label Course Title*
-              //- 	.field-wrapper__content
-              //- 		input(class="field" type='text' placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='60' id='main[title]' value='' required)
-              //- 	ul.field-wrapper__messages
-              //- 		li
-              //- 			| Please provide a valid city.
-              // input Default
-              p.body-2 1- inputs Default class=(field-wrapper)
-              .field-wrapper
-                label.field-wrapper__label Course Title*
-                .field-wrapper__content
-                  input(class="field" type='text' disabled="disabled"  placeholder='Insert your course title.' name='title' data-purpose='edit-course-title' maxlength='' id='main[title1]' value='')
-                ul.field-wrapper__messages
-                  li
-                    | Please provide a valid city.
-              // input Default
-          .card.my-4
+          // .card.my-4
             .card__title
               h3 input field file
             .card__content
@@ -185,7 +118,6 @@ block content
                         | Please provide a valid city.
 
         // input checkbox
-      .row
         .col-12.col-md-6
           .card
             .card__header
@@ -251,8 +183,8 @@ block content
                       label(for="checkbox-11")
                       span
                     label.check-field__label Lorem ipsum dolor.
-                    ul.field-wrapper__messages
-                      li Please provide a valid city.
+                ul.field-wrapper__messages
+                  li Please provide a valid city.
 
 
 

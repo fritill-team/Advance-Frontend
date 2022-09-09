@@ -1,4 +1,139 @@
+@import "../utils/mixins";
+
 .checkout {
   position: absolute;
-  top: var(--header-);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-sm-down {
+    flex-flow: column;
+
+    [dir=rtl] &,
+    [dir=ltr] & {
+      .checkout__form,
+      .checkout__summary {
+        width: 100%;
+        padding-right: 60px !important;
+        padding-left: 60px !important;
+      }
+
+      .checkout__form {
+        padding-top: 60px !important;
+        padding-bottom: 32px !important;
+      }
+
+      .checkout__summary {
+        padding-bottom: 60px !important;
+        padding-top: 32px !important;
+      }
+    }
+
+  }
+
+  .checkout__form {
+    flex-basis: 60%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    [dir=ltr] & {
+      padding: 96px 28px 96px 32px;
+    }
+
+    [dir=rtl] & {
+      padding: 96px 32px 96px 28px;
+    }
+
+    .checkout__form-order {
+      display: flex;
+      margin-bottom: 8px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+
+      .checkout__form-order-content {
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: 14px;
+        font-weight: 600;
+
+        justify-content: center;
+
+        [dir=ltr] & {
+          padding-left: 8px;
+        }
+
+        [dir=rtl] & {
+          padding-right: 8px;
+        }
+      }
+
+      &-title {
+        color: var(--color-primary);
+        margin: 0;
+      }
+
+      &-price {
+        color: var(--color-gray);
+
+        &.checkout__form-order-price-discounted {
+          span:first-child {
+            text-decoration: line-through;
+
+            [dir=ltr] & {
+              padding-right: 8px;
+            }
+
+            [dir=rtl] & {
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .checkout__summary {
+    background-color: var(--color-primary);
+    height: 100%;
+    flex-basis: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    [dir=ltr] & {
+      padding: 96px 32px 96px 28px;
+    }
+
+    [dir=rtl] & {
+      padding: 96px 28px 96px 32px;
+    }
+
+
+    .checkout__summary-item,
+    .checkout__summary-item-label,
+    .checkout__summary-item-value {
+      color: var(--color-white);
+    }
+
+    .checkout__summary-item {
+      display: flex;
+      margin-bottom: 8px;
+      width: 100%;
+      font-size: 14px;
+      justify-content: space-between;
+      font-weight: 600;
+
+      &.checkout__summary-item-bold {
+        font-weight: 800;
+      }
+    }
+  }
 }

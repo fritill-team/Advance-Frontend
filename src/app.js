@@ -17,4 +17,5 @@ import "./assets/vendor/venobox.min.js"
 import "./assets/vendor/select2.min.js"
 import "./assets/vendor/sortable.js"
 import "./assets/vendor/bootstrap/js/bootstrap"
+import './assets/vendor/Inputmask-5.x/jquery.inputmask.min.js'
 import "./assets/scripts/index"

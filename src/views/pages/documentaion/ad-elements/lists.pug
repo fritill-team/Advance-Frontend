@@ -1,110 +1,73 @@
 extends ../../../layouts/admin.pug
+include ../../../components/widgets/lists
+include ../../../components/widgets/inputs
+
 block title
   title lists
 
 block content
   .container
-    h3 list with titles
+    h1 lists
     .row
-      .col-4
-        .list
-          .list-title.list-title--lg
-            p List title large
-            .list-title__actions
-            span.subtitle-2 .list-title.list-title--lg
-          .list-title
-            p List title
-            span.subtitle-2 .list-title
-          .list-item
-            .list-item__content
-              span.body-2 this is a normal list item
-          a.list-item
-            .list-item__content
-              span.body-2 this is a link list item
-          label.list-item
-            .list-item__content
-              span.body-2 this is a label list item
-          a.list-item(href="#")
-            .list-item__icon
-              span.material-icons face
-            .list-item__content
-              span.body-2 this is a label list item
+      .col-6.col-lg-4
+        .card
+          .card__header
+            h4.card__title Plain List item
+          .list
+            +list-item("Plain List item")
+            +list-item("Plain List item")
+            +list-item("Plain List item")
+            +list-item("Plain List item")
+            +list-item("Plain List item")
+            +list-item("Plain List item")
 
 
-      .col-lg-8
-        section.assessment.assessment--section(style='margin-bottom: 16px')
-          .assessment__title
-            h4 Name : Student Name
-            p.body-2
-              strong Address :
-              |  The only course you need to learn web development
-            p.body-2
-              strong Phone :
-              |  123456789
+      .col-6.col-lg-4
+        .card
+          .card__header
+            h4.card__title List Item With Symbol Before
+          .list
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label A
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label B
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label C
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label D
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label E
+            +list-item-before("List Item With Symbol")
+              .symbol.symbol--35px
+                .symbol__label F
 
-        .list
-          .list-title.list-title--lg
-            h4 Assessment Name
-            strong.body-1 Score : 24
-          .list-title
-            h5 Recommendations
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil laudantium iusto quas illum fugiat, numquam distinctio incidunt vero. Rem doloremque non expedita eos officiis maiores tenetur corporis nemo perspiciatis?
+      .col-6.col-lg-4
+        .card
+          .card__header
+            h4.card__title List Item With After Slot
+          .list
+            +list-item-after("List Item With Symbol")
+              button.btn.btn--icon.btn-text.btn--primary.btn--text
+                i.material-icons more_vert
+            +list-item-after-label("List Item With Symbol", 'checkbox')
+              +checkbox('', 'checkbox', )
+            +list-item-after("List Item With Symbol")
+              +radio('', 'radio', )
+            +list-item-after("List Item With Symbol")
+              +switch()
+            +list-item-after("List Item With Symbol")
+              .symbol.symbol--35px.symbol--circle
+                .symbol__label(style="background-image: url('../../assets/images/hd_dp.jpg')")
+            +list-item-after("List Item With Symbol")
+              .symbol.symbol--35px.symbol--transparent
+                .symbol__label F
 
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil laudantium iusto quas illum fugiat, numquam distinctio incidunt vero. Rem doloremque non expedita eos officiis maiores tenetur corporis nemo perspiciatis?
-          .list-title
-            h5 Actions
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 action 1
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 action 2
-
-        .list
-          .list-title.list-title--lg
-            h4 Assessment Name
-            strong.body-1 Score : 24
-          .list-title
-            h5 Recommendations
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil laudantium iusto quas illum fugiat, numquam distinctio incidunt vero. Rem doloremque non expedita eos officiis maiores tenetur corporis nemo perspiciatis?
-
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil laudantium iusto quas illum fugiat, numquam distinctio incidunt vero. Rem doloremque non expedita eos officiis maiores tenetur corporis nemo perspiciatis?
-          .list-title
-            h5 Actions
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 action 1
-          a(class="list-item list-item--multiple" href="#")
-            .list-item__icon
-              span.material-icons assessment
-            .list-item__content
-              span.body-2 action 2
-
-  .container
-    .row
-      .col-md-8.col-sm-6
+      .col-6.col-lg-4
         .row
           .col-lg-3
             .card.card--with-title.card--top-category.mt-3

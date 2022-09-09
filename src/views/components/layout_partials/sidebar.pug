@@ -1,0 +1,76 @@
+-var items = '[{"title":"Home","has_children":false,"icon":"home","url":"/","is_active":false},{"title":"Category","has_children":false,"icon":"home","url":"/category.html","is_active":false},{"title":"Collection","has_children":false,"icon":"home","url":"/collection.html","is_active":false},{"title":"Course","icon":"layers","has_children":true,"is_active":false,"children":[{"title":"Course","has_children":false,"url":"/course.html","is_active":false},{"title":"Enroll","has_children":false,"url":"/enroll.html","is_active":false}]},{"title":"Delete","has_children":false,"icon":"home","url":"/delete.html","is_active":false},{"title":"Exams","has_children":false,"icon":"home","url":"/exams.html","is_active":false},{"title":"Authentication","has_children":true,"icon":"layers","is_active":true,"children":[{"title":"Login","has_children":false,"url":"/login.html","is_active":true},{"title":"SignUp","has_children":false,"url":"/auth/signup.html","is_active":true},{"title":"Reset Password","has_children":false,"url":"/reset.html","is_active":true},{"title":"Forget Password","has_children":false,"url":"/forget.html","is_active":true}]},{"title":"Admin","icon":"layers","has_children":true,"is_active":false,"children":[{"title":"Classifications","has_children":false,"url":"/admin-categories.html","is_active":false},{"title":"Collections","has_children":false,"url":"/collections.html","is_active":false},{"title":"courses","has_children":false,"url":"/courses-admin.html","is_active":false},{"title":"Blogs","has_children":false,"url":"/blogs-admin.html","is_active":false}]},{"title":"Player Course","has_children":true,"icon":"layers","is_active":false,"children":[{"title":"Player","has_children":false,"url":"/spa-player.html","is_active":false},{"title":"Survey Landing","has_children":false,"url":"/spa-survey-landing.html","is_active":false},{"title":"Surveys","has_children":false,"url":"/surveys.html","is_active":false},{"title":"Survey","has_children":false,"url":"/spa-survey.html","is_active":false}]},{"title":"Media","has_children":true,"icon":"layers","is_active":false,"children":[{"title":"Media Library","has_children":false,"url":"/media-library.html","is_active":false},{"title":"Edit Media","has_children":false,"url":"/edit-media.html","is_active":false}]},{"title":"Elements Tool","has_children":true,"icon":"layers","is_active":false,"children":[{"title":"Buttons","has_children":false,"url":"/ad-elements/buttons.html","is_active":false},{"title":"Cards","has_children":false,"url":"/ad-elements/cards.html","is_active":false},{"title":"Lists","has_children":false,"url":"/ad-elements/lists.html","is_active":false},{"title":"play List","has_children":false,"url":"/ad-elements/play-list.html","is_active":false},{"title":"Survey Inputs","has_children":false,"url":"/ad-elements/survey-inputs.html","is_active":false},{"title":"Inputs","has_children":false,"url":"/inputs.html","is_active":false},{"title":"Typo","has_children":false,"url":"/typo.html","is_active":false},{"title":"Drawers","has_children":false,"url":"/drawers.html","is_active":false}]}]'
+
+
+mixin sidebar-list-item-action(items=[])
+  if (items.length)
+    .list-item__action
+      i.material-icons expand_more
+
+
+mixin sidebar-list-item-children(items=[])
+  if (items.length)
+    .list-item-group
+      each item in items
+        +sidebar-list-item(item)
+
+
+mixin sidebar-list-item(item)
+  a(href=item['url'] class='list-item' title=item.title)
+    .list-item__icon
+      i.material-icons-outlined=item['icon']
+    .list-item__content
+      p.body-2.m-0= item['title']
+    +sidebar-list-item-action(item['children'])
+
+  +sidebar-list-item-children(item['children'])
+
+
+mixin default-sidebar()
+  - var sidebarItems = JSON.parse(items)
+  #left-sidebar.drawer.drawer--left.drawer--partially-closed.drawer--overlay
+    .list
+      each item in sidebarItems
+        +sidebar-list-item(item)
+
+
+mixin home-sidebar()
+  - var sidebarItems = JSON.parse(items)
+
+  #quick-sidebar.drawer.drawer--left.drawer--overlay
+    .drawer__header
+      .p.text-gray.text-weight-600.fs-24 Itqadem
+      button(class='btn btn--icon btn--text toggle-drawer' data-target="#quick-sidebar")
+        i.material-icons close
+    .divider
+    .container.mt-4.mb-5
+      p.body-2.text-gray.text-weight-600 Quick Access
+      .row
+        .col-4.d-flex.justify-content-center
+          a.symbol.symbol--100.symbol--65px.w-100(href='')
+            .symbol__label
+              i.material-icons-outlined accessibility_new
+            .symbol__text Request therapy Session
+
+        .col-4.d-flex.justify-content-center
+          a.symbol.symbol--100.symbol--65px.w-100(href='')
+            .symbol__label
+              i.material-icons-outlined article
+            .symbol__text Create Article
+
+        .col-4.d-flex.justify-content-center
+          a.symbol.symbol--100.symbol--65px.w-100(href='')
+            .symbol__label
+              i.material-icons-outlined question
+            .symbol__text Ask Question
+
+      .divider.mb-3
+      p.body-2.text-gray.text-weight-600 Sections
+      .row
+
+        each item in sidebarItems
+          .col-4.d-flex.justify-content-center
+            a.symbol.symbol--100.symbol--65px.w-100(href=item.url)
+              .symbol__label
+                i.material-icons-outlined=item.icon
+              .symbol__text=item.title
+

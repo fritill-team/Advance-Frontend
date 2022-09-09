@@ -13,7 +13,8 @@ input[type="submit"].btn {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  white-space: nowrap;
+  text-align: center;
+  //white-space: nowrap;
   cursor: pointer;
   letter-spacing: 1.25px;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
@@ -186,9 +187,9 @@ input[type="submit"].btn {
     }
   }
 
-  &.btn--white-primary {
+  &.btn--white {
     color: var(--color-primary);
-    background-color: var(--color-white); //#0d758e // #3D5467
+    background-color: var(--color-white);
     border-color: var(--color-white);
 
     &.btn--text,
@@ -301,10 +302,6 @@ input[type="submit"].btn {
   i {
     // font-size: inherit;
     // margin: 0 5px;
-  }
-
-  &.btn--white {
-    color: #fff;
   }
 }
 

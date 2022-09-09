@@ -45,24 +45,6 @@ module.exports = env => ({
           "sass-loader"
         ],
       },
-      /*   {
-           test: /\.scss$/,
-           use: [
-             env === "development" ? "style-loader" : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-             {
-               loader: "css-loader",
-               options: {
-                 importLoaders: 1,
-                 minimize: true,
-                 sourceMap: true,
-                 colormin: false
-               }
-             },
-             "postcss-loader",
-             "sass-loader"
-           ],
-           // include: path.resolve(__dirname, 'src/assets/styles/!*.scss')
-         },*/
       {
         test: /\.pug$/,
         loader: "pug-loader",

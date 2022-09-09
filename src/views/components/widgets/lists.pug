@@ -1,19 +1,35 @@
-mixin list(modifier='')
-  div(class='list ' + modifier)
+mixin list(...items)
+  .list
+
+
+mixin list-item(title)
+  .list-item
+    .list-item__content
+      p.m-0=title
+
+mixin list-item-before(title)
+  .list-item
+    block
+    .list-item__content
+      p.m-0=title
+
+mixin list-item-after(title)
+  .list-item
+    .list-item__content
+      p.m-0=title
+    block
+
+mixin list-item-after-label(title, id)
+  label.list-item.ripple(for=id)
+    .list-item__content
+      p.m-0=title
     block
 
 
-mixin list-item()
-  .list-item
-    block avatar
-    block icon
-    .list-item__content
-      block
-    block action
 
 mixin list-item-avatar(src, symbolSize='50')
   .list-item
-    div(class="symbol symbol--"+ symbolSize +"px")
+    div(class="symbol symbol--" + symbolSize + "px")
       div(style="background-image: url(" + src + ")" class="symbol__label")
     .list-item__content
       block

@@ -5,4 +5,62 @@ block title
 
 
 block content
+  .checkout
+    .checkout__form
+      .container
+        h1 Checkout
+        .row.mb-4
+          .col-12
+            .field-wrapper
+              label.field-wrapper__label Card Number
+              .field-wrapper__content
+                input(class="field card-number-input" placeholder="0000 0000 0000 0000")
+
+          .col-6
+            .field-wrapper
+              label.field-wrapper__label Expiry Date
+              .field-wrapper__content
+                input(class="field expiry-input" )
+          .col-6
+            .field-wrapper
+              label.field-wrapper__label CVV
+              .field-wrapper__content
+                input(class="field cvv-input" )
+          .col-12
+            .field-wrapper
+              label.field-wrapper__label Card Holder Name
+              .field-wrapper__content
+                input(class="field" type="text" )
+
+        h3 Order
+        .checkout__form-order
+          .symbol.symbol--75px
+            .symbol__label(style="background-image: url('../../assets/images/hero_bg.jpg')")
+          .checkout__form-order-content
+            span.checkout__form-order-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, numquam.
+            .checkout__form-order-price.checkout__form-order-price-discounted
+              span 50 L.E.
+              span 32 L.E
+    .checkout__summary
+      h2.text-white Summary
+
+      .checkout__summary-item
+        .checkout__summary-item-label Original Price
+        .checkout__summary-item-value 50 L.E.
+
+      .checkout__summary-item
+        .checkout__summary-item-label Discount
+        .checkout__summary-item-value 12 L.E.
+
+
+      .divider.my-3
+      .checkout__summary-item.checkout__summary-item-bold.mb-5
+        .checkout__summary-item-label Total
+        .checkout__summary-item-value 38 L.E.
+
+      a(href="/details-course-subscribed.html" class="btn btn--xl btn--white btn--block") Complete Payment
+
+
+
+
 
