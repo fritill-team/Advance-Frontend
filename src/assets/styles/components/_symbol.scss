@@ -1,4 +1,4 @@
-$increments: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160, 175, 200);
+@import "../utils/_utils";
 
 
 .symbol {
@@ -7,11 +7,11 @@ $increments: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160
   position: relative;
   border-radius: 8px;
 
-  @each $increment in $increments {
-    &.symbol--#{$increment}px {
+  @each $size in $sizes {
+    &.symbol--#{$size}px {
       .symbol__label {
-        height: #{$increment}px;
-        width: #{$increment}px;
+        height: #{$size}px;
+        width: #{$size}px;
       }
     }
   }
@@ -55,7 +55,7 @@ $increments: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160
 
   .symbol__label {
     display: flex;
-    align-items: center;
+    align-items: center !important;
     justify-content: center;
     font-weight: 500;
     color: var(--color-primary);

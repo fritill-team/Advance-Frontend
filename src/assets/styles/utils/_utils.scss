@@ -1,28 +1,36 @@
-$increments: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130,
+$dimensions: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130,
 135, 140, 145, 150, 155 160, 165, 170, 175, 180, 185, 200);
 
-@each $increment in $increments {
-  .w--#{$increment}px {
-    width: #{$increment}px;
+$sizes: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160, 175, 200);
+
+
+$colors: (primary, accent, secondary, success, danger, info, warning, white, black, gray);
+$positions: (relative, fixed, absolute);
+$zIndexValues: (-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000);
+$fontSizes: (10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96);
+
+@each $dimensions in $dimensions {
+  .w--#{$dimensions}px {
+    width: #{$dimensions}px;
   }
 
-  .mw--#{$increment}px {
-    min-width: #{$increment}px;
+  .mw--#{$dimensions}px {
+    min-width: #{$dimensions}px;
   }
-  .mxw#{$increment}px {
-    max-width: #{$increment}px;
-  }
-
-  .h--#{$increment}px {
-    height: #{$increment}px;
+  .mxw#{$dimensions}px {
+    max-width: #{$dimensions}px;
   }
 
-  .mh--#{$increment}px {
-    min-height: #{$increment}px;
+  .h--#{$dimensions}px {
+    height: #{$dimensions}px;
   }
 
-  .mxh#{$increment}px {
-    max-height: #{$increment}px;
+  .mh--#{$dimensions}px {
+    min-height: #{$dimensions}px;
+  }
+
+  .mxh#{$dimensions}px {
+    max-height: #{$dimensions}px;
   }
 }
 
@@ -50,7 +58,6 @@ $increments: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95,
   max-height: 100% !important;
 }
 
-$positions: (relative, fixed, absolute);
 
 @each $position in $positions {
   .position-#{$position} {
@@ -58,58 +65,57 @@ $positions: (relative, fixed, absolute);
   }
 }
 
-@each $increment in $increments {
-  .top-#{$increment} {
-    top: #{$increment}px;
+@each $dimensions in $dimensions {
+  .top-#{$dimensions} {
+    top: #{$dimensions}px;
   }
-  .top-inverted-#{$increment} {
-    top: -#{$increment}px;
+  .top-inverted-#{$dimensions} {
+    top: -#{$dimensions}px;
   }
-  .bottom-#{$increment} {
-    bottom: #{$increment}px;
+  .bottom-#{$dimensions} {
+    bottom: #{$dimensions}px;
   }
-  .bottom-inverted-#{$increment} {
-    bottom: -#{$increment}px;
+  .bottom-inverted-#{$dimensions} {
+    bottom: -#{$dimensions}px;
   }
-  .left-#{$increment} {
+  .left-#{$dimensions} {
     [dir=ltr] & {
-      left: #{$increment}px;
+      left: #{$dimensions}px;
     }
 
     [dir=rtl] & {
-      right: #{$increment}px;
+      right: #{$dimensions}px;
     }
   }
-  .left-inverted-#{$increment} {
+  .left-inverted-#{$dimensions} {
     [dir=ltr] & {
-      left: -#{$increment}px;
+      left: -#{$dimensions}px;
     }
 
     [dir=rtl] & {
-      right: -#{$increment}px;
+      right: -#{$dimensions}px;
     }
   }
-  .right-#{$increment} {
+  .right-#{$dimensions} {
     [dir=ltr] & {
-      right: #{$increment}px;
+      right: #{$dimensions}px;
     }
 
     [dir=rtl] & {
-      left: #{$increment}px;
+      left: #{$dimensions}px;
     }
   }
-  .right-inverted-#{$increment} {
+  .right-inverted-#{$dimensions} {
     [dir=ltr] & {
-      right: -#{$increment}px;
+      right: -#{$dimensions}px;
     }
 
     [dir=rtl] & {
-      left: -#{$increment}px;
+      left: -#{$dimensions}px;
     }
   }
 }
 
-$zIndexValues: (-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000);
 
 @each $zIndexValue in $zIndexValues {
   .z-#{$zIndexValue} {
@@ -118,9 +124,27 @@ $zIndexValues: (-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000);
 }
 
 
-$fontSizes: (10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96);
 @each $fontSize in $fontSizes {
   .fs-#{$fontSize} {
     font-size: #{$fontSize}px;
+  }
+}
+
+
+%before-hover {
+  &:before {
+    content: "";
+    display: block;
+    pointer-events: none;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    color: inherit;
+    background-color: currentColor;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
   }
 }

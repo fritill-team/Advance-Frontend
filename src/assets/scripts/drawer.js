@@ -1,4 +1,5 @@
 import {closeOverlay, openOverlay} from './overlay'
+import {collapse} from './collapse'
 
 let drawerNiceScrollOptions = {
     autohidemode: false,
@@ -24,52 +25,71 @@ drawer.find('.list-item').each(function () {
   $(this).tooltipster(tooltipsterOptions)
 })
 
-const endDrawerTransition = ($drawer) => {
-  setTimeout(() => {
-    $drawer.css('overflow-y', 'scroll')
-    $drawer.niceScroll(drawerNiceScrollOptions)
-    $drawer.getNiceScroll().show().resize()
-  }, 300)
-}
+const startDrawerTransition = $drawer => {
+    drawer.getNiceScroll().remove()
+    drawer.css('overflow-y', 'hidden')
+  },
+  endDrawerTransition = $drawer => {
+    setTimeout(() => {
+      $drawer.css('overflow-y', 'scroll')
+      $drawer.niceScroll(drawerNiceScrollOptions)
+      $drawer.getNiceScroll().show().resize()
+    }, 300)
+  },
+  openDrawer = $drawer => {
+    $(".toggle_animate--icon").toggleClass("toggle-menu--active");
+    drawer.addClass("drawer--open");
+    drawer.find('.list-item').each(function () {
+      $(this).tooltipster('disable')
+    })
+    openOverlay()
+  },
+  closeDrawer = $drawer => {
+    $(".toggle_animate--icon").toggleClass("toggle-menu--active");
+    drawer.removeClass("drawer--open");
+    closeOverlay()
+
+    drawer.find('.list-item').each(function () {
+      $(this).tooltipster('enable')
+    })
+    drawer.find('[data-toggle=collapsing][area-expanded=true]').each(function () {
+      collapse($(this))
+    })
+  }
 
 $(document)
   .on("click", ".toggle-drawer", function () {
     let target = $(this).data("target"),
       drawer = $(target);
-    drawer.getNiceScroll().remove()
-    drawer.css('overflow-y', 'hidden')
-    $(".toggle_animate--icon").toggleClass("toggle-menu--active");
-    if (drawer.hasClass("drawer--open")) {
-      drawer.removeClass("drawer--open");
-      closeOverlay()
+    startDrawerTransition(drawer)
 
-      drawer.find('.list-item').each(function () {
-        $(this).tooltipster(tooltipsterOptions)
-      })
+    if (drawer.hasClass("drawer--open"))
+      closeDrawer(drawer)
+    else
+      openDrawer(drawer)
 
-    } else {
-      drawer.addClass("drawer--open");
-      openOverlay()
-    }
     endDrawerTransition(drawer)
   })
   .on('keyup', function (e) {
     let $drawer = $('.drawer')
     if (e.key === "Escape" && $drawer.hasClass("drawer--open")) {
-      $drawer.removeClass("drawer--open");
-      $drawer.getNiceScroll().remove()
-      $drawer.css('overflow-y', 'hidden')
-      $(".toggle_animate--icon").toggleClass("toggle-menu--active");
-      closeOverlay()
+      startDrawerTransition($drawer)
+      closeDrawer($drawer)
       endDrawerTransition($drawer)
     }
   })
   .on('click', '.overlay', function () {
     let $drawer = $('.drawer')
-    $drawer.removeClass("drawer--open");
-    $drawer.getNiceScroll().remove()
-    $drawer.css('overflow-y', 'hidden')
-    $(".toggle_animate--icon").toggleClass("toggle-menu--active");
-    closeOverlay()
+    startDrawerTransition($drawer)
+    closeDrawer($drawer)
     endDrawerTransition($drawer)
+  })
+  .on('click', '.drawer.drawer--partially-closed:not(.drawer--open) .list-item[data-toggle=collapsing]', function () {
+    startDrawerTransition(drawer)
+    openDrawer()
+    endDrawerTransition(drawer)
+  })
+  .on('click', '.drawer [data-toggle=collapsing]', function () {
+    startDrawerTransition(drawer)
+    endDrawerTransition(drawer)
   })

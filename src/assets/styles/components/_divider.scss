@@ -1,0 +1,11 @@
+.divider {
+  width: 100%;
+  margin: 4px 0;
+  border-bottom: 1px solid rgba(var(--RGB-color-black), 0.1);
+
+  &.divider--vertical {
+    width: auto;
+    border-right: 1px solid rgba(var(--RGB-color-black), 0.1);
+    margin: 0 4px;
+  }
+}

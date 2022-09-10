@@ -1,3 +1,5 @@
+@import "../utils/_utils";
+
 .tabs:not(.list) {
   display: flex;
   font-weight: bold;
@@ -72,21 +74,7 @@
   position: relative;
   transition: .3s ease all;
 
-  &:before {
-    content: '';
-    display: block;
-    pointer-events: none;
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    color: inherit;
-    background-color: currentColor;
-    transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
-  }
+  @extend %before-hover;
 
   &:hover:before {
     opacity: 0.15;
@@ -116,24 +104,10 @@
   }
 }
 
-
 .tab-panel {
   display: none;
 
   &.tab-panel--active {
     display: block;
-  }
-}
-
-
-.night-mode {
-  .tabs {
-    &:after {
-      background-color: rgba($white, 0.5);
-    }
-  }
-
-  .tab {
-    color: $white;
   }
 }

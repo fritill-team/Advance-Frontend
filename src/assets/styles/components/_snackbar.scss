@@ -1,3 +1,5 @@
+@import "../utils/_utils";
+
 #snackbars {
   position: absolute;
   bottom: 16px;
@@ -118,21 +120,7 @@
       opacity: 0.15;
     }
 
-    &:before {
-      content: '';
-      display: block;
-      pointer-events: none;
-      border-radius: inherit;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      color: inherit;
-      background-color: currentColor;
-      transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
-    }
+    @extend %before-hover;
 
     &:focus {
       outline: none;

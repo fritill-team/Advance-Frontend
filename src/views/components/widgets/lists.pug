@@ -1,7 +1,3 @@
-mixin list(...items)
-  .list
-
-
 mixin list-item(title)
   .list-item
     .list-item__content
@@ -26,11 +22,51 @@ mixin list-item-after-label(title, id)
     block
 
 
+mixin list-item-after-link(title, url)
+  a.list-item.ripple(href=url)
+    .list-item__content
+      p.m-0=title
+    block
 
-mixin list-item-avatar(src, symbolSize='50')
+mixin list-item-multiple()
   .list-item
-    div(class="symbol symbol--" + symbolSize + "px")
-      div(style="background-image: url(" + src + ")" class="symbol__label")
+    .symbol.symbol--45px.align-self-start
+      .symbol__label F
     .list-item__content
       block
+    button.btn.btn--icon.btn-text.btn--primary.btn--text
+      i.material-icons more_vert
 
+mixin list-item-hover(color, active=false)
+  - var colorClass=" list-item--" + color
+  if (active)
+    - colorClass+= " list-item--active"
+
+  div(class=" list-item list-item--hover list-item--" + colorClass)
+    .symbol.symbol--45px.align-self-start
+      .symbol__label F
+    .list-item__content
+      a(href="" class="m-0") Sohype Khaled
+      span.text-gray.body-2.m-0 sohyper@mail.com
+    button.btn.btn--icon.btn-text.btn--primary.btn--text
+      i.material-icons more_vert
+
+mixin list-item-collapse(id)
+  .list-item
+    .symbol.symbol--45px.align-self-start
+      .symbol__label F
+    .list-item__content
+      p.m-0 Title
+    button.btn.btn--icon.btn-text.btn--primary.btn--text(data-toggle="collapsing" data-target="#" + id area-expanded="false")
+      i.material-icons expand_more
+  .list-group.list-group--45px.collapse(id=id)
+    .list-item
+      .list-item__content
+        p.m-0 Title
+      button.btn.btn--icon.btn-text.btn--primary.btn--text
+        i.material-icons more_vert
+    .list-item
+      .list-item__content
+        p.m-0 Title
+      button.btn.btn--icon.btn-text.btn--primary.btn--text
+        i.material-icons more_vert

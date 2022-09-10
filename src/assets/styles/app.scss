@@ -2,7 +2,6 @@
 @import "utils/mixins";
 @import "utils/_opacity";
 @import "utils/_utils";
-@import "custom/_bootstrap-override";
 
 @import "./base/_bootstrap-grid-rtl.scss";
 @import "layouts/_normalize.scss";
@@ -28,10 +27,8 @@
 @import "./components/_review.scss";
 @import "./components/_comments";
 @import "./components/_pagination.scss";
-@import "./components/category-list";
 
 @import "./components/_list-dropdown";
-@import "./components/_display-card.scss";
 @import "./components/_description-enroll";
 @import "./components/_filter";
 @import "./components/exam";
@@ -84,6 +81,7 @@
 @import "./components/dialog";
 @import "./components/_dropdown.scss";
 @import "./components/_card";
+@import "./components/_display-card.scss";
 @import "./components/_badge";
 @import "./components/_banner";
 @import "./components/_buttons";
@@ -91,6 +89,8 @@
 @import "./components/_symbol";
 @import "./components/_gallery";
 @import "./components/_progress";
+@import "./components/_divider";
+@import "components/_collapse";
 
 
 // pages

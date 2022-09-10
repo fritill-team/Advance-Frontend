@@ -3,18 +3,16 @@ mixin dropdown
 		button(class="btn dropdown__activator btn--primary btn--text btn--sm btn--icon" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown")
 			block
 		div(class="dropdown-menu dropdown__content")
-			.list.list--condensed
-				a(href="#" class="list-item list-item--one-line list-item--condensed list-item--open ")
+			.list
+				a(href="#" class="list-item  list-item--condensed list-item--open ")
 					.list-item__avatar
 						i.far.fa-copy
 					.list-item__content
 						span.body-2.bold Edit
-					.list-item__action
-				a(href="#" class="list-item list-item--one-line  list-item--condensed list-item--open ")
+				a(href="#" class="list-item   list-item--condensed list-item--open ")
 					.list-item__avatar
 						i.far.fa-copy
 					.list-item__content
 						span.body-2.bold Delete
-					.list-item__action
 
 

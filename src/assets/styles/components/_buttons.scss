@@ -1,3 +1,5 @@
+@import "../utils/_utils";
+
 a.btn,
 button.btn,
 input[type="button"].btn,
@@ -17,32 +19,20 @@ input[type="submit"].btn {
   //white-space: nowrap;
   cursor: pointer;
   letter-spacing: 1.25px;
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1),
+  all 0.3s ease;
   margin: 0 5px 0 0;
 
   &:last-of-type {
     margin-right: 0;
   }
 
+  @extend %before-hover;
+
   &:hover:before {
     opacity: 0.15;
   }
 
-  &:before {
-    content: "";
-    display: block;
-    pointer-events: none;
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    color: inherit;
-    background-color: currentColor;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
-  }
 
   &:focus {
     outline: none;

@@ -1,0 +1,9 @@
+.collapse-toggle {
+  position: relative;
+}
+
+.collapse {
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  height: auto;
+}
