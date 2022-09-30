@@ -1,0 +1,13 @@
+extends ../../../layouts/site.pug
+
+
+block title
+  title cards
+
+block content
+  .container
+    h1 Circular Progress Bar
+    .row
+      .col-md-6
+        .circular-progress(data-radius="80" id="progress-1")
+          input(type="hidden" class="circular-progress__value" value="0")

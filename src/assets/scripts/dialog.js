@@ -1,4 +1,4 @@
-import {openOverlay,  closeOverlay} from "./overlay";
+import {closeOverlay, openOverlay} from "./overlay";
 
 
 $(document)
@@ -12,19 +12,19 @@ $(document)
     closeOverlay()
     $(this).closest('.dialog').removeClass('dialog--show')
   })
-  // .mouseup(function (e) {
-  //   if(!$(event.target).closest(".dialog").length){
-  //     closeOverlay()
-  //     $('.dialog').each(function () {
-  //       $(this).removeClass('dialog--show')
-  //     })
-  //   }
-  // })
-  .on('keyup', function(e) {
-    if (e.key === "Escape") {
+  .on('keyup', function (e) {
+    let dialog = $('.dialog')
+    if (e.key === "Escape" && dialog.hasClass("dialog--show")) {
+      closeOverlay()
+      $(this).closest('.dialog').removeClass('dialog--show')
+    }
+  })
+  .mouseup(function (e) {
+    if(!$(event.target).closest(".dialog").length){
       closeOverlay()
       $('.dialog').each(function () {
         $(this).removeClass('dialog--show')
       })
     }
-  });
+  })
+

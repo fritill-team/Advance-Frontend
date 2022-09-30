@@ -14,18 +14,18 @@ block content
             .field-wrapper
               label.field-wrapper__label Card Number
               .field-wrapper__content
-                input(class="field card-number-input" placeholder="0000 0000 0000 0000")
+                input(class="field" data-input-mask="credit_card_number" placeholder="0000 0000 0000 0000")
 
           .col-6
             .field-wrapper
               label.field-wrapper__label Expiry Date
               .field-wrapper__content
-                input(class="field expiry-input" )
+                input(class="field" data-input-mask="expiry-input")
           .col-6
             .field-wrapper
               label.field-wrapper__label CVV
               .field-wrapper__content
-                input(class="field cvv-input" )
+                input(class="field" data-input-mask="cvv")
           .col-12
             .field-wrapper
               label.field-wrapper__label Card Holder Name

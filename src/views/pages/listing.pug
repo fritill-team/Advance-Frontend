@@ -5,8 +5,9 @@ include ../components/widgets/inputs
 
 block title
   title Courses
+
 block content
-  div.courses
+  form.filter
     .page__cover
       img(src="../../assets/images/courses-header-img.png", alt="", srcset="")
       .container
@@ -14,63 +15,42 @@ block content
           h1.page__cover-content-title Courses
 
     .container
-      .card
-        .card__content.d-flex.flex-column.flex-md-row.align-items-sm-center
-          .field-wrapper
-            .switch
-              input#label(class="field" type="checkbox", name="")
-              label(for="label") label
+
+      .card.filter__header
+        .filter__options
+          +switch('checkbox', 'switch-1', 'Option 1', 'switch-1')
+          +switch('checkbox', 'switch-2', 'Option 2', 'switch-2')
+          +switch('checkbox', 'switch-3', 'Option 3', 'switch-3')
+          +switch('checkbox', 'switch-4', 'Option 4', 'switch-4')
 
           .field-wrapper
-            .switch
-              input#label2(class="field" type="checkbox", name="")
-              label(for="label2") label 2
+            .field-wrapper__content
+              select.field
+                option(value='') Select option
+                option(value='1') option 1
+                option(value='2') option 2
+                option(value='3') option 3
+                option(value='4') option 4
+                option(value='5') option 5
 
-          .field-wrapper
-            .switch
-              input#label3(class="field" type="checkbox", name="")
-              label(for="label3") label 3
+        div(class="filter__toggles" data-target="flex-grow-1")
+          button(type="button" class="btn btn--icon btn--text btn--primary filter__list-toggle")
+            i.material-icons filter_list
+          button(type="button" class="btn btn--icon btn--text btn--primary filter__switch-display-type-toggle" data-view="list")
+            i.material-icons list
+          button(type="button" class="btn btn--icon btn--primary filter__switch-display-type-toggle" data-view="grid")
+            i.material-icons grid_view
 
-          .field-wrapper
-            .switch
-              input#label4(class="field" type="checkbox", name="")
-              label(for="label4") label 4
-
-          .field-wrapper__content
-            select.field
-              option(value='') Select option
-              option(value='1') option 1
-              option(value='2') option 2
-              option(value='3') option 3
-              option(value='4') option 4
-              option(value='5') option 5
-
-          div(class="listing-header__actions" data-target=".display-card-container")
-            button(class="btn btn--icon btn--text btn--primary filters-toggle")
-              i.material-icons filter_list
-            button(class="btn btn--icon btn--text btn--primary switch-view" data-view="list")
-              i.material-icons list
-            button(class="btn btn--icon btn--primary switch-view" data-view="grid")
-              i.material-icons grid_view
-
-      //.listing-header.my-5
-      //  p.listing-header__title results (
-      //    span.num-result 15)
-      //
-
-      //
-      //  div.listing-header__sort
-
-      //
-
-
-      .row.mt-4
+      .row
         .col-md-4.col-lg-3
-          .card.filter-list
+          .card.filter__list#filters-list
             .card__header
               h4.card__title Filters
               .card__header-actions
-                button.btn.btn--primary.btn--icon
+                button.btn.btn--danger.btn--icon.btn--text.filter__list-close(type='button')
+                  i.material-icons close
+                button.btn.btn--primary.btn--icon.filter__list-close(type='submit')
+                  i.material-icons check
             form
               .card__content
                 .list
@@ -82,10 +62,26 @@ block content
                     button(class="btn btn--icon btn--text btn--sm" data-name='type-1' data-value='type1')
                       i.material-icons close
                 .divider
-                +group-check-field-wrapper('checkbox', 'Type', 'type-1', 'type-1', ["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8"])
+                +group-check-field-wrapper-with-label-slot('checkbox', 'collapse', 'Type', 'type-1', 'type-1', ["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8"])
+                  button(
+                    type="button"
+                    class="btn btn--icon btn--text btn--primary btn--sm"
+                    data-toggle="collapsing"
+                    data-target="#type-1"
+                    data-allow-rotate="true"
+                    aria-expanded="true")
+                    i.material-icons expand_more
                 .divider
-                +group-check-field-wrapper('radio', "اختيارات اخرى", 'type-2', 'type-2', ["الاختيار الاول", "الاختيار الثانى", "الاختيار الثالث", "الاختيار الرابع"])
-                .divider
+                +group-check-field-wrapper-with-label-slot('radio','collapse', "اختيارات اخرى", 'type-2', 'type-2', ["الاختيار الاول", "الاختيار الثانى", "الاختيار الثالث", "الاختيار الرابع"])
+                  button(
+                    type="button"
+                    class="btn btn--icon btn--text btn--primary btn--sm"
+                    data-toggle="collapsing"
+                    data-target="#type-2"
+                    data-allow-rotate="true"
+                    aria-expanded="true")
+                    i.material-icons expand_more
+
               .card__footer
                 button.btn.btn--primary.btn--block filter items
 

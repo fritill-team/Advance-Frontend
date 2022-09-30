@@ -27,7 +27,7 @@
       .card-list
         .card__content
           .list
-            .list-item.list-item--multiple.
+            .list-item
               .symbol.symbol--35px.symbol--circle
                 .symbol__label(style="background-image:url(../../assets/images/profile.png)")
               .list-item__content
@@ -71,7 +71,7 @@
       .card-list
         .card__content
           .list
-            .list-item.list-item--multiple.
+            .list-item
               .symbol.symbol--35px.symbol--circle
                 .symbol__label(style="background-image:url(../../assets/images/profile.png)")
               .list-item__content
@@ -109,10 +109,10 @@
                 a(href="#" class="body-2 bold") Jose Portilla
 
   .dropdown.dropdown--header
-    img(src='../../assets/images/profile.png' alt='' class="dropdown__activator profile-link__img image image--xs-small-profile image--rounded"
-      aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" data-offset="0,16")
-    .dropdown__content.dropdown-menu
-      .list
+    img(src='../../assets/images/profile.png' alt='' class="dropdown__activator profile-link__img image image--xs-small-profile image--rounded" style="width:300px;" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false" data-offset="0,16")
+    .dropdown__content.dropdown-menu#user-menu
+      .list.my-2.px-2
         .list-item
           .symbol.symbol--35px.symbol--circle
             .symbol__label
@@ -133,15 +133,21 @@
             input(class="dark-mode-toggle" id="dark-mode-toggle" type="checkbox")
             label(for="dark-mode-toggle")
         .divider
-        .list-item
-          .list-item__content
-            a(href="#" class="body-2") Lorem ipsum
-        .list-item
-          .list-item__content
-            a(href="#" class="body-2") Lorem ipsum
-        .list-item
-          .list-item__content
-            a(href="#" class="body-2") Lorem ipsum
-        .list-item
-          .list-item__content
-            a(href="#" class="body-2") Lorem ipsum
+        a.list-item(data-toggle="collapsing"
+          aria-expanded="false" data-target="#language-options" data-allow-rotate="false")
+          span.symbol.symbol--50px
+            span.symbol__label
+              i.material-icons translate
+          span.list-item__content
+            p(class="m-0 text-weight-500") Language
+          span.badge.badge--primary Arabic
+
+        .list-group.collapse#language-options
+          .list-item.list-item--hover
+            .list-item__content
+              p.m-0 English
+          .list-item.list-item--hover
+            .list-item__content
+              p.m-0 Arabic
+
+

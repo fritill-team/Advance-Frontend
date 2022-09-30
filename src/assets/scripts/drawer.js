@@ -52,7 +52,7 @@ const startDrawerTransition = $drawer => {
     drawer.find('.list-item').each(function () {
       $(this).tooltipster('enable')
     })
-    drawer.find('[data-toggle=collapsing][area-expanded=true]').each(function () {
+    drawer.find('[data-toggle=collapsing][aria-expanded=true]').each(function () {
       collapse($(this))
     })
   }

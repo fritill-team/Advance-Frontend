@@ -30,7 +30,6 @@
 
 @import "./components/_list-dropdown";
 @import "./components/_description-enroll";
-@import "./components/_filter";
 @import "./components/exam";
 @import "./components/_thread";
 
@@ -42,7 +41,6 @@
 @import "./components/_plan";
 
 //@import "./components/_courses";
-@import "./components/_filter-list";
 @import "./components/_service-excerpt";
 
 //TODO Remove this file
@@ -70,6 +68,7 @@
 // components
 @import "components/_user.scss"; // TODO Delete or Use
 @import "components/_post.scss";
+@import "./components/_filter";
 @import "./components/_tabs.scss";
 @import "./components/_carousels";
 @import "./components/_chip";

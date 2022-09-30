@@ -52,6 +52,17 @@
         padding-right: 60px;
       }
     }
+
+    .list-item {
+      :not(:first-child) {
+        opacity: 0;
+      }
+
+      .list-item__content,
+      .btn {
+        display: none;
+      }
+    }
   }
 
   &.drawer--partially-closed.drawer--open,
@@ -63,6 +74,19 @@
     .list-item {
       :not(:first-child) {
         opacity: 1;
+      }
+
+      //:not(:first-child),
+      //:not(.list-item__content) {
+      //  display: block;
+      //}
+
+      .list-item__content {
+        display: flex;
+      }
+
+      .btn {
+        display: block;
       }
     }
   }
@@ -84,12 +108,5 @@
     height: 100%;
     width: 80%;
     z-index: 4;
-  }
-
-
-  .list-item {
-    :not(:first-child) {
-      opacity: 0;
-    }
   }
 }

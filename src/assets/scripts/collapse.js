@@ -1,11 +1,14 @@
 export const collapse = $el => {
     let $target = $($el.data('target')),
-      areaExpanded = $el.attr("area-expanded") === 'true',
-      allowRotate = $el.attr("allow-rotate") ? $el.attr("allow-rotate") === 'true' : true,
+      ariaExpanded = $el.attr("aria-expanded") === 'true',
+      allowRotate = typeof $el.data("allow-rotate") !== 'undefined' ? $el.data("allow-rotate") : true,
       $rotateIndicator = $el.find('[data-rotate-indicator=true]'),
       height = $target.data('height')
 
-    if (areaExpanded) {
+
+    if (ariaExpanded) {
+      $target.trigger('collapsing')
+
       requestAnimationFrame(() => {
         $target.css('height', `${height}px`)
         requestAnimationFrame(() => {
@@ -16,44 +19,57 @@ export const collapse = $el => {
         $el.css('transform', 'rotate(0deg)')
       if ($rotateIndicator.length)
         $rotateIndicator.css('transform', 'rotate(0deg)')
-      $el.attr("area-expanded", false)
+      $el.attr("aria-expanded", false)
+      $target.trigger('collapsed')
     }
   },
   expand = $el => {
     let $target = $($el.data('target')),
-      areaExpanded = $el.attr("area-expanded") === 'true',
-      allowRotate = $el.attr("allow-rotate") ? $el.attr("allow-rotate") === 'true' : true,
+      ariaExpanded = $el.attr("aria-expanded") === 'true',
+      allowRotate = typeof $el.data("allow-rotate") !== 'undefined' ? $el.data("allow-rotate") : true,
       $rotateIndicator = $el.find('[data-rotate-indicator=true]'),
-      height = $target.data('height')
-
-    if (!areaExpanded) {
+      height = $target.data('height') ? $target.data('height') : 'auto'
+    if (!ariaExpanded) {
+      $target.trigger('expanding')
 
       $target.css('height', height)
       if (allowRotate)
         $el.css('transform', 'rotate(180deg)')
-
       if ($rotateIndicator.length)
         $rotateIndicator.css('transform', 'rotate(180deg)')
-      $el.attr("area-expanded", true)
+      $el.attr("aria-expanded", true)
+      $target.trigger('expanded')
     }
   }
 
 
-$('.collapse').each(function () {
-  let $this = $(this)
-  $this.data('height', $this[0].scrollHeight)
-  $this.css('height', 0)
-})
+;(function () {
+  $('[data-toggle=collapsing]').each(function (i, item) {
+    let $item = $(item),
+      $target = $($item.data('target')),
+      ariaExpanded = $item.attr('aria-expanded') === 'true',
+      allowRotate = typeof $item.data("allow-rotate") !== 'undefined' ? $item.data("allow-rotate") : true,
+      $rotateIndicator = $item.find('[data-rotate-indicator=true]')
 
-
-$('[data-toggle=collapsing]')
-  .on('click', function () {
-    let $this = $(this),
-      areaExpanded = $this.attr("area-expanded") === 'true'
-
-    if (areaExpanded)
-      collapse($this)
-    else
-      expand($this)
+    $target.data('height', $target.height())
+    if (!ariaExpanded) {
+      $target.css('height', 0)
+    } else {
+      if (allowRotate)
+        $item.css('transform', 'rotate(180deg)')
+      if ($rotateIndicator.length)
+        $rotateIndicator.css('transform', 'rotate(180deg)')
+    }
   })
+}())
+
+
+$('[data-toggle=collapsing]').on('click', function () {
+  let $this = $(this),
+    ariaExpanded = $this.attr("aria-expanded") === 'true'
+  if (ariaExpanded)
+    collapse($this)
+  else
+    expand($this)
+})
 

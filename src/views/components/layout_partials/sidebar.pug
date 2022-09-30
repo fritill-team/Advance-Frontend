@@ -3,7 +3,7 @@
 
 mixin sidebar-list-item-action(i, items=[])
   if (items.length)
-    button.btn.btn--icon.btn-text.btn--primary.btn--text(data-toggle="collapsing" data-target="#" + i area-expanded="false" data-rotate-indicator="true")
+    button.btn.btn--icon.btn-text.btn--primary.btn--text(data-toggle="collapsing" data-target="#" + i aria-expanded="false" data-rotate-indicator="true")
       i.material-icons expand_more
 
 
@@ -20,8 +20,8 @@ mixin list-item-el(i, item)
       title=item.title
       data-toggle="collapsing"
       data-target="#" + i
-      area-expanded="false"
-      allow-rotate="false")
+      aria-expanded="false"
+      data-allow-rotate="false")
       block
   else
     a(href=item['url'] class='list-item  list-item--hover' title=item.title)
@@ -77,7 +77,7 @@ mixin home-sidebar()
         .col-4.d-flex.justify-content-center
           a.symbol.symbol--100.symbol--65px.w-100(href='')
             .symbol__label
-              i.material-icons-outlined question
+              i.material-icons-outlined question_mark
             .symbol__text Ask Question
 
       .divider.mb-3

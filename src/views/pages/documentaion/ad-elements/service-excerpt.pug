@@ -12,9 +12,19 @@ block content
     h2 service-excerpt
     h3 English
     +service-excerpt("Occupational preference survey", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem consequatur dolores", "Take survey")
+      .service-excerpt__floating-label
+        .symbol.symbol--45px.sybmol--cricle
+          .symbol__label A
+        .d-flex.flex-column.ms-1
+          a(href="" class="text-weight-600 m-0 text-primary") Lorem ipsum dolor.
+          p.m-0.fs-14.text-gray Lorem ipsum dolor sit amet, consectetur.
 
     h3 Arabic
     +service-excerpt("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع")
+      .service-excerpt__floating-label
+        img(src="../../../assets/images/NBE.svg", alt="nbe bank", srcset="", class="w-100 h-100")
 
     h3 Inverted
-      +service-excerpt-inverted("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع")
+      +service-excerpt("مسح التفضيل المهني", " التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه","شارك في الاستطلاع", true)
+        .service-excerpt__floating-label
+          img(src="../../../assets/images/NBE.svg", alt="nbe bank", srcset="", class="w-100 h-100")

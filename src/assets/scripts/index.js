@@ -32,7 +32,7 @@ import '../vendor/fieldChooser.min'
 import './drag-drop-multifield'
 import './backend_scripts/panel-loader'
 import './multi-select'
-
+import './progress'
 
 import './overlay'
 import './listing'

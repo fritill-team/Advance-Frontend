@@ -29,9 +29,31 @@ mixin checkfield-group(type, name, values, horizonal=false)
 
 
 mixin group-check-field-wrapper(type, label, id, name, values, horizonal=false)
-  .field-wrapper
-    label(class="field-wrapper__label" for=id)= label
+  .field-wrapper(id=id)
+    label(class="field-wrapper__label")= label
     +checkfield-group(type, name, values, horizonal)
+
+
+mixin checkfield-group-with-class(className,id, type, name, values, horizonal=false)
+  - var fieldWrapperClass = "check-field-group " + className
+  if horizonal
+    - fieldWrapperClass += " check-field-group--horizontal"
+
+  div(class=fieldWrapperClass id=id)
+    each val in values
+      if type === 'checkbox'
+        +checkbox(val, val, name)
+      else if type === 'radio'
+        +radio(val, val, name)
+
+mixin group-check-field-wrapper-with-label-slot(type, className,label, id, name, values, horizonal=false)
+  .field-wrapper
+    label(class="field-wrapper__label")
+      span=label
+      block
+    +checkfield-group-with-class(className,id, type, name, values, horizonal)
+
+
 
 mixin check-field-wrapper(type, label, id, name)
   .field-wrapper
@@ -42,8 +64,13 @@ mixin check-field-wrapper(type, label, id, name)
       else if type === 'radio'
         +radio(label, id, name)
 
-mixin switch()
+mixin switch(type, id, label, name, value=null)
   .field-wrapper
+    .switch
+      .switch__control
+        input(type=type name=name id=id value=value)
+        label(for=id)
+      label(for=id class='switch__label')= label
 
 
 mixin text-field(type, label, id, name, placeholder, error=false, messages=[])

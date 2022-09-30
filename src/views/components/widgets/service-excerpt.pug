@@ -1,27 +1,18 @@
-mixin service-excerpt(title, desc, action)
-  section.service-excerpt.d-md-flex
+mixin service-excerpt(title, desc, action, inverted=false)
+  - var invertedClass= ''
+  - var invertedRow = ''
+  if inverted
+    - invertedClass = ' service-excerpt--inverted'
+    - invertedRow = ' flex-row-reverse'
+  div(class="row align-items-center" + invertedRow)
+    .col-12.col-md-6
+      div
+        h2.text-primary.text-weight-500= title
+          p.partners__details= desc
+          div.d-flex.justify-content-sm-center.justify-content-md-start
+            button.btn.btn--primary.btn--lg.mt-3= action
 
-    .service-excerpt__content
-      h2.text-primary.text-weight-500= title
-      p.partners__details= desc
-      div.d-flex.justify-content-center
-        button.btn.btn--primary.btn--lg.mt-3= action
-
-    div.service-excerpt__image
-      img(src="../../../assets/images/become_instructor_banner.jpg", alt="", srcset="", class="service-excerpt__image__section-img")
-      img(src="../../../assets/images/NBE.svg", alt="nbe bank", srcset="", class="service-excerpt__image__small-img")
-
-
-mixin service-excerpt-inverted(title, desc, action)
-  .service-excerpt.service-excerpt--inverted.d-md-flex
-    .service-excerpt__content
-      h2.text-primary.text-weight-500= title
-      p.partners__details= desc
-      div.d-flex.justify-content-center
-        button.btn.btn--primary.btn--lg.mt-3= action
-
-    .service-excerpt__image
-      img(src="../../../assets/images/become_instructor_banner.jpg", alt="", srcset="", class="service-excerpt__image__section-img")
-      img(src="../../../assets/images/NBE.svg", alt="nbe bank", srcset="", class="service-excerpt__image__small-img")
-
-
+    .col-12.col-md-6
+      div(class="service-excerpt" + invertedClass)
+        img(src="../../../assets/images/become_instructor_banner.jpg", alt="", srcset="", class="service-excerpt__image")
+        block
