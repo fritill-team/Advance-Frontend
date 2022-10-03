@@ -401,7 +401,7 @@ textarea.field {
   border: 1px solid #e5e5e5;
 
   &:focus {
-    // color: $input-color;
+    // color: var(--color-gray);
     border-bottom: 1px solid rgba(var(--RGB-color-primary), 0.5);
   }
 }

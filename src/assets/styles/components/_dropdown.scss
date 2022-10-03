@@ -20,7 +20,7 @@
     z-index: 1000;
     border-radius: 5px;
     //transform-origin: top;
-    background-color: $white;
+    background-color: var(--color-white);
     //transition: all 100ms ease;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     // transform: perspective(400px) rotateX(-90deg);
@@ -55,7 +55,7 @@
     margin-right: 25px;
     position: relative;
     a.notification__item {
-      color: $white;
+      color: var(--color-white);
       font-size: 20px;
       height: 24px;
       margin: 0;

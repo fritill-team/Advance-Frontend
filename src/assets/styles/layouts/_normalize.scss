@@ -306,12 +306,12 @@ label:focus-visible {
 
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
-  color: $input-color;
+  color: var(--color-gray);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: $input-color;
+  color: var(--color-gray);
   opacity: 1; /* Firefox */
 }
 
@@ -347,15 +347,15 @@ select:focus-visible {
 //   margin: 0;
 //   outline: none;
 //   font-size: 1em;
-//   background: $white;
-//   color: $input-color;
+//   background: var(--color-white);
+//   color: var(--color-gray);
 //   border-radius: 10px;
 //   padding: 1em;
 //   resize: none;
 //   border: 1px solid #e5e5e5;
 
 //   &:focus {
-//     color: $input-color;
+//     color: var(--color-gray);
 //     border-bottom: 1px solid rgba(var(--RGB-color-primary), 0.5);
 //   }
 // }

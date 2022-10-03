@@ -29,7 +29,7 @@
 }
 
 @mixin full-star-before {
-  color: $yellow;
+  color: var(--color-warning);
   content: "\f005";
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -38,7 +38,7 @@
 }
 
 @mixin hulf-star-before {
-  color: $yellow;
+  color: var(--color-warning);
   content: "\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -91,14 +91,14 @@
   display: flex;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: $light-white;
+  background-color: var(--color-primary);
   border-radius: 0.25rem;
 
   .progress--progress-bar {
     background-color: var(--color-accent);
     flex-direction: column;
     justify-content: center;
-    color: $white;
+    color: var(--color-white);
     text-align: center;
     white-space: nowrap;
     transition: width 0.6s ease;
@@ -124,8 +124,8 @@
   width: 100%;
   font-size: 16px;
   justify-content: space-between;
-  background: $light-white;
-  border: 1px solid $light-white;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
   padding: 10px 20px;
   border-radius: 20px;
 
@@ -134,7 +134,7 @@
     font-weight: 500;
     text-align: left;
     margin-bottom: 0;
-    color: $darkBlack;
+    color: var(--color-black);
     margin-right: 10px;
     line-height: 22px;
   }
@@ -185,14 +185,14 @@
     font-weight: 500;
     text-align: left;
     margin-bottom: 0;
-    color: $darkBlack;
+    color: var(--color-black);
     margin-left: 10px;
     line-height: 22px;
   }
 }
 
 .rating__rating-box {
-  color: $light-white;
+  color: var(--color-primary);
   display: flex;
   flex-basis: 30%;
 
@@ -230,7 +230,7 @@
   font-weight: 500;
   text-align: left;
   margin-bottom: 0;
-  color: $darkBlack;
+  color: var(--color-black);
   margin-left: 10px;
   line-height: 22px;
 }
@@ -249,7 +249,7 @@
       font-weight: 500;
       text-align: left;
       margin-bottom: 0;
-      color: $darkBlack;
+      color: var(--color-black);
       float: left;
     }
 
@@ -259,14 +259,14 @@
       position: relative;
 
       .search__input {
-        color: $darkBlack !important;
+        color: var(--color-black) !important;
         height: 30px;
         font-size: 12px;
         font-weight: 400;
         padding-left: 15px;
         padding-right: 40px;
         width: 100%;
-        border: 1px solid $light-white;
+        border: 1px solid var(--color-primary);
         border-radius: 20px;
       }
 
@@ -279,7 +279,7 @@
         height: 26px;
         width: 26px;
         background: var(--color-primary);
-        color: $white;
+        color: var(--color-white);
         font-size: 14px;
       }
     }
@@ -287,7 +287,7 @@
 }
 
 .item__rating-box {
-  color: $white;
+  color: var(--color-white);
   display: flex;
   flex-basis: 30%;
   margin: 10px 0px;
@@ -327,7 +327,7 @@
   line-height: 26px;
   text-align: left;
   font-weight: 400;
-  color: $darkGray;
+  color: var(--color-gray);
 }
 
 .reviews {
@@ -339,9 +339,9 @@
   .reviews__all-reviews {
     float: left;
     width: 100%;
-    background: $white;
+    background: var(--color-white);
     padding: 20px;
-    border: 1px solid $light-white;
+    border: 1px solid var(--color-primary);
     border-radius: 10px;
 
     .all-reviews__details-rate {
@@ -360,13 +360,13 @@
   .review__all-reviews {
     float: left;
     width: 100%;
-    background: $white;
+    background: var(--color-white);
     border-radius: 10px;
     padding: 15px;
 
     .all-reviews__item {
       padding: 20px;
-      border-bottom: 1px solid $light-white;
+      border-bottom: 1px solid var(--color-primary);
 
       .item__helpful {
         display: flex;
@@ -375,7 +375,7 @@
         .helpful__ask {
           font-size: 14px;
           font-weight: 400;
-          color: $darkBlack;
+          color: var(--color-black);
           line-height: 24px;
           margin-right: 10px;
         }
@@ -395,7 +395,7 @@
 
             .item__radio-label {
               font-weight: 400;
-              color: $darkBlack;
+              color: var(--color-black);
               font-size: 14px;
               line-height: 12px;
               margin-bottom: 0;
@@ -403,9 +403,9 @@
 
               &::before {
                 content: "";
-                background: $light-white;
+                background: var(--color-primary);
                 border-radius: 100%;
-                border: 1px solid $light-gray;
+                border: 1px solid var(--color-gray);
                 display: inline-block;
                 width: 1em;
                 height: 1em;
@@ -421,7 +421,7 @@
 
             input[type="radio"]:checked + .item__radio-label:before {
               background-color: var(--color-primary);
-              box-shadow: inset 0 0 0 2px $light-white;
+              box-shadow: inset 0 0 0 2px var(--color-primary);
             }
           }
         }
@@ -431,7 +431,7 @@
           line-height: 24px;
           margin-left: 5px;
           font-weight: 400;
-          color: $darkBlack;
+          color: var(--color-black);
         }
       }
     }
@@ -444,14 +444,14 @@
 
 .all-reviews__review-item {
   padding: 20px;
-  border-bottom: 1px solid $light-white;
+  border-bottom: 1px solid var(--color-primary);
 
   .review-item__more-reviews {
     display: block;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
-    color: $darkBlack;
+    color: var(--color-black);
   }
 }
 

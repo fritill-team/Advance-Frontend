@@ -50,15 +50,25 @@ mixin default-sidebar()
         - i++
 
 
+mixin no-overlay-sidebar()
+  - var sidebarItems = JSON.parse(items)
+  - var i = 0
+  #left-sidebar.drawer.drawer--left.drawer--open.drawer--default-open
+    .list
+      each item in sidebarItems
+        +sidebar-list-item(i, item)
+        - i++
+
+
 mixin home-sidebar()
   - var sidebarItems = JSON.parse(items)
 
-  #quick-sidebar.drawer.drawer--left.drawer--overlay
+  #quick-sidebar.drawer.drawer--left.drawer--overlay.drawer--full-height
     .drawer__header
       .p.text-gray.text-weight-600.fs-24 Itqadem
       button(class='btn btn--icon btn--text toggle-drawer' data-target="#quick-sidebar")
         i.material-icons close
-    .divider
+    .divider.mt-0
     .container.mt-4.mb-5
       p.body-2.text-gray.text-weight-600 Quick Access
       .row

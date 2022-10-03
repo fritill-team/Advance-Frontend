@@ -17,7 +17,8 @@ block content
     button(class="toggle-drawer btn btn--accent btn--icon btn--lg" data-target="#quick-sidebar")
       i.material-icons-outlined widgets
 
-  section.home-section
+  section.home-section.home-section--flush
+    div(style="background: url(../../assets/images/home-cover.png)" class="opacity-3 position-absolute top-0 left-0 right-0 bottom-0 object-fit-cover h-100 w-100")
     .container
       +home-main-slider
   section.home-section
@@ -37,7 +38,7 @@ block content
             img(src="../../assets/images/DrososLogoPrint.svg" alt="" class="partner__image")
             img(src="../../assets/images/Drosos2.svg" alt="" class="partner__image-inverted")
 
-  section.home-section
+  section.home-section.home-section--flush
     .container
       .row
         .col-sm-12.col-md-4.mb-3
@@ -60,13 +61,19 @@ block content
             +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
             +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
 
-  section.home-section
     .container
       +default-banner("top Article", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti inventore nihil quae.")
+
 
   section.home-section
     .container
       +service-excerpt("Occupational preference survey","Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry", "Take survey")
+      .carousel.owl-carousel
+        +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+        +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+        +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+        +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
+        +blog-card("title course", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis,")
 
   //section.home-section
   //  .container

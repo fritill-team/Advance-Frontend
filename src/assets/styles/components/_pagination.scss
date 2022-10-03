@@ -9,7 +9,7 @@
     //@include whiteTypo;
     button.btn{
       &.btn--primary{
-        color: $white;
+        color: var(--color-white);
       }
     }
   }

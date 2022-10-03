@@ -5,7 +5,7 @@ $(document)
   .on('click', '.toggle-dialog', function () {
     let self = $(this),
       $target = $(self.data('target'))
-    openOverlay()
+    openOverlay(true, true)
     $target.addClass('dialog--show')
   })
   .on('click', '.close-dialog', function () {
@@ -20,11 +20,12 @@ $(document)
     }
   })
   .mouseup(function (e) {
-    if(!$(event.target).closest(".dialog").length){
-      closeOverlay()
-      $('.dialog').each(function () {
-        $(this).removeClass('dialog--show')
-      })
+    if (!$(event.target).closest(".dialog").length) {
+      var dialog = $('.dialog')
+      if (dialog.hasClass('dialog--show')) {
+        closeOverlay()
+        dialog.removeClass('dialog--show')
+      }
     }
   })
 

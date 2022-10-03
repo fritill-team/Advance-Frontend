@@ -16,7 +16,7 @@
     padding: 10px 15px;
     border: 0;
     border-radius: 20px;
-    color: $white;
+    color: var(--color-white);
     background: var(--color-primary);
     font-size: 14px;
     font-weight: 500;
@@ -27,7 +27,7 @@
 .group__textarea {
   height: 40px;
   font-size: 14px;
-  border: 1px solid $light-white;
+  border: 1px solid var(--color-white);
   width: 100%;
   overflow: hidden;
   word-wrap: break-word;

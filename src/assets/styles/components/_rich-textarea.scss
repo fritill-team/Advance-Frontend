@@ -41,7 +41,7 @@
   p {
     font-size: 0.9em;
     // line-height: 26px;
-    color: $pColor;
+    //color: $pColor;
   }
   strong {
     font-weight: bold;
@@ -56,10 +56,10 @@
     text-decoration-line: line-through;
   }
   a {
-    color: $linkColor;
+    //color: $linkColor;
     font-weight: 500;
     &:hover {
-      color: $linkColor !important;
+      //color: $linkColor !important;
       text-decoration: underline !important;
     }
   }

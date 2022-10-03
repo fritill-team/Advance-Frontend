@@ -1,10 +1,13 @@
 extends ./master
 
 block body
+  include ../components/layout_partials/sidebar
   include ../components/headers/header-admin
   - var classes = ['drawers-container']
+
   div(class=classes class=[''])
     block left
     .page
       .page__content.page__content-fit-window.m-0
         block content
+    +no-overlay-sidebar

@@ -2,8 +2,8 @@
 .footer {
   position: relative;
   // margin-top: 60px;
-  // background: darken($secondary, 5%); //
-  background-color: lighten($primary, 3%);
+  // background: darken(var(--color-secondary), 5%); //
+  background-color: lighten(var(--color-primary), 3%);
   width: 100%;
   .footer__background {
     position: absolute;
@@ -35,7 +35,7 @@
     justify-content: flex-end;
     height: auto;
     a {
-			color: $white;
+			color: var(--color-white);
       &:hover {
         color: #fff;
       }
@@ -139,6 +139,6 @@ html[dir="rtl"] {
 }
 .night-mode {
   .footer {
-    background-color: $black;
+    background-color: var(--color-black);
   }
 }

@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   width: 50%;
   display: none;
-  z-index: 8;
+  z-index: 10;
 
 
   &.dialog--show {
@@ -19,6 +19,7 @@
   &.dialog--lg {
     width: 75%;
   }
+
   .card {
     margin-bottom: 0;
   }

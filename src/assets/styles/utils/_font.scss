@@ -1,0 +1,20 @@
+$fontSizes: (10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96);
+
+@each $fontSize in $fontSizes {
+  .fs-#{$fontSize} {
+    font-size: #{$fontSize}px !important;
+  }
+}
+
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}

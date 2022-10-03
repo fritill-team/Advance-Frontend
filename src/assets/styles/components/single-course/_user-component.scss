@@ -81,7 +81,7 @@
   padding: 16px;
   border-radius: 5px;
   align-items: center;
-  background-color: $white;
+  background-color: var(--color-white);
   max-width: 400px;
   width: auto;
   // @include normalizeTypo;

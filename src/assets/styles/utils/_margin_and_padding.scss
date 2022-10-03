@@ -1,0 +1,105 @@
+$margins: (0.25, 0.5, 1, 1.5, 3);
+
+@for $i from 1 through length($margins) {
+  $c: nth($margins, $i);
+  .ms-#{$i} {
+    [dir=rtl] & {
+      margin-right: #{$c}rem;
+    }
+
+    [dir=ltr] & {
+      margin-left: #{$c}rem;
+    }
+  }
+
+  .me-#{$i} {
+    [dir=rtl] & {
+      margin-left: #{$c}rem;
+    }
+
+    [dir=ltr] & {
+      margin-right: #{$c}rem;
+    }
+  }
+
+  .ps-#{$i} {
+    [dir=rtl] & {
+      padding-right: #{$c}rem;
+    }
+
+    [dir=ltr] & {
+      padding-left: #{$c}rem;
+    }
+  }
+
+  .pe-#{$i} {
+    [dir=rtl] & {
+      padding-left: #{$c}rem;
+    }
+
+    [dir=ltr] & {
+      padding-right: #{$c}rem;
+    }
+  }
+}
+
+.ms-0 {
+  [dir=rtl] & {
+    margin-right: 0;
+  }
+
+  [dir=ltr] & {
+    margin-left: 0;
+  }
+}
+
+.me-0 {
+  [dir=rtl] & {
+    margin-left: 0;
+  }
+
+  [dir=ltr] & {
+    margin-right: 0;
+  }
+}
+
+.ms-auto {
+  [dir=rtl] & {
+    margin-right: auto;
+  }
+
+  [dir=ltr] & {
+    margin-left: auto;
+  }
+}
+
+.me-auto {
+  [dir=rtl] & {
+    margin-left: auto;
+  }
+
+  [dir=ltr] & {
+    margin-right: auto;
+  }
+}
+
+.ps-0 {
+  [dir=rtl] & {
+    padding-right: 0;
+  }
+
+  [dir=ltr] & {
+    padding-left: 0;
+  }
+}
+
+.pe-0 {
+  [dir=rtl] & {
+    padding-left: 0;
+  }
+
+  [dir=ltr] & {
+    padding-right: 0;
+  }
+}
+

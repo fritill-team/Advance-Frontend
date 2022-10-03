@@ -210,7 +210,7 @@
 
 .night-mode{
   .course-list__header{
-    background-color: $black;
+    background-color: var(--color-black);
     //@include whiteTypo;
     border: none;
   }

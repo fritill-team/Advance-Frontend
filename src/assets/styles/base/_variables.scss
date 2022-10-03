@@ -60,58 +60,16 @@
   --color-light: #55656e;
   --RGB-color-light: 85, 101, 110;
 }
+$colors: (primary, accent, secondary, success, danger, info, warning, white, black, gray);
 
-$default: #d3d9e1;
-$primary: #0d9bbd;
-$accent: #ffce06;
-$secondary: #2fbebd;
 
-$default-night-mode: #f1edee;
-$primary-night-mode: #c8cdce;
-$accent-night-mode: #bb7d00;
-$secondary-night-mode: rgb(21, 151, 187); //#1597BB ;
 
-// default colors
-$white: #fff;
-$gray: rgba(0, 0, 0, 0.6);
-$black: #1c282c;
-$input-color: #686f7a;
-// status
-$success: #2bee38;
-$info: #1fcaff;
-$danger: #dc3545;
-$warning: #f04e29;
-$disabled: #a8a8a8;
 
-// night-mode
 
-$primary-darkmode: #38454d;
-$secondary-darkmode: #43515c;
-$primary-light-darkmode: #38454d;
 
-// TODO DELETE
-$light-white: #efefef;
-$blue: #0d6efd;
 
-$darkBlack: #333;
-$darkBlack2: #000;
 
-$light-gray: #828a91;
-$darkGray: #686f7a;
-$gold: #ffddd0;
-// $info: #fa8305;
-$yellow: #f2b01e;
 
-$facebook: #3b5998;
-$twitter: #1da1f2;
-$linkedIn: #8d6cab;
-$youtube: red;
-$google: #dd4b39;
-$green: #0d5d4b;
-$light-green: #5ae7c7;
-$mint-green: #d1ecf1;
 
-$danger-light: #f8d7da;
-$danger-medium: #f5c6cb;
-$linkColor: #333;
-$pColor: #686f7a;
+
+

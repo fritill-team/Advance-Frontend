@@ -5,13 +5,13 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: darken($primary, 7);
+  background-color: darken(var(--color-primary), 7);
   padding: 0 16px 0 0;
 
   .header__link {
     height: 100%;
     margin: 0;
-    color: $white;
+    color: var(--color-white);
     font-size: 18px;
     font-weight: 500;
     padding: 0 24px 0 30px;
@@ -46,7 +46,7 @@
   }
 
   .header__arrow-secondary {
-    background-color: $secondary;
+    background-color: var(--color-secondary);
     padding: 0 24px 0 40px;
   }
 
@@ -55,7 +55,7 @@
     padding: 8px;
     font-size: 14px;
     border-radius: 20px;
-    background: $white;
+    background: var(--color-white);
     min-width: 300px;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
 
     input {
       border: none;
-      background: $white;
+      background: var(--color-white);
       display: inline-block;
       width: 280px;
       margin: 0 4px;
@@ -161,7 +161,7 @@
           top: -8px;
           right: -8px;
           background: var(--color-primary);
-          color: $white;
+          color: var(--color-white);
           width: 16px;
           height: 16px;
           text-align: center;
@@ -190,7 +190,7 @@
 
 .night-mode {
   .header {
-    background: $black;
+    background: var(--color-black);
 
     .header__arrow-secondary {
       background-color: darken(#ffce06, 7);

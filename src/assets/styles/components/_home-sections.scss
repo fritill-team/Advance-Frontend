@@ -2,7 +2,11 @@
 
 .home-section {
   position: relative;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
+
+  &.home-section--flush {
+    min-height: 70vh;
+  }
 
   .home-main-slider {
     min-height: calc(60vh - var(--header-height, 60px));

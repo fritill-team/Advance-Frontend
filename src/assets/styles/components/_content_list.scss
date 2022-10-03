@@ -166,6 +166,6 @@ html[dir="rtl"]{
     }
   }
   .content-list-item__content-description{
-    color: $white;
+    color: var(--color-white);
   }
 }

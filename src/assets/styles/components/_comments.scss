@@ -156,7 +156,7 @@ html[dir="rtl"] {
 .comment__review-comment {
   float: left;
   width: 100%;
-  background: $white;
+  background: var(--color-white);
   border-radius: 10px;
 
   .review_reply {
@@ -180,14 +180,14 @@ html[dir="rtl"] {
   font-weight: 500;
   text-align: left;
   margin-bottom: 0;
-  color: $black;
+  color: var(--color-black);
   float: left;
 }
 
 .comments__add-comment {
   float: left;
   width: 100%;
-  background: $white;
+  background: var(--color-white);
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 20px;
@@ -200,7 +200,7 @@ html[dir="rtl"] {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid $white;
+        border: 2px solid var(--color-white);
         // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
         margin-bottom: 0;
       }
@@ -210,16 +210,16 @@ html[dir="rtl"] {
       height: 40px;
       font-size: 14px;
       margin-left: 16px;
-      border: 1px solid $light-white;
+      border: 1px solid var(--color-white);
       width: 100%;
       overflow: hidden;
       word-wrap: break-word;
       resize: horizontal;
       font-weight: 400;
-      color: $black;
+      color: var(--color-black);
       padding: 12px;
       border-radius: 10px;
-      background: $light-white;
+      background: var(--color-white);
     }
   }
 
@@ -258,7 +258,7 @@ html[dir="rtl"] {
 
   // .review_reply {
   //   padding: 20px;
-  //   border-bottom: 1px solid $light-white;
+  //   border-bottom: 1px solid var(--color-white);
   //   .item__wrapper {
   //     display: flex;
   //     justify-content: space-between;
@@ -271,7 +271,7 @@ html[dir="rtl"] {
   line-height: 26px;
   text-align: left;
   font-weight: 400;
-  color: $darkGray;
+  color: var(--color-gray);
   padding-right: 80px;
 }
 
@@ -285,7 +285,7 @@ html[dir="rtl"] {
     align-items: center;
     font-size: 14px;
     font-weight: 400;
-    color: $black;
+    color: var(--color-black);
     line-height: 24px;
     margin-left: 5px;
     cursor: pointer;
@@ -329,22 +329,22 @@ html[dir="rtl"] {
   display: inline-block !important;
   border-radius: 100%;
   margin-right: 15px;
-  border: 2px solid $white;
+  border: 2px solid var(--color-white);
 }
 
 .group__textarea {
   height: 40px;
   font-size: 14px;
-  border: 1px solid $light-white;
+  border: 1px solid var(--color-white);
   width: 100%;
   overflow: hidden;
   word-wrap: break-word;
   resize: horizontal;
   font-weight: 400;
-  color: $black;
+  color: var(--color-black);
   padding: 12px;
   border-radius: 10px;
-  background: $light-white;
+  background: var(--color-white);
 
   &.textarea--thread {
     resize: none;
@@ -354,7 +354,7 @@ html[dir="rtl"] {
 
 .night-mode {
   .comment-container {
-    background-color: $black;
+    background-color: var(--color-black);
   }
 
   .review-comment__item {
@@ -362,6 +362,6 @@ html[dir="rtl"] {
   }
 
   .comments__add-comment {
-    background-color: $white;
+    background-color: var(--color-white);
   }
 }

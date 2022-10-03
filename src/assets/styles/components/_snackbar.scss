@@ -26,7 +26,7 @@
 }
 
 .snackbar {
-  background-color: $white;
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -64,19 +64,19 @@
   }
 
   &.snackbar--success {
-    color: $success;
+    color: var(--color-success);
   }
 
   &.snackbar--info {
-    color: $info;
+    color: var(--color-info);
   }
 
   &.snackbar--danger {
-    color: $danger
+    color: var(--color-danger)
   }
 
   &.snackbar--warning {
-    color: $warning;
+    color: var(--color-warning);
   }
 
   &.snackbar--accent {
@@ -96,7 +96,7 @@
   .snackbar__content {
     padding-left: 8px;
     padding-right: 8px;
-    color: rgba($black, 0.8);
+    color: rgba(var(--RGB-color-black), 0.8);
     line-height: 0.8;
 
     &:only-child {

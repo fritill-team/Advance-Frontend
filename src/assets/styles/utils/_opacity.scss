@@ -1,7 +1,17 @@
 @for $i from 1 through 10 {
-  .opacity-#{$i} {
+  .opacity-after-#{$i} {
     &:after {
       opacity: $i * 0.1 !important;
     }
+  }
+
+  .opacity-before-#{$i} {
+    &:before {
+      opacity: $i * 0.1 !important;
+    }
+  }
+
+  .opacity-#{$i} {
+    opacity: $i * 0.1 !important;
   }
 }

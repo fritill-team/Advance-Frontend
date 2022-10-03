@@ -33,7 +33,7 @@
         padding-left: 3px;
       }
       .content__paragraph{
-        color: $info;
+        color: var(--color-info);
         margin: -0.75em 2px 0.75em;
       }
     }
@@ -135,7 +135,7 @@ span#percentage {
     //   // margin: 0;
     // }
     // p{
-    //   color: $info;
+    //   color: var(--color-info);
     // }
   }
 
@@ -228,7 +228,7 @@ span#percentage {
         }
         &:focus{
           border-color: var(--color-primary);
-          background-color: $info;
+          background-color: var(--color-info);
         }
         @media (max-width: 992.98px) {
           font-size: 1.8em;
@@ -331,25 +331,25 @@ span#percentage {
   .playlist__list-item {
     .list-item__content{
       .content__link{
-        color: $white;
+        color: var(--color-white);
       }
       .content__paragraph{
-        color: $white;
+        color: var(--color-white);
       }
     }
     &.list-item--border-bottom {
       i{
-        color: $white;
+        color: var(--color-white);
       }
     }
   }
   .form-question{
     .form-question__question-form{
       h2{
-        color: $white;
+        color: var(--color-white);
       }
       p{
-        color: $white;
+        color: var(--color-white);
       }
     }
     .form-question__wrap{
@@ -361,8 +361,8 @@ span#percentage {
           }
         }
         input:is([type=checkbox], [type="radio"]) + .form-group__label{
-          color: $white;
-          border: 1px solid $white;
+          color: var(--color-white);
+          border: 1px solid var(--color-white);
           &:hover{
             color: var(--color-accent);
             cursor: pointer;
@@ -370,7 +370,7 @@ span#percentage {
           }
         }
         .label-style{
-          color: $white;
+          color: var(--color-white);
         }
       }
     }

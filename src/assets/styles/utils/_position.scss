@@ -1,0 +1,64 @@
+$positions: (relative, fixed, absolute);
+$dimensions: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130,
+135, 140, 145, 150, 155 160, 165, 170, 175, 180, 185, 200);
+
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position !important;
+  }
+}
+
+.position-unset {
+  position: unset !important;
+}
+
+@each $dimensions in $dimensions {
+  .top-#{$dimensions} {
+    top: #{$dimensions}px;
+  }
+  .top-inverted-#{$dimensions} {
+    top: -#{$dimensions}px;
+  }
+  .bottom-#{$dimensions} {
+    bottom: #{$dimensions}px;
+  }
+  .bottom-inverted-#{$dimensions} {
+    bottom: -#{$dimensions}px;
+  }
+  .left-#{$dimensions} {
+    [dir=ltr] & {
+      left: #{$dimensions}px;
+    }
+
+    [dir=rtl] & {
+      right: #{$dimensions}px;
+    }
+  }
+  .left-inverted-#{$dimensions} {
+    [dir=ltr] & {
+      left: -#{$dimensions}px;
+    }
+
+    [dir=rtl] & {
+      right: -#{$dimensions}px;
+    }
+  }
+  .right-#{$dimensions} {
+    [dir=ltr] & {
+      right: #{$dimensions}px;
+    }
+
+    [dir=rtl] & {
+      left: #{$dimensions}px;
+    }
+  }
+  .right-inverted-#{$dimensions} {
+    [dir=ltr] & {
+      right: -#{$dimensions}px;
+    }
+
+    [dir=rtl] & {
+      left: -#{$dimensions}px;
+    }
+  }
+}

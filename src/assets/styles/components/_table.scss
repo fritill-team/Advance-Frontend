@@ -37,7 +37,7 @@
     }
   }
   tbody {
-    background: $white;
+    background: var(--color-white);
   }
 
   i[class*="fa-"] {
@@ -159,12 +159,12 @@ html[dir="rtl"] {
 			td {
 				&:first-of-type{
 					background-color: #43525c;
-					color: $white;
+					color: var(--color-white);
 				}
 			}
 			th {
 				background-color: unset;
-				color: $white;
+				color: var(--color-white);
 				&:first-of-type{
 					background-color: #43525c;
 				}

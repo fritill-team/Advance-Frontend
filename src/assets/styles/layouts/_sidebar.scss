@@ -85,7 +85,7 @@
   overflow: hidden;
   font-size: 14px;
   text-decoration: none;
-  color: $darkBlack;
+  color: var(--color-black);
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
@@ -349,7 +349,7 @@ body {
 .night-mode {
   .toggle-menu {
     .toggle__icon {
-      background: $black;
+      background: var(--color-black);
     }
   }
 }

@@ -160,7 +160,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: $darkGray;
+    color: var(--color-gray);
     transform: translateY(-100%);
     //@include normalizeTypo;
 
@@ -189,7 +189,7 @@
         background-color: var(--color-primary);
 
         * {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
@@ -200,15 +200,15 @@
 
     &.card__label-secondary {
       .card__label-inner {
-        background-color: $secondary;
+        background-color: var(--color-secondary);
 
         * {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
       & + .card {
-        border-top: 10px solid $secondary;
+        border-top: 10px solid var(--color-secondary);
       }
     }
 
@@ -217,7 +217,7 @@
         background-color: var(--color-accent);
 
         * {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
@@ -228,29 +228,29 @@
 
     &.card__label-danger {
       .card__label-inner {
-        background-color: $danger;
+        background-color: var(--color-danger);
 
         * {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
       & + .card {
-        border-top: 10px solid $danger;
+        border-top: 10px solid var(--color-danger);
       }
     }
 
     &.card__label-success {
       .card__label-inner {
-        background-color: $success;
+        background-color: var(--color-success);
 
         * {
-          color: $white;
+          color: var(--color-white);
         }
       }
 
       & + .card {
-        border-top: 10px solid $success;
+        border-top: 10px solid var(--color-success);
       }
     }
   }
@@ -260,7 +260,7 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: var(--color-default);
-    color: $white;
+    color: var(--color-white);
   }
 
   .card__label-outer {
@@ -290,7 +290,7 @@
       background-color: var(--color-primary);
 
       i {
-        color: $white;
+        color: var(--color-white);
       }
     }
   }

@@ -22,6 +22,15 @@
     transform: translateX(100%);
   }
 
+  &.drawer--full-height {
+    height: 100%;
+    top: 0;
+
+    .drawer__header {
+      height: 60px;
+    }
+  }
+
   &.drawer--overlay {
     z-index: 8;
   }

@@ -59,7 +59,7 @@
   .more-dropdown__content {
     display: none;
     position: absolute;
-    background-color: $white;
+    background-color: var(--color-white);
     min-width: 160px;
     // box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
     border: 1px solid rgba(34, 36, 38, 0.15);
@@ -70,7 +70,7 @@
     border-radius: 5px;
 
     .content__item {
-      color: $darkGray;
+      color: var(--color-gray);
       font-size: 14px;
       font-weight: 400;
       padding: 10px;
@@ -84,7 +84,7 @@
       }
 
       &:hover {
-        color: $darkBlack !important;
+        color: var(--color-black) !important;
         background-color: #ffecec;
       }
     }

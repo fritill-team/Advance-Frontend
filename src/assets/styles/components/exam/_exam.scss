@@ -45,7 +45,7 @@
   &.question--active {
     .card--drag-vertical {
       color: var(--color-accent);
-      background-color: $info;
+      background-color: var(--color-info);
     }
   }
 
@@ -308,7 +308,7 @@
 //     &:checked {
 //       & + label {
 //         &:before {
-//           background-color: rgba($color: $secondary, $alpha: 0.3);
+//           background-color: rgba($color: var(--color-secondary), $alpha: 0.3);
 //         }
 
 //         &:after {
@@ -331,7 +331,7 @@
 //       transform: translateY(-50%);
 //       left: 0;
 //       background-color: rgba($color: #aaa, $alpha: 0.3);
-//       box-shadow: 0 0 3px rgba($color: $secondary, $alpha: 0.7);
+//       box-shadow: 0 0 3px rgba($color: var(--color-secondary), $alpha: 0.7);
 //       border-radius: 25px;
 //       transition: 0.5s ease all;
 //       z-index: 0;
@@ -431,7 +431,7 @@
         margin-bottom: 5px;
         word-wrap: break-word;
         color: rgba(var(--RGB-color-gray), 1);
-        // color: $input-color;
+        // color: var(--color-gray);
       }
     }
 
@@ -448,7 +448,7 @@
     padding: 15px;
     margin-bottom: 25px;
     background: rgba(var(--RGB-color-gray), 0.1);
-    // background: rgba($secondary, 0.3);
+    // background: rgba(var(--color-secondary), 0.3);
   }
 
   .exam__footer {
@@ -767,9 +767,9 @@ html[dir="rtl"] {
 .night-mode {
   .assessment{
     // @include whiteTypo;
-    background: rgba($black, 0.4);
+    background: rgba(var(--RGB-color-black), 0.4);
     &.assessment--section{
-      background: rgba($black, 0.2);
+      background: rgba(var(--RGB-color-black), 0.2);
     }
   }
   // Question card

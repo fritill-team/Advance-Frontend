@@ -6,8 +6,8 @@
   margin: 30px 0;
   padding: 8px 16px;
   border-radius: 5px;
-  box-shadow: 0 0 3px rgba($color: $darkBlack2, $alpha: 0.05);
-  background-color: $white;
+  box-shadow: 0 0 3px rgba($color: var(--RGB-color-black), $alpha: 0.05);
+  background-color: var(--color-white);
 
   @media (max-width: 768px) {
     &.listing-filters--active {
@@ -120,7 +120,7 @@
 
 .night-mode {
   .listing-header {
-    background-color: $black;
+    background-color: var(--color-black);
   }
 }
 

@@ -19,7 +19,7 @@ $(document)
     openOverlay(false)
   })
   .on('click', '.close-dialog', function () {
-    closeOverlay()
+    // closeOverlay()
     $(this).closest('.dialog').removeClass('dialog--show')
   })
   // .mouseup(function (e) {
@@ -29,7 +29,7 @@ $(document)
   // })
   .on('keyup', function(e) {
     if (e.key === "Escape") {
-      closeOverlay()
+      // closeOverlay()
     }
   });
 

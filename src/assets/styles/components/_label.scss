@@ -25,7 +25,7 @@
   padding: 0 16px;
   height: 54px;
   border-radius: 5px;
-  background-color: $white;
+  background-color: var(--color-white);
   margin: 0 5px 0 0;
   transition: .3s ease all;
   cursor: default;
@@ -50,24 +50,24 @@
     }
   }
   .overline{
-    color: $black;
+    color: var(--color-black);
     font-size: 10px;
   }
   .subtitle{
-    color: $black;
+    color: var(--color-black);
     font-size: 12px;
   }
   &.label--primary{
     color: var(--color-primary);
   }
   &.label--success{
-    color: $success;
+    color: var(--color-success);
   }
   &.label--error{
-   color: $danger;
+   color: var(--color-danger);
   }
   &.label--info{
-    color: $info;
+    color: var(--color-info);
   }
   &.label--accent{
     color: var(--color-accent)
@@ -82,9 +82,9 @@
 
 a.label{
   cursor: pointer;
-  color: $black;
+  color: var(--color-black);
   &:hover{
-    @include labelBg($black);
+    @include labelBg(var(--color-black));
   }
   &.label--primary{
     &:hover{
@@ -93,17 +93,17 @@ a.label{
   }
   &.label--success{
     &:hover{
-      @include labelBg($success);
+      @include labelBg(var(--color-success));
     }
   }
   &.label--error{
    &:hover{
-    @include labelBg($danger);
+    @include labelBg(var(--color-danger));
   }
   }
   &.label--info{
     &:hover{
-      @include labelBg($info);
+      @include labelBg(var(--color-info));
     }
   }
 }
@@ -129,7 +129,7 @@ html[dir="rtl"]{
 
 .night-mode{
   .label{
-    background-color: $black;
+    background-color: var(--color-black);
     //@include whiteTypo;
 
   }

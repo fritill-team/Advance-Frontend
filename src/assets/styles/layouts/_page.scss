@@ -186,7 +186,7 @@ aside {
 .night-mode {
   .section__header {
     * {
-      color: $white;
+      color: var(--color-white);
     }
   }
 }

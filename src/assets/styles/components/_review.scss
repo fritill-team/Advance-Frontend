@@ -8,7 +8,7 @@
   margin-right: 7px;
 }
 @mixin full-star-before {
-  color: $yellow;
+  color: var(--color-warning);
   content: "\f005";
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -16,7 +16,7 @@
   left: 0;
 }
 @mixin hulf-star-before {
-  color: $yellow;
+  color: var(--color-warning);
   content: "\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -55,9 +55,9 @@
 .reviews__all-reviews {
   float: left;
   width: 100%;
-  background: $white;
+  background: var(--color-white);
   padding: 20px;
-  border: 1px solid $light-white;
+  border: 1px solid var(--color-white);
   border-radius: 10px;
   .all-reviews__title {
     font-size: 20px;
@@ -72,7 +72,7 @@
     font-size: 16px;
     justify-items: center;
     background: #f7f7f7;
-    border: 1px solid $light-white;
+    border: 1px solid var(--color-white);
     padding: 10px 14px;
     border-radius: 20px;
     .total-rating__number {
@@ -125,7 +125,7 @@
           color: #fff;
           text-align: center;
           white-space: nowrap;
-          background-color: $blue;
+          background-color: var(--color-primary);
           transition: width 0.6s ease;
         }
       }
@@ -210,7 +210,7 @@ html[dir="rtl"]{
 .night-mode{
   .reviews{
     .reviews__all-reviews{
-      background: $black !important;
+      background: var(--color-black) !important;
       //@include whiteTypo ;
     }
   }

@@ -60,7 +60,7 @@
   // align-items: center;
   width: fit-content;
   cursor: pointer;
-  color: $darkGray;
+  color: var(--color-gray);
   position: relative;
   text-align: center;
 	display: inline-block;
@@ -69,16 +69,16 @@
     color: var(--color-primary);
   }
 	&.survey__check-field--secondary {
-    color: $secondary;
+    color: var(--color-secondary);
   }
   &.survey__check-field--accent{
     color: var(--color-accent);
   }
   &.survey__check-field--danger{
-    color: $danger;
+    color: var(--color-danger);
   }
   &.survey__check-field--success{
-    color: $success;
+    color: var(--color-success);
   }
   input {
     display: none;
@@ -193,6 +193,6 @@
 
 .night-mode{
 	.survey__check-field{
-		color: $white;
+		color: var(--color-white);
 	}
 }
