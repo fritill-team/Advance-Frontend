@@ -14,11 +14,12 @@ jobs:
         - name: Checkout Commit
           uses: actions/checkout@v2
         
-        - name: Use Node.js ${{ matrix.node }}
+        - name: Use Node.js 14
           uses: actions/setup-node@v1
           with:
             materix: 
-              node-version: ${{ matrix.node }}
+            node-version: 14
+
         - name: run build
           run: |
             yarn build
