@@ -14,11 +14,11 @@ jobs:
         - name: Checkout Commit
           uses: actions/checkout@v2
         
-        - name: Use Node.js 14
+        - name: Use Node.js 14.x
           uses: actions/setup-node@v1
           with:
             materix: 
-            node-version: 14
+            node-version: 14.x
 
         - name: run build
           run: |
