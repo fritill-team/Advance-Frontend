@@ -29,9 +29,7 @@ jobs:
 
         - name: Run create dist.tar
           run: |
-            mkdir ../build
-            cp -TR . ../build
-            tar -cvf dist.tar ../build/
+            tar -cvf dist.tar ./dist
 
 
         # - name: copy file via ssh password
