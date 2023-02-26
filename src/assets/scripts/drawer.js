@@ -23,7 +23,9 @@ let addDrawers = function () {
       $(".toggle_animate--icon").toggleClass("toggle-menu--active");
       drawer.addClass("drawer--open");
       drawer.find('.list-item').each(function () {
-        $(this).tooltipster('disable')
+        let title = $(this).attr('title')
+        if (typeof title !== 'undefined' && title !== false)
+          $(this).tooltipster('disable')
       })
       if (drawer.hasClass("drawer--overlay"))
         openOverlay(drawer.hasClass('drawer--full-height'))
@@ -35,7 +37,9 @@ let addDrawers = function () {
         closeOverlay()
 
       drawer.find('.list-item').each(function () {
-        $(this).tooltipster('enable')
+        let title = $(this).attr('title')
+        if (typeof title !== 'undefined' && title !== false)
+          $(this).tooltipster('enable')
       })
       drawer.find('[data-toggle=collapsing][aria-expanded=true]').each(function () {
         collapse($(this))
@@ -44,7 +48,9 @@ let addDrawers = function () {
 
   function initializeDrawers() {
     drawer.find('.list-item').each(function () {
-      $(this).tooltipster(tooltipsterOptions)
+      let title = $(this).attr('title')
+      if (typeof title !== 'undefined' && title !== false)
+        $(this).tooltipster(tooltipsterOptions)
     })
 
     drawer.niceScroll(drawerNiceScrollOptions)

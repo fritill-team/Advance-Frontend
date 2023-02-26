@@ -2,7 +2,9 @@
   background-color: #fff;
   padding: 20px 0;
   margin-bottom: 20px;
-  &.page-header--extension{
+  box-shadow: var(--box-shadow);
+
+  &.page-header--extension {
     padding: 20px 20px 0 20px;
     & + .tabs{
       &::after{

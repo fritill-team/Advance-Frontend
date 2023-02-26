@@ -4,6 +4,8 @@
   --color-default: #d3d9e1;
   --RGB-color-default: 211, 217, 225;
   --color-primary: #0d9bbd;
+  --color-primary-darker: darken(#0d9bbd, 7%);
+  --color-primary-lighter: lighten(#0d9bbd, 3%);
   --RGB-color-primary: 13, 155, 189;
   --color-accent: #ffce06;
   --RGB-color-accent: 255, 206, 6;
@@ -60,7 +62,14 @@
   --color-light: #55656e;
   --RGB-color-light: 85, 101, 110;
 }
+
+$dimensions: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130,
+135, 140, 145, 150, 155 160, 165, 170, 175, 180, 185, 200);
+
+$sizes: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160, 175, 200);
+
 $colors: (primary, accent, secondary, success, danger, info, warning, white, black, gray);
+
 
 
 
