@@ -27,5 +27,30 @@ jobs:
           run: |
             yarn gh-dist
 
+        - name: Run create dist.tar
+          run: |
+            mkdir ../build
+            cp -TR . ../build
+            tar -cvf dist.tar ../build/
+
+
+        # - name: copy file via ssh password
+        #   uses: appleboy/scp-action@master
+        #   with:
+        #     host: ${{ secrets.STAGING_HOST }}
+        #     username: ${{ secrets.STAGING_USER }}
+        #     key: ${{ secrets.STAGING_KEY }}
+        #     source: "deploy.tar"
+        #     target: "destination/folder"
+        
+        # - name: executing remote ssh commands using password
+        #   uses: appleboy/ssh-action@master
+        #   with:
+        #     host: ${{ secrets.STAGING_HOST }}
+        #     username: ${{ secrets.STAGING_USER }}
+        #     key: ${{ secrets.STAGING_KEY }}
+        #     script: |
+        #       bash ~/frontscripts-dep.sh
+
 
 
