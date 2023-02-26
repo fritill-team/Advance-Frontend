@@ -1,0 +1,27 @@
+name: Build and Push Assets to Staging server
+
+on: 
+  push: 
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+    build:
+      name: "Deploy to staging"
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Checkout Commit
+          uses: actions/checkout@v2
+        
+        - name: Use Node.js ${{ matrix.node }}
+          uses: actions/setup-node@v1
+          with:
+            materix: 
+              node-version: ${{ matrix.node }}
+        - name: run build
+          run: |
+            yarn build
+
+
+
