@@ -29,7 +29,8 @@ jobs:
 
         - name: Run create dist.tar
           run: |
-            tar -cvf dist.tar ./dist
+            tar -czvf dist.tar.gz ./dist
+          # tar -cvf dist.tar ./dist
 
 
         - name: copy file via ssh password
@@ -38,7 +39,7 @@ jobs:
             host: ${{ secrets.STAGING_HOST }}
             username: ${{ secrets.STAGING_USER }}
             key: ${{ secrets.STAGING_KEY }}
-            source: "dist.tar"
+            source: "dist.tar.gz"
             target: "/root"
         
         # - name: executing remote ssh commands using password
