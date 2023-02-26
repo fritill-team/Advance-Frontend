@@ -19,7 +19,10 @@ jobs:
           with:
             materix: 
             node-version: 14.x
-
+        
+        - name: Bootstraping packages
+          run: yarn install
+        
         - name: run gh-dist
           run: |
             yarn gh-dist
