@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && webpack --config webpack.config.js --env.NODE_ENV=development --mode=development --progress",
+    "gh-dist": "webpack --config webpack.config.js --env.NODE_ENV=development --mode=development --progress",
     "dev-network": "webpack-dev-server --config webpack.config.js --env.NODE_ENV=development --mode=development --progress --open --host 0.0.0.0",
     "start": "webpack-dev-server --config webpack.config.js -env.NODE_ENV=development --mode=development --progress --open",
     "prod": "rimraf dist && webpack --config webpack.config.js --env.NODE_ENV=production --mode=production -p --progress ",
