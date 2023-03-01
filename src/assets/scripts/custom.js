@@ -254,7 +254,7 @@ $(function () {
     //   interactive: true,
     //   offsetX: '100px',
     //   position: 'left',
-    //   // content: $('<div class="user-account"> <img class="image image--small-profile" src="../../assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
+    //   // content: $('<div class="user-account"> <img class="image image--small-profile" src="~assets/images/profile.png" alt=""><div class="user-account__content"> <a class="body-2">John Doe</a><p class="body-2">2 hour ago</p></div></div>')
     //   content: $(`<ul class="user-account flex-column field-wrapper__messages">${message}</ul>`)
     // });
   })

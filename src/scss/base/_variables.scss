@@ -1,6 +1,6 @@
 :root {
   --pg-color: #fff; // #EDF4FD;
-  --RGB-pg-color: 255, 255, 255; // 237, 244, 253;
+  --RGB-pg-color: '255, 255, 255'; // 237, 244, 253;
   --color-default: #d3d9e1;
   --RGB-color-default: 211, 217, 225;
   --color-primary: #0d9bbd;
@@ -64,11 +64,11 @@
 }
 
 $dimensions: (0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130,
-135, 140, 145, 150, 155 160, 165, 170, 175, 180, 185, 200);
+135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 200);
 
 $sizes: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 100, 125, 150, 160, 175, 200);
 
-$colors: (primary, accent, secondary, success, danger, info, warning, white, black, gray);
+$colors: ('primary', 'accent', 'secondary', 'success', 'danger', 'info', 'warning', 'white', 'black', 'gray');
 
 
 

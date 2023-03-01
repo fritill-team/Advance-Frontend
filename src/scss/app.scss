@@ -1,0 +1,113 @@
+@import "~base/_variables.scss";
+@import "~utils/_mixins.scss";
+@import "~utils/_utils";
+
+/* Bootstrap */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+
+@import "~layouts/_normalize.scss";
+@import "~layouts/_base";
+@import "~base/_typography";
+
+@import "~layouts/_page";
+@import "~layouts/_header";
+@import "~layouts/_footer";
+@import "~layouts/_drawer";
+
+// TODO CHECK THIS
+
+@import "~components/_course-list";
+@import "~components/_course-video";
+@import "~components/_content_list";
+@import "~components/_course-reviews";
+@import "~components/_category-course";
+// END TODO CHECK
+
+@import "~components/_pagination.scss";
+@import "~components/_list-dropdown";
+@import "~components/_description-enroll";
+
+// components
+@import "~components/_post.scss";
+@import "~components/_filter";
+@import "~components/_tabs.scss";
+@import "~components/_carousels";
+@import "~components/_chip";
+@import "~components/_snackbar";
+@import "~components/_list.scss";
+@import "~components/_images";
+@import "~components/_table";
+@import "~components/_inputs";
+@import "~components/_dialog";
+@import "~components/_dropdown.scss";
+@import "~components/_card";
+@import "~components/_display-card.scss";
+@import "~components/_badge";
+@import "~components/_banner";
+@import "~components/_buttons";
+@import "~components/_label";
+@import "~components/_symbol";
+@import "~components/_gallery";
+@import "~components/_progress";
+@import "~components/_divider";
+@import "~components/_collapse";
+// pages
+@import "~pages/_checkout";
+
+@import "~components/_rich-textarea";
+
+@import "~custom/_tooltipster.scss";
+
+@import "~components/_review.scss";
+@import "~components/_comments";
+@import "~components/_pagination.scss";
+
+@import "~components/_list-dropdown";
+@import "~components/_description-enroll";
+@import "~components/_exam";
+@import "~components/_thread";
+
+@import "~components/_video-player";
+@import "components/_home-sections";
+
+@import "~components/_iframe-container";
+@import "~components/_assessment";
+@import "~components/_plan";
+
+//@import "~components/_courses";
+@import "~components/_service-excerpt";
+
+//TODO Remove this file
+@import "~components/_authentication-layout";
+
+@import "~components/_new-inputs";
+@import "~components/_general-playlist";
+@import "~components/_colleps";
+@import "~components/_menu-header.scss";
+@import "~components/_toggle-sidebar";
+@import "~components/_toolbar";
+@import "~components/_bread-crumbs";
+@import "~components/_recommendation.scss";
+
+@import "~components/_delete-page";
+@import "~components/single-course/interactions-course.scss";
+@import "~components/single-course/_user-component";
+@import "~components/single-course/_user-item";
+@import "~components/exam/_exam.scss";
+
+@import "~components/_survey";
+@import "~components/_survey-fields";
+@import "~components/_loader";
+
+
+
+

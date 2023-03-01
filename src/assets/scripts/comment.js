@@ -3,7 +3,7 @@ const commentForm = function(form) {
     <div class="comments__add-comment">
       <div class="add-comment__group">
         <div class="group__img-wrapper">
-          <img class="group__img" src="../../assets/images/hd_dp.jpg" alt="">
+          <img class="group__img" src="@images/hd_dp.jpg" alt="">
         </div>
         <textarea class="group__textarea" placeholder="Add a public comment"></textarea>
       </div>
@@ -18,7 +18,7 @@ $('.comment-form').each(function (i, item){
 const commentTemplate = function (comment) {
   return `
   <div class="review-comment__item">
-    <div class="item__wrapper d-flex">  
+    <div class="item__wrapper d-flex">
       <div class="item__reviews-user">
         <img class="reviews-user__img" src="../../assets/images/hd_dp.jpg" alt="">
         <div class="reviews-user__title">
@@ -45,7 +45,7 @@ const commentTemplate = function (comment) {
 const replayTemplate = function (comment) {
   return `
   <div class="review-comment__item review-comment__item--replay">
-    <div class="item__wrapper d-flex">  
+    <div class="item__wrapper d-flex">
       <div class="item__reviews-user">
         <img class="reviews-user__img" src="../../assets/images/hd_dp.jpg" alt="">
         <div class="reviews-user__title">
@@ -68,7 +68,7 @@ const replayTemplate = function (comment) {
     </div>
   </div>
   <div class="review-comment__item review-comment__item--replay">
-    <div class="item__wrapper d-flex">  
+    <div class="item__wrapper d-flex">
       <div class="item__reviews-user">
         <img class="reviews-user__img" src="../../assets/images/hd_dp.jpg" alt="">
         <div class="reviews-user__title">
