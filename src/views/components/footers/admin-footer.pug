@@ -1,7 +1,7 @@
 //- src/views/components/footer.pug
 
 footer.footer
-	img.footer__background(src="../../../assets/images/Pattern_4.svg", alt="", srcset="")
+	img.footer__background(src=require("@/images/Pattern_4.svg"), alt="", srcset="")
 	.container
 		.row
 			.col-lg-12
@@ -12,7 +12,7 @@ footer.footer
 								li.copy-right__list
 									a.list__link(href='index.html')
 										.footer__logo
-											img(src='../../assets/images/Etqadem_Icon_Yellow.svg' alt='')
+											img(src=require('@/images/Etqadem_Icon_Yellow.svg') alt='')
 								li.copy-right__list
 									p.list__paragraph
 										| &copy; 2020
@@ -23,4 +23,4 @@ footer.footer
 							.fritill
 								p.list__paragraph.white.my-0.text-3 Developed and designed by
 								a.my-0(style="height: 40px" href="https://fritill.com/")
-									img(class="fritill-logo" src="../../assets/images/fritill-logo.svg", alt="")
+									img(class="fritill-logo" src=require('assets/images/fritill-logo.svg'), alt="")

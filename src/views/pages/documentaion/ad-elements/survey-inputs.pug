@@ -20,17 +20,17 @@ block content
 					.card__content
 						include ../../../components/survey-content.pug
 						+mcq('radio')
-		
+
 		.row
 			.col-lg-12
 				.card
 					.card__title
-						h3 Checkbox 
+						h3 Checkbox
 					.card__content
 						.question.question--no-line
 							.question__item.question__item--cover
 								.image-wrapper
-									img(src="../../assets/images/get_img.jpg", alt="")
+									img(src=require("@/images/get_img.jpg"), alt="")
 								.field-wrapper
 									.check-field-group
 										div
@@ -57,7 +57,7 @@ block content
 						.question.question--no-line
 							.question__item.question__item--cover
 								.image-wrapper
-									img(src="../../assets/images/get_img.jpg", alt="")
+									img(src=require("@/images/get_img.jpg"), alt="")
 								.field-wrapper
 									.check-field-group.check-field-group--horizontal
 										div

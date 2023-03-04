@@ -1,11 +1,11 @@
-.list-header 
+.list-header
 	include ./general-component/toggle-menu.pug
 	a(href="#" class="playlist__close")
 		.header__logo.logo--sidebar
 			a.header__img(href='index.html')
-				img(src='../../assets/images/Etqadem_Logo.svg' alt='')
+				img(src=require('@/images/Etqadem_Logo.svg')' alt='')
 			a.header__img-small(href='index.html')
-				img(src='../../assets/images/Etqadem_Icon_Yellow.png' alt='')
+				img(src=require('@/images/Etqadem_Icon_Yellow.png')' alt='')
 div(class="list__sidebar list condensed" data-link='[{"title":"Categories","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Tags","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Courses","has_children":false,"icon":"fa fa-home","url":"#","is_active":false},{"title":"Assessments and Surveys","has_children":true,"icon":"fas fa-layer-group","is_active":true,"children":[{"title":"Assessments and Surveys","has_children":false,"url":"#","is_active":true}]},{"title":"Users","has_children":true,"icon":"fas fa-layer-group","is_active":false,"children":[{"title":"Users","has_children":false,"url":"#","is_active":false},{"title":"Groups","has_children":false,"url":"#","is_active":false}]}]')
 //- ul(class="list__sidebar" data-link="http://localhost:3000/sideBar/")
 	li.list__item
@@ -76,11 +76,11 @@ div(class="list__sidebar list condensed" data-link='[{"title":"Categories","has_
 			li.sum-menu__item
 				a.sub-menu__link(href='login.html') Login
 			li.sum-menu__item
-				a.sub-menu__link(href='signup.html') Sign up 
+				a.sub-menu__link(href='signup.html') Sign up
 			li.sum-menu__item
-				a.sub-menu__link(href='forget.html') Forget 
+				a.sub-menu__link(href='forget.html') Forget
 			li.sum-menu__item
-				a.sub-menu__link(href='reset.html') Reset 
+				a.sub-menu__link(href='reset.html') Reset
 	li.list__item.sub-menu-item
 		a.item__link(title='Tests')
 			i.fas.fa-home.item__icon

@@ -32,7 +32,7 @@ block content
         include ../../../components/thread-question-card
         .card.card--side-col
           .card__side-col
-            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
+            img(src=require("@/images/hd_dp.jpg") alt="" class="image image--profile image--rounded")
           .card__content
             .card__header
               .card__header-multiline.card__header-2-lines
@@ -77,7 +77,7 @@ block content
             code .card
         .card.card--side-col.card--transparent
           .card__side-col
-            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile")
+            img(src=require("@/images/hd_dp.jpg") alt="" class="image image--rounded image--profile")
           .card__content
             .card__header
               .card__header-multiline
@@ -99,7 +99,7 @@ block content
             code .card
         .card.card--side-col.card--transparent.p-0
           .card__side-col
-            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile image--xs-small-profile")
+            img(src=require("@/images/hd_dp.jpg") alt="" class="image image--rounded image--profile image--xs-small-profile")
           .card__content
             .card__header
               .card__header-multiline
@@ -113,7 +113,7 @@ block content
               | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sed similique quos illo nam
         .card.card--side-col.card--transparent.p-0
           .card__side-col
-            img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile image--xs-small-profile")
+            img(src=require("@/images/hd_dp.jpg") alt="" class="image image--rounded image--profile image--xs-small-profile")
           .card__content
             .card__header
               .card__header-multiline
@@ -144,7 +144,7 @@ block content
         // end of card-title
         .card__content
           .user-image
-            img(src="../../assets/images/hd_dp.jpg" alt="")
+            img(src=require("@/images/hd_dp.jpg") alt="")
             i.uil.uil-check-circle
           .card__body
             .card__content-header
@@ -175,7 +175,7 @@ block content
       .card.card--horizontal
         .card__content
           .user-image
-            img(src="../../assets/images/hd_dp.jpg" alt="")
+            img(src=require("@/images/hd_dp.jpg") alt="")
             i.uil.uil-check-circle
           .card__body
             .card__content-header
@@ -214,7 +214,7 @@ block content
       .card.card--side-col
         .card__content
           .user-image
-            img(src="../../assets/images/hd_dp.jpg" alt="")
+            img(src=require("@/images/hd_dp.jpg") alt="")
             i.uil.uil-check-circle
           .card__body
             .card__content-header
@@ -253,7 +253,7 @@ block content
         .card.card--transparent
           .card__content
             .user-image
-              img(src="../../assets/images/hd_dp.jpg" alt="")
+              img(src=require("@/images/hd_dp.jpg") alt="")
               i.uil.uil-check-circle
             .card__body
               .card__content-header
@@ -274,7 +274,7 @@ block content
 
     //- .card.default
       .user-image
-        img(src="../../assets/images/hd_dp.jpg" alt="")
+        img(src=require("@/images/hd_dp.jpg") alt="")
         i.uil.uil-check-circle
       .card__body
         .card__content-header
@@ -359,7 +359,7 @@ block content
         .col-12
           .display-card.display-card--list-view
             a.display-card__preview.youtube-activator(href='/course.html')
-              img.display-card__preview-cover(src='../../assets/images/get_img.jpg' alt='Complete Python Bootcamp1')
+              img.display-card__preview-cover(src=require('@/images/get_img.jpg') alt='Complete Python Bootcamp1')
               #course-1.display-card__preview-video.youtube-player(data-video-id='S7YqVez2sUw')
               .display-card__preview-overlay
             .display-card__content
@@ -374,14 +374,14 @@ block content
     //- .col-lg-12
       pre
         code.language-html
-          <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
+          <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src=require("@/images/hd_dp.jpg") alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
     .col-12
       h2.my-3 live session card
     .col-lg-3
       .card.card--centered.card--live-section
         .card__content
           .user-image
-            img(src="../../assets/images/hd_dp.jpg" alt="")
+            img(src=require("@/images/hd_dp.jpg") alt="")
           .card__body
             .card__content-header
               .user-data
@@ -404,7 +404,7 @@ block content
     //  .card.card--with-actions
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -442,7 +442,7 @@ block content
     //    .card.card--transparent
     //      .card__content
     //        .user-image
-    //          img(src="../../assets/images/hd_dp.jpg" alt="")
+    //          img(src=require("@/images/hd_dp.jpg") alt="")
     //          i.uil.uil-check-circle
     //        .card__body
     //          .card__content-header
@@ -456,7 +456,7 @@ block content
     //    .card.card--transparent
     //      .card__content
     //        .user-image
-    //          img(src="../../assets/images/hd_dp.jpg" alt="")
+    //          img(src=require("@/images/hd_dp.jpg") alt="")
     //          i.uil.uil-check-circle
     //        .card__body
     //          .card__content-header
@@ -470,7 +470,7 @@ block content
     //    .card.card--transparent
     //      .card__content
     //        .user-image
-    //          img(src="../../assets/images/hd_dp.jpg" alt="")
+    //          img(src=require("@/images/hd_dp.jpg") alt="")
     //          i.uil.uil-check-circle
     //        .card__body
     //          .card__content-header
@@ -498,7 +498,7 @@ block content
     //      h5.title-h5 Live Streaming
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -520,7 +520,7 @@ block content
     //      h5.title-h6.semi-bold Live Streaming
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -584,7 +584,7 @@ block content
     //    code .card--centered .card--bg
     //.col-lg-3
     //  .card.card--bg
-    //    img(src="../../assets/images/get_img.jpg", alt="")
+    //    img(src=require("@/images/get_img.jpg"), alt="")
     //    .card__content
     //      .card__body
     //        .card__content-header
@@ -603,7 +603,7 @@ block content
     //  .card.card--centered.card--live-section
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //      .card__body
     //        .card__content-header
     //          .user-data
@@ -640,7 +640,7 @@ block content
     //      p.gray  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor vitae, error repellat tenetur obcaecati totam mollitia id rerum aliquam sequi atque sunt repudiandae officiis asperiores! Fugiat optio ea facere.
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -656,7 +656,7 @@ block content
     //  .card.card--centered
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -677,7 +677,7 @@ block content
     //  .card.card--centered
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -714,7 +714,7 @@ block content
     //  .card.card--trusted
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -734,7 +734,7 @@ block content
     //  .card.card--reversed
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -757,7 +757,7 @@ block content
     //  .card.card--show-on-hover
     //    .card__content
     //      .user-image
-    //        img(src="../../assets/images/hd_dp.jpg" alt="")
+    //        img(src=require("@/images/hd_dp.jpg") alt="")
     //        i.uil.uil-check-circle
     //      .card__body
     //        .card__content-header
@@ -773,11 +773,11 @@ block content
     //.col-lg-12
     //  pre
     //    code.language-html
-    //      <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
+    //      <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src=require("@/images/hd_dp.jpg") alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
     //
 
           .user-image
-            img(src="../../assets/images/hd_dp.jpg" alt="")
+            img(src=require("@/images/hd_dp.jpg") alt="")
             i.uil.uil-check-circle
           .card__body
             .card__content-header
@@ -821,7 +821,7 @@ block content
         .card.card--show-on-hover
           .card__content
             .user-image
-              img(src="../../assets/images/hd_dp.jpg" alt="")
+              img(src=require("@/images/hd_dp.jpg") alt="")
               i.uil.uil-check-circle
             .card__body
               .card__content-header
@@ -875,5 +875,5 @@ block content
     //- .col-lg-12
       pre
         code.language-html
-          <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src="../../assets/images/hd_dp.jpg" alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
+          <div class="card card--horizontal"><div class="card__title"><h4 class="title-h4">card title</h4></div><div class="card__content"><div class="user-image"><img src=require("@/images/hd_dp.jpg") alt=""><i class="uil uil-check-circle"></i></div><div class="card__body"><div class="card__content-header"><div class="user-data"><a class="text-2" href="#">Jose Portilla</a><a class="text-3 gray">test@test.com</a><a class="text-3 gray" href="#">Bio test test</a></div><div class="more-dropdown"><div class="more-dropdown__link" href="#"><i class="uil uil-ellipsis-v"></i></div><div class="more-dropdown__content"><span class="content__item"><i class="item__icon uil uil-comment-alt-edit"></i>Edite</span><span class="content__item"><i class="item__icon uil uil-trash-alt"></i>Delete</span></div></div></div><div class="card__content--details"><p class="text-1">lorem ipsum dolor sit amet</p></div></div></div></div>
 

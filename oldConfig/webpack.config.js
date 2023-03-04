@@ -40,7 +40,12 @@ module.exports = env => ({
           env === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: {url: false, importLoaders: 1, sourceMap: true, minimize: true, colormin: false}
+            options: {
+              url: false,
+              importLoaders: 1,
+              sourceMap: true,
+              minimize: true,
+              colormin: false}
           },
           "sass-loader"
         ],
@@ -139,11 +144,5 @@ module.exports = env => ({
       "window.jQuery": "jquery",
       Popper: ["popper.js", "default"]
     }),
-
-    // new webpack.ProvidePlugin({
-    //   "videojs": "video.js",
-    //   "window.videojs": "video.js"
-    // }),
-    // new VueLoaderPlugin()
   ]
 });

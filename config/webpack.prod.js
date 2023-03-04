@@ -8,11 +8,11 @@ const common = require('./webpack.common')
 module.exports = merge(common, {
   mode: 'production',
   devtool: false,
-  output: {
-    path: paths.build,
-    publicPath: '/',
-    filename: 'js/[name].[contenthash].bundle.js',
-  },
+  // output: {
+  //   path: paths.build,
+  //   publicPath: '/',
+  //   filename: 'js/[name].[contenthash].bundle.js',
+  // },
   module: {
     rules: [
       {
@@ -27,7 +27,7 @@ module.exports = merge(common, {
               modules: false,
             },
           },
-          'postcss-loader',
+          // 'postcss-loader',
           'sass-loader',
         ],
       },
@@ -35,10 +35,11 @@ module.exports = merge(common, {
   },
   plugins: [
     // Extracts CSS into separate files
-    new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
-      chunkFilename: '[id].css',
-    }),
+    // new MiniCssExtractPlugin({
+      // filename: 'assets/[name].[contenthash].css',
+      // filename: '[name]',
+      // chunkFilename: '[id].css',
+    // }),
   ],
   optimization: {
     minimize: true,

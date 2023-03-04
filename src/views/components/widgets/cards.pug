@@ -59,7 +59,7 @@ mixin default-card()
 mixin side-col-card()
   .card.card--side-col
     .card__side-col
-      img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--profile image--rounded")
+      img(src=require('@/images/hd_dp.jpg') alt="" class="image image--profile image--rounded")
     .card__inner
       .card__header
         h4.card__title This is a card title
@@ -78,7 +78,7 @@ mixin side-col-card()
 mixin author-card()
   .card.card--centered
     .card__content
-      img(class="image image--instructor-image" src="../../assets/images/profile.jpg" alt="")
+      img(class="image image--instructor-image" src=require('@/images/profile.jpg') alt="")
       a(href="#" class="text-center") Jose Portilla
         i.far.fa-check-circle.pl-1
       p.text-center.text-gray Web Developer, Designer, and Teacher Jose

@@ -13,7 +13,7 @@ block content
 
 
   .page__cover
-    img(src="../../assets/images/hero_bg.jpg")
+    img(src=require("@/images/hero_bg.jpg"))
     .container.mt-auto
       .row.align-items-end
         .col-8
@@ -144,7 +144,7 @@ block content
         .col-12.col-md-4
           .card.card--centered.post__content-card
             .post__content-card-cover
-              img(src="../../assets/images/thumbnails/video-blog.png" class="post__content-card-cover-img")
+              img(src=require("@/images/thumbnails/video-blog.png") class="post__content-card-cover-img")
               a(href="../../assets/images/thumbnails/video-blog.png" class="btn btn--xl btn--icon btn--white" data-lightbox='group' data-title="My caption")
                 i.material-icons.text-primary play_arrow
             .card__content
@@ -223,7 +223,7 @@ block content
   //    .video--youtube
   //      iframe(width='560' height='315' src='https://www.youtube.com/embed/f54g9F05ld8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
   //    .course-video__bg
-  //      img(src="../../assets/images/get_img.jpg", alt="", srcset="")
+  //      img(src=require("@/images/get_img.jpg"), alt="", srcset="")
   //  .container
   //    .row
   //      .col-md-6
@@ -279,7 +279,7 @@ block content
   //
   //      .col-md-6.d-flex.align-items-end.justify-content-end
   //        button(type="button" class="btn btn--player btn--lg btn--double-line")
-  //          img(src="../../assets/images/replay.svg" alt="player toggle")
+  //          img(src=require("@/images/replay.svg") alt="player toggle")
   //
   //          //- i.fas.fa-play
   //section
@@ -297,7 +297,7 @@ block content
   //          #tab3.tab-panel
   //            .card.card--side-col.form-review
   //              .card__side-col
-  //                img(src="../../assets/images/hd_dp.jpg" alt="" class="image image--rounded image--profile author")
+  //                img(src=require("@/images/hd_dp.jpg") alt="" class="image image--rounded image--profile author")
   //              .card__content
   //                form(action='' method='post')
   //                  .field-wrapper.field-wrapper--full

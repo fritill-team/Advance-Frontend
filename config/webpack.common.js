@@ -1,44 +1,17 @@
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const {ProvidePlugin} = require('webpack')
 
 const paths = require('./paths')
 const fs = require("fs");
 const path = require("path");
 const {glob} = require("glob");
 const getDirectories = (src, callback, options = null) => glob.globSync(src, options).map(f => callback(f))
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
-const pages = (env, folder = '') => {
-  let rootPagesFolderName = 'pages',
-    viewsFolder = paths + `/views/${rootPagesFolderName}/${folder}`,
-    pages = []
-
-  fs.readdirSync(viewsFolder).forEach(view => {
-    if (view.split('.')[1] === undefined)
-      return false;
-
-    const viewName = view.split('.')[0];
-    const fileName = folder === '' ? `${viewName}/index.html` : `${folder}/${viewName}/index.html`;
-    const options = {
-      filename: fileName,
-      template: `views/${rootPagesFolderName}/${folder}/${view}`,
-      inject: true
-    };
-
-    // if (env === 'development') {
-    //   options.minify = {
-    //     removeComments: true,
-    //     collapseWhitespace: true,
-    //     removeAttributeQuotes: true
-    //   };
-    // }
-
-    pages.push(new HtmlWebpackPlugin(options));
-  })
-
-  return pages;
-}
 
 const pugFiles = () => getDirectories(
   paths.src + '/**/*.pug',
@@ -46,8 +19,11 @@ const pugFiles = () => getDirectories(
     let dirName = path.dirname(file).split(path.sep).pop(),
       FName = path.basename(file).replace('.pug', '.html'),
       filename = dirName.indexOf('views') === -1 && dirName.indexOf('pages') === -1 ? dirName + path.sep + FName : FName
-
-    return new HtmlWebpackPlugin({filename, template: file, inject: true})
+    return new HtmlWebpackPlugin({
+      filename,
+      template: file,
+      inject: false
+    })
   },
   {
     ignore: ['**/mixins/**', '**/components/**']
@@ -56,12 +32,16 @@ const pugFiles = () => getDirectories(
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/app.js'],
+  entry: {
+    'assets/js/plugins.bundle.js': paths.src + '/scripts/plugins.js',
+    'assets/js/main.bundle.js': paths.src + '/scripts/app.js',
+    'assets/css/main.bundle': paths.src + '/scss/app.scss'
+  },
 
   // Where webpack outputs the assets and bundles
   output: {
     path: paths.build,
-    filename: '[name].bundle.js',
+    filename: '[name]',
     publicPath: '/',
   },
 
@@ -84,7 +64,20 @@ module.exports = {
     //   ],
     // }),
 
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+
+    new ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+
+    new BundleAnalyzerPlugin(),
+
     ...pugFiles(),
+
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     // new HtmlWebpackPlugin({
@@ -99,13 +92,24 @@ module.exports = {
   module: {
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
-      {test: /\.js$/, use: ['babel-loader']},
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      },
 
       // Images: Copy image files to build folder
       {test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource'},
 
       // Fonts and SVGs: Inline files
       {test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline'},
+
+      // Pug
       {
         test: /\.pug$/,
         loader: "pug-loader",
@@ -137,7 +141,6 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': paths.src,
-      // assets: paths.public,
     },
   },
 }

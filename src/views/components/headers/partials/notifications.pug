@@ -29,7 +29,7 @@
           .list
             .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="background-image: url(" + require("@/images/profile.png") + ")")
               .list-item__content
                 span.overline
                   | lorem lorem
@@ -40,7 +40,7 @@
             //- .divider
             .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="background-image: url(" + require("@/images/profile.png") + ")")
               .list-item__content
                 span.overline
                   | lorem lorem
@@ -52,14 +52,14 @@
               .symbol.symbol--35px.symbol--circle
                 .symbol__label
                   i.fas.fa-user
-                //- img(class="image image--small-profile image--rounded" src="../../assets/images/profile.png" alt="avatar")
+                //- img(class="image image--small-profile image--rounded" src="@/images/profile.png" alt="avatar")
               .list-item__content
                 a(href="#" class="body-2 bold") Jose Portilla
                 p.subtitle-2.gray Jose_Portilla@test.com
             //- .divider
-            .list-item.
+            .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="(background-image: url(" + require('@/images/profile.png') + ")")
               .list-item__content
                 a(href="#" class="body-2 bold") Jose Portilla
 
@@ -73,7 +73,7 @@
           .list
             .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="background-image: url(" + require('@/images/profile.png') + ")")
               .list-item__content
                 span.overline
                   | lorem lorem
@@ -84,7 +84,7 @@
             //- .divider
             .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="background-image: url(" + require('@/images/profile.png') + ")")
               .list-item__content
                 span.overline
                   | lorem lorem
@@ -96,27 +96,27 @@
               .symbol.symbol--35px.symbol--circle
                 .symbol__label
                   i.fas.fa-user
-                //- img(class="image image--small-profile image--rounded" src="../../assets/images/profile.png" alt="avatar")
+                //- img(class="image image--small-profile image--rounded" src="@/images/profile.png" alt="avatar")
               .list-item__content
                 a(href="#" class="body-2 bold") Jose Portilla
                 p.subtitle-2.gray Jose_Portilla@test.com
 
             //- .divider
-            .list-item.
+            .list-item
               .symbol.symbol--35px.symbol--circle
-                .symbol__label(style="background-image:url(../../assets/images/profile.png)")
+                .symbol__label(style="background-image: url('" + require('@/images/profile.png') + "')")
               .list-item__content
                 a(href="#" class="body-2 bold") Jose Portilla
 
   .dropdown.dropdown--header
-    img(src='../../assets/images/profile.png' alt='' class="dropdown__activator profile-link__img image image--xs-small-profile image--rounded" style="width:300px;" data-toggle="dropdown"
+    img(src=require('@/images/profile.png') alt='' class="dropdown__activator profile-link__img image image--xs-small-profile image--rounded" style="width:300px;" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false" data-offset="0,16")
     .dropdown__content.dropdown-menu#user-menu
       .list.my-2.px-2
         .list-item
           .symbol.symbol--35px.symbol--circle
             .symbol__label
-              img(class="image image--small-profile image--rounded" src="../../assets/images/profile.png" alt="avatar")
+              img(class="image image--small-profile image--rounded" src=require("@/images/profile.png") alt="avatar")
           .list-item__content
             a(href="#" class="body-2 bold") Jose Portilla
             p.subtitle-1.gray Jose_Portilla@test.com

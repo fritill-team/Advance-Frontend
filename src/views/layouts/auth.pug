@@ -2,85 +2,52 @@
 
 doctype html
 html(lang='en' dir="rtl" class="")
-	head
-		//- Stylesheets
-		link(rel='preconnect' href='https://fonts.googleapis.com')
-		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-		link(href='https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap' rel='stylesheet')
-		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
-		link(rel="icon" href="../../assets/images/Etqadem_Icon.png")
-		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-		//- link(href='../assets/vendor/fontawesome-free/css/all.min.css' rel='stylesheet')
-		link(href='../assets/vendor/select2.min.css' rel='stylesheet')
-		link(href='../assets/vendor/bootstrap/css/bootstrap-grid.min.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.carousel.css' rel='stylesheet')
-		link(href='../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css' rel='stylesheet')
-		link(href='../assets/vendor/star/star-rating-svg.css' rel='stylesheet')
-		meta(name="viewport" content="width=device-width, shrink-to-fit=9")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js")
-		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css")
-		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js")
+  head
+    //- Stylesheets
+    //link(rel='preconnect' href='https://fonts.googleapis.com')
+    //link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    //link(href='https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap' rel='stylesheet')
+    //link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+    link(rel="icon" href=require('@/images/Etqadem_Icon.png'))
+    //link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(name="viewport" content="width=device-width, shrink-to-fit=9")
 
+    block title
+      title Login
 
+    link(rel="stylesheet" href="/assets/css/main.bundle.js")
 
-		//- script(src="https://unpkg.com/imask")
+  body
+    div.page
+      .page__content.page__content--auth
+        img.auth__bg(src=require("@/images/Pattern_4.svg"), alt="")
+        .dropdown.lang
+          a.notification__item.dropdown__activator(href="javascript:void(0)" title='language')
+            span.notification__icon.material-icons language
+          .dropdown__content
+            .card-list
+              .card__content
+                .list
+                  .list-item.list-item
+                    .list-item__content
+                      p.subtitle-1.gray English
 
-		//- Title
-		block title
-			title Login
-		//- script(src='../assets/scripts/select2.min.js')
+                  .list-item.list-item
+                    .list-item__content
+                      p.subtitle-1.gray Arabic
 
-	body
-		div.page
-			.page__content.page__content--auth
-				img.auth__bg(src="../../assets/images/Pattern_4.svg", alt="")
-				.dropdown.lang
-					a.notification__item.dropdown__activator(href="javascript:void(0)" title='language')
-						span.notification__icon.material-icons language
-					.dropdown__content
-						.card-list
-							.card__content
-								.list
-									.list-item.list-item
-										.list-item__content
-											p.subtitle-1.gray English
+        .auth-form
+          .auth-form__image
+            img(src=require("@/images/Pattern_4.svg"), alt="")
+            div.auth-form__logo
+              img(src=require('@/images/Etqadem_Logo.svg') alt='')
+            p.body-1.text--center.mt-auto copyrights &copy; 2020
+              strong Itqadem
+              | . All Rights Reserved.
+          .auth-form__content
+            .container
+              block content
 
-									.list-item.list-item
-										.list-item__content
-											p.subtitle-1.gray Arabic
-
-				//- div.container
-					div.row.justify-content-center
-						.col-lg-12
-							input(class="dark-mode-toggle" id="dark-mode-toggle" type="checkbox")
-							//- div.header-title
-							//- 	a(href='index.html')
-							//- 		img(src='../../assets/images/Etqadem_Icon_Yellow.png' alt='')
-							//- 	h1 Itqadem
-								//- a(href='index.html')
-								//-   img.logo-inverse(src='../../assets/images/sign_logo.png' alt='')
-						div.col-lg-6.col-sm-8
-				.auth-form
-					.auth-form__image
-						img(src="../../assets/images/Pattern_4.svg", alt="")
-						div.auth-form__logo
-							img(src='../../assets/images/Etqadem_Logo.svg' alt='')
-						p.body-1.text--center.mt-auto copyrights &copy; 2020
-							strong Itqadem
-							| . All Rights Reserved.
-					.auth-form__content
-						.container
-							//- .switch
-								//- input(id="dark-mode-toggle" type="checkbox")
-							block content
-
-
-
-
-		block scripts
-		//- script(src='../assets/scripts/jquery-3.3.1.min.js')
-		//- script(src='../assets/scripts/vertical-responsive-menu.min.js')
-		//- script(src='../assets/styles/vendor/bootstrap/js/bootstrap.bundle.min.js')
-		//- script(src='../assets/styles/vendor/OwlCarousel/owl.carousel.js')
-		//- script(src='../assets/styles/vendor/semantic/semantic.min.js')
-		//- script(s    object-fit: cover;
+    script(src='/assets/js/plugins.bundle.js')
+    script(src='/assets/js/main.bundle.js')
+    block scripts

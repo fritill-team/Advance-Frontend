@@ -10,10 +10,10 @@ mixin blog-card(title, desc, category='', type='')
   .display-card
     a(class="display-card__link" href="/blog.html")
     .display-card__thumbnail-box
-      img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
+      img(src=require('@/images/thumbnails/video-blog.png') class="display-card__thumbnail")
     .display-card__body
       a.display-card__user-box(href="/user.html")
-        img(src="../../assets/images/profile.png" class="display-card__user-avatar")
+        img(src=require("@/images/profile.png") class="display-card__user-avatar")
         .display-card__user-data
           span User Type
           p User Name
@@ -47,7 +47,7 @@ mixin course-card(title, desc, category='', isSubscribe= false, live= false)
         span.badge.badge--danger live
 
     .display-card__thumbnail-box
-      img(src="../../assets/images/thumbnails/video-blog.png" class="display-card__thumbnail")
+      img(src=require('@/images/thumbnails/video-blog.png') class="display-card__thumbnail")
       if isSubscribe
         .display-card__progress.mb-3.ms-n2
           +progress("progress--height","w-70", "70" , "0", "100")
@@ -64,7 +64,7 @@ mixin course-card(title, desc, category='', isSubscribe= false, live= false)
 
     .display-card__body
         a.display-card__user-box(href="/user.html")
-          img(src="../../assets/images/profile.png" class="display-card__user-avatar")
+          img(src="@/images/profile.png" class="display-card__user-avatar")
           .display-card__user-data
             span User Type
             p User Name

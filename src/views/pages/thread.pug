@@ -17,7 +17,7 @@ block content
               | Show All Comments (20 comments)
           .comment
             .comment__avatar
-              img(src='../../assets/images/hd_dp.jpg' alt='')
+              img(src=require('@/images/hd_dp.jpg') alt='')
             .comment__content
               .comment__header
                 a(href='#' class="comment__username")
@@ -32,7 +32,7 @@ block content
 
           .comment
             .comment__avatar
-              img(src='../../assets/images/hd_dp.jpg' alt='')
+              img(src=require('@/images/hd_dp.jpg') alt='')
             .comment__content
               .comment__header
                 a(href='#' class="comment__username")
@@ -46,7 +46,7 @@ block content
               i.fas.fa-ellipsis-h
           form.comment
             .comment__avatar
-              img(src='../../assets/images/hd_dp.jpg' alt='')
+              img(src=require('@/images/hd_dp.jpg') alt='')
             .comment__content.comment__content-form
               input(type='hidden' name='thread_id' value='1')
               .field-wrapper.field-wrapper--full

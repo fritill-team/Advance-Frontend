@@ -1,5 +1,5 @@
 @import '../utils/mixins';
-
+@import '~owl.carousel/dist/assets/owl.carousel.css';
 @mixin carouselMixin {
   .owl-stage-outer {
     height: 100%;
